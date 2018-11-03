@@ -1,0 +1,10 @@
+//= require javascripts/modernizr-2.8.3.min
+//= require javascripts/jquery-1.12.4.min
+//= require javascripts/bootstrap.min
+//= require javascripts/owl.carousel.min
+//= require javascripts/contact-form
+//= require javascripts/jquery.parallax-1.1.3
+//= require javascripts/scrollUp.min
+//= require javascripts/magnific-popup.min
+//= require javascripts/wow.min
+//= require javascripts/main

@@ -1,7 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html class='no-js' lang='zxx'>
   <head>
-    <title>WorldMosquesApp</title>
+    <meta charset='utf-8'>
+    <meta name='author' content='John Doe'>
+    <meta name='description' content=''>
+    <meta name='keywords' content='HTML,CSS,XML,JavaScript'>
+    <meta http-equiv='x-ua-compatible' content='ie=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>World Mosques App</title>
+    <!-- Place favicon.ico in the root directory -->
+    <link rel='apple-touch-icon' href='assets/images/apple-touch-icon.png'>
+    <link rel='shortcut icon' type='image/ico' href='assets/images/favicon.ico' />
+
+    <!--[if lt IE 9]>
+      <script src='//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
+      <script src='//oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
+    <![endif]-->
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,7 +24,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body data-spy='scroll' data-target='#primary-menu'>
     <%= yield %>
   </body>
+
+  <%= javascript_include_tag 'landing' %>
 </html>
