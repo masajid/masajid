@@ -12,6 +12,15 @@ module: {
         ]
       }
     },
+    {
+      test: /\.(png|jpg|gif)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {}
+        }
+      ]
+    },
   ]
 }
 environment.loaders.get('sass').use.splice(-1, 0, {

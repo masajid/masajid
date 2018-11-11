@@ -1,5 +1,11 @@
 import React from 'react'
 
+import imageScreen1 from '../../assets/images/screen-1.jpg'
+import imageScreen2 from '../../assets/images/screen-2.jpg'
+import imageScreen3 from '../../assets/images/screen-3.jpg'
+import imageScreen4 from '../../assets/images/screen-4.jpg'
+import imageScreen5 from '../../assets/images/screen-5.jpg'
+
 class Slider extends React.Component {
   componentDidMount () {
     $('.screen-slider').owlCarousel({
@@ -34,19 +40,19 @@ class Slider extends React.Component {
             <div className="hidden-xs hidden-sm col-md-5 text-right">
               <div className="screen-box screen-slider">
                 <div className="item">
-                  <img src="assets/images/screen-1.jpg" alt="" />
+                  <img src={imageScreen1} alt="" />
                 </div>
                 <div className="item">
-                  <img src="assets/images/screen-2.jpg" alt="" />
+                  <img src={imageScreen2} alt="" />
                 </div>
                 <div className="item">
-                  <img src="assets/images/screen-3.jpg" alt="" />
+                  <img src={imageScreen3} alt="" />
                 </div>
                 <div className="item">
-                  <img src="assets/images/screen-4.jpg" alt="" />
+                  <img src={imageScreen4} alt="" />
                 </div>
                 <div className="item">
-                  <img src="assets/images/screen-5.jpg" alt="" />
+                  <img src={imageScreen5} alt="" />
                 </div>
               </div>
             </div>

@@ -2,6 +2,52 @@ import React from 'react'
 
 import Slider from './landingPage/slider';
 
+import imageService1 from '../assets/images/service-icon-1.png'
+import imageService2 from '../assets/images/service-icon-2.png'
+import imageService3 from '../assets/images/service-icon-3.png'
+
+import imageScreen1 from '../assets/images/screen-1.jpg'
+import imageScreen2 from '../assets/images/screen-2.jpg'
+import imageScreen3 from '../assets/images/screen-3.jpg'
+import imageScreen4 from '../assets/images/screen-4.jpg'
+import imageScreen7 from '../assets/images/screen-7.jpg'
+
+import imagePortfolio1 from '../assets/images/portfolio-icon-1.png'
+import imagePortfolio2 from '../assets/images/portfolio-icon-2.png'
+import imagePortfolio3 from '../assets/images/portfolio-icon-3.png'
+import imagePortfolio4 from '../assets/images/portfolio-icon-4.png'
+import imagePortfolio5 from '../assets/images/portfolio-icon-5.png'
+import imagePortfolio6 from '../assets/images/portfolio-icon-6.png'
+
+import imageTeam1 from '../assets/images/team-section-1.png'
+import imageTeam2 from '../assets/images/team-section-2.png'
+import imageTeam3 from '../assets/images/team-section-4.png'
+import imageTeam4 from '../assets/images/team-section-4.png'
+
+import imageAvatar1 from '../assets/images/avatar-small-1.png'
+import imageAvatar2 from '../assets/images/avatar-small-2.png'
+import imageAvatar3 from '../assets/images/avatar-small-3.png'
+import imageAvatar4 from '../assets/images/avatar-small-4.png'
+import imageAvatar5 from '../assets/images/avatar-small-5.png'
+import imageAvatar6 from '../assets/images/avatar-small-6.png'
+
+import imageThemeforest from '../assets/images/themeforest.gif'
+import imageCoadcanyon from '../assets/images/coadcanyon.gif'
+import imageGraphicriver from '../assets/images/graphicriver.gif'
+import imageDocean from '../assets/images/docean.gif'
+import imageAudiojungle from '../assets/images/audiojungle.gif'
+import imageActividen from '../assets/images/actividen.gif'
+import imagePhotodone from '../assets/images/photodone.gif'
+import imageVidegub from '../assets/images/videgub.gif'
+
+import imageSmall1 from '../assets/images/small1.jpg'
+import imageSmall2 from '../assets/images/small2.jpg'
+import imageSmall3 from '../assets/images/small3.jpg'
+
+import imageLocationArrow from '../assets/images/location-arrow.png'
+import imagePhoneArrow from '../assets/images/phone-arrow.png'
+import imageMailArrow from '../assets/images/mail-arrow.png'
+
 class LandingPage extends React.Component {
   componentDidMount () {
     $(".carousel-inner .item:first-child").addClass("active");
@@ -220,7 +266,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-4">
                 <div className="box">
                   <div className="box-icon">
-                    <img src="assets/images/service-icon-1.png" alt="" />
+                    <img src={imageService1} alt="" />
                   </div>
                   <h4>EASY TO USE</h4>
                   <p>Lorem ipsum dolor sit amt, consectet adop adipisicing elit, sed do eiusmod tepo raraincididunt ugt
@@ -230,7 +276,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-4">
                 <div className="box">
                   <div className="box-icon">
-                    <img src="assets/images/service-icon-2.png" alt="" />
+                    <img src={imageService2} alt="" />
                   </div>
                   <h4>AWESOEM DESIGN</h4>
                   <p>Lorem ipsum dolor sit amt, consectet adop adipisicing elit, sed do eiusmod tepo raraincididunt ugt
@@ -240,7 +286,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-4">
                 <div className="box">
                   <div className="box-icon">
-                    <img src="assets/images/service-icon-3.png" alt="" />
+                    <img src={imageService3} alt="" />
                   </div>
                   <h4>EASY TO CUSTOMAIZE</h4>
                   <p>Lorem ipsum dolor sit amt, consectet adop adipisicing elit, sed do eiusmod tepo raraincididunt ugt
@@ -274,12 +320,12 @@ class LandingPage extends React.Component {
                         </div>
                         <div className="col-xs-6 col-md-3">
                           <div className="caption-photo one" data-animation="animated fadeInRight">
-                            <img src="assets/images/screen-1.jpg" alt="" />
+                            <img src={imageScreen1} alt="" />
                           </div>
                         </div>
                         <div className="col-xs-6 col-md-3">
                           <div className="caption-photo two" data-animation="animated fadeInRight">
-                            <img src="assets/images/screen-2.jpg" alt="" />
+                            <img src={imageScreen2} alt="" />
                           </div>
                         </div>
                       </div>
@@ -301,12 +347,12 @@ class LandingPage extends React.Component {
                         </div>
                         <div className="col-xs-6 col-md-3">
                           <div className="caption-photo one" data-animation="animated fadeInRight">
-                            <img src="assets/images/screen-3.jpg" alt="" />
+                            <img src={imageScreen3} alt="" />
                           </div>
                         </div>
                         <div className="col-xs-6 col-md-3">
                           <div className="caption-photo two" data-animation="animated fadeInRight">
-                            <img src="assets/images/screen-4.jpg" alt="" />
+                            <img src={imageScreen4} alt="" />
                           </div>
                         </div>
                       </div>
@@ -328,12 +374,12 @@ class LandingPage extends React.Component {
                         </div>
                         <div className="col-xs-6 col-md-3">
                           <div className="caption-photo one" data-animation="animated fadeInRight">
-                            <img src="assets/images/screen-7.jpg" alt="" />
+                            <img src={imageScreen7} alt="" />
                           </div>
                         </div>
                         <div className="col-xs-6 col-md-3">
                           <div className="caption-photo two" data-animation="animated fadeInRight">
-                            <img src="assets/images/screen-2.jpg" alt="" />
+                            <img src={imageScreen2} alt="" />
                           </div>
                         </div>
                       </div>
@@ -355,12 +401,12 @@ class LandingPage extends React.Component {
                         </div>
                         <div className="col-xs-6 col-md-3">
                           <div className="caption-photo one" data-animation="animated fadeInRight">
-                            <img src="assets/images/screen-3.jpg" alt="" />
+                            <img src={imageScreen3} alt="" />
                           </div>
                         </div>
                         <div className="col-xs-6 col-md-3">
                           <div className="caption-photo two" data-animation="animated fadeInRight">
-                            <img src="assets/images/screen-4.jpg" alt="" />
+                            <img src={imageScreen4} alt="" />
                           </div>
                         </div>
                       </div>
@@ -401,7 +447,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-6 col-md-4">
                 <div className="box">
                   <div className="box-icon">
-                    <img src="assets/images/portfolio-icon-1.png" alt="" />
+                    <img src={imagePortfolio1} alt="" />
                   </div>
                   <h3>Creative Design</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
@@ -410,7 +456,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-6 col-md-4">
                 <div className="box">
                   <div className="box-icon">
-                    <img src="assets/images/portfolio-icon-2.png" alt="" />
+                    <img src={imagePortfolio2} alt="" />
                   </div>
                   <h3>Unlimited Features</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
@@ -419,7 +465,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-6 col-md-4">
                 <div className="box">
                   <div className="box-icon">
-                    <img src="assets/images/portfolio-icon-3.png" alt="" />
+                    <img src={imagePortfolio3} alt="" />
                   </div>
                   <h3>Full Free Chat</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
@@ -428,7 +474,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-6 col-md-4">
                 <div className="box">
                   <div className="box-icon">
-                    <img src="assets/images/portfolio-icon-4.png" alt="" />
+                    <img src={imagePortfolio4} alt="" />
                   </div>
                   <h3>Retina ready</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
@@ -437,7 +483,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-6 col-md-4">
                 <div className="box">
                   <div className="box-icon">
-                    <img src="assets/images/portfolio-icon-5.png" alt="" />
+                    <img src={imagePortfolio5} alt="" />
                   </div>
                   <h3>High Resolution</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
@@ -446,7 +492,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-6 col-md-4">
                 <div className="box">
                   <div className="box-icon">
-                    <img src="assets/images/portfolio-icon-6.png" alt="" />
+                    <img src={imagePortfolio6} alt="" />
                   </div>
                   <h3>Clean Codes</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
@@ -536,7 +582,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="single-team">
                   <div className="team-photo">
-                    <img src="assets/images/team-section-1.png" alt="" />
+                    <img src={imageTeam1} alt="" />
                   </div>
                   <h4>JEMY SEDONCE</h4>
                   <h6>Co. Founder</h6>
@@ -551,7 +597,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="single-team">
                   <div className="team-photo">
-                    <img src="assets/images/team-section-2.png" alt="" />
+                    <img src={imageTeam2} alt="" />
                   </div>
                   <h4>DEBORAH BROWN</h4>
                   <h6>UX Designer</h6>
@@ -566,7 +612,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="single-team">
                   <div className="team-photo">
-                    <img src="assets/images/team-section-3.png" alt="" />
+                    <img src={imageTeam3} alt="" />
                   </div>
                   <h4>HARRY BANKS</h4>
                   <h6>Founder</h6>
@@ -581,7 +627,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="single-team">
                   <div className="team-photo">
-                    <img src="assets/images/team-section-4.png" alt="" />
+                    <img src={imageTeam4} alt="" />
                   </div>
                   <h4>VICTORIA CLARK</h4>
                   <h6>Creative Director</h6>
@@ -613,7 +659,7 @@ class LandingPage extends React.Component {
                 <div className="testimonials">
                   <div className="testimonial">
                     <div className="testimonial-photo">
-                      <img src="assets/images/avatar-small-1.png" alt="" />
+                      <img src={imageAvatar1} alt="" />
                     </div>
                     <h3>AR Rahman</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vero dolore officiis, velit id libero
@@ -622,7 +668,7 @@ class LandingPage extends React.Component {
                   </div>
                   <div className="testimonial">
                     <div className="testimonial-photo">
-                      <img src="assets/images/avatar-small-2.png" alt="" />
+                      <img src={imageAvatar2} alt="" />
                     </div>
                     <h3>AR Rahman</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vero dolore officiis, velit id libero
@@ -631,7 +677,7 @@ class LandingPage extends React.Component {
                   </div>
                   <div className="testimonial">
                     <div className="testimonial-photo">
-                      <img src="assets/images/avatar-small-3.png" alt="" />
+                      <img src={imageAvatar3} alt="" />
                     </div>
                     <h3>AR Rahman</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vero dolore officiis, velit id libero
@@ -640,7 +686,7 @@ class LandingPage extends React.Component {
                   </div>
                   <div className="testimonial">
                     <div className="testimonial-photo">
-                      <img src="assets/images/avatar-small-4.png" alt="" />
+                      <img src={imageAvatar4} alt="" />
                     </div>
                     <h3>AR Rahman</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vero dolore officiis, velit id libero
@@ -649,7 +695,7 @@ class LandingPage extends React.Component {
                   </div>
                   <div className="testimonial">
                     <div className="testimonial-photo">
-                      <img src="assets/images/avatar-small-5.png" alt="" />
+                      <img src={imageAvatar5} alt="" />
                     </div>
                     <h3>AR Rahman</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vero dolore officiis, velit id libero
@@ -658,7 +704,7 @@ class LandingPage extends React.Component {
                   </div>
                   <div className="testimonial">
                     <div className="testimonial-photo">
-                      <img src="assets/images/avatar-small-6.png" alt="" />
+                      <img src={imageAvatar6} alt="" />
                     </div>
                     <h3>AR Rahman</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vero dolore officiis, velit id libero
@@ -741,52 +787,52 @@ class LandingPage extends React.Component {
               <div className="col-xs-12">
                 <div className="clients">
                   <div className="item">
-                    <img src="assets/images/themeforest.gif" alt="" />
+                    <img src={imageThemeforest} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/coadcanyon.gif" alt="" />
+                    <img src={imageCoadcanyon} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/graphicriver.gif" alt="" />
+                    <img src={imageGraphicriver} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/docean.gif" alt="" />
+                    <img src={imageDocean} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/audiojungle.gif" alt="" />
+                    <img src={imageAudiojungle} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/actividen.gif" alt="" />
+                    <img src={imageActividen} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/photodone.gif" alt="" />
+                    <img src={imagePhotodone} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/videgub.gif" alt="" />
+                    <img src={imageVidegub} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/themeforest.gif" alt="" />
+                    <img src={imageThemeforest} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/coadcanyon.gif" alt="" />
+                    <img src={imageCoadcanyon} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/graphicriver.gif" alt="" />
+                    <img src={imageGraphicriver} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/docean.gif" alt="" />
+                    <img src={imageDocean} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/audiojungle.gif" alt="" />
+                    <img src={imageAudiojungle} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/actividen.gif" alt="" />
+                    <img src={imageActividen} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/photodone.gif" alt="" />
+                    <img src={imagePhotodone} alt="" />
                   </div>
                   <div className="item">
-                    <img src="assets/images/videgub.gif" alt="" />
+                    <img src={imageVidegub} alt="" />
                   </div>
                 </div>
               </div>
@@ -800,7 +846,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-4">
                 <div className="single-blog">
                   <div className="blog-photo">
-                    <img src="assets/images/small1.jpg" alt="" />
+                    <img src={imageSmall1} alt="" />
                   </div>
                   <div className="blog-content">
                     <h3><a href="#">Beautiful Place for your Great Journey</a></h3>
@@ -816,7 +862,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-4">
                 <div className="single-blog">
                   <div className="blog-photo">
-                    <img src="assets/images/small2.jpg" alt="" />
+                    <img src={imageSmall2} alt="" />
                   </div>
                   <div className="blog-content">
                     <h3><a href="#">Beautiful Place for your Great Journey</a></h3>
@@ -832,7 +878,7 @@ class LandingPage extends React.Component {
               <div className="col-xs-12 col-sm-4">
                 <div className="single-blog">
                   <div className="blog-photo">
-                    <img src="assets/images/small3.jpg" alt="" />
+                    <img src={imageSmall3} alt="" />
                   </div>
                   <div className="blog-content">
                     <h3><a href="#">Beautiful Place for your Great Journey</a></h3>
@@ -867,13 +913,13 @@ class LandingPage extends React.Component {
                   <address className="side-icon-boxes">
                     <div className="side-icon-box">
                       <div className="side-icon">
-                        <img src="assets/images/location-arrow.png" alt="" />
+                        <img src={imageLocationArrow} alt="" />
                       </div>
                       <p><strong>Address: </strong> Box 564, Disneyland <br/>USA</p>
                     </div>
                     <div className="side-icon-box">
                       <div className="side-icon">
-                        <img src="assets/images/phone-arrow.png" alt="" />
+                        <img src={imagePhoneArrow} alt="" />
                       </div>
                       <p><strong>Telephone: </strong>
                         <a href="callto:8801812726495">+8801812726495</a> <br/>
@@ -882,7 +928,7 @@ class LandingPage extends React.Component {
                     </div>
                     <div className="side-icon-box">
                       <div className="side-icon">
-                        <img src="assets/images/mail-arrow.png" alt="" />
+                        <img src={imageMailArrow} alt="" />
                       </div>
                       <p><strong>E-mail: </strong>
                         <a href="mailto:youremail@example.com">youremail@example.com</a> <br/>
