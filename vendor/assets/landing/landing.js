@@ -7,4 +7,3 @@
 //= require javascripts/scrollUp.min
 //= require javascripts/magnific-popup.min
 //= require javascripts/wow.min
-//= require javascripts/main
