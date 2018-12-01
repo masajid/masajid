@@ -1,3 +1,9 @@
+PATH
+  remote: engines/content
+  specs:
+    content (0.1.0)
+      rails (~> 5.2.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -205,6 +211,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  content!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
