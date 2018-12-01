@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, class_name: 'Content::User'
   root 'home#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :users, class_name: 'Content::User'
+
+  mount Admin::Engine, at: '/admin183ff37180a2f8c8'
 end
