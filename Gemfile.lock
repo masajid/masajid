@@ -1,4 +1,10 @@
 PATH
+  remote: engines/admin
+  specs:
+    admin (0.1.0)
+      rails (~> 5.2.1)
+
+PATH
   remote: engines/content
   specs:
     content (0.1.0)
@@ -220,6 +226,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  admin!
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
