@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_01_204047) do
+ActiveRecord::Schema.define(version: 2018_12_01_213320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "content_accounts", force: :cascade do |t|
+    t.string "subdomain"
+    t.string "email"
+    t.string "mosque"
+    t.string "responsable"
+    t.bigint "content_owner_id"
+    t.bigint "content_address_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["content_address_id"], name: "index_content_accounts_on_content_address_id"
+    t.index ["content_owner_id"], name: "index_content_accounts_on_content_owner_id"
+  end
 
   create_table "content_addresses", force: :cascade do |t|
     t.string "street"
@@ -81,6 +94,8 @@ ActiveRecord::Schema.define(version: 2018_12_01_204047) do
     t.index ["reset_password_token"], name: "index_content_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "content_accounts", "content_addresses"
+  add_foreign_key "content_accounts", "content_users", column: "content_owner_id"
   add_foreign_key "content_addresses", "content_cities"
   add_foreign_key "content_addresses", "content_countries"
   add_foreign_key "content_addresses", "content_regions"
