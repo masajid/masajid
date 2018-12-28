@@ -12,12 +12,8 @@
     .header-area {
         padding-top: 80px;
     }
-    .price-table,
     .box {
         padding: 30px 15px;
-    }
-    .price-table.active {
-        padding: 50px 15px;
     }
     .single-team {
         margin-bottom: 30px

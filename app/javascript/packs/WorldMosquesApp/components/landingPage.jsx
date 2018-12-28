@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Account from './landingPage/account';
 import Slider from './landingPage/slider';
 
 import imageService1 from '../assets/images/service-icon-1.png'
@@ -136,16 +137,15 @@ class LandingPage extends React.Component {
     // Call the functions
     magnifPopup();
 
-    //Background Parallax
+    // Background Parallax
     $('.header-area').parallax("50%", -0.4);
-    $('.price-area').parallax("50%", -0.5);
     $('.testimonial-area').parallax("10%", -0.2);
 
     $('#accordion .panel-title a').prepend('<span></span>');
 
-    //Function to animate slider captions
+    // Function to animate slider captions
     function doAnimations(elems) {
-      //Cache the animationend event in a variable
+      // Cache the animationend event in a variable
       var animEndEv = 'webkitAnimationEnd animationend';
 
       elems.each(function () {
@@ -157,20 +157,20 @@ class LandingPage extends React.Component {
       });
     }
 
-    //Variables on page load
+    // Variables on page load
     var $myCarousel = $('.caption-slider'),
       $firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']");
 
-    //Initialize carousel
+    // Initialize carousel
     $myCarousel.carousel();
 
-    //Animate captions in first slide on page load
+    // Animate captions in first slide on page load
     doAnimations($firstAnimatingElems);
 
-    //Pause carousel
+    // Pause carousel
     $myCarousel.carousel('pause');
 
-    //Other slides to be animated on carousel slide event
+    // Other slides to be animated on carousel slide event
     $myCarousel.on('slide.bs.carousel', function (e) {
       var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
       doAnimations($animatingElems);
@@ -248,7 +248,7 @@ class LandingPage extends React.Component {
                 <li className="active"><a href="#home-page">Home</a></li>
                 <li><a href="#service-page">Service</a></li>
                 <li><a href="#feature-page">Features</a></li>
-                <li><a href="#price-page">Pricing</a></li>
+                <li><a href="#account-page">Create Account</a></li>
                 <li><a href="#team-page">Team</a></li>
                 <li><a href="#faq-page">FAQ</a></li>
                 <li><a href="#blog-page">Blog</a></li>
@@ -502,70 +502,7 @@ class LandingPage extends React.Component {
           </div>
         </section>
 
-        <section className="price-area overlay section-padding" id="price-page">
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
-                <div className="page-title">
-                  <h2>Afortable Price</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptates, temporibus at, facere harum
-                    fugiat!</p>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12 col-sm-4">
-                <div className="price-table">
-                  <h3 className="text-uppercase price-title">Basic</h3>
-                  <hr />
-                  <ul className="list-unstyled">
-                    <li><strong className="amount">$ <span className="big">20</span></strong>/Month</li>
-                    <li>100 MB Disk Space</li>
-                    <li>2 Subdomains</li>
-                    <li>5 Email Accounts</li>
-                    <li>Webmail Support</li>
-                    <li>Customer Support 24/7</li>
-                  </ul>
-                  <hr />
-                  <a href="#" className="button">Purchase</a>
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-4">
-                <div className="price-table active">
-                  <span className="price-info"><span className="ti-crown"></span></span>
-                  <h3 className="text-uppercase price-title">STABDARD</h3>
-                  <hr />
-                  <ul className="list-unstyled">
-                    <li><strong className="amount">$ <span className="big">39</span></strong>/Month</li>
-                    <li>100 MB Disk Space</li>
-                    <li>2 Subdomains</li>
-                    <li>5 Email Accounts</li>
-                    <li>Webmail Support</li>
-                    <li>Customer Support 24/7</li>
-                  </ul>
-                  <hr />
-                  <a href="#" className="button">Purchase</a>
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-4">
-                <div className="price-table">
-                  <h3 className="text-uppercase price-title">UNLIMITED</h3>
-                  <hr />
-                  <ul className="list-unstyled">
-                    <li><strong className="amount">$ <span className="big">59</span></strong>/Month</li>
-                    <li>100 MB Disk Space</li>
-                    <li>2 Subdomains</li>
-                    <li>5 Email Accounts</li>
-                    <li>Webmail Support</li>
-                    <li>Customer Support 24/7</li>
-                  </ul>
-                  <hr />
-                  <a href="#" className="button">Purchase</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Account />
 
         <section className="section-padding gray-bg" id="team-page">
           <div className="container">
