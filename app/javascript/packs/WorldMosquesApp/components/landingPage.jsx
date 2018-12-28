@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class LandingPage extends React.Component {
   render() {
@@ -13,7 +14,7 @@ class LandingPage extends React.Component {
           <div className='collapse navbar-collapse' id='navbarsExample09'>
             <ul className='navbar-nav ml-auto'>
               <li className='nav-item'>
-                <a className='nav-link' href='#'>Create Masjid Account</a>
+                <Link className='nav-link' to='/accounts/new'>Create Masjid Account</Link>
               </li>
             </ul>
           </div>
@@ -25,7 +26,7 @@ class LandingPage extends React.Component {
               <h1>Your Masjid online</h1>
               <p>Here you can create a website for your masjid, in order to add articles, events, posts ... etc.</p>
               <p>
-                <a className='btn btn-primary' href='/docs/4.2/components/navbar/' role='button'>Create Masjid Account »</a>
+                <Link className='btn btn-primary' to='/accounts/new' role='button'>Create Masjid Account »</Link>
               </p>
             </div>
           </div>
@@ -58,7 +59,7 @@ class LandingPage extends React.Component {
 
           <hr />
 
-          <footer className="container">
+          <footer className='container'>
             <p>© The Open Masjid 2019</p>
           </footer>
         </div>
