@@ -1,0 +1,18 @@
+.has-error {
+  .ant-input,
+  .ant-select,
+  .input-group-text {
+    border-color: #dc3545;
+  }
+
+  .ant-form-explain {
+    width: 100%;
+    margin-top: 4px;
+    font-size: 80%;
+    color: #dc3545;
+  }
+}
+
+.btn-submit {
+  margin-bottom: 20px;
+}
