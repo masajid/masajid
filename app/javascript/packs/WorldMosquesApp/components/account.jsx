@@ -1,4 +1,6 @@
 import React from 'react'
+import axios from 'axios'
+import { omit } from 'lodash'
 
 import {
   Form,
@@ -10,17 +12,28 @@ const FormItem = Form.Item
 const { Option } = Select
 
 class Account extends React.Component {
+  state = { errors: {} }
+
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values)
+        axios.post('/accounts', { account: values })
+          .then(response => {
+            // TODO: redirect to success page
+            console.log(response)
+          })
+          .catch(errors => {
+            console.log(errors.response.data)
+            this.setState({ errors: errors.response.data })
+          })
       }
     });
   }
 
   render() {
     const { getFieldDecorator } = this.props.form
+    const { errors } = this.state
 
     return(
       <div className='container'>
@@ -39,15 +52,25 @@ class Account extends React.Component {
               <FormItem
                 label='Subdomain'
                 className='mb-3'
+                // TODO: fix error color after being changed
+                help={errors.subdomain}
+                validateStatus={errors.subdomain ? 'error' : 'success'}
               >
                 {getFieldDecorator('subdomain', {
+                  validateTrigger: 'onBlur',
                   rules: [{
                     required: true,
                     message: 'Subdomain is required',
                   }],
                 })(
                   <div className='input-group'>
-                    <Input className='form-control' placeholder='Subdomain' />
+                    <Input
+                      className='form-control'
+                      placeholder='Subdomain'
+                      onBlur={() => {
+                        this.setState({ errors: omit(errors, 'subdomain') })
+                      }}
+                    />
                     <div className='input-group-prepend'>
                       <span className='input-group-text'>.theopenmasjid.com</span>
                     </div>
@@ -58,8 +81,11 @@ class Account extends React.Component {
               <FormItem
                 label='E-mail Address'
                 className='mb-3'
+                help={errors.email}
+                validateStatus={errors.email ? 'error' : 'success'}
               >
                 {getFieldDecorator('email', {
+                  validateTrigger: 'onBlur',
                   rules: [{
                     type: 'email',
                     message: 'E-mail Address is invalid',
@@ -68,7 +94,27 @@ class Account extends React.Component {
                     message: 'E-mail Address is required',
                   }],
                 })(
-                  <Input className='form-control' placeholder='E-mail Address' />
+                  <Input
+                    className='form-control'
+                    placeholder='E-mail Address'
+                    onBlur={() => {
+                      this.setState({ errors: omit(errors, 'email') })
+                    }}
+                  />
+                )}
+              </FormItem>
+
+              <FormItem
+                label='Responsable Name'
+                className='mb-3'
+              >
+                {getFieldDecorator('responsable', {
+                  rules: [{
+                    required: true,
+                    message: 'Responsable Name is required',
+                  }],
+                })(
+                  <Input className='form-control' placeholder='Responsable Name' />
                 )}
               </FormItem>
 
@@ -87,25 +133,21 @@ class Account extends React.Component {
               </FormItem>
 
               <FormItem
-                label='Responsable Name'
+                label='Phone Number (Optional)'
                 className='mb-3'
               >
-                {getFieldDecorator('responsable', {
-                  rules: [{
-                    required: true,
-                    message: 'Responsable Name is required',
-                  }],
-                })(
-                  <Input className='form-control' placeholder='Responsable Name' />
+                {getFieldDecorator('address_attributes.phone')(
+                  <Input className='form-control' placeholder='Phone Number' />
                 )}
               </FormItem>
+
 
               <div className='row'>
                 <FormItem
                   label='Address'
                   className='col-md-9 mb-3'
                 >
-                  {getFieldDecorator('address', {
+                  {getFieldDecorator('address_attributes.street', {
                     rules: [{
                       required: true,
                       message: 'Address is required',
@@ -119,7 +161,7 @@ class Account extends React.Component {
                   label='Zip'
                   className='col-md-3 mb-3'
                 >
-                  {getFieldDecorator('zipcode', {
+                  {getFieldDecorator('address_attributes.zipcode', {
                     rules: [{
                       required: true,
                       message: 'Zip is required',
@@ -135,7 +177,7 @@ class Account extends React.Component {
                   label='Country'
                   className='col-md-5 mb-3'
                 >
-                  {getFieldDecorator('country_id', {
+                  {getFieldDecorator('address_attributes.content_country_id', {
                     rules: [{
                       required: true,
                       message: 'Country is required',
@@ -145,7 +187,7 @@ class Account extends React.Component {
                       placeholder='Please select a country'
                       className='custom-select d-block w-100'
                     >
-                      <Option value='usa'>United States</Option>
+                      <Option value='1'>United States</Option>
                     </Select>
                   )}
                 </FormItem>
@@ -154,7 +196,7 @@ class Account extends React.Component {
                   label='State'
                   className='col-md-4 mb-3'
                 >
-                  {getFieldDecorator('region_id', {
+                  {getFieldDecorator('address_attributes.content_region_id', {
                     rules: [{
                       required: true,
                       message: 'State is required',
@@ -164,7 +206,7 @@ class Account extends React.Component {
                       placeholder='Please select a state'
                       className='custom-select d-block w-100'
                     >
-                      <Option value='california'>California</Option>
+                      <Option value='1'>California</Option>
                     </Select>
                   )}
                 </FormItem>
@@ -173,7 +215,7 @@ class Account extends React.Component {
                   label='City'
                   className='col-md-3 mb-3'
                 >
-                  {getFieldDecorator('city_id', {
+                  {getFieldDecorator('address_attributes.content_city_id', {
                     rules: [{
                       required: true,
                       message: 'City is required',
@@ -183,7 +225,7 @@ class Account extends React.Component {
                       placeholder='Please select a city'
                       className='custom-select d-block w-100'
                     >
-                      <Option value='california'>California</Option>
+                      <Option value='1'>California</Option>
                     </Select>
                   )}
                 </FormItem>
