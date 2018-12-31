@@ -10,10 +10,14 @@
   </head>
   <body>
     <%= render 'admin/shared/header' %>
+
     <div class='container-fluid'>
       <div class='row'>
         <%= render 'admin/shared/navigation' %>
-        <%= yield %>
+
+        <main role='main' class='col-md-9 ml-sm-auto col-lg-10 px-4'>
+          <%= yield %>
+        </main>
       </div>
     </div>
   </body>

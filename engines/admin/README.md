@@ -1,6 +1,8 @@
 # Admin
 Short description and motivation.
 
+source: https://getbootstrap.com/docs/4.2/examples/dashboard/#
+
 ## Usage
 How to use my plugin.
 

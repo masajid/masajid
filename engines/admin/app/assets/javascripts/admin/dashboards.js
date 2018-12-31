@@ -1,6 +1,9 @@
+//= require feather.min
 //= require Chart.min
 
 $(document).on('turbolinks:load', function() {
+  feather.replace()
+
   var ctx = document.getElementById('myChart')
   var myChart = new Chart(ctx, {
     type: 'line',

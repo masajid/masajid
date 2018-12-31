@@ -16,9 +16,4 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
-//= require feather.min
 //= require_tree .
-
-$(document).on('turbolinks:load', function() {
-  feather.replace()
-})
