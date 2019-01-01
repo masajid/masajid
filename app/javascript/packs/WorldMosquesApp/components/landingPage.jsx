@@ -16,6 +16,9 @@ class LandingPage extends React.Component {
               <li className='nav-item'>
                 <Link className='nav-link' to='/accounts/new'>Create Masjid Account</Link>
               </li>
+              <li className='nav-item'>
+                <a className='nav-link' href='/users/sign_in'>Sign in</a>
+              </li>
             </ul>
           </div>
         </nav>

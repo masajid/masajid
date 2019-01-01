@@ -1,1 +1,39 @@
-<div id='world-mosques-app'></div>
+<main role='main'>
+  <div class='jumbotron'>
+    <div class='col-sm-8 mx-auto'>
+      <h1>Your Masjid online</h1>
+      <p>Here you can create a website for your masjid, in order to add articles, events, posts ... etc.</p>
+      <p>
+        <%= link_to 'Create Masjid Account »', new_account_path, class: 'btn btn-primary' %>
+      </p>
+    </div>
+  </div>
+</main>
+
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-4'>
+      <h2>Heading</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+        euismod. Donec sed odio dui. </p>
+      <p><a class='btn btn-secondary' href='#' role='button'>View details »</a></p>
+    </div>
+    <div class='col-md-4'>
+      <h2>Heading</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+        euismod. Donec sed odio dui. </p>
+      <p><a class='btn btn-secondary' href='#' role='button'>View details »</a></p>
+    </div>
+    <div class='col-md-4'>
+      <h2>Heading</h2>
+      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
+        porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+        fermentum massa justo sit amet risus.</p>
+      <p><a class='btn btn-secondary' href='#' role='button'>View details »</a></p>
+    </div>
+  </div>
+
+  <%= render 'shared/footer' %>
+</div>
