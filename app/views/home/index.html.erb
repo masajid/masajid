@@ -1,14 +1,12 @@
-<main role='main'>
-  <div class='jumbotron'>
-    <div class='col-sm-8 mx-auto'>
-      <h1>Your Masjid online</h1>
-      <p>Here you can create a website for your masjid, in order to add articles, events, posts ... etc.</p>
-      <p>
-        <%= link_to 'Create Masjid Account »', new_account_path, class: 'btn btn-primary' %>
-      </p>
-    </div>
+<div class='jumbotron'>
+  <div class='col-sm-8 mx-auto'>
+    <h1>Your Masjid online</h1>
+    <p>Here you can create a website for your masjid, in order to add articles, events, posts ... etc.</p>
+    <p>
+      <%= link_to 'Create Masjid Account »', new_account_path, class: 'btn btn-primary' %>
+    </p>
   </div>
-</main>
+</div>
 
 <div class='container'>
   <div class='row'>
@@ -34,6 +32,4 @@
       <p><a class='btn btn-secondary' href='#' role='button'>View details »</a></p>
     </div>
   </div>
-
-  <%= render 'shared/footer' %>
 </div>

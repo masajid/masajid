@@ -11,6 +11,11 @@
 
   <body>
     <%= render 'shared/header' %>
-    <%= yield %>
+
+    <main role='main'>
+      <%= yield %>
+    </main>
+
+    <%= render 'shared/footer' %>
   </body>
 </html>

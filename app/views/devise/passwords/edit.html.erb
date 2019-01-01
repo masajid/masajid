@@ -1,0 +1,26 @@
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: 'form-signin' }) do |f| %>
+  <div class='text-center mb-4'>
+    <h1 class='h3 mb-3 font-weight-normal'>Change your password</h1>
+  </div>
+
+  <%= devise_error_messages! %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div class='form-label-group'>
+    <%= f.password_field :password, autofocus: true, autocomplete: 'new-password', placeholder: 'Password', class: 'form-control' %>
+    <%= f.label :password, "New password" %>
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+    <% end %>
+  </div>
+
+  <div class='form-label-group'>
+    <%= f.password_field :password_confirmation, autocomplete: 'off', placeholder: 'Confirm new password', class: 'form-control' %>
+    <%= f.label :password, 'Confirm new password' %>
+  </div>
+
+  <%= f.submit 'Change my password', class: 'btn btn-lg btn-primary btn-block' %>
+
+  <%= render 'devise/shared/links' %>
+<% end %>
+

@@ -11,10 +11,12 @@
   <body>
     <%= render 'shared/header' %>
 
-    <div className='container'>
-      <%= yield %>
+    <main role='main'>
+      <div className='container'>
+        <%= yield %>
+      </div>
+    </main>
 
-      <%= render 'shared/footer' %>
-    </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>
