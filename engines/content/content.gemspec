@@ -18,4 +18,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 5.2.1'
   s.add_dependency 'devise'
+  s.add_dependency 'simple_form'
 end

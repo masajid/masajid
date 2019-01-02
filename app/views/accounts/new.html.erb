@@ -1,1 +1,37 @@
-<div id='world-mosques-app'></div>
+<%= simple_form_for @account do |f| %>
+  <div class='text-center mb-4'>
+    <h1 class='h3 mb-3 font-weight-normal'>Create Account</h1>
+  </div>
+
+  <%= f.error_notification %>
+
+  <%= f.input :subdomain %>
+
+  <%= f.input :email, input_html: { autocomplete: 'email' } %>
+
+  <%= f.input :responsable %>
+
+  <%= f.input :mosque %>
+
+  <%= f.simple_fields_for :address do |address| %>
+    <%= address.input :phone %>
+
+    <%= address.input :street %>
+
+    <div class='row'>
+      <div class='col-sm-4'>
+        <%= address.input :content_country_id, collection: Content::Country.pluck(:name, :id) %>
+      </div>
+
+      <div class='col-sm-4'>
+        <%= address.input :content_region_id, collection: Content::Region.pluck(:name, :id) %>
+      </div>
+
+      <div class='col-sm-4'>
+        <%= address.input :content_city_id, collection: Content::City.pluck(:name, :id) %>
+      </div>
+    </div>
+  <% end %>
+
+  <%= f.button :submit, class: 'btn-primary' %>
+<% end %>

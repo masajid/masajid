@@ -1,11 +1,16 @@
 class AccountsController < ApplicationController
+  def new
+    @account = Content::Account.new
+    @account.build_address
+  end
+
   def create
     @account = Content::Account.new(account_params)
 
     if @account.save
-      head :created
+      redirect_to root_path, notice: 'Account created'
     else
-      render json: @account.errors, status: :unprocessable_entity
+      render :new
     end
   end
 
