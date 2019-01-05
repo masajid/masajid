@@ -10,6 +10,7 @@ PATH
   specs:
     content (0.1.0)
       devise
+      postgres-copy (~> 1.4.0)
       rails (~> 5.2.1)
       simple_form
 
@@ -143,6 +144,10 @@ GEM
     orm_adapter (0.5.0)
     pg (1.1.3)
     popper_js (1.14.5)
+    postgres-copy (1.4.0)
+      activerecord (>= 5.1)
+      pg (>= 0.17)
+      responders
     public_suffix (3.0.3)
     puma (3.12.0)
     rack (2.0.5)

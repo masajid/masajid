@@ -16,19 +16,27 @@
   <%= f.simple_fields_for :address do |address| %>
     <%= address.input :phone %>
 
-    <%= address.input :street %>
+    <div class='row'>
+      <div class='col-sm-9'>
+        <%= address.input :address1 %>
+      </div>
+
+      <div class='col-sm-3'>
+        <%= address.input :zip_code %>
+      </div>
+    </div>
 
     <div class='row'>
       <div class='col-sm-4'>
-        <%= address.input :content_country_id, collection: Content::Country.pluck(:name, :id) %>
+        <%= address.input :country_id, collection: Content::Country.pluck(:name, :id) %>
       </div>
 
       <div class='col-sm-4'>
-        <%= address.input :content_region_id, collection: Content::Region.pluck(:name, :id) %>
+        <%= address.input :region_id, collection: Content::Region.pluck(:name, :id) %>
       </div>
 
       <div class='col-sm-4'>
-        <%= address.input :content_city_id, collection: Content::City.pluck(:name, :id) %>
+        <%= address.input :city_id, collection: Content::City.pluck(:name, :id) %>
       </div>
     </div>
   <% end %>

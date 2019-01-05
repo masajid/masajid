@@ -5,8 +5,7 @@ class CreateContentAccounts < ActiveRecord::Migration[5.2]
       t.string :email
       t.string :mosque
       t.string :responsable
-      t.references :content_owner, foreign_key: { to_table: :content_users }
-      t.references :content_address, foreign_key: true
+      t.references :owner, null: false, index: true
 
       t.timestamps
     end

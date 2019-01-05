@@ -9,8 +9,9 @@ en:
         responsable: Responsable Name
         mosque: Mosque Name
       account/address:
-        street: Address
+        address1: Address
+        zip_code: Zip Code
         phone: Phone Number
-        content_country_id: Country
-        content_region_id: State
-        content_city_id: City
+        country_id: Country
+        region_id: Region
+        city_id: City

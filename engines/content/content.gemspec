@@ -19,4 +19,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '~> 5.2.1'
   s.add_dependency 'devise'
   s.add_dependency 'simple_form'
+  s.add_dependency 'postgres-copy', '~> 1.4.0'
 end

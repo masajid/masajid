@@ -1,7 +1,7 @@
 module Content
   class Account < ApplicationRecord
-    belongs_to :owner, class_name: 'Content::User', foreign_key: :content_owner_id
-    belongs_to :address, foreign_key: :content_address_id
+    belongs_to :owner, class_name: 'Content::User'
+    has_one :address, as: :addressable
 
     validates :subdomain, presence: true, uniqueness: true
     validates :email, presence: true, uniqueness: true
@@ -19,7 +19,8 @@ module Content
     def set_owner
       build_owner(
         email: email,
-        password: Devise.friendly_token.first(8)
+        password: Devise.friendly_token.first(8),
+        role: 'admin',
       )
     end
   end
