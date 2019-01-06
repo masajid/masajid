@@ -9,8 +9,6 @@ class CreateContentAddresses < ActiveRecord::Migration[5.2]
       t.string :address1, null: false
       t.string :address2
       t.string :zip_code, limit: 20
-      t.string :city_name, limit: 100, null: false
-      t.string :region_name, limit: 100, null: false
       t.decimal :latitude, precision: 10, scale: 6 #, null: false
       t.decimal :longitude, precision: 10, scale: 6 #, null: false
 

@@ -35,8 +35,6 @@ ActiveRecord::Schema.define(version: 2018_12_01_213320) do
     t.string "address1", null: false
     t.string "address2"
     t.string "zip_code", limit: 20
-    t.string "city_name", limit: 100, null: false
-    t.string "region_name", limit: 100, null: false
     t.decimal "latitude", precision: 10, scale: 6
     t.decimal "longitude", precision: 10, scale: 6
     t.string "addressable_type", null: false

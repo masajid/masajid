@@ -12,23 +12,9 @@ module Content
     validates :address1, presence: true
     validates :fax, length: { maximum: 20 }
     validates :zip_code, length: { maximum: 20 }
-    validates :city_name, presence: true, length: { maximum: 100 }
-    validates :region_name, presence: true, length: { maximum: 100 }
     validates :addressable, presence: true
     validates :country_id, presence: true
     validates :region_id, presence: true
     validates :city_id, presence: true
-
-    before_validation :set_city_name, :set_region_name
-
-    private
-
-    def set_city_name
-      self.city_name = city.name if city
-    end
-
-    def set_region_name
-      self.region_name = region.name if region
-    end
   end
 end
