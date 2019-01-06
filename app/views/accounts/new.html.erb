@@ -28,15 +28,19 @@
 
     <div class='row'>
       <div class='col-sm-4'>
-        <%= address.input :country_id, collection: Content::Country.pluck(:name, :id) %>
+        <%= address.input :country_id,
+          collection: Content::Country.all,
+          label_method: :name,
+          value_method: :id
+        %>
       </div>
 
       <div class='col-sm-4'>
-        <%= address.input :region_id, collection: Content::Region.pluck(:name, :id) %>
+        <%= address.input :region_id, collection: address.object.country&.regions&.sort || [] %>
       </div>
 
       <div class='col-sm-4'>
-        <%= address.input :city_id, collection: Content::City.pluck(:name, :id) %>
+        <%= address.input :city_id, collection: address.object.region&.cities&.sort || [] %>
       </div>
     </div>
   <% end %>

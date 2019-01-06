@@ -16,6 +16,8 @@ module Content
     validates :region_name, presence: true, length: { maximum: 100 }
     validates :addressable, presence: true
     validates :country_id, presence: true
+    validates :region_id, presence: true
+    validates :city_id, presence: true
 
     before_validation :set_city_name, :set_region_name
 
