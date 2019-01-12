@@ -8,6 +8,6 @@ module Content
 
     ROLE_NAMES = %w[super_admin admin user]
 
-    validates :role, uniqueness: true, inclusion: { in: ROLE_NAMES }
+    validates :role, inclusion: { in: ROLE_NAMES }
   end
 end

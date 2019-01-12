@@ -1,6 +1,6 @@
 module Content
   class ApplicationMailer < ActionMailer::Base
-    default from: 'from@example.com'
+    default from: ENV['ADMIN_SENDER_EMAIL']
     layout 'mailer'
   end
 end

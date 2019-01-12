@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
   $('#account_address_attributes_country_id').on('change', function() {
     var region_select = document.getElementById('account_address_attributes_region_id')
     var city_select = document.getElementById('account_address_attributes_city_id')

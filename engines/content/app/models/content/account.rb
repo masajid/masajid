@@ -14,6 +14,11 @@ module Content
 
     before_validation :set_owner
 
+    after_create -> do
+      AccountMailer.welcome_email(self).deliver_now
+      AccountMailer.notify_creation_email(self).deliver_now
+    end
+
     private
 
     def set_owner

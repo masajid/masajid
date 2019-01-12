@@ -15,3 +15,14 @@ en:
         country_id: Country
         region_id: Region
         city_id: City
+  content:
+    account_mailer:
+      welcome_email:
+        subject: Welcome to The open Masjid
+        header: Welcome %{mosque}!
+        body: You are welcome at the open masjid. Once you confirm your account, we will got in touch with you as soon as possible.
+      notify_creation_email:
+        subject: The open Masjid - new account was created
+        header: Hi,
+        body: A new account was created
+        link: See details
