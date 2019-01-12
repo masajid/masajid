@@ -18,11 +18,24 @@ other steps:
 ```
 # heroku login
 # heroku create
+# git config --list | grep heroku
+# git push heroku master
+
 # heroku ps:scale web=1
 # heroku ps
+
 # heroku run rails db:migrate
 # heroku run rails db:seed
 # heroku run rails content_places:import
+
+# heroku config:set ADMIN_SENDER_EMAIL=admin@gmail.com
+# figaro heroku:set -e production (set all variables once)
+
+# heroku apps:rename theopenmasjid
 # heroku open
+
 # heroko logs --tail
+# heroku run rails console
+
+# heroku apps:destroy (destroy the app)
 ```
