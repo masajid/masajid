@@ -1,20 +1,23 @@
 en:
   activerecord:
     models:
-      account: Account
+      content/account: Account
+      content/address: Address
     attributes:
-      account:
+      content/account:
         subdomain: Subdomain
         email: Email Address
         responsable: Responsable Name
         mosque: Mosque Name
-      account/address:
+      content/address:
         address1: Address
         zip_code: Zip Code
         phone: Phone Number
         country_id: Country
         region_id: Region
         city_id: City
+      content/user:
+        confirmed_at: Confirmation Date
   content:
     account_mailer:
       welcome_email:
@@ -26,3 +29,9 @@ en:
         header: Hi,
         body: A new account was created
         link: See details
+  admin:
+    shared:
+      total: 'Total: %{count}'
+  shared:
+    actions:
+      edit: Edit

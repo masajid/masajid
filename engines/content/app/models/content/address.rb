@@ -16,5 +16,9 @@ module Content
     validates :country_id, presence: true
     validates :region_id, presence: true
     validates :city_id, presence: true
+
+    def to_s
+      [first_name, last_name, address1, zip_code, city.name, country.name].compact.join(' ')
+    end
   end
 end

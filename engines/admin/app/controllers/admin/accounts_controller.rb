@@ -4,25 +4,20 @@ module Admin
   class AccountsController < ApplicationController
     before_action :set_account, only: [:show, :edit, :update, :destroy]
 
-    # GET /accounts
     def index
       @accounts = Content::Account.all
     end
 
-    # GET /accounts/1
     def show
     end
 
-    # GET /accounts/new
     def new
       @account = Content::Account.new
     end
 
-    # GET /accounts/1/edit
     def edit
     end
 
-    # POST /accounts
     def create
       @account = Content::Account.new(account_params)
 
@@ -33,7 +28,6 @@ module Admin
       end
     end
 
-    # PATCH/PUT /accounts/1
     def update
       if @account.update(account_params)
         redirect_to @account, notice: 'Account was successfully updated.'
@@ -42,19 +36,16 @@ module Admin
       end
     end
 
-    # DELETE /accounts/1
     def destroy
       @account.destroy
       redirect_to accounts_url, notice: 'Account was successfully destroyed.'
     end
 
     private
-      # Use callbacks to share common setup or constraints between actions.
       def set_account
         @account = Content::Account.find(params[:id])
       end
 
-      # Only allow a trusted parameter "white list" through.
       def account_params
         params.require(:account).permit(:subdomain, :email, :mosque, :responsable, :owner_id, :address_id)
       end
