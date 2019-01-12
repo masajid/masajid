@@ -2,30 +2,16 @@ require_dependency "admin/application_controller"
 
 module Admin
   class AccountsController < ApplicationController
-    before_action :set_account, only: [:show, :edit, :update, :destroy]
+    before_action :set_account, only: [:show, :edit, :update, :destroy, :accept, :decline]
 
     def index
-      @accounts = Content::Account.all
+      @accounts = Content::Account.includes(:owner, address: [:city, :country]).order('content_accounts.created_at DESC')
     end
 
     def show
     end
 
-    def new
-      @account = Content::Account.new
-    end
-
     def edit
-    end
-
-    def create
-      @account = Content::Account.new(account_params)
-
-      if @account.save
-        redirect_to @account, notice: 'Account was successfully created.'
-      else
-        render :new
-      end
     end
 
     def update
@@ -39,6 +25,18 @@ module Admin
     def destroy
       @account.destroy
       redirect_to accounts_url, notice: 'Account was successfully destroyed.'
+    end
+
+    def accept
+      @account.accepted!
+      Content::AccountMailer.accept_email(@account).deliver_now
+      redirect_to accounts_url, notice: 'Account was successfully accepted.'
+    end
+
+    def decline
+      @account.declined!
+      Content::AccountMailer.decline_email(@account).deliver_now
+      redirect_to accounts_url, notice: 'Account was successfully declined.'
     end
 
     private

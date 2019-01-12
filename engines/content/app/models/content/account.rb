@@ -3,6 +3,8 @@ module Content
     belongs_to :owner, class_name: 'Content::User'
     has_one :address, as: :addressable
 
+    enum status: %i[pending accepted declined]
+
     validates :subdomain, presence: true, uniqueness: true
     validates :email, presence: true, uniqueness: true
     validates :mosque, presence: true
@@ -12,7 +14,7 @@ module Content
 
     accepts_nested_attributes_for :owner, :address
 
-    before_validation :set_owner
+    before_create :set_owner
 
     after_create -> do
       AccountMailer.welcome_email(self).deliver_now

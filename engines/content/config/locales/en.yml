@@ -20,6 +20,14 @@ en:
         confirmed_at: Confirmation Date
   content:
     account_mailer:
+      accept_email:
+        subject: The open Masjid - Your account was accepted
+        header: Hello %{mosque}!
+        body: Congratulations!!! Your account was accepted by our admins. Our team is still working on the first version of the application, we will inform you when it is done then you can start publishing your articles. If you have any question please don't hesitate get in touch with us! Thanks for your undestanding!
+      decline_email:
+        subject: The open Masjid - Your account was declined
+        header: Hello %{mosque}!
+        body: We are sorry to inform you that your email was declined by our admins because it seems to be not real. If you disagree or you have any concern please get in touch with us! Thanks for your undestanding!
       welcome_email:
         subject: Welcome to The open Masjid
         header: Welcome %{mosque}!
@@ -31,7 +39,10 @@ en:
         link: See details
   admin:
     shared:
+      are_you_sure: Are you sure?
       total: 'Total: %{count}'
   shared:
     actions:
+      accept: Accept
+      decline: Decline
       edit: Edit

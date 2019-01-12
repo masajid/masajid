@@ -21,7 +21,7 @@
 
     <tbody>
       <% @accounts.each do |account| %>
-        <tr>
+        <tr class="table-<%= account_class_name_status(account.status) %>">
           <td><%= account.id %></td>
           <td><%= link_to account.mosque, account %></td>
           <td><%= account.subdomain %></td>
@@ -30,7 +30,8 @@
           <td><%= account.owner.confirmed_at %></td>
           <td><%= account.address %></td>
           <td><%= link_to t('shared.actions.edit'), edit_account_path(account), class: 'btn btn-primary btn-sm' %></td>
-          <td><%#= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to t('shared.actions.accept'), accept_account_path(account), method: :put, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-success btn-sm' if account.pending? %></td>
+          <td><%= link_to t('shared.actions.decline'), decline_account_path(account), method: :put, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger btn-sm' if account.pending? %></td>
         </tr>
       <% end %>
     </tbody>

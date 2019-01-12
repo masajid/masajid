@@ -1,4 +1,5 @@
 require 'devise'
+require 'figaro'
 require 'simple_form'
 require 'postgres-copy'
 
