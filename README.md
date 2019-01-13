@@ -38,6 +38,7 @@ other steps:
 # heroku run rails console
 
 # heroku addons:create redistogo:nano
+# heroku config:set REDIS_PROVIDER=REDISTOGO_URL
 
 # heroku apps:destroy (destroy the app)
 ```
