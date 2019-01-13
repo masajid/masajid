@@ -39,6 +39,7 @@ other steps:
 
 # heroku addons:create redistogo:nano
 # heroku config:set REDIS_PROVIDER=REDISTOGO_URL
+# heroku config:set REDIS_URL=REDISTOGO_URL
 
 # heroku apps:destroy (destroy the app)
 ```

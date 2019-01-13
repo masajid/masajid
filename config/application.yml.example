@@ -5,3 +5,5 @@ MAILGUN_SMTP_USER_NAME: username
 MAILGUN_SMTP_PASSWORD: password
 MAILGUN_API_KEY: key
 MAILGUN_DOMAIN: domain
+
+REDIS_URL: 'redis://localhost:6379'
