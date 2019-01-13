@@ -26,6 +26,10 @@ gem 'bootstrap', '~> 4.2.1'
 gem 'jquery-rails'
 gem 'chart-js-rails'
 
+group :production do
+  gem 'mailgun-ruby', '~>1.1.6'
+end
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
