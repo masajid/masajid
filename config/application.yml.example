@@ -1,5 +1,7 @@
 ADMIN_SENDER_EMAIL: admin@gmail.com
 ADMIN_NOTIFICATION_EMAILS: admin@gmail.com,private@gmail.com,me@gmail.com
 
+MAILGUN_SMTP_USER_NAME: username
+MAILGUN_SMTP_PASSWORD: password
 MAILGUN_API_KEY: key
 MAILGUN_DOMAIN: domain
