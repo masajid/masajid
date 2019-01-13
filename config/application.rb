@@ -17,5 +17,7 @@ module WorldMosquesApp
     # the framework and any gems in your application.
 
     config.action_controller.default_protect_from_forgery = false
+
+    config.active_job.queue_adapter = :sidekiq
   end
 end

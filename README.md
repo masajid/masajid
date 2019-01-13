@@ -37,5 +37,7 @@ other steps:
 # heroko logs --tail
 # heroku run rails console
 
+# heroku addons:create redistogo:nano
+
 # heroku apps:destroy (destroy the app)
 ```

@@ -29,13 +29,13 @@ module Admin
 
     def accept
       @account.accepted!
-      Content::AccountMailer.accept_email(@account).deliver_now
+      Content::AccountMailer.accept_email(@account).deliver_later
       redirect_to accounts_url, notice: 'Account was successfully accepted.'
     end
 
     def decline
       @account.declined!
-      Content::AccountMailer.decline_email(@account).deliver_now
+      Content::AccountMailer.decline_email(@account).deliver_later
       redirect_to accounts_url, notice: 'Account was successfully declined.'
     end
 
