@@ -14,7 +14,7 @@ module Content
 
     accepts_nested_attributes_for :owner, :address
 
-    before_create :set_owner
+    before_validation :set_owner, on: :create
 
     after_create -> do
       AccountMailer.welcome_email(self).deliver_now
