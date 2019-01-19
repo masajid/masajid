@@ -1,28 +1,17 @@
-require_dependency "admin/application_controller"
+require_dependency 'admin/application_controller'
 
 module Admin
   class CountriesController < ApplicationController
-    before_action :set_country, only: [:show, :edit, :update, :destroy]
+    before_action :set_country, only: [:edit, :update, :destroy]
 
-    # GET /countries
     def index
       @countries = Content::Country.all
     end
 
-    # GET /countries/1
-    def show
-    end
-
-    # GET /countries/new
     def new
       @country = Content::Country.new
     end
 
-    # GET /countries/1/edit
-    def edit
-    end
-
-    # POST /countries
     def create
       @country = Content::Country.new(country_params)
 
@@ -33,7 +22,6 @@ module Admin
       end
     end
 
-    # PATCH/PUT /countries/1
     def update
       if @country.update(country_params)
         redirect_to @country, notice: 'Country was successfully updated.'
@@ -42,19 +30,16 @@ module Admin
       end
     end
 
-    # DELETE /countries/1
     def destroy
       @country.destroy
       redirect_to countries_url, notice: 'Country was successfully destroyed.'
     end
 
     private
-      # Use callbacks to share common setup or constraints between actions.
       def set_country
         @country = Content::Country.find(params[:id])
       end
 
-      # Only allow a trusted parameter "white list" through.
       def country_params
         params.require(:country).permit(:name)
       end

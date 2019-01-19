@@ -1,6 +1,10 @@
-<h1>Editing Country</h1>
+<% content_for :page_title do %>
+  <%= t('.header') %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= link_to t('shared.actions.back_to_list'), countries_path, class: 'btn btn-secondary btn-sm' %>
+<% end %>
 
 <%= render 'form', country: @country %>
 
-<%= link_to 'Show', @country %> |
-<%= link_to 'Back', countries_path %>

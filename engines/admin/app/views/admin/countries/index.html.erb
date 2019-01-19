@@ -1,27 +1,32 @@
-<p id="notice"><%= notice %></p>
+<% content_for :page_title do %>
+  <%= Content::Country.model_name.human(count: :many) %>
+<% end %>
 
-<h1>Countries</h1>
+<% content_for :page_actions do %>
+  <%= link_to t('shared.actions.new'), new_country_path, class: 'btn btn-primary btn-sm' %>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<p><%= t('admin.shared.total', count: @countries.count) %></p>
 
-  <tbody>
-    <% @countries.each do |country| %>
+<div class='table-responsive'>
+  <table class='table table-striped table-sm'>
+    <thead>
       <tr>
-        <td><%= country.name %></td>
-        <td><%= link_to 'Show', country %></td>
-        <td><%= link_to 'Edit', edit_country_path(country) %></td>
-        <td><%= link_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>#</th>
+        <th><%= Content::Country.human_attribute_name(:name) %></th>
+        <th colspan='2'></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Country', new_country_path %>
+    <tbody>
+      <% @countries.each do |country| %>
+        <tr>
+          <td><%= country.id %></td>
+          <td><%= country.name %></td>
+          <td><%= link_to t('shared.actions.edit'), edit_country_path(country), class: 'btn btn-success btn-sm' %></td>
+          <td><%= link_to t('shared.actions.delete'), country, method: :delete, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger btn-sm' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,6 +1,6 @@
-<div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom'>
-  <h1 class='h2'>Accounts</h1>
-</div>
+<% content_for :page_title do %>
+  <%= Content::Account.model_name.human(count: :many) %>
+<% end %>
 
 <p><%= t('admin.shared.total', count: @accounts.count) %></p>
 

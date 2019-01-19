@@ -8,7 +8,7 @@ Admin::Engine.routes.draw do
   end
   resources :cities
   resources :regions
-  resources :countries
+  resources :countries, except: :show
 
   namespace :api do
     resources :regions, only: :index
