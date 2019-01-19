@@ -1,47 +1,41 @@
-<%= form_with(model: account, local: true) do |form| %>
-  <% if account.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(account.errors.count, "error") %> prohibited this account from being saved:</h2>
+<%= simple_form_for account do |f| %>
+  <%= f.error_notification %>
 
-      <ul>
-      <% account.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <%= f.input :subdomain %>
+
+  <%= f.input :email, input_html: { autocomplete: 'email' } %>
+
+  <%= f.input :responsable %>
+
+  <%= f.input :mosque %>
+
+  <%= f.simple_fields_for :address do |address| %>
+    <%= address.input :phone %>
+
+    <div class='row'>
+      <div class='col-sm-9'>
+        <%= address.input :address1 %>
+      </div>
+
+      <div class='col-sm-3'>
+        <%= address.input :zip_code %>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-sm-4'>
+        <%= address.input :country_id, collection: Content::Country.all %>
+      </div>
+
+      <div class='col-sm-4'>
+        <%= address.input :region_id, collection: address.object.country&.regions&.sort || [] %>
+      </div>
+
+      <div class='col-sm-4'>
+        <%= address.input :city_id, collection: address.object.region&.cities&.sort || [] %>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :subdomain %>
-    <%= form.text_field :subdomain %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mosque %>
-    <%= form.text_field :mosque %>
-  </div>
-
-  <div class="field">
-    <%= form.label :responsable %>
-    <%= form.text_field :responsable %>
-  </div>
-
-  <div class="field">
-    <%= form.label :owner_id %>
-    <%= form.text_field :owner_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address_id %>
-    <%= form.text_field :address_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= f.button :submit, class: 'btn-primary' %>
 <% end %>

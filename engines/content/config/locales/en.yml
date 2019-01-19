@@ -77,6 +77,9 @@ en:
         body: A new account was created
         link: See details
   admin:
+    accounts:
+      edit:
+        header: Edit Account
     countries:
       edit:
         header: Edit Country

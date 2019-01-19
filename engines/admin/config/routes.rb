@@ -1,6 +1,6 @@
 Admin::Engine.routes.draw do
   root 'dashboards#index'
-  resources :accounts, except: %i[new create] do
+  resources :accounts, except: %i[show new create] do
     member do
       put :accept
       put :decline

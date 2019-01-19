@@ -2,16 +2,10 @@ require_dependency "admin/application_controller"
 
 module Admin
   class AccountsController < ApplicationController
-    before_action :set_account, only: [:show, :edit, :update, :destroy, :accept, :decline]
+    before_action :set_account, only: %i[edit update destroy accept decline]
 
     def index
       @accounts = Content::Account.includes(:owner, address: [:city, :country]).order('content_accounts.created_at DESC')
-    end
-
-    def show
-    end
-
-    def edit
     end
 
     def update
@@ -45,7 +39,13 @@ module Admin
       end
 
       def account_params
-        params.require(:account).permit(:subdomain, :email, :mosque, :responsable, :owner_id, :address_id)
+        params.require(:account).permit(
+          :subdomain,
+          :email,
+          :mosque,
+          :responsable,
+          address_attributes: %i[id address1 zip_code phone city_id region_id country_id]
+        )
       end
   end
 end

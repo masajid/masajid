@@ -1,6 +1,9 @@
-<h1>Editing Account</h1>
+<% content_for :page_title do %>
+  <%= t('.header') %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= link_to t('shared.actions.back_to_list'), accounts_path, class: 'btn btn-secondary btn-sm' %>
+<% end %>
 
 <%= render 'form', account: @account %>
-
-<%= link_to 'Show', @account %> |
-<%= link_to 'Back', accounts_path %>
