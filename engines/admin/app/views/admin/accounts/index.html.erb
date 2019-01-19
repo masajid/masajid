@@ -23,7 +23,7 @@
       <% @accounts.each do |account| %>
         <tr class="table-<%= account_class_name_status(account.status) %>">
           <td><%= account.id %></td>
-          <td><%= link_to account.mosque, account %></td>
+          <td><%= account.mosque %></td>
           <td><%= account.subdomain %></td>
           <td><%= account.email %></td>
           <td><%= account.responsable %></td>
