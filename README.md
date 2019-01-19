@@ -43,3 +43,8 @@ other steps:
 
 # heroku apps:destroy (destroy the app)
 ```
+
+### Emails
+
+- https://www.mailjet.com
+- free forever: 6000 emails per months / 200 per day

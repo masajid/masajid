@@ -91,15 +91,5 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_caching = false
   config.action_mailer.default_url_options = { host: 'https://theopenmasjid.herokuapp.com' }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    port: 587,
-    address: 'smtp.mailgun.org',
-    user_name: ENV['MAILGUN_SMTP_USER_NAME'],
-    password: ENV['MAILGUN_SMTP_PASSWORD'],
-    domain: ENV['MAILGUN_DOMAIN'],
-    authentication: :plain,
-    open_timeout: 3,
-    read_timeout: 3,
-  }
+  config.action_mailer.delivery_method = :mailjet
 end

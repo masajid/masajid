@@ -27,7 +27,7 @@ gem 'jquery-rails'
 gem 'chart-js-rails'
 
 group :production do
-  gem 'mailgun-ruby', '~>1.1.6'
+  gem 'mailjet'
 end
 
 group :development, :test do
