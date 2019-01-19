@@ -29,6 +29,20 @@ en:
         city_id: City
       content/country:
         name: Country Name
+        fips104: Fips104
+        iso2: Iso2
+        iso3: Iso3
+        ison: Ison
+        internet: Internet
+        capital: Capital
+        map_reference: Map Reference
+        nationality_singular: Nationality Singular
+        nationality_plural: Nationality Plural
+        currency: Currency
+        currency_code: Currency Code
+        population: Population
+        title: Title
+        comment: Comment
       content/region:
         name: Region Name
         code: Code
