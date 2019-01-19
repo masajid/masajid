@@ -1,27 +1,47 @@
-<%= form_with(model: city, local: true) do |form| %>
-  <% if city.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(city.errors.count, "error") %> prohibited this city from being saved:</h2>
+<%= simple_form_for city do |f| %>
+  <%= f.error_notification %>
 
-      <ul>
-      <% city.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <%= f.input :name %>
+
+  <div class='row'>
+    <div class='col-sm-6'>
+      <%= f.input :latitude %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <div class='col-sm-6'>
+      <%= f.input :longitude %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :region_id %>
-    <%= form.text_field :region_id %>
+  <div class='row'>
+    <div class='col-sm-6'>
+      <%= f.input :timezone %>
+    </div>
+
+    <div class='col-sm-6'>
+      <%= f.input :dma_id %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class='row'>
+    <div class='col-sm-6'>
+      <%= f.input :county %>
+    </div>
+
+    <div class='col-sm-6'>
+      <%= f.input :code %>
+    </div>
   </div>
+
+  <div class='row'>
+    <div class='col-sm-6'>
+      <%= f.input :country_id, collection: Content::Country.all.sort, input_html: { id: 'country_id' } %>
+    </div>
+
+    <div class='col-sm-6'>
+      <%= f.input :region_id, collection: f.object.country&.regions&.sort || [], input_html: { id: 'region_id' } %>
+    </div>
+  </div>
+
+  <%= f.button :submit, class: 'btn-primary' %>
 <% end %>

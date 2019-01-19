@@ -1,28 +1,31 @@
-require_dependency "admin/application_controller"
+require_dependency 'admin/application_controller'
 
 module Admin
   class CitiesController < ApplicationController
-    before_action :set_city, only: [:show, :edit, :update, :destroy]
+    before_action :set_city, only: %i[edit update destroy]
 
-    # GET /cities
     def index
-      @cities = Content::City.all
+      @countries = Content::Country.all
+
+      @regions =
+        if params[:country_id].present?
+          @countries.find(params[:country_id]).regions
+        else
+          @countries.first.regions
+        end
+
+      @cities =
+        if params[:region_id].present?
+          @regions.find(params[:region_id]).cities
+        else
+          @regions.first.cities
+        end
     end
 
-    # GET /cities/1
-    def show
-    end
-
-    # GET /cities/new
     def new
       @city = Content::City.new
     end
 
-    # GET /cities/1/edit
-    def edit
-    end
-
-    # POST /cities
     def create
       @city = Content::City.new(city_params)
 
@@ -33,7 +36,6 @@ module Admin
       end
     end
 
-    # PATCH/PUT /cities/1
     def update
       if @city.update(city_params)
         redirect_to @city, notice: 'City was successfully updated.'
@@ -42,21 +44,18 @@ module Admin
       end
     end
 
-    # DELETE /cities/1
     def destroy
       @city.destroy
       redirect_to cities_url, notice: 'City was successfully destroyed.'
     end
 
     private
-      # Use callbacks to share common setup or constraints between actions.
       def set_city
         @city = Content::City.find(params[:id])
       end
 
-      # Only allow a trusted parameter "white list" through.
       def city_params
-        params.require(:city).permit(:name, :region_id)
+        params.require(:city).permit(:name, :latitude, :longitude, :timezone, :dma_id, :county, :code, :country_id, :region_id)
       end
   end
 end

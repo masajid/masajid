@@ -6,8 +6,8 @@ Admin::Engine.routes.draw do
       put :decline
     end
   end
-  resources :cities
-  resources :regions
+  resources :cities, except: :show
+  resources :regions, except: :show
   resources :countries, except: :show
 
   namespace :api do

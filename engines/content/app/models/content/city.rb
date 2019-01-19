@@ -9,7 +9,7 @@ module Content
     validates :longitude, presence: true
     validates :latitude, presence: true
     validates :timezone, presence: true
-    validates :country, presence: true
-    validates :region, presence: true
+    validates :country_id, presence: true
+    validates :region_id, presence: true
   end
 end

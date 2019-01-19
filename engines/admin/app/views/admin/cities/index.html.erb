@@ -1,29 +1,62 @@
-<p id="notice"><%= notice %></p>
+<% content_for :page_title do %>
+  <%= Content::City.model_name.human(count: :many) %>
+<% end %>
 
-<h1>Cities</h1>
+<% content_for :page_actions do %>
+  <%= link_to t('shared.actions.new'), new_city_path, class: 'btn btn-primary btn-sm' %>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Region</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= form_tag cities_path, method: :get do %>
+  <div class='form-row'>
+    <div class='form-group col-md-3'>
+      <%= select_tag :country_id, options_for_select(@countries.map { |c| [c.name, c.id] }, params[:country_id]), class: 'form-control' %>
+    </div>
+    <div class='form-group col-md-3'>
+      <%= select_tag :region_id, options_for_select(@regions.map { |c| [c.name, c.id] }, params[:region_id]), class: 'form-control' %>
+    </div>
+    <div class='form-group col-md-3'>
+      <%= submit_tag 'Search', class: 'btn btn-secondary btn-sm' %>
+    </div>
+  </div>
+<% end %>
 
-  <tbody>
-    <% @cities.each do |city| %>
+<p><%= t('admin.shared.total', count: @cities.size) %></p>
+
+<div class='table-responsive'>
+  <table class='table table-striped table-sm'>
+    <thead>
       <tr>
-        <td><%= city.name %></td>
-        <td><%= city.region %></td>
-        <td><%= link_to 'Show', city %></td>
-        <td><%= link_to 'Edit', edit_city_path(city) %></td>
-        <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>#</th>
+        <th><%= Content::City.human_attribute_name(:name) %></th>
+        <th><%= Content::City.human_attribute_name(:latitude) %></th>
+        <th><%= Content::City.human_attribute_name(:longitude) %></th>
+        <th><%= Content::City.human_attribute_name(:timezone) %></th>
+        <th><%= Content::City.human_attribute_name(:dma_id) %></th>
+        <th><%= Content::City.human_attribute_name(:county) %></th>
+        <th><%= Content::City.human_attribute_name(:code) %></th>
+        <th><%= Content::Region.model_name.human %></th>
+        <th><%= Content::Country.model_name.human %></th>
+        <th colspan='2'></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New City', new_city_path %>
+    <tbody>
+      <% @cities.each do |city| %>
+        <tr>
+          <td><%= city.id %></td>
+          <td><%= city.name %></td>
+          <td><%= city.latitude %></td>
+          <td><%= city.longitude %></td>
+          <td><%= city.timezone %></td>
+          <td><%= city.dma_id %></td>
+          <td><%= city.county %></td>
+          <td><%= city.code %></td>
+          <td><%= city.region.name %></td>
+          <td><%= city.country.name %></td>
+          <td><%= link_to t('shared.actions.edit'), edit_city_path(city), class: 'btn btn-success btn-sm' %></td>
+          <td><%= link_to t('shared.actions.delete'), city, method: :delete, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger btn-sm' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

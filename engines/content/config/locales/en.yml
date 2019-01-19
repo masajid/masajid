@@ -8,6 +8,9 @@ en:
       content/country:
         one: Country
         other: Countries
+      content/city:
+        one: City
+        other: Cities
       content/region:
         one: Region
         other: Regions
@@ -30,6 +33,14 @@ en:
         name: Region Name
         code: Code
         adm1code: Adm1code
+      content/city:
+        name: City Name
+        latitude: Latitude
+        longitude: Longitude
+        timezone: Timezone
+        dma_id: Dma
+        county: County
+        code: Code
       content/user:
         confirmed_at: Confirmation Date
   content:
@@ -62,6 +73,11 @@ en:
         header: Edit Region
       new:
         header: New Region
+    cities:
+      edit:
+        header: Edit City
+      new:
+        header: New City
     shared:
       are_you_sure: Are you sure?
       total: 'Total: %{count}'
