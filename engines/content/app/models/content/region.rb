@@ -8,6 +8,6 @@ module Content
     validates :name, presence: true
     validates :code, presence: true
     validates :adm1code, presence: true
-    validates :country, presence: true
+    validates :country_id, presence: true
   end
 end

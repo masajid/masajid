@@ -1,29 +1,49 @@
-<p id="notice"><%= notice %></p>
+<% content_for :page_title do %>
+  <%= Content::Region.model_name.human(count: :many) %>
+<% end %>
 
-<h1>Regions</h1>
+<% content_for :page_actions do %>
+  <%= link_to t('shared.actions.new'), new_region_path, class: 'btn btn-primary btn-sm' %>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Country</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= form_tag regions_path, method: :get do %>
+  <div class='form-row'>
+    <div class='form-group col-md-3'>
+      <%= select_tag :country_id, options_for_select(@countries.map { |c| [c.name, c.id] }, params[:country_id]), class: 'form-control' %>
+    </div>
+    <div class='form-group col-md-3'>
+      <%= submit_tag 'Search', class: 'btn btn-secondary btn-sm' %>
+    </div>
+  </div>
+<% end %>
 
-  <tbody>
-    <% @regions.each do |region| %>
+<p><%= t('admin.shared.total', count: @regions.size) %></p>
+
+<div class='table-responsive'>
+  <table class='table table-striped table-sm'>
+    <thead>
       <tr>
-        <td><%= region.name %></td>
-        <td><%= region.country %></td>
-        <td><%= link_to 'Show', region %></td>
-        <td><%= link_to 'Edit', edit_region_path(region) %></td>
-        <td><%= link_to 'Destroy', region, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>#</th>
+        <th><%= Content::Region.human_attribute_name(:name) %></th>
+        <th><%= Content::Region.human_attribute_name(:code) %></th>
+        <th><%= Content::Region.human_attribute_name(:adm1code) %></th>
+        <th><%= Content::Country.model_name.human %></th>
+        <th colspan='2'></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Region', new_region_path %>
+    <tbody>
+      <% @regions.each do |region| %>
+        <tr>
+          <td><%= region.id %></td>
+          <td><%= region.name %></td>
+          <td><%= region.code %></td>
+          <td><%= region.adm1code %></td>
+          <td><%= region.country.name %></td>
+          <td><%= link_to t('shared.actions.edit'), edit_region_path(region), class: 'btn btn-success btn-sm' %></td>
+          <td><%= link_to t('shared.actions.delete'), region, method: :delete, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger btn-sm' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

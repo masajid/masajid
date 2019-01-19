@@ -1,6 +1,9 @@
-<h1>Editing Region</h1>
+<% content_for :page_title do %>
+  <%= t('.header') %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= link_to t('shared.actions.back_to_list'), regions_path, class: 'btn btn-secondary btn-sm' %>
+<% end %>
 
 <%= render 'form', region: @region %>
-
-<%= link_to 'Show', @region %> |
-<%= link_to 'Back', regions_path %>

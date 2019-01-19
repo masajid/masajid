@@ -8,6 +8,9 @@ en:
       content/country:
         one: Country
         other: Countries
+      content/region:
+        one: Region
+        other: Regions
     attributes:
       content/account:
         subdomain: Subdomain
@@ -23,6 +26,10 @@ en:
         city_id: City
       content/country:
         name: Country Name
+      content/region:
+        name: Region Name
+        code: Code
+        adm1code: Adm1code
       content/user:
         confirmed_at: Confirmation Date
   content:
@@ -50,6 +57,11 @@ en:
         header: Edit Country
       new:
         header: New Country
+    regions:
+      edit:
+        header: Edit Region
+      new:
+        header: New Region
     shared:
       are_you_sure: Are you sure?
       total: 'Total: %{count}'
