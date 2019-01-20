@@ -3,5 +3,15 @@ class HomeController < ApplicationController
 
   def index
     @accounts = Content::Account.accepted.includes(address: [:city, :country])
+    @bounds = [
+      [
+        @accounts.map { |account| account.address.longitude }.min,
+        @accounts.map { |account| account.address.latitude }.min,
+      ],
+      [
+        @accounts.map { |account| account.address.longitude }.max,
+        @accounts.map { |account| account.address.latitude }.max,
+      ]
+    ]
   end
 end

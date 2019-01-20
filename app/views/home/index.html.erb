@@ -48,6 +48,8 @@
 
   map.addControl(new mapboxgl.NavigationControl());
 
+  map.fitBounds(<%= @bounds %>);
+
   <% @accounts.each do |account| %>
     var popup = new mapboxgl.Popup({ offset: 25 })
       .setHTML('<%= account.mosque %>' + '<br>' + '<%= account.address %>');
