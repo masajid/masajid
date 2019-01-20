@@ -11,6 +11,7 @@ PATH
     content (0.1.0)
       devise
       figaro
+      geocoder
       postgres-copy (~> 1.4.0)
       rails (~> 5.2.1)
       sidekiq
@@ -115,6 +116,7 @@ GEM
     ffi (1.9.25)
     figaro (1.1.1)
       thor (~> 0.14)
+    geocoder (1.5.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     http-cookie (1.0.3)

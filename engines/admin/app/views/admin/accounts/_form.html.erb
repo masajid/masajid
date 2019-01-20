@@ -1,13 +1,25 @@
 <%= simple_form_for account do |f| %>
   <%= f.error_notification %>
 
-  <%= f.input :subdomain %>
+  <div class='row'>
+    <div class='col-sm-6'>
+      <%= f.input :subdomain %>
+    </div>
 
-  <%= f.input :email, input_html: { autocomplete: 'email' } %>
+    <div class='col-sm-6'>
+      <%= f.input :email, input_html: { autocomplete: 'email' } %>
+    </div>
+  </div>
 
-  <%= f.input :responsable %>
+  <div class='row'>
+    <div class='col-sm-6'>
+      <%= f.input :responsable %>
+    </div>
 
-  <%= f.input :mosque %>
+    <div class='col-sm-6'>
+      <%= f.input :mosque %>
+    </div>
+  </div>
 
   <%= f.simple_fields_for :address do |address| %>
     <%= address.input :phone %>
@@ -33,6 +45,16 @@
 
       <div class='col-sm-4'>
         <%= address.input :city_id, collection: address.object.region&.cities&.sort || [] %>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-sm-4'>
+        <%= address.input :latitude %>
+      </div>
+
+      <div class='col-sm-4'>
+        <%= address.input :longitude %>
       </div>
     </div>
   <% end %>

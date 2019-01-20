@@ -1,6 +1,7 @@
 require 'devise'
 require 'sidekiq'
 require 'figaro'
+require 'geocoder'
 require 'simple_form'
 require 'postgres-copy'
 

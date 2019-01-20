@@ -17,8 +17,24 @@ module Content
     validates :region_id, presence: true
     validates :city_id, presence: true
 
+    before_validation :geolocate
+
     def to_s
-      [first_name, last_name, address1, zip_code, city.name, country.name].compact.join(' ')
+      [address1, zip_code, city.name, country.name].compact.join(' ')
+    end
+
+    private
+
+    def geolocate
+      result = ::Geocoder.coordinates(to_s)
+
+      if result.present?
+        self.latitude = result.first
+        self.longitude = result.last
+      else
+        errors.add(:address1, :geocoding_failed)
+        throw(:abort)
+      end
     end
   end
 end

@@ -10,7 +10,7 @@ module Admin
 
     def update
       if @account.update(account_params)
-        redirect_to @account, notice: 'Account was successfully updated.'
+        redirect_to accounts_url, notice: 'Account was successfully updated.'
       else
         render :edit
       end

@@ -57,6 +57,12 @@ en:
         code: Code
       content/user:
         confirmed_at: Confirmation Date
+    errors:
+      models:
+        content/address:
+          attributes:
+            address1:
+              geocoding_failed: Geocoding failed. Please check address.
   content:
     account_mailer:
       accept_email:

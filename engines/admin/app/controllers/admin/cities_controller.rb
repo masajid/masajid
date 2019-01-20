@@ -30,7 +30,7 @@ module Admin
       @city = Content::City.new(city_params)
 
       if @city.save
-        redirect_to @city, notice: 'City was successfully created.'
+        redirect_to cities_url, notice: 'City was successfully created.'
       else
         render :new
       end
