@@ -17,7 +17,7 @@ module Content
     validates :region_id, presence: true
     validates :city_id, presence: true
 
-    before_validation :geolocate
+    before_validation :geolocate, if: :address1_changed?
 
     def to_s
       [address1, zip_code, city.name, country.name].compact.join(' ')

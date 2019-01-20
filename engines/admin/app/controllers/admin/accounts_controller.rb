@@ -1,4 +1,4 @@
-require_dependency "admin/application_controller"
+require_dependency 'admin/application_controller'
 
 module Admin
   class AccountsController < ApplicationController
