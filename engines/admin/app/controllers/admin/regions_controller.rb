@@ -5,22 +5,27 @@ module Admin
     before_action :set_region, only: %i[edit update destroy]
 
     def index
-      @countries = Content::Country.all
+      authorize Content::Region
 
-      @regions =
-        if params[:country_id]
-          @countries.find(params[:country_id]).regions
-        else
-          @countries.first.regions
+      @countries = policy_scope(Content::Country)
+
+      @regions = policy_scope(Content::Region).where(
+        {}.tap do |conditions|
+          if params[:country_id]
+            conditions[:country_id] = params[:country_id]
+          else
+            conditions[:country] = @countries.first
+          end
         end
+      )
     end
 
     def new
-      @region = Content::Region.new
+      @region = authorize Content::Region.new
     end
 
     def create
-      @region = Content::Region.new(region_params)
+      @region = authorize Content::Region.new(region_params)
 
       if @region.save
         redirect_to regions_url, notice: 'Region was successfully created.'
@@ -44,7 +49,7 @@ module Admin
 
     private
       def set_region
-        @region = Content::Region.find(params[:id])
+        @region = authorize Content::Region.find(params[:id])
       end
 
       def region_params

@@ -101,6 +101,8 @@ en:
         header: Edit City
       new:
         header: New City
+    pundit:
+      unauthorized: You are not authorized to perform this action
     shared:
       are_you_sure: Are you sure?
       total: 'Total: %{count}'

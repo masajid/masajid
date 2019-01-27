@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 5.2.1'
   s.add_dependency 'devise'
+  s.add_dependency 'pundit'
   s.add_dependency 'sidekiq'
   s.add_dependency 'figaro'
   s.add_dependency 'geocoder'

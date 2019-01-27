@@ -5,7 +5,7 @@
         <%= link_to root_path, class: 'nav-link active' do %>
           <span data-feather='home'></span>
           Dashboards <span class='sr-only'>(current)</span>
-        <% end %>
+        <% end if policy([:content, :dashboard]).index? %>
       </li>
       <li class='nav-item'>
         <%= link_to accounts_path, class: 'nav-link' do %>
@@ -26,19 +26,19 @@
         <%= link_to countries_path, class: 'nav-link' do %>
           <span data-feather='file-text'></span>
           Countries
-        <% end %>
+        <% end if policy(Content::Country).index? %>
       </li>
       <li class='nav-item'>
         <%= link_to regions_path, class: 'nav-link' do %>
           <span data-feather='file-text'></span>
           Regions
-        <% end %>
+        <% end if policy(Content::Region).index? %>
       </li>
       <li class='nav-item'>
         <%= link_to cities_path, class: 'nav-link' do %>
           <span data-feather='file-text'></span>
           Cities
-        <% end %>
+        <% end if policy(Content::City).index? %>
       </li>
     </ul>
   </div>

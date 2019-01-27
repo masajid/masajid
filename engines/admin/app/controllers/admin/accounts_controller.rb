@@ -2,10 +2,14 @@ require_dependency 'admin/application_controller'
 
 module Admin
   class AccountsController < ApplicationController
-    before_action :set_account, only: %i[edit update destroy accept decline]
+    before_action :set_account, except: :index
 
     def index
-      @accounts = Content::Account.includes(:owner, address: [:city, :country]).order('content_accounts.created_at DESC')
+      authorize Content::Account
+
+      @accounts = policy_scope(Content::Account)
+        .includes(:owner, address: [:city, :country])
+        .order('content_accounts.created_at DESC')
     end
 
     def update
@@ -35,7 +39,7 @@ module Admin
 
     private
       def set_account
-        @account = Content::Account.find(params[:id])
+        @account = authorize Content::Account.find(params[:id])
       end
 
       def account_params

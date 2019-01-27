@@ -13,6 +13,7 @@ PATH
       figaro
       geocoder
       postgres-copy (~> 1.4.0)
+      pundit
       rails (~> 5.2.1)
       sidekiq
       simple_form
@@ -173,6 +174,8 @@ GEM
       responders
     public_suffix (3.0.3)
     puma (3.12.0)
+    pundit (2.0.0)
+      activesupport (>= 3.0.0)
     rack (2.0.5)
     rack-protection (2.0.5)
       rack

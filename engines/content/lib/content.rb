@@ -1,4 +1,5 @@
 require 'devise'
+require 'pundit'
 require 'sidekiq'
 require 'figaro'
 require 'geocoder'

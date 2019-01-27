@@ -5,29 +5,37 @@ module Admin
     before_action :set_city, only: %i[edit update destroy]
 
     def index
-      @countries = Content::Country.all
+      authorize Content::City
 
-      @regions =
-        if params[:country_id].present?
-          @countries.find(params[:country_id]).regions
-        else
-          @countries.first.regions
-        end
+      @countries = policy_scope(Content::Country)
 
-      @cities =
-        if params[:region_id].present?
-          @regions.find(params[:region_id]).cities
-        else
-          @regions.first.cities
+      @regions = policy_scope(Content::Region).where(
+        {}.tap do |conditions|
+          if params[:country_id]
+            conditions[:country_id] = params[:country_id]
+          else
+            conditions[:country] = @countries.first
+          end
         end
+      )
+
+      @cities = policy_scope(Content::City).where(
+        {}.tap do |conditions|
+          if params[:region_id].present?
+            conditions[:region_id] = params[:region_id]
+          else
+            conditions[:region] = @regions.first
+          end
+        end
+      )
     end
 
     def new
-      @city = Content::City.new
+      @city = authorize Content::City.new
     end
 
     def create
-      @city = Content::City.new(city_params)
+      @city = authorize Content::City.new(city_params)
 
       if @city.save
         redirect_to cities_url, notice: 'City was successfully created.'
@@ -51,7 +59,7 @@ module Admin
 
     private
       def set_city
-        @city = Content::City.find(params[:id])
+        @city = authorize Content::City.find(params[:id])
       end
 
       def city_params
