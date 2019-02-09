@@ -48,3 +48,23 @@ other steps:
 
 - https://www.mailjet.com
 - free forever: 6000 emails per months / 200 per day
+
+
+### Feature Flippers
+
+#### From the Rails console
+
+```ruby
+> f = Content.flipper
+> f.features.add(:signin_link) # add a feature
+> f[:signin_link].enable # enable a feature
+> f[:signin_link].disable # disable a feature
+> f[:signin_link].enabled? # check if a feature is enabled
+> Rails.cache.clear # in case a feature flipper affects a cached fragment
+```
+
+#### Used features
+
+- `beta_v2`: enable beta version 2 which must be release by the end of 2019
+
+From the browser, as a super admin member of the technology team, you can access the flipper UI through `/flipper`
