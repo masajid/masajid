@@ -9,14 +9,17 @@
       <li class='nav-item'>
         <%= link_to 'Create Masjid Account', new_account_path, class: 'nav-link' %>
       </li>
-      <% if user_signed_in? %>
-        <li class='nav-item'>
-          <%= link_to 'Admin Panel', admin.root_path, class: 'nav-link' %>
-        </li>
-      <% else %>
-        <li class='nav-item'>
-          <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
-        </li>
+
+      <% if beta_v2_enabled? %>
+        <% if user_signed_in? %>
+          <li class='nav-item'>
+            <%= link_to 'Admin Panel', admin.root_path, class: 'nav-link' %>
+          </li>
+        <% else %>
+          <li class='nav-item'>
+            <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </div>
