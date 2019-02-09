@@ -17,10 +17,10 @@ module Content
     validates :region_id, presence: true
     validates :city_id, presence: true
 
-    before_validation :geolocate, if: :address1_changed?
+    before_validation :geolocate, if: :changed?
 
     def to_s
-      [address1, zip_code, city.name, country.name].compact.join(' ')
+      [address1, zip_code, city&.name, country&.name].compact.join(' ')
     end
 
     private
@@ -30,10 +30,9 @@ module Content
 
       if result.present?
         self.latitude = result.first
-        self.longitude = result.last
+        self.longitude = result.second
       else
         errors.add(:address1, :geocoding_failed)
-        throw(:abort)
       end
     end
   end

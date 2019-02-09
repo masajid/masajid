@@ -62,7 +62,7 @@ en:
         content/address:
           attributes:
             address1:
-              geocoding_failed: Geocoding failed. Please check address.
+              geocoding_failed: geocoding failed
   content:
     account_mailer:
       accept_email:
