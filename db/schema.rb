@@ -36,12 +36,14 @@ ActiveRecord::Schema.define(version: 2019_02_09_172157) do
     t.string "address1", null: false
     t.string "address2"
     t.string "zip_code", limit: 20
+    t.string "city_name", limit: 50, null: false
+    t.string "region_name", limit: 50, null: false
     t.decimal "latitude", precision: 10, scale: 6
     t.decimal "longitude", precision: 10, scale: 6
     t.string "addressable_type", null: false
     t.bigint "addressable_id", null: false
-    t.bigint "city_id", null: false
-    t.bigint "region_id", null: false
+    t.bigint "city_id"
+    t.bigint "region_id"
     t.bigint "country_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -52,13 +54,9 @@ ActiveRecord::Schema.define(version: 2019_02_09_172157) do
   end
 
   create_table "content_cities", force: :cascade do |t|
-    t.string "name", limit: 45, null: false
+    t.string "name", limit: 50, null: false
     t.decimal "latitude", precision: 10, scale: 6, null: false
     t.decimal "longitude", precision: 10, scale: 6, null: false
-    t.string "timezone", limit: 10, null: false
-    t.integer "dma_id"
-    t.string "county", limit: 25
-    t.string "code", limit: 4
     t.bigint "country_id", null: false
     t.bigint "region_id", null: false
     t.index ["country_id"], name: "index_content_cities_on_country_id"
@@ -67,27 +65,11 @@ ActiveRecord::Schema.define(version: 2019_02_09_172157) do
 
   create_table "content_countries", force: :cascade do |t|
     t.string "name", limit: 50, null: false
-    t.string "fips104", limit: 2, null: false
-    t.string "iso2", limit: 2, null: false
-    t.string "iso3", limit: 3, null: false
-    t.string "ison", limit: 4, null: false
-    t.string "internet", limit: 2, null: false
-    t.string "capital", limit: 25
-    t.string "map_reference", limit: 50
-    t.string "nationality_singular", limit: 35
-    t.string "nationality_plural", limit: 35
-    t.string "currency", limit: 30
-    t.string "currency_code", limit: 3
-    t.integer "population"
-    t.string "title", limit: 50
-    t.string "comment", limit: 255
     t.index ["name"], name: "index_content_countries_on_name"
   end
 
   create_table "content_regions", force: :cascade do |t|
-    t.string "name", limit: 45, null: false
-    t.string "code", limit: 8, null: false
-    t.string "adm1code", limit: 4, null: false
+    t.string "name", limit: 50, null: false
     t.bigint "country_id", null: false
     t.index ["country_id"], name: "index_content_regions_on_country_id"
   end

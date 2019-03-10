@@ -15,26 +15,6 @@
 
   <div class='row'>
     <div class='col-sm-6'>
-      <%= f.input :timezone %>
-    </div>
-
-    <div class='col-sm-6'>
-      <%= f.input :dma_id %>
-    </div>
-  </div>
-
-  <div class='row'>
-    <div class='col-sm-6'>
-      <%= f.input :county %>
-    </div>
-
-    <div class='col-sm-6'>
-      <%= f.input :code %>
-    </div>
-  </div>
-
-  <div class='row'>
-    <div class='col-sm-6'>
       <%= f.input :country_id, collection: Content::Country.all.sort, input_html: { id: 'country_id' } %>
     </div>
 

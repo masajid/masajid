@@ -30,10 +30,6 @@
         <th><%= Content::City.human_attribute_name(:name) %></th>
         <th><%= Content::City.human_attribute_name(:latitude) %></th>
         <th><%= Content::City.human_attribute_name(:longitude) %></th>
-        <th><%= Content::City.human_attribute_name(:timezone) %></th>
-        <th><%= Content::City.human_attribute_name(:dma_id) %></th>
-        <th><%= Content::City.human_attribute_name(:county) %></th>
-        <th><%= Content::City.human_attribute_name(:code) %></th>
         <th><%= Content::Region.model_name.human %></th>
         <th><%= Content::Country.model_name.human %></th>
         <th colspan='2'></th>
@@ -47,10 +43,6 @@
           <td><%= city.name %></td>
           <td><%= city.latitude %></td>
           <td><%= city.longitude %></td>
-          <td><%= city.timezone %></td>
-          <td><%= city.dma_id %></td>
-          <td><%= city.county %></td>
-          <td><%= city.code %></td>
           <td><%= city.region.name %></td>
           <td><%= city.country.name %></td>
           <td><%= link_to t('shared.actions.edit'), edit_city_path(city), class: 'btn btn-success btn-sm' %></td>

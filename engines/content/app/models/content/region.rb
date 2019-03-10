@@ -6,8 +6,6 @@ module Content
     has_many :cities
 
     validates :name, presence: true
-    validates :code, presence: true
-    validates :adm1code, presence: true
     validates :country_id, presence: true
   end
 end

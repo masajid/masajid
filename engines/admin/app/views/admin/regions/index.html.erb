@@ -25,8 +25,6 @@
       <tr>
         <th>#</th>
         <th><%= Content::Region.human_attribute_name(:name) %></th>
-        <th><%= Content::Region.human_attribute_name(:code) %></th>
-        <th><%= Content::Region.human_attribute_name(:adm1code) %></th>
         <th><%= Content::Country.model_name.human %></th>
         <th colspan='2'></th>
       </tr>
@@ -37,8 +35,6 @@
         <tr>
           <td><%= region.id %></td>
           <td><%= region.name %></td>
-          <td><%= region.code %></td>
-          <td><%= region.adm1code %></td>
           <td><%= region.country.name %></td>
           <td><%= link_to t('shared.actions.edit'), edit_region_path(region), class: 'btn btn-success btn-sm' %></td>
           <td><%= link_to t('shared.actions.delete'), region, method: :delete, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger btn-sm' %></td>

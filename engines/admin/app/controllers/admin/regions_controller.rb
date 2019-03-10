@@ -53,7 +53,7 @@ module Admin
       end
 
       def region_params
-        params.require(:region).permit(:name, :code, :adm1code, :country_id)
+        params.require(:region).permit(:name, :country_id)
       end
   end
 end

@@ -43,23 +43,7 @@ module Admin
       end
 
       def country_params
-        params.require(:country).permit(
-          :name,
-          :fips104,
-          :iso2,
-          :iso3,
-          :ison,
-          :internet,
-          :capital,
-          :map_reference,
-          :nationality_singular,
-          :nationality_plural,
-          :currency,
-          :currency_code,
-          :population,
-          :title,
-          :comment
-        )
+        params.require(:country).permit(:name)
       end
   end
 end

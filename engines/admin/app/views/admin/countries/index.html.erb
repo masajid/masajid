@@ -14,20 +14,6 @@
       <tr>
         <th>#</th>
         <th><%= Content::Country.human_attribute_name(:name) %></th>
-        <th><%= Content::Country.human_attribute_name(:fips104) %></th>
-        <th><%= Content::Country.human_attribute_name(:iso2) %></th>
-        <th><%= Content::Country.human_attribute_name(:iso3) %></th>
-        <th><%= Content::Country.human_attribute_name(:ison) %></th>
-        <th><%= Content::Country.human_attribute_name(:internet) %></th>
-        <th><%= Content::Country.human_attribute_name(:capital) %></th>
-        <th><%= Content::Country.human_attribute_name(:map_reference) %></th>
-        <th><%= Content::Country.human_attribute_name(:nationality_singular) %></th>
-        <th><%= Content::Country.human_attribute_name(:nationality_plural) %></th>
-        <th><%= Content::Country.human_attribute_name(:currency) %></th>
-        <th><%= Content::Country.human_attribute_name(:currency_code) %></th>
-        <th><%= Content::Country.human_attribute_name(:population) %></th>
-        <th><%= Content::Country.human_attribute_name(:title) %></th>
-        <th><%= Content::Country.human_attribute_name(:comment) %></th>
         <th colspan='2'></th>
       </tr>
     </thead>
@@ -37,20 +23,6 @@
         <tr>
           <td><%= country.id %></td>
           <td><%= country.name %></td>
-          <td><%= country.fips104 %></td>
-          <td><%= country.iso2 %></td>
-          <td><%= country.iso3 %></td>
-          <td><%= country.ison %></td>
-          <td><%= country.internet %></td>
-          <td><%= country.capital %></td>
-          <td><%= country.map_reference %></td>
-          <td><%= country.nationality_singular %></td>
-          <td><%= country.nationality_plural %></td>
-          <td><%= country.currency %></td>
-          <td><%= country.currency_code %></td>
-          <td><%= country.population %></td>
-          <td><%= country.title %></td>
-          <td><%= country.comment %></td>
           <td><%= link_to t('shared.actions.edit'), edit_country_path(country), class: 'btn btn-success btn-sm' %></td>
           <td><%= link_to t('shared.actions.delete'), country, method: :delete, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger btn-sm' %></td>
         </tr>

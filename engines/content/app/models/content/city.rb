@@ -8,7 +8,6 @@ module Content
     validates :name, presence: true
     validates :longitude, presence: true
     validates :latitude, presence: true
-    validates :timezone, presence: true
     validates :country_id, presence: true
     validates :region_id, presence: true
   end
