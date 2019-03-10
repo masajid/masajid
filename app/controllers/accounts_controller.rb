@@ -22,7 +22,7 @@ class AccountsController < ApplicationController
       :email,
       :mosque,
       :responsable,
-      address_attributes: %i[address1 zip_code phone city_id region_id country_id]
+      address_attributes: %i[address1 zip_code phone city_name region_name country_id]
     )
   end
 end

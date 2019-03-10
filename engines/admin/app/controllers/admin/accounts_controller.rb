@@ -8,7 +8,7 @@ module Admin
       authorize Content::Account
 
       @accounts = policy_scope(Content::Account)
-        .includes(:owner, address: [:city, :country])
+        .includes(:owner, address: :country)
         .order('content_accounts.created_at DESC')
     end
 
@@ -48,7 +48,7 @@ module Admin
           :email,
           :mosque,
           :responsable,
-          address_attributes: %i[id address1 zip_code phone city_id region_id country_id]
+          address_attributes: %i[id address1 zip_code phone city_name region_name country_id]
         )
       end
   end
