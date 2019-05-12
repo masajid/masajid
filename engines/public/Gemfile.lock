@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    public (0.1.0)
+      content
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    content (0.0.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  public!
+
+BUNDLED WITH
+   1.17.2
