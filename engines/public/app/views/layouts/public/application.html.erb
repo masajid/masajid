@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Public</title>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
+<html lang='en'>
+  <head>
+    <title>Public</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag    "public/application", media: "all" %>
-  <%= javascript_include_tag "public/application" %>
-</head>
-<body>
+    <%= stylesheet_link_tag    'public/application', media: 'all' %>
+    <%= javascript_include_tag 'public/application' %>
 
-<%= yield %>
+    <!-- Custom styles for this template -->
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900' rel='stylesheet'>
+  </head>
+  <body>
+    <div class='container'>
+      <%= render 'public/shared/header' %>
 
-</body>
+      <%= yield %>
+    </div>
+
+    <%= render 'public/shared/footer' %>
+  </body>
 </html>
