@@ -2,9 +2,12 @@
 
 ### Setup
 
+Make sure to have docker installed in your computer, then do following:
+
 ```
 # git clone .../theopenmasjid.git & cd theopenmasjid
-# bundle install
+# 
+
 # rails db:create db:migrate db:seed
 # rails content_places:import
 ```
