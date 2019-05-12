@@ -38,5 +38,5 @@ yarn-debug.log*
 # Ignore IDE files
 .idea/
 
-# Ignore figaro environment variables
-config/application.yml
+# Ignore environment variables
+.env
