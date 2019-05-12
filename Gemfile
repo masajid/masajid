@@ -54,3 +54,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'content', path: 'engines/content'
 gem 'admin', path: 'engines/admin'
+gem 'public', path: 'engines/public'
