@@ -16,3 +16,5 @@ module Content
     end
   end
 end
+
+require 'scoped_to'
