@@ -16,12 +16,13 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
-  s.add_dependency 'rails', '~> 5.2.1'
+  s.add_dependency 'rails', '~> 5.2.3'
   s.add_dependency 'devise'
   s.add_dependency 'pundit'
   s.add_dependency 'sidekiq'
   s.add_dependency 'geocoder'
   s.add_dependency 'simple_form'
+  s.add_dependency 'awesome_nested_set'
   s.add_dependency 'postgres-copy', '~> 1.4.0'
   s.add_dependency 'flipper-active_record'
 end

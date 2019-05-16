@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_09_172157) do
+ActiveRecord::Schema.define(version: 2019_05_16_171755) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,25 @@ ActiveRecord::Schema.define(version: 2019_02_09_172157) do
   create_table "content_countries", force: :cascade do |t|
     t.string "name", limit: 50, null: false
     t.index ["name"], name: "index_content_countries_on_name"
+  end
+
+  create_table "content_pages", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description"
+    t.string "permalink", null: false
+    t.string "meta_title"
+    t.string "meta_keywords"
+    t.text "meta_description"
+    t.bigint "entity_id", null: false
+    t.integer "parent_id"
+    t.integer "lft", null: false
+    t.integer "rgt", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["entity_id"], name: "index_content_pages_on_entity_id"
+    t.index ["lft"], name: "index_content_pages_on_lft"
+    t.index ["parent_id"], name: "index_content_pages_on_parent_id"
+    t.index ["rgt"], name: "index_content_pages_on_rgt"
   end
 
   create_table "content_regions", force: :cascade do |t|
