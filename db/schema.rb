@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_16_171755) do
+ActiveRecord::Schema.define(version: 2019_05_16_214023) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,15 +76,13 @@ ActiveRecord::Schema.define(version: 2019_05_16_171755) do
     t.string "meta_keywords"
     t.text "meta_description"
     t.bigint "entity_id", null: false
-    t.integer "parent_id"
-    t.integer "lft", null: false
-    t.integer "rgt", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "ancestry"
+    t.integer "position"
+    t.index ["ancestry"], name: "index_content_pages_on_ancestry"
     t.index ["entity_id"], name: "index_content_pages_on_entity_id"
-    t.index ["lft"], name: "index_content_pages_on_lft"
-    t.index ["parent_id"], name: "index_content_pages_on_parent_id"
-    t.index ["rgt"], name: "index_content_pages_on_rgt"
+    t.index ["position"], name: "index_content_pages_on_position"
   end
 
   create_table "content_regions", force: :cascade do |t|

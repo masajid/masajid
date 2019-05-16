@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'sidekiq'
   s.add_dependency 'geocoder'
   s.add_dependency 'simple_form'
-  s.add_dependency 'awesome_nested_set'
+  s.add_dependency 'ancestry'
   s.add_dependency 'postgres-copy', '~> 1.4.0'
   s.add_dependency 'flipper-active_record'
 end

@@ -3,6 +3,7 @@ require 'pundit'
 require 'sidekiq'
 require 'geocoder'
 require 'simple_form'
+require 'ancestry'
 require 'postgres-copy'
 require 'flipper-active_record'
 

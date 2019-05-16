@@ -14,6 +14,9 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery3
+//= require jquery-ui
 //= require popper
 //= require bootstrap
+//= require jquery.mjs.nestedSortable.js
+//= require sortable_tree.js
 //= require_tree .

@@ -1,5 +1,5 @@
 module Content
   class Page < ApplicationRecord
-    acts_as_nested_set
+    has_ancestry
   end
 end

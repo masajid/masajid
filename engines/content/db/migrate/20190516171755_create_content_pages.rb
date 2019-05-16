@@ -9,10 +9,6 @@ class CreateContentPages < ActiveRecord::Migration[5.2]
       t.text :meta_description
       t.references :entity, null: false, index: true
 
-      t.integer :parent_id, index: true
-      t.integer :lft, null: false, index: true
-      t.integer :rgt, null: false, index: true
-
       t.timestamps
     end
   end
