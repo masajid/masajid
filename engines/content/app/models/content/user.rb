@@ -4,6 +4,8 @@ module Content
 
     ROLE_NAMES = %w[super_admin admin user]
 
+    has_one :account, foreign_key: :owner_id
+
     validates :role, inclusion: { in: ROLE_NAMES }
 
     ROLE_NAMES.each do |role_name|

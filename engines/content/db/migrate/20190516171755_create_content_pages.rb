@@ -7,7 +7,7 @@ class CreateContentPages < ActiveRecord::Migration[5.2]
       t.string :meta_title
       t.string :meta_keywords
       t.text :meta_description
-      t.references :entity, null: false, index: true
+      t.references :account, null: false, index: true
 
       t.timestamps
     end

@@ -8,7 +8,7 @@ module Admin
     sortable_tree 'Content::Page', { parent_method: 'parent', sorting_attribute: 'position' }
 
     def index
-      @pages = Content::Page.all.arrange(order: :position)
+      @pages = policy_scope(Content::Page).arrange(order: :position)
     end
   end
 end

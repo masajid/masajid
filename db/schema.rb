@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_16_214023) do
+ActiveRecord::Schema.define(version: 2019_05_18_061122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,13 +75,13 @@ ActiveRecord::Schema.define(version: 2019_05_16_214023) do
     t.string "meta_title"
     t.string "meta_keywords"
     t.text "meta_description"
-    t.bigint "entity_id", null: false
+    t.bigint "account_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "ancestry"
     t.integer "position"
+    t.index ["account_id"], name: "index_content_pages_on_account_id"
     t.index ["ancestry"], name: "index_content_pages_on_ancestry"
-    t.index ["entity_id"], name: "index_content_pages_on_entity_id"
     t.index ["position"], name: "index_content_pages_on_position"
   end
 

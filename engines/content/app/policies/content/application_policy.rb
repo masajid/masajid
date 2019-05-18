@@ -46,6 +46,8 @@ module Content
       def resolve
         if user.super_admin?
           scope.all
+        elsif user.admin?
+          scope.where(account: user.account)
         else
           scope.none
         end

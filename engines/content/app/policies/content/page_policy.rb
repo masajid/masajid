@@ -1,8 +1,12 @@
 module Content
-  class AccountPolicy < ApplicationPolicy
-    def sort
-      # record.entity.owner == user
+  class PagePolicy < ApplicationPolicy
+    def sort?
+      # record.account.owner == user
       true
+    end
+
+    def index?
+      user.super_admin? || user.admin?
     end
   end
 end

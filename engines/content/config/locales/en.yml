@@ -11,6 +11,9 @@ en:
       content/city:
         one: City
         other: Cities
+      content/page:
+        one: Page
+        other: Pages
       content/region:
         one: Region
         other: Regions
