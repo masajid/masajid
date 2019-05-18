@@ -5,6 +5,7 @@ module Content
     normalize_attribute  :ancestry, with: :blank
 
     belongs_to :account
+    has_and_belongs_to_many :articles
 
     validates :name, presence: true
     validates :permalink, presence: true

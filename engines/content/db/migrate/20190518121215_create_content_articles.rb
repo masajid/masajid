@@ -13,5 +13,10 @@ class CreateContentArticles < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+
+    create_table :content_articles_pages, id: false do |t|
+      t.references :article, null: false, index: true
+      t.references :page, null: false, index: true
+    end
   end
 end

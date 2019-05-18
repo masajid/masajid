@@ -72,6 +72,13 @@ ActiveRecord::Schema.define(version: 2019_05_18_123435) do
     t.index ["title"], name: "index_content_articles_on_title"
   end
 
+  create_table "content_articles_pages", id: false, force: :cascade do |t|
+    t.bigint "article_id", null: false
+    t.bigint "page_id", null: false
+    t.index ["article_id"], name: "index_content_articles_pages_on_article_id"
+    t.index ["page_id"], name: "index_content_articles_pages_on_page_id"
+  end
+
   create_table "content_cities", force: :cascade do |t|
     t.string "name", limit: 50, null: false
     t.decimal "latitude", precision: 10, scale: 6, null: false
