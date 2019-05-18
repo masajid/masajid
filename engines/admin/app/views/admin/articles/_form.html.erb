@@ -16,5 +16,10 @@
     </div>
   </div>
 
+  <%= f.input :body, as: :hidden %>
+  <trix-editor input='article_body'></trix-editor>
+
   <%= f.button :submit, class: 'btn-primary' %>
 <% end %>
+
+<%#= sanitize article.body %>

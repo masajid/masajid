@@ -4,6 +4,7 @@ class CreateContentArticles < ActiveRecord::Migration[6.0]
       t.string :title, null: false, index: true
       t.string :slug, null: false, index: { unique: true }
       t.text :summary, null: false
+      t.text :body, null: false
       t.string :meta_title
       t.string :meta_keywords
       t.text :meta_descripton

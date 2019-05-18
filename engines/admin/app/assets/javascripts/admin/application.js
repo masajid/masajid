@@ -19,4 +19,5 @@
 //= require bootstrap
 //= require jquery.mjs.nestedSortable.js
 //= require sortable_tree.js
+//= require trix
 //= require_tree .

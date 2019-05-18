@@ -43,7 +43,7 @@ module Admin
       end
 
       def article_params
-        params.require(:article).permit(:title, :slug, :summary, :meta_title, :meta_keywords, :meta_descripton, :published_at).merge(account: current_account)
+        params.require(:article).permit(:title, :slug, :summary, :body, :meta_title, :meta_keywords, :meta_descripton, :published_at).merge(account: current_account)
       end
   end
 end
