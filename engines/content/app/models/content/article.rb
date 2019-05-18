@@ -4,6 +4,7 @@ module Content
     friendly_id :title, use: [:history, :slugged]
 
     belongs_to :account
+    has_and_belongs_to_many :pages
 
     validates :title, presence: true
     validates :slug, presence: true
