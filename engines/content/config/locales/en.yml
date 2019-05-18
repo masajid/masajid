@@ -12,8 +12,8 @@ en:
         one: City
         other: Cities
       content/page:
-        one: Page
-        other: Pages
+        one: Menu Item
+        other: Menu
       content/region:
         one: Region
         other: Regions
@@ -85,9 +85,9 @@ en:
         header: New Country
     pages:
       edit:
-        header: Edit Page
+        header: Edit Menu Item
       new:
-        header: New Page
+        header: New Menu Item
     regions:
       edit:
         header: Edit Region

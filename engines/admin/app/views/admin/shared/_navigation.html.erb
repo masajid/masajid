@@ -10,7 +10,7 @@
       <li class='nav-item'>
         <%= link_to pages_path, class: 'nav-link' do %>
           <span data-feather='file'></span>
-          Pages
+          <%= Content::Page.model_name.human(count: :many) %>
         <% end if policy(Content::Page).index? %>
       </li>
       <li class='nav-item'>
