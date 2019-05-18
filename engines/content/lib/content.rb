@@ -4,6 +4,8 @@ require 'sidekiq'
 require 'geocoder'
 require 'simple_form'
 require 'ancestry'
+require 'stringex'
+require 'attribute_normalizer'
 require 'postgres-copy'
 require 'flipper-active_record'
 

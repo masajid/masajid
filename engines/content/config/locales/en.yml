@@ -32,6 +32,15 @@ en:
         country_id: Country
       content/country:
         name: Country Name
+      content/page:
+        ancestry: Ancestry
+        description: Description
+        meta_title: Meta Title
+        meta_keywords: Meta Keywords
+        meta_description: Meta Description
+        name: Name
+        permalink: Permalink
+        permalink_part: Permalink
       content/region:
         name: Region Name
       content/city:
@@ -74,6 +83,11 @@ en:
         header: Edit Country
       new:
         header: New Country
+    pages:
+      edit:
+        header: Edit Page
+      new:
+        header: New Page
     regions:
       edit:
         header: Edit Region

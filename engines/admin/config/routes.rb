@@ -9,7 +9,7 @@ Admin::Engine.routes.draw do
   resources :cities, except: :show
   resources :regions, except: :show
   resources :countries, except: :show
-  resources :pages do
+  resources :pages, except: :show do
     post :sort, on: :collection
   end
 

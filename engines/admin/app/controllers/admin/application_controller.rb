@@ -8,5 +8,10 @@ module Admin
     rescue_from Pundit::NotAuthorizedError do
       redirect_to root_path, alert: t('admin.pundit.unauthorized')
     end
+
+    def current_account
+      @current_account ||= current_user.account
+    end
+    helper_method :current_account
   end
 end
