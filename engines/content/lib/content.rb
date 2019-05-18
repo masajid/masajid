@@ -1,5 +1,6 @@
 require 'devise'
 require 'pundit'
+require 'friendly_id'
 require 'sidekiq'
 require 'geocoder'
 require 'simple_form'

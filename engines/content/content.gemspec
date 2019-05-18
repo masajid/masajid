@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '~> 6.0.0.rc1'
   s.add_dependency 'devise'
   s.add_dependency 'pundit'
+  s.add_dependency 'friendly_id'
   s.add_dependency 'sidekiq'
   s.add_dependency 'geocoder'
   s.add_dependency 'simple_form'

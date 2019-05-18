@@ -6,6 +6,7 @@ PATH
       attribute_normalizer
       devise
       flipper-active_record
+      friendly_id
       geocoder
       postgres-copy (~> 1.4.0)
       pundit
@@ -91,6 +92,8 @@ GEM
     flipper-active_record (0.16.2)
       activerecord (>= 3.2, < 6)
       flipper (~> 0.16.2)
+    friendly_id (5.2.5)
+      activerecord (>= 4.0.0)
     geocoder (1.5.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
