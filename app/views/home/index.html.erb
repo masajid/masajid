@@ -48,15 +48,17 @@
 
   map.addControl(new mapboxgl.NavigationControl());
 
-  map.fitBounds(<%= @bounds %>);
+  <% if @accounts.any? %>
+    map.fitBounds(<%= @bounds %>);
 
-  <% @accounts.each do |account| %>
-    var popup = new mapboxgl.Popup({ offset: 25 })
-      .setHTML('<%= account.mosque %>' + '<br>' + '<%= account.address %>');
+    <% @accounts.each do |account| %>
+      var popup = new mapboxgl.Popup({ offset: 25 })
+        .setHTML('<%= account.mosque %>' + '<br>' + '<%= account.address %>');
 
-    new mapboxgl.Marker()
-      .setLngLat([<%= account.address.longitude %>, <%= account.address.latitude %>])
-      .setPopup(popup)
-      .addTo(map);
+      new mapboxgl.Marker()
+        .setLngLat([<%= account.address.longitude %>, <%= account.address.latitude %>])
+        .setPopup(popup)
+        .addTo(map);
+    <% end %>
   <% end %>
 </script>
