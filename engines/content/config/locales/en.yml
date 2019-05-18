@@ -1,6 +1,9 @@
 en:
   activerecord:
     models:
+      content/article:
+        one: Article
+        other: Articles
       content/account:
         one: Account
         other: Accounts
@@ -18,6 +21,14 @@ en:
         one: Region
         other: Regions
     attributes:
+      content/article:
+        title: Title
+        slug: Slug
+        summary: Summary
+        meta_title: Meta Title
+        meta_keywords: Meta Keywords
+        meta_description: Meta Description
+        published_at: Publication Date
       content/account:
         subdomain: Subdomain
         email: Email Address
@@ -75,6 +86,9 @@ en:
         body: A new account was created
         link: See details
   admin:
+    articles:
+      new:
+        header: New Article
     accounts:
       edit:
         header: Edit Account

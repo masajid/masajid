@@ -1,0 +1,20 @@
+<%= simple_form_for article do |f| %>
+  <%= f.error_notification %>
+
+  <div class='row'>
+    <div class='col-sm-6'>
+      <%= f.input :title %>
+      <%= f.input :slug if article.persisted? %>
+      <%= f.input :summary %>
+      <%= f.input :published_at %>
+    </div>
+
+    <div class='col-sm-6'>
+      <%= f.input :meta_title %>
+      <%= f.input :meta_keywords %>
+      <%= f.input :meta_descripton %>
+    </div>
+  </div>
+
+  <%= f.button :submit, class: 'btn-primary' %>
+<% end %>

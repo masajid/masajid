@@ -12,6 +12,7 @@ Admin::Engine.routes.draw do
   resources :pages, except: :show do
     post :sort, on: :collection
   end
+  resources :articles, except: :show
 
   namespace :api do
     resources :regions, only: :index
