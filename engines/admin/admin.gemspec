@@ -17,4 +17,8 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   s.add_dependency 'content'
+  s.add_dependency 'haml-rails' # used by sortable_tree_rails
+  s.add_dependency 'jquery-ui-rails' # used by sortable_tree_rails
+  s.add_dependency 'sortable_tree_rails'
+  s.add_dependency 'trix-gem'
 end

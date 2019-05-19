@@ -1,8 +1,13 @@
 require 'devise'
 require 'pundit'
+require 'friendly_id'
 require 'sidekiq'
 require 'geocoder'
 require 'simple_form'
+require 'ancestry'
+require 'shrine'
+require 'stringex'
+require 'attribute_normalizer'
 require 'postgres-copy'
 require 'flipper-active_record'
 

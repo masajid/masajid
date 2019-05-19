@@ -1,0 +1,9 @@
+<% content_for :page_title do %>
+  <%= Content::Page.model_name.human(count: :many) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= link_to t('shared.actions.new'), new_page_path, class: 'btn btn-primary btn-sm' %>
+<% end %>
+
+<%= render_sortable_tree(@pages, { name_method: :name, sort_url: sort_pages_url, max_levels: 2, controls_partial: 'controls'} ) %>

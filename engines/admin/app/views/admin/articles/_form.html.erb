@@ -1,0 +1,32 @@
+<%= simple_form_for article do |f| %>
+  <%= f.error_notification %>
+
+  <div class='row'>
+    <div class='col-sm-6'>
+      <%= f.input :title %>
+      <%= f.input :slug if article.persisted? %>
+      <%= f.input :summary %>
+      <%= f.input :published_at %>
+
+      <%#= f.association :pages %>
+      <%= hidden_field_tag "article[page_ids][]", nil %>
+      <% policy_scope(Content::Page).each do |page| %>
+        <%= check_box_tag "article[page_ids][]", page.id, article.page_ids.include?(page.id), id: dom_id(page) %>
+        <%= label_tag dom_id(page), page.pretty_name %><br>
+      <% end %>
+    </div>
+
+    <div class='col-sm-6'>
+      <%= f.input :meta_title %>
+      <%= f.input :meta_keywords %>
+      <%= f.input :meta_descripton %>
+    </div>
+  </div>
+
+  <%= f.input :body, as: :hidden %>
+  <trix-editor input='article_body'></trix-editor>
+
+  <%= f.button :submit, class: 'btn-primary' %>
+<% end %>
+
+<%#= sanitize article.body %>

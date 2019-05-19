@@ -9,9 +9,14 @@ Admin::Engine.routes.draw do
   resources :cities, except: :show
   resources :regions, except: :show
   resources :countries, except: :show
+  resources :pages, except: :show do
+    post :sort, on: :collection
+  end
+  resources :articles, except: :show
 
   namespace :api do
     resources :regions, only: :index
     resources :cities, only: :index
+    resources :photos, only: :create
   end
 end
