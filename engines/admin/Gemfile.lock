@@ -11,6 +11,7 @@ PATH
       postgres-copy (~> 1.4.0)
       pundit
       rails (~> 6.0.0.rc1)
+      shrine
       sidekiq
       simple_form
       stringex
@@ -83,6 +84,8 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.1, >= 2.1.4)
+    addressable (2.6.0)
+      public_suffix (>= 2.0.2, < 4.0)
     ancestry (3.0.6)
       activerecord (>= 3.2.0)
     attribute_normalizer (1.2.0)
@@ -90,6 +93,7 @@ GEM
     builder (3.2.3)
     concurrent-ruby (1.1.5)
     connection_pool (2.2.2)
+    content_disposition (1.0.0)
     crass (1.0.4)
     devise (4.6.2)
       bcrypt (~> 3.0)
@@ -97,6 +101,8 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    down (4.8.1)
+      addressable (~> 2.5)
     erubi (1.8.0)
     erubis (2.7.0)
     flipper (0.16.2)
@@ -147,6 +153,7 @@ GEM
       activerecord (>= 5.1)
       pg (>= 0.17)
       responders
+    public_suffix (3.0.3)
     pundit (2.0.1)
       activesupport (>= 3.0.0)
     rack (2.0.7)
@@ -188,6 +195,9 @@ GEM
     ruby_parser (3.13.1)
       sexp_processor (~> 4.9)
     sexp_processor (4.12.0)
+    shrine (2.17.1)
+      content_disposition (~> 1.0)
+      down (~> 4.1)
     sidekiq (5.2.7)
       connection_pool (~> 2.2, >= 2.2.2)
       rack (>= 1.5.0)
