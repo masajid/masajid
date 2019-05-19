@@ -4,8 +4,96 @@ footer {
   text-align: center;
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
-}
 
-footer p:last-child {
-  margin-bottom: 0;
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  .secondary-footer {
+    margin-top: 20px;
+  }
+
+  /* Social Media Icons */
+  .social-media {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0;
+
+    li {
+      display: inline;
+      margin: 0 5px;
+
+      .rss:hover {
+        background-color: #F56505;
+      }
+
+      .facebook:hover {
+        background-color: #3B5998;
+      }
+
+      .twitter:hover {
+        background-color: #33ccff;
+      }
+
+      .google:hover {
+        background-color: #BD3518;
+      }
+
+      .vimeo:hover {
+        background-color: #0590B8;
+      }
+
+      .linkedin:hover {
+        background-color: #007bb7;
+      }
+
+      .youtube:hover {
+        background-color: #cc0000;
+      }
+
+      .instagram:hover {
+        background-color: #3897f0;
+      }
+
+      a {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto 0 auto;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        background-color: #D3D3D3;
+
+        &:hover i {
+          color: #fff;
+          -moz-transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          -ms--transform: rotate(360deg);
+          transform: rotate(360deg);
+          -webkit-transition: all 0.2s;
+          -moz-transition: all 0.2s;
+          -o-transition: all 0.2s;
+          -ms-transition: all 0.2s;
+          transition: all 0.2s;
+        }
+      }
+
+      i {
+        margin: 0;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        -webkit-transition: all 0.8s;
+        -moz-transition: all 0.8s;
+        -o-transition: all 0.8s;
+        -ms-transition: all 0.8s;
+        transition: all 0.8s;
+      }
+    }
+  }
 }

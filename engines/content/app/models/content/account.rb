@@ -3,6 +3,7 @@ module Content
     belongs_to :owner, class_name: 'Content::User'
     has_one :address, as: :addressable
     has_one :slider
+    has_one :social_network
 
     enum status: %i[pending accepted declined]
 

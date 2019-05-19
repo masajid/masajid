@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_19_132554) do
+ActiveRecord::Schema.define(version: 2019_05_19_173017) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -156,6 +156,19 @@ ActiveRecord::Schema.define(version: 2019_05_19_132554) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["account_id"], name: "index_content_sliders_on_account_id"
+  end
+
+  create_table "content_social_networks", force: :cascade do |t|
+    t.string "youtube"
+    t.string "facebook"
+    t.string "google"
+    t.string "twitter"
+    t.string "vimeo"
+    t.string "instagram"
+    t.bigint "account_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["account_id"], name: "index_content_social_networks_on_account_id"
   end
 
   create_table "content_users", force: :cascade do |t|

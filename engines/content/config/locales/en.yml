@@ -22,6 +22,8 @@ en:
         other: Regions
       content/slider:
         one: Slider
+      content/social_network:
+        one: Social media
     attributes:
       content/article:
         title: Title
@@ -61,6 +63,13 @@ en:
         name: City Name
         latitude: Latitude
         longitude: Longitude
+      content/social_network:
+        youtube: Youtube
+        facebook: Facebook
+        google: Google +
+        twitter: Twitter
+        vimeo: Vimeo
+        instagram: Instagram
       content/slider:
         title: Title
         body: Body
@@ -116,6 +125,9 @@ en:
         header: Edit Region
       new:
         header: New Region
+    social_networks:
+      edit:
+        header: Edit Social Media
     sliders:
       edit:
         header: Edit Slider

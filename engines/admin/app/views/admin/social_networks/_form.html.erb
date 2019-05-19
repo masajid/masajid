@@ -1,0 +1,16 @@
+<%= simple_form_for @social_network, url: social_network_path, method: :put do |f| %>
+  <%= f.error_notification %>
+
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= f.input :youtube %>
+      <%= f.input :facebook %>
+      <%= f.input :google %>
+      <%= f.input :twitter %>
+      <%= f.input :vimeo %>
+      <%= f.input :instagram %>
+    </div>
+  </div>
+
+  <%= f.button :submit, class: 'btn-primary' %>
+<% end %>

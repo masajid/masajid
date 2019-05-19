@@ -1,6 +1,34 @@
 <footer>
-  <p>Page built for <a href='http://www.al-nour.de/index.php/de'>Al-Nour Moschee</a></p>
-  <p>
-    <a href="#">Back to top</a>
-  </p>
+  <div class='row'>
+    <div class='col-md-4'>
+      <ul class='social-media'>
+        <!--
+          <li>
+            <a href='#' class='rss' title='Rss'>
+              <i class='fa fa-rss'></i>
+            </a>
+          </li>
+        -->
+
+        <% %i[youtube facebook google twitter vimeo instagram].each do |network| %>
+          <% if social_network.send(network).present? %>
+            <li>
+              <a target='_blank' href='<%= social_network.send(network) %>' class='<%= network %>' title='<%= Content::SocialNetwork.human_attribute_name(network) %>'>
+                <i class='fa fa-<%= network %>'></i>
+              </a>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+    <div class='col-md-8'>
+    </div>
+  </div>
+
+  <div class='secondary-footer'>
+    <p>Page built by <a href='http://theopenmasjid.com'>The Open Masjid</a></p>
+    <p>
+      <a href='#'>Back to top</a>
+    </p>
+  </div>
 </footer>

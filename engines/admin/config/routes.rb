@@ -14,6 +14,7 @@ Admin::Engine.routes.draw do
   end
   resources :articles, except: :show
   resource :slider, only: %i[edit update]
+  resource :social_network, only: %i[edit update]
 
   namespace :api do
     resources :regions, only: :index

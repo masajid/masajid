@@ -32,6 +32,7 @@ PATH
     public (0.1.0)
       content
       detectify
+      font-awesome-rails
 
 GEM
   remote: https://rubygems.org/
@@ -161,6 +162,8 @@ GEM
       flipper (~> 0.16.2)
       rack (>= 1.4, < 3)
       rack-protection (>= 1.5.3, < 2.1.0)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     friendly_id (5.2.5)
       activerecord (>= 4.0.0)
     geocoder (1.5.1)
