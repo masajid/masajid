@@ -5,5 +5,3 @@ module Content
     end
   end
 end
-
-# todo in model: extend Subscribem::ScopedTo

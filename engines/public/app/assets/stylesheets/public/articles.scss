@@ -1,0 +1,35 @@
+.article-list {
+  .article {
+    .article-title {
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.article-single {
+  margin-bottom: 4rem;
+
+  .article-title {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+  }
+
+  .article-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
+  }
+
+  .article-body {
+    blockquote {
+      margin-left: 40px;
+      margin-right: 40px;
+      font-family: Georgia;
+      font-size: 25px;
+      color: grey;
+    }
+  }
+}

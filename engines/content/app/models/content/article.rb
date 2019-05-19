@@ -1,5 +1,6 @@
 module Content
   class Article < ApplicationRecord
+    extend Content::ScopedTo
     extend FriendlyId
     friendly_id :title, use: [:history, :slugged]
 

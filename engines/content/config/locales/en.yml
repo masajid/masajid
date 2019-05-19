@@ -118,6 +118,8 @@ en:
     shared:
       are_you_sure: Are you sure?
       total: 'Total: %{count}'
+  public:
+    read_more: Continue reading
   shared:
     actions:
       accept: Accept

@@ -1,5 +1,6 @@
 module Content
   class Page < ApplicationRecord
+    extend Content::ScopedTo
     has_ancestry
 
     normalize_attribute  :ancestry, with: :blank
