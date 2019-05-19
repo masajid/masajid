@@ -4,27 +4,74 @@
       <li class='nav-item'>
         <%= link_to root_path, class: 'nav-link active' do %>
           <span data-feather='home'></span>
-          Dashboards
-        <% end if policy([:content, :dashboard]).index? %>
+          Dashboards*
+        <% end %>
       </li>
+
       <li class='nav-item'>
         <%= link_to pages_path, class: 'nav-link' do %>
           <span data-feather='file'></span>
           <%= Content::Page.model_name.human(count: :many) %>
-        <% end if policy(Content::Page).index? %>
+        <% end %>
       </li>
+
       <li class='nav-item'>
         <%= link_to articles_path, class: 'nav-link' do %>
           <span data-feather='file'></span>
           <%= Content::Article.model_name.human(count: :many) %>
-        <% end if policy(Content::Article).index? %>
+        <% end %>
       </li>
+
       <li class='nav-item'>
-        <%= link_to accounts_path, class: 'nav-link' do %>
+        <%= link_to '/admin', class: 'nav-link' do %>
           <span data-feather='file'></span>
-          Accounts
-        <% end if policy(Content::Account).index? %>
+          Slider*
+        <% end %>
       </li>
+
+      <li class='nav-item'>
+        <%= link_to '/admin', class: 'nav-link' do %>
+          <span data-feather='file'></span>
+          Sidebar*
+        <% end %>
+      </li>
+
+      <li class='nav-item'>
+        <%= link_to '/admin', class: 'nav-link' do %>
+          <span data-feather='file'></span>
+          Prayer times*
+        <% end %>
+      </li>
+
+      <li class='nav-item'>
+        <%= link_to '/admin', class: 'nav-link' do %>
+          <span data-feather='file'></span>
+          Social media*
+        <% end %>
+      </li>
+
+      <li class='nav-item'>
+        <%= link_to '/admin', class: 'nav-link' do %>
+          <span data-feather='file'></span>
+          Contacts*
+        <% end %>
+      </li>
+
+      <li class='nav-item'>
+        <%= link_to '/admin', class: 'nav-link' do %>
+          <span data-feather='file'></span>
+          Volunteers*
+        <% end %>
+      </li>
+
+      <% if policy(Content::Account).index? %>
+        <li class='nav-item'>
+          <%= link_to accounts_path, class: 'nav-link' do %>
+            <span data-feather='file'></span>
+            <%= Content::Account.model_name.human(count: :many) %>
+          <% end %>
+        </li>
+      <% end %>
     </ul>
 
     <h6 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted'>
@@ -34,23 +81,52 @@
       </a>
     </h6>
     <ul class='nav flex-column mb-2'>
+      <% if policy(Content::Country).index? %>
+        <li class='nav-item'>
+          <%= link_to countries_path, class: 'nav-link' do %>
+            <span data-feather='file-text'></span>
+            Countries
+          <% end %>
+        </li>
+      <% end %>
+
+      <% if policy(Content::Region).index? %>
+        <li class='nav-item'>
+          <%= link_to regions_path, class: 'nav-link' do %>
+            <span data-feather='file-text'></span>
+            Regions
+          <% end %>
+        </li>
+      <% end %>
+
+      <% if policy(Content::City).index? %>
+        <li class='nav-item'>
+          <%= link_to cities_path, class: 'nav-link' do %>
+            <span data-feather='file-text'></span>
+            Cities
+          <% end %>
+        </li>
+      <% end %>
+
       <li class='nav-item'>
-        <%= link_to countries_path, class: 'nav-link' do %>
+        <%= link_to '/admin', class: 'nav-link' do %>
           <span data-feather='file-text'></span>
-          Countries
-        <% end if policy(Content::Country).index? %>
+          Account*
+        <% end %>
       </li>
+
       <li class='nav-item'>
-        <%= link_to regions_path, class: 'nav-link' do %>
+        <%= link_to '/admin', class: 'nav-link' do %>
           <span data-feather='file-text'></span>
-          Regions
-        <% end if policy(Content::Region).index? %>
+          About us*
+        <% end %>
       </li>
+
       <li class='nav-item'>
-        <%= link_to cities_path, class: 'nav-link' do %>
+        <%= link_to '/admin', class: 'nav-link' do %>
           <span data-feather='file-text'></span>
-          Cities
-        <% end if policy(Content::City).index? %>
+          Languages*
+        <% end %>
       </li>
     </ul>
   </div>
