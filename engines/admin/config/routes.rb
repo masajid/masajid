@@ -13,6 +13,7 @@ Admin::Engine.routes.draw do
     post :sort, on: :collection
   end
   resources :articles, except: :show
+  resource :slider, only: %i[edit update]
 
   namespace :api do
     resources :regions, only: :index

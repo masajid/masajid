@@ -2,6 +2,7 @@ module Content
   class Account < ApplicationRecord
     belongs_to :owner, class_name: 'Content::User'
     has_one :address, as: :addressable
+    has_one :slider
 
     enum status: %i[pending accepted declined]
 
@@ -12,7 +13,7 @@ module Content
     validates :owner, presence: true
     validates :address, presence: true
 
-    accepts_nested_attributes_for :owner, :address
+    accepts_nested_attributes_for :owner, :address, :slider
 
     before_validation :set_owner, on: :create
 

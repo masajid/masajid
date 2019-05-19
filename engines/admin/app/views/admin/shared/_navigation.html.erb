@@ -23,9 +23,9 @@
       </li>
 
       <li class='nav-item'>
-        <%= link_to '/admin', class: 'nav-link' do %>
+        <%= link_to edit_slider_path, class: 'nav-link' do %>
           <span data-feather='file'></span>
-          Slider*
+          <%= Content::Slider.model_name.human %>
         <% end %>
       </li>
 

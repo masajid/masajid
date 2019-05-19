@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_18_214226) do
+ActiveRecord::Schema.define(version: 2019_05_19_132554) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -145,6 +145,17 @@ ActiveRecord::Schema.define(version: 2019_05_18_214226) do
     t.string "name", limit: 50, null: false
     t.bigint "country_id", null: false
     t.index ["country_id"], name: "index_content_regions_on_country_id"
+  end
+
+  create_table "content_sliders", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.string "link"
+    t.string "link_text"
+    t.bigint "account_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["account_id"], name: "index_content_sliders_on_account_id"
   end
 
   create_table "content_users", force: :cascade do |t|

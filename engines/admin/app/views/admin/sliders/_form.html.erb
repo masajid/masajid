@@ -1,0 +1,19 @@
+<%= simple_form_for @slider, url: slider_path, method: :put do |f| %>
+  <%= f.error_notification %>
+
+  <div class='row'>
+    <div class='col-sm-6'>
+      <%= f.input :title %>
+      <%= f.input :body %>
+      <%= f.input :link_text %>
+      <%= f.input :link %>
+    </div>
+
+    <div class='col-sm-6'>
+      <%= f.input :photo %>
+      <%= image_tag main_app.url_for(@slider.photo.variant(resize: '400x700')) if @slider.photo.attached? %>
+    </div>
+  </div>
+
+  <%= f.button :submit, class: 'btn-primary' %>
+<% end %>
