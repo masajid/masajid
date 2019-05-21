@@ -1,0 +1,169 @@
+fr:
+  activerecord:
+    models:
+      content/article:
+        one: Article
+        other: Articles
+      content/account:
+        one: Account
+        other: Accounts
+      content/address: Address
+      content/country:
+        one: Country
+        other: Countries
+      content/city:
+        one: City
+        other: Cities
+      content/page:
+        one: Menu Item
+        other: Menu
+      content/region:
+        one: Region
+        other: Regions
+      content/slider:
+        one: Slider
+      content/social_network:
+        one: Social media
+    attributes:
+      content/article:
+        title: Title
+        slug: Slug
+        summary: Summary
+        body: Content
+        meta_title: Meta Title
+        meta_keywords: Meta Keywords
+        meta_description: Meta Description
+        published_at: Publication Date
+      content/account:
+        subdomain: Subdomain
+        email: Email Address
+        responsable: Responsable Name
+        mosque: Mosque Name
+      content/address:
+        address1: Address
+        zip_code: Zip Code
+        phone: Phone Number
+        city_name: City
+        region_name: Region
+        country_id: Country
+      content/configuration:
+        logo: Logo
+        theme: Theme
+        supported_locales: Supported Languages
+        default_locale: Default Language
+        admin_locale: Language
+      content/country:
+        name: Country Name
+      content/page:
+        ancestry: Ancestry
+        description: Description
+        meta_title: Meta Title
+        meta_keywords: Meta Keywords
+        meta_description: Meta Description
+        name: Name
+        permalink: Permalink
+        permalink_part: Permalink
+      content/region:
+        name: Region Name
+      content/city:
+        name: City Name
+        latitude: Latitude
+        longitude: Longitude
+      content/social_network:
+        youtube: Youtube
+        facebook: Facebook
+        google: Google +
+        twitter: Twitter
+        vimeo: Vimeo
+        instagram: Instagram
+      content/slider:
+        title: Title
+        body: Body
+        photo: Photo
+        link: Link
+        link_text: Link Text
+      content/user:
+        confirmed_at: Confirmation Date
+    errors:
+      models:
+        content/address:
+          attributes:
+            address1:
+              geocoding_failed: geocoding failed
+  content:
+    account_mailer:
+      accept_email:
+        subject: The open Masjid - Your account was accepted
+        header: Hello %{mosque}!
+        body: Congratulations!!! Your account was accepted by our admins. Our team is still working on the first version of the application, we will inform you when it is done then you can start publishing your articles. If you have any question please don't hesitate get in touch with us! Thanks for your undestanding!
+      decline_email:
+        subject: The open Masjid - Your account was declined
+        header: Hello %{mosque}!
+        body: We are sorry to inform you that your email was declined by our admins because it seems to be not real. If you disagree or you have any concern please get in touch with us! Thanks for your undestanding!
+      welcome_email:
+        subject: Welcome to The open Masjid
+        header: Welcome %{mosque}!
+        body: You are welcome at the open masjid. Once you confirm your account, we will got in touch with you as soon as possible.
+      notify_creation_email:
+        subject: The open Masjid - new account was created
+        header: Hi,
+        body: A new account was created
+        link: See details
+  admin:
+    articles:
+      new:
+        header: New Article
+    accounts:
+      edit:
+        header: Edit Account
+    configurations:
+      edit:
+        header: General Configuration
+    countries:
+      edit:
+        header: Edit Country
+      new:
+        header: New Country
+    pages:
+      edit:
+        header: Edit Menu Item
+      new:
+        header: New Menu Item
+    regions:
+      edit:
+        header: Edit Region
+      new:
+        header: New Region
+    social_networks:
+      edit:
+        header: Edit Social Media
+    sliders:
+      edit:
+        header: Edit Slider
+    cities:
+      edit:
+        header: Edit City
+      new:
+        header: New City
+    pundit:
+      unauthorized: You are not authorized to perform this action
+    shared:
+      are_you_sure: Are you sure?
+      total: 'Total: %{count}'
+    tabs:
+      general: General
+  public:
+    read_more: Continue reading
+  shared:
+    actions:
+      accept: Accept
+      back_to_list: Back to list
+      decline: Decline
+      delete: Delete
+      edit: Edit
+      new: New
+    locales:
+      en: English
+      fr: French
+      es: Spanish
+      de: German

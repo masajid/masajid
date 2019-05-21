@@ -1,6 +1,12 @@
 <footer>
   <div class='row'>
     <div class='col-md-4'>
+      <% if current_account.supported_locales.reject(&:blank?).many? %>
+        <%= form_tag select_locale_path, class: 'locale_selector' do %>
+          <%= select_tag(:switch_to_locale, options_for_select(options_for_locale, I18n.locale), class: 'form-control') %>
+        <% end %>
+      <% end %>
+
       <ul class='social-media'>
         <!--
           <li>

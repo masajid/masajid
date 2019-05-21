@@ -9,8 +9,10 @@ footer {
     margin-bottom: 0;
   }
 
-  .secondary-footer {
-    margin-top: 20px;
+  .locale_selector {
+    margin: auto;
+    padding-bottom: 20px;
+    width: 40%;
   }
 
   /* Social Media Icons */
@@ -95,5 +97,9 @@ footer {
         transition: all 0.8s;
       }
     }
+  }
+
+  .secondary-footer {
+    margin-top: 20px;
   }
 }

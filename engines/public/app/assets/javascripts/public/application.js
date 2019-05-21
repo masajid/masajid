@@ -16,3 +16,9 @@
 //= require popper
 //= require bootstrap
 //= require_tree .
+
+$(function() {
+  $('.locale_selector select').change(function() {
+    this.form.submit();
+  });
+});
