@@ -46,6 +46,12 @@ en:
         city_name: City
         region_name: Region
         country_id: Country
+      content/configuration:
+        logo: Logo
+        theme: Theme
+        supported_locales: Supported Languages
+        default_locale: Default Language
+        admin_locale: Language
       content/country:
         name: Country Name
       content/page:
@@ -110,6 +116,9 @@ en:
     accounts:
       edit:
         header: Edit Account
+    configurations:
+      edit:
+        header: General Configuration
     countries:
       edit:
         header: Edit Country
@@ -141,6 +150,8 @@ en:
     shared:
       are_you_sure: Are you sure?
       total: 'Total: %{count}'
+    tabs:
+      general: General
   public:
     read_more: Continue reading
   shared:
@@ -151,3 +162,8 @@ en:
       delete: Delete
       edit: Edit
       new: New
+    locales:
+      en: English
+      fr: French
+      es: Spanish
+      de: German

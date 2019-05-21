@@ -1,0 +1,67 @@
+<%= simple_form_for current_account, url: configuration_path, method: :put do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.simple_fields_for :configuration, (current_account.configuration || current_account.build_configuration) do |ff| %>
+    <div class='row'>
+      <div class='col-sm-6'>
+        <dl>
+          <dt><%= Content::Account.human_attribute_name(:subdomain) %></dt>
+          <dd><%= current_account.subdomain %></dd>
+        </dl>
+
+        <dl>
+          <dt><%= Content::Account.human_attribute_name(:email) %></dt>
+          <dd><%= current_account.email %></dd>
+        </dl>
+
+        <dl>
+          <dt><%= Content::Account.human_attribute_name(:mosque) %></dt>
+          <dd><%= current_account.mosque %></dd>
+        </dl>
+
+        <dl>
+          <dt><%= Content::Account.human_attribute_name(:responsable) %></dt>
+          <dd><%= current_account.responsable %></dd>
+        </dl>
+
+        <dl>
+          <dt><%= Content::Address.human_attribute_name(:phone) %></dt>
+          <dd><%= current_account.address.phone %></dd>
+        </dl>
+
+        <dl>
+          <dt><%= Content::Address.model_name.human %></dt>
+          <dd><%= current_account.address.to_s %></dd>
+        </dl>
+      </div>
+
+      <div class='col-sm-6'>
+        <%= ff.input :logo %>
+        <%= image_tag main_app.url_for(current_account.configuration.logo.variant(resize: '200x')) if current_account.configuration.logo.attached? %>
+      </div>
+    </div>
+
+
+    <div class='row'>
+      <div class='col-sm-6'>
+        <%= ff.input :admin_locale, collection: I18n.available_locales.map { |locale| [t("shared.locales.#{locale}"), locale] } %>
+
+        <h4>Site</h4>
+        <div class='supported-locales'>
+          <%= ff.label :supported_locales %>
+          <div class='checkbox-item'>
+            <%= hidden_field_tag "account[configuration_attributes][supported_locales][]", nil %>
+            <% I18n.available_locales.each do |locale| %>
+              <%= check_box_tag "account[configuration_attributes][supported_locales][]", locale, current_account.configuration.supported_locales.include?(locale.to_s) %>
+              <%= label_tag t("shared.locales.#{locale}") %>
+            <% end %>
+          </div>
+        </div>
+
+        <%= ff.input :default_locale, collection: current_account.configuration.supported_locales.reject(&:blank?).map { |locale| [t("shared.locales.#{locale}"), locale] } %>
+      </div>
+    </div>
+  <% end %>
+
+  <%= f.button :submit, class: 'btn-primary' %>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_19_173017) do
+ActiveRecord::Schema.define(version: 2019_05_19_201555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -109,6 +109,17 @@ ActiveRecord::Schema.define(version: 2019_05_19_173017) do
     t.bigint "region_id", null: false
     t.index ["country_id"], name: "index_content_cities_on_country_id"
     t.index ["region_id"], name: "index_content_cities_on_region_id"
+  end
+
+  create_table "content_configurations", force: :cascade do |t|
+    t.string "theme", default: "default", null: false
+    t.string "supported_locales", default: [], array: true
+    t.string "default_locale"
+    t.string "admin_locale"
+    t.bigint "account_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["account_id"], name: "index_content_configurations_on_account_id"
   end
 
   create_table "content_countries", force: :cascade do |t|

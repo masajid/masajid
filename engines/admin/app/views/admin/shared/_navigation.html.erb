@@ -109,9 +109,9 @@
       <% end %>
 
       <li class='nav-item'>
-        <%= link_to '/admin', class: 'nav-link' do %>
+        <%= link_to edit_configuration_path, class: 'nav-link' do %>
           <span data-feather='file-text'></span>
-          Account*
+          <%= t('admin.tabs.general') %>
         <% end %>
       </li>
 
@@ -119,13 +119,6 @@
         <%= link_to '/admin', class: 'nav-link' do %>
           <span data-feather='file-text'></span>
           About us*
-        <% end %>
-      </li>
-
-      <li class='nav-item'>
-        <%= link_to '/admin', class: 'nav-link' do %>
-          <span data-feather='file-text'></span>
-          Languages*
         <% end %>
       </li>
     </ul>
