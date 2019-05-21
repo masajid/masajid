@@ -7,7 +7,7 @@
 
     <div class='col-4 text-center'>
       <a class='header-logo text-dark' href='/'>
-        <% if current_configuration.logo.attached? %>
+        <% if current_account.logo.attached? %>
           <%= image_tag main_app.url_for(current_account.configuration.logo.variant(resize: '200x')) %>
         <% else %>
           <%= current_account.mosque %>

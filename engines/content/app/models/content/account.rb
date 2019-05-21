@@ -19,7 +19,7 @@ module Content
 
     before_validation :set_owner, on: :create
 
-    delegate :supported_locales, :default_locale, :admin_locale, to: :configuration
+    delegate :logo, :supported_locales, :default_locale, :admin_locale, to: :configuration
 
     after_create -> do
       AccountMailer.welcome_email(self).deliver_later
