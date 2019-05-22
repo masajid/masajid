@@ -1,8 +1,14 @@
 .edit_account {
-  .supported-locales {
-    .checkbox-item {
-      label {
-        margin-right: 10px;
+  .locales, .logo {
+    margin: 10px 0 30px;
+  }
+
+  .locales {
+    .supported-locales {
+      .checkbox-item {
+        label {
+          margin-right: 10px;
+        }
       }
     }
   }

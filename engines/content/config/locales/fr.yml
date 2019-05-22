@@ -49,9 +49,9 @@ fr:
       content/configuration:
         logo: Logo
         theme: Theme
-        supported_locales: Supported Languages
-        default_locale: Default Language
-        admin_locale: Language
+        supported_locales: Supported Languages (Site)
+        default_locale: Default Language (Site)
+        admin_locale: Language (Administration)
       content/country:
         name: Country Name
       content/page:

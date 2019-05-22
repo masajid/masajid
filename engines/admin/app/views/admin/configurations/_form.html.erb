@@ -33,32 +33,32 @@
           <dt><%= Content::Address.model_name.human %></dt>
           <dd><%= current_account.address.to_s %></dd>
         </dl>
-      </div>
 
-      <div class='col-sm-6'>
-        <%= ff.input :logo %>
-        <%= image_tag main_app.url_for(current_account.configuration.logo.variant(resize: '200x')) if current_account.configuration.logo.attached? %>
-      </div>
-    </div>
+        <hr />
 
+        <div class='locales'>
+          <%= ff.input :admin_locale, collection: options_for_locale, label_html: { class: 'font-weight-bold' } %>
 
-    <div class='row'>
-      <div class='col-sm-6'>
-        <%= ff.input :admin_locale, collection: I18n.available_locales.map { |locale| [t("shared.locales.#{locale}"), locale] } %>
-
-        <h4>Site</h4>
-        <div class='supported-locales'>
-          <%= ff.label :supported_locales %>
-          <div class='checkbox-item'>
-            <%= hidden_field_tag "account[configuration_attributes][supported_locales][]", nil %>
-            <% I18n.available_locales.each do |locale| %>
-              <%= check_box_tag "account[configuration_attributes][supported_locales][]", locale, current_account.configuration.supported_locales.include?(locale.to_s) %>
-              <%= label_tag t("shared.locales.#{locale}") %>
-            <% end %>
+          <div class='supported-locales'>
+            <%= ff.label :supported_locales, class: 'font-weight-bold' %>
+            <div class='checkbox-item'>
+              <%= hidden_field_tag "account[configuration_attributes][supported_locales][]", nil %>
+              <% I18n.available_locales.each do |locale| %>
+                <%= check_box_tag "account[configuration_attributes][supported_locales][]", locale, current_account.configuration.supported_locales.include?(locale.to_s) %>
+                <%= label_tag t("shared.locales.#{locale}") %>
+              <% end %>
+            </div>
           </div>
+
+          <%= ff.input :default_locale, collection: options_for_locale(locales: current_account.configuration.supported_locales), label_html: { class: 'font-weight-bold' } %>
         </div>
 
-        <%= ff.input :default_locale, collection: current_account.configuration.supported_locales.reject(&:blank?).map { |locale| [t("shared.locales.#{locale}"), locale] } %>
+        <hr />
+
+        <div class='logo'>
+          <%= ff.input :logo, label_html: { class: 'font-weight-bold' } %>
+          <%= image_tag main_app.url_for(current_account.configuration.logo.variant(resize: '200x')) if current_account.configuration.logo.attached? %>
+        </div>
       </div>
     </div>
   <% end %>
