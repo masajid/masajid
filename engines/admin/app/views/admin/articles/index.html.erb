@@ -1,5 +1,5 @@
 <% content_for :page_title do %>
-  <%= Content::Article.model_name.human(count: :many) %>
+  <%= plural_resource_name(Content::Article) %>
 <% end %>
 
 <% content_for :page_actions do %>

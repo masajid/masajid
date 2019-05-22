@@ -1,3 +1,4 @@
+require 'rails-i18n'
 require 'devise'
 require 'pundit'
 require 'friendly_id'

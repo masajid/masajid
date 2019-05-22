@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   s.add_dependency 'rails', '~> 6.0.0.rc1'
+  s.add_dependency 'rails-i18n', '~> 6.0.0.beta1'
   s.add_dependency 'devise'
   s.add_dependency 'pundit'
   s.add_dependency 'friendly_id'

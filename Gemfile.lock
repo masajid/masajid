@@ -21,6 +21,7 @@ PATH
       postgres-copy (~> 1.4.0)
       pundit
       rails (~> 6.0.0.rc1)
+      rails-i18n (~> 6.0.0.beta1)
       shrine
       sidekiq
       simple_form
@@ -271,6 +272,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
+    rails-i18n (6.0.0.beta1)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0.beta1, < 7)
     railties (6.0.0.rc1)
       actionpack (= 6.0.0.rc1)
       activesupport (= 6.0.0.rc1)
