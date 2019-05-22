@@ -59,6 +59,12 @@
           <%= ff.input :logo, label_html: { class: 'font-weight-bold' } %>
           <%= image_tag main_app.url_for(current_account.configuration.logo.variant(resize: '200x')) if current_account.configuration.logo.attached? %>
         </div>
+
+        <div class='about-us'>
+          <%= ff.label :about_us, class: 'font-weight-bold' %>
+          <%= ff.input :about_us, as: :hidden %>
+          <trix-editor input='account_configuration_attributes_about_us'></trix-editor>
+        </div>
       </div>
     </div>
   <% end %>

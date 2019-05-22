@@ -48,6 +48,7 @@ de:
         country_id: Country
       content/configuration:
         logo: Logo
+        about_us: About us
         theme: Theme
         supported_locales: Supported Languages (Site)
         default_locale: Default Language (Site)
