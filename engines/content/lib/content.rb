@@ -24,3 +24,4 @@ module Content
 end
 
 require 'scoped_to'
+require 'content/controller_helpers/volunteer'

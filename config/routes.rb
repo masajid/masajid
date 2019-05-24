@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   resources :accounts, only: %i[new create]
+  resources :volunteers, only: %i[new create]
   devise_for :users, class_name: 'Content::User'
 
   authenticate :user, ->(u) { u.super_admin? } do

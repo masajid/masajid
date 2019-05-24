@@ -1,0 +1,10 @@
+.new_volunteer {
+  margin-top: 20px;
+
+  .volunteer_languages, .volunteer_experience_area {
+    .form-check {
+      display: inline-block;
+      padding-right: 10px;
+    }
+  }
+}

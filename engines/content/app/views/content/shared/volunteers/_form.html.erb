@@ -1,0 +1,19 @@
+<%= simple_form_for volunteer do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :name %>
+  <%= f.input :identification %>
+  <%= f.input :birthday, start_year: Date.today.year - 80, end_year: Date.today.year %>
+  <%= f.input :address %>
+  <%= f.input :phone %>
+  <%= f.input :email %>
+  <%= f.input :education %>
+  <%= f.input :languages, as: :check_boxes, collection: options_for_languages %>
+  <%= f.input :other_languages %>
+  <%= f.input :availability %>
+  <%= f.input :experience %>
+  <%= f.input :experience_place %>
+  <%= f.input :experience_area, as: :check_boxes, collection: options_for_experience_area %>
+
+  <%= f.button :submit, class: 'btn-primary' %>
+<% end %>

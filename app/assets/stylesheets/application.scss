@@ -3,6 +3,11 @@
 @import "devise";
 @import "home";
 @import "accounts";
+@import "volunteers";
+
+.content {
+  padding: 15px;
+}
 
 .alert {
   margin-bottom: 0;

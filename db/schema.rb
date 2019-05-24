@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_22_185537) do
+ActiveRecord::Schema.define(version: 2019_05_22_202741) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -204,6 +204,26 @@ ActiveRecord::Schema.define(version: 2019_05_22_185537) do
     t.index ["confirmation_token"], name: "index_content_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_content_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_content_users_on_reset_password_token", unique: true
+  end
+
+  create_table "content_volunteers", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "identification", null: false
+    t.date "birthday", null: false
+    t.string "address", null: false
+    t.string "phone", null: false
+    t.string "email", null: false
+    t.string "education", null: false
+    t.text "languages", default: [], array: true
+    t.string "other_languages"
+    t.string "availability", null: false
+    t.text "experience", null: false
+    t.text "experience_place"
+    t.text "experience_area", default: [], array: true
+    t.bigint "account_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["account_id"], name: "index_content_volunteers_on_account_id"
   end
 
   create_table "flipper_features", force: :cascade do |t|

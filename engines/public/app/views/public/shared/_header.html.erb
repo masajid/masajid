@@ -2,7 +2,7 @@
   <div class='row flex-nowrap justify-content-between align-items-center'>
     <div class='col-4 pt-1'>
       <%= link_to Content::Configuration.human_attribute_name(:about_us), about_us_path, class: 'text-muted about-us' %>
-      <a class='text-muted' href='#'>Volunteering</a>
+      <%= link_to t('shared.volunteers.new.header'), new_volunteer_path, class: 'text-muted about-us' %>
     </div>
 
     <div class='col-4 text-center'>

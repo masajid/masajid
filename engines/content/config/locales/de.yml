@@ -24,6 +24,9 @@ de:
         one: Slider
       content/social_network:
         one: Social media
+      content/volunteer:
+        one: Volunteer
+        other: Volunteers
     attributes:
       content/article:
         title: Title
@@ -85,6 +88,32 @@ de:
         link_text: Link Text
       content/user:
         confirmed_at: Confirmation Date
+      content/volunteer:
+        name: Name
+        identification: Identification
+        birthday: Birthday
+        address: Address
+        phone: Phone
+        email: Email
+        education: Education
+        availability: Availability
+        languages: Languages
+        other_languages: Other Languages
+        experience: Experience
+        experience_place: Experience Place
+        experience_area: Experience Area
+      content/volunteer/experience_area:
+        cultural: Cultural
+        social: Social
+        educational: Educational
+        religious: Religious
+      content/volunteer/languages:
+        arabic: Arabic
+        spanish: Spanish
+        catalan: Catalan
+        english: English
+        french: French
+        german: German
     errors:
       models:
         content/address:
@@ -168,3 +197,6 @@ de:
       fr: French
       es: Spanish
       de: German
+    volunteers:
+      new:
+        header: Volunteering
