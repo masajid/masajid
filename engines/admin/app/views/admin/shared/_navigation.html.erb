@@ -23,34 +23,6 @@
       </li>
 
       <li class='nav-item'>
-        <%= link_to edit_slider_path, class: 'nav-link' do %>
-          <span data-feather='file'></span>
-          <%= Content::Slider.model_name.human %>
-        <% end %>
-      </li>
-
-      <li class='nav-item'>
-        <%= link_to '/admin', class: 'nav-link' do %>
-          <span data-feather='file'></span>
-          Sidebar*
-        <% end %>
-      </li>
-
-      <li class='nav-item'>
-        <%= link_to '/admin', class: 'nav-link' do %>
-          <span data-feather='file'></span>
-          Prayer times*
-        <% end %>
-      </li>
-
-      <li class='nav-item'>
-        <%= link_to edit_social_network_path, class: 'nav-link' do %>
-          <span data-feather='file'></span>
-          <%= Content::SocialNetwork.model_name.human %>
-        <% end %>
-      </li>
-
-      <li class='nav-item'>
         <%= link_to '/admin', class: 'nav-link' do %>
           <span data-feather='file'></span>
           Contacts*
@@ -112,6 +84,34 @@
         <%= link_to edit_configuration_path, class: 'nav-link' do %>
           <span data-feather='file-text'></span>
           <%= t('admin.tabs.general') %>
+        <% end %>
+      </li>
+
+      <li class='nav-item'>
+        <%= link_to edit_slider_path, class: 'nav-link' do %>
+          <span data-feather='file'></span>
+          <%= Content::Slider.model_name.human %>
+        <% end %>
+      </li>
+
+      <li class='nav-item'>
+        <%= link_to '/admin', class: 'nav-link' do %>
+          <span data-feather='file'></span>
+          Sidebar*
+        <% end %>
+      </li>
+
+      <li class='nav-item'>
+        <%= link_to '/admin', class: 'nav-link' do %>
+          <span data-feather='file'></span>
+          Prayer times*
+        <% end %>
+      </li>
+
+      <li class='nav-item'>
+        <%= link_to edit_social_network_path, class: 'nav-link' do %>
+          <span data-feather='file'></span>
+          <%= Content::SocialNetwork.model_name.human %>
         <% end %>
       </li>
     </ul>
