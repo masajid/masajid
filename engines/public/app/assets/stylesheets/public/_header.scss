@@ -1,6 +1,7 @@
 header {
   line-height: 1;
   border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
 
   .about-us {
     padding-right: 10px;
@@ -17,7 +18,7 @@ header {
 }
 
 nav {
-  margin: 10px 0 30px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 979px) {

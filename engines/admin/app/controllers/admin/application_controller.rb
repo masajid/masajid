@@ -17,7 +17,7 @@ module Admin
 
     private
       def set_locale
-        I18n.locale = current_account.admin_locale || I18n.default_locale
+        I18n.locale = current_account&.admin_locale || I18n.default_locale
       end
   end
 end

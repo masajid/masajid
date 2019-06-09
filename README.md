@@ -6,7 +6,7 @@
 # git clone .../theopenmasjid.git & cd theopenmasjid
 # bundle install
 # rails db:create db:migrate db:seed
-# rails content_places:import
+# rails content_places:import [only=countries,regions,cities]
 ```
 
 other steps:

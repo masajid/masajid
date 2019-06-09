@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 2019_05_22_202741) do
     t.string "title", null: false
     t.string "slug", null: false
     t.text "summary", null: false
+    t.text "body", null: false
     t.string "meta_title"
     t.string "meta_keywords"
     t.text "meta_descripton"
@@ -86,7 +87,6 @@ ActiveRecord::Schema.define(version: 2019_05_22_202741) do
     t.bigint "account_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "body", null: false
     t.index ["account_id"], name: "index_content_articles_on_account_id"
     t.index ["deleted_at"], name: "index_content_articles_on_deleted_at"
     t.index ["published_at"], name: "index_content_articles_on_published_at"
@@ -135,12 +135,12 @@ ActiveRecord::Schema.define(version: 2019_05_22_202741) do
     t.string "meta_title"
     t.string "meta_keywords"
     t.text "meta_description"
+    t.datetime "deleted_at"
     t.bigint "account_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "ancestry"
     t.integer "position"
-    t.datetime "deleted_at"
     t.index ["account_id"], name: "index_content_pages_on_account_id"
     t.index ["ancestry"], name: "index_content_pages_on_ancestry"
     t.index ["deleted_at"], name: "index_content_pages_on_deleted_at"

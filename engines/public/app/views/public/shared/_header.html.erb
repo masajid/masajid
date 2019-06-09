@@ -24,31 +24,33 @@
   </div>
 </header>
 
-<nav class='navbar navbar-expand-lg navbar-light bg-light rounded'>
-  <button class='navbar-toggler collapsed' type='button' data-toggle='collapse' data-target='#menu' aria-controls='menu' aria-expanded='false' aria-label='Toggle navigation'>
-    <span class='navbar-toggler-icon'></span>
-  </button>
+<% if menu_items.any? %>
+  <nav class='navbar navbar-expand-lg navbar-light bg-light rounded'>
+    <button class='navbar-toggler collapsed' type='button' data-toggle='collapse' data-target='#menu' aria-controls='menu' aria-expanded='false' aria-label='Toggle navigation'>
+      <span class='navbar-toggler-icon'></span>
+    </button>
 
-  <div class='collapse navbar-collapse justify-content-md-center' id='menu'>
-    <ul class='navbar-nav'>
-      <% Content::Page.scoped_to(current_account).roots.each do |menu_item| %>
-        <% children = menu_item.children %>
+    <div class='collapse navbar-collapse justify-content-md-center' id='menu'>
+      <ul class='navbar-nav'>
+        <% menu_items.each do |menu_item| %>
+          <% children = menu_item.children %>
 
-        <% if children.present? %>
-          <li class='nav-item dropdown'>
-            <a class='nav-link dropdown-toggle' href='#' id="dropdown<%= menu_item.id %>" data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'><%= menu_item.name %></a>
-            <div class='dropdown-menu' aria-labelledby="dropdown<%= menu_item.id %>">
-              <% children.each do |child_item| %>
-                <%= link_to child_item.name, page_url(child_item.permalink), class: 'dropdown-item' %>
-              <% end %>
-            </div>
-          </li>
-        <% else %>
-          <li class='nav-item'>
-            <%= link_to menu_item.name, page_url(menu_item.permalink), class: 'nav-link' %>
-          </li>
+          <% if children.present? %>
+            <li class='nav-item dropdown'>
+              <a class='nav-link dropdown-toggle' href='#' id="dropdown<%= menu_item.id %>" data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'><%= menu_item.name %></a>
+              <div class='dropdown-menu' aria-labelledby="dropdown<%= menu_item.id %>">
+                <% children.each do |child_item| %>
+                  <%= link_to child_item.name, page_url(child_item.permalink), class: 'dropdown-item' %>
+                <% end %>
+              </div>
+            </li>
+          <% else %>
+            <li class='nav-item'>
+              <%= link_to menu_item.name, page_url(menu_item.permalink), class: 'nav-link' %>
+            </li>
+          <% end %>
         <% end %>
-      <% end %>
-    </ul>
-  </div>
-</nav>
+      </ul>
+    </div>
+  </nav>
+<% end %>

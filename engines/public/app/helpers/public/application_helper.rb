@@ -1,5 +1,9 @@
 module Public
   module ApplicationHelper
+    def menu_items
+      @menu_items ||= Content::Page.scoped_to(current_account).roots
+    end
+
     def social_network
       @social_network ||= current_account.social_network
     end

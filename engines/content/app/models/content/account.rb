@@ -18,6 +18,7 @@ module Content
     accepts_nested_attributes_for :owner, :address, :configuration
 
     before_validation :set_owner, on: :create
+    before_validation -> { build_configuration }, on: :create
 
     delegate :logo, :about_us, :supported_locales, :default_locale, :admin_locale, to: :configuration
 
