@@ -6,12 +6,8 @@ Rails.application.routes.draw do
     mount Public::Engine, at: '/'
   end
 
+  mount Landing::Engine, at: '/'
   mount Admin::Engine, at: '/admin'
-
-  root 'home#index'
-  resources :accounts, only: %i[new create]
-  resources :volunteers, only: %i[new create]
-  devise_for :users, class_name: 'Content::User'
 
   authenticate :user, ->(u) { u.super_admin? } do
     mount Flipper::UI.app(Content.flipper) => '/flipper'

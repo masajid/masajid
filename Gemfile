@@ -7,7 +7,6 @@ gem 'rails', '~> 6.0.0.rc1'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5'
-gem 'webpacker', '~> 4.0'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
@@ -49,5 +48,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'content', path: 'engines/content'
+gem 'landing', path: 'engines/landing'
 gem 'admin', path: 'engines/admin'
 gem 'public', path: 'engines/public'
