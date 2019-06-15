@@ -1,25 +1,25 @@
 <%= form_for(resource, as: resource_name, url: update_password_path, html: { method: :put, class: 'form-signin' }) do |f| %>
   <div class='text-center mb-4'>
-    <h1 class='h3 mb-3 font-weight-normal'>Change your password</h1>
+    <h1 class='h3 mb-3 font-weight-normal'><%= t('devise.passwords.edit.change_your_password') %></h1>
   </div>
 
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
 
   <div class='form-label-group'>
-    <%= f.password_field :password, autofocus: true, autocomplete: 'new-password', placeholder: 'Password', class: 'form-control' %>
-    <%= f.label :password, "New password" %>
+    <%= f.password_field :password, autofocus: true, autocomplete: 'new-password', placeholder: t('devise.passwords.edit.new_password'), class: 'form-control' %>
+    <%= f.label :password, t('devise.passwords.edit.new_password') %>
     <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+      <em><%= t('devise.passwords.edit.new_password_minimum_characters', length: @minimum_password_length) %></em><br />
     <% end %>
   </div>
 
   <div class='form-label-group'>
-    <%= f.password_field :password_confirmation, autocomplete: 'off', placeholder: 'Confirm new password', class: 'form-control' %>
-    <%= f.label :password, 'Confirm new password' %>
+    <%= f.password_field :password_confirmation, autocomplete: 'off', placeholder: t('devise.passwords.edit.confirm_new_password'), class: 'form-control' %>
+    <%= f.label :password, t('devise.passwords.edit.confirm_new_password') %>
   </div>
 
-  <%= f.submit 'Change my password', class: 'btn btn-lg btn-primary btn-block' %>
+  <%= f.submit t('devise.passwords.edit.change_my_password'), class: 'btn btn-sm btn-primary btn-block' %>
 
-    <%= render 'landing/shared/devise_links' %>
+  <%= render 'landing/shared/devise_links' %>
 <% end %>
