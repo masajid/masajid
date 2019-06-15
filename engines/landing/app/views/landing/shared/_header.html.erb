@@ -1,6 +1,6 @@
 <header>
   <nav class='navbar navbar-expand-md navbar-dark fixed-top bg-dark'>
-    <a class='navbar-brand' href='/'>The Open Masjid</a>
+    <a class='navbar-brand' href='/'><%= t('landing.site_name') %></a>
     <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#landingNavbar' aria-controls='landingNavbar' aria-expanded='false' aria-label='Toggle navigation'>
       <span class='navbar-toggler-icon'></span>
     </button>
@@ -14,18 +14,19 @@
       <ul class='navbar-nav ml-auto'>
         <% if user_signed_in? %>
           <li class='nav-item'>
-            <%= link_to 'Admin Panel', '/admin', class: 'nav-link' %>
-          </li>
-          <li class='nav-item'>
-            <%= link_to 'Sign out', logout_path, method: :delete, class: 'nav-link' %>
-          </li>
-        <% else %>
-          <li class='nav-item'>
-            <%= link_to 'Sign in', login_path, class: 'nav-link' %>
+            <%= link_to t('landing.admin_panel'), '/admin', class: 'nav-link' %>
           </li>
 
           <li class='nav-item'>
-            <%= link_to 'Create Masjid Account', new_account_path, class: 'nav-link' %>
+            <%= link_to t('devise.actions.logout'), logout_path, method: :delete, class: 'nav-link' %>
+          </li>
+        <% else %>
+          <li class='nav-item'>
+            <%= link_to t('devise.actions.login'), login_path, class: 'nav-link' %>
+          </li>
+
+          <li class='nav-item'>
+            <%= link_to t('landing.create_account'), new_account_path, class: 'nav-link' %>
           </li>
         <% end %>
       </ul>

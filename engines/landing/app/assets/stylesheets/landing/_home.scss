@@ -20,14 +20,28 @@
 }
 
 .how-to-use {
-  h2 {
-    font-weight: 400;
+  h1 {
+    margin-bottom: 2em;
+    text-align: center;
+    text-transform: uppercase;
   }
 
-  .how-to-use-heading {
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -.05rem;
+  .step {
+    text-align: center;
+
+    img,
+    svg {
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-weight: 400;
+    }
+
+    p {
+      margin-right: .75rem;
+      margin-left: .75rem;
+    }
   }
 }
 
