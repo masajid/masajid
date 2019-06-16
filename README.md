@@ -6,12 +6,12 @@
 # git clone .../theopenmasjid.git & cd theopenmasjid
 # bundle install
 # rails db:create db:migrate db:seed
-# rails content_places:import [only=countries,regions,cities]
+# rails content_places:import [only=countries,regions,cities] # for setup countries is enough
 ```
 
 other steps:
 
-- rename `config/application.yml.example` to `config/application.yml` and change the environment variables.
+- rename `.env.example` to `.env` and change the environment variables.
 
 ### Deployment to heroku
 
@@ -65,6 +65,6 @@ other steps:
 
 #### Used features
 
-- `beta_v2`: enable beta version 2 which must be release by the end of 2019
+- `example`: description
 
 From the browser, as a super admin member of the technology team, you can access the flipper UI through `/flipper`
