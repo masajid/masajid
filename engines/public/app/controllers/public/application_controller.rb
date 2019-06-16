@@ -27,7 +27,7 @@ module Public
       end
 
       def set_layout
-        I18n.locale == :ar ? 'public/application_rtl' : 'public/application'
+        I18n.locale == :ar ? 'public/rtl/application' : 'public/application'
       end
   end
 end
