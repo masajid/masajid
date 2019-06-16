@@ -1,4 +1,4 @@
-de:
+ar:
   activerecord:
     models:
       content/article:
@@ -51,7 +51,7 @@ de:
         country_id: Country
       content/configuration:
         logo: Logo
-        about_us: About us
+        about_us: عن الموقع
         theme: Theme
         supported_locales: Supported Languages (Site)
         default_locale: Default Language (Site)
@@ -105,10 +105,10 @@ de:
         experience_place: Experience Place
         experience_area: Experience Area
       content/volunteer/experience_area:
-        cultural: Cultural
-        social: Social
-        educational: Educational
-        religious: Religious
+        cultural: ثقافي
+        social:   اجتماعي
+        educational: تربوي
+        religious: ديني
       content/volunteer/languages:
         arabic: Arabic
         spanish: Spanish
@@ -223,15 +223,15 @@ de:
       edit: Edit
       new: New
     locales:
-      ar: Arabic
-      en: English
-      fr: French
-      es: Spanish
-      de: German
-    subscribe: Subscribe
+      ar: العربية
+      en: الإنجليزية
+      fr: الفرنسية
+      es: الإسبانية
+      de: الألمانية
+    subscribe: الاشتراك
     volunteers:
       new:
-        header: Volunteering
+        header: العمل التطوعي
   devise:
     actions:
       login: Sign in

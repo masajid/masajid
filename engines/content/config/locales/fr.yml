@@ -223,10 +223,12 @@ fr:
       edit: Edit
       new: New
     locales:
+      ar: Arabic
       en: English
       fr: French
       es: Spanish
       de: German
+    subscribe: Subscribe
     volunteers:
       new:
         header: Volunteering

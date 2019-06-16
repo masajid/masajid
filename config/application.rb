@@ -15,7 +15,7 @@ module WorldMosquesApp
     config.load_defaults 6.0
 
     config.i18n.default_locale = :en
-    config.i18n.available_locales = %i[en fr es de]
+    config.i18n.available_locales = %i[en fr es de ar]
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

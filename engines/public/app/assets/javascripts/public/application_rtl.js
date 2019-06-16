@@ -13,8 +13,6 @@
 //= require rails-ujs
 //= require activestorage
 //= require jquery3
-//= require popper
-//= require bootstrap
 
 $(function() {
   $('.locale_selector select').change(function() {

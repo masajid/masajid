@@ -5,6 +5,8 @@ module Public
 
     before_action :set_locale
 
+    layout :set_layout
+
     def current_account
       @current_account ||= request.env['Detectify-Entity']
     end
@@ -22,6 +24,10 @@ module Public
           else
             current_account.default_locale.presence || I18n.default_locale
           end
+      end
+
+      def set_layout
+        I18n.locale == :ar ? 'public/application_rtl' : 'public/application'
       end
   end
 end
