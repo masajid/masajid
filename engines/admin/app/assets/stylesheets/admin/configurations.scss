@@ -1,15 +1,23 @@
 .edit_account {
-  .locales, .logo {
-    margin: 10px 0 30px;
+  .account_configuration_supported_locales {
+    .form-check {
+      display: inline-block;
+      padding-right: 10px;
+    }
+
+    legend {
+      @extend .font-weight-bold;
+    }
   }
 
-  .locales {
-    .supported-locales {
-      .checkbox-item {
-        label {
-          margin-right: 10px;
-        }
-      }
+  .account_configuration_admin_locale,
+  .account_configuration_default_locale,
+  .account_configuration_logo,
+  .account_configuration_attributes_about_us,
+  .account_seo_content_meta_title,
+  .account_seo_content_meta_description {
+    label {
+      @extend .font-weight-bold;
     }
   }
 }

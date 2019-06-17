@@ -5,7 +5,7 @@ module Admin
     end
 
     def options_for_locale(locales: I18n.available_locales)
-      locales.reject(&:blank?).map { |locale| [t("shared.locales.#{locale}"), locale] }
+      locales.reject(&:blank?).map { |locale| [t("shared.locales.#{locale}"), locale.to_s] }
     end
   end
 end
