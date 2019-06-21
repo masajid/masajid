@@ -55,6 +55,8 @@
 
         <hr />
 
+        <%= ff.input :theme, collection: Content::Configuration::THEME_OPTIONS, include_blank: false %>
+
         <div class='logo'>
           <%= ff.input :logo, label_html: { class: 'font-weight-bold' } %>
           <%= image_tag main_app.url_for(current_account.configuration.logo.variant(resize: '200x')) if current_account.configuration.logo.attached? %>

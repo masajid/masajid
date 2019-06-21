@@ -28,4 +28,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'content'
   spec.add_dependency 'detectify'
   spec.add_dependency 'font-awesome-rails'
+  spec.add_dependency 'bootswatch'
 end
