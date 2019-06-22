@@ -11,7 +11,15 @@ module Public
       end
 
       def title
-        accurate_title || current_account.mosque
+        if accurate_title
+          if put_site_name_in_title?
+            [accurate_title, current_account.mosque].join(' - ')
+          else
+            accurate_title
+          end
+        else
+          current_account.mosque
+        end
       end
 
       def meta_data_tags
@@ -22,15 +30,19 @@ module Public
 
       private
         def accurate_title
-          current_account.meta_title
+          @accurate_title ||= current_account.meta_title
+        end
+
+        def put_site_name_in_title?
+          false
         end
 
         def meta_data
           object = instance_variable_get('@' + controller_name.singularize)
           meta = {}
 
-          if object.is_a?(ActiveRecord::Base)
-            meta[:description] = object.meta_description if object[:meta_description].present?
+          if object.respond_to?(:meta_description) && object.meta_description.present?
+            meta[:description] = object.meta_description
           end
 
           if meta[:description].blank?

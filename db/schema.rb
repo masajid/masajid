@@ -79,9 +79,6 @@ ActiveRecord::Schema.define(version: 2019_06_16_214812) do
     t.string "slug", null: false
     t.text "summary", null: false
     t.text "body", null: false
-    t.string "meta_title"
-    t.string "meta_keywords"
-    t.text "meta_descripton"
     t.datetime "published_at"
     t.datetime "deleted_at"
     t.bigint "account_id", null: false
@@ -132,9 +129,6 @@ ActiveRecord::Schema.define(version: 2019_06_16_214812) do
     t.string "name", null: false
     t.text "description"
     t.string "permalink", null: false
-    t.string "meta_title"
-    t.string "meta_keywords"
-    t.text "meta_description"
     t.datetime "deleted_at"
     t.bigint "account_id", null: false
     t.datetime "created_at", null: false

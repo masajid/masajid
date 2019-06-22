@@ -16,10 +16,10 @@ module Content
     validates :owner, presence: true
     validates :address, presence: true
 
-    accepts_nested_attributes_for :owner, :address, :seo_content, :configuration
-
     before_validation :set_owner, on: :create
     before_validation -> { build_configuration }, on: :create
+
+    accepts_nested_attributes_for :owner, :address, :seo_content, :configuration
 
     delegate :logo, :about_us, :supported_locales, :default_locale, :admin_locale, to: :configuration
     delegate :meta_title, :meta_description, to: :seo_content, allow_nil: true

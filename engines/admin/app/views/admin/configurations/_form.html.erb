@@ -24,10 +24,7 @@
     </div>
 
     <div class='col-md-6'>
-      <%= f.simple_fields_for :seo_content, (current_account.seo_content || current_account.build_seo_content) do |seo_content_form| %>
-        <%= seo_content_form.input :meta_title %>
-        <%= seo_content_form.input :meta_description %>
-      <% end %>
+      <%= render 'admin/seo_contents/form', f: f %>
     </div>
   </div>
 

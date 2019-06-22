@@ -6,6 +6,7 @@ module Content
     normalize_attribute  :ancestry, with: :blank
 
     belongs_to :account
+    has_one :seo_content, as: :searchable
     has_and_belongs_to_many :articles
 
     validates :name, presence: true
@@ -14,6 +15,10 @@ module Content
 
     before_validation :set_permalink
     after_update :update_children_permalinks, if: :saved_change_to_permalink?
+
+    accepts_nested_attributes_for :seo_content
+
+    delegate :meta_title, :meta_description, to: :seo_content, allow_nil: true
 
     def pretty_name
       [ancestors.map(&:name), name].flatten.join(' -> ')
