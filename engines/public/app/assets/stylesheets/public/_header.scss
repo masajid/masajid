@@ -11,9 +11,17 @@ header {
       text-decoration: none;
     }
   }
+
+  @media (max-width: 768px) {
+    .header-logo {
+      img {
+        max-width: 125px;
+      }
+    }
+  }
 }
 
-@media (min-width: 979px) {
+@media (min-width: 992px) {
   .dropdown:hover .dropdown-menu {
     display: block;
   }
