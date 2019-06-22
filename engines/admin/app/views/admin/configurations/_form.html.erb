@@ -10,6 +10,8 @@
 
         <hr />
 
+        <%= configuration_form.input :theme, collection: Content::Configuration::THEME_OPTIONS, include_blank: false %>
+
         <div class='logo mb-3'>
           <%= configuration_form.input :logo %>
           <%= image_tag main_app.url_for(current_account.configuration.logo.variant(resize: '200x')) if current_account.configuration.logo.attached? %>
