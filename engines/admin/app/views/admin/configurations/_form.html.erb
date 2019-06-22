@@ -1,73 +1,34 @@
 <%= simple_form_for current_account, url: configuration_path, method: :put do |f| %>
   <%= f.error_notification %>
 
-  <%= f.simple_fields_for :configuration, (current_account.configuration || current_account.build_configuration) do |ff| %>
-    <div class='row'>
-      <div class='col-sm-6'>
-        <dl>
-          <dt><%= Content::Account.human_attribute_name(:subdomain) %></dt>
-          <dd><%= current_account.subdomain %></dd>
-        </dl>
-
-        <dl>
-          <dt><%= Content::Account.human_attribute_name(:email) %></dt>
-          <dd><%= current_account.email %></dd>
-        </dl>
-
-        <dl>
-          <dt><%= Content::Account.human_attribute_name(:mosque) %></dt>
-          <dd><%= current_account.mosque %></dd>
-        </dl>
-
-        <dl>
-          <dt><%= Content::Account.human_attribute_name(:responsable) %></dt>
-          <dd><%= current_account.responsable %></dd>
-        </dl>
-
-        <dl>
-          <dt><%= Content::Address.human_attribute_name(:phone) %></dt>
-          <dd><%= current_account.address.phone %></dd>
-        </dl>
-
-        <dl>
-          <dt><%= Content::Address.model_name.human %></dt>
-          <dd><%= current_account.address.to_s %></dd>
-        </dl>
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= f.simple_fields_for :configuration, (current_account.configuration || current_account.build_configuration) do |configuration_form| %>
+        <%= configuration_form.input :admin_locale, collection: options_for_locale %>
+        <%= configuration_form.input :default_locale, collection: options_for_locale(locales: current_account.configuration.supported_locales) %>
+        <%= configuration_form.input :supported_locales, as: :check_boxes, collection: options_for_locale %>
 
         <hr />
 
-        <div class='locales'>
-          <%= ff.input :admin_locale, collection: options_for_locale, label_html: { class: 'font-weight-bold' } %>
+        <%= configuration_form.input :theme, collection: Content::Configuration::THEME_OPTIONS, include_blank: false %>
 
-          <div class='supported-locales'>
-            <%= ff.label :supported_locales, class: 'font-weight-bold' %>
-            <div class='checkbox-item'>
-              <%= hidden_field_tag "account[configuration_attributes][supported_locales][]", nil %>
-              <% I18n.available_locales.each do |locale| %>
-                <%= check_box_tag "account[configuration_attributes][supported_locales][]", locale, current_account.configuration.supported_locales.include?(locale.to_s) %>
-                <%= label_tag t("shared.locales.#{locale}") %>
-              <% end %>
-            </div>
-          </div>
-
-          <%= ff.input :default_locale, collection: options_for_locale(locales: current_account.configuration.supported_locales), label_html: { class: 'font-weight-bold' } %>
-        </div>
-
-        <hr />
-
-        <div class='logo'>
-          <%= ff.input :logo, label_html: { class: 'font-weight-bold' } %>
+        <div class='logo mb-3'>
+          <%= configuration_form.input :logo %>
           <%= image_tag main_app.url_for(current_account.configuration.logo.variant(resize: '200x')) if current_account.configuration.logo.attached? %>
         </div>
 
         <div class='about-us'>
-          <%= ff.label :about_us, class: 'font-weight-bold' %>
-          <%= ff.input :about_us, as: :hidden %>
+          <%= configuration_form.label :about_us, class: 'font-weight-bold' %>
+          <%= configuration_form.input :about_us, as: :hidden %>
           <trix-editor input='account_configuration_attributes_about_us'></trix-editor>
         </div>
-      </div>
+      <% end %>
     </div>
-  <% end %>
+
+    <div class='col-md-6'>
+      <%= render 'admin/seo_contents/form', f: f %>
+    </div>
+  </div>
 
   <%= f.button :submit, class: 'btn-primary' %>
 <% end %>

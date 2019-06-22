@@ -12,7 +12,10 @@ module Admin
 
     private
       def configuration_params
-        params.require(:account).permit(configuration_attributes: [:id, :logo, :about_us, :theme, :admin_locale, :default_locale, supported_locales: []])
+        params.require(:account).permit(
+          configuration_attributes: [:id, :logo, :about_us, :theme, :admin_locale, :default_locale, supported_locales: []],
+          seo_content_attributes: [:id, :meta_title, :meta_description],
+        )
       end
   end
 end
