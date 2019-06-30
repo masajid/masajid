@@ -1,7 +1,7 @@
 module Content
   class SliderPolicy < ApplicationPolicy
     def update?
-      user.super_admin? || user.account == record.account
+      user.account == record.account
     end
 
     def edit?

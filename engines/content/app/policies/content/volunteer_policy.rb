@@ -21,7 +21,7 @@ module Content
 
       def resolve
         if user.super_admin?
-          scope.where(entity_id: nil)
+          scope.where(account_id: nil)
         elsif user.admin?
           scope.scoped_to(user.account)
         else

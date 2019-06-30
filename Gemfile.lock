@@ -1,5 +1,5 @@
 PATH
-  remote: engines/admin
+  remote: engines
   specs:
     admin (0.1.0)
       content
@@ -7,10 +7,6 @@ PATH
       jquery-ui-rails
       sortable_tree_rails
       trix-gem
-
-PATH
-  remote: engines/content
-  specs:
     content (0.1.0)
       ancestry
       attribute_normalizer
@@ -26,16 +22,8 @@ PATH
       sidekiq
       simple_form
       stringex
-
-PATH
-  remote: engines/landing
-  specs:
     landing (0.1.0)
       content
-
-PATH
-  remote: engines/public
-  specs:
     public (0.1.0)
       bootswatch
       content
@@ -102,12 +90,12 @@ GEM
       zeitwerk (~> 2.1, >= 2.1.4)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
-    ancestry (3.0.6)
+    ancestry (3.0.7)
       activerecord (>= 3.2.0)
     attribute_normalizer (1.2.0)
     autoprefixer-rails (9.5.1)
       execjs
-    bcrypt (3.1.12)
+    bcrypt (3.1.13)
     bindex (0.7.0)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
@@ -179,10 +167,10 @@ GEM
     geocoder (1.5.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    haml (5.1.0)
+    haml (5.1.1)
       temple (>= 0.8.0)
       tilt
-    haml-rails (2.0.0)
+    haml-rails (2.0.1)
       actionpack (>= 5.1)
       activesupport (>= 5.1)
       haml (>= 4.0.6, < 6.0)
@@ -292,11 +280,11 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    redis (4.1.1)
+    redis (4.1.2)
     regexp_parser (1.4.0)
-    responders (2.4.1)
-      actionpack (>= 4.2.0, < 6.0)
-      railties (>= 4.2.0, < 6.0)
+    responders (3.0.0)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -330,8 +318,8 @@ GEM
     selenium-webdriver (3.142.2)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
-    sexp_processor (4.12.0)
-    shrine (2.17.1)
+    sexp_processor (4.12.1)
+    shrine (2.18.0)
       content_disposition (~> 1.0)
       down (~> 4.1)
     sidekiq (5.2.7)

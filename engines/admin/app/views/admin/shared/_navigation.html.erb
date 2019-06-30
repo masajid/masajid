@@ -1,46 +1,56 @@
 <nav class='col-md-2 d-none d-md-block bg-light sidebar'>
   <div class='sidebar-sticky'>
     <ul class='nav flex-column'>
-      <li class='nav-item'>
-        <%= link_to root_path, class: 'nav-link active' do %>
-          <span data-feather='home'></span>
-          Dashboards*
-        <% end %>
-      </li>
-
-      <li class='nav-item'>
-        <%= link_to pages_path, class: 'nav-link' do %>
-          <span data-feather='file'></span>
-          <%= plural_resource_name(Content::Page) %>
-        <% end %>
-      </li>
-
-      <li class='nav-item'>
-        <%= link_to articles_path, class: 'nav-link' do %>
-          <span data-feather='file'></span>
-          <%= plural_resource_name(Content::Article) %>
-        <% end %>
-      </li>
-
-      <li class='nav-item'>
-        <%= link_to '/admin', class: 'nav-link' do %>
-          <span data-feather='file'></span>
-          Contacts*
-        <% end %>
-      </li>
-
-      <li class='nav-item'>
-        <%= link_to volunteers_path, class: 'nav-link' do %>
-          <span data-feather='file'></span>
-          <%= plural_resource_name(Content::Volunteer) %>
-        <% end %>
-      </li>
+      <% if policy([:content, :dashboard]).index? %>
+        <li class='nav-item'>
+          <%= link_to root_path, class: 'nav-link active' do %>
+            <span data-feather='home'></span>
+            Dashboards*
+          <% end %>
+        </li>
+      <% end %>
 
       <% if policy(Content::Account).index? %>
         <li class='nav-item'>
           <%= link_to accounts_path, class: 'nav-link' do %>
             <span data-feather='file'></span>
             <%= plural_resource_name(Content::Account) %>
+          <% end %>
+        </li>
+      <% end %>
+
+      <% if policy(Content::Page).index? %>
+        <li class='nav-item'>
+          <%= link_to pages_path, class: 'nav-link' do %>
+            <span data-feather='file'></span>
+            <%= plural_resource_name(Content::Page) %>
+          <% end %>
+        </li>
+      <% end %>
+
+      <% if policy(Content::Article).index? %>
+        <li class='nav-item'>
+          <%= link_to articles_path, class: 'nav-link' do %>
+            <span data-feather='file'></span>
+            <%= plural_resource_name(Content::Article) %>
+          <% end %>
+        </li>
+      <% end %>
+
+      <% if policy(Content::Article).index? %>
+        <li class='nav-item'>
+          <%= link_to '/admin', class: 'nav-link' do %>
+            <span data-feather='file'></span>
+            Contacts*
+          <% end %>
+        </li>
+      <% end %>
+
+      <% if policy(Content::Volunteer).index? %>
+        <li class='nav-item'>
+          <%= link_to volunteers_path, class: 'nav-link' do %>
+            <span data-feather='file'></span>
+            <%= plural_resource_name(Content::Volunteer) %>
           <% end %>
         </li>
       <% end %>
@@ -80,40 +90,50 @@
         </li>
       <% end %>
 
-      <li class='nav-item'>
-        <%= link_to edit_configuration_path, class: 'nav-link' do %>
-          <span data-feather='file-text'></span>
-          <%= t('admin.tabs.general') %>
-        <% end %>
-      </li>
+      <% if current_account && policy(current_account.configuration).update? %>
+        <li class='nav-item'>
+          <%= link_to edit_configuration_path, class: 'nav-link' do %>
+            <span data-feather='file-text'></span>
+            <%= t('admin.tabs.general') %>
+          <% end %>
+        </li>
+      <% end %>
 
-      <li class='nav-item'>
-        <%= link_to edit_slider_path, class: 'nav-link' do %>
-          <span data-feather='file'></span>
-          <%= Content::Slider.model_name.human %>
-        <% end %>
-      </li>
+      <% if current_account && policy(current_account.slider).update? %>
+        <li class='nav-item'>
+          <%= link_to edit_slider_path, class: 'nav-link' do %>
+            <span data-feather='file'></span>
+            <%= Content::Slider.model_name.human %>
+          <% end %>
+        </li>
+      <% end %>
 
-      <li class='nav-item'>
-        <%= link_to '/admin', class: 'nav-link' do %>
-          <span data-feather='file'></span>
-          Sidebar*
-        <% end %>
-      </li>
+      <% if current_account %>
+        <li class='nav-item'>
+          <%= link_to '/admin', class: 'nav-link' do %>
+            <span data-feather='file'></span>
+            Sidebar*
+          <% end %>
+        </li>
+      <% end %>
 
-      <li class='nav-item'>
-        <%= link_to '/admin', class: 'nav-link' do %>
-          <span data-feather='file'></span>
-          Prayer times*
-        <% end %>
-      </li>
+      <% if current_account %>
+        <li class='nav-item'>
+          <%= link_to '/admin', class: 'nav-link' do %>
+            <span data-feather='file'></span>
+            Prayer times*
+          <% end %>
+        </li>
+      <% end %>
 
-      <li class='nav-item'>
-        <%= link_to edit_social_network_path, class: 'nav-link' do %>
-          <span data-feather='file'></span>
-          <%= Content::SocialNetwork.model_name.human %>
-        <% end %>
-      </li>
+      <% if current_account && policy(current_account.social_network).update? %>
+        <li class='nav-item'>
+          <%= link_to edit_social_network_path, class: 'nav-link' do %>
+            <span data-feather='file'></span>
+            <%= Content::SocialNetwork.model_name.human %>
+          <% end %>
+        </li>
+      <% end %>
     </ul>
   </div>
 </nav>

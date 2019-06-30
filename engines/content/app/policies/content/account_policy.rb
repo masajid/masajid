@@ -1,11 +1,11 @@
 module Content
   class AccountPolicy < ApplicationPolicy
     def accept?
-      super_admin_user?
+      user.super_admin?
     end
 
     def decline?
-      super_admin_user?
+      user.super_admin?
     end
   end
 end

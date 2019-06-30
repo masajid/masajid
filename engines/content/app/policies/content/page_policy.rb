@@ -1,15 +1,15 @@
 module Content
   class PagePolicy < ApplicationPolicy
     def sort?
-      user.super_admin? || user.account == record.account
+      user.account == record.account
     end
 
     def index?
-      user.super_admin? || user.admin?
+      user.admin?
     end
 
     def create?
-      user.super_admin? || user.admin?
+      user.admin?
     end
 
     def new?
@@ -17,7 +17,7 @@ module Content
     end
 
     def update?
-      user.super_admin? || user.account == record.account
+      user.account == record.account
     end
 
     def edit?
@@ -25,7 +25,7 @@ module Content
     end
 
     def destroy?
-      user.super_admin? || user.account == record.account
+      user.account == record.account
     end
   end
 end
