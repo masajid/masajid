@@ -90,7 +90,7 @@
         </li>
       <% end %>
 
-      <% if current_account && policy(current_account.configuration).update? %>
+      <% if current_user.admin? %>
         <li class='nav-item'>
           <%= link_to edit_configuration_path, class: 'nav-link' do %>
             <span data-feather='file-text'></span>
@@ -99,7 +99,7 @@
         </li>
       <% end %>
 
-      <% if current_account && policy(current_account.slider).update? %>
+      <% if current_user.admin? %>
         <li class='nav-item'>
           <%= link_to edit_slider_path, class: 'nav-link' do %>
             <span data-feather='file'></span>
@@ -108,7 +108,7 @@
         </li>
       <% end %>
 
-      <% if current_account %>
+      <% if current_user.admin? %>
         <li class='nav-item'>
           <%= link_to '/admin', class: 'nav-link' do %>
             <span data-feather='file'></span>
@@ -117,7 +117,7 @@
         </li>
       <% end %>
 
-      <% if current_account %>
+      <% if current_user.admin? %>
         <li class='nav-item'>
           <%= link_to '/admin', class: 'nav-link' do %>
             <span data-feather='file'></span>
@@ -126,7 +126,7 @@
         </li>
       <% end %>
 
-      <% if current_account && policy(current_account.social_network).update? %>
+      <% if current_user.admin? %>
         <li class='nav-item'>
           <%= link_to edit_social_network_path, class: 'nav-link' do %>
             <span data-feather='file'></span>
