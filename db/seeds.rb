@@ -1,7 +1,7 @@
-super_admin = Content::User.create(
-  email: 'admin@theopenmasjid.com',
-  password: 'theopenmasjid',
+# Create super admin user
+Content::User.create(
+  email: ENV['SUPER_ADMIN_EMAIL'],
+  password: ENV['SUPER_ADMIN_PASSWORD'],
   role: 'super_admin',
+  confirmed_at: Time.current,
 )
-
-super_admin.confirm

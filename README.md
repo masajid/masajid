@@ -15,7 +15,7 @@ other steps:
 
 hints:
 
-- please set environment variables before creating database 
+- please set environment variables before creating database and running seeds
 
 ### Deployment to heroku
 
