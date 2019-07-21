@@ -20,6 +20,12 @@ module Content
 
     delegate :meta_title, :meta_description, to: :seo_content, allow_nil: true
 
+    scope :leaves, -> do
+      joins("LEFT JOIN content_pages AS p ON p.ancestry = CAST(content_pages.id AS char(50)) OR p.ancestry = concat(content_pages.ancestry, '/', content_pages.id)")
+      .group('content_pages.id')
+      .having('COUNT(p.id) = 0')
+    end
+
     def pretty_name
       [ancestors.map(&:name), name].flatten.join(' -> ')
     end

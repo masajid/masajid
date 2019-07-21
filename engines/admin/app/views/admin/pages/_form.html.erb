@@ -5,7 +5,7 @@
     <div class='col-md-6'>
       <%= f.input :name %>
       <%= f.input :description %>
-      <%= f.input :ancestry, collection: policy_scope(Content::Page), label_method: :pretty_name, value_method: :id %>
+      <%= f.input :ancestry, collection: policy_scope(Content::Page).roots, label_method: :pretty_name, value_method: :id %>
       <%= f.input :permalink_part, hint: page.permalink if page.persisted? %>
     </div>
 
