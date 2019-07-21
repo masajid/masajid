@@ -18,7 +18,6 @@ gem 'image_processing', '~> 1.2'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 
-gem 'bootstrap', '~> 4.2.1'
 gem 'jquery-rails'
 gem 'chart-js-rails'
 gem 'flipper-ui'

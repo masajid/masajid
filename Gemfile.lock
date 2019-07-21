@@ -2,6 +2,7 @@ PATH
   remote: engines
   specs:
     admin (0.1.0)
+      bootstrap (~> 4.2.1)
       content
       haml-rails
       jquery-ui-rails
@@ -23,12 +24,16 @@ PATH
       simple_form
       stringex
     landing (0.1.0)
+      bootstrap (~> 4.2.1)
       content
     public (0.1.0)
+      bootstrap (~> 4.2.1)
       bootswatch
       content
       detectify
       font-awesome-rails
+      will_paginate (~> 3.1.7)
+      will_paginate-bootstrap4
 
 GEM
   remote: https://rubygems.org/
@@ -373,6 +378,9 @@ GEM
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
+    will_paginate (3.1.7)
+    will_paginate-bootstrap4 (0.2.2)
+      will_paginate (~> 3.0, >= 3.0.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.1.6)
@@ -383,7 +391,6 @@ PLATFORMS
 DEPENDENCIES
   admin!
   bootsnap (>= 1.4.2)
-  bootstrap (~> 4.2.1)
   byebug
   capybara (>= 2.15)
   chart-js-rails
