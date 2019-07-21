@@ -1,6 +1,6 @@
 <main role='main'>
   <div class='row'>
-    <div class='col-md-8 article-single'>
+    <div class='col-md-12 article-single'>
       <h2 class='article-title'>
         <%= @article.title %>
       </h2>
@@ -10,15 +10,12 @@
       </div>
 
       <div class='article-body'>
+        <!--<div class='embed-responsive embed-responsive-16by9 article-video'>
+          <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/M1M9n-wUhy0?rel=0' allowfullscreen></iframe>
+        </div>-->
+
         <%= sanitize @article.body %>
       </div>
-
-      <hr>
-      <div class='embed-responsive embed-responsive-16by9'>
-        <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/M1M9n-wUhy0?rel=0' allowfullscreen></iframe>
-      </div>
     </div>
-
-    <%= render 'public/shared/sidebar' %>
   </div>
 </main>
