@@ -38,3 +38,6 @@ yarn-debug.log*
 
 # Ignore environment variables
 .env
+
+# Ignore google cloud configuration file
+app.yaml

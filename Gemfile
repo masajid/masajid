@@ -8,9 +8,9 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5'
 
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.9'
 
 # gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
@@ -37,6 +37,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'letter_opener'
+  gem 'appengine', '~> 0.4.6'
 end
 
 group :test do
