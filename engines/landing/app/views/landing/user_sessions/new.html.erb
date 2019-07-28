@@ -1,8 +1,8 @@
-<%= form_for(resource, as: resource_name, url: create_new_session_path, html: { class: 'form-signin' }) do |f| %>
-  <div class='text-center mb-4'>
-    <h1 class='h3 mb-3 font-weight-normal'><%= t('devise.actions.login') %></h1>
-  </div>
+<h1 class='form-header'>
+  <%= t('devise.actions.login') %>
+</h1>
 
+<%= form_for(resource, as: resource_name, url: create_new_session_path, html: { class: 'form-signin' }) do |f| %>
   <div class='form-label-group'>
     <%= f.email_field :email, autofocus: true, required: true, autocomplete: 'email', placeholder: Content::User.human_attribute_name(:email), class: 'form-control' %>
     <%= f.label :email, Content::User.human_attribute_name(:email) %>
