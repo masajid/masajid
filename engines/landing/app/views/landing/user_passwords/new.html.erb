@@ -2,8 +2,8 @@
   <%= t('devise.passwords.new.forgot_your_password') %>
 </h1>
 
-<%= form_for(resource, as: resource_name, url: reset_password_path, html: { method: :post, class: 'form-signin' }) do |f| %>
-  <%= devise_error_messages! %>
+<%= form_for(resource, as: resource_name, url: reset_password_path, html: { method: :post, class: 'form-devise' }) do |f| %>
+  <%= render 'landing/shared/devise_error_messages', resource: resource %>
 
   <div class='form-label-group'>
     <%= f.email_field :email, autofocus: true, required: true, autocomplete: 'email', placeholder: Content::User.human_attribute_name(:email), class: 'form-control' %>

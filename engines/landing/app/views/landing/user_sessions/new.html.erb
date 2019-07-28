@@ -2,7 +2,7 @@
   <%= t('devise.actions.login') %>
 </h1>
 
-<%= form_for(resource, as: resource_name, url: create_new_session_path, html: { class: 'form-signin' }) do |f| %>
+<%= form_for(resource, as: resource_name, url: create_new_session_path, html: { class: 'form-devise' }) do |f| %>
   <div class='form-label-group'>
     <%= f.email_field :email, autofocus: true, required: true, autocomplete: 'email', placeholder: Content::User.human_attribute_name(:email), class: 'form-control' %>
     <%= f.label :email, Content::User.human_attribute_name(:email) %>
