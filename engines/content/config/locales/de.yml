@@ -24,6 +24,9 @@ de:
         one: Slider
       content/social_network:
         one: Social media
+      content/subscriber:
+        one: Subscriber
+        other: Subscribers
       content/volunteer:
         one: Volunteer
         other: Volunteers
@@ -86,6 +89,9 @@ de:
         photo: Photo
         link: Link
         link_text: Link Text
+      content/subscriber:
+        email: Email Address
+        created_at: Create Date
       content/user:
         email: Email address
         password: Password

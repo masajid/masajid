@@ -30,6 +30,12 @@
         path: volunteers_path,
         active: request.path.starts_with?('/admin/volunteers'),
       ) if policy(Content::Volunteer).index? %>
+
+      <%= nav_item(
+        text: plural_resource_name(Content::Subscriber),
+        path: subscribers_path,
+        active: request.path.starts_with?('/admin/subscribers'),
+      ) if policy(Content::Subscriber).index? %>
     </ul>
 
     <h6 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted'>

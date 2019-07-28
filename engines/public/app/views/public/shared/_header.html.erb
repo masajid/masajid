@@ -19,7 +19,7 @@
       <a class='text-muted' href='#'>
         <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='mx-3' role='img' viewBox='0 0 24 24' focusable='false'><title>Search</title><circle cx='10.5' cy='10.5' r='7.5'/><path d='M21 21l-5.2-5.2'/></svg>
       </a>
-      <a class='btn btn-sm btn-outline-secondary' href='#'>Subscribe</a>
+      <button type='button' class='btn btn-sm btn-outline-secondary' data-toggle='modal' data-target='#newsletterModalCenter'>Subscribe</button>
     </div>
   </div>
 </header>
@@ -37,8 +37,8 @@
 
           <% if children.present? %>
             <li class='nav-item dropdown'>
-              <a class='nav-link dropdown-toggle' href='#' id="dropdown<%= menu_item.id %>" data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'><%= menu_item.name %></a>
-              <div class='dropdown-menu' aria-labelledby="dropdown<%= menu_item.id %>">
+              <a class='nav-link dropdown-toggle' href='#' id='dropdown<%= menu_item.id %>' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'><%= menu_item.name %></a>
+              <div class='dropdown-menu' aria-labelledby='dropdown<%= menu_item.id %>'>
                 <% children.each do |child_item| %>
                   <%= link_to child_item.name, page_url(child_item.permalink), class: 'dropdown-item' %>
                 <% end %>
