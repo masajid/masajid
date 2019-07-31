@@ -4,14 +4,14 @@
   <div class='row'>
     <div class='col-md-6'>
       <%= f.input :title %>
-      <%= f.input :slug if article.persisted? %>
+      <%= f.input :slug, hint: t('simple_form.hints.content/article.slug_html') if article.persisted? %>
       <%= f.input :summary %>
       <%= f.input :published_at %>
       <%= f.input :page_ids, as: :check_boxes, collection: options_for_pages %>
     </div>
 
     <div class='col-md-6'>
-      <%= render 'admin/seo_contents/form', f: f %>
+      <%= render 'admin/seo_contents/form', f: f, model_name: :article %>
     </div>
   </div>
 
