@@ -1,0 +1,12 @@
+<% if resource.errors.any? %>
+  <div class='alert alert-danger'>
+    <h2>
+      <%= t('simple_form.error_notification.default_message') %>
+    </h2>
+    <ul>
+      <% resource.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

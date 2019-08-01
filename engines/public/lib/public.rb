@@ -1,7 +1,10 @@
 require 'content'
 require 'detectify'
-require 'font-awesome-rails'
+require 'bootstrap'
+require 'will_paginate'
+require 'will_paginate-bootstrap4'
 require 'bootswatch'
+require 'font-awesome-rails'
 
 module Public
   require 'public/engine'

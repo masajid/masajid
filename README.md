@@ -1,19 +1,115 @@
 # README
 
-### Setup
+## Setup
 
 ```
-# git clone .../theopenmasjid.git & cd theopenmasjid
-# bundle install
-# rails db:create db:migrate db:seed
-# rails content_places:import [only=countries,regions,cities] # for setup countries is enough
+$ git clone .../theopenmasjid.git & cd theopenmasjid
+$ bundle install
+$ rails db:create db:migrate db:seed
+$ rails content_places:import [only=countries,regions,cities] # for setup countries is enough
 ```
 
 other steps:
 
 - rename `.env.example` to `.env` and change the environment variables.
 
-### Deployment to heroku
+hints:
+
+- please set environment variables before creating database and running seeds
+
+## Deployment to gcloud
+
+### Install gcloud SDK
+
+https://cloud.google.com/sdk/install
+
+### Init gcloud
+
+After installing the SDK, start a new terminal to update the PATH variable. Then execut the folowing command:
+
+```bash
+$ gcloud init
+```
+Then copy `app.yaml.example` to `app.yaml` file and edit `app.yaml` to add the env variables and `cloud_sql_instances`
+
+Finally, deploy the app:
+
+```
+gcloud app deploy app.yaml
+```
+
+## Setting Up a new project
+
+### Create an SQL instance
+
+```bash
+gcloud sql instances create postgres-instance --database-version POSTGRES_9_6 --tier db-f1-micro
+gcloud sql instances list
+gcloud sql instances describe postgres-instance
+gcloud sql users list --instance=postgres-instance
+```
+### Configure Cloud SQL
+
+Edit file `config/database.yml` and add the following config:
+
+```yml
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  username: [YOUR_POSTGRES_USERNAME]
+  password: [YOUR_POSTGRES_PASSWORD]
+  database: [YOUR_POSTGRES_DATABASE]
+  host: [YOUR_POSTGRES_HOST]
+```
+To get connection name: 
+
+```
+gcloud sql instances describe postgres-instance | grep connectionName
+```
+Then edit `app.yml` and add the cloud sql instance:
+
+```yml
+beta_settings:
+  cloud_sql_instances: [YOUR_INSTANCE_CONNECTION_NAME]
+```
+Next, grant access to the cloudbuild service account to run production database migrations with the appengine gem.
+
+```
+gcloud projects add-iam-policy-binding [YOUR-PROJECT-ID] \
+  --member=serviceAccount:[PROJECT_NUMBER]@cloudbuild.gserviceaccount.com \
+  --role=roles/editor
+```
+To get the project id and number, run:
+```
+gcloud projects list
+```
+
+Enable Cloud SQL Admin API: https://console.cloud.google.com/apis/api/sqladmin.googleapis.com/overview
+
+Migrate the Cloud SQL for PostgreSQL cat_list_production database in production.
+```
+bundle exec rake appengine:exec -- bundle exec rake db:migrate
+```
+Finally, direct traffic to your newly deployed version by using the following command:
+
+```
+gcloud app services set-traffic default --splits [YOUR-VERSION]=1
+```
+https://cloud.google.com/ruby/rails/using-cloudsql-postgres
+
+### Set up Cloud SQL Proxy
+
+```bash
+wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64
+mv cloud_sql_proxy.linux.amd64 cloud_sql_proxy
+chmod +x cloud_sql_proxy
+sudo mkdir /cloudsql
+sudo chmod 0777 /cloudsql
+```
+
+## Deployment to heroku
 
 ```
 # heroku login

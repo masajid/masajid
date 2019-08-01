@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'jquery-ui-rails' # used by sortable_tree_rails
   s.add_dependency 'sortable_tree_rails'
   s.add_dependency 'trix-gem'
+  s.add_dependency 'bootstrap', '~> 4.2.1'
 end

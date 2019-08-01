@@ -1,9 +1,10 @@
-<%= form_for(resource, as: resource_name, url: update_password_path, html: { method: :put, class: 'form-signin' }) do |f| %>
-  <div class='text-center mb-4'>
-    <h1 class='h3 mb-3 font-weight-normal'><%= t('devise.passwords.edit.change_your_password') %></h1>
-  </div>
+<h1 class='form-header'>
+  <%= t('devise.passwords.edit.change_your_password') %>
+</h1>
 
-  <%= devise_error_messages! %>
+<%= form_for(resource, as: resource_name, url: update_password_path, html: { method: :put, class: 'form-devise' }) do |f| %>
+  <%= render 'landing/shared/devise_error_messages', resource: resource %>
+
   <%= f.hidden_field :reset_password_token %>
 
   <div class='form-label-group'>

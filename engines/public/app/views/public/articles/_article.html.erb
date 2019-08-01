@@ -1,0 +1,17 @@
+<div class='article'>
+  <h2 class='article-title'>
+    <%= article.title %>
+  </h2>
+
+  <div class='article-meta'>
+    <%= article.published_at.to_date.to_formatted_s(:long) %>
+  </div>
+
+  <div class='article-body'>
+    <!--<div class='embed-responsive embed-responsive-16by9 article-video'>
+      <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/M1M9n-wUhy0?rel=0' allowfullscreen></iframe>
+    </div>-->
+
+    <%= sanitize article.body %>
+  </div>
+</div>

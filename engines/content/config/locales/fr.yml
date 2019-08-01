@@ -24,6 +24,9 @@ fr:
         one: Slider
       content/social_network:
         one: Social media
+      content/subscriber:
+        one: Subscriber
+        other: Subscribers
       content/volunteer:
         one: Volunteer
         other: Volunteers
@@ -53,9 +56,9 @@ fr:
         logo: Logo
         about_us: About us
         theme: Theme
-        supported_locales: Supported Languages (Site)
-        default_locale: Default Language (Site)
-        admin_locale: Language (Administration)
+        supported_locales: Supported Languages
+        default_locale: Default Language
+        admin_locale: Administration Language
       content/country:
         name: Country Name
       content/page:
@@ -86,6 +89,9 @@ fr:
         photo: Photo
         link: Link
         link_text: Link Text
+      content/subscriber:
+        email: Email Address
+        created_at: Create Date
       content/user:
         email: Email address
         password: Password
@@ -237,6 +243,9 @@ fr:
       login: Sign in
       logout: Sign out
     confirmations:
+      new:
+        did_not_receive_confirmation_instructions: Didn't receive confirmation instructions?
+        resend_confirmation_instructions: Resend confirmation instructions
       confirmed: "Your email address has been successfully confirmed."
       send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
@@ -315,3 +324,18 @@ fr:
       mark: '*'
     error_notification:
       default_message: 'Please review the problems below:'
+    hints:
+      content/configuration:
+        default_locale: Default language of your site.
+        supported_locales: A list of available languages that user can choose in the site.
+        meta_title_html: The content for the homepage's HTML <mark>&lt;title&gt;</mark> tag, which is used by search engines.
+        meta_description: The summary text that accompanies your homepage link in search engine results pages (SERPs).
+      content/article:
+        slug_html: |
+          A slug is a part of a URL that identifies a page using human-readable words, and it is used for SEO purposes.
+          For example, in the web address <mark>https://example.com/article/the-islam-way</mark>, the slug would be the <mark>the-islam-way part</mark>.
+        meta_title_html: The content to the article page's HTML <mark>&lt;title&gt;</mark> tag, which is used by search engines.
+        meta_description: The summary text that accompanies your article page in search engine results pages (SERPs).
+      content/page:
+        meta_title_html: The content for the page's HTML <mark>&lt;title&gt;</mark> tag, which is used by search engines.
+        meta_description: The summary text that accompanies your page in search engine results pages (SERPs).

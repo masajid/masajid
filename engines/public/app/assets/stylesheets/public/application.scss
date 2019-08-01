@@ -5,6 +5,7 @@
 @import "footer";
 
 @import "home";
+@import "pages";
 @import "articles";
 @import "volunteers";
 
@@ -26,13 +27,4 @@ main {
   .collection_check_boxes {
     @extend .custom-control-label;
   }
-}
-
-/* Pagination */
-.blog-pagination {
-  margin-bottom: 4rem;
-}
-
-.blog-pagination > .btn {
-  border-radius: 2rem;
 }

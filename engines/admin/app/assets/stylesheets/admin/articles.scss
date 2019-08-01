@@ -1,17 +1,8 @@
-trix-editor {
-  margin-bottom: 20px;
-
-  .attachment--preview {
-    margin: 0.6em 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .attachment {
-    display: inline-block;
-    position: relative;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
+.new_article,
+.edit_article {
+  .article_page_ids {
+    legend {
+      display: none;
+    }
   }
 }

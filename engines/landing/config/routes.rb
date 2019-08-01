@@ -22,7 +22,8 @@ Landing::Engine.routes.draw do
       post '/password/recover', to: 'user_passwords#create', as: :reset_password
       get '/password/change', to: 'user_passwords#edit', as: :edit_password
       put '/password/change', to: 'user_passwords#update', as: :update_password
-      #get '/confirm', to: 'user_confirmations#show', as: :confirmation
+      get '/confirm', to: 'user_confirmations#new', as: :confirmation
+      post '/confirm', to: 'user_confirmations#create', as: :resend_confirmation
     end
   end
 end

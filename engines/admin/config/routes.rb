@@ -14,6 +14,7 @@ Admin::Engine.routes.draw do
   end
   resources :articles, except: :show
   resources :volunteers, only: :index
+  resources :subscribers, only: :index
   resource :slider, only: %i[edit update]
   resource :social_network, only: %i[edit update]
   resource :configuration, only: %i[edit update]
