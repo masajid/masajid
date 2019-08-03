@@ -17,6 +17,12 @@
 //= require bootstrap
 
 $(function() {
+  'use strict'
+
+  $('[data-toggle="offcanvas"]').on('click', function () {
+    $('.offcanvas-collapse').toggleClass('open')
+  })
+
   $('.locale_selector select').change(function() {
     this.form.submit();
   });

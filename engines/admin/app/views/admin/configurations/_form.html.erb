@@ -19,7 +19,7 @@
 
         <div class='logo mb-3'>
           <%= configuration_form.input :logo %>
-          <%= image_tag main_app.url_for(current_account.configuration.logo.variant(resize: '200x')) if current_account.configuration.logo.attached? %>
+          <%= image_tag main_app.url_for(current_account.logo.variant(resize: '200x')) if current_account.logo.attached? %>
         </div>
 
         <div class='about-us'>
