@@ -19,6 +19,7 @@ entrypoint: bundle exec bundle exec rackup --port $PORT
 
 env_variables:
   SECRET_KEY_BASE: give-me-super-secret-token
+  PROJECT_HOSTNAME: masajid.co
   POSTGRES_USER: give-me-valid-user
   POSTGRES_PASSWORD: give-me-valid-password
   POSTGRES_DATABASE: give-me-valid-database-name
