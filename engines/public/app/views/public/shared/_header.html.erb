@@ -1,4 +1,4 @@
-<nav class="d-xl-none mb-3 navbar navbar-expand-md <%= current_account.theme == 'default' ? 'navbar-light bg-light' : 'navbar-dark bg-primary' %> rounded fixed-top">
+<nav class="d-md-none mb-3 navbar navbar-expand-md <%= current_account.theme == 'default' ? 'navbar-light bg-light' : 'navbar-dark bg-primary' %> rounded fixed-top">
   <%= link_to current_account.mosque, root_path, class: 'navbar-brand' %>
   <button class='navbar-toggler p-0 border-0' type='button' data-toggle='offcanvas'>
     <span class='navbar-toggler-icon'></span>
@@ -47,7 +47,7 @@
   </div>
 </nav>
 
-<header class='d-none d-xl-block py-3'>
+<header class='d-none d-md-block py-3'>
   <div class='row flex-nowrap justify-content-between align-items-center'>
     <div class='col-4 pt-1'>
       <%= link_to Content::Configuration.human_attribute_name(:about_us), about_us_path, class: 'text-muted about-us' %>
@@ -74,7 +74,7 @@
 </header>
 
 <% if menu_items.any? %>
-  <nav class="d-none d-xl-block mb-3 navbar navbar-expand-lg <%= current_account.theme == 'default' ? 'navbar-light bg-light' : 'navbar-dark bg-primary' %> rounded">
+  <nav class="d-none d-md-block mb-3 navbar navbar-expand-lg <%= current_account.theme == 'default' ? 'navbar-light bg-light' : 'navbar-dark bg-primary' %> rounded">
     <button class='navbar-toggler collapsed' type='button' data-toggle='collapse' data-target='#menu' aria-controls='menu' aria-expanded='false' aria-label='Toggle navigation'>
       <span class='navbar-toggler-icon'></span>
     </button>
