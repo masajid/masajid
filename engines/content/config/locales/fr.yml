@@ -55,6 +55,7 @@ fr:
       content/configuration:
         logo: Logo
         about_us: About us
+        mawaqit_link: Link Mawakit
         theme: Theme
         supported_locales: Supported Languages
         default_locale: Default Language

@@ -21,7 +21,7 @@ module Content
 
     accepts_nested_attributes_for :owner, :address, :seo_content, :configuration
 
-    delegate :theme, :logo, :about_us, :supported_locales, :default_locale, :admin_locale, to: :configuration
+    delegate :theme, :logo, :about_us, :mawaqit_link, :supported_locales, :default_locale, :admin_locale, to: :configuration
     delegate :meta_title, :meta_description, to: :seo_content, allow_nil: true
 
     after_create -> do
