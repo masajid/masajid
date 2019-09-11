@@ -1,5 +1,9 @@
 # README
 
+Masajid is a non-profit project dedicated to mosques that are willing to create their own website.
+
+Visit https://masajid.world
+
 ## Requirements
 
 - Postgres
