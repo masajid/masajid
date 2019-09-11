@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.version     = Public::VERSION
   spec.authors     = ['Gharbi Mohammed']
   spec.email       = ['mgharbik@gmail.com']
-  spec.homepage    = 'https://theopenmasjid.herokuapp.com/'
+  spec.homepage    = 'https://masajid.world'
   spec.summary     = 'Public application'
   spec.description = spec.summary
   spec.license     = 'MIT'

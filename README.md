@@ -3,7 +3,7 @@
 ## Setup
 
 ```
-$ git clone .../theopenmasjid.git & cd theopenmasjid
+$ git clone .../masajid.git & cd masajid
 $ bundle install
 $ rails db:create db:migrate db:seed
 $ rails content_places:import [only=countries,regions,cities] # for setup countries is enough
@@ -127,7 +127,7 @@ sudo chmod 0777 /cloudsql
 # heroku config:set ADMIN_SENDER_EMAIL=admin@gmail.com
 # figaro heroku:set -e production (set all variables once)
 
-# heroku apps:rename theopenmasjid
+# heroku apps:rename masajid
 # heroku open
 
 # heroko logs --tail

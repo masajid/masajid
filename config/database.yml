@@ -9,11 +9,11 @@ default: &default
 
 development:
   <<: *default
-  database: theopenmasjid_development
+  database: masajid_development
 
 test:
   <<: *default
-  database: theopenmasjid_test
+  database: masajid_test
 
 production:
   adapter: postgresql

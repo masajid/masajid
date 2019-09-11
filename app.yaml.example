@@ -24,7 +24,7 @@ env_variables:
   POSTGRES_PASSWORD: give-me-valid-password
   POSTGRES_DATABASE: give-me-valid-database-name
   POSTGRES_HOST: give-me-valid-host
-  SUPER_ADMIN_EMAIL: admin@theopenmasjid.com
+  SUPER_ADMIN_EMAIL: admin@masajid.com
   SUPER_ADMIN_PASSWORD: give-me-super-secure-password
   ADMIN_SENDER_EMAIL: admin@gmail.com # please make sure it is a valid email otherwise emails won't be sent
   ADMIN_NOTIFICATION_EMAILS: admin@gmail.com,admin_2@gmail.com # please make sure they are valid emails otherwise notification emails won't be sent

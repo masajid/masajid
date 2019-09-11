@@ -132,19 +132,19 @@ de:
   content:
     account_mailer:
       accept_email:
-        subject: The open Masjid - Your account was accepted
+        subject: Masajid World - Your account was accepted
         header: Hello %{mosque}!
         body: Congratulations!!! Your account was accepted by our admins. Our team is still working on the first version of the application, we will inform you when it is done then you can start publishing your articles. If you have any question please don't hesitate get in touch with us! Thanks for your undestanding!
       decline_email:
-        subject: The open Masjid - Your account was declined
+        subject: Masajid World - Your account was declined
         header: Hello %{mosque}!
         body: We are sorry to inform you that your email was declined by our admins because it seems to be not real. If you disagree or you have any concern please get in touch with us! Thanks for your undestanding!
       welcome_email:
-        subject: Welcome to The open Masjid
+        subject: Welcome to Masajid World
         header: Welcome %{mosque}!
-        body: You are welcome at the open masjid. Once you confirm your account, we will got in touch with you as soon as possible.
+        body: You are welcome at Masajid World. Once you confirm your account, we will got in touch with you as soon as possible.
       notify_creation_email:
-        subject: The open Masjid - new account was created
+        subject: Masajid World - new account was created
         header: Hi,
         body: A new account was created
         link: See details
@@ -194,11 +194,11 @@ de:
   landing:
     admin_panel: Admin panel
     create_account: Create account
-    site_name: The Open Masjid
+    site_name: Masajid World
     slider:
       first:
         headline: Your masjid online.
-        content: You own a masjid and you don't have a website, The Open Masjid project will help you.
+        content: You own a masjid and you don't have a website, Masajid World will help you.
       second:
         headline: Allah says in surat Tawba
         content_html: |

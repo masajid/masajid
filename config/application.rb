@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 class ApplicationController < ActionController::Base
 end
 
-module WorldMosquesApp
+module Masajid
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
