@@ -1,21 +1,33 @@
 # README
 
+## Requirements
+
+- Postgres
+- Redis and Sidekiq (Optional)
+- Ruby 2.5.0 or newer (RVM is recommended)
+
 ## Setup
 
 ```
-$ git clone .../masajid.git & cd masajid
+$ git clone git@github.com:mgharbik/masajid.git
+$ cd masajid
 $ bundle install
 $ rails db:create db:migrate db:seed
-$ rails content_places:import [only=countries,regions,cities] # for setup countries is enough
+$ rails content_places:import only=countries
+$ rails s
 ```
 
 other steps:
 
 - rename `.env.example` to `.env` and change the environment variables.
+- add to `/etc/hosts` file
+```
+127.0.0.1       masajid.local
+127.0.0.1       al-nour.masajid.local
+```
 
-hints:
-
-- please set environment variables before creating database and running seeds
+- visit `http://masajid.local:3000/admin`, credentials: admin@masajid.com/masajid
+- visit `http://al-nour.masajid.local:3000`
 
 ## Deployment to gcloud
 
