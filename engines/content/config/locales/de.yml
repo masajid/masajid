@@ -139,10 +139,6 @@ de:
         subject: Masajid World - Your account was declined
         header: Hello %{mosque}!
         body: We are sorry to inform you that your email was declined by our admins because it seems to be not real. If you disagree or you have any concern please get in touch with us! Thanks for your undestanding!
-      welcome_email:
-        subject: Welcome to Masajid World
-        header: Welcome %{mosque}!
-        body: You are welcome at Masajid World. Once you confirm your account, we will got in touch with you as soon as possible.
       notify_creation_email:
         subject: Masajid World - new account was created
         header: Hi,
@@ -260,7 +256,12 @@ de:
       unconfirmed: "You have to confirm your email address before continuing."
     mailer:
       confirmation_instructions:
-        subject: "Confirmation instructions"
+        subject: Welcome to Masajid
+        header: Hi %{mosque}!
+        body: |
+          You are welcome to Masajid. We need you to confirm your account email through the link below.
+          Then we will got in touch with you as soon as possible in order to authorize your account.
+        cta_text: Confirm my account
       reset_password_instructions:
         subject: "Reset password instructions"
       unlock_instructions:
