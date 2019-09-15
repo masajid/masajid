@@ -131,19 +131,26 @@ en:
               geocoding_failed: geocoding failed
   content:
     account_mailer:
-      accept_email:
-        subject: Masajid World - Your account was accepted
+      accept_entry:
+        subject: Masajid - Your account was accepted
+        header: Hi %{mosque}!
+        body_html: |
+          <p>Congratulations!!! Your account was accepted by our admins.</p>
+          <p>You need to enter a password through the link below, then you can start publishing your articles and customizing your site.</p>
+          <p>If you have any question or feedback please don't hesitate to get in touch with us!</p>
+        cta_text: Enter password
+      decline_entry:
+        subject: Masajid - Your account was declined
         header: Hello %{mosque}!
-        body: Congratulations!!! Your account was accepted by our admins. Our team is still working on the first version of the application, we will inform you when it is done then you can start publishing your articles. If you have any question please don't hesitate get in touch with us! Thanks for your undestanding!
-      decline_email:
-        subject: Masajid World - Your account was declined
-        header: Hello %{mosque}!
-        body: We are sorry to inform you that your email was declined by our admins because it seems to be not real. If you disagree or you have any concern please get in touch with us! Thanks for your undestanding!
-      notify_creation_email:
-        subject: Masajid World - new account was created
-        header: Hi,
-        body: A new account was created
-        link: See details
+        body: |
+          <p>We are sorry to inform you that your account was declined by our admins because it seems to be not real.</p>
+          <p>If you disagree or you have any concern please get in touch with us!</p>
+          <p>Thanks for your undestanding!</p>
+      notify_creation_new_entry:
+        subject: Masajid - New account was created
+        header: Hi Admin,
+        body: A new account was created.
+        cta_text: See details
   admin:
     articles:
       new:

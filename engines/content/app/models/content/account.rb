@@ -25,7 +25,7 @@ module Content
     delegate :meta_title, :meta_description, to: :seo_content, allow_nil: true
 
     after_create -> do
-      AccountMailer.notify_creation_email(self).deliver_later
+      AccountMailer.notify_creation_new_entry(self).deliver_later
     end
 
     private
