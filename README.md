@@ -2,7 +2,7 @@
 
 Masajid is a non-profit project dedicated to mosques that are willing to create their own website.
 
-Visit https://masajid.world
+Website: https://masajid.world
 
 ## Requirements
 
@@ -14,7 +14,7 @@ Visit https://masajid.world
 
 ```
 $ git clone git@github.com:mgharbik/masajid.git
-$ cd masajid
+$ cd masajid/web_container
 $ bundle install
 $ rails db:create db:migrate db:seed
 $ rails content_places:import only=countries
@@ -30,7 +30,7 @@ other steps:
 127.0.0.1       al-nour.masajid.local
 ```
 
-- visit `http://masajid.local:3000/admin`, credentials: admin@masajid.com/masajid
+- visit `http://masajid.local:3000/admin`, credentials: `admin@masajid.com`/`masajid`
 - visit `http://al-nour.masajid.local:3000`
 
 ## Deployment to gcloud

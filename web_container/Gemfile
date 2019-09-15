@@ -47,7 +47,7 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-path './engines' do
+path '../engines' do
   gem 'content'
   gem 'landing'
   gem 'admin'
