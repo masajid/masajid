@@ -1,0 +1,10 @@
+<% content_for :page_title do %>
+  <%= @article.title %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= link_to t('shared.actions.back_to_list'), articles_path, class: 'btn btn-secondary btn-sm' %>
+<% end %>
+
+<%= render 'form', article: @article %>
+

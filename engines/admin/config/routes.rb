@@ -9,9 +9,19 @@ Admin::Engine.routes.draw do
   resources :cities, except: :show
   resources :regions, except: :show
   resources :countries, except: :show
+  resources :pages, except: :show do
+    post :sort, on: :collection
+  end
+  resources :articles, except: :show
+  resources :volunteers, only: :index
+  resources :subscribers, only: :index
+  resource :slider, only: %i[edit update]
+  resource :social_network, only: %i[edit update]
+  resource :configuration, only: %i[edit update]
 
   namespace :api do
     resources :regions, only: :index
     resources :cities, only: :index
+    resources :photos, only: :create
   end
 end

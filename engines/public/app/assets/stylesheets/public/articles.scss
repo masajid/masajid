@@ -1,0 +1,47 @@
+// For pages, articles, and home
+.article {
+  .article-title {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+  }
+
+  .article-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
+  }
+
+  .article-body {
+    blockquote {
+      margin-left: 40px;
+      margin-right: 40px;
+      font-family: Georgia;
+      font-size: 25px;
+      color: grey;
+    }
+
+    // Maybe it is not good for small uploaded pictures, please consider to find another solution if needed!
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .article-video {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}

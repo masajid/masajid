@@ -1,18 +1,41 @@
 <nav class='col-md-2 d-none d-md-block bg-light sidebar'>
   <div class='sidebar-sticky'>
     <ul class='nav flex-column'>
-      <li class='nav-item'>
-        <%= link_to root_path, class: 'nav-link active' do %>
-          <span data-feather='home'></span>
-          Dashboards <span class='sr-only'>(current)</span>
-        <% end if policy([:content, :dashboard]).index? %>
-      </li>
-      <li class='nav-item'>
-        <%= link_to accounts_path, class: 'nav-link' do %>
-          <span data-feather='file'></span>
-          Accounts
-        <% end %>
-      </li>
+      <%= nav_item(
+        text: 'Dashboards*',
+        path: root_path,
+        active: request.path == '/admin/',
+      ) if policy([:content, :dashboard]).index? %>
+
+      <%= nav_item(
+        text: plural_resource_name(Content::Account),
+        path: accounts_path,
+        active: request.path.starts_with?('/admin/accounts'),
+      ) if policy(Content::Account).index? %>
+
+      <%= nav_item(
+        text: plural_resource_name(Content::Page),
+        path: pages_path,
+        active: request.path.starts_with?('/admin/pages'),
+      ) if policy(Content::Page).index? %>
+
+      <%= nav_item(
+        text: plural_resource_name(Content::Article),
+        path: articles_path,
+        active: request.path.starts_with?('/admin/articles'),
+      ) if policy(Content::Article).index? %>
+
+      <%= nav_item(
+        text: plural_resource_name(Content::Volunteer),
+        path: volunteers_path,
+        active: request.path.starts_with?('/admin/volunteers'),
+      ) if policy(Content::Volunteer).index? %>
+
+      <%= nav_item(
+        text: plural_resource_name(Content::Subscriber),
+        path: subscribers_path,
+        active: request.path.starts_with?('/admin/subscribers'),
+      ) if policy(Content::Subscriber).index? %>
     </ul>
 
     <h6 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted'>
@@ -22,24 +45,43 @@
       </a>
     </h6>
     <ul class='nav flex-column mb-2'>
-      <li class='nav-item'>
-        <%= link_to countries_path, class: 'nav-link' do %>
-          <span data-feather='file-text'></span>
-          Countries
-        <% end if policy(Content::Country).index? %>
-      </li>
-      <li class='nav-item'>
-        <%= link_to regions_path, class: 'nav-link' do %>
-          <span data-feather='file-text'></span>
-          Regions
-        <% end if policy(Content::Region).index? %>
-      </li>
-      <li class='nav-item'>
-        <%= link_to cities_path, class: 'nav-link' do %>
-          <span data-feather='file-text'></span>
-          Cities
-        <% end if policy(Content::City).index? %>
-      </li>
+      <%= nav_item(
+        text: plural_resource_name(Content::Country),
+        path: countries_path,
+        active: request.path.starts_with?('/admin/countries'),
+      ) if policy(Content::Country).index? %>
+
+      <%= nav_item(
+        text: plural_resource_name(Content::Region),
+        path: regions_path,
+        active: request.path.starts_with?('/admin/regions'),
+      ) if policy(Content::Region).index? %>
+
+      <%= nav_item(
+        text: plural_resource_name(Content::City),
+        path: cities_path,
+        active: request.path.starts_with?('/admin/cities'),
+      ) if policy(Content::City).index? %>
+
+      <% if current_user.admin? %>
+        <%= nav_item(
+          text: t('admin.tabs.general'),
+          path: edit_configuration_path,
+          active: request.path.starts_with?('/admin/configuration/edit'),
+        ) %>
+
+        <%= nav_item(
+          text: Content::Slider.model_name.human,
+          path: edit_slider_path,
+          active: request.path.starts_with?('/admin/slider/edit'),
+        ) %>
+
+        <%= nav_item(
+          text: Content::SocialNetwork.model_name.human,
+          path: edit_social_network_path,
+          active: request.path.starts_with?('/admin/social_network/edit'),
+        ) %>
+      <% end %>
     </ul>
   </div>
 </nav>

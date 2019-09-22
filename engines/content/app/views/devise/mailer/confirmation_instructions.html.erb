@@ -1,0 +1,11 @@
+<p>
+  <%= t('devise.mailer.confirmation_instructions.header', mosque: @account.mosque) %>
+</p>
+
+<p>
+  <%= t('devise.mailer.confirmation_instructions.body') %>
+</p>
+
+<p>
+  <%= link_to t('devise.mailer.confirmation_instructions.cta_text'), confirmation_url(@resource, confirmation_token: @token) %>
+</p>

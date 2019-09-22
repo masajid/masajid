@@ -1,0 +1,26 @@
+@import "bootstrap";
+
+@import "devise";
+@import "home";
+@import "accounts";
+@import "volunteers";
+
+body {
+  color: #5a5a5a;
+}
+
+.divider-line {
+  margin: 5rem 0;
+}
+
+.content {
+  margin-top: 80px;
+
+  .form-header {
+    text-align: center;
+  }
+}
+
+.alert {
+  margin-top: 55px;
+}

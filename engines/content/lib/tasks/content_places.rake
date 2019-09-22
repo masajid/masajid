@@ -6,9 +6,11 @@ namespace :content_places do
     puts 'Please wait! this will take some minutes ........'
     start_time = Time.now
 
-    Content::Country.copy_from("#{Rails.root}/data/places/countries.txt")
-    Content::Region.copy_from("#{Rails.root}/data/places/regions.txt")
-    Content::City.copy_from("#{Rails.root}/data/places/cities.txt")
+    tags = ENV['only']&.split(',') || []
+
+    Content::Country.copy_from("#{Content::Engine.root}/data/places/countries.txt") if tags.include?('countries')
+    Content::Region.copy_from("#{Content::Engine.root}/data/places/regions.txt") if tags.include?('regions')
+    Content::City.copy_from("#{Content::Engine.root}/data/places/cities.txt") if tags.include?('cities')
 
     end_time = Time.now
     total_time = distance_of_time_in_words(end_time - start_time)

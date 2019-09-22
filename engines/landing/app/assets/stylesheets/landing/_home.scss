@@ -1,0 +1,58 @@
+.carousel {
+  margin-bottom: 4rem;
+
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+
+  .carousel-item {
+    height: 32rem;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 32rem;
+    }
+  }
+}
+
+.how-to-use {
+  h1 {
+    margin-bottom: 2em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .step {
+    text-align: center;
+
+    img,
+    svg {
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-weight: 400;
+    }
+
+    p {
+      margin-right: .75rem;
+      margin-left: .75rem;
+    }
+  }
+}
+
+#map {
+  height: 500px;
+}
+
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+}

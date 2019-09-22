@@ -8,7 +8,8 @@ module Content
           begin
             block.call
           rescue Redis::CannotConnectError, Redis::TimeoutError => exception
-            Core::ExceptionHandler.capture(exception.to_s)
+            puts "Redis error: #{exception.to_s}"
+
             job.perform_now
           end
         end

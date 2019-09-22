@@ -1,0 +1,28 @@
+<div class='container' id='map'></div>
+
+<script type='text/javascript'>
+  mapboxgl.accessToken = '<%= ENV['MAPBOX_ACCESS_TOKEN'] %>';
+
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [10.015301, 53.554045],
+    zoom: 3,
+  });
+
+  map.addControl(new mapboxgl.NavigationControl());
+
+  <% if @accounts.any? %>
+    map.fitBounds(<%= @bounds %>);
+
+    <% @accounts.each do |account| %>
+      var popup = new mapboxgl.Popup({ offset: 25 })
+        .setHTML('<%= account.mosque %>' + '<br>' + '<%= account.address %>');
+
+      new mapboxgl.Marker()
+        .setLngLat([<%= account.address.longitude %>, <%= account.address.latitude %>])
+        .setPopup(popup)
+        .addTo(map);
+    <% end %>
+  <% end %>
+</script>

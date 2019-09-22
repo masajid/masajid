@@ -1,0 +1,13 @@
+<div class='mt-2'>
+  <% if controller_name != 'user_sessions' %>
+    <%= link_to t('devise.actions.login'), login_path %><br />
+  <% end %>
+
+  <% if devise_mapping.recoverable? && controller_name != 'user_passwords' %>
+    <%= link_to t('devise.passwords.new.forgot_your_password'), recover_password_path %><br />
+  <% end %>
+
+  <%- if devise_mapping.confirmable? && controller_name != 'user_confirmations' %>
+    <%= link_to t('devise.confirmations.new.did_not_receive_confirmation_instructions'), confirmation_path %><br />
+  <% end %>
+</div>

@@ -27,13 +27,13 @@ module Admin
 
     def accept
       @account.accepted!
-      Content::AccountMailer.accept_email(@account).deliver_later
+      Content::AccountMailer.accept_entry(@account, generate_raw_for_edit_password_url).deliver_later
       redirect_to accounts_url, notice: 'Account was successfully accepted.'
     end
 
     def decline
       @account.declined!
-      Content::AccountMailer.decline_email(@account).deliver_later
+      Content::AccountMailer.decline_entry(@account).deliver_later
       redirect_to accounts_url, notice: 'Account was successfully declined.'
     end
 
@@ -50,6 +50,18 @@ module Admin
           :responsable,
           address_attributes: %i[id address1 zip_code phone city_name region_name country_id]
         )
+      end
+
+      def generate_raw_for_edit_password_url
+        user = @account.owner
+
+        raw, enc = Devise.token_generator.generate(user.class, :reset_password_token)
+
+        user.reset_password_token = enc
+        user.reset_password_sent_at = Time.current
+        user.save(validate: false)
+
+        raw
       end
   end
 end

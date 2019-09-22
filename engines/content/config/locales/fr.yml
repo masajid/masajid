@@ -1,0 +1,349 @@
+fr:
+  activerecord:
+    models:
+      content/article:
+        one: Article
+        other: Articles
+      content/account:
+        one: Account
+        other: Accounts
+      content/address: Address
+      content/country:
+        one: Country
+        other: Countries
+      content/city:
+        one: City
+        other: Cities
+      content/page:
+        one: Menu Item
+        other: Menu
+      content/region:
+        one: Region
+        other: Regions
+      content/slider:
+        one: Slider
+      content/social_network:
+        one: Social media
+      content/subscriber:
+        one: Subscriber
+        other: Subscribers
+      content/volunteer:
+        one: Volunteer
+        other: Volunteers
+    attributes:
+      content/article:
+        title: Title
+        slug: Slug
+        summary: Summary
+        body: Content
+        meta_title: Meta Title
+        meta_keywords: Meta Keywords
+        meta_description: Meta Description
+        published_at: Publication Date
+      content/account:
+        subdomain: Subdomain
+        email: Email Address
+        responsable: Responsable Name
+        mosque: Mosque Name
+      content/address:
+        address1: Address
+        zip_code: Zip Code
+        phone: Phone Number
+        city_name: City
+        region_name: Region
+        country_id: Country
+      content/configuration:
+        logo: Logo
+        about_us: About us
+        mawaqit_link: Link Mawakit
+        theme: Theme
+        supported_locales: Supported Languages
+        default_locale: Default Language
+        admin_locale: Administration Language
+      content/country:
+        name: Country Name
+      content/page:
+        ancestry: Ancestry
+        description: Description
+        meta_title: Meta Title
+        meta_keywords: Meta Keywords
+        meta_description: Meta Description
+        name: Name
+        permalink: Permalink
+        permalink_part: Permalink
+      content/region:
+        name: Region Name
+      content/city:
+        name: City Name
+        latitude: Latitude
+        longitude: Longitude
+      content/social_network:
+        youtube: Youtube
+        facebook: Facebook
+        google: Google +
+        twitter: Twitter
+        vimeo: Vimeo
+        instagram: Instagram
+      content/slider:
+        title: Title
+        body: Body
+        photo: Photo
+        link: Link
+        link_text: Link Text
+      content/subscriber:
+        email: Email Address
+        created_at: Create Date
+      content/user:
+        email: Email address
+        password: Password
+        confirmed_at: Confirmation Date
+      content/volunteer:
+        name: Name
+        identification: Identification
+        birthday: Birthday
+        address: Address
+        phone: Phone
+        email: Email
+        education: Education
+        availability: Availability
+        languages: Languages
+        other_languages: Other Languages
+        experience: Experience
+        experience_place: Experience Place
+        experience_area: Experience Area
+      content/volunteer/experience_area:
+        cultural: Cultural
+        social: Social
+        educational: Educational
+        religious: Religious
+      content/volunteer/languages:
+        arabic: Arabic
+        spanish: Spanish
+        catalan: Catalan
+        english: English
+        french: French
+        german: German
+    errors:
+      models:
+        content/address:
+          attributes:
+            address1:
+              geocoding_failed: geocoding failed
+  content:
+    account_mailer:
+      accept_entry:
+        subject: Masajid - Your account was accepted
+        header: Hi %{mosque}!
+        body_html: |
+          <p>Congratulations!!! Your account was accepted by our admins.</p>
+          <p>You need to enter a password through the link below, then you can start publishing your articles and customizing your site.</p>
+          <p>If you have any question or feedback please don't hesitate to get in touch with us!</p>
+        cta_text: Enter password
+      decline_entry:
+        subject: Masajid - Your account was declined
+        header: Hello %{mosque}!
+        body: |
+          <p>We are sorry to inform you that your account was declined by our admins because it seems to be not real.</p>
+          <p>If you disagree or you have any concern please get in touch with us!</p>
+          <p>Thanks for your undestanding!</p>
+      notify_creation_new_entry:
+        subject: Masajid - New account was created
+        header: Hi Admin,
+        body: A new account was created.
+        cta_text: See details
+  admin:
+    articles:
+      new:
+        header: New Article
+    accounts:
+      edit:
+        header: Edit Account
+    configurations:
+      edit:
+        header: General Configuration
+    countries:
+      edit:
+        header: Edit Country
+      new:
+        header: New Country
+    pages:
+      edit:
+        header: Edit Menu Item
+      new:
+        header: New Menu Item
+    regions:
+      edit:
+        header: Edit Region
+      new:
+        header: New Region
+    social_networks:
+      edit:
+        header: Edit Social Media
+    sliders:
+      edit:
+        header: Edit Slider
+    cities:
+      edit:
+        header: Edit City
+      new:
+        header: New City
+    pundit:
+      unauthorized: You are not authorized to perform this action
+    shared:
+      are_you_sure: Are you sure?
+      total: 'Total: %{count}'
+    tabs:
+      general: General
+  landing:
+    admin_panel: Admin panel
+    create_account: Create account
+    site_name: Masajid World
+    slider:
+      first:
+        headline: Your masjid online.
+        content: You own a masjid and you don't have a website, Masajid World will help you.
+      second:
+        headline: Allah says in surat Tawba
+        content_html: |
+          <p>The mosques of Allah are only to be maintained by those who believe in Allah and the Last Day and establish prayer
+          and give zakah and do not fear except Allah, for it is expected that those will be of the [rightly] guided.</p>
+          <p>إِنَّمَا يَعْمُرُ مَسَاجِدَ اللَّهِ مَنْ آمَنَ بِاللَّهِ وَالْيَوْمِ الْآخِرِ وَأَقَامَ الصَّلَاةَ وَآتَى الزَّكَاةَ وَلَمْ يَخْشَ إِلَّا اللَّهَ ۖ فَعَسَىٰ أُولَٰئِكَ أَن يَكُونُوا مِنَ الْمُهْتَدِينَ</p>
+    how_to_use:
+      headline: how to use?
+      step_1:
+        headline: Create account
+        content: First step, you shall create an account in the platform with your information.
+      step_2:
+        headline: Wait for approval
+        content: Once we receive your information, we will contact you within 24h to make sure your mosque exists.
+      step_3:
+        headline: Admin
+        content: Once we approve your account, you will receive a password via email, so you can login to the administration panel and costumise your site as you wish.
+      step_4:
+        headline: It's ready
+        content: Your site for your masjid is ready to go.
+  public:
+    read_more: Continue reading
+  shared:
+    actions:
+      accept: Accept
+      back_to_list: Back to list
+      decline: Decline
+      delete: Delete
+      edit: Edit
+      new: New
+    locales:
+      en: English
+      fr: French
+      es: Spanish
+      de: German
+    volunteers:
+      new:
+        header: Volunteering
+  devise:
+    actions:
+      login: Sign in
+      logout: Sign out
+    confirmations:
+      new:
+        did_not_receive_confirmation_instructions: Didn't receive confirmation instructions?
+        resend_confirmation_instructions: Resend confirmation instructions
+      confirmed: "Your email address has been successfully confirmed."
+      send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
+      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+    failure:
+      already_authenticated: "You are already signed in."
+      inactive: "Your account is not activated yet."
+      invalid: "Invalid %{authentication_keys} or password."
+      locked: "Your account is locked."
+      last_attempt: "You have one more attempt before your account is locked."
+      not_found_in_database: "Invalid %{authentication_keys} or password."
+      timeout: "Your session expired. Please sign in again to continue."
+      unauthenticated: "You need to sign in or sign up before continuing."
+      unconfirmed: "You have to confirm your email address before continuing."
+      not_approved: Your account has not been approved by our administrators yet.
+    mailer:
+      confirmation_instructions:
+        subject: Welcome to Masajid
+        header: Hi %{mosque}!
+        body: |
+          You are welcome to Masajid. We need you to confirm your account email through the link below.
+          Then we will got in touch with you as soon as possible in order to authorize your account.
+        cta_text: Confirm my account
+      reset_password_instructions:
+        subject: "Reset password instructions"
+      unlock_instructions:
+        subject: "Unlock instructions"
+      email_changed:
+        subject: "Email Changed"
+      password_change:
+        subject: "Password Changed"
+    omniauth_callbacks:
+      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+      success: "Successfully authenticated from %{kind} account."
+    passwords:
+      edit:
+        change_my_password: Change my password
+        change_your_password: Change your password
+        confirm_new_password: Confirm new password
+        new_password_minimum_characters: (%{length} characters minimum)
+        new_password: New password
+      new:
+        forgot_your_password: Forgot your password?
+        send_me_reset_password_instructions: Send me reset password instructions
+      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+      send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
+      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
+      updated: "Your password has been changed successfully. You are now signed in."
+      updated_not_active: "Your password has been changed successfully."
+    registrations:
+      destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
+      signed_up: "Welcome! You have signed up successfully."
+      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
+      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
+      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
+      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
+      updated: "Your account has been updated successfully."
+    sessions:
+      new:
+        remember_me: Remember me
+      signed_in: Signed in successfully.
+      signed_out: Signed out successfully.
+      already_signed_out: Signed out successfully.
+    unlocks:
+      send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
+      send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
+      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+  errors:
+    messages:
+      already_confirmed: "was already confirmed, please try signing in"
+      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+      expired: "has expired, please request a new one"
+      not_found: "not found"
+      not_locked: "was not locked"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"
+  simple_form:
+    yes: Yes
+    no: No
+    required:
+      text: required
+      mark: '*'
+    error_notification:
+      default_message: 'Please review the problems below:'
+    hints:
+      content/configuration:
+        default_locale: Default language of your site.
+        supported_locales: A list of available languages that user can choose in the site.
+        meta_title_html: The content for the homepage's HTML <mark>&lt;title&gt;</mark> tag, which is used by search engines.
+        meta_description: The summary text that accompanies your homepage link in search engine results pages (SERPs).
+      content/article:
+        slug_html: |
+          A slug is a part of a URL that identifies a page using human-readable words, and it is used for SEO purposes.
+          For example, in the web address <mark>https://example.com/article/the-islam-way</mark>, the slug would be the <mark>the-islam-way part</mark>.
+        meta_title_html: The content to the article page's HTML <mark>&lt;title&gt;</mark> tag, which is used by search engines.
+        meta_description: The summary text that accompanies your article page in search engine results pages (SERPs).
+      content/page:
+        meta_title_html: The content for the page's HTML <mark>&lt;title&gt;</mark> tag, which is used by search engines.
+        meta_description: The summary text that accompanies your page in search engine results pages (SERPs).

@@ -1,0 +1,23 @@
+<%= simple_form_for article do |f| %>
+  <%= f.error_notification %>
+
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= f.input :title %>
+      <%= f.input :slug, hint: t('simple_form.hints.content/article.slug_html') if article.persisted? %>
+      <%= f.input :summary %>
+      <%= f.input :published_at %>
+      <%= f.input :page_ids, as: :check_boxes, collection: options_for_pages %>
+    </div>
+
+    <div class='col-md-6'>
+      <%= render 'admin/seo_contents/form', f: f, model_name: :article %>
+    </div>
+  </div>
+
+  <%= f.input :body, as: :hidden %>
+  <trix-editor input='article_body'></trix-editor>
+
+  <%= f.button :submit, class: 'btn-primary' %>
+<% end %>
+

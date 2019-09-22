@@ -1,0 +1,40 @@
+<%= simple_form_for current_account, url: configuration_path, method: :put do |f| %>
+  <%= f.error_notification %>
+
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= f.simple_fields_for :configuration, (current_account.configuration || current_account.build_configuration) do |configuration_form| %>
+        <%= configuration_form.input :admin_locale, collection: options_for_locale %>
+        <%= configuration_form.input :default_locale,
+                                     collection: options_for_locale(locales: current_account.configuration.supported_locales),
+                                     hint: t('simple_form.hints.content/configuration.default_locale') %>
+        <%= configuration_form.input :supported_locales,
+                                     as: :check_boxes,
+                                     collection: options_for_locale,
+                                     hint: t('simple_form.hints.content/configuration.supported_locales') %>
+
+        <hr />
+
+        <%= configuration_form.input :theme, collection: Content::Configuration::THEME_OPTIONS, include_blank: false %>
+        <%= configuration_form.input :mawaqit_link %>
+
+        <div class='logo mb-3'>
+          <%= configuration_form.input :logo %>
+          <%= image_tag main_app.url_for(current_account.logo.variant(resize: '200x')) if current_account.logo.attached? %>
+        </div>
+
+        <div class='account_configuration_logo'>
+          <%= configuration_form.label :about_us %>
+          <%= configuration_form.input :about_us, as: :hidden %>
+          <trix-editor input='account_configuration_attributes_about_us'></trix-editor>
+        </div>
+      <% end %>
+    </div>
+
+    <div class='col-md-6'>
+      <%= render 'admin/seo_contents/form', f: f, model_name: :configuration %>
+    </div>
+  </div>
+
+  <%= f.button :submit, class: 'btn-primary' %>
+<% end %>
