@@ -1,0 +1,5 @@
+.git
+.dockerignore
+web_container/.byebug_history
+web_container/log/*
+web_container/tmp/*

@@ -7,10 +7,14 @@ RUN apt-get update -yqq \
   && apt-get -q clean \
   && rm -rf /var/lib/apt/lists
 
-WORKDIR /usr/src/app
-COPY Gemfile* ./
-COPY engines ./engines
-RUN bundle install
-COPY . .
+RUN mkdir -p /app/web_container
+WORKDIR /app/web_container
 
-CMD bundle exec rails s -p 3000 -b '0.0.0.0'
+COPY web_container/Gemfile* ./
+COPY engines ../engines
+
+RUN bundle install --binstubs
+
+COPY web_container .
+
+CMD puma -C config/puma.rb

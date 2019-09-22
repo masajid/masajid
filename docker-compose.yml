@@ -1,34 +1,40 @@
 version: '3'
 
-volumes:
-  db-data:
-    external: false
-
 services:
-  cache:
-    image: memcached:1.5.14-alpine
-
-  db:
+  postgres:
     image: postgres:11
     volumes:
-      - db-data:/usr/local/pgsql/data
+      - postgres:/var/lib/postgresql/data
+    env_file:
+      - web_container/.env
 
-  jobs:
-    env_file: .env
-    build: .
+  redis:
+    image: redis:4.0-alpine
+    command: redis-server --requirepass yourpassword
     volumes:
-      - .:/usr/src/app
-    command: bundle exec rake jobs:work
-    depends_on:
-      - db
+      - redis:/data
 
   app:
-    env_file: .env
+    env_file: web_container/.env
     build: .
     volumes:
-    - .:/usr/src/app
+    - .:/app
     ports:
       - 3000:3000
     depends_on:
-      # - cache
-      - db
+      - postgres
+      - redis
+
+  sidekiq:
+    env_file: web_container/.env
+    build: .
+    volumes:
+      - .:/app
+    command: sidekiq -C config/sidekiq.yml.erb
+    depends_on:
+      - postgres
+      - redis
+
+volumes:
+  redis:
+  postgres:
