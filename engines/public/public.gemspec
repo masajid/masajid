@@ -27,9 +27,9 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'content'
   spec.add_dependency 'detectify'
-  spec.add_dependency 'bootstrap', '~> 4.2.1'
+  spec.add_dependency 'bootstrap', '~> 4.3.1'
   spec.add_dependency 'will_paginate', '~> 3.1.7'
   spec.add_dependency 'will_paginate-bootstrap4'#, '~> 1.0.2'
   spec.add_dependency 'bootswatch'
-  spec.add_dependency 'font-awesome-rails'
+  spec.add_dependency 'font-awesome-rails', '~> 4.7.0.5'
 end

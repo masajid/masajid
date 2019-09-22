@@ -26,5 +26,5 @@ Gem::Specification.new do |spec|
   spec.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   spec.add_dependency 'content'
-  spec.add_dependency 'bootstrap', '~> 4.2.1'
+  spec.add_dependency 'bootstrap', '~> 4.3.1'
 end

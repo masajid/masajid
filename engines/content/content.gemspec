@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
-  s.add_dependency 'rails', '~> 6.0.0.rc1'
-  s.add_dependency 'rails-i18n', '~> 6.0.0.beta1'
+  s.add_dependency 'rails', '~> 6.0.0'
+  s.add_dependency 'rails-i18n', '~> 6.0.0'
   s.add_dependency 'devise'
   s.add_dependency 'pundit'
   s.add_dependency 'friendly_id'
@@ -29,5 +29,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'stringex'
   s.add_dependency 'attribute_normalizer'
   s.add_dependency 'postgres-copy', '~> 1.4.0'
-  s.add_dependency 'flipper-active_record'
+  s.add_dependency 'flipper-active_record', '~> 0.17.1'
 end
