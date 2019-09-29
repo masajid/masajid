@@ -1,0 +1,22 @@
+<% content_for :page_title do %>
+  <%= t('.header') %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= link_to t('shared.actions.back_to_list'), pages_path, class: 'btn btn-secondary btn-sm' %>
+<% end %>
+
+<%= render 'form', page: @page %>
+
+<%= javascript_tag do %>
+  $(document).ready(function() {
+    var field = $('.page_permalink_part input'),
+        target = $('.page_permalink_part small'),
+        permalink = target.text().trim(),
+        parent_permalink = permalink.substring(0, permalink.lastIndexOf('/') + 1)
+
+    field.on('keyup blur', function() {
+      target.text(parent_permalink + $(this).val());
+    });
+  });
+<% end %>

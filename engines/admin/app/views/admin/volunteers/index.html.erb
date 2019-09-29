@@ -1,0 +1,47 @@
+<% content_for :page_title do %>
+  <%= plural_resource_name(Content::Volunteer) %>
+<% end %>
+
+<p><%= t('admin.shared.total', count: @volunteers.count) %></p>
+
+<div class='table-responsive'>
+  <table class='table table-striped table-sm'>
+    <thead>
+      <tr>
+        <th><%= Content::Volunteer.human_attribute_name(:name) %></th>
+        <th><%= Content::Volunteer.human_attribute_name(:identification) %></th>
+        <th><%= Content::Volunteer.human_attribute_name(:birthday) %></th>
+        <th><%= Content::Volunteer.human_attribute_name(:address) %></th>
+        <th><%= Content::Volunteer.human_attribute_name(:phone) %></th>
+        <th><%= Content::Volunteer.human_attribute_name(:email) %></th>
+        <th><%= Content::Volunteer.human_attribute_name(:education) %></th>
+        <th><%= Content::Volunteer.human_attribute_name(:availability) %></th>
+        <th><%= Content::Volunteer.human_attribute_name(:languages) %></th>
+        <th><%= Content::Volunteer.human_attribute_name(:other_languages) %></th>
+        <th><%= Content::Volunteer.human_attribute_name(:experience) %></th>
+        <th><%= Content::Volunteer.human_attribute_name(:experience_place) %></th>
+        <th><%= Content::Volunteer.human_attribute_name(:experience_area) %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @volunteers.each do |volunteer| %>
+        <tr>
+          <td><%= volunteer.name %></td>
+          <td><%= volunteer.identification %></td>
+          <td><%= volunteer.birthday %></td>
+          <td><%= volunteer.address %></td>
+          <td><%= volunteer.phone %></td>
+          <td><%= volunteer.email %></td>
+          <td><%= volunteer.education %></td>
+          <td><%= volunteer.availability %></td>
+          <td><%= volunteer.languages.reject(&:blank?).map { |language| Content::Volunteer.human_attribute_name("languages.#{language}") }.join(', ') %></td>
+          <td><%= volunteer.other_languages %></td>
+          <td><%= volunteer.experience %></td>
+          <td><%= volunteer.experience_place %></td>
+          <td><%= volunteer.experience_area.reject(&:blank?).map { |experience_area| Content::Volunteer.human_attribute_name("experience_area.#{experience_area}") }.join(', ') %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

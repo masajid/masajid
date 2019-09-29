@@ -8,15 +8,15 @@ module Content
     end
 
     def index?
-      super_admin_user?
+      user.super_admin?
     end
 
     def show?
-      super_admin_user?
+      user.super_admin?
     end
 
     def create?
-      super_admin_user?
+      user.super_admin?
     end
 
     def new?
@@ -24,7 +24,7 @@ module Content
     end
 
     def update?
-      super_admin_user?
+      user.super_admin?
     end
 
     def edit?
@@ -32,7 +32,7 @@ module Content
     end
 
     def destroy?
-      super_admin_user?
+      user.super_admin?
     end
 
     class Scope
@@ -46,16 +46,12 @@ module Content
       def resolve
         if user.super_admin?
           scope.all
+        elsif user.admin?
+          scope.where(account_id: user.account)
         else
           scope.none
         end
       end
-    end
-
-    private
-
-    def super_admin_user?
-      @super_admin_user ||= user.super_admin?
     end
   end
 end

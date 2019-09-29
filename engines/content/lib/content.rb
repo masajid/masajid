@@ -1,9 +1,14 @@
+require 'rails-i18n'
 require 'devise'
 require 'pundit'
+require 'friendly_id'
 require 'sidekiq'
-require 'figaro'
 require 'geocoder'
 require 'simple_form'
+require 'ancestry'
+require 'shrine'
+require 'stringex'
+require 'attribute_normalizer'
 require 'postgres-copy'
 require 'flipper-active_record'
 
@@ -17,3 +22,6 @@ module Content
     end
   end
 end
+
+require 'scoped_to'
+require 'content/controller_helpers/volunteer'

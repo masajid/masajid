@@ -12,7 +12,7 @@ Devise.setup do |config|
   
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
-  # config.parent_controller = 'DeviseController'
+  config.parent_controller = 'Landing::ApplicationController'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -21,7 +21,7 @@ Devise.setup do |config|
   config.mailer_sender = ENV['ADMIN_SENDER_EMAIL']
 
   # Configure the class responsible to send e-mails.
-  # config.mailer = 'Devise::Mailer'
+  config.mailer = 'Content::CustomDeviseMailer'
 
   # Configure the parent class responsible to send e-mails.
   config.parent_mailer = 'Content::ApplicationMailer'

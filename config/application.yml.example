@@ -1,9 +1,0 @@
-ADMIN_SENDER_EMAIL: admin@gmail.com
-ADMIN_NOTIFICATION_EMAILS: admin@gmail.com,private@gmail.com,me@gmail.com
-
-MAILJET_API_KEY: give-me-valid-api-key
-MAILJET_SECRET_KEY: give-me-valid-secret-key
-
-REDIS_URL: 'redis://localhost:6379'
-
-MAPBOX_ACCESS_TOKEN: give-me-valid-access-token

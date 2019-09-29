@@ -1,23 +1,25 @@
 module Content
   class AccountMailer < ApplicationMailer
-    def welcome_email(account)
+    def notify_creation_new_entry(account)
       @account = account
-      mail(to: @account.email, subject: t('.subject'))
+
+      mail(
+        to: ENV['ADMIN_NOTIFICATION_EMAILS']&.split,
+        subject: t('content.account_mailer.notify_creation_new_entry.subject')
+      )
     end
 
-    def notify_creation_email(account)
+    def accept_entry(account, raw)
       @account = account
-      mail(to: ENV['ADMIN_NOTIFICATION_EMAILS']&.split, subject: t('.subject'))
+      @raw = raw
+
+      mail(to: @account.email, subject: t('content.account_mailer.accept_entry.subject'))
     end
 
-    def accept_email(account)
+    def decline_entry(account)
       @account = account
-      mail(to: @account.email, subject: t('.subject'))
-    end
 
-    def decline_email(account)
-      @account = account
-      mail(to: @account.email, subject: t('.subject'))
+      mail(to: @account.email, subject: t('content.account_mailer.decline_entry.subject'))
     end
   end
 end

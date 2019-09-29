@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title><%= t('landing.site_name') %></title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'landing/application', media: 'all' %>
+    <%= javascript_include_tag 'landing/application' %>
+  </head>
+  <body>
+    <%= render 'landing/shared/header' %>
+
+    <main role='main'>
+      <div className='container'>
+        <%= render 'content/shared/flash_messages' %>
+
+        <div class='content'>
+          <%= yield %>
+        </div>
+      </div>
+    </main>
+
+    <%= render 'landing/shared/footer' %>
+  </body>
+</html>

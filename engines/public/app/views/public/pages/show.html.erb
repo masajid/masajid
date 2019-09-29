@@ -1,0 +1,13 @@
+<main role='main'>
+  <div class='row'>
+    <div class='col-md-8'>
+      <h1 class='pb-4 mb-4 font-italic'>
+        <%= @page.name %>
+      </h1>
+
+      <%= render partial: 'article', collection: @articles %>
+    </div>
+
+    <%= render 'public/shared/sidebar' %>
+  </div>
+</main>

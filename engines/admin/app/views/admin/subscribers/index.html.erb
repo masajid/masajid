@@ -1,0 +1,25 @@
+<% content_for :page_title do %>
+    <%= plural_resource_name(Content::Subscriber) %>
+<% end %>
+
+<p><%= t('admin.shared.total', count: @subscribers.count) %></p>
+
+<div class='table-responsive'>
+  <table class='table table-striped table-sm'>
+    <thead>
+    <tr>
+      <th><%= Content::Subscriber.human_attribute_name(:email) %></th>
+      <th><%= Content::Subscriber.human_attribute_name(:created_at) %></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @subscribers.each do |subscriber| %>
+        <tr>
+          <td><%= subscriber.email %></td>
+          <td><%= subscriber.created_at.to_formatted_s(:long) %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

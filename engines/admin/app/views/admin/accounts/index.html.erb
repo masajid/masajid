@@ -1,5 +1,5 @@
 <% content_for :page_title do %>
-  <%= Content::Account.model_name.human(count: :many) %>
+  <%= plural_resource_name(Content::Account) %>
 <% end %>
 
 <p><%= t('admin.shared.total', count: @accounts.count) %></p>
