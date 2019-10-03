@@ -5,7 +5,8 @@
     </h3>
 
     <div class='mb-1 text-muted'>
-      <%= article.published_at.to_date.to_formatted_s(:long) %>
+      <i class='fa fa-clock-o'></i><%= article.published_on %>
+      <i class='fa fa-eye'></i><%= article.views_count %>
     </div>
 
     <p class='card-text mb-auto'>

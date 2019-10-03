@@ -11,6 +11,8 @@ require 'stringex'
 require 'attribute_normalizer'
 require 'postgres-copy'
 require 'flipper-active_record'
+require 'ahoy_matey'
+require 'draper'
 
 module Content
   require 'content/engine'

@@ -4,6 +4,8 @@ module Content
     extend FriendlyId
     friendly_id :title, use: [:history, :slugged]
 
+    VIEWS_TRACKING_EVENT_NAME = 'Viewed article'
+
     has_one_attached :photo
 
     belongs_to :account

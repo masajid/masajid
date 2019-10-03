@@ -7,7 +7,7 @@ module Admin
     def index
       authorize Content::Article
 
-      @articles = policy_scope(Content::Article)
+      @articles = policy_scope(Content::Article).decorate
     end
 
     def new

@@ -4,7 +4,8 @@
   </h2>
 
   <div class='article-meta'>
-    <%= article.published_at.to_date.to_formatted_s(:long) %>
+    <i class='fa fa-clock-o'></i><%= article.published_on %>
+    <i class='fa fa-eye'></i><%= article.views_count %>
   </div>
 
   <div class='article-body'>
