@@ -14,6 +14,9 @@ es:
       content/city:
         one: City
         other: Cities
+      content/newsletter:
+        one: Newsletter
+        other: Newsletters
       content/page:
         one: Menu Item
         other: Menu
@@ -61,6 +64,14 @@ es:
         admin_locale: Administration Language
       content/country:
         name: Country Name
+      content/newsletter:
+        article_ids: Articulos
+        body: Email Body
+        link: Link
+        link_text: Link Text
+        date: Sending Date
+        sent_at: Enviado
+        subject: Subject
       content/page:
         ancestry: Ancestry
         description: Description
@@ -128,6 +139,12 @@ es:
           attributes:
             address1:
               geocoding_failed: geocoding failed
+        content/newsletter:
+          attributes:
+            body:
+              blank: es obligatorio si no selecionas articulos
+            date:
+              inclusion: debe ser en futuro
   content:
     account_mailer:
       accept_entry:
@@ -245,6 +262,8 @@ es:
     volunteers:
       new:
         header: Volunteering
+    say_no: No
+    say_yes: Si
   devise:
     actions:
       login: Sign in

@@ -11,6 +11,7 @@ require 'stringex'
 require 'attribute_normalizer'
 require 'postgres-copy'
 require 'flipper-active_record'
+require 'bootstrap-email'
 require 'ahoy_matey'
 require 'draper'
 

@@ -14,6 +14,9 @@ de:
       content/city:
         one: City
         other: Cities
+      content/newsletter:
+        one: Newsletter
+        other: Newsletters
       content/page:
         one: Menu Item
         other: Menu
@@ -61,6 +64,14 @@ de:
         admin_locale: Administration Language
       content/country:
         name: Country Name
+      content/newsletter:
+        article_ids: Articles
+        body: Email Body
+        link: Link
+        link_text: Link Text
+        date: Sending Date
+        sent_at: Sent
+        subject: Subject
       content/page:
         ancestry: Ancestry
         description: Description
@@ -128,6 +139,12 @@ de:
           attributes:
             address1:
               geocoding_failed: geocoding failed
+        content/newsletter:
+          attributes:
+            body:
+              blank: is required if you don't select articles
+            date:
+              inclusion: must be in future
   content:
     account_mailer:
       accept_entry:
@@ -245,6 +262,8 @@ de:
     volunteers:
       new:
         header: Volunteering
+    say_no: Nein
+    say_yes: Ja
   devise:
     actions:
       login: Sign in

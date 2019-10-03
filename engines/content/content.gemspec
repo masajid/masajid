@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'attribute_normalizer'
   s.add_dependency 'postgres-copy', '~> 1.4.0'
   s.add_dependency 'flipper-active_record', '~> 0.17.1'
+  s.add_dependency 'bootstrap-email'
   s.add_dependency 'ahoy_matey'
   s.add_dependency 'draper'
 end

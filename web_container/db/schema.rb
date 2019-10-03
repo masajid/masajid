@@ -134,6 +134,13 @@ ActiveRecord::Schema.define(version: 2019_08_25_102157) do
     t.index ["title"], name: "index_content_articles_on_title"
   end
 
+  create_table "content_articles_newsletters", id: false, force: :cascade do |t|
+    t.bigint "newsletter_id", null: false
+    t.bigint "article_id", null: false
+    t.index ["article_id"], name: "index_content_articles_newsletters_on_article_id"
+    t.index ["newsletter_id"], name: "index_content_articles_newsletters_on_newsletter_id"
+  end
+
   create_table "content_articles_pages", id: false, force: :cascade do |t|
     t.bigint "article_id", null: false
     t.bigint "page_id", null: false
@@ -167,6 +174,19 @@ ActiveRecord::Schema.define(version: 2019_08_25_102157) do
   create_table "content_countries", force: :cascade do |t|
     t.string "name", limit: 50, null: false
     t.index ["name"], name: "index_content_countries_on_name"
+  end
+
+  create_table "content_newsletters", force: :cascade do |t|
+    t.string "subject"
+    t.text "body"
+    t.date "date"
+    t.datetime "sent_at"
+    t.bigint "account_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "link"
+    t.string "link_text"
+    t.index ["account_id"], name: "index_content_newsletters_on_account_id"
   end
 
   create_table "content_pages", force: :cascade do |t|
