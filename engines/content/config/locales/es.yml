@@ -36,10 +36,8 @@ es:
         slug: Slug
         summary: Summary
         body: Content
-        meta_title: Meta Title
-        meta_keywords: Meta Keywords
-        meta_description: Meta Description
         published_at: Publication Date
+        photo: Photo
       content/account:
         subdomain: Subdomain
         email: Email Address
@@ -223,6 +221,7 @@ es:
         headline: It's ready
         content: Your site for your masjid is ready to go.
   public:
+    continued: '... (continued)'
     read_more: Continue reading
   shared:
     actions:

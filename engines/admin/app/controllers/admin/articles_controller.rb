@@ -49,6 +49,7 @@ module Admin
           :summary,
           :body,
           :published_at,
+          :photo,
           seo_content_attributes: [:id, :meta_title, :meta_description],
           page_ids: []
         ).merge(account: current_account)
