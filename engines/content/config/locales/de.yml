@@ -165,6 +165,10 @@ de:
         header: Edit Country
       new:
         header: New Country
+    dashboards:
+      index:
+        visits: Number of visits
+        empty_visits: No body visited your website yet
     pages:
       edit:
         header: Edit Menu Item
@@ -192,6 +196,7 @@ de:
       are_you_sure: Are you sure?
       total: 'Total: %{count}'
     tabs:
+      dashboard: Dashboards
       general: General
   landing:
     admin_panel: Admin panel

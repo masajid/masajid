@@ -2,7 +2,7 @@
   <div class='sidebar-sticky'>
     <ul class='nav flex-column'>
       <%= nav_item(
-        text: 'Dashboards*',
+        text: t('admin.tabs.dashboard'),
         path: root_path,
         active: request.path == '/admin/',
       ) if policy([:content, :dashboard]).index? %>

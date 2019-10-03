@@ -21,6 +21,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'jquery-ui-rails', '~> 6.0.1' # used by sortable_tree_rails
   s.add_dependency 'sortable_tree_rails'
   s.add_dependency 'trix-gem'
+  s.add_dependency 'chartkick'
+  s.add_dependency 'groupdate'
   s.add_dependency 'bootstrap', '~> 4.3.1'
   s.add_dependency 'font-awesome-rails'
 end
