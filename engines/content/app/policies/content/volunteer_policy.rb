@@ -11,14 +11,7 @@ module Content
       ]
     end
 
-    class Scope
-      attr_reader :user, :scope
-
-      def initialize(user, scope)
-        @user = user
-        @scope = scope
-      end
-
+    class Scope < Scope
       def resolve
         if user.super_admin?
           scope.where(account_id: nil)

@@ -1,21 +1,37 @@
 # README
 
+Masajid is a non-profit project dedicated to mosques that are willing to create their own website.
+
+Website: https://masajid.world
+
+## Requirements
+
+- Postgres
+- Redis and Sidekiq (Optional)
+- Ruby 2.5.0 or newer (RVM is recommended)
+
 ## Setup
 
 ```
-$ git clone .../theopenmasjid.git & cd theopenmasjid
+$ git clone git@github.com:mgharbik/masajid.git
+$ cd masajid/web_container
 $ bundle install
 $ rails db:create db:migrate db:seed
-$ rails content_places:import [only=countries,regions,cities] # for setup countries is enough
+$ rails content_places:import only=countries
+$ rails s
 ```
 
 other steps:
 
 - rename `.env.example` to `.env` and change the environment variables.
+- add to `/etc/hosts` file
+```
+127.0.0.1       masajid.local
+127.0.0.1       al-nour.masajid.local
+```
 
-hints:
-
-- please set environment variables before creating database and running seeds
+- visit `http://masajid.local:3000/admin`, credentials: `admin@masajid.com`/`masajid`
+- visit `http://al-nour.masajid.local:3000`
 
 ## Deployment to gcloud
 
@@ -127,7 +143,7 @@ sudo chmod 0777 /cloudsql
 # heroku config:set ADMIN_SENDER_EMAIL=admin@gmail.com
 # figaro heroku:set -e production (set all variables once)
 
-# heroku apps:rename theopenmasjid
+# heroku apps:rename masajid
 # heroku open
 
 # heroko logs --tail
@@ -144,23 +160,3 @@ sudo chmod 0777 /cloudsql
 
 - https://www.mailjet.com
 - free forever: 6000 emails per months / 200 per day
-
-
-### Feature Flippers
-
-#### From the Rails console
-
-```ruby
-> f = Content.flipper
-> f.features.add(:signin_link) # add a feature
-> f[:signin_link].enable # enable a feature
-> f[:signin_link].disable # disable a feature
-> f[:signin_link].enabled? # check if a feature is enabled
-> Rails.cache.clear # in case a feature flipper affects a cached fragment
-```
-
-#### Used features
-
-- `example`: description
-
-From the browser, as a super admin member of the technology team, you can access the flipper UI through `/flipper`

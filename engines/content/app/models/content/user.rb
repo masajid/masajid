@@ -13,5 +13,19 @@ module Content
         role == role_name
       end
     end
+
+    def active_for_authentication?
+      approval_needed? ? false : super
+    end
+
+    def inactive_message
+      approval_needed? ? :not_approved : super
+    end
+
+    private
+
+    def approval_needed?
+      admin? && !account.accepted?
+    end
   end
 end

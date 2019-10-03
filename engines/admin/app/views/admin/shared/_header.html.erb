@@ -1,8 +1,21 @@
-<nav class='navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow'>
-  <%= link_to 'Administration', root_path, class: 'navbar-brand col-sm-3 col-md-2 mr-0' %>
-  <ul class='navbar-nav px-3'>
-    <li class='nav-item text-nowrap'>
-      <%= link_to 'Sign out', '/logout', method: :delete, class: 'nav-link' %>
-    </li>
-  </ul>
+<nav class='navbar navbar-expand-md navbar-dark fixed-top bg-dark'>
+  <%= link_to t('shared.administration'), root_path, class: 'navbar-brand' %>
+
+  <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#adminNavbar' aria-controls='adminNavbar' aria-expanded='false' aria-label='Toggle navigation'>
+    <span class='navbar-toggler-icon'></span>
+  </button>
+
+  <div class='collapse navbar-collapse' id='adminNavbar'>
+    <ul class='navbar-nav ml-auto'>
+      <% if current_account_domain.present? %>
+        <li class='nav-item'>
+          <%= link_to t('shared.view_site'), current_account_domain, class: 'nav-link', target: '_blank' %>
+        </li>
+      <% end %>
+
+      <li class='nav-item'>
+        <%= link_to t('devise.actions.logout'), '/logout', method: :delete, class: 'nav-link' %>
+      </li>
+    </ul>
+  </div>
 </nav>

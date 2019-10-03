@@ -19,4 +19,6 @@
 //= require jquery.mjs.nestedSortable.js
 //= require sortable_tree.js
 //= require trix
+//= require chartkick
+//= require Chart.bundle
 //= require_tree .

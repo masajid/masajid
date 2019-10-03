@@ -1,3 +1,16 @@
 <% content_for :page_title do %>
-  Dashboards
+  <%= t('admin.tabs.dashboard') %>
 <% end %>
+
+<div class='visits'>
+  <h3><%= t('admin.dashboards.index.visits') %></h3>
+
+  <% if @visits.any? %>
+    <%= line_chart @visits.group_by_day(:started_at).count %>
+    <%= column_chart @visits.group_by_day_of_week(:started_at, format: '%a').count %>
+  <% else %>
+    <div class='alert alert-warning' role='alert'>
+      <%= t('admin.dashboards.index.empty_visits') %>
+    </div>
+  <% end %>
+</div>

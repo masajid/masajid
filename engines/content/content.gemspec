@@ -9,15 +9,15 @@ Gem::Specification.new do |s|
   s.version     = Content::VERSION
   s.authors     = ['Gharbi Mohammed']
   s.email       = ['mgharbik@gmail.com']
-  s.homepage    = 'https://theopenmasjid.herokuapp.com/'
+  s.homepage    = 'https://masajid.world'
   s.summary     = 'Models, Mailers ... etc'
   s.description = s.summary
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
-  s.add_dependency 'rails', '~> 6.0.0.rc1'
-  s.add_dependency 'rails-i18n', '~> 6.0.0.beta1'
+  s.add_dependency 'rails', '~> 6.0.0'
+  s.add_dependency 'rails-i18n', '~> 6.0.0'
   s.add_dependency 'devise'
   s.add_dependency 'pundit'
   s.add_dependency 'friendly_id'
@@ -29,5 +29,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'stringex'
   s.add_dependency 'attribute_normalizer'
   s.add_dependency 'postgres-copy', '~> 1.4.0'
-  s.add_dependency 'flipper-active_record'
+  s.add_dependency 'flipper-active_record', '~> 0.17.1'
+  s.add_dependency 'bootstrap-email'
+  s.add_dependency 'ahoy_matey'
+  s.add_dependency 'draper'
 end

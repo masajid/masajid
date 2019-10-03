@@ -5,17 +5,22 @@
     </h3>
 
     <div class='mb-1 text-muted'>
-      <%= article.published_at.to_date.to_formatted_s(:long) %>
+      <i class='fa fa-clock-o'></i><%= article.published_on %>
+      <i class='fa fa-eye'></i><%= article.views_count %>
     </div>
 
     <p class='card-text mb-auto'>
-      <%= article.summary.truncate(100, omission: '... (continued)') %>
+      <%= article.summary.truncate(100, omission: t('public.continued')) %>
     </p>
 
-    <%= link_to t('public.read_more'), article_path(article.slug), class: 'stretched-link' %>
+    <%= link_to t('public.read_more'), article_path(article.slug) %>
   </div>
 
-  <div class='col-auto d-none d-lg-block article-image'>
-    <svg class='bd-placeholder-img' width='300' height='200' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid slice' focusable='false' role='img' aria-label='Placeholder: Thumbnail'><title>Placeholder</title><rect width='100%' height='100%' fill='#55595c'/><text x='50%' y='50%' fill='#eceeef' dy='.3em'>Thumbnail</text></svg>
-  </div>
+  <% if article.photo.attached? %>
+    <div class='col-auto d-none d-lg-block'>
+      <%= link_to article_path(article.slug) do %>
+        <%= image_tag main_app.url_for(article.photo.variant(resize: '300x200')) %>
+      <% end %>
+    </div>
+  <% end %>
 </div>

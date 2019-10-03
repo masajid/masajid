@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Admin::VERSION
   s.authors     = ['Gharbi Mohammed']
   s.email       = ['mgharbik@gmail.com']
-  s.homepage    = 'https://theopenmasjid.herokuapp.com/'
+  s.homepage    = 'https://masajid.world'
   s.summary     = 'Admin application'
   s.description = s.summary
   s.license     = 'MIT'
@@ -17,9 +17,12 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   s.add_dependency 'content'
-  s.add_dependency 'haml-rails' # used by sortable_tree_rails
-  s.add_dependency 'jquery-ui-rails' # used by sortable_tree_rails
+  s.add_dependency 'haml-rails', '~> 2.0.1' # used by sortable_tree_rails
+  s.add_dependency 'jquery-ui-rails', '~> 6.0.1' # used by sortable_tree_rails
   s.add_dependency 'sortable_tree_rails'
   s.add_dependency 'trix-gem'
-  s.add_dependency 'bootstrap', '~> 4.2.1'
+  s.add_dependency 'chartkick'
+  s.add_dependency 'groupdate'
+  s.add_dependency 'bootstrap', '~> 4.3.1'
+  s.add_dependency 'font-awesome-rails'
 end

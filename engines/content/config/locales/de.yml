@@ -14,6 +14,9 @@ de:
       content/city:
         one: City
         other: Cities
+      content/newsletter:
+        one: Newsletter
+        other: Newsletters
       content/page:
         one: Menu Item
         other: Menu
@@ -36,10 +39,9 @@ de:
         slug: Slug
         summary: Summary
         body: Content
-        meta_title: Meta Title
-        meta_keywords: Meta Keywords
-        meta_description: Meta Description
+        video_link: Video embed URL
         published_at: Publication Date
+        photo: Photo
       content/account:
         subdomain: Subdomain
         email: Email Address
@@ -55,12 +57,21 @@ de:
       content/configuration:
         logo: Logo
         about_us: About us
+        mawaqit_link: Mawakit Link
         theme: Theme
         supported_locales: Supported Languages
         default_locale: Default Language
         admin_locale: Administration Language
       content/country:
         name: Country Name
+      content/newsletter:
+        article_ids: Articles
+        body: Email Body
+        link: Link
+        link_text: Link Text
+        date: Sending Date
+        sent_at: Sent
+        subject: Subject
       content/page:
         ancestry: Ancestry
         description: Description
@@ -128,25 +139,34 @@ de:
           attributes:
             address1:
               geocoding_failed: geocoding failed
+        content/newsletter:
+          attributes:
+            body:
+              blank: is required if you don't select articles
+            date:
+              inclusion: must be in future
   content:
     account_mailer:
-      accept_email:
-        subject: The open Masjid - Your account was accepted
+      accept_entry:
+        subject: Masajid - Your account was accepted
+        header: Hi %{mosque}!
+        body_html: |
+          <p>Congratulations!!! Your account was accepted by our admins.</p>
+          <p>You need to enter a password through the link below, then you can start publishing your articles and customizing your site.</p>
+          <p>If you have any question or feedback please don't hesitate to get in touch with us!</p>
+        cta_text: Enter password
+      decline_entry:
+        subject: Masajid - Your account was declined
         header: Hello %{mosque}!
-        body: Congratulations!!! Your account was accepted by our admins. Our team is still working on the first version of the application, we will inform you when it is done then you can start publishing your articles. If you have any question please don't hesitate get in touch with us! Thanks for your undestanding!
-      decline_email:
-        subject: The open Masjid - Your account was declined
-        header: Hello %{mosque}!
-        body: We are sorry to inform you that your email was declined by our admins because it seems to be not real. If you disagree or you have any concern please get in touch with us! Thanks for your undestanding!
-      welcome_email:
-        subject: Welcome to The open Masjid
-        header: Welcome %{mosque}!
-        body: You are welcome at the open masjid. Once you confirm your account, we will got in touch with you as soon as possible.
-      notify_creation_email:
-        subject: The open Masjid - new account was created
-        header: Hi,
-        body: A new account was created
-        link: See details
+        body: |
+          <p>We are sorry to inform you that your account was declined by our admins because it seems to be not real.</p>
+          <p>If you disagree or you have any concern please get in touch with us!</p>
+          <p>Thanks for your undestanding!</p>
+      notify_creation_new_entry:
+        subject: Masajid - New account was created
+        header: Hi Admin,
+        body: A new account was created.
+        cta_text: See details
   admin:
     articles:
       new:
@@ -162,6 +182,10 @@ de:
         header: Edit Country
       new:
         header: New Country
+    dashboards:
+      index:
+        visits: Number of visits
+        empty_visits: No body visited your website yet
     pages:
       edit:
         header: Edit Menu Item
@@ -186,18 +210,21 @@ de:
     pundit:
       unauthorized: You are not authorized to perform this action
     shared:
+      administration: Administration
+      view_site: View Site
       are_you_sure: Are you sure?
       total: 'Total: %{count}'
     tabs:
+      dashboard: Dashboards
       general: General
   landing:
     admin_panel: Admin panel
     create_account: Create account
-    site_name: The Open Masjid
+    site_name: Masajid World
     slider:
       first:
         headline: Your masjid online.
-        content: You own a masjid and you don't have a website, The Open Masjid project will help you.
+        content: You own a masjid and you don't have a website, Masajid World will help you.
       second:
         headline: Allah says in surat Tawba
         content_html: |
@@ -219,6 +246,7 @@ de:
         headline: It's ready
         content: Your site for your masjid is ready to go.
   public:
+    continued: '... (continued)'
     read_more: Continue reading
   shared:
     actions:
@@ -238,6 +266,8 @@ de:
     volunteers:
       new:
         header: Volunteering
+    say_no: Nein
+    say_yes: Ja
   devise:
     actions:
       login: Sign in
@@ -259,9 +289,15 @@ de:
       timeout: "Your session expired. Please sign in again to continue."
       unauthenticated: "You need to sign in or sign up before continuing."
       unconfirmed: "You have to confirm your email address before continuing."
+      not_approved: Your account has not been approved by our administrators yet.
     mailer:
       confirmation_instructions:
-        subject: "Confirmation instructions"
+        subject: Welcome to Masajid
+        header: Hi %{mosque}!
+        body: |
+          You are welcome to Masajid. We need you to confirm your account email through the link below.
+          Then we will got in touch with you as soon as possible in order to authorize your account.
+        cta_text: Confirm my account
       reset_password_instructions:
         subject: "Reset password instructions"
       unlock_instructions:
@@ -331,6 +367,9 @@ de:
         meta_title_html: The content for the homepage's HTML <mark>&lt;title&gt;</mark> tag, which is used by search engines.
         meta_description: The summary text that accompanies your homepage link in search engine results pages (SERPs).
       content/article:
+        video_link_html: |
+          e.g. <mark>https://www.youtube.com/embed/M1M9n-wUhy0</mark>,
+          <mark>https://player.vimeo.com/video/103525883</mark>
         slug_html: |
           A slug is a part of a URL that identifies a page using human-readable words, and it is used for SEO purposes.
           For example, in the web address <mark>https://example.com/article/the-islam-way</mark>, the slug would be the <mark>the-islam-way part</mark>.

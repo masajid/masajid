@@ -4,7 +4,7 @@ module Public
   class HomeController < ApplicationController
     def index
       @slider = current_account.slider
-      @articles = Content::Article.scoped_to(current_account).paginate(page: params[:page], per_page: 10)
+      @articles = Content::Article.scoped_to(current_account).paginate(page: params[:page], per_page: 10).decorate
     end
   end
 end

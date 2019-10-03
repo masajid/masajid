@@ -1,0 +1,34 @@
+<% content_for :page_title do %>
+  <%= plural_resource_name(Content::Newsletter) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= link_to t('shared.actions.new'), new_newsletter_path, class: 'btn btn-primary btn-sm' %>
+<% end %>
+
+<p><%= t('admin.shared.total', count: @newsletters.count) %></p>
+
+<div class='table-responsive'>
+  <table class='table table-striped table-sm'>
+    <thead>
+      <tr>
+        <th><%= Content::Newsletter.human_attribute_name(:subject) %></th>
+        <th><%= Content::Newsletter.human_attribute_name(:date) %></th>
+        <th><%= Content::Newsletter.human_attribute_name(:sent_at) %></th>
+        <th colspan='2'></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @newsletters.each do |newsletter| %>
+        <tr>
+          <td><%= newsletter.subject %></td>
+          <td><%= newsletter.date %></td>
+          <td><%= newsletter.sent_at.present? ? t('shared.say_yes') : t('shared.say_no') %></td>
+          <td><%= link_to t('shared.actions.edit'), edit_newsletter_path(newsletter), class: 'btn btn-success btn-sm' %></td>
+          <td><%= link_to t('shared.actions.delete'), newsletter, method: :delete, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger btn-sm' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
