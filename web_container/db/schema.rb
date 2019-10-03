@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_20_145254) do
+ActiveRecord::Schema.define(version: 2019_08_25_102157) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 2019_07_20_145254) do
     t.bigint "account_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "video_link"
     t.index ["account_id"], name: "index_content_articles_on_account_id"
     t.index ["deleted_at"], name: "index_content_articles_on_deleted_at"
     t.index ["published_at"], name: "index_content_articles_on_published_at"

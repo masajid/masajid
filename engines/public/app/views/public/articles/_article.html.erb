@@ -8,9 +8,11 @@
   </div>
 
   <div class='article-body'>
-    <!--<div class='embed-responsive embed-responsive-16by9 article-video'>
-      <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/M1M9n-wUhy0?rel=0' allowfullscreen></iframe>
-    </div>-->
+    <% if article.video_link.present? %>
+      <div class='embed-responsive embed-responsive-16by9 article-video'>
+        <iframe class='embed-responsive-item' src='<%= article.video_link %>' allowfullscreen></iframe>
+      </div>
+    <% end %>
 
     <%= sanitize article.body %>
   </div>

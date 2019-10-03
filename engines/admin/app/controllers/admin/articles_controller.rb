@@ -48,6 +48,7 @@ module Admin
           :slug,
           :summary,
           :body,
+          :video_link,
           :published_at,
           :photo,
           seo_content_attributes: [:id, :meta_title, :meta_description],
