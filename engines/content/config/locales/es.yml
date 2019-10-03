@@ -210,6 +210,8 @@ es:
     pundit:
       unauthorized: You are not authorized to perform this action
     shared:
+      administration: Administration
+      view_site: View Site
       are_you_sure: Are you sure?
       total: 'Total: %{count}'
     tabs:

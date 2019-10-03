@@ -180,12 +180,12 @@ ActiveRecord::Schema.define(version: 2019_08_25_102157) do
     t.string "subject"
     t.text "body"
     t.date "date"
+    t.string "link"
+    t.string "link_text"
     t.datetime "sent_at"
     t.bigint "account_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "link"
-    t.string "link_text"
     t.index ["account_id"], name: "index_content_newsletters_on_account_id"
   end
 
