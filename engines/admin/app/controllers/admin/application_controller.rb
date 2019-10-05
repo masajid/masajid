@@ -1,6 +1,7 @@
 module Admin
   class ApplicationController < ActionController::Base
     include Pundit
+    include Content::AccountsHelper
     protect_from_forgery with: :exception
 
     before_action :authenticate_user!
@@ -14,6 +15,11 @@ module Admin
       @current_account ||= current_user.account
     end
     helper_method :current_account
+
+    def current_account_domain
+      @current_account_domain ||= current_account && account_domain(current_account)
+    end
+    helper_method :current_account_domain
 
     private
       def set_locale

@@ -4,7 +4,7 @@ module Public
   class PagesController < ApplicationController
     def show
       @page = Content::Page.scoped_to(current_account).find_by!(permalink: params[:id])
-      @articles = @page.articles
+      @articles = @page.articles.decorate
     end
 
     private

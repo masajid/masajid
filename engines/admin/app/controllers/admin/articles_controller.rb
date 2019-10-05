@@ -7,7 +7,7 @@ module Admin
     def index
       authorize Content::Article
 
-      @articles = policy_scope(Content::Article)
+      @articles = policy_scope(Content::Article).decorate
     end
 
     def new
@@ -48,7 +48,9 @@ module Admin
           :slug,
           :summary,
           :body,
+          :video_link,
           :published_at,
+          :photo,
           seo_content_attributes: [:id, :meta_title, :meta_description],
           page_ids: []
         ).merge(account: current_account)

@@ -1,0 +1,36 @@
+<div class='container'>
+  <div class='header'>
+    <% if @account.logo.present?  %>
+      <%= image_tag main_app.url_for(@account.logo.variant(resize: '200x')) %>
+    <% else %>
+      <h1><%= @account.mosque %></h1>
+    <% end %>
+  </div>
+
+  <div class='content'>
+    <% if @newsletter.photo.present?  %>
+      <%= image_tag main_app.url_for(@newsletter.photo.variant(resize: '200x')), class: 'content__image' %>
+    <% end %>
+
+    <% if @newsletter.body.present? %>
+      <div class='content__body'><%= sanitize @newsletter.body %></div>
+    <% end %>
+
+    <% if @newsletter.link.present? && @newsletter.link_text.present? %>
+      <div class='content__link'>
+        <%= link_to @newsletter.link_text, @newsletter.link, class: 'btn btn-primary btn-sm', target: '_blank' %>
+      </div>
+    <% end %>
+  </div>
+
+  <% if @newsletter.articles.present?  %>
+    <ul class='articles'>
+      <% @newsletter.articles.each do |article|  %>
+        <li><%= link_to article.title, prefix_link_with_account_domain(@account, "/article/#{article.slug}"), target: '_blank' %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <!-- TODO: add footer -->
+  <div class='footer'></div>
+</div>

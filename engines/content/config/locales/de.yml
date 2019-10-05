@@ -14,6 +14,9 @@ de:
       content/city:
         one: City
         other: Cities
+      content/newsletter:
+        one: Newsletter
+        other: Newsletters
       content/page:
         one: Menu Item
         other: Menu
@@ -36,10 +39,9 @@ de:
         slug: Slug
         summary: Summary
         body: Content
-        meta_title: Meta Title
-        meta_keywords: Meta Keywords
-        meta_description: Meta Description
+        video_link: Video embed URL
         published_at: Publication Date
+        photo: Photo
       content/account:
         subdomain: Subdomain
         email: Email Address
@@ -62,6 +64,14 @@ de:
         admin_locale: Administration Language
       content/country:
         name: Country Name
+      content/newsletter:
+        article_ids: Articles
+        body: Email Body
+        link: Link
+        link_text: Link Text
+        date: Sending Date
+        sent_at: Sent
+        subject: Subject
       content/page:
         ancestry: Ancestry
         description: Description
@@ -129,6 +139,12 @@ de:
           attributes:
             address1:
               geocoding_failed: geocoding failed
+        content/newsletter:
+          attributes:
+            body:
+              blank: is required if you don't select articles
+            date:
+              inclusion: must be in future
   content:
     account_mailer:
       accept_entry:
@@ -166,6 +182,10 @@ de:
         header: Edit Country
       new:
         header: New Country
+    dashboards:
+      index:
+        visits: Number of visits
+        empty_visits: No body visited your website yet
     pages:
       edit:
         header: Edit Menu Item
@@ -190,9 +210,12 @@ de:
     pundit:
       unauthorized: You are not authorized to perform this action
     shared:
+      administration: Administration
+      view_site: View Site
       are_you_sure: Are you sure?
       total: 'Total: %{count}'
     tabs:
+      dashboard: Dashboards
       general: General
   landing:
     admin_panel: Admin panel
@@ -223,6 +246,7 @@ de:
         headline: It's ready
         content: Your site for your masjid is ready to go.
   public:
+    continued: '... (continued)'
     read_more: Continue reading
   shared:
     actions:
@@ -240,6 +264,8 @@ de:
     volunteers:
       new:
         header: Volunteering
+    say_no: Nein
+    say_yes: Ja
   devise:
     actions:
       login: Sign in
@@ -339,6 +365,9 @@ de:
         meta_title_html: The content for the homepage's HTML <mark>&lt;title&gt;</mark> tag, which is used by search engines.
         meta_description: The summary text that accompanies your homepage link in search engine results pages (SERPs).
       content/article:
+        video_link_html: |
+          e.g. <mark>https://www.youtube.com/embed/M1M9n-wUhy0</mark>,
+          <mark>https://player.vimeo.com/video/103525883</mark>
         slug_html: |
           A slug is a part of a URL that identifies a page using human-readable words, and it is used for SEO purposes.
           For example, in the web address <mark>https://example.com/article/the-islam-way</mark>, the slug would be the <mark>the-islam-way part</mark>.

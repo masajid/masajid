@@ -2,7 +2,7 @@
   <div class='sidebar-sticky'>
     <ul class='nav flex-column'>
       <%= nav_item(
-        text: 'Dashboards*',
+        text: t('admin.tabs.dashboard'),
         path: root_path,
         active: request.path == '/admin/',
       ) if policy([:content, :dashboard]).index? %>
@@ -36,6 +36,12 @@
         path: subscribers_path,
         active: request.path.starts_with?('/admin/subscribers'),
       ) if policy(Content::Subscriber).index? %>
+
+      <%= nav_item(
+        text: plural_resource_name(Content::Newsletter),
+        path: newsletters_path,
+        active: request.path.starts_with?('/admin/newsletters'),
+      ) if policy(Content::Newsletter).index? %>
     </ul>
 
     <h6 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted'>

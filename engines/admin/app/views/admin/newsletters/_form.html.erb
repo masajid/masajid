@@ -1,0 +1,34 @@
+<%= simple_form_for newsletter do |f| %>
+  <%= f.error_notification %>
+
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= f.input :subject %>
+    </div>
+
+    <div class='col-md-6'>
+      <%= f.input :date %>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-md-6'>
+      <div class='mb-3'>
+        <%= f.input :photo %>
+        <%= image_tag main_app.url_for(f.object.photo.variant(resize: '200x')) if f.object.photo.attached? %>
+      </div>
+
+      <%= f.input :link %>
+      <%= f.input :link_text %>
+
+      <%= f.input :body, as: :hidden %>
+      <trix-editor input='newsletter_body'></trix-editor>
+    </div>
+
+    <div class='col-md-6'>
+      <%= f.input :article_ids, as: :check_boxes, collection: policy_scope(Content::Article).map { |article| [article.title, article.id] } %>
+    </div>
+  </div>
+
+  <%= f.button :submit, class: 'btn-primary', disabled: f.object.readonly? %>
+<% end %>
