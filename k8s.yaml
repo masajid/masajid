@@ -40,11 +40,14 @@ spec:
       storage: 5Gi
 ---
 kind: Deployment
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 metadata:
   name: postgres
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
   template:
     metadata:
       labels:
