@@ -108,6 +108,8 @@ spec:
         env:
         - name: SECRET_KEY_BASE
           value: "4e780cbf15d17e0654e47411bd71fd4b99172369068378cf24afe8ac7ed3adc342de8392b0bbd13d0c62400dd99565ba07abc7fe4121f23594de35e374bedfd6"
+        - name: PROJECT_HOSTNAME
+          value: "localhost:3000"
         - name: POSTGRES_USER
           value: "postgresadmin"
         - name: POSTGRES_PASSWORD
@@ -118,6 +120,8 @@ spec:
           value: "postgres"
         - name: SUPER_ADMIN_EMAIL
           value: "admin@theopenmasjid.com"
+        - name: SUPER_ADMIN_PASSWORD
+          value: "masajid"
         - name: ADMIN_SENDER_EMAIL
           value: "admin@gmail.com"
         - name: ADMIN_NOTIFICATION_EMAILS
