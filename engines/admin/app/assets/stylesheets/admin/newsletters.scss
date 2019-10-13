@@ -4,13 +4,13 @@
   .newsletter_date,
   .newsletter_photo {
     label {
-      @extend .font-weight-bold;
+      font-weight: bold;
     }
   }
 
   .newsletter_article_ids {
     legend {
-      @extend .font-weight-bold;
+      font-weight: bold;
     }
   }
 }
