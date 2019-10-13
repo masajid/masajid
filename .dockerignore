@@ -3,3 +3,4 @@
 web_container/.byebug_history
 web_container/log/*
 web_container/tmp/*
+web_container/config/master.key

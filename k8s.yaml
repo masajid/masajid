@@ -106,8 +106,10 @@ spec:
         ports:
         - containerPort: 3000
         env:
-        - name: SECRET_KEY_BASE
-          value: "4e780cbf15d17e0654e47411bd71fd4b99172369068378cf24afe8ac7ed3adc342de8392b0bbd13d0c62400dd99565ba07abc7fe4121f23594de35e374bedfd6"
+        - name: RAILS_SERVE_STATIC_FILES
+          value: "true"
+        - name: RAILS_MASTER_KEY
+          value: "7c7b183f59c356cc7277279711d0ace4"
         - name: PROJECT_HOSTNAME
           value: "localhost:3000"
         - name: POSTGRES_USER
@@ -119,7 +121,7 @@ spec:
         - name: POSTGRES_HOST
           value: "postgres"
         - name: SUPER_ADMIN_EMAIL
-          value: "admin@theopenmasjid.com"
+          value: "admin@masajid.com"
         - name: SUPER_ADMIN_PASSWORD
           value: "masajid"
         - name: ADMIN_SENDER_EMAIL
