@@ -27,6 +27,3 @@ web_container/config/master.key
 
 # Ignore environment variables
 web_container/.env
-
-# Ignore google cloud configuration file
-web_container/app.yaml
