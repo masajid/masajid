@@ -39,8 +39,8 @@ Make sure to have docker installed in your computer, then do following:
 
 ```
 $ docker-compose up
-$ docker-compose run app rails db:setup
-$ docker-compose run app rails content_places:import only=countries
+$ docker-compose run --rm app rails db:setup
+$ docker-compose run --rm app rails content_places:import only=countries
 ```
 
 ## Deployment
