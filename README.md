@@ -38,9 +38,15 @@ other steps:
 Make sure to have docker installed in your computer, then do following:
 
 ```
-$ docker-compose up
+$ docker-compose up --build
 $ docker-compose run --rm app rails db:setup
 $ docker-compose run --rm app rails content_places:import only=countries
+
+# More commands
+$ docker-compose up -d db redis
+$ docker-compose build app sidekiq
+$ docker-compose up -d app sidekiq
+$ docker-compose logs -f app
 ```
 
 ## Deployment
