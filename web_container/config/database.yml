@@ -20,7 +20,7 @@ production:
   encoding: unicode
   pool: 5
   timeout: 5000
+  host: <%= ENV['POSTGRES_HOST'] %>
   database: <%= ENV['POSTGRES_DATABASE'] %>
   username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
-  host: <%= ENV['POSTGRES_HOST'] %>

@@ -12,8 +12,6 @@ Website: https://masajid.world
 
 ## Setup
 
-Make sure to have docker installed in your computer, then do following:
-
 ```
 $ git clone git@github.com:mgharbik/masajid.git
 $ cd masajid/web_container
@@ -35,9 +33,19 @@ other steps:
 - visit `http://masajid.local:3000/admin`, credentials: `admin@masajid.com`/`masajid`
 - visit `http://al-nour.masajid.local:3000`
 
+### Via docker
+
+Make sure to have docker installed in your computer, then do following:
+
+```
+$ docker-compose up
+$ docker-compose run app rails db:setup
+$ docker-compose run app rails content_places:import only=countries
+```
+
 ## Deployment
 
-### Emails
+## Emails
 
 - https://www.mailjet.com
 - free forever: 6000 emails per months / 200 per day
