@@ -13,4 +13,6 @@ Rails.application.routes.draw do
     mount Flipper::UI.app(Content.flipper) => '/flipper'
     mount Sidekiq::Web => '/sidekiq'
   end
+
+  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 end
