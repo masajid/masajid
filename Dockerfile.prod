@@ -11,7 +11,7 @@ RUN apt-get update -yqq \
 RUN mkdir -p /app/web_container
 WORKDIR /app/web_container
 
-COPY web_container/Gemfile* .
+COPY web_container/Gemfile* ./
 COPY engines ../engines
 
 ARG RAILS_ENV

@@ -101,7 +101,7 @@ spec:
     spec:
       containers:
       - name: masajid-frontend
-        image: masajid-frontend:v0.1
+        image: eu.gcr.io/masajid-252320/masajid:1.0.1
         imagePullPolicy: Never
         ports:
         - containerPort: 3000
