@@ -5,9 +5,10 @@ metadata:
   labels:
     app: postgres
 data:
-  POSTGRES_DB: postgresdb
-  POSTGRES_USER: postgresadmin
-  POSTGRES_PASSWORD: admin123
+  POSTGRES_HOST: postgres
+  POSTGRES_DB: masajid
+  POSTGRES_USER: masajid
+  POSTGRES_PASSWORD: CPnmdlABCmSCl419
 ---
 kind: PersistentVolume
 apiVersion: v1
@@ -56,19 +57,20 @@ spec:
       containers:
         - name: postgres
           image: postgres:10.4
-          imagePullPolicy: "IfNotPresent"
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5432
           envFrom:
             - configMapRef:
                 name: postgres-config
           volumeMounts:
-            - mountPath: /var/lib/postgresql/data
-              name: postgredb
+            - name: postgres-storage
+              mountPath: /var/lib/postgresql/data
       volumes:
-        - name: postgredb
-          persistentVolumeClaim:
-            claimName: postgres-pv-claim
+        - name: postgres-storage
+          gcePersistentDisk:
+            fsType: ext4
+            pdName: postgres-disk
 ---
 kind: Service
 apiVersion: v1
@@ -101,8 +103,9 @@ spec:
     spec:
       containers:
       - name: masajid-frontend
+
         image: eu.gcr.io/masajid-252320/masajid:1.0.1
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
         env:
@@ -113,9 +116,9 @@ spec:
         - name: PROJECT_HOSTNAME
           value: "localhost:3000"
         - name: POSTGRES_USER
-          value: "postgresadmin"
+          value: "masajid"
         - name: POSTGRES_PASSWORD
-          value: "admin123"
+          value: "CPnmdlABCmSCl419"
         - name: POSTGRES_DATABASE
           value: "masajid"
         - name: POSTGRES_HOST
