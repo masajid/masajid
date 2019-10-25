@@ -35,7 +35,7 @@ other steps:
 
 ## Deployment
 
-### Emails
+## Emails
 
 - https://www.mailjet.com
 - free forever: 6000 emails per months / 200 per day
