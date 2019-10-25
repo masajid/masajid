@@ -17,11 +17,11 @@ services:
     build: .
     env_file: web_container/.env
     volumes:
-    - .:/app
+      - .:/app
     command: sidekiq -C config/sidekiq.yml
     depends_on:
-    - db
-    - redis
+      - db
+      - redis
 
   app:
     build: .
