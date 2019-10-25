@@ -1,18 +1,21 @@
 rvm:
   - 2.6.3
 
+cache:
+  - bundler
+
+services:
+  - postgresql
+
 gemfile:
   - web_container/Gemfile
 
-env:
-  - DB=postgresql
-
 script:
-  - RAILS_ENV=test bundle exec rake db:create db:migrate
   - bundle exec rspec spec
 
 before_script:
-  - cp web_container/.env.example web_container/.env
+  - cp config/database.yml.travis config/database.yml
+  - RAILS_ENV=test bundle exec rake db:create db:migrate
 
 before_install:
   - cd $(dirname $BUNDLE_GEMFILE)
