@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:1.11.8
+    env_file: web_container/.env.prod
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - assets:/usr/share/nginx/html
+      - configs:/etc/nginx/conf.d
+
+  prod_db:
+    image: postgres:11
+    env_file: web_container/.env.prod
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  prod_redis:
+    image: redis:5.0
+    command: redis-server
+    volumes:
+      - redis:/data
+
+  prod_sidekiq:
+    build: .
+    env_file: web_container/.env.prod
+    volumes:
+      - .:/app
+    command: sidekiq -C config/sidekiq.yml
+    depends_on:
+      - prod_db
+      - prod_redis
+
+  prod_app:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    env_file: web_container/.env.prod
+    volumes:
+      - assets:/usr/share/nginx/html
+      - configs:/etc/nginx/conf.d
+    ports:
+      - 3000:3000
+    depends_on:
+      - prod_db
+      - prod_redis
+      - nginx
+
+volumes:
+  db-data:
+  redis:
+  assets:
+  configs:

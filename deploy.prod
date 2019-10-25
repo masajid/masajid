@@ -1,0 +1,81 @@
+# Need to build the image first
+# docker build -t masajid:1 .
+# docker build --file=Dockerfile.prod --build-arg="RAILS_MASTER_KEY=7c7b183f59c356cc7277279711d0ace4" -t masajid:1 .
+
+
+# docker-compose -f docker-compose.prod.yml up -d prod_db prod_redis nginx
+# docker-compose -f docker-compose.prod.yml run --rm prod_app rails db:setup
+# kubectl create configmap masajid-config \
+  --from-literal=postgres_host=postgres \
+  --from-literal=postgres_database=masajid \
+  --from-literal=postgres_user=masajid \
+  --from-literal=postgres_password=CPnmdlABCmSCl419 \
+  --from-literal=project_hostname=masajid.local:3000 \
+  --from-literal=super_admin_email=admin@masajid.com \
+  --from-literal=super_admin_password=masajid \
+  --from-literal=admin_sender_email=admin@gmail.com \
+  --from-literal=admin_notification_emails=admin@gmail.com,private@gmail.com,me@gmail.com \
+  --from-literal=mailjet_api_key=091e123850da5deb5373b15d5cd7e549 \
+  --from-literal=mailjet_secret_key=9e3df088906f46a6c7069469caac43a2 \
+  --from-literal=redis_url=redis://redis:6379/12 \
+  --from-literal=mapbox_access_token=pk.eyJ1IjoibWdoYXJiaWsiLCJhIjoiY2pyNWJncTdvMWhuNTQ0cmx3c2xta2hkaiJ9.JJz956L-n8pyAzYBoHDXhw \
+  --from-literal=rails_master_key=7c7b183f59c356cc7277279711d0ace4 \
+  --from-literal=rails_serve_static_files=true \
+  --from-literal=rails_env=production \
+  --from-literal=pgdata=/var/lib/postgresql/data/pgdata
+
+# kubectl get configmap masajid-config -o yaml
+
+# kubectl create -f deployments/masajid.yml
+# kubectl get deployments
+# kubectl get pods
+
+
+# kubectl create -f services/masajid.yml
+# kubectl get services
+# minikube service masajid --url
+
+# kubectl create -f deployments/postgres.yml
+# kubectl describe pvc postgres-pv-claim
+# kubectl get pv
+# kubectl describe pv PV_ID
+# kubectl get pods
+
+# kubectl edit configmap masajid-config
+change host name by masajid, the name of postgres service
+# kubectl scale deployment/masajid --replicas=0; kubectl scale deployment/masajid --replicas=1
+
+# kubectl get pods
+# kubectl exec masajid-pods-app-222 -it -- env | grep POSTGRES_HOST
+# kubectl exec masajid-pods-app-222 -it rails db:setup
+
+
+# kubectl get pods
+# kubectl logs masajid-pods-app-222
+
+# kubectl create -f deployments/frontend.yml
+# minikube service frontend --url
+
+
+######
+# gcloud components list
+# gcloud components install kubectl
+# gcloud config set compute/zone europe-west3-a
+# gcloud config set compute/region europe-west3
+# gcloud config list
+# gcloud container clusters create masajid-kube
+# kubectl get pods
+# gcloud auth application-default login
+# gcloud compute disks create --size 200GB postgres-disk --zone europe-west3-a
+
+# docker build -t masajid-frontend:1.0.0 nginx/
+# docker tag masajid-frontend:1.0.0 eu.gcr.io/masajid-252320/masajid-frontend:1.0.0
+# gcloud docker -- push eu.gcr.io/masajid-252320/masajid-frontend:1.0.0
+
+# docker build --file=Dockerfile.prod --build-arg="RAILS_MASTER_KEY=7c7b183f59c356cc7277279711d0ace4" -t masajid:1.0.0 .
+# docker tag masajid:1.0.0 eu.gcr.io/masajid-252320/masajid:1.0.0
+# gcloud docker -- push eu.gcr.io/masajid-252320/masajid:1.0.0
+
+# kubectl apply -f k8s.yaml
+
+# kubectl exec masajid-frontend-5987b879c6-g7qwl --stdin --tty -- rails db:setup db:migrate

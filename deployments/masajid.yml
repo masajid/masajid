@@ -1,0 +1,95 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: masajid
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: masajid
+        tier: backend
+        track: stable
+    spec:
+      containers:
+        - name: masajid
+          image: us.gcr.io/masajid-252320/masajid:1.0.0
+          ports:
+            - name: rails
+              containerPort: 3000
+          env:
+            - name: POSTGRES_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: postgres_user
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: postgres_password
+            - name: POSTGRES_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: postgres_host
+            - name: POSTGRES_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: postgres_database
+            - name: RAILS_ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: rails_env
+            - name: RAILS_SERVE_STATIC_FILES
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: rails_serve_static_files
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: rails_master_key
+            - name: PROJECT_HOSTNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: project_hostname
+            - name: SUPER_ADMIN_EMAIL
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: super_admin_email
+            - name: SUPER_ADMIN_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: super_admin_password
+            - name: ADMIN_SENDER_EMAIL
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: admin_sender_email
+            - name: ADMIN_NOTIFICATION_EMAILS
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: admin_notification_emails
+            - name: MAILJET_API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: mailjet_api_key
+            - name: MAILJET_SECRET_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: mailjet_secret_key
+            - name: MAPBOX_ACCESS_TOKEN
+              valueFrom:
+                configMapKeyRef:
+                  name: masajid-config
+                  key: mapbox_access_token
