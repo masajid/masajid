@@ -4,9 +4,6 @@ rvm:
 cache:
   - bundler
 
-services:
-  - postgresql
-
 gemfile:
   - web_container/Gemfile
 
