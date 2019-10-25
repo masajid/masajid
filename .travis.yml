@@ -1,0 +1,16 @@
+rvm:
+  - 2.6.1
+
+gemfile:
+  - web_container/Gemfile
+
+env:
+  - DB=postgresql
+  - POSTGRES_USER=travis
+
+script:
+  - RAILS_ENV=test bundle exec rake db:create db:migrate
+  - bundle exec rspec spec
+
+before_install:
+  - cd $(dirname $BUNDLE_GEMFILE)
