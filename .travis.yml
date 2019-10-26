@@ -1,8 +1,7 @@
 rvm:
   - 2.6.3
 
-cache:
-  - bundler
+cache: bundler
 
 services:
   - postgresql
@@ -14,8 +13,8 @@ script:
   - bundle exec rspec spec
 
 before_script:
-  - cp config/database.yml.travis config/database.yml
   - RAILS_ENV=test bundle exec rake db:create db:migrate
 
 before_install:
+  - cp web_container/config/database.yml.travis $(dirname $BUNDLE_GEMFILE)/config/database.yml
   - cd $(dirname $BUNDLE_GEMFILE)
