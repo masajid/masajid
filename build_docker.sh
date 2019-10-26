@@ -2,7 +2,7 @@ set -ex
 
 APP_NAME=$(cat name)
 VERSION=$(cat version)
-RAILS_MASTER_KEY=$(cat .rails_master_key)  # TODO: use secrets
+RAILS_MASTER_KEY=$(cat web_container/config/master.key)
 
 echo $RAILS_MASTER_KEY
 
