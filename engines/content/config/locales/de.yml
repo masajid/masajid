@@ -163,7 +163,7 @@ de:
           <p>If you disagree or you have any concern please get in touch with us!</p>
           <p>Thanks for your undestanding!</p>
       notify_creation_new_entry:
-        subject: Masajid - New account was created
+        subject: Masajid - New account %{mosque} was created
         header: Hi Admin,
         body: A new account was created.
         cta_text: See details

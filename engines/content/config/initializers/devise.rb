@@ -9,7 +9,7 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '7cd5bc0922c1a4a3222c651e4b954fded4da7ec35e13aa795acc8046cddb5c0980a37a9de967932dc9c66b1e0d6bcecb0439a75c53fd6df5086efc6dcc09f3a7'
-  
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   config.parent_controller = 'Landing::ApplicationController'
