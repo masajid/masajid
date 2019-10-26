@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:11
+    env_file: web_container/.env
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:5.0
+    command: redis-server
+    volumes:
+      - redis:/data
+
+  sidekiq:
+    build: .
+    env_file: web_container/.env
+    volumes:
+    - .:/app
+    command: sidekiq -C config/sidekiq.yml
+    depends_on:
+    - db
+    - redis
+
+  app:
+    build: .
+    env_file: web_container/.env
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+      - redis
+
+volumes:
+  redis:
+  db-data:
