@@ -33,7 +33,23 @@ other steps:
 - visit `http://masajid.local:3000/admin`, credentials: `admin@masajid.com`/`masajid`
 - visit `http://al-nour.masajid.local:3000`
 
-## Deployment
+## Translations
+
+1. Install Tansifex [here](https://docs.transifex.com/client/installing-the-client)
+
+1. Add translations to `engines/content/config/locales/en.yml` and push:
+
+```
+$ cd web_container
+$ tx push -s
+```
+
+1. After being translated they can be pulled:
+
+```
+$ cd web_container
+$ tx pull -a
+```
 
 ## Emails
 

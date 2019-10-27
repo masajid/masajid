@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+
+[masajid.en-yml]
+file_filter = ../engines/content/config/locales/<lang>.yml
+minimum_perc = 0
+source_file = ../engines/content/config/locales/en.yml
+source_lang = en
+type = YML
