@@ -1,6 +1,6 @@
 set -ex
 
-cd /home/travis/build/masajid/masajid
+git reset HEAD --hard
 openssl aes-256-cbc -K $encrypted_01c4308a40f4_key -iv $encrypted_01c4308a40f4_iv -in service-account.json.enc -out service-account.json -d
 curl https://sdk.cloud.google.com | bash > /dev/null;
 source $HOME/google-cloud-sdk/path.bash.inc
