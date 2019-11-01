@@ -8,3 +8,6 @@ production:
 - default
 - mailers
 - newsletters
+- active_storage_analysis
+- active_storage_purge
+- ahoy
