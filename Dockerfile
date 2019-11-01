@@ -16,4 +16,4 @@ RUN bundle install
 COPY web_container .
 
 EXPOSE 3000
-CMD rails s -b 0.0.0.0
+CMD rm -f tmp/pids/server.pid && rails s -b 0.0.0.0
