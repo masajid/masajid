@@ -8,6 +8,6 @@ local:
 
 google:
   service: GCS
-  project: <%= ENV['GCS_PROJECT_ID']
+  project: <%= ENV['GCS_PROJECT_ID'] %>
   credentials: <%= ENV['GCS_CREDENTIALS'].as_json %>
-  bucket: <%= ENV['GCS_BUCKET_NAME']
+  bucket: <%= ENV['GCS_BUCKET_NAME'] %>
