@@ -12,7 +12,7 @@ development:
   database: masajid_development
 
 test:
-  <<: *default
+  adapter: sqlite3
   database: masajid_test
 
 production:

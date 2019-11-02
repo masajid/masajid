@@ -11,21 +11,14 @@ env:
     - SHA=$(git rev-parse --short HEAD)
     - CLOUDSDK_CORE_DISABLE_PROMPTS=1
 
-gemfile:
-  - web_container/Gemfile
-
 script:
   - bundle exec rspec spec
 
 before_script:
-  - RAILS_ENV=test bundle exec rake db:create db:migrate
-
-before_install:
-  - cp web_container/config/database.yml.travis $(dirname $BUNDLE_GEMFILE)/config/database.yml
-  - cd $(dirname $BUNDLE_GEMFILE)
+  - cd web_container && RAILS_ENV=test bundle exec rake db:create db:migrate
 
 deploy:
   provider: script
-  script: ./deploy.sh
+  script: sh deploy.sh
   on:
     branch: chore/travis_ci_test_deploy
