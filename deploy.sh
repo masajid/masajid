@@ -6,7 +6,7 @@ docker build \
   -t eu.gcr.io/${GKE_PROJECT_ID}/masajid:latest \
   -t eu.gcr.io/${GKE_PROJECT_ID}/masajid:${SHA} .
 
-docker push eu.gcr.io/${GKE_PROJECT_ID}/masajid:${SHA}
-docker push eu.gcr.io/${GKE_PROJECT_ID}/masajid:latest
+gcloud docker -- push eu.gcr.io/${GKE_PROJECT_ID}/masajid:${SHA}
+gcloud docker -- push eu.gcr.io/${GKE_PROJECT_ID}/masajid:latest
 
 kubectl set image deployment/masajid-frontend masajid=eu.gcr.io/${GKE_PROJECT_ID}/masajid:${SHA}
