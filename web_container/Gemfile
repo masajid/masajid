@@ -22,6 +22,7 @@ gem 'flipper-ui', '~> 0.17.1'
 gem 'whenever', require: false
 
 group :production do
+  gem 'google-cloud-storage', '~> 1.22', require: false
   gem 'mailjet'
 end
 
