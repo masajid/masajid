@@ -1,5 +1,5 @@
 <% content_for :page_title do %>
-  <%= @article.title %>
+  <%= link_to @article.title, prefix_link_with_account_domain(current_account, "/article/#{@article.slug}"), target: '_blank' %>
 <% end %>
 
 <% content_for :page_actions do %>
@@ -7,4 +7,3 @@
 <% end %>
 
 <%= render 'form', article: @article %>
-
