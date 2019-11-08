@@ -4,6 +4,8 @@ module Admin
   class ConfigurationsController < ApplicationController
     def update
       if current_account.update(configuration_params)
+        uploaded_logo = params.dig(:account, :configuration_attributes, :logo)
+        current_account.configuration.logo.attach(uploaded_logo) if uploaded_logo.present?
         redirect_to edit_configuration_url, notice: 'General configuration were successfully updated.'
       else
         render :edit
