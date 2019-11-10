@@ -31,6 +31,6 @@ before_deploy:
 
 deploy:
   provider: script
-  script: chmod +x deploy.sh && sh deploy.sh
+  script: sh deploy.sh
   on:
     branch: chore/travis_ci_test_deploy
