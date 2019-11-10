@@ -8,7 +8,7 @@ env:
     - SHA=$(git rev-parse --short HEAD)
     - CLOUDSDK_CORE_DISABLE_PROMPTS=1
 
-before_install:
+before_deploy:
   - openssl aes-256-cbc -K $encrypted_01c4308a40f4_key -iv $encrypted_01c4308a40f4_iv -in service-account.json.enc -out service-account.json -d
   - curl https://sdk.cloud.google.com | bash > /dev/null;
   - source $HOME/google-cloud-sdk/path.bash.inc
@@ -16,17 +16,11 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project ${GKE_PROJECT_ID}
   - gcloud config set compute/zone ${GKE_ZONE}
+  - gcloud config set compute/cluster ${GKE_CLUSTER}
   - gcloud container clusters get-credentials ${GKE_CLUSTER}
-  - cd web_container
-
-script:
-  - bundle exec rspec spec
-
-before_deploy:
-  - cd ..
 
 deploy:
   provider: script
-  script: sh deploy.sh
+  script: chmod +x deploy.sh && sh deploy.sh
   on:
     branch: chore/travis_ci_test_deploy
