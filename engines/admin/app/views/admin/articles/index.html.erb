@@ -23,7 +23,7 @@
     <tbody>
       <% @articles.each do |article| %>
         <tr>
-          <td><%= article.title %></td>
+          <td><%= link_to article.title, prefix_link_with_account_domain(current_account, "/article/#{article.slug}"), target: '_blank' %></td>
           <td><%= article.summary %></td>
           <td><%= article.published_at %></td>
           <td><%= article.views_count %></td>

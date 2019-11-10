@@ -50,7 +50,7 @@
 <main role='main'>
   <div class='row'>
     <div class='col-md-8'>
-      <%= render partial: 'public/articles/article', collection: @articles %>
+      <%= render partial: 'public/pages/article', collection: @articles %>
 
       <%= will_paginate @articles, previous_label: '&laquo;', next_label: '&raquo;' %>
     </div>
