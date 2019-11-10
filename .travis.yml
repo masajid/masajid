@@ -23,7 +23,6 @@ before_deploy:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project ${GKE_PROJECT_ID}
   - gcloud config set compute/zone ${GKE_ZONE}
-  - gcloud config set compute/cluster ${GKE_CLUSTER}
   - gcloud container clusters get-credentials ${GKE_CLUSTER}
 
 deploy:
