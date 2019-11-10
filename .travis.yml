@@ -3,6 +3,9 @@ rvm:
 
 cache: bundler
 
+services:
+  - docker
+
 env:
   global:
     - SHA=$(git rev-parse --short HEAD)
@@ -21,6 +24,7 @@ before_deploy:
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
+  - gcloud auth configure-docker
   - gcloud config set project ${GKE_PROJECT_ID}
   - gcloud config set compute/zone ${GKE_ZONE}
   - gcloud container clusters get-credentials ${GKE_CLUSTER}
