@@ -15,6 +15,7 @@ require 'bootstrap-email'
 require 'ahoy_matey'
 require 'draper'
 require 'image_processing'
+require 'translation'
 
 module Content
   require 'content/engine'
