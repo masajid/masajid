@@ -210,41 +210,41 @@ fr:
         other: Volunteers
     attributes:
       content/article:
-        title: Title
+        title: Titre
         slug: Slug
-        summary: Summary
+        summary: Résumé
         body: Content
         video_link: Video embed URL
         published_at: Publication Date
         photo: Photo
       content/account:
-        subdomain: Subdomain
-        email: Email Address
-        responsable: Responsable Name
-        mosque: Mosque Name
+        subdomain: Sous-domaine
+        email: Adresse e-mail
+        responsable: Nom du responsable
+        mosque: Nom de la mosquée
       content/address:
-        address1: Address
-        zip_code: Zip Code
-        phone: Phone Number
-        city_name: City
-        region_name: Region
-        country_id: Country
+        address1: Adresse
+        zip_code: Code postal
+        phone: Numéro de téléphone
+        city_name: Ville
+        region_name: Région
+        country_id: Pays
       content/configuration:
         logo: Logo
-        about_us: About us
-        mawaqit_link: Link Mawakit
-        theme: Theme
+        about_us: À propos de nous
+        mawaqit_link: Lien Mawakit
+        theme: Thème
         supported_locales: Supported Languages
-        default_locale: Default Language
-        admin_locale: Administration Language
+        default_locale: Langage par défaut
+        admin_locale: Langage d'administration
       content/country:
-        name: Country Name
+        name: Pays
       content/newsletter:
         article_ids: Articles
         body: Email Body
-        link: Link
+        link: Lien
         link_text: Link Text
-        date: Sending Date
+        date: Date d'envoi
         sent_at: Sent
         subject: Subject
       content/page:
@@ -259,7 +259,7 @@ fr:
       content/region:
         name: Region Name
       content/city:
-        name: City Name
+        name: Ville
         latitude: Latitude
         longitude: Longitude
       content/social_network:
