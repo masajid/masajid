@@ -41,7 +41,9 @@ other steps:
 $ rails translation:sync
 ```
 
-For more options please visit [translation.io repo](https://github.com/translation/rails#usage)
+- For more options please visit [https://github.com/translation/rails#usage](https://github.com/translation/rails#usage)
+
+- Translators should login to [https://translation.io](https://translation.io/)
 
 ## Emails
 
