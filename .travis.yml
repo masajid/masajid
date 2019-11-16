@@ -1,6 +1,8 @@
 rvm:
   - 2.6.3
 
+cache: bundler
+
 services:
   - docker
 
