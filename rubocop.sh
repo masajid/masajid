@@ -6,6 +6,7 @@ cd "$( dirname "${BASH_SOURCE[0]}" )"
 
 for gemfile in $(find . -name Gemfile); do
   pushd `dirname $gemfile` > /dev/null
+  bundle install | grep installing
   bundle exec rubocop
   result+=$?
   popd > /dev/null
