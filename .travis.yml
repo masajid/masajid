@@ -18,6 +18,9 @@ gemfile:
   - engines/landing/Gemfile
   - engines/public/Gemfile
 
+before_install:
+  - cd $(dirname $BUNDLE_GEMFILE)
+
 script:
   - bundle exec rubocop
 
