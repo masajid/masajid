@@ -34,4 +34,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'ahoy_matey'
   s.add_dependency 'draper'
   s.add_dependency 'image_processing', '~> 1.9.3'
+  s.add_dependency 'validates_timeliness'
 end

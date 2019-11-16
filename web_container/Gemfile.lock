@@ -30,6 +30,7 @@ PATH
       sidekiq
       simple_form
       stringex
+      validates_timeliness
     landing (0.1.0)
       bootstrap (~> 4.3.1)
       content
@@ -422,6 +423,7 @@ GEM
     thread_safe (0.3.6)
     thread_safe (0.3.6-java)
     tilt (2.0.9)
+    timeliness (0.4.3)
     trix-gem (0.11.2)
       rails (> 4.1, <= 6.0)
     turbolinks (5.2.1)
@@ -435,6 +437,8 @@ GEM
       unf_ext
     unf (0.1.4-java)
     unf_ext (0.0.7.6)
+    validates_timeliness (4.1.1)
+      timeliness (>= 0.3.10, < 1)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (4.0.1)
