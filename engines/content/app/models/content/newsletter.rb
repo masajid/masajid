@@ -8,7 +8,8 @@ module Content
 
     validates :subject, presence: true
     validates :body, presence: true, if: -> { articles.size.zero? }
-    validates :date, inclusion: { in: ->(_) { (Date.today..) } }, allow_blank: true
+    validates :date, timeliness: { on_or_after: :today, type: :date }, allow_blank: true
+
     validates :account, presence: true
 
     def readonly?

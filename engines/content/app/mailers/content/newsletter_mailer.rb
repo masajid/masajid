@@ -9,7 +9,7 @@ module Content
       make_bootstrap_mail(
         from: @account.email,
         to: subscriber.email,
-        subject: newsletter.subject,
+        subject: newsletter.subject
       )
     end
   end

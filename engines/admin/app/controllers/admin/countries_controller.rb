@@ -38,12 +38,13 @@ module Admin
     end
 
     private
-      def set_country
-        @country = authorize Content::Country.find(params[:id])
-      end
 
-      def country_params
-        params.require(:country).permit(:name)
-      end
+    def set_country
+      @country = authorize Content::Country.find(params[:id])
+    end
+
+    def country_params
+      params.require(:country).permit(:name)
+    end
   end
 end

@@ -48,12 +48,13 @@ module Admin
     end
 
     private
-      def set_region
-        @region = authorize Content::Region.find(params[:id])
-      end
 
-      def region_params
-        params.require(:region).permit(:name, :country_id)
-      end
+    def set_region
+      @region = authorize Content::Region.find(params[:id])
+    end
+
+    def region_params
+      params.require(:region).permit(:name, :country_id)
+    end
   end
 end

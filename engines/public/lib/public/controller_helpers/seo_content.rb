@@ -29,28 +29,29 @@ module Public
       end
 
       private
-        def accurate_title
-          @accurate_title ||= current_account.meta_title
+
+      def accurate_title
+        @accurate_title ||= current_account.meta_title
+      end
+
+      def put_site_name_in_title?
+        false
+      end
+
+      def meta_data
+        object = instance_variable_get('@' + controller_name.singularize)
+        meta = {}
+
+        if object.respond_to?(:meta_description) && object.meta_description.present?
+          meta[:description] = object.meta_description
         end
 
-        def put_site_name_in_title?
-          false
+        if meta[:description].blank?
+          meta[:description] = current_account.meta_description
         end
 
-        def meta_data
-          object = instance_variable_get('@' + controller_name.singularize)
-          meta = {}
-
-          if object.respond_to?(:meta_description) && object.meta_description.present?
-            meta[:description] = object.meta_description
-          end
-
-          if meta[:description].blank?
-            meta[:description] = current_account.meta_description
-          end
-
-          meta
-        end
+        meta
+      end
     end
   end
 end
