@@ -4,9 +4,10 @@ result=0
 
 cd "$( dirname "${BASH_SOURCE[0]}" )"
 
-for rubocop_script in $(find . -name rubocop.sh); do
-  pushd `dirname $rubocop_script` > /dev/null
-  ./rubocop.sh
+for gemfile in $(find . -name Gemfile); do
+  pushd `dirname $gemfile` > /dev/null
+  bundle install | grep installing
+  bundle exec rubocop
   result+=$?
   popd > /dev/null
 done
