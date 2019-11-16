@@ -13,10 +13,10 @@ env:
 
 gemfile:
   - web_container/Gemfile
-  - engines/admin/Gemfile
-  - engines/content/Gemfile
-  - engines/landing/Gemfile
-  - engines/public/Gemfile
+  #- engines/admin/Gemfile
+  #- engines/content/Gemfile
+  #- engines/landing/Gemfile
+  #- engines/public/Gemfile
 
 before_install:
   - cd $(dirname $BUNDLE_GEMFILE)
