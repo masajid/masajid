@@ -33,4 +33,4 @@ deploy:
   provider: script
   script: sh deploy.sh
   on:
-    branch: chore/travis_ci_test_deploy
+    branch: production
