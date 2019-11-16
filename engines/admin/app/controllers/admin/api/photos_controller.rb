@@ -12,9 +12,10 @@ module Admin
       end
 
       private
-        def photo_params
-          params.require(:photo).permit(:image)
-        end
+
+      def photo_params
+        params.require(:photo).permit(:image)
+      end
     end
   end
 end

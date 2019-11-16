@@ -9,7 +9,7 @@ module Content
     def prefix_link_with_account_domain(account, link = nil)
       [
         account_domain(account),
-        link,
+        link
       ].join
     end
 

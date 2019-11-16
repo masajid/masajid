@@ -58,12 +58,13 @@ module Admin
     end
 
     private
-      def set_city
-        @city = authorize Content::City.find(params[:id])
-      end
 
-      def city_params
-        params.require(:city).permit(:name, :latitude, :longitude, :country_id, :region_id)
-      end
+    def set_city
+      @city = authorize Content::City.find(params[:id])
+    end
+
+    def city_params
+      params.require(:city).permit(:name, :latitude, :longitude, :country_id, :region_id)
+    end
   end
 end

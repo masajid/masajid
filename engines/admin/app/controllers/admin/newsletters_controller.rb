@@ -38,12 +38,13 @@ module Admin
     end
 
     private
-      def set_newsletter
-        @newsletter = authorize Content::Newsletter.find(params[:id])
-      end
 
-      def newsletter_params
-        params.require(:newsletter).permit(:subject, :body, :link, :link_text, :date, :photo, article_ids: []).merge(account: current_account)
-      end
+    def set_newsletter
+      @newsletter = authorize Content::Newsletter.find(params[:id])
+    end
+
+    def newsletter_params
+      params.require(:newsletter).permit(:subject, :body, :link, :link_text, :date, :photo, article_ids: []).merge(account: current_account)
+    end
   end
 end
