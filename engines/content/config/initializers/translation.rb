@@ -1,5 +1,5 @@
 TranslationIO.configure do |config|
-  config.api_key        = 'c81a00b9194a42959d61f5b0c9441781'
+  config.api_key        = ENV['TRANSLATION_IO_API_KEY']
   config.source_locale  = 'en'
   config.target_locales = %w[de fr es ca it tr ar]
 
