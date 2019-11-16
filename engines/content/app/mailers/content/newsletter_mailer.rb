@@ -1,6 +1,6 @@
 module Content
   class NewsletterMailer < ApplicationMailer
-    add_template_helper(Content::AccountsHelper)
+    include Content::AccountsHelper
 
     def user_email(newsletter, subscriber)
       @newsletter = newsletter
@@ -9,7 +9,7 @@ module Content
       make_bootstrap_mail(
         from: @account.email,
         to: subscriber.email,
-        subject: newsletter.subject,
+        subject: newsletter.subject
       )
     end
   end

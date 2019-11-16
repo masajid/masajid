@@ -18,7 +18,7 @@
 
     <% if @newsletter.link.present? && @newsletter.link_text.present? %>
       <div class='content__link'>
-        <%= link_to @newsletter.link_text, @newsletter.link, class: 'btn btn-primary btn-sm', target: '_blank' %>
+        <%= link_to @newsletter.link_text, @newsletter.link, class: 'btn btn-primary btn-sm' %>
       </div>
     <% end %>
   </div>
@@ -26,7 +26,7 @@
   <% if @newsletter.articles.present?  %>
     <ul class='articles'>
       <% @newsletter.articles.each do |article|  %>
-        <li><%= link_to article.title, prefix_link_with_account_domain(@account, "/article/#{article.slug}"), target: '_blank' %></li>
+        <li><%= link_to article.title, prefix_link_with_account_domain(@account, "/article/#{article.slug}") %></li>
       <% end %>
     </ul>
   <% end %>

@@ -38,22 +38,23 @@ module Admin
     end
 
     private
-      def set_article
-        @article = authorize Content::Article.friendly.find(params[:id])
-      end
 
-      def article_params
-        params.require(:article).permit(
-          :title,
-          :slug,
-          :summary,
-          :body,
-          :video_link,
-          :published_at,
-          :photo,
-          seo_content_attributes: [:id, :meta_title, :meta_description],
-          page_ids: []
-        ).merge(account: current_account)
-      end
+    def set_article
+      @article = authorize Content::Article.friendly.find(params[:id])
+    end
+
+    def article_params
+      params.require(:article).permit(
+        :title,
+        :slug,
+        :summary,
+        :body,
+        :video_link,
+        :published_at,
+        :photo,
+        seo_content_attributes: %i[id meta_title meta_description],
+        page_ids: []
+      ).merge(account: current_account)
+    end
   end
 end

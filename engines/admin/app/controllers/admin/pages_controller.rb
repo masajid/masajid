@@ -5,7 +5,7 @@ module Admin
     protect_from_forgery with: :null_session, only: :sort
 
     include SortableTreeController::Sort
-    sortable_tree 'Content::Page', { parent_method: 'parent', sorting_attribute: 'position' }
+    sortable_tree 'Content::Page', parent_method: 'parent', sorting_attribute: 'position'
 
     before_action :set_page, only: %i[edit update destroy]
 
@@ -43,18 +43,19 @@ module Admin
     end
 
     private
-      def set_page
-        @page = authorize Content::Page.find(params[:id])
-      end
-  
-      def page_params
-        params.require(:page).permit(
-          :name,
-          :description,
-          :ancestry,
-          :permalink_part,
-          seo_content_attributes: [:id, :meta_title, :meta_description],
-        ).merge(account: current_account)
-      end
+
+    def set_page
+      @page = authorize Content::Page.find(params[:id])
+    end
+
+    def page_params
+      params.require(:page).permit(
+        :name,
+        :description,
+        :ancestry,
+        :permalink_part,
+        seo_content_attributes: %i[id meta_title meta_description]
+      ).merge(account: current_account)
+    end
   end
 end
