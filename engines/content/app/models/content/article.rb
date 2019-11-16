@@ -4,7 +4,7 @@ module Content
     extend FriendlyId
     friendly_id :title, use: [:history, :slugged]
 
-    VIEWS_TRACKING_EVENT_NAME = 'Viewed article'
+    VIEWS_TRACKING_EVENT_NAME = 'Viewed article'.freeze
 
     has_one_attached :photo
 

@@ -8,7 +8,7 @@ module Content
           begin
             block.call
           rescue Redis::CannotConnectError, Redis::TimeoutError => exception
-            puts "Redis error: #{exception.to_s}"
+            puts "Redis error: #{exception}"
 
             job.perform_now
           end

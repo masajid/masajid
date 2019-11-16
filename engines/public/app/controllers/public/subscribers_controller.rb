@@ -9,8 +9,9 @@ module Public
     end
 
     private
-      def subscriber_params
-        params.require(:subscriber).permit(:email).merge(account: current_account)
-      end
+
+    def subscriber_params
+      params.require(:subscriber).permit(:email).merge(account: current_account)
+    end
   end
 end
