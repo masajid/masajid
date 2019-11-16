@@ -13,12 +13,13 @@ module Admin
     end
 
     private
-      def set_social_network
-        @social_network = authorize current_account.social_network || current_account.build_social_network
-      end
 
-      def social_network_params
-        params.require(:social_network).permit(:youtube, :facebook, :google, :twitter, :vimeo, :instagram).merge(account: current_account)
-      end
+    def set_social_network
+      @social_network = authorize current_account.social_network || current_account.build_social_network
+    end
+
+    def social_network_params
+      params.require(:social_network).permit(:youtube, :facebook, :google, :twitter, :vimeo, :instagram).merge(account: current_account)
+    end
   end
 end

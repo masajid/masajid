@@ -19,11 +19,12 @@ module Public
     end
 
     private
-      def volunteer_params
-        params
-          .require(:volunteer)
-          .permit(policy([:content, :volunteer]).permitted_attributes)
-          .merge(account: current_account)
-      end
+
+    def volunteer_params
+      params
+        .require(:volunteer)
+        .permit(policy(%i[content volunteer]).permitted_attributes)
+        .merge(account: current_account)
+    end
   end
 end

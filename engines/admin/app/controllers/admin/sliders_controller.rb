@@ -13,12 +13,13 @@ module Admin
     end
 
     private
-      def set_slider
-        @slider = authorize current_account.slider || current_account.build_slider
-      end
 
-      def slider_params
-        params.require(:slider).permit(:title, :body, :photo, :link, :link_text).merge(account: current_account)
-      end
+    def set_slider
+      @slider = authorize current_account.slider || current_account.build_slider
+    end
+
+    def slider_params
+      params.require(:slider).permit(:title, :body, :photo, :link, :link_text).merge(account: current_account)
+    end
   end
 end

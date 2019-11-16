@@ -7,9 +7,10 @@ module Admin
     def index
       authorize Content::Account
 
-      @accounts = policy_scope(Content::Account)
-        .includes(:owner, address: :country)
-        .order('content_accounts.created_at DESC')
+      @accounts =
+        policy_scope(Content::Account)
+          .includes(:owner, address: :country)
+          .order('content_accounts.created_at DESC')
     end
 
     def update
@@ -38,30 +39,31 @@ module Admin
     end
 
     private
-      def set_account
-        @account = authorize Content::Account.find(params[:id])
-      end
 
-      def account_params
-        params.require(:account).permit(
-          :subdomain,
-          :email,
-          :mosque,
-          :responsable,
-          address_attributes: %i[id address1 zip_code phone city_name region_name country_id]
-        )
-      end
+    def set_account
+      @account = authorize Content::Account.find(params[:id])
+    end
 
-      def generate_raw_for_edit_password_url
-        user = @account.owner
+    def account_params
+      params.require(:account).permit(
+        :subdomain,
+        :email,
+        :mosque,
+        :responsable,
+        address_attributes: %i[id address1 zip_code phone city_name region_name country_id]
+      )
+    end
 
-        raw, enc = Devise.token_generator.generate(user.class, :reset_password_token)
+    def generate_raw_for_edit_password_url
+      user = @account.owner
 
-        user.reset_password_token = enc
-        user.reset_password_sent_at = Time.current
-        user.save(validate: false)
+      raw, enc = Devise.token_generator.generate(user.class, :reset_password_token)
 
-        raw
-      end
+      user.reset_password_token = enc
+      user.reset_password_sent_at = Time.current
+      user.save(validate: false)
+
+      raw
+    end
   end
 end

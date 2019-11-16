@@ -7,7 +7,7 @@ module Content
     def permitted_attributes
       [
         :name, :identification, :birthday, :address, :phone, :email, :education, :availability,
-        :experience, :experience_place, :other_languages, languages: [], experience_area: [],
+        :experience, :experience_place, :other_languages, languages: [], experience_area: []
       ]
     end
 

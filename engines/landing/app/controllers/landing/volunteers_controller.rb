@@ -19,8 +19,9 @@ module Landing
     end
 
     private
-      def volunteer_params
-        params.require(:volunteer).permit(policy([:content, :volunteer]).permitted_attributes)
-      end
+
+    def volunteer_params
+      params.require(:volunteer).permit(policy([:content, :volunteer]).permitted_attributes)
+    end
   end
 end
