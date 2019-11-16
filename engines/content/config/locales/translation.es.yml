@@ -162,6 +162,14 @@ es:
         restrict_dependent_destroy:
           has_one: No se puede eliminar el registro porque existe un %{record} dependiente
           has_many: No se puede eliminar el registro porque existen %{record} dependientes
+        invalid_date:
+        invalid_time:
+        invalid_datetime:
+        is_at:
+        before:
+        on_or_before:
+        after:
+        on_or_after:
       models:
         content/address:
           attributes:
@@ -663,3 +671,8 @@ es:
         header: Volunteering
     say_no:
     say_yes: Si
+  validates_timeliness:
+    error_value_formats:
+      datetime: "%Y-%m-%d %H:%M:%S"
+      date: "%Y-%m-%d"
+      time: "%H:%M:%S"

@@ -163,6 +163,14 @@ de:
           has_one: Datensatz kann nicht gelöscht werden, da ein abhängiger %{record}-Datensatz
             existiert.
           has_many: Datensatz kann nicht gelöscht werden, da abhängige %{record} existieren.
+        invalid_date:
+        invalid_time:
+        invalid_datetime:
+        is_at:
+        before:
+        on_or_before:
+        after:
+        on_or_after:
       models:
         content/address:
           attributes:
@@ -664,3 +672,8 @@ de:
         header: Volunteering
     say_no: Nein
     say_yes: Ja
+  validates_timeliness:
+    error_value_formats:
+      datetime: "%Y-%m-%d %H:%M:%S"
+      date: "%Y-%m-%d"
+      time: "%H:%M:%S"
