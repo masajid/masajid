@@ -6,11 +6,6 @@
 #
 ---
 ar:
-  validates_timeliness:
-    error_value_formats:
-      datetime:
-      date:
-      time:
   date:
     day_names:
     - الأحد

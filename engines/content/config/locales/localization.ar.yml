@@ -65,3 +65,8 @@ ar:
       default: "%a %b %d %H:%M:%S %Z %Y"
       long: "%d %B, %Y %H:%M"
       short: "%d %b %H:%M"
+  validates_timeliness:
+    error_value_formats:
+      date: "%Y-%m-%d"
+      time: "%H:%M:%S"
+      datetime: "%Y-%m-%d %H:%M:%S"

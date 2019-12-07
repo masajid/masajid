@@ -673,8 +673,3 @@ fr:
         header: Volunteering
     say_no: Non
     say_yes: Oui
-  validates_timeliness:
-    error_value_formats:
-      datetime: "%Y-%m-%d %H:%M:%S"
-      date: "%Y-%m-%d"
-      time: "%H:%M:%S"

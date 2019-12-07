@@ -103,3 +103,8 @@ fr:
   spree:
     date_picker:
       first_day: 0
+  validates_timeliness:
+    error_value_formats:
+      date: "%Y-%m-%d"
+      time: "%H:%M:%S"
+      datetime: "%Y-%m-%d %H:%M:%S"

@@ -6,11 +6,6 @@
 #
 ---
 ca:
-  validates_timeliness:
-    error_value_formats:
-      datetime:
-      date:
-      time:
   date:
     day_names:
     - Diumenge
@@ -199,7 +194,7 @@ ca:
         photo:
       content/account:
         subdomain:
-        email:
+        email: Correu electrònic
         responsable:
         mosque:
       content/address:

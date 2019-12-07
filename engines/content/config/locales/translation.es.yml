@@ -224,15 +224,15 @@ es:
         published_at: Publication Date
         photo: Photo
       content/account:
-        subdomain: Subdomain
-        email: Email Address
+        subdomain: Subdominio
+        email: Dirección de correo
         responsable: Responsable Name
-        mosque: Mosque Name
+        mosque: Nombre de la mezquita
       content/address:
-        address1: Address
+        address1: Dirección
         zip_code: Zip Code
         phone: Phone Number
-        city_name: City
+        city_name: Ciudad
         region_name: Region
         country_id: Country
       content/configuration:
@@ -671,8 +671,3 @@ es:
         header: Volunteering
     say_no:
     say_yes: Si
-  validates_timeliness:
-    error_value_formats:
-      datetime: "%Y-%m-%d %H:%M:%S"
-      date: "%Y-%m-%d"
-      time: "%H:%M:%S"
