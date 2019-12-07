@@ -34,6 +34,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'sidekiq'
   s.add_dependency 'simple_form'
   s.add_dependency 'stringex'
+  s.add_dependency 'translation'
   s.add_dependency 'validates_timeliness'
 
   s.add_development_dependency 'rubocop-rails'

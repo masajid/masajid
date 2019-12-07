@@ -16,6 +16,7 @@ require 'ahoy_matey'
 require 'draper'
 require 'image_processing'
 require 'validates_timeliness'
+require 'translation'
 
 module Content
   require 'content/engine'

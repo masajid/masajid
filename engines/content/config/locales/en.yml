@@ -134,6 +134,15 @@ en:
         french: French
         german: German
     errors:
+      messages:
+        invalid_date: is not a valid date
+        invalid_time: is not a valid time
+        invalid_datetime: is not a valid datetime
+        is_at: must be at %{restriction}
+        before: must be before %{restriction}
+        on_or_before: must be on or before %{restriction}
+        after: must be after %{restriction}
+        on_or_after: must be on or after %{restriction}
       models:
         content/address:
           attributes:
@@ -376,3 +385,8 @@ en:
       content/page:
         meta_title_html: The content for the page's HTML <mark>&lt;title&gt;</mark> tag, which is used by search engines.
         meta_description: The summary text that accompanies your page in search engine results pages (SERPs).
+  validates_timeliness:
+    error_value_formats:
+      date: '%Y-%m-%d'
+      time: '%H:%M:%S'
+      datetime: '%Y-%m-%d %H:%M:%S'

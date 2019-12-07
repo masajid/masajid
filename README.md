@@ -33,7 +33,17 @@ other steps:
 - visit `http://masajid.local:3000/admin`, credentials: `admin@masajid.com`/`masajid`
 - visit `http://al-nour.masajid.local:3000`
 
-## Deployment
+## Translations
+
+- Add or update translations, then sync:
+
+```
+$ rails translation:sync
+```
+
+- For more options please visit [https://github.com/translation/rails#usage](https://github.com/translation/rails#usage)
+
+- Translators should login to [https://translation.io](https://translation.io/)
 
 ## Emails
 
