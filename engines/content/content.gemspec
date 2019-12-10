@@ -37,5 +37,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'translation'
   s.add_dependency 'validates_timeliness'
 
-  s.add_development_dependency 'rubocop-rails'
+  s.add_development_dependency 'rubocop-rails', '~> 2.4.0'
 end

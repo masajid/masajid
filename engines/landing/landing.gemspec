@@ -28,5 +28,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'bootstrap', '~> 4.3.1'
   spec.add_dependency 'content'
 
-  spec.add_development_dependency 'rubocop-rails'
+  spec.add_development_dependency 'rubocop-rails', '~> 2.4.0'
 end

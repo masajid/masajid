@@ -26,5 +26,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'sortable_tree_rails'
   s.add_dependency 'trix-gem'
 
-  s.add_development_dependency 'rubocop-rails'
+  s.add_development_dependency 'rubocop-rails', '~> 2.4.0'
 end
