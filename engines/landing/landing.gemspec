@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors     = ['Gharbi Mohammed']
   spec.email       = ['mgharbik@gmail.com']
   spec.homepage    = 'https://masajid.world'
-  spec.summary     = 'Public application'
+  spec.summary     = 'Landing UI'
   spec.description = spec.summary
   spec.license     = 'MIT'
 
@@ -27,6 +27,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'bootstrap', '~> 4.3.1'
   spec.add_dependency 'content'
+  spec.add_dependency 'flag-icons-rails', '~> 3.1.0'
 
   spec.add_development_dependency 'rubocop-rails', '~> 2.4.0'
 end

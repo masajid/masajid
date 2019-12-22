@@ -35,6 +35,7 @@ PATH
     landing (0.1.0)
       bootstrap (~> 4.3.1)
       content
+      flag-icons-rails (~> 3.1.0)
     public (0.1.0)
       bootstrap (~> 4.3.1)
       bootswatch
@@ -184,6 +185,8 @@ GEM
     ffi (1.11.3-java)
     ffi (1.11.3-x64-mingw32)
     ffi (1.11.3-x86-mingw32)
+    flag-icons-rails (3.1.0)
+      sass (~> 3.2)
     flipper (0.17.1)
     flipper-active_record (0.17.1)
       activerecord (>= 4.2, < 7)
