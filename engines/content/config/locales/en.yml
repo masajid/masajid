@@ -254,6 +254,29 @@ en:
       step_4:
         headline: It's ready
         content: Your site for your masjid is ready to go.
+    accounts:
+      new:
+        title: Create an account
+        meta_description: Create a website for your mosque
+    home:
+      index:
+        title: Platform for mosques to create and manage their websites
+        meta_description: Masajid World delivers a saas application solution for mosques to create and manage their websites
+    user_confirmations:
+      new:
+        title: Confirm your account
+    user_passwords:
+      new:
+        title: Recover your password
+      edit:
+        title: Reset your password
+    user_sessions:
+      new:
+        title: Login
+    volunteers:
+      new:
+        title: Volunteering at Masajid World
+        meta_description: Volunteer at Masajid World and make an impact in our muslim community
   public:
     continued: '... (continued)'
     read_more: Continue reading
@@ -266,10 +289,14 @@ en:
       edit: Edit
       new: New
     locales:
-      en: English
-      fr: French
-      es: Spanish
+      ar: Arabic
+      ca: Catalan
       de: German
+      en: English
+      es: Spanish
+      fr: French
+      it: Italian
+      tr: Turkish
     volunteers:
       new:
         header: Volunteering
