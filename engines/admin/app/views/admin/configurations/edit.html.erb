@@ -2,38 +2,4 @@
   <%= t('.header') %>
 <% end %>
 
-<div>
-  <dl>
-    <dt><%= Content::Account.human_attribute_name(:subdomain) %></dt>
-    <dd><%= current_account.subdomain %></dd>
-  </dl>
-
-  <dl>
-    <dt><%= Content::Account.human_attribute_name(:email) %></dt>
-    <dd><%= current_account.email %></dd>
-  </dl>
-
-  <dl>
-    <dt><%= Content::Account.human_attribute_name(:mosque) %></dt>
-    <dd><%= current_account.mosque %></dd>
-  </dl>
-
-  <dl>
-    <dt><%= Content::Account.human_attribute_name(:responsable) %></dt>
-    <dd><%= current_account.responsable %></dd>
-  </dl>
-
-  <dl>
-    <dt><%= Content::Address.human_attribute_name(:phone) %></dt>
-    <dd><%= current_account.address.phone %></dd>
-  </dl>
-
-  <dl>
-    <dt><%= Content::Address.model_name.human %></dt>
-    <dd><%= current_account.address.to_s %></dd>
-  </dl>
-
-  <hr />
-</div>
-
 <%= render 'form' %>

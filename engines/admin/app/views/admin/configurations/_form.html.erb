@@ -3,6 +3,45 @@
 
   <div class='row'>
     <div class='col-md-6'>
+      <dl>
+        <dt><%= Content::Account.human_attribute_name(:email) %></dt>
+        <dd><%= current_account.email %></dd>
+      </dl>
+
+      <dl>
+        <dt><%= Content::Account.human_attribute_name(:mosque) %></dt>
+        <dd><%= current_account.mosque %></dd>
+      </dl>
+
+      <dl>
+        <dt><%= Content::Account.human_attribute_name(:responsable) %></dt>
+        <dd><%= current_account.responsable %></dd>
+      </dl>
+
+      <dl>
+        <dt><%= Content::Address.human_attribute_name(:phone) %></dt>
+        <dd><%= current_account.address.phone %></dd>
+      </dl>
+
+      <dl>
+        <dt><%= Content::Address.model_name.human %></dt>
+        <dd><%= current_account.address.to_s %></dd>
+      </dl>
+    </div>
+    <div class='col-md-6'>
+      <%= f.input :domain, hint: t('simple_form.hints.content/account.domain_html') %>
+
+      <dl>
+        <dt><%= Content::Account.human_attribute_name(:default_domain) %></dt>
+        <dd><%= link_to default_account_account_domain, default_account_account_domain, target: '_blank' %></dd>
+      </dl>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class='row'>
+    <div class='col-md-6'>
       <%= f.simple_fields_for :configuration, (current_account.configuration || current_account.build_configuration) do |configuration_form| %>
         <%= configuration_form.input :admin_locale, collection: options_for_locale %>
         <%= configuration_form.input :default_locale,

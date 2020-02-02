@@ -16,9 +16,28 @@ module Admin
 
     def configuration_params
       params.require(:account).permit(
-        configuration_attributes: [:id, :logo, :about_us, :mawaqit_link, :theme, :admin_locale, :default_locale, supported_locales: []],
-        seo_content_attributes: %i[id meta_title meta_description]
+        :domain,
+        configuration_attributes: [
+          :id,
+          :logo,
+          :about_us,
+          :mawaqit_link,
+          :theme,
+          :admin_locale,
+          :default_locale,
+          supported_locales: []
+        ],
+        seo_content_attributes: %i[
+          id
+          meta_title
+          meta_description
+        ]
       )
     end
+
+    def default_account_account_domain
+      @default_account_account_domain ||= current_account && default_account_domain(current_account)
+    end
+    helper_method :default_account_account_domain
   end
 end

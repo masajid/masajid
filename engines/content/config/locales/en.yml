@@ -43,6 +43,8 @@ en:
         published_at: Publication Date
         photo: Photo
       content/account:
+        default_domain: Default Domain
+        domain: Custom Domain
         subdomain: Subdomain
         email: Email Address
         responsable: Responsable Name
@@ -395,6 +397,8 @@ en:
     error_notification:
       default_message: 'Please review the problems below:'
     hints:
+      content/account:
+        domain_html: e.g. <mark>https://www.my-mosque-site.com</mark>
       content/configuration:
         default_locale: Default language of your site.
         supported_locales: A list of available languages that user can choose in the site.
