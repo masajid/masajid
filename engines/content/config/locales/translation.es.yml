@@ -523,7 +523,7 @@ es:
         new_password_minimum_characters: "(%{length} caracteres mínimo)"
         new_password: Nueva contraseña
       new:
-        forgot_your_password: Olvidaste tu contraseña?
+        forgot_your_password: "¿Olvidaste tu contraseña?"
         send_me_reset_password_instructions: Envíame instrucciones para restablecer
           la contraseña
     registrations:
@@ -558,7 +558,7 @@ es:
       unlocked: Tu cuenta ha sido desbloqueado con éxito. Por favor inicie sesión
         para continuar.
     actions:
-      login: Registrarse
+      login: Iniciar sesión
       logout: Cerrar sesión
   content:
     account_mailer:
@@ -684,7 +684,7 @@ es:
         title:
     user_sessions:
       new:
-        title:
+        title: Iniciar sesión
     volunteers:
       new:
         title:
