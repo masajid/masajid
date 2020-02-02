@@ -523,12 +523,12 @@ tr:
       decline_entry:
         subject:
         header:
-        body:
+        body_html:
       notify_creation_new_entry:
         subject:
         header:
-        body:
         cta_text:
+        body_html:
   admin:
     articles:
       new:

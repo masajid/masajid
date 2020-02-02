@@ -1,9 +1,9 @@
-<p>
+<div>
   <%= t('content.account_mailer.accept_entry.header', mosque: @account.mosque) %>
-</p>
+</div>
 
-<p>
+<div>
   <%= t('content.account_mailer.accept_entry.body_html') %>
-</p>
+</div>
 
 <%= link_to t('content.account_mailer.accept_entry.cta_text'), edit_password_url(@account.owner, reset_password_token: @raw) %>

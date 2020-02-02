@@ -574,14 +574,15 @@ es:
       decline_entry:
         subject: Masajid - Tu cuenta ha sido rechazada
         header: Hola %{mosque}!
-        body: "<p> Lamentamos informarte que nuestros administradores rechazaron su
-          cuenta porque parece que no es real. </p><p> Si no está de acuerdo o tiene
-          alguna inquietud, ¡contáctenos! </p><p> ¡Gracias por su comprensión! </p>"
+        body_html: "<p> Lamentamos informarte que nuestros administradores rechazaron
+          su cuenta porque parece que no es real. </p><p> Si no está de acuerdo o
+          tiene alguna inquietud, ¡contáctenos! </p><p> ¡Gracias por su comprensión!
+          </p>"
       notify_creation_new_entry:
         subject: Masajid - Se creó la nueva cuenta %{mosque}
         header: Hola Administrador
-        body: Se creó una nueva cuenta.
         cta_text: Ver detalles
+        body_html: Se creó una nueva cuenta.
   admin:
     articles:
       new:

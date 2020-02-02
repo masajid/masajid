@@ -559,15 +559,15 @@ de:
       decline_entry:
         subject: Masajid - Your account was declined
         header: Hello %{mosque}!
-        body: |
+        body_html: |-
           <p>We are sorry to inform you that your account was declined by our admins because it seems to be not real.</p>
           <p>If you disagree or you have any concern please get in touch with us!</p>
           <p>Thanks for your undestanding!</p>
       notify_creation_new_entry:
         subject: Masajid - New account %{mosque} was created
         header: Hi Admin,
-        body: A new account was created.
         cta_text: See details
+        body_html: A new account was created.
   admin:
     articles:
       new:
