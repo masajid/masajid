@@ -16,7 +16,7 @@ gem 'turbolinks', '~> 5'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 
-gem 'flipper-ui', '~> 0.17.1'
+gem 'flipper-ui', '~> 0.17.2'
 gem 'jquery-rails'
 gem 'whenever', require: false
 
