@@ -3,6 +3,7 @@ module Landing
     protect_from_forgery with: :exception
 
     include Pundit
+    include Content::AccountsHelper
     include Landing::ControllerHelpers::Locale
     include Landing::ControllerHelpers::SeoContent
 
