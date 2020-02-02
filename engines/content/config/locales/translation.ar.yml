@@ -520,12 +520,12 @@ ar:
       decline_entry:
         subject:
         header:
-        body:
+        body_html:
       notify_creation_new_entry:
         subject:
         header:
-        body:
         cta_text:
+        body_html:
   admin:
     articles:
       new:
@@ -601,6 +601,29 @@ ar:
       step_4:
         headline:
         content:
+    accounts:
+      new:
+        title:
+        meta_description:
+    home:
+      index:
+        title:
+        meta_description:
+    user_confirmations:
+      new:
+        title:
+    user_passwords:
+      new:
+        title:
+      edit:
+        title:
+    user_sessions:
+      new:
+        title:
+    volunteers:
+      new:
+        title:
+        meta_description:
   public:
     continued:
     read_more:
@@ -617,6 +640,10 @@ ar:
       fr:
       es:
       de:
+      ar:
+      ca:
+      it:
+      tr:
     volunteers:
       new:
         header:

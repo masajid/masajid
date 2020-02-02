@@ -523,7 +523,7 @@ es:
         new_password_minimum_characters: "(%{length} caracteres mínimo)"
         new_password: Nueva contraseña
       new:
-        forgot_your_password: Olvidaste tu contraseña?
+        forgot_your_password: "¿Olvidaste tu contraseña?"
         send_me_reset_password_instructions: Envíame instrucciones para restablecer
           la contraseña
     registrations:
@@ -558,7 +558,7 @@ es:
       unlocked: Tu cuenta ha sido desbloqueado con éxito. Por favor inicie sesión
         para continuar.
     actions:
-      login: Registrarse
+      login: Iniciar sesión
       logout: Cerrar sesión
   content:
     account_mailer:
@@ -574,14 +574,15 @@ es:
       decline_entry:
         subject: Masajid - Tu cuenta ha sido rechazada
         header: Hola %{mosque}!
-        body: "<p> Lamentamos informarte que nuestros administradores rechazaron su
-          cuenta porque parece que no es real. </p><p> Si no está de acuerdo o tiene
-          alguna inquietud, ¡contáctenos! </p><p> ¡Gracias por su comprensión! </p>"
+        body_html: "<p> Lamentamos informarte que nuestros administradores rechazaron
+          su cuenta porque parece que no es real. </p><p> Si no está de acuerdo o
+          tiene alguna inquietud, ¡contáctenos! </p><p> ¡Gracias por su comprensión!
+          </p>"
       notify_creation_new_entry:
         subject: Masajid - Se creó la nueva cuenta %{mosque}
         header: Hola Administrador
-        body: Se creó una nueva cuenta.
         cta_text: Ver detalles
+        body_html: Se creó una nueva cuenta.
   admin:
     articles:
       new:
@@ -665,6 +666,29 @@ es:
       step_4:
         headline: Esta listo
         content: La web para tu mezquita está lista para funcionar.
+    accounts:
+      new:
+        title:
+        meta_description:
+    home:
+      index:
+        title:
+        meta_description:
+    user_confirmations:
+      new:
+        title:
+    user_passwords:
+      new:
+        title:
+      edit:
+        title:
+    user_sessions:
+      new:
+        title: Iniciar sesión
+    volunteers:
+      new:
+        title:
+        meta_description:
   public:
     continued: "... (continuación)"
     read_more: Sigue leyendo
@@ -681,6 +705,10 @@ es:
       fr: Francés
       es: Español
       de: Alemán
+      ar: Árabe
+      ca: Catalán
+      it:
+      tr:
     volunteers:
       new:
         header: Voluntariado

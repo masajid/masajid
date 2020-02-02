@@ -228,7 +228,7 @@ de:
         subdomain: Subdomain
         email: Email Address
         responsable: Responsable Name
-        mosque: Mosque Name
+        mosque: Name der Moschee
       content/address:
         address1: Address
         zip_code: Zip Code
@@ -559,15 +559,15 @@ de:
       decline_entry:
         subject: Masajid - Your account was declined
         header: Hello %{mosque}!
-        body: |
+        body_html: |-
           <p>We are sorry to inform you that your account was declined by our admins because it seems to be not real.</p>
           <p>If you disagree or you have any concern please get in touch with us!</p>
           <p>Thanks for your undestanding!</p>
       notify_creation_new_entry:
         subject: Masajid - New account %{mosque} was created
         header: Hi Admin,
-        body: A new account was created.
         cta_text: See details
+        body_html: A new account was created.
   admin:
     articles:
       new:
@@ -651,6 +651,29 @@ de:
       step_4:
         headline: It's ready
         content: Your site for your masjid is ready to go.
+    accounts:
+      new:
+        title:
+        meta_description:
+    home:
+      index:
+        title:
+        meta_description:
+    user_confirmations:
+      new:
+        title:
+    user_passwords:
+      new:
+        title:
+      edit:
+        title:
+    user_sessions:
+      new:
+        title:
+    volunteers:
+      new:
+        title:
+        meta_description:
   public:
     continued: "... (continued)"
     read_more: Continue reading
@@ -667,6 +690,10 @@ de:
       fr: French
       es: Spanish
       de: German
+      ar: Arabic
+      ca: Catalan
+      it:
+      tr:
     volunteers:
       new:
         header: Volunteering
