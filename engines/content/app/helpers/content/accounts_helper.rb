@@ -3,11 +3,9 @@ module Content
     extend ActiveSupport::Concern
 
     included do
-      helper_method *%i[
-        prefix_link_with_account_domain
-        default_account_domain
-        protocol
-      ]
+      helper_method(
+        :prefix_link_with_account_domain, :default_account_domain, :protocol
+      )
     end
 
     def prefix_link_with_account_domain(account, link = nil)

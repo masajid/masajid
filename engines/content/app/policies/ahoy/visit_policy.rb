@@ -1,6 +1,7 @@
 module Ahoy
   class VisitPolicy < Content::ApplicationPolicy
     class Scope < Scope
+      # TODO: fix Metrics/AbcSize
       def resolve
         if user.super_admin?
           scope.where('landing_page ~* ?', "http(s?)://#{ENV['PROJECT_HOSTNAME']}\s*")

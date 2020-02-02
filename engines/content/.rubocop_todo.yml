@@ -36,7 +36,7 @@ Lint/UnusedBlockArgument:
 # Configuration parameters: CountComments, ExcludedMethods.
 # ExcludedMethods: refine
 Metrics/BlockLength:
-  Max: 298
+  Max: 315
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -102,3 +102,7 @@ Style/SymbolArray:
 # URISchemes: http, https
 Metrics/LineLength:
   Max: 216
+
+Metrics/AbcSize:
+  Exclude:
+    - app/policies/ahoy/visit_policy.rb
