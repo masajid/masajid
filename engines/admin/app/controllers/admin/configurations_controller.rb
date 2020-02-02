@@ -34,10 +34,5 @@ module Admin
         ]
       )
     end
-
-    def default_account_account_domain
-      @default_account_account_domain ||= current_account && default_account_domain(current_account)
-    end
-    helper_method :default_account_account_domain
   end
 end

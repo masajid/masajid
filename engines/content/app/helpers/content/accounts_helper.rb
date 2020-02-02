@@ -18,10 +18,7 @@ module Content
     end
 
     def account_domain(account)
-      # FIXME: uncomment when domain is added to account
-      # return account.domain if account.domain.present?
-
-      default_account_domain(account)
+      account.domain.presence || default_account_domain(account)
     end
 
     def default_account_domain(account)

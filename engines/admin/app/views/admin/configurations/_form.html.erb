@@ -33,7 +33,11 @@
 
       <dl>
         <dt><%= Content::Account.human_attribute_name(:default_domain) %></dt>
-        <dd><%= link_to default_account_account_domain, default_account_account_domain, target: '_blank' %></dd>
+        <dd><%= link_to(
+          "#{current_account.subdomain}.#{ENV['PROJECT_HOSTNAME']}",
+          default_account_domain(current_account),
+          target: '_blank')
+        %></dd>
       </dl>
     </div>
   </div>
