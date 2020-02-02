@@ -665,6 +665,29 @@ es:
       step_4:
         headline: Esta listo
         content: La web para tu mezquita está lista para funcionar.
+    accounts:
+      new:
+        title:
+        meta_description:
+    home:
+      index:
+        title:
+        meta_description:
+    user_confirmations:
+      new:
+        title:
+    user_passwords:
+      new:
+        title:
+      edit:
+        title:
+    user_sessions:
+      new:
+        title:
+    volunteers:
+      new:
+        title:
+        meta_description:
   public:
     continued: "... (continuación)"
     read_more: Sigue leyendo
@@ -681,6 +704,10 @@ es:
       fr: Francés
       es: Español
       de: Alemán
+      ar: Árabe
+      ca: Catalán
+      it:
+      tr:
     volunteers:
       new:
         header: Voluntariado

@@ -228,7 +228,7 @@ de:
         subdomain: Subdomain
         email: Email Address
         responsable: Responsable Name
-        mosque: Mosque Name
+        mosque: Name der Moschee
       content/address:
         address1: Address
         zip_code: Zip Code
@@ -651,6 +651,29 @@ de:
       step_4:
         headline: It's ready
         content: Your site for your masjid is ready to go.
+    accounts:
+      new:
+        title:
+        meta_description:
+    home:
+      index:
+        title:
+        meta_description:
+    user_confirmations:
+      new:
+        title:
+    user_passwords:
+      new:
+        title:
+      edit:
+        title:
+    user_sessions:
+      new:
+        title:
+    volunteers:
+      new:
+        title:
+        meta_description:
   public:
     continued: "... (continued)"
     read_more: Continue reading
@@ -667,6 +690,10 @@ de:
       fr: French
       es: Spanish
       de: German
+      ar: Arabic
+      ca: Catalan
+      it:
+      tr:
     volunteers:
       new:
         header: Volunteering
