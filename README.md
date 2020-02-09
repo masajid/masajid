@@ -73,5 +73,5 @@ $ docker-compose --file=docker-compose.prod.yml up -d db
 $ docker-compose --file=docker-compose.prod.yml build app
 $ docker-compose --file=docker-compose.prod.yml run --rm app rake db:create db:migrate db:seed
 $ docker-compose --file=docker-compose.prod.yml run --rm app rake content_places:import only=countries
-$ docker-compose --file=docker-compose.prod.yml up -d app sidekiq
+$ docker-compose --file=docker-compose.prod.yml up -d app sidekiq nginx
 ```
