@@ -53,3 +53,25 @@ $ rails translation:sync
 ##### Previews
 - Please add previews to `engines/content/lib/mailer_previews` folder
 - [http://localhost:3000/rails/mailers](http://localhost:3000/rails/mailers)
+
+## Deployment
+
+### Digital Ocean
+
+Setup droplet using docker-machine:
+
+```
+$ docker-machine create --driver=digitalocean --digitalocean-access-token=$DO_TOKEN --digitalocean-size=1gb masajid
+$ docker-machine ssh masajid
+
+$ docker-machine env masajid
+$ eval $(docker-machine env masajid)
+
+$ docker ps
+
+$ docker-compose --file=docker-compose.prod.yml up -d db
+$ docker-compose --file=docker-compose.prod.yml build app
+$ docker-compose --file=docker-compose.prod.yml run --rm app rake db:create db:migrate db:seed
+$ docker-compose --file=docker-compose.prod.yml run --rm app rake content_places:import only=countries
+$ docker-compose --file=docker-compose.prod.yml up -d app sidekiq
+```
