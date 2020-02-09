@@ -34,6 +34,12 @@ services:
       - db
       - redis
 
+  nginx:
+    build:
+      context: nginx
+    ports:
+      - 80:80
+
 volumes:
   redis:
   db-data:
