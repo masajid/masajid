@@ -19,5 +19,6 @@ ENV RAILS_ENV production
 
 RUN rails assets:precompile
 
-EXPOSE 3000
-CMD rails server -b 0.0.0.0
+RUN mkdir -p tmp/pids tmp/sockets
+
+CMD puma -C config/puma/production.rb
