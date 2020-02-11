@@ -61,7 +61,20 @@ $ rails translation:sync
 Setup droplet using docker-machine:
 
 ```
-$ docker-machine create --driver=digitalocean --digitalocean-access-token=$DO_TOKEN --digitalocean-size=1gb masajid
+$ docker-machine create \
+  --driver=digitalocean \
+   --digitalocean-access-token=$DO_TOKEN \
+   --digitalocean-size=1gb \
+   masajid
+
+# Or if the droplet already exists
+$ docker-machine create \
+  --driver=digitalocean \
+  --generic-ip-address=<DROPLET_IP_ADDR> \
+  --generic-ssh-user root \
+  --generic-ssh-key ~/.ssh/id_rsa \
+  masajid
+
 $ docker-machine ssh masajid
 
 $ docker-machine env masajid
@@ -74,4 +87,11 @@ $ docker-compose --file=docker-compose.prod.yml build app
 $ docker-compose --file=docker-compose.prod.yml run --rm app rake db:create db:migrate db:seed
 $ docker-compose --file=docker-compose.prod.yml run --rm app rake content_places:import only=countries
 $ docker-compose --file=docker-compose.prod.yml up -d app sidekiq nginx
+```
+
+Stop and remove droplet:
+
+```
+$ docker-machine stop masajid
+$ docker-machine rm masajid
 ```
