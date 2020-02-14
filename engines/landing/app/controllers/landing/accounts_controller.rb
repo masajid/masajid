@@ -5,28 +5,36 @@ module Landing
     def new
       @account = Content::Account.new
       @account.build_address
+      @account.build_owner
     end
 
     def create
-      @account = Content::Account.new(account_params)
+      @account = accounts_service.create
 
-      if @account.save
-        redirect_to root_path, notice: 'Account created'
+      if @account.persisted?
+        redirect_to root_path, notice: t('landing.accounts.create.success_message')
       else
         render :new
       end
+    rescue StandardError
+      redirect_to root_path, alert: t('landing.accounts.create.error_message')
     end
 
     private
 
     def account_params
-      params.require(:account).permit(
-        :subdomain,
-        :email,
-        :mosque,
-        :responsable,
-        address_attributes: %i[address1 zip_code phone city_name region_name country_id]
-      )
+      params
+        .require(:account)
+        .permit(
+          policy(%i[content account]).permitted_attributes
+        ).tap do |result|
+          result[:owner_attributes][:password] = Devise.friendly_token.first(8)
+          result[:owner_attributes][:role] = 'admin'
+        end
+    end
+
+    def accounts_service
+      Landing::AccountsService.new(account_params)
     end
   end
 end

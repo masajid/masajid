@@ -45,13 +45,7 @@ module Admin
     end
 
     def account_params
-      params.require(:account).permit(
-        :subdomain,
-        :email,
-        :mosque,
-        :responsable,
-        address_attributes: %i[id address1 zip_code phone city_name region_name country_id]
-      )
+      params.require(:account).permit(policy(%i[content account]).permitted_attributes)
     end
 
     def generate_raw_for_edit_password_url

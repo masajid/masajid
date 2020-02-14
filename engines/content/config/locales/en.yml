@@ -255,6 +255,9 @@ en:
         headline: It's ready
         content: Your site for your masjid is ready to go.
     accounts:
+      create:
+        success_message: Your account was created successfully
+        error_message: Account creation failed, please try again or contact us that we can help you creating your account
       new:
         title: Create an account
         meta_description: Create a website for your mosque
