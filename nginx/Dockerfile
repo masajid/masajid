@@ -6,6 +6,6 @@ RUN apt-get update -yqq \
     python-certbot-nginx
 
 # To run inside container, manually for now
-# RUN certbot certonly --nginx -d masajid.world
+RUN certbot certonly --nginx --agree-tos --no-eff-email --email admin@masajid.world -d masajid.world
 
 COPY nginx.conf /etc/nginx/nginx.conf
