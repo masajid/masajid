@@ -487,11 +487,10 @@ es:
       not_approved: Tu cuenta aún no ha sido aprobada por nuestros administradores.
     mailer:
       confirmation_instructions:
-        subject: Bienvenido a Masajid
+        subject: Masajid World - Instrucciones de confirmación
         header: Hola %{mosque}!
-        body: |
-          Bienvenido a Masajid. Necesitamos que confirmes el correo electrónico de tu cuenta a través del siguiente enlace.
-          Luego nos pondremos en contacto con usted lo antes posible para autorizar su cuenta.
+        body: 'Puedes confirmar el correo electrónico de tu cuenta a través del siguiente
+          enlace:'
         cta_text: Confirmar mi cuenta
       reset_password_instructions:
         subject: Instrucciones para restablecer su contraseña
@@ -563,7 +562,7 @@ es:
   content:
     account_mailer:
       accept_entry:
-        subject: Masajid - Tu cuenta ha sido aceptada
+        subject: Masajid World - Tu cuenta ha sido aceptada
         header: Hola %{mosque}!
         body_html: "<p> ¡Enhorabuena! Tu cuenta ha sido aceptada por nuestros administradores.
           </p><p> Introduce una contraseña a través del siguiente enlace y luego podrás
@@ -572,14 +571,14 @@ es:
           nosotros! </p>"
         cta_text: Introducir la contraseña
       decline_entry:
-        subject: Masajid - Tu cuenta ha sido rechazada
+        subject: Masajid World - Tu cuenta ha sido rechazada
         header: Hola %{mosque}!
         body_html: "<p> Lamentamos informarte que nuestros administradores rechazaron
           su cuenta porque parece que no es real. </p><p> Si no está de acuerdo o
           tiene alguna inquietud, ¡contáctenos! </p><p> ¡Gracias por su comprensión!
           </p>"
       notify_creation_new_entry:
-        subject: Masajid - Se creó la nueva cuenta %{mosque}
+        subject: Masajid World - Se creó la nueva cuenta (%{mosque})
         header: Hola Administrador
         cta_text: Ver detalles
         body_html: Se creó una nueva cuenta.
@@ -670,6 +669,13 @@ es:
       new:
         title:
         meta_description:
+      create:
+        error_message:
+      success_page:
+        header: Tu cuenta ha sido creada correctamente
+        body_html: Le enviaremos un correo electrónico en unos instantes, confirme
+          su dirección de correo electrónico. <br /> Luego, los miembros de nuestro
+          equipo autorizarán su cuenta en las próximas 24 horas.
     home:
       index:
         title:

@@ -157,22 +157,22 @@ en:
   content:
     account_mailer:
       accept_entry:
-        subject: Masajid - Your account was accepted
+        subject: Masajid World - Your account was accepted
         header: Hi %{mosque}!
         body_html: |
-          <p>Congratulations!!! Your account was accepted by our admins.</p>
+          <p>Congratulations!!! Your account was accepted by our team members.</p>
           <p>You need to enter a password through the link below, then you can start publishing your articles and customizing your site.</p>
           <p>If you have any question or feedback please don't hesitate to get in touch with us!</p>
         cta_text: Enter password
       decline_entry:
-        subject: Masajid - Your account was declined
+        subject: Masajid World - Your account was declined
         header: Hello %{mosque}!
         body_html: |
           <p>We are sorry to inform you that your account was declined by our admins because it seems to be not real.</p>
           <p>If you disagree or you have any concern please get in touch with us!</p>
           <p>Thanks for your undestanding!</p>
       notify_creation_new_entry:
-        subject: Masajid - New account %{mosque} was created
+        subject: Masajid World - New account was created (%{mosque})
         header: Hi Admin,
         body_html: A new account was created.
         cta_text: See details
@@ -255,9 +255,16 @@ en:
         headline: It's ready
         content: Your site for your masjid is ready to go.
     accounts:
+      create:
+        error_message: Account creation failed, please try again or contact us that we can help you creating your account
       new:
         title: Create an account
         meta_description: Create a website for your mosque
+      success_page:
+        header: Your account was created successfully
+        body_html: |
+          We will send you an email in few instants, please confirm your email address.<br />
+          Then our team members will authorize your account in the next 24 hours.
     home:
       index:
         title: Platform for mosques to create and manage their websites
@@ -326,11 +333,9 @@ en:
       not_approved: Your account has not been approved by our administrators yet.
     mailer:
       confirmation_instructions:
-        subject: Welcome to Masajid
+        subject: Masajid World - Confirmation instructions
         header: Hi %{mosque}!
-        body: |
-          You are welcome to Masajid. We need you to confirm your account email through the link below.
-          Then we will got in touch with you as soon as possible in order to authorize your account.
+        body: 'You can confirm your account email through the link below:'
         cta_text: Confirm my account
       reset_password_instructions:
         subject: "Reset password instructions"

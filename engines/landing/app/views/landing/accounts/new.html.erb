@@ -7,7 +7,9 @@
 
   <%= f.input :subdomain %>
 
-  <%= f.input :email, input_html: { autocomplete: 'email' } %>
+  <%= f.simple_fields_for :owner do |owner| %>
+    <%= owner.input :email, input_html: { autocomplete: 'email' } %>
+  <% end %>
 
   <%= f.input :responsable %>
 

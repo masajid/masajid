@@ -656,6 +656,11 @@ fr:
       new:
         title:
         meta_description:
+      create:
+        error_message:
+      success_page:
+        header:
+        body_html:
     home:
       index:
         title:
