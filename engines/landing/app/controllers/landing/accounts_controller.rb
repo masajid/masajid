@@ -12,12 +12,12 @@ module Landing
       @account = accounts_service.create
 
       if @account.persisted?
-        redirect_to root_path, notice: t('landing.accounts.create.success_message')
+        redirect_to success_page_path
       else
         render :new
       end
     rescue StandardError
-      redirect_to root_path, alert: t('landing.accounts.create.error_message')
+      redirect_to new_account_path, alert: t('landing.accounts.create.error_message')
     end
 
     private

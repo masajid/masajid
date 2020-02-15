@@ -7,6 +7,8 @@
 @import "volunteers";
 
 body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   color: #5a5a5a;
 }
 
@@ -15,7 +17,7 @@ body {
 }
 
 .content {
-  margin-top: 80px;
+  margin-top: 40px;
 
   .form-header {
     text-align: center;
@@ -23,5 +25,7 @@ body {
 }
 
 .alert {
-  margin-top: 55px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  text-align: center;
 }
