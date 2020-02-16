@@ -449,16 +449,30 @@ tr:
       confirmation_instructions:
         subject: Onaylama talimatları.
         header:
-        body:
         cta_text:
+        body_html:
       reset_password_instructions:
         subject: Şifre sıfırlama talimatları.
+        header:
+        body:
+          primary_html:
+          secondary_html:
+        cta_text: Parolamı değiştir
       unlock_instructions:
         subject: Kilit açma talimatları.
+        header:
+        body_html:
+        cta_text:
       email_changed:
         subject:
+        header:
+        body:
+          unconfirmed_email_html:
+          confirmed_email_html:
       password_change:
         subject: Şifreniz Değişti
+        header:
+        body_html:
     omniauth_callbacks:
       failure: Sizi %{kind} aracılığıyla tanıyamadık çünkü "%{reason}".
       success: "%{kind} aracılığıyla onaylandınız."

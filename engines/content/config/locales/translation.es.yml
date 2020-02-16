@@ -488,18 +488,40 @@ es:
     mailer:
       confirmation_instructions:
         subject: Masajid World - Instrucciones de confirmación
-        header: Hola %{mosque}!
-        body: 'Puedes confirmar el correo electrónico de tu cuenta a través del siguiente
-          enlace:'
+        header: Hola %{mosque}
         cta_text: Confirmar mi cuenta
+        body_html: "<p>Puedes confirmar el correo electrónico de tu cuenta a través
+          del siguiente enlace:</p>"
       reset_password_instructions:
-        subject: Instrucciones para restablecer su contraseña
+        subject: Masajid World - Instrucciones para restablecer su contraseña
+        header: Hola %{email}
+        body:
+          primary_html: "<p>Alguien ha solicitado un enlace para cambiar su contraseña.
+            Puedes hacerlo a través del siguiente enlace:</p>"
+          secondary_html: |-
+            <p>Si no has solicitado esto, ignora este correo electrónico.</p>
+            <p>Tu contraseña no cambiará hasta que accedas al enlace de arriba y crees una nueva.</p>
+        cta_text: Cambiar mi contraseña
       unlock_instructions:
-        subject: Instrucciones de Desbloqueo
+        subject: Masajid World - Instrucciones de Desbloqueo
+        header: Hola %{email}
+        body_html: |-
+          <p>Tu cuenta ha sido bloqueada debido a un número excesivo de intentos fallidos de inicio de sesión.</p>
+          <p>Haz clic en el enlace a continuación para desbloquear su cuenta:</p>
+        cta_text: Desbloquear mi cuenta
       email_changed:
-        subject: Correo electrónico modificado
+        subject: Masajid World - Correo electrónico modificado
+        header: Hola %{email}
+        body:
+          unconfirmed_email_html: "<p>Nos estamos comunicando contigo para notificarte
+            que tu correo electrónico ha cambiado a %{email}.</p>"
+          confirmed_email_html: "<p>Nos estamos comunicando contigo para notificarte
+            que tu correo electrónico ha cambiado a %{email}.</p>"
       password_change:
-        subject: Contraseña cambiada
+        subject: Masajid World - Contraseña cambiada
+        header: Hola %{email}
+        body_html: "<p>Nos comunicamos contigo para notificarte que tu contraseña
+          ha sido modificada.</p>"
     omniauth_callbacks:
       failure: No se pudo autenticar desde %{kind} porque "%{reason}".
       success: Autentificado con éxito desde la cuenta %{kind}.
