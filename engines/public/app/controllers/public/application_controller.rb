@@ -3,6 +3,7 @@ module Public
     protect_from_forgery with: :exception
 
     include Pundit
+    include Content::GoogleTagManagerHelper
     include Public::ControllerHelpers::Locale
     include Public::ControllerHelpers::SeoContent
 

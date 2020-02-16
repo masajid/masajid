@@ -14,10 +14,11 @@
     <%= stylesheet_link_tag 'landing/application', media: 'all' %>
     <%= javascript_include_tag 'landing/application' %>
 
-    <%= render 'landing/shared/google_analytics' if render_google_analytics? %>
+    <%= render 'content/shared/google_tag_manager_script_tag' if render_google_tag_manager? %>
   </head>
 
   <body>
+    <%= render 'content/shared/google_tag_manager_noscript_tag' if render_google_tag_manager? %>
     <%= render 'landing/shared/header' %>
 
     <main role='main'>
