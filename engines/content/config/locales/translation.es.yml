@@ -689,8 +689,8 @@ es:
         content: La web para tu mezquita está lista para funcionar.
     accounts:
       new:
-        title:
-        meta_description:
+        title: Crea una cuenta
+        meta_description: Crea un página web para tu mezquita
       create:
         error_message:
       success_page:
@@ -700,23 +700,25 @@ es:
           equipo autorizarán su cuenta en las próximas 24 horas.
     home:
       index:
-        title:
-        meta_description:
+        title: Plataforma para mezquitas para crear y administrar sus sitios web
+        meta_description: Masajid World ofrece una solución para que las mezquitas
+          creen y administren sus páginas web
     user_confirmations:
       new:
-        title:
+        title: Confirme tu cuenta
     user_passwords:
       new:
-        title:
+        title: Recupera tu contraseña
       edit:
-        title:
+        title: Restablecer tu contraseña
     user_sessions:
       new:
         title: Iniciar sesión
     volunteers:
       new:
-        title:
-        meta_description:
+        title: Ser voluntario en Masajid World
+        meta_description: Ser voluntario en Masajid World y tener un impacto en nuestra
+          comunidad musulmana
   public:
     continued: "... (continuación)"
     read_more: Sigue leyendo
