@@ -1,9 +1,15 @@
-<div>
-  <%= t('content.account_mailer.accept_entry.header', mosque: @account.mosque) %>
+<div class='header'>
+  <h1>
+    <%= t('content.account_mailer.accept_entry.header', mosque: @account.mosque) %>
+  </h1>
 </div>
 
-<div>
-  <%= t('content.account_mailer.accept_entry.body_html') %>
-</div>
+<div class='content'>
+  <div class='content__body'>
+    <%= t('content.account_mailer.accept_entry.body_html') %>
+  </div>
 
-<%= link_to t('content.account_mailer.accept_entry.cta_text'), edit_password_url(@account.owner, reset_password_token: @raw) %>
+  <div class='content__link'>
+    <%= link_to t('content.account_mailer.accept_entry.cta_text'), edit_password_url(@account.owner, reset_password_token: @raw) %>
+  </div>
+</div>
