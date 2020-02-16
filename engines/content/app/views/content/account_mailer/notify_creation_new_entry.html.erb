@@ -1,9 +1,15 @@
-<div>
-  <%= t('content.account_mailer.notify_creation_new_entry.header') %>
+<div class='header'>
+  <h1>
+    <%= t('content.account_mailer.notify_creation_new_entry.header') %>
+  </h1>
 </div>
 
-<div>
-  <%= t('content.account_mailer.notify_creation_new_entry.body_html') %>
-</div>
+<div class='content'>
+  <div class='content__body'>
+    <%= t('content.account_mailer.notify_creation_new_entry.body_html') %>
+  </div>
 
-<%= link_to t('content.account_mailer.notify_creation_new_entry.cta_text'), admin.account_url(@account) %>
+  <div class='content__link'>
+    <%= link_to t('content.account_mailer.notify_creation_new_entry.cta_text'), admin.edit_account_url(@account) %>
+  </div>
+</div>

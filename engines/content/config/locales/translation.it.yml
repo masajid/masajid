@@ -451,16 +451,30 @@ it:
       confirmation_instructions:
         subject: Istruzioni per la conferma
         header:
-        body:
         cta_text:
+        body_html:
       reset_password_instructions:
         subject: Istruzioni per reimpostare la password
+        header:
+        body:
+          primary_html:
+          secondary_html:
+        cta_text: Cambia la mia password
       unlock_instructions:
         subject: Istruzioni per sbloccare l'account
+        header:
+        body_html:
+        cta_text:
       email_changed:
         subject: Email modificata
+        header:
+        body:
+          unconfirmed_email_html:
+          confirmed_email_html:
       password_change:
         subject: Password modificata
+        header:
+        body_html:
     omniauth_callbacks:
       failure: Non è stato possibile autorizzarti da %{kind} perchè "%{reason}".
       success: Autorizzato con successo dall'account %{kind}.
@@ -611,6 +625,11 @@ it:
       new:
         title:
         meta_description:
+      create:
+        error_message:
+      success_page:
+        header:
+        body_html:
     home:
       index:
         title:

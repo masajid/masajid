@@ -1,6 +1,8 @@
 Landing::Engine.routes.draw do
   scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
     root 'home#index'
+
+    get '/accounts/success-page', to: 'accounts#success_page', as: :success_page
     resources :accounts, only: %i[new create]
     resources :volunteers, only: %i[new create]
 

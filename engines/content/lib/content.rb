@@ -31,3 +31,5 @@ end
 
 require 'scoped_to'
 require 'content/controller_helpers/volunteer'
+
+require 'content/devise/mailers/helpers'

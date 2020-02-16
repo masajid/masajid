@@ -259,8 +259,8 @@ GEM
       ruby-vips (>= 2.0.13, < 3)
     jaro_winkler (1.5.4)
     jaro_winkler (1.5.4-java)
-    jbuilder (2.9.1)
-      activesupport (>= 4.2.0)
+    jbuilder (2.10.0)
+      activesupport (>= 5.0.0)
     jquery-rails (4.3.5)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -549,7 +549,7 @@ DEPENDENCIES
   dotenv-rails (~> 2.7.5)
   flipper-ui (~> 0.17.2)
   google-cloud-storage (~> 1.25)
-  jbuilder (~> 2.9)
+  jbuilder (~> 2.10)
   jquery-rails
   landing!
   letter_opener_web

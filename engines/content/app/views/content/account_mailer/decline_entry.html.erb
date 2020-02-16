@@ -1,7 +1,11 @@
-<div>
-  <%= t('content.account_mailer.decline_entry.header', mosque: @account.mosque) %>
+<div class='header'>
+  <h1>
+    <%= t('content.account_mailer.decline_entry.header', mosque: @account.mosque) %>
+  </h1>
 </div>
 
-<div>
-  <%= t('content.account_mailer.decline_entry.body_html') %>
+<div class='content'>
+  <div class='content__body'>
+    <%= t('content.account_mailer.decline_entry.body_html') %>
+  </div>
 </div>
