@@ -448,16 +448,30 @@ ar:
       confirmation_instructions:
         subject: تعليمات التأكيد
         header:
-        body:
         cta_text:
+        body_html:
       reset_password_instructions:
         subject: تعليمات إعادة تعيين كلمة المرور
+        header:
+        body:
+          primary_html:
+          secondary_html:
+        cta_text: تغيير كلمة مروري
       unlock_instructions:
         subject: تعليمات إلغاء القفل
+        header:
+        body_html:
+        cta_text:
       email_changed:
         subject: تم تغيير عنوان البريد الإلكتروني
+        header:
+        body:
+          unconfirmed_email_html:
+          confirmed_email_html:
       password_change:
         subject: تم تغيير كلمة المرور
+        header:
+        body_html:
     omniauth_callbacks:
       failure: تعذر التحقق منك من %{kind} بسبب "%{reason}".
       success: تمت المصادقة بنجاح من حساب %{kind}.

@@ -481,18 +481,30 @@ de:
       confirmation_instructions:
         subject: Welcome to Masajid
         header: Hi %{mosque}!
-        body: |
-          You are welcome to Masajid. We need you to confirm your account email through the link below.
-          Then we will got in touch with you as soon as possible in order to authorize your account.
         cta_text: Confirm my account
+        body_html:
       reset_password_instructions:
         subject: Reset password instructions
+        header:
+        body:
+          primary_html:
+          secondary_html:
+        cta_text: Change my password
       unlock_instructions:
         subject: Unlock instructions
+        header:
+        body_html:
+        cta_text:
       email_changed:
         subject: Email Changed
+        header:
+        body:
+          unconfirmed_email_html:
+          confirmed_email_html:
       password_change:
         subject: Password Changed
+        header:
+        body_html:
     omniauth_callbacks:
       failure: Could not authenticate you from %{kind} because "%{reason}".
       success: Successfully authenticated from %{kind} account.
