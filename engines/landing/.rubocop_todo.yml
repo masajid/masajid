@@ -22,14 +22,6 @@ Metrics/AbcSize:
 Metrics/MethodLength:
   Max: 12
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: braces, no_braces, context_dependent
-Style/BracesAroundHashParameters:
-  Exclude:
-    - 'config/routes.rb'
-
 # Offense count: 15
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
@@ -56,5 +48,5 @@ Style/SymbolArray:
 # Cop supports --auto-correct.
 # Configuration parameters: AutoCorrect, AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
