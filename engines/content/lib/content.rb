@@ -1,5 +1,6 @@
 require 'rails-i18n'
 require 'devise'
+require 'devise-async'
 require 'pundit'
 require 'friendly_id'
 require 'sidekiq'
