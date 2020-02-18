@@ -29,5 +29,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'content'
   s.add_dependency 'flag-icons-rails', '~> 3.1.0'
 
-  s.add_development_dependency 'rubocop-rails', '~> 2.4.0'
+  s.add_development_dependency 'rubocop-rails', '~> 2.4.2'
 end
