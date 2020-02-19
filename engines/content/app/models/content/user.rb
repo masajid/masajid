@@ -1,6 +1,6 @@
 module Content
   class User < ApplicationRecord
-    devise :database_authenticatable, :recoverable, :rememberable, :validatable, :trackable, :confirmable
+    devise :database_authenticatable, :async, :recoverable, :rememberable, :validatable, :trackable, :confirmable
 
     ROLE_NAMES = %w[super_admin admin user].freeze
 

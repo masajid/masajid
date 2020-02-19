@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'attribute_normalizer'
   s.add_dependency 'bootstrap-email'
   s.add_dependency 'devise'
+  s.add_dependency 'devise-async'
   s.add_dependency 'draper'
   s.add_dependency 'flipper-active_record', '~> 0.17.1'
   s.add_dependency 'friendly_id'
