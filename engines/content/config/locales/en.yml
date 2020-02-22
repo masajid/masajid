@@ -44,7 +44,6 @@ en:
         photo: Photo
       content/account:
         subdomain: Subdomain
-        email: Email Address
         responsable: Responsable Name
         mosque: Mosque Name
       content/address:
@@ -104,8 +103,10 @@ en:
         email: Email Address
         created_at: Create Date
       content/user:
+        current_password: Current Password
         email: Email address
         password: Password
+        password_confirmation: Password Confirmation
         confirmed_at: Confirmation Date
       content/volunteer:
         name: Name
@@ -216,9 +217,14 @@ en:
         header: Edit City
       new:
         header: New City
+    users:
+      edit:
+        header: Edit account
+        cta: Update account
     pundit:
       unauthorized: You are not authorized to perform this action
     shared:
+      account: Account
       administration: Administration
       view_site: View Site
       are_you_sure: Are you sure?
@@ -435,6 +441,10 @@ en:
       content/page:
         meta_title_html: The content for the page's HTML <mark>&lt;title&gt;</mark> tag, which is used by search engines.
         meta_description: The summary text that accompanies your page in search engine results pages (SERPs).
+      content/user:
+        current_password: We need your current password to confirm your changes
+        password: Leave blank if you don't want to change it
+        unconfirmed_email: Currently waiting confirmation for %{email}
   validates_timeliness:
     error_value_formats:
       date: '%Y-%m-%d'
