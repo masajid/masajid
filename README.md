@@ -94,6 +94,10 @@ Deploy new changes:
 ```
 docker-compose --file=docker-compose.prod.yml build app
 docker-compose --file=docker-compose.prod.yml up --no-deps -d app
+docker-compose --file=docker-compose.prod.yml run --rm app rake db:migrate
+
+docker-compose --file=docker-compose.prod.yml build sidekiq
+docker-compose --file=docker-compose.prod.yml up --no-deps -d sidekiq
 ```
 
 Stop and remove droplet:
