@@ -33,6 +33,10 @@ es:
           &lt;título&gt; </mark>, que es utilizado por los motores de búsqueda.
         meta_description: El texto de resumen que acompaña a la página de su artículo
           en las páginas de resultados del motor de búsqueda (SERP).
+      content/user:
+        unconfirmed_email: Actualmente esperando confirmación para %{email}
+        current_password: Necesitamos tu contraseña actual para confirmar los cambios
+        password: Deja en blanco si no deseas cambiar la contraseña
     required:
       text: Necesario
       mark: "*"
@@ -233,7 +237,6 @@ es:
         photo: Foto
       content/account:
         subdomain: Subdominio
-        email: Correo electrónico
         responsable: Nombre del responsable
         mosque: Nombre de la mezquita
       content/address:
@@ -296,6 +299,8 @@ es:
         email: Correo electrónico
         password: Contraseña
         confirmed_at: Fecha de confirmación
+        current_password: Contraseña actual
+        password_confirmation: Confirmación de contraseña
       content/volunteer:
         name: Nombre
         identification: Identificación
@@ -651,9 +656,14 @@ es:
       view_site: Ver sitio
       are_you_sure: "¿Estás seguro?"
       total: 'Total: %{count}'
+      account: Tu cuenta
     tabs:
       dashboard: Dashboards
       general: General
+    users:
+      edit:
+        header: Editar cuenta
+        cta: Actualizar cuenta
   landing:
     admin_panel: Panel de administrador
     create_account: Crear una cuenta

@@ -194,7 +194,6 @@ tr:
         photo:
       content/account:
         subdomain:
-        email:
         responsable:
         mosque:
       content/address:
@@ -257,6 +256,8 @@ tr:
         email:
         password:
         confirmed_at:
+        current_password:
+        password_confirmation:
       content/volunteer:
         name:
         identification:
@@ -590,9 +591,14 @@ tr:
       view_site:
       are_you_sure:
       total:
+      account:
     tabs:
       dashboard:
       general:
+    users:
+      edit:
+        header:
+        cta:
   landing:
     admin_panel:
     create_account:
@@ -691,3 +697,7 @@ tr:
       content/page:
         meta_title_html:
         meta_description:
+      content/user:
+        unconfirmed_email:
+        current_password:
+        password:
