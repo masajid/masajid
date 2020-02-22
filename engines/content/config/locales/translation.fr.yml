@@ -32,6 +32,10 @@ fr:
           tag, which is used by search engines.
         meta_description: The summary text that accompanies your article page in search
           engine results pages (SERPs).
+      content/user:
+        unconfirmed_email:
+        current_password:
+        password:
     required:
       text: required
       mark: "*"
@@ -227,7 +231,6 @@ fr:
         photo: Photo
       content/account:
         subdomain: Sous-domaine
-        email: Adresse e-mail
         responsable: Nom du responsable
         mosque: Nom de la mosquée
       content/address:
@@ -290,6 +293,8 @@ fr:
         email: Email address
         password: Password
         confirmed_at: Confirmation Date
+        current_password:
+        password_confirmation:
       content/volunteer:
         name: Name
         identification: Identification
@@ -628,9 +633,14 @@ fr:
       view_site: View Site
       are_you_sure: Are you sure?
       total: 'Total: %{count}'
+      account: Account
     tabs:
       dashboard: Dashboards
       general: General
+    users:
+      edit:
+        header:
+        cta:
   landing:
     admin_panel: Admin panel
     create_account: Create account
