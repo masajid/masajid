@@ -31,6 +31,7 @@ PATH
       shrine
       sidekiq
       simple_form
+      skylight (~> 4.2.1)
       stringex
       translation
       validates_timeliness
@@ -479,6 +480,10 @@ GEM
     simple_form (5.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
+    skylight (4.2.1)
+      skylight-core (= 4.2.1)
+    skylight-core (4.2.1)
+      activesupport (>= 4.2.0)
     sortable_tree_rails (0.0.9)
       rails (>= 4.2.7)
     spoon (0.0.6)

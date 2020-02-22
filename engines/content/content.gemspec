@@ -35,6 +35,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'shrine'
   s.add_dependency 'sidekiq'
   s.add_dependency 'simple_form'
+  s.add_dependency 'skylight', '~> 4.2.1'
   s.add_dependency 'stringex'
   s.add_dependency 'translation'
   s.add_dependency 'validates_timeliness'
