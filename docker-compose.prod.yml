@@ -19,6 +19,8 @@ services:
       dockerfile: Dockerfile.prod
     env_file: web_container/.env.prod
     command: sidekiq -C config/sidekiq.yml
+    volumes:
+      - storage:/app/web_container/storage
     depends_on:
       - db
       - redis
@@ -28,6 +30,8 @@ services:
       context: .
       dockerfile: Dockerfile.prod
     env_file: web_container/.env.prod
+    volumes:
+      - storage:/app/web_container/storage
     ports:
       - 3000:3000
     depends_on:
@@ -69,3 +73,4 @@ services:
 volumes:
   redis:
   db-data:
+  storage:
