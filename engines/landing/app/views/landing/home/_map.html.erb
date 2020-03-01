@@ -21,7 +21,7 @@
         .setHTML(
           '<%= link_to account.mosque, prefix_link_with_account_domain(account), target: '_blank' %>' +
           '<br>' +
-          '<%= account.address %>'
+          '<%= account.decorate.display_address_short %>'
         );
 
       new mapboxgl.Marker()

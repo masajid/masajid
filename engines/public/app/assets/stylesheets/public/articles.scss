@@ -21,10 +21,9 @@
       color: grey;
     }
 
-    // Maybe it is not good for small uploaded pictures, please consider to find another solution if needed!
     img {
-      width: 100%;
-      height: auto;
+      display: block;
+      margin: 25px auto;
     }
 
     .article-video {
