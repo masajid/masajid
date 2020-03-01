@@ -43,49 +43,49 @@ fr:
       default_message: 'Please review the problems below:'
   date:
     day_names:
-    - dimanche
-    - lundi
-    - mardi
-    - mercredi
-    - jeudi
-    - vendredi
-    - samedi
+    - Dimanche
+    - Lundi
+    - Mardi
+    - Mercredi
+    - Jeudi
+    - Vendredi
+    - Samedi
     abbr_day_names:
-    - dim
-    - lun
-    - mar
-    - mer
-    - jeu
-    - ven
-    - sam
+    - Dim
+    - Lun
+    - Mar
+    - Mer
+    - Jeu
+    - Ven
+    - Sam
     month_names:
     -
-    - janvier
-    - février
-    - mars
-    - avril
-    - mai
-    - juin
-    - juillet
-    - août
-    - septembre
-    - octobre
-    - novembre
-    - décembre
+    - Janvier
+    - Février
+    - Mars
+    - Avril
+    - Mai
+    - Juin
+    - Juillet
+    - Août
+    - Septembre
+    - Octobre
+    - Novembre
+    - Décembre
     abbr_month_names:
     -
-    - jan.
-    - fév.
-    - mar.
-    - avr.
-    - mai
-    - juin
-    - juil.
-    - août
-    - sept.
+    - Jan.
+    - Fév.
+    - Mar.
+    - Avr.
+    - Mai.
+    - Juin
+    - Juil.
+    - Août
+    - Sept.
     - oct.
-    - nov.
-    - déc.
+    - Nov.
+    - Déc.
   time:
     am: am
     pm: pm
@@ -162,72 +162,72 @@ fr:
   activerecord:
     errors:
       messages:
-        record_invalid: 'La validation a échoué : %{errors}'
+        record_invalid: 'La validation a échoué: %{errors}'
         restrict_dependent_destroy:
-          has_one: Vous ne pouvez pas supprimer l'enregistrement car un(e) %{record}
-            dépendant(e) existe
-          has_many: Vous ne pouvez pas supprimer l'enregistrement parce que les %{record}
-            dépendants existent
-        invalid_date:
-        invalid_time:
-        invalid_datetime:
-        is_at:
-        before:
-        on_or_before:
-        after:
-        on_or_after:
+          has_one: Vous ne pouvez pas supprimer l'enregistrement car un(e) dépendant(e)
+            %{record} existe
+          has_many: Vous ne pouvez pas supprimer l'enregistrement parce que des dépendants  %{record}
+            existent
+        invalid_date: n'est pas une date valide
+        invalid_time: n'est pas une heure valide
+        invalid_datetime: n'est pas un datetime valide
+        is_at: doit être à %{restriction}
+        before: doit être avant %{restriction}
+        on_or_before: doit être au plus tard %{restriction}
+        after: doit être après %{restriction}
+        on_or_after: doit être dés %{restriction}
       models:
         content/address:
           attributes:
             address1:
-              geocoding_failed: geocoding failed
+              geocoding_failed: échec du géocodage
         content/newsletter:
           attributes:
             body:
-              blank: is required if you don't select articles
+              blank: est requis si vous ne sélectionnez pas d'articles
             date:
-              inclusion: must be in future
+              inclusion: doit être au futur
     models:
       content/article:
         one: Article
         other: Articles
       content/account:
-        one: Account
-        other: Accounts
-      content/address: Address
+        one: Compte
+        other: Comptes
+      content/address: Adresse
       content/country:
-        one: Country
-        other: Countries
+        one: Pays
+        other: Pays
       content/city:
-        one: City
-        other: Cities
+        one: Ville
+        other: Villes
       content/newsletter:
-        one: Newsletter
+        one: Newsletters
         other: Newsletters
       content/page:
-        one: Menu Item
+        one: Élément du menu
         other: Menu
       content/region:
-        one: Region
-        other: Regions
+        one: Région
+        other: Régions
       content/slider:
         one: Slider
       content/social_network:
-        one: Social media
+        one: 'Réseaux sociaux '
       content/subscriber:
-        one: Subscriber
-        other: Subscribers
+        one: Abonné
+        other: Abonnés
       content/volunteer:
-        one: Volunteer
-        other: Volunteers
+        one: Bénévole
+        other: Bénévoles
     attributes:
       content/article:
         title: Titre
         slug: Slug
         summary: Résumé
-        body: Content
-        video_link: Video embed URL
-        published_at: Publication Date
+        body: Contenue
+        video_link: URL d'intégration de la vidéo
+        published_at: Date de publication
         photo: Photo
       content/account:
         subdomain: Sous-domaine
@@ -245,32 +245,32 @@ fr:
         about_us: À propos de nous
         mawaqit_link: Lien Mawakit
         theme: Thème
-        supported_locales: Supported Languages
+        supported_locales: Langues supportées
         default_locale: Langage par défaut
         admin_locale: Langage d'administration
       content/country:
         name: Pays
       content/newsletter:
         article_ids: Articles
-        body: Email Body
+        body: Corps de l'e-mail
         link: Lien
-        link_text: Link Text
+        link_text: Texte du lien
         date: Date d'envoi
-        sent_at: Sent
-        subject: Subject
+        sent_at: Envoyé
+        subject: Sujet
       content/page:
-        ancestry: Ancestry
+        ancestry: Ascendance
         description: Description
-        meta_title: Meta Title
-        meta_keywords: Meta Keywords
-        meta_description: Meta Description
-        name: Name
+        meta_title: Meta titre
+        meta_keywords: Meta mots clés
+        meta_description: Meta description
+        name: Nom
         permalink: Permalink
         permalink_part: Permalink
       content/region:
-        name: Region Name
+        name: Nom de la région
       content/city:
-        name: Ville
+        name: Nom de ville
         latitude: Latitude
         longitude: Longitude
       content/social_network:
@@ -281,46 +281,46 @@ fr:
         vimeo: Vimeo
         instagram: Instagram
       content/slider:
-        title: Title
-        body: Body
+        title: Titre
+        body: Corps
         photo: Photo
-        link: Link
-        link_text: Link Text
+        link: Lien
+        link_text: Texte du lien
       content/subscriber:
-        email: Email Address
-        created_at: Create Date
+        email: Adresse e-mail
+        created_at: Date de création
       content/user:
-        email: Email address
-        password: Password
-        confirmed_at: Confirmation Date
-        current_password:
-        password_confirmation:
+        email: Adresse e-mail
+        password: Mot de passe
+        confirmed_at: Date de confirmation
+        current_password: Mot de passe actuel
+        password_confirmation: Confirmation du mot de passe
       content/volunteer:
-        name: Name
+        name: Nom
         identification: Identification
-        birthday: Birthday
-        address: Address
-        phone: Phone
-        email: Email
-        education: Education
-        availability: Availability
-        languages: Languages
-        other_languages: Other Languages
-        experience: Experience
-        experience_place: Experience Place
-        experience_area: Experience Area
+        birthday: Date de naissance
+        address: Adresse
+        phone: Numéro de téléphone
+        email: Adresse e-mail
+        education: Éducation
+        availability: Disponibilité
+        languages: Langues
+        other_languages: Autres langues
+        experience: Expérience
+        experience_place: Lieu d'expérience
+        experience_area: Domaine d'expérience
       content/volunteer/experience_area:
-        cultural: Cultural
+        cultural: Culturel
         social: Social
-        educational: Educational
-        religious: Religious
+        educational: Éducatif
+        religious: Religieux
       content/volunteer/languages:
-        arabic: Arabic
-        spanish: Spanish
+        arabic: Arabe
+        spanish: Espagnol
         catalan: Catalan
-        english: English
-        french: French
-        german: German
+        english: Anglais
+        french: Français
+        german: Allemand
   datetime:
     distance_in_words:
       half_a_minute: une demi-minute
@@ -337,26 +337,26 @@ fr:
         one: 1 minute
         other: "%{count} minutes"
       about_x_hours:
-        one: environ une heure
-        other: environ %{count} heures
+        one: il y a 1 heure
+        other: il y a %{count} heures
       x_days:
         one: 1 jour
         other: "%{count} jours"
       about_x_months:
-        one: environ un mois
-        other: environ %{count} mois
+        one: il y a un mois
+        other: il y a %{count} mois
       x_months:
         one: 1 mois
         other: "%{count} mois"
       about_x_years:
-        one: environ un an
-        other: environ %{count} ans
+        one: il y a 1 an
+        other: il y a %{count} ans
       over_x_years:
         one: plus d'un an
         other: plus de %{count} ans
       almost_x_years:
-        one: presqu'un an
-        other: presque %{count} ans
+        one: il y a presque 1 ans
+        other: Il y a presque %{count} ans
       x_years:
         one: 1 an
         other: "%{count} ans"
@@ -567,80 +567,81 @@ fr:
   content:
     account_mailer:
       accept_entry:
-        subject: Masajid - Your account was accepted
-        header: Hi %{mosque}!
-        body_html: |
-          <p>Congratulations!!! Your account was accepted by our admins.</p>
-          <p>You need to enter a password through the link below, then you can start publishing your articles and customizing your site.</p>
-          <p>If you have any question or feedback please don't hesitate to get in touch with us!</p>
-        cta_text: Enter password
+        subject: Masajid World - Votre compte a été accepté
+        header: Salut %{mosque}!
+        body_html: "<p>Toutes nos félicitations!!! Votre compte a été accepté par
+          les membres de notre équipe.</p><p>Vous devez entrer un mot de passe via
+          le lien ci-dessous, puis vous pouvez commencer à publier vos articles et
+          personnaliser votre site.</p><p>Si vous avez des questions ou des commentaires,
+          n'hésitez pas à nous contacter!</p>"
+        cta_text: Entrer le mot de passe
       decline_entry:
-        subject: Masajid - Your account was declined
-        header: Hello %{mosque}!
-        body_html: |-
-          <p>We are sorry to inform you that your account was declined by our admins because it seems to be not real.</p>
-          <p>If you disagree or you have any concern please get in touch with us!</p>
-          <p>Thanks for your undestanding!</p>
+        subject: Masajid World - Votre compte a été refusé
+        header: Bonjour %{mosque}!
+        body_html: "<p>Nous sommes désolés de vous informer que votre compte a été
+          refusé par nos administrateurs car il ne semble pas réel.</p><p>Si vous
+          n'êtes pas d'accord ou si vous avez des inquiétudes, veuillez nous contacter!</p><p>Merci
+          pour votre compréhension!</p>"
       notify_creation_new_entry:
-        subject: Masajid - New account %{mosque} was created
-        header: Hi Admin,
-        cta_text: See details
-        body_html: A new account was created.
+        subject: Masajid World - Un nouveau compte a été créé (%{mosque})
+        header: Salut Admin
+        cta_text: Voir les détails
+        body_html: Un nouveau compte a été créé.
   admin:
     articles:
       new:
-        header: New Article
+        header: Nouvel article
     accounts:
       edit:
-        header: Edit Account
+        header: Modifier le compte
     configurations:
       edit:
-        header: General Configuration
+        header: Configuration générale
     countries:
       edit:
-        header: Edit Country
+        header: Editer le pays
       new:
-        header: New Country
+        header: Nouveau pays
     dashboards:
       index:
-        visits: Number of visits
-        empty_visits: No body visited your website yet
+        visits: Nombre de visites
+        empty_visits: Aucun personne n'a encore visité votre site Web
     pages:
       edit:
-        header: Edit Menu Item
+        header: Modifier les éléments de menu
       new:
-        header: New Menu Item
+        header: Nouvel élément de menu
     regions:
       edit:
-        header: Edit Region
+        header: Modifier la région
       new:
-        header: New Region
+        header: Nouvelle région
     social_networks:
       edit:
-        header: Edit Social Media
+        header: Modifier les réseux sociaux
     sliders:
       edit:
-        header: Edit Slider
+        header: Modifier le Slider
     cities:
       edit:
-        header: Edit City
+        header: Modifier la ville
       new:
-        header: New City
+        header: Nouvelle ville
     pundit:
-      unauthorized: You are not authorized to perform this action
+      unauthorized: Vous n'êtes pas autorisé à effectuer cette action
     shared:
       administration: Administration
-      view_site: View Site
-      are_you_sure: Are you sure?
+      view_site: Voir le site
+      are_you_sure: Êtes-vous sûr?
       total: 'Total: %{count}'
-      account: Account
+      account: Compte
     tabs:
-      dashboard: Dashboards
-      general: General
+      dashboard: Tableaux de bord
+      general: Général
     users:
       edit:
-        header:
-        cta:
+        header: Modifier le compte
+        cta: Mettre le compte à jour
   landing:
     admin_panel: Admin panel
     create_account: Create account
