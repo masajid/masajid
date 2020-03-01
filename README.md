@@ -86,14 +86,14 @@ $ docker-compose --file=docker-compose.prod.yml up -d db
 $ docker-compose --file=docker-compose.prod.yml build app
 $ docker-compose --file=docker-compose.prod.yml run --rm app rake db:create db:migrate db:seed
 $ docker-compose --file=docker-compose.prod.yml run --rm app rake content_places:import only=countries
-$ docker-compose --file=docker-compose.prod.yml up -d app sidekiq nginx
+$ docker-compose --file=docker-compose.prod.yml up -d app sidekiq cron_job nginx
 ```
 
 Deploy new changes:
 
 ```
 $ docker-compose --file=docker-compose.prod.yml build app
-$ docker-compose --file=docker-compose.prod.yml up --no-deps -d app sidekiq
+$ docker-compose --file=docker-compose.prod.yml up --no-deps -d app sidekiq cron_job
 $ docker-compose --file=docker-compose.prod.yml run --rm app rake db:migrate
 ```
 

@@ -25,6 +25,18 @@ services:
       - db
       - redis
 
+  cron_job:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    env_file: web_container/.env.prod
+    command: cron -f
+    volumes:
+      - storage:/app/web_container/storage
+    depends_on:
+      - db
+      - redis
+
   app:
     build:
       context: .
