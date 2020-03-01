@@ -1,5 +1,5 @@
 <div class='article'>
-  <h2 class='article-title'>
+  <h2 class='mb-2 article-title'>
     <%= article.title %>
   </h2>
 
@@ -15,6 +15,6 @@
       </div>
     <% end %>
 
-    <%= sanitize article.body %>
+    <%= sanitize article.body.presence || article.summary %>
   </div>
 </div>

@@ -19,10 +19,6 @@ module Content
 
     before_validation :geolocate, if: -> { changed? && to_s.present? }
 
-    def to_s
-      [address1, zip_code, city_name, country&.name].compact.join(' ')
-    end
-
     private
 
     def geolocate
