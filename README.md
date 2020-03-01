@@ -103,3 +103,23 @@ Stop and remove droplet:
 $ docker-machine stop masajid
 $ docker-machine rm masajid
 ```
+
+## Backups
+
+Backup database:
+
+```
+$ docker exec <containerId> pg_dump -a -U masajid masajid > dump_masajid_`date +%d-%m-%Y"_"%H_%M_%S`.sql
+```
+
+Restore to localhost database:
+
+```
+$ psql -U postgres -d masajid_development < path-to-dump-file.sql
+```
+
+Backup uploads:
+
+```
+$ docker cp <containerId>:/app/web_container/storage ./web_container
+```
