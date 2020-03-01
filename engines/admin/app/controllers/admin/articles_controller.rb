@@ -7,11 +7,7 @@ module Admin
     def index
       authorize Content::Article
 
-      @articles =
-        policy_scope(Content::Article)
-          .includes(:pages)
-          .paginate(page: params[:page], per_page: 20)
-          .decorate
+      @articles = policy_scope(Content::Article).includes(:pages).paginate(page: params[:page], per_page: 20).decorate
     end
 
     def new
