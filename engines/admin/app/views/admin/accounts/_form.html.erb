@@ -7,7 +7,9 @@
     </div>
 
     <div class='col-sm-6'>
-      <%= f.input :email, input_html: { autocomplete: 'email' } %>
+      <%= f.simple_fields_for :owner do |owner| %>
+        <%= owner.input :email, input_html: { autocomplete: 'email' } %>
+      <% end %>
     </div>
   </div>
 

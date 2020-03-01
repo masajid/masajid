@@ -194,7 +194,6 @@ tr:
         photo:
       content/account:
         subdomain:
-        email:
         responsable:
         mosque:
       content/address:
@@ -257,6 +256,8 @@ tr:
         email:
         password:
         confirmed_at:
+        current_password:
+        password_confirmation:
       content/volunteer:
         name:
         identification:
@@ -449,16 +450,30 @@ tr:
       confirmation_instructions:
         subject: Onaylama talimatları.
         header:
-        body:
         cta_text:
+        body_html:
       reset_password_instructions:
         subject: Şifre sıfırlama talimatları.
+        header:
+        body:
+          primary_html:
+          secondary_html:
+        cta_text: Parolamı değiştir
       unlock_instructions:
         subject: Kilit açma talimatları.
+        header:
+        body_html:
+        cta_text:
       email_changed:
         subject:
+        header:
+        body:
+          unconfirmed_email_html:
+          confirmed_email_html:
       password_change:
         subject: Şifreniz Değişti
+        header:
+        body_html:
     omniauth_callbacks:
       failure: Sizi %{kind} aracılığıyla tanıyamadık çünkü "%{reason}".
       success: "%{kind} aracılığıyla onaylandınız."
@@ -576,9 +591,14 @@ tr:
       view_site:
       are_you_sure:
       total:
+      account:
     tabs:
       dashboard:
       general:
+    users:
+      edit:
+        header:
+        cta:
   landing:
     admin_panel:
     create_account:
@@ -608,6 +628,11 @@ tr:
       new:
         title:
         meta_description:
+      create:
+        error_message:
+      success_page:
+        header:
+        body_html:
     home:
       index:
         title:
@@ -672,3 +697,7 @@ tr:
       content/page:
         meta_title_html:
         meta_description:
+      content/user:
+        unconfirmed_email:
+        current_password:
+        password:

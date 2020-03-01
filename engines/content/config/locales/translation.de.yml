@@ -32,6 +32,10 @@ de:
           tag, which is used by search engines.
         meta_description: The summary text that accompanies your article page in search
           engine results pages (SERPs).
+      content/user:
+        unconfirmed_email:
+        current_password:
+        password:
     required:
       text: required
       mark: "*"
@@ -226,7 +230,6 @@ de:
         photo: Photo
       content/account:
         subdomain: Subdomain
-        email: Email Address
         responsable: Responsable Name
         mosque: Name der Moschee
       content/address:
@@ -289,6 +292,8 @@ de:
         email: Email address
         password: Password
         confirmed_at: Confirmation Date
+        current_password:
+        password_confirmation:
       content/volunteer:
         name: Name
         identification: Identification
@@ -481,18 +486,30 @@ de:
       confirmation_instructions:
         subject: Welcome to Masajid
         header: Hi %{mosque}!
-        body: |
-          You are welcome to Masajid. We need you to confirm your account email through the link below.
-          Then we will got in touch with you as soon as possible in order to authorize your account.
         cta_text: Confirm my account
+        body_html:
       reset_password_instructions:
         subject: Reset password instructions
+        header:
+        body:
+          primary_html:
+          secondary_html:
+        cta_text: Change my password
       unlock_instructions:
         subject: Unlock instructions
+        header:
+        body_html:
+        cta_text:
       email_changed:
         subject: Email Changed
+        header:
+        body:
+          unconfirmed_email_html:
+          confirmed_email_html:
       password_change:
         subject: Password Changed
+        header:
+        body_html:
     omniauth_callbacks:
       failure: Could not authenticate you from %{kind} because "%{reason}".
       success: Successfully authenticated from %{kind} account.
@@ -615,9 +632,14 @@ de:
       view_site: View Site
       are_you_sure: Are you sure?
       total: 'Total: %{count}'
+      account: Account
     tabs:
       dashboard: Dashboards
       general: General
+    users:
+      edit:
+        header:
+        cta:
   landing:
     admin_panel: Admin panel
     create_account: Create account
@@ -655,6 +677,11 @@ de:
       new:
         title:
         meta_description:
+      create:
+        error_message:
+      success_page:
+        header:
+        body_html:
     home:
       index:
         title:

@@ -194,7 +194,6 @@ ar:
         photo:
       content/account:
         subdomain:
-        email:
         responsable:
         mosque:
       content/address:
@@ -257,6 +256,8 @@ ar:
         email:
         password:
         confirmed_at:
+        current_password:
+        password_confirmation:
       content/volunteer:
         name:
         identification:
@@ -448,16 +449,30 @@ ar:
       confirmation_instructions:
         subject: تعليمات التأكيد
         header:
-        body:
         cta_text:
+        body_html:
       reset_password_instructions:
         subject: تعليمات إعادة تعيين كلمة المرور
+        header:
+        body:
+          primary_html:
+          secondary_html:
+        cta_text: تغيير كلمة مروري
       unlock_instructions:
         subject: تعليمات إلغاء القفل
+        header:
+        body_html:
+        cta_text:
       email_changed:
         subject: تم تغيير عنوان البريد الإلكتروني
+        header:
+        body:
+          unconfirmed_email_html:
+          confirmed_email_html:
       password_change:
         subject: تم تغيير كلمة المرور
+        header:
+        body_html:
     omniauth_callbacks:
       failure: تعذر التحقق منك من %{kind} بسبب "%{reason}".
       success: تمت المصادقة بنجاح من حساب %{kind}.
@@ -573,9 +588,14 @@ ar:
       view_site:
       are_you_sure:
       total:
+      account:
     tabs:
       dashboard:
       general:
+    users:
+      edit:
+        header:
+        cta:
   landing:
     admin_panel:
     create_account:
@@ -605,6 +625,11 @@ ar:
       new:
         title:
         meta_description:
+      create:
+        error_message:
+      success_page:
+        header:
+        body_html:
     home:
       index:
         title:
@@ -669,3 +694,7 @@ ar:
       content/page:
         meta_title_html:
         meta_description:
+      content/user:
+        unconfirmed_email:
+        current_password:
+        password:

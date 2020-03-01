@@ -194,7 +194,6 @@ ca:
         photo:
       content/account:
         subdomain:
-        email: Correu electrònic
         responsable:
         mosque:
       content/address:
@@ -257,6 +256,8 @@ ca:
         email:
         password:
         confirmed_at:
+        current_password:
+        password_confirmation:
       content/volunteer:
         name:
         identification:
@@ -450,16 +451,30 @@ ca:
       confirmation_instructions:
         subject: Instruccions de confirmació
         header:
-        body:
         cta_text:
+        body_html:
       reset_password_instructions:
         subject: Instruccions de regeneració de contrasenya
+        header:
+        body:
+          primary_html:
+          secondary_html:
+        cta_text: Canviar la meva contrasenya
       unlock_instructions:
         subject: Instruccions de desbloqueig
+        header:
+        body_html:
+        cta_text:
       email_changed:
         subject: S'ha canviat el correu electrònic
+        header:
+        body:
+          unconfirmed_email_html:
+          confirmed_email_html:
       password_change:
         subject: Contrasenya modificada
+        header:
+        body_html:
     omniauth_callbacks:
       failure: No hem pogut autoritzar el compte des de %{kind} perquè "%{reason}".
       success: Autoritzat satisfactoriament el compte des de %{kind}.
@@ -579,9 +594,14 @@ ca:
       view_site:
       are_you_sure:
       total:
+      account:
     tabs:
       dashboard:
       general:
+    users:
+      edit:
+        header:
+        cta:
   landing:
     admin_panel:
     create_account:
@@ -611,6 +631,11 @@ ca:
       new:
         title:
         meta_description:
+      create:
+        error_message:
+      success_page:
+        header:
+        body_html:
     home:
       index:
         title:
@@ -675,3 +700,7 @@ ca:
       content/page:
         meta_title_html:
         meta_description:
+      content/user:
+        unconfirmed_email:
+        current_password:
+        password:

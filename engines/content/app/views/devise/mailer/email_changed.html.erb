@@ -1,7 +1,15 @@
-<p>Hello <%= @email %>!</p>
+<div class='header'>
+  <h1>
+    <%= t('devise.mailer.email_changed.header', email: @email) %>
+  </h1>
+</div>
 
-<% if @resource.try(:unconfirmed_email?) %>
-  <p>We're contacting you to notify you that your email is being changed to <%= @resource.unconfirmed_email %>.</p>
-<% else %>
-  <p>We're contacting you to notify you that your email has been changed to <%= @resource.email %>.</p>
-<% end %>
+<div class='content'>
+  <div class='content__body'>
+    <% if @resource&.unconfirmed_email? %>
+      <%= t('devise.mailer.email_changed.body.unconfirmed_email_html', email: @resource.unconfirmed_email) %>
+    <% else %>
+      <%= t('devise.mailer.email_changed.body.confirmed_email_html', email: @resource.email) %>
+    <% end %>
+  </div>
+</div>

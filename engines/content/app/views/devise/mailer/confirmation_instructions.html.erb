@@ -1,11 +1,15 @@
-<p>
-  <%= t('devise.mailer.confirmation_instructions.header', mosque: @account.mosque) %>
-</p>
+<div class='header'>
+  <h1>
+    <%= t('devise.mailer.confirmation_instructions.header', mosque: @account.mosque) %>
+  </h1>
+</div>
 
-<p>
-  <%= t('devise.mailer.confirmation_instructions.body') %>
-</p>
+<div class='content'>
+  <div class='content__body'>
+    <%= t('devise.mailer.confirmation_instructions.body_html') %>
+  </div>
 
-<p>
-  <%= link_to t('devise.mailer.confirmation_instructions.cta_text'), confirmation_url(@resource, confirmation_token: @token) %>
-</p>
+  <div class='content__link'>
+    <%= link_to t('devise.mailer.confirmation_instructions.cta_text'), confirmation_url(@resource, confirmation_token: @token) %>
+  </div>
+</div>

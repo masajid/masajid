@@ -1,11 +1,14 @@
 require 'rails-i18n'
 require 'devise'
+require 'devise-async'
 require 'pundit'
 require 'friendly_id'
 require 'sidekiq'
 require 'geocoder'
 require 'simple_form'
+require 'skylight'
 require 'ancestry'
+require 'sentry-raven'
 require 'shrine'
 require 'stringex'
 require 'attribute_normalizer'
@@ -31,3 +34,5 @@ end
 
 require 'scoped_to'
 require 'content/controller_helpers/volunteer'
+
+require 'content/devise/mailers/helpers'

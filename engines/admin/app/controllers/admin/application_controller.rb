@@ -1,6 +1,7 @@
 module Admin
   class ApplicationController < ActionController::Base
     include Pundit
+    include Content::GoogleTagManagerHelper
     include Content::AccountsHelper
     protect_from_forgery with: :exception
 

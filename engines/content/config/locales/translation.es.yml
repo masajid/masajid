@@ -33,6 +33,10 @@ es:
           &lt;título&gt; </mark>, que es utilizado por los motores de búsqueda.
         meta_description: El texto de resumen que acompaña a la página de su artículo
           en las páginas de resultados del motor de búsqueda (SERP).
+      content/user:
+        unconfirmed_email: Actualmente esperando confirmación para %{email}
+        current_password: Necesitamos tu contraseña actual para confirmar los cambios
+        password: Deja en blanco si no deseas cambiar la contraseña
     required:
       text: Necesario
       mark: "*"
@@ -233,7 +237,6 @@ es:
         photo: Foto
       content/account:
         subdomain: Subdominio
-        email: Correo electrónico
         responsable: Nombre del responsable
         mosque: Nombre de la mezquita
       content/address:
@@ -296,6 +299,8 @@ es:
         email: Correo electrónico
         password: Contraseña
         confirmed_at: Fecha de confirmación
+        current_password: Contraseña actual
+        password_confirmation: Confirmación de contraseña
       content/volunteer:
         name: Nombre
         identification: Identificación
@@ -487,20 +492,41 @@ es:
       not_approved: Tu cuenta aún no ha sido aprobada por nuestros administradores.
     mailer:
       confirmation_instructions:
-        subject: Bienvenido a Masajid
-        header: Hola %{mosque}!
-        body: |
-          Bienvenido a Masajid. Necesitamos que confirmes el correo electrónico de tu cuenta a través del siguiente enlace.
-          Luego nos pondremos en contacto con usted lo antes posible para autorizar su cuenta.
+        subject: Masajid World - Instrucciones de confirmación
+        header: Hola %{mosque}
         cta_text: Confirmar mi cuenta
+        body_html: "<p>Puedes confirmar el correo electrónico de tu cuenta a través
+          del siguiente enlace:</p>"
       reset_password_instructions:
-        subject: Instrucciones para restablecer su contraseña
+        subject: Masajid World - Instrucciones para restablecer su contraseña
+        header: Hola %{email}
+        body:
+          primary_html: "<p>Alguien ha solicitado un enlace para cambiar su contraseña.
+            Puedes hacerlo a través del siguiente enlace:</p>"
+          secondary_html: |-
+            <p>Si no has solicitado esto, ignora este correo electrónico.</p>
+            <p>Tu contraseña no cambiará hasta que accedas al enlace de arriba y crees una nueva.</p>
+        cta_text: Cambiar mi contraseña
       unlock_instructions:
-        subject: Instrucciones de Desbloqueo
+        subject: Masajid World - Instrucciones de Desbloqueo
+        header: Hola %{email}
+        body_html: |-
+          <p>Tu cuenta ha sido bloqueada debido a un número excesivo de intentos fallidos de inicio de sesión.</p>
+          <p>Haz clic en el enlace a continuación para desbloquear su cuenta:</p>
+        cta_text: Desbloquear mi cuenta
       email_changed:
-        subject: Correo electrónico modificado
+        subject: Masajid World - Correo electrónico modificado
+        header: Hola %{email}
+        body:
+          unconfirmed_email_html: "<p>Nos estamos comunicando contigo para notificarte
+            que tu correo electrónico ha cambiado a %{email}.</p>"
+          confirmed_email_html: "<p>Nos estamos comunicando contigo para notificarte
+            que tu correo electrónico ha cambiado a %{email}.</p>"
       password_change:
-        subject: Contraseña cambiada
+        subject: Masajid World - Contraseña cambiada
+        header: Hola %{email}
+        body_html: "<p>Nos comunicamos contigo para notificarte que tu contraseña
+          ha sido modificada.</p>"
     omniauth_callbacks:
       failure: No se pudo autenticar desde %{kind} porque "%{reason}".
       success: Autentificado con éxito desde la cuenta %{kind}.
@@ -563,7 +589,7 @@ es:
   content:
     account_mailer:
       accept_entry:
-        subject: Masajid - Tu cuenta ha sido aceptada
+        subject: Masajid World - Tu cuenta ha sido aceptada
         header: Hola %{mosque}!
         body_html: "<p> ¡Enhorabuena! Tu cuenta ha sido aceptada por nuestros administradores.
           </p><p> Introduce una contraseña a través del siguiente enlace y luego podrás
@@ -572,14 +598,14 @@ es:
           nosotros! </p>"
         cta_text: Introducir la contraseña
       decline_entry:
-        subject: Masajid - Tu cuenta ha sido rechazada
+        subject: Masajid World - Tu cuenta ha sido rechazada
         header: Hola %{mosque}!
         body_html: "<p> Lamentamos informarte que nuestros administradores rechazaron
           su cuenta porque parece que no es real. </p><p> Si no está de acuerdo o
           tiene alguna inquietud, ¡contáctenos! </p><p> ¡Gracias por su comprensión!
           </p>"
       notify_creation_new_entry:
-        subject: Masajid - Se creó la nueva cuenta %{mosque}
+        subject: Masajid World - Se creó la nueva cuenta (%{mosque})
         header: Hola Administrador
         cta_text: Ver detalles
         body_html: Se creó una nueva cuenta.
@@ -630,9 +656,14 @@ es:
       view_site: Ver sitio
       are_you_sure: "¿Estás seguro?"
       total: 'Total: %{count}'
+      account: Tu cuenta
     tabs:
       dashboard: Dashboards
       general: General
+    users:
+      edit:
+        header: Editar cuenta
+        cta: Actualizar cuenta
   landing:
     admin_panel: Panel de administrador
     create_account: Crear una cuenta
@@ -668,27 +699,36 @@ es:
         content: La web para tu mezquita está lista para funcionar.
     accounts:
       new:
-        title:
-        meta_description:
+        title: Crea una cuenta
+        meta_description: Crea un página web para tu mezquita
+      create:
+        error_message:
+      success_page:
+        header: Tu cuenta ha sido creada correctamente
+        body_html: Le enviaremos un correo electrónico en unos instantes, confirme
+          su dirección de correo electrónico. <br /> Luego, los miembros de nuestro
+          equipo autorizarán su cuenta en las próximas 24 horas.
     home:
       index:
-        title:
-        meta_description:
+        title: Plataforma para mezquitas para crear y administrar sus sitios web
+        meta_description: Masajid World ofrece una solución para que las mezquitas
+          creen y administren sus páginas web
     user_confirmations:
       new:
-        title:
+        title: Confirme tu cuenta
     user_passwords:
       new:
-        title:
+        title: Recupera tu contraseña
       edit:
-        title:
+        title: Restablecer tu contraseña
     user_sessions:
       new:
         title: Iniciar sesión
     volunteers:
       new:
-        title:
-        meta_description:
+        title: Ser voluntario en Masajid World
+        meta_description: Ser voluntario en Masajid World y tener un impacto en nuestra
+          comunidad musulmana
   public:
     continued: "... (continuación)"
     read_more: Sigue leyendo

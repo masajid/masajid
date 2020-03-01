@@ -4,30 +4,30 @@ $:.push File.expand_path('lib', __dir__)
 require 'landing/version'
 
 # Describe your gem and declare its dependencies:
-Gem::Specification.new do |spec|
-  spec.name        = 'landing'
-  spec.version     = Landing::VERSION
-  spec.authors     = ['Gharbi Mohammed']
-  spec.email       = ['mgharbik@gmail.com']
-  spec.homepage    = 'https://masajid.world'
-  spec.summary     = 'Landing UI'
-  spec.description = spec.summary
-  spec.license     = 'MIT'
+Gem::Specification.new do |s|
+  s.name        = 'landing'
+  s.version     = Landing::VERSION
+  s.authors     = ['Gharbi Mohammed']
+  s.email       = ['mgharbik@gmail.com']
+  s.homepage    = 'https://masajid.world'
+  s.summary     = 'Landing UI'
+  s.description = s.summary
+  s.license     = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+  if s.respond_to?(:metadata)
+    s.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
   else
     raise 'RubyGems 2.0 or newer is required to protect against ' \
       'landing gem pushes.'
   end
 
-  spec.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
-  spec.add_dependency 'bootstrap', '~> 4.3.1'
-  spec.add_dependency 'content'
-  spec.add_dependency 'flag-icons-rails', '~> 3.1.0'
+  s.add_dependency 'bootstrap', '~> 4.3.1'
+  s.add_dependency 'content'
+  s.add_dependency 'flag-icons-rails', '~> 3.1.0'
 
-  spec.add_development_dependency 'rubocop-rails', '~> 2.4.0'
+  s.add_development_dependency 'rubocop-rails', '~> 2.4.2'
 end
