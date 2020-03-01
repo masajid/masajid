@@ -9,9 +9,10 @@ services:
 
   redis:
     image: redis:5.0
-    command: redis-server
     volumes:
       - redis:/data
+    ports:
+      - 6379:6379
 
   sidekiq:
     build: .
