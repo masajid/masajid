@@ -7,7 +7,7 @@
       <%= f.input :slug, hint: t('simple_form.hints.content/article.slug_html') if article.persisted? %>
       <%= f.input :summary %>
       <%= f.input :video_link, hint: t('simple_form.hints.content/article.video_link_html') %>
-      <%= f.input :published_at %>
+      <%= f.input :published_at, start_year: Date.current.year - 10 %>
       <%= f.input :page_ids, as: :check_boxes, collection: options_for_pages %>
 
       <%= f.input :photo %>
@@ -24,4 +24,3 @@
 
   <%= f.button :submit, class: 'btn-primary' %>
 <% end %>
-
