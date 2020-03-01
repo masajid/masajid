@@ -36,6 +36,8 @@ de:
         unconfirmed_email:
         current_password:
         password:
+      content/account:
+        domain_html:
     required:
       text: required
       mark: "*"
@@ -232,6 +234,8 @@ de:
         subdomain: Subdomain
         responsable: Responsable Name
         mosque: Name der Moschee
+        default_domain:
+        domain:
       content/address:
         address1: Address
         zip_code: Zip Code

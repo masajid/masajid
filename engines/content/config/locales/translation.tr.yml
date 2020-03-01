@@ -196,6 +196,8 @@ tr:
         subdomain:
         responsable:
         mosque:
+        default_domain:
+        domain:
       content/address:
         address1:
         zip_code:
@@ -701,3 +703,5 @@ tr:
         unconfirmed_email:
         current_password:
         password:
+      content/account:
+        domain_html:
