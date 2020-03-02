@@ -2,6 +2,8 @@
   <div class='row'>
     <div class='col-md-4'>
       <div class='address'>
+        <h3><%= t('public.footer.contact.header') %></h3>
+
         <%= simple_format current_account.decorate.display_address %>
 
         <dl>
@@ -18,7 +20,7 @@
 
     <div class='col-md-4'>
       <% if current_account.supported_locales.reject(&:blank?).many? %>
-        <%= form_tag select_locale_path, class: 'locale_selector' do %>
+        <%= form_tag select_locale_path, class: 'locale-selector' do %>
           <%= select_tag(:switch_to_locale, options_for_select(options_for_locale, I18n.locale), class: 'form-control') %>
         <% end %>
       <% end %>
@@ -46,13 +48,19 @@
       <% end %>
     </div>
 
-    <div class='col-md-4'></div>
+    <div class='col-md-4 newsletter-form'>
+      <h3><%= t('public.footer.newsletter.header') %></h3>
+
+      <%= t('public.footer.newsletter.body_html') %>
+
+      <%= render 'public/subscribers/new' %>
+    </div>
   </div>
 
   <div class='secondary-footer'>
-    <p>Page built by <a href='https://masajid.world'>Masajid World</a></p>
+    <p><%= t('public.footer.website_build_by_html') %></p>
     <p>
-      <a href='#'>Back to top</a>
+      <a href='#'><%= t('public.footer.back_to_top') %></a>
     </p>
   </div>
 </footer>

@@ -193,6 +193,12 @@ es:
               blank: Obligatorio si no seleccionas artículos
             date:
               inclusion: debe ser en futuro
+        content/subscriber:
+          attributes:
+            email:
+              invalid: "¡Por favor, introduce una dirección de correo electrónico
+                válida!"
+              taken: Ya recibimos tu suscripción antes.
     models:
       content/article:
         one: Artículo
@@ -732,6 +738,22 @@ es:
   public:
     continued: "... (continuación)"
     read_more: Sigue leyendo
+    subscribers:
+      create:
+        success: Tu suscripción ha sido creada correctamente.
+    footer:
+      back_to_top: Volver arriba
+      contact:
+        header: Contacto
+      newsletter:
+        header: Nuestro boletín
+        body_html: "<p>Suscríbase a nuestro boletín de noticias y le enviaremos correos
+          electrónicos de vez en cuando con actualizaciones recientes, tales como
+          próximas conferencias, tiempos de oración del Eid y noticias importantes
+          ...</p>"
+        cta_text: Suscribir
+      website_build_by_html: Sitio web construido por <a href='https://masajid.world'>Masajid
+        World</a>
   shared:
     actions:
       accept: Aceptar

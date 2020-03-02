@@ -150,6 +150,11 @@ ar:
               blank:
             date:
               inclusion:
+        content/subscriber:
+          attributes:
+            email:
+              invalid:
+              taken:
     models:
       content/article:
         one:
@@ -652,6 +657,18 @@ ar:
   public:
     continued:
     read_more:
+    subscribers:
+      create:
+        success:
+    footer:
+      back_to_top:
+      contact:
+        header:
+      newsletter:
+        header:
+        body_html:
+        cta_text:
+      website_build_by_html:
   shared:
     actions:
       accept:

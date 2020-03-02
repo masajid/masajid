@@ -155,6 +155,11 @@ en:
               blank: is required if you don't select articles
             date:
               inclusion: must be in future
+        content/subscriber:
+          attributes:
+            email:
+              invalid: Please enter a valid email address!
+              taken: We already received your subscribtion before.
   content:
     account_mailer:
       accept_entry:
@@ -293,6 +298,20 @@ en:
   public:
     continued: '... (continued)'
     read_more: Continue reading
+    subscribers:
+      create:
+        success: You subscribed successfully to our newsletter.
+    footer:
+      back_to_top: Back to top
+      contact:
+        header: Contact
+      newsletter:
+        header: Our newsletter
+        body_html: |
+          <p>Subscribe to our newsletter and we will send you emails from time to time with recent updates,
+          such as coming conferences, eid prayers times, and important news ...</p>
+        cta_text: Subscribe
+      website_build_by_html: Website built by <a href='https://masajid.world'>Masajid World</a>
   shared:
     actions:
       accept: Accept
