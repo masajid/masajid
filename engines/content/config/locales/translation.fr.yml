@@ -463,37 +463,40 @@ fr:
       seven_eighths: sept huitièmes
   devise:
     confirmations:
-      confirmed: Your email address has been successfully confirmed.
-      send_instructions: You will receive an email with instructions for how to confirm
-        your email address in a few minutes.
-      send_paranoid_instructions: If your email address exists in our database, you
-        will receive an email with instructions for how to confirm your email address
-        in a few minutes.
+      confirmed: Votre adresse e-mail a été confirmé avec succès.
+      send_instructions: Vous recevrez un e-mail avec des instructions sur la façon
+        de confirmer votre adresse e-mail dans quelques minutes.
+      send_paranoid_instructions: Si votre adresse électronique existe dans notre
+        base de données, vous recevrez un courriel avec des instructions sur la façon
+        de confirmer votre adresse e-mail dans quelques minutes.
       new:
-        did_not_receive_confirmation_instructions: Didn't receive confirmation instructions?
-        resend_confirmation_instructions: Resend confirmation instructions
+        did_not_receive_confirmation_instructions: Vous n'avez pas reçu les instructions
+          de confirmation?
+        resend_confirmation_instructions: Renvoyer les instructions de confirmation
     failure:
-      already_authenticated: You are already signed in.
-      inactive: Your account is not activated yet.
-      invalid: Invalid %{authentication_keys} or password.
-      locked: Your account is locked.
-      last_attempt: You have one more attempt before your account is locked.
-      not_found_in_database: Invalid %{authentication_keys} or password.
-      timeout: Your session expired. Please sign in again to continue.
-      unauthenticated: You need to sign in or sign up before continuing.
-      unconfirmed: You have to confirm your email address before continuing.
-      not_approved: Your account has not been approved by our administrators yet.
+      already_authenticated: Vous êtes déjà connecté.
+      inactive: Votre compte n'est pas encore activé.
+      invalid: "%{authentication_keys} ou mot de passe invalide."
+      locked: Votre compte est verrouillé.
+      last_attempt: Vous avez une tentative de plus avant que votre compte est verrouillé.
+      not_found_in_database: "%{authentication_keys} ou mot de passe invalide."
+      timeout: Votre session a expiré. Merci de se connecter pour continuer.
+      unauthenticated: Vous devez vous connecter ou vous inscrire avant de continuer.
+      unconfirmed: Vous devez confirmer votre adresse e-mail avant de continuer.
+      not_approved: Votre compte n'a pas encore été approuvé par nos administrateurs.
     mailer:
       confirmation_instructions:
-        subject: Welcome to Masajid
-        header: Hi %{mosque}!
-        cta_text: Confirm my account
-        body_html:
+        subject: Masajid World - Instructions de confirmation
+        header: Bonjour %{mosque}
+        cta_text: Confirmer mon compte
+        body_html: "<p>Vous pouvez confirmer l'e-mail de votre compte via le lien
+          ci-dessous:</p>"
       reset_password_instructions:
         subject: Reset password instructions
         header:
         body:
-          primary_html:
+          primary_html: "<p> Quelqu'un a demandé un lien pour changer votre mot de
+            passe. Vous pouvez le faire via le lien ci-dessous: </p>"
           secondary_html:
         cta_text: Change my password
       unlock_instructions:
@@ -502,15 +505,18 @@ fr:
         body_html:
         cta_text:
       email_changed:
-        subject: Email Changed
-        header:
+        subject: Masajid World - E-mail modifié
+        header: Bonjour %{email}
         body:
-          unconfirmed_email_html:
-          confirmed_email_html:
+          unconfirmed_email_html: "<p>Nous vous contactons pour vous informer que
+            votre adresse e-mail est devenu %{email}.</p>"
+          confirmed_email_html: "<p>Nous vous contactons pour vous informer que votre
+            adresse e-mail a été remplacée par %{email}.</p>"
       password_change:
-        subject: Password Changed
-        header:
-        body_html:
+        subject: Masajid World - Mot de passe modifié
+        header: Bonjour %{email}
+        body_html: "<p> Nous vous contactons pour vous informer que votre mot de passe
+          a été modifié. </p>"
     omniauth_callbacks:
       failure: Could not authenticate you from %{kind} because "%{reason}".
       success: Successfully authenticated from %{kind} account.
@@ -562,8 +568,8 @@ fr:
         with instructions for how to unlock it in a few minutes.
       unlocked: Your account has been unlocked successfully. Please sign in to continue.
     actions:
-      login: Sign in
-      logout: Sign out
+      login: Se connecter
+      logout: Se déconnecter
   content:
     account_mailer:
       accept_entry:
