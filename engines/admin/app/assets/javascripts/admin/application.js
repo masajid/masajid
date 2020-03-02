@@ -21,4 +21,9 @@
 //= require trix
 //= require chartkick
 //= require Chart.bundle
+//= require feather.min
 //= require_tree .
+
+$(document).ready(function () {
+  feather.replace()
+})
