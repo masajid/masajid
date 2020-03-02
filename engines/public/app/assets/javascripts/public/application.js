@@ -15,6 +15,7 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require noty/noty
 //= require_tree .
 
 $(function() {
