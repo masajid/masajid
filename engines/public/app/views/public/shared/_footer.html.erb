@@ -2,6 +2,8 @@
   <div class='row'>
     <div class='col-md-4'>
       <div class='address'>
+        <h3>Contact</h3>
+
         <%= simple_format current_account.decorate.display_address %>
 
         <dl>
@@ -49,7 +51,7 @@
     <div class='col-md-4 newsletter-form'>
       <h3>Our newsletter</h3>
 
-      <p>Subscribe to our newsletter, we will send you notification emails for time to time with recent updates,
+      <p>Subscribe to our newsletter, we will send you notification emails from time to time with recent updates,
         such as coming conferences, eid prayer times, and important news.</p>
 
       <%= render 'public/subscribers/new' %>

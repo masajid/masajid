@@ -5,16 +5,12 @@ footer {
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
 
-  .col-md-4 {
+  .col-md-4, h3 {
     margin-bottom: 20px;
   }
 
   p:last-child {
     margin-bottom: 0;
-  }
-
-  .address {
-    font-size: 14px;
   }
 
   .locale_selector {
@@ -107,7 +103,7 @@ footer {
   }
 
   .newsletter-form {
-    padding: 0 50px;
+    padding: 0 80px;
 
     .subscriber_email {
       flex: 1;
