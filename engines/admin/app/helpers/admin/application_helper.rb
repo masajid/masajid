@@ -12,7 +12,7 @@ module Admin
       content_tag(:li, class: 'nav-item') do
         link_to(path, class: ['nav-link', active && 'active']) do
           [
-            content_tag(:span, nil, data: { feather: icon}),
+            content_tag(:span, nil, data: { feather: icon }),
             text
           ].join.html_safe
         end
