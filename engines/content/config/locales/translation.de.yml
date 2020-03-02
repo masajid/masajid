@@ -186,6 +186,11 @@ de:
               blank: is required if you don't select articles
             date:
               inclusion: must be in future
+        content/subscriber:
+          attributes:
+            email:
+              invalid:
+              taken:
     models:
       content/article:
         one: Article
@@ -704,6 +709,18 @@ de:
   public:
     continued: "... (continued)"
     read_more: Continue reading
+    subscribers:
+      create:
+        success:
+    footer:
+      back_to_top:
+      contact:
+        header:
+      newsletter:
+        header:
+        body_html:
+        cta_text:
+      website_build_by_html:
   shared:
     actions:
       accept: Accept
