@@ -11,6 +11,14 @@
     }
   }
 
+  .about-us {
+    img {
+      @extend .img-fluid;
+      display: block;
+      margin: auto;
+    }
+  }
+
   @media (min-width: 768px) {
     .slider-title {
       font-size: 3rem;
