@@ -190,32 +190,32 @@ ar:
         other:
     attributes:
       content/article:
-        title:
-        slug:
-        summary:
-        body:
-        video_link:
-        published_at:
-        photo:
+        title: العنوان
+        slug: Slug
+        summary: ملخص
+        body: المحتوى
+        video_link: رابط الفيديو
+        published_at: تاريخ النشر
+        photo: الصورة
       content/account:
-        subdomain:
-        responsable:
-        mosque:
+        subdomain: مجال فرعي
+        responsable: اسم المسؤول
+        mosque: اسم المسجد
       content/address:
-        address1:
-        zip_code:
-        phone:
-        city_name:
-        region_name:
-        country_id:
+        address1: عنوان
+        zip_code: الرمز بريدي
+        phone: رقم الهاتف
+        city_name: المدينة
+        region_name: المنطقة
+        country_id: البلد
       content/configuration:
-        logo:
-        about_us:
-        mawaqit_link:
+        logo: الشعار
+        about_us: معلومات عنا
+        mawaqit_link: رابط مواقيت الصلاة
         theme:
-        supported_locales:
-        default_locale:
-        admin_locale:
+        supported_locales: اللغات المقبولة
+        default_locale: اللغة الاعتيادية
+        admin_locale: لغة الادارة
       content/country:
         name:
       content/newsletter:
@@ -238,9 +238,9 @@ ar:
       content/region:
         name:
       content/city:
-        name:
-        latitude:
-        longitude:
+        name: اسم المدينة
+        latitude: خط العرض
+        longitude: خط الطول
       content/social_network:
         youtube:
         facebook:
