@@ -1,24 +1,16 @@
 <footer>
   <div class='row'>
     <div class='col-md-4'>
-      <div class='address'>
-        <h3><%= t('public.footer.contact.header') %></h3>
-
-        <%= simple_format current_account.decorate.display_address %>
-
-        <dl>
-          <dt><%= Content::User.human_attribute_name(:email) %></dt>
-          <dd><%= current_account.email %></dd>
-        </dl>
-
-        <dl>
-          <dt><%= Content::Address.human_attribute_name(:phone) %></dt>
-          <dd><%= current_account.phone %></dd>
-        </dl>
-      </div>
+      <%= render 'public/shared/address' %>
     </div>
 
     <div class='col-md-4'>
+      <ul class='links'>
+        <li><%= link_to Content::Configuration.human_attribute_name(:about_us), about_us_path %></li>
+        <li><%= link_to t('shared.volunteers.new.header'), new_volunteer_path %></li>
+        <li><%= link_to t('public.footer.contact.header'), contact_us_path %></li>
+      </ul>
+
       <% if current_account.supported_locales.reject(&:blank?).many? %>
         <%= form_tag select_locale_path, class: 'locale-selector' do %>
           <%= select_tag(:switch_to_locale, options_for_select(options_for_locale, I18n.locale), class: 'form-control') %>

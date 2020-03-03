@@ -18,5 +18,9 @@ module Content
         object.country.name
       ].compact.join("\n")
     end
+
+    def coordinates
+      [object.longitude, object.latitude]
+    end
   end
 end

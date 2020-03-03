@@ -1,0 +1,15 @@
+<div class='address'>
+  <h3><%= t('public.footer.contact.header') %></h3>
+
+  <%= simple_format current_account.decorate.display_address %>
+
+  <dl>
+    <dt><%= Content::User.human_attribute_name(:email) %></dt>
+    <dd><%= current_account.email %></dd>
+  </dl>
+
+  <dl>
+    <dt><%= Content::Address.human_attribute_name(:phone) %></dt>
+    <dd><%= current_account.phone %></dd>
+  </dl>
+</div>

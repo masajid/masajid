@@ -13,6 +13,15 @@ footer {
     margin-bottom: 0;
   }
 
+  .links {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
   .locale-selector {
     margin: auto;
     padding-bottom: 20px;
@@ -103,7 +112,7 @@ footer {
   }
 
   .newsletter-form {
-    padding: 0 80px;
+    padding: 0 40px;
 
     .subscriber_email {
       flex: 1;

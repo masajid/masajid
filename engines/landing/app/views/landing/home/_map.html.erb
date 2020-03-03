@@ -25,7 +25,7 @@
         );
 
       new mapboxgl.Marker()
-        .setLngLat([<%= account.address.longitude %>, <%= account.address.latitude %>])
+        .setLngLat(<%= account.decorate.coordinates %>)
         .setPopup(popup)
         .addTo(map);
     <% end %>
