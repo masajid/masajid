@@ -1,4 +1,4 @@
-<%= simple_form_for Content::Subscriber.new, remote: true, html: { class: 'form-inline' }  do |f| %>
+<%= simple_form_for Content::Subscriber.new, remote: true, html: { class: 'form-inline' } do |f| %>
   <%= f.input :email, label: false %>
   <%= f.button :submit, t('public.footer.newsletter.cta_text'), class: 'btn btn-md btn-primary' %>
 <% end %>
