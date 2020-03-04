@@ -1,0 +1,22 @@
+<% if @message.valid? %>
+  new Noty({
+    theme: 'bootstrap-v4',
+    timeout: 8000,
+    type: 'success',
+    layout: 'topRight',
+    text: '<%= t('public.messages.create.success') %>'
+  }).show();
+  $('#message_name').val('')
+  $('#message_phone').val('')
+  $('#message_email').val('')
+  $('#message_subject').val('')
+  $('#message_body').val('')
+<% else %>
+  new Noty({
+    theme: 'bootstrap-v4',
+    timeout: 8000,
+    type: 'error',
+    layout: 'topRight',
+    text: '<%= @message.errors.full_messages.join(', ') %>'
+  }).show();
+<% end %>

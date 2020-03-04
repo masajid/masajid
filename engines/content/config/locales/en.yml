@@ -14,6 +14,9 @@ en:
       content/city:
         one: City
         other: Cities
+      content/message:
+        one: Message
+        other: Messages
       content/newsletter:
         one: Newsletter
         other: Newsletters
@@ -55,7 +58,7 @@ en:
         country_id: Country
       content/configuration:
         logo: Logo
-        about_us: About us
+        about_us: About Us
         mawaqit_link: Mawakit Link
         theme: Theme
         supported_locales: Supported Languages
@@ -63,6 +66,13 @@ en:
         admin_locale: Administration Language
       content/country:
         name: Country Name
+      content/message:
+        name: Name
+        phone: Phone
+        email: Email
+        subject: Subject
+        body: Message
+        newsletter: I would like to subscibe to the newsletter
       content/newsletter:
         article_ids: Articles
         body: Email Body
@@ -298,22 +308,25 @@ en:
   public:
     continued: '... (continued)'
     read_more: Continue reading
-    home:
-      contact_us:
-        cta_text: Send message
+    messages:
+      create:
+        success: Your message was sent successfully.
+      new:
+        cta_text: Send Message
     subscribers:
       create:
         success: You subscribed successfully to our newsletter.
+      new:
+        cta_text: Subscribe
     footer:
       back_to_top: Back to top
       contact:
-        header: Contact
+        header: Contact Us
       newsletter:
-        header: Our newsletter
+        header: Our Newsletter
         body_html: |
           <p>Subscribe to our newsletter and we will send you emails from time to time with recent updates,
           such as coming conferences, eid prayers times, and important news ...</p>
-        cta_text: Subscribe
       website_build_by_html: Website built by <a href='https://masajid.world'>Masajid World</a>
   shared:
     actions:

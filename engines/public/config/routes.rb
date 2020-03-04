@@ -8,6 +8,7 @@ Public::Engine.routes.draw do
     get '/about-us', to: 'home#about_us', as: :about_us
     get '/contact-us', to: 'home#contact_us', as: :contact_us
     resources :volunteers, only: %i[new create]
+    resources :messages, only: :create
     resources :subscribers, only: :create
 
     get '/article/*id', to: 'articles#show', as: :article

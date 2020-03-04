@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_14_234111) do
+ActiveRecord::Schema.define(version: 2020_03_04_103833) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -173,6 +173,19 @@ ActiveRecord::Schema.define(version: 2020_02_14_234111) do
   create_table "content_countries", force: :cascade do |t|
     t.string "name", limit: 50, null: false
     t.index ["name"], name: "index_content_countries_on_name"
+  end
+
+  create_table "content_messages", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "phone", null: false
+    t.string "email", null: false
+    t.string "subject", null: false
+    t.text "body", null: false
+    t.boolean "newsletter", default: false
+    t.bigint "account_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["account_id"], name: "index_content_messages_on_account_id"
   end
 
   create_table "content_newsletters", force: :cascade do |t|

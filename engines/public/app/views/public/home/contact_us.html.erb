@@ -22,21 +22,7 @@
 
     <div class='col-md-6'>
       <%= render 'public/shared/address' %>
-
-      <%= simple_form_for Content::Subscriber.new, remote: true do |f| %>
-        <div class='row'>
-          <div class='col-md-6'>
-            <%= f.input :email, label: false, placeholder: 'Name' %>
-          </div>
-          <div class='col-md-6'>
-            <%= f.input :email, label: false, placeholder: 'Phone' %>
-          </div>
-        </div>
-        <%= f.input :email, label: false, placeholder: 'Email' %>
-        <%= f.input :email, label: false, placeholder: 'Message' %>
-
-        <%= f.button :submit, t('public.home.contact_us.cta_text'), class: 'btn btn-md btn-primary' %>
-      <% end %>
+      <%= render 'public/messages/new' %>
     </div>
   </div>
 </main>

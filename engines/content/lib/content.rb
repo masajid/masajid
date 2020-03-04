@@ -20,6 +20,7 @@ require 'draper'
 require 'image_processing'
 require 'validates_timeliness'
 require 'translation'
+require 'email_validator'
 
 module Content
   require 'content/engine'

@@ -19,6 +19,7 @@ PATH
       devise
       devise-async
       draper
+      email_validator
       flipper-active_record (~> 0.17.1)
       friendly_id
       geocoder
@@ -181,6 +182,8 @@ GEM
       activemodel-serializers-xml (>= 1.0)
       activesupport (>= 5.0)
       request_store (>= 1.0)
+    email_validator (2.0.1)
+      activemodel
     errbase (0.2.0)
     erubi (1.9.0)
     erubis (2.7.0)
@@ -481,9 +484,9 @@ GEM
     simple_form (5.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
-    skylight (4.2.1)
-      skylight-core (= 4.2.1)
-    skylight-core (4.2.1)
+    skylight (4.2.2)
+      skylight-core (= 4.2.2)
+    skylight-core (4.2.2)
       activesupport (>= 4.2.0)
     sortable_tree_rails (0.0.9)
       rails (>= 4.2.7)

@@ -39,7 +39,10 @@
     }
 
     form {
-      input {
+      .message_name > input,
+      .message_phone > input,
+      .message_email > input,
+      .message_subject > input {
         height: 50px;
       }
     }

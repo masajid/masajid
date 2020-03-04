@@ -1,0 +1,16 @@
+<%= simple_form_for Content::Message.new, remote: true do |f| %>
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= f.input :name, label: false, placeholder: Content::Message.human_attribute_name(:name) %>
+    </div>
+    <div class='col-md-6'>
+      <%= f.input :phone, label: false, placeholder: Content::Message.human_attribute_name(:phone) %>
+    </div>
+  </div>
+  <%= f.input :email, label: false, placeholder: Content::Message.human_attribute_name(:email) %>
+  <%= f.input :subject, label: false, placeholder: Content::Message.human_attribute_name(:subject) %>
+  <%= f.input :body, label: false, input_html: { rows: 5 }, placeholder: Content::Message.human_attribute_name(:body) %>
+  <%= f.input :newsletter, input_html: { checked: true } %>
+
+  <%= f.button :submit, t('public.messages.new.cta_text'), class: 'btn btn-md btn-primary' %>
+<% end %>
