@@ -418,7 +418,7 @@ es:
       divide: dividido por
       degrees: grados
       dot: "\\ 1 punto \\ 2"
-      ellipsis:
+      ellipsis: punto punto punto
       equals: es igual a
       number: Número
       percent: Por ciento
@@ -708,7 +708,8 @@ es:
         title: Crea una cuenta
         meta_description: Crea un página web para tu mezquita
       create:
-        error_message:
+        error_message: Error en la creación de la cuenta, intente nuevamente o contáctanos
+          para que podamos ayudarte a crear tu cuenta
       success_page:
         header: Tu cuenta ha sido creada correctamente
         body_html: Le enviaremos un correo electrónico en unos instantes, confirme
@@ -769,8 +770,8 @@ es:
       de: Alemán
       ar: Árabe
       ca: Catalán
-      it:
-      tr:
+      it: Italiano
+      tr: Turco
     volunteers:
       new:
         header: Voluntariado

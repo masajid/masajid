@@ -226,7 +226,7 @@ de:
         other: Volunteers
     attributes:
       content/article:
-        title: Title
+        title: Titel
         slug: Slug
         summary: Summary
         body: Content
@@ -235,27 +235,27 @@ de:
         photo: Photo
       content/account:
         subdomain: Subdomain
-        responsable: Responsable Name
+        responsable: Verantwortlicher Name
         mosque: Name der Moschee
       content/address:
-        address1: Address
-        zip_code: Zip Code
-        phone: Phone Number
-        city_name: City
+        address1: Anschrift
+        zip_code: Postleitzahl
+        phone: Telefonnummer
+        city_name: Stadt
         region_name: Region
-        country_id: Country
+        country_id: Land
       content/configuration:
         logo: Logo
-        about_us: About us
+        about_us: Über uns
         mawaqit_link: Mawakit Link
         theme: Theme
         supported_locales: Supported Languages
-        default_locale: Default Language
+        default_locale: Standardsprache
         admin_locale: Administration Language
       content/country:
-        name: Country Name
+        name: Ländername
       content/newsletter:
-        article_ids: Articles
+        article_ids: Artikel
         body: Email Body
         link: Link
         link_text: Link Text
@@ -264,17 +264,17 @@ de:
         subject: Subject
       content/page:
         ancestry: Ancestry
-        description: Description
-        meta_title: Meta Title
-        meta_keywords: Meta Keywords
-        meta_description: Meta Description
+        description: Beschreibung
+        meta_title: Meta-Titel
+        meta_keywords: Meta-Keywords
+        meta_description: Meta-Beschreibung
         name: Name
         permalink: Permalink
         permalink_part: Permalink
       content/region:
-        name: Region Name
+        name: Regionsname
       content/city:
-        name: City Name
+        name: Stadtname
         latitude: Latitude
         longitude: Longitude
       content/social_network:
@@ -285,46 +285,46 @@ de:
         vimeo: Vimeo
         instagram: Instagram
       content/slider:
-        title: Title
+        title: Titel
         body: Body
-        photo: Photo
+        photo: Foto
         link: Link
         link_text: Link Text
       content/subscriber:
-        email: Email Address
+        email: E-Mail
         created_at: Create Date
       content/user:
-        email: Email address
-        password: Password
+        email: E-Mail
+        password: Passwort
         confirmed_at: Confirmation Date
-        current_password:
-        password_confirmation:
+        current_password: Aktuelles Passwort
+        password_confirmation: Passwort Bestätigung
       content/volunteer:
         name: Name
         identification: Identification
-        birthday: Birthday
-        address: Address
-        phone: Phone
-        email: Email
+        birthday: Geburtstag
+        address: Anschrift
+        phone: Telefonnummer
+        email: E-Mail
         education: Education
         availability: Availability
-        languages: Languages
-        other_languages: Other Languages
+        languages: Sprachen
+        other_languages: Andere Sprachen
         experience: Experience
         experience_place: Experience Place
         experience_area: Experience Area
       content/volunteer/experience_area:
-        cultural: Cultural
+        cultural: Kulturell
         social: Social
         educational: Educational
-        religious: Religious
+        religious: Religiös
       content/volunteer/languages:
-        arabic: Arabic
-        spanish: Spanish
-        catalan: Catalan
-        english: English
+        arabic: Arabisch
+        spanish: Spanisch
+        catalan: katalanisch
+        english: Englisch
         french: French
-        german: German
+        german: Deutsch
   datetime:
     distance_in_words:
       half_a_minute: eine halbe Minute
