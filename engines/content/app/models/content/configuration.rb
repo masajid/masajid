@@ -1,6 +1,7 @@
 module Content
   class Configuration < ApplicationRecord
     has_one_attached :logo
+    has_rich_text :about_us
 
     THEME_OPTIONS = %w[default cerulean cosmo flatly journal litera lumen lux minty pulse sandstone simplex spacelab united yeti].freeze
 
