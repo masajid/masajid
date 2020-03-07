@@ -4,8 +4,8 @@
   .volunteer_languages,
   .volunteer_experience_area {
     .form-check {
-      @extend .pr-2;
       display: inline-block;
+      margin-right: 10px;
     }
   }
 }
