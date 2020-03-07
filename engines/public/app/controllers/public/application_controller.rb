@@ -4,6 +4,7 @@ module Public
 
     include Pundit
     include Content::GoogleTagManagerHelper
+    include Content::LayoutHelper
     include Public::ControllerHelpers::Locale
     include Public::ControllerHelpers::SeoContent
 
