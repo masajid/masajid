@@ -12,11 +12,10 @@ header {
     }
   }
 
-  @media (max-width: 768px) {
-    .header-logo {
-      img {
-        max-width: 125px;
-      }
+  .header-logo {
+    img {
+      max-width: 125px;
+      max-height: 60px;
     }
   }
 }
@@ -27,7 +26,7 @@ header {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   body {
     padding-top: 56px;
   }
