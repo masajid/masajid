@@ -15,7 +15,7 @@ module Masajid
     config.load_defaults 6.0
 
     config.i18n.default_locale = :en
-    config.i18n.available_locales = %i[en fr es de ar]
+    config.i18n.available_locales = %i[en de fr es ca it tr ar]
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
@@ -24,7 +24,7 @@ module Masajid
 
     logger = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
-    config.log_tags = [:subdomain, :uuid]
+    config.log_tags = %i[subdomain uuid]
     config.logger = ActiveSupport::TaggedLogging.new(logger)
 
     config.action_controller.default_protect_from_forgery = false

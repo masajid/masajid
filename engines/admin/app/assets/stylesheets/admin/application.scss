@@ -12,6 +12,12 @@ body {
   font-size: .875rem;
 }
 
+.navbar {
+  .dropdown-menu {
+    left: -120px;
+  }
+}
+
 .feather {
   width: 16px;
   height: 16px;
@@ -28,7 +34,7 @@ body {
   bottom: 0;
   left: 0;
   z-index: 100; /* Behind the navbar */
-  padding: 48px 0 0; /* Height of navbar */
+  padding: 56px 0 0; /* Height of navbar */
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 }
 
@@ -77,11 +83,11 @@ body {
  */
 
 [role="main"] {
-  padding-top: 133px; /* Space for fixed navbar */
+  padding-top: 55px;
 }
 
 @media (min-width: 768px) {
   [role="main"] {
-    padding-top: 48px; /* Space for fixed navbar */
+    padding-top: 50px;
   }
 }

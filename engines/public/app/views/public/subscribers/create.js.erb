@@ -1,6 +1,18 @@
 <% if @subscriber.save %>
-  $('#subscriber_alert').html('<div class="alert alert-success">Subscription to newsletter was successfully created.</div>')
+  new Noty({
+    theme: 'bootstrap-v4',
+    timeout: 8000,
+    type: 'success',
+    layout: 'topRight',
+    text: '<%= t('public.subscribers.create.success') %>'
+  }).show();
   $('#subscriber_email').val('')
 <% else %>
-  $('#subscriber_alert').html('<div class="alert alert-danger"><%= @subscriber.errors.full_messages.join(', ') %></div>')
+  new Noty({
+    theme: 'bootstrap-v4',
+    timeout: 8000,
+    type: 'error',
+    layout: 'topRight',
+    text: '<%= @subscriber.errors.messages.values.flatten.join(', ') %>'
+  }).show();
 <% end %>

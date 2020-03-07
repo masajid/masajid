@@ -1,6 +1,7 @@
 module Admin
   class ApplicationController < ActionController::Base
     include Pundit
+    include Content::GoogleTagManagerHelper
     include Content::AccountsHelper
     protect_from_forgery with: :exception
 
@@ -22,8 +23,9 @@ module Admin
     helper_method :current_account_domain
 
     private
-      def set_locale
-        I18n.locale = current_account&.admin_locale.presence || I18n.default_locale
-      end
+
+    def set_locale
+      I18n.locale = current_account&.admin_locale.presence || I18n.default_locale
+    end
   end
 end

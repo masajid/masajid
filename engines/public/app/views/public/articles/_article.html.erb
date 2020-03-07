@@ -1,11 +1,11 @@
 <div class='article'>
-  <h2 class='article-title'>
+  <h2 class='mb-2 article-title'>
     <%= article.title %>
   </h2>
 
   <div class='article-meta'>
-    <i class='fa fa-clock-o'></i><%= article.published_on %>
-    <i class='fa fa-eye'></i><%= article.views_count %>
+    <i class='fa fa-clock-o'></i> <%= article.published_on %>
+    <i class='fa fa-eye'></i> <%= article.views_count %>
   </div>
 
   <div class='article-body'>
@@ -13,8 +13,10 @@
       <div class='embed-responsive embed-responsive-16by9 article-video'>
         <iframe class='embed-responsive-item' src='<%= article.video_link %>' allowfullscreen></iframe>
       </div>
+    <% elsif article.photo.attached? %>
+      <%= image_tag main_app.url_for(article.photo.variant(resize: '400x500')), class: 'img-fluid' %>
     <% end %>
 
-    <%= sanitize article.body %>
+    <%= sanitize article.body.presence || article.summary %>
   </div>
 </div>

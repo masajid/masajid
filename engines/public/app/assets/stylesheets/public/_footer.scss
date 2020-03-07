@@ -5,11 +5,15 @@ footer {
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
 
+  .col-md-4, h3 {
+    margin-bottom: 20px;
+  }
+
   p:last-child {
     margin-bottom: 0;
   }
 
-  .locale_selector {
+  .locale-selector {
     margin: auto;
     padding-bottom: 20px;
     width: 40%;
@@ -19,7 +23,6 @@ footer {
   .social-media {
     list-style: none;
     display: inline;
-    margin-left: 0 !important;
     padding: 0;
 
     li {
@@ -95,6 +98,19 @@ footer {
         -o-transition: all 0.8s;
         -ms-transition: all 0.8s;
         transition: all 0.8s;
+      }
+    }
+  }
+
+  .newsletter-form {
+    padding: 0 40px;
+
+    .subscriber_email {
+      flex: 1;
+      margin-bottom: 0;
+
+      input {
+        flex: 1;
       }
     }
   }

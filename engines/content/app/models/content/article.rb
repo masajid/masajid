@@ -4,7 +4,7 @@ module Content
     extend FriendlyId
     friendly_id :title, use: [:history, :slugged]
 
-    VIEWS_TRACKING_EVENT_NAME = 'Viewed article'
+    VIEWS_TRACKING_EVENT_NAME = 'Viewed article'.freeze
 
     has_one_attached :photo
 
@@ -21,5 +21,7 @@ module Content
     accepts_nested_attributes_for :seo_content
 
     delegate :meta_title, :meta_description, to: :seo_content, allow_nil: true
+
+    default_scope { order(published_at: :desc) }
   end
 end

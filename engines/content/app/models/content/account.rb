@@ -10,32 +10,16 @@ module Content
     enum status: %i[pending accepted declined]
 
     validates :subdomain, presence: true, uniqueness: true
-    validates :email, presence: true, uniqueness: true
     validates :mosque, presence: true
     validates :responsable, presence: true
     validates :owner, presence: true
     validates :address, presence: true
 
-    before_validation :set_owner, on: :create
-    before_validation -> { build_configuration }, on: :create
-
     accepts_nested_attributes_for :owner, :address, :seo_content, :configuration
 
-    delegate :theme, :logo, :about_us, :mawaqit_link, :supported_locales, :default_locale, :admin_locale, to: :configuration
+    delegate :email, to: :owner
+    delegate :address1, :zip_code, :city_name, :country, :phone, to: :address
     delegate :meta_title, :meta_description, to: :seo_content, allow_nil: true
-
-    after_create -> do
-      AccountMailer.notify_creation_new_entry(self).deliver_later
-    end
-
-    private
-
-    def set_owner
-      build_owner(
-        email: email,
-        password: Devise.friendly_token.first(8),
-        role: 'admin',
-      )
-    end
+    delegate :theme, :logo, :about_us, :mawaqit_link, :supported_locales, :default_locale, :admin_locale, to: :configuration
   end
 end

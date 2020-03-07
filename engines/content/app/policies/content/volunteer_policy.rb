@@ -1,14 +1,15 @@
 module Content
   class VolunteerPolicy < ApplicationPolicy
-    def index?
-      user.super_admin? || user.admin?
-    end
-
     def permitted_attributes
       [
-        :name, :identification, :birthday, :address, :phone, :email, :education, :availability,
-        :experience, :experience_place, :other_languages, languages: [], experience_area: [],
+        :name, :identification, :birthday, :address, :phone, :email,
+        :education, :availability, :experience, :experience_place,
+        :other_languages, languages: [], experience_area: []
       ]
+    end
+
+    def index?
+      user.super_admin? || user.admin?
     end
 
     class Scope < Scope

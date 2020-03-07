@@ -1,10 +1,10 @@
 <% content_for :page_title do %>
-  <%= @article.title %>
+  <%= link_to @article.title, prefix_link_with_account_domain(current_account, "/article/#{@article.slug}"), target: '_blank' %>
 <% end %>
 
 <% content_for :page_actions do %>
+  <%= link_to t('shared.actions.new'), new_article_path, class: 'btn btn-primary btn-sm' %>
   <%= link_to t('shared.actions.back_to_list'), articles_path, class: 'btn btn-secondary btn-sm' %>
 <% end %>
 
 <%= render 'form', article: @article %>
-

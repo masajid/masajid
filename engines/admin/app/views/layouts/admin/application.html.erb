@@ -9,8 +9,11 @@
 
     <%= stylesheet_link_tag    'admin/application', media: 'all' %>
     <%= javascript_include_tag 'admin/application' %>
+
+    <%= render 'content/shared/google_tag_manager_script_tag' if render_google_tag_manager? %>
   </head>
-  <body class='pb-3'>
+  <body>
+    <%= render 'content/shared/google_tag_manager_noscript_tag' if render_google_tag_manager? %>
     <%= render 'admin/shared/header' %>
 
     <div class='container-fluid'>

@@ -15,7 +15,11 @@ module Public
     end
 
     def options_for_locale
-      current_account.configuration.supported_locales.reject(&:blank?).map { |locale| [t("shared.locales.#{locale}"), locale.to_s] }
+      current_account
+        .configuration
+        .supported_locales
+        .reject(&:blank?)
+        .map { |locale| [t("shared.locales.#{locale}"), locale.to_s] }
     end
   end
 end

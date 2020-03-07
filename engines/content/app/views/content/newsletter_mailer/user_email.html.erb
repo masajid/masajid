@@ -1,36 +1,52 @@
-<div class='container'>
-  <div class='header'>
-    <% if @account.logo.present?  %>
-      <%= image_tag main_app.url_for(@account.logo.variant(resize: '200x')) %>
-    <% else %>
-      <h1><%= @account.mosque %></h1>
-    <% end %>
-  </div>
+<div class='header'>
+  <% if @account.logo.present?  %>
+    <%= image_tag main_app.url_for(@account.logo.variant(resize: '200x')) %>
+  <% else %>
+    <h1 class='text-center'>
+      <%= @account.mosque %>
+    </h1>
+  <% end %>
+</div>
 
-  <div class='content'>
-    <% if @newsletter.photo.present?  %>
-      <%= image_tag main_app.url_for(@newsletter.photo.variant(resize: '200x')), class: 'content__image' %>
-    <% end %>
-
-    <% if @newsletter.body.present? %>
-      <div class='content__body'><%= sanitize @newsletter.body %></div>
-    <% end %>
-
-    <% if @newsletter.link.present? && @newsletter.link_text.present? %>
-      <div class='content__link'>
-        <%= link_to @newsletter.link_text, @newsletter.link, class: 'btn btn-primary btn-sm', target: '_blank' %>
-      </div>
-    <% end %>
-  </div>
-
-  <% if @newsletter.articles.present?  %>
-    <ul class='articles'>
-      <% @newsletter.articles.each do |article|  %>
-        <li><%= link_to article.title, prefix_link_with_account_domain(@account, "/article/#{article.slug}"), target: '_blank' %></li>
-      <% end %>
-    </ul>
+<div class='content'>
+  <% if @newsletter.photo.present?  %>
+    <%= image_tag main_app.url_for(@newsletter.photo.variant(resize: '200x')), class: 'content__image' %>
   <% end %>
 
-  <!-- TODO: add footer -->
-  <div class='footer'></div>
+  <% if @newsletter.body.present? %>
+    <div class='content__body'>
+      <%= sanitize @newsletter.body %>
+    </div>
+  <% end %>
+
+  <% if @newsletter.articles.present?  %>
+    <div class='content__articles'>
+      <% @newsletter.articles.each_slice(2) do |articles|  %>
+        <div class='row'>
+          <% articles.each do |article| %>
+            <div class=col-sm-6>
+              <div class='card'>
+                <% if article.photo.attached? %>
+                  <%= link_to prefix_link_with_account_domain(@account, "/article/#{article.slug}") do %>
+                    <%= image_tag main_app.url_for(article.photo.variant(resize: '250x200')),  class: 'card-img-top' %>
+                  <% end %>
+                <% end %>
+                <div class='card-body'>
+                  <p class='card-text'>
+                    <%= link_to article.title, prefix_link_with_account_domain(@account, "/article/#{article.slug}") %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if @newsletter.link.present? && @newsletter.link_text.present? %>
+    <div class='content__link text-center'>
+      <%= link_to @newsletter.link_text, @newsletter.link %>
+    </div>
+  <% end %>
 </div>

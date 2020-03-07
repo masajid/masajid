@@ -8,14 +8,15 @@ module Public
     end
 
     private
-      def put_site_name_in_title?
-        true
-      end
 
-      def accurate_title
-        return super unless @page
+    def put_site_name_in_title?
+      true
+    end
 
-        @page.meta_title.present? ? @page.meta_title : @page.name
-      end
+    def accurate_title
+      return super unless @page
+
+      @page.meta_title.present? ? @page.meta_title : @page.name
+    end
   end
 end

@@ -3,9 +3,15 @@
   <head>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
     <%= stylesheet_link_tag 'content/mailer', media: 'all' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    <div class='container'>
+      <div class='main'>
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

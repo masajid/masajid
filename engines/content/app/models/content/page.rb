@@ -3,7 +3,7 @@ module Content
     extend Content::ScopedTo
     has_ancestry
 
-    normalize_attribute  :ancestry, with: :blank
+    normalize_attribute :ancestry, with: :blank
 
     belongs_to :account
     has_one :seo_content, as: :searchable

@@ -15,6 +15,8 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require noty/noty
+//= require_tree .
 
 $(function() {
   'use strict'
@@ -23,7 +25,7 @@ $(function() {
     $('.offcanvas-collapse').toggleClass('open')
   })
 
-  $('.locale_selector select').change(function() {
+  $('.locale-selector select').change(function() {
     this.form.submit();
   });
 });

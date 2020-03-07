@@ -1,8 +1,8 @@
 module Content
   class User < ApplicationRecord
-    devise :database_authenticatable, :recoverable, :rememberable, :validatable, :trackable, :confirmable
+    devise :database_authenticatable, :async, :recoverable, :rememberable, :validatable, :trackable, :confirmable
 
-    ROLE_NAMES = %w[super_admin admin user]
+    ROLE_NAMES = %w[super_admin admin user].freeze
 
     has_one :account, foreign_key: :owner_id
 

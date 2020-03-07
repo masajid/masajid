@@ -1,12 +1,14 @@
 @import "bootstrap";
 @import "font-awesome";
 
+@import "noty/noty";
+@import "noty/themes/bootstrap-v4";
+
 @import "header";
 @import "footer";
 @import "sidebar";
 
 @import "home";
-@import "pages";
 @import "articles";
 @import "volunteers";
 

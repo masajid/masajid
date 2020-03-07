@@ -1,9 +1,15 @@
 module Content
   module AccountsHelper
+    extend ActiveSupport::Concern
+
+    included do
+      helper_method :prefix_link_with_account_domain
+    end
+
     def prefix_link_with_account_domain(account, link = nil)
       [
         account_domain(account),
-        link,
+        link
       ].join
     end
 

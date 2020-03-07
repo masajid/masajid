@@ -2,4 +2,5 @@
 .dockerignore
 web_container/log/*
 web_container/tmp/*
+web_container/storage/*
 web_container/config/master.key

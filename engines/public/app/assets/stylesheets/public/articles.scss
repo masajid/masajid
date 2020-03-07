@@ -1,8 +1,10 @@
 // For pages, articles, and home
 .article {
   .article-title {
-    margin-bottom: .25rem;
-    font-size: 2.5rem;
+    a {
+      text-decoration: none;
+      font-size: 20px;
+    }
   }
 
   .article-meta {
@@ -19,10 +21,9 @@
       color: grey;
     }
 
-    // Maybe it is not good for small uploaded pictures, please consider to find another solution if needed!
     img {
-      width: 100%;
-      height: auto;
+      display: block;
+      margin: 25px auto;
     }
 
     .article-video {
