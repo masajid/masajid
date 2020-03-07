@@ -1,0 +1,32 @@
+.home {
+  &.index {
+    .slider {
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 70vh;
+      // background-size: 100% 100%;
+
+      .slider-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    main {
+      margin-top: 0;
+    }
+
+    @media (min-width: 768px) {
+      .slider-title {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &.about {
+    img {
+      @extend .img-fluid;
+      display: block;
+      margin: auto;
+    }
+  }
+}
