@@ -5,10 +5,10 @@ Trix.config.attachments.preview.caption = {
 }
 
 function uploadAttachment(attachment) {
-  var file = attachment.file;
+  var file = attachment.file
 
   if (file) {
-    var upload = new window.ActiveStorage.DirectUpload(file, '/rails/active_storage/direct_uploads', window);
+    var upload = new window.ActiveStorage.DirectUpload(file, '/rails/active_storage/direct_uploads', window)
 
     upload.create((error, attributes) => {
       if (error) {
@@ -19,24 +19,24 @@ function uploadAttachment(attachment) {
       return attachment.setAttributes({
         url: `/rails/active_storage/blobs/${attributes.signed_id}/${attributes.filename}`,
         href: `/rails/active_storage/blobs/${attributes.signed_id}/${attributes.filename}`,
-      });
-    });
+      })
+    })
   }
 }
 
 // Listen for the Trix attachment event to trigger upload
 document.addEventListener('trix-attachment-add', function(event) {
-  var attachment = event.attachment;
+  var attachment = event.attachment
   if (attachment.file) {
-    return uploadAttachment(attachment);
+    return uploadAttachment(attachment)
   }
 })
 
 // Listen for the Trix attachment event to trigger removal
 document.addEventListener('trix-attachment-remove', function(event) {
-  var attachment = event.attachment;
+  var attachment = event.attachment
   if (attachment.file) {
-    console.log('trix-attachment-remove TRIGGERED');
-    console.log(attachment.file);
+    console.log('trix-attachment-remove TRIGGERED')
+    console.log(attachment.file)
   }
 })
