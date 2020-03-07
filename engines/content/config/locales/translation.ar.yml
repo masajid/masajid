@@ -170,8 +170,8 @@ ar:
         one: مدينة
         other: مدن
       content/newsletter:
-        one: Newsletter
-        other: Newsletters
+        one: النشرة الإخبارية
+        other: النشرات الإخبارية
       content/page:
         one: عنصر القائمة
         other: القائمة
@@ -213,7 +213,7 @@ ar:
         about_us: معلومات عنا
         mawaqit_link: رابط مواقيت الصلاة
         theme:
-        supported_locales: اللغات المقبولة
+        supported_locales: اللغات المدعومة
         default_locale: اللغة الاعتيادية
         admin_locale: لغة الادارة
       content/country:
@@ -445,11 +445,11 @@ ar:
       invalid: "%{authentication_keys} أو كلمة المرورغير صالحة."
       locked: تم اغلاق حسابك.
       last_attempt: لديك محاولة أو أكثر قبل أن يغلق حسابك.
-      not_found_in_database:
-      timeout: انتهى الوقت المخصص للجلسة. الرجاء تسجيل الدخول مرة أخرى للمتابعة.
+      not_found_in_database: "%{authentication_keys} أو كلمة المرورغير صالحة."
+      timeout:
       unauthenticated: تحتاج إلى تسجيل الدخول أو التسجيل قبل المتابعة.
       unconfirmed: تحتاج إلى تأكيد عنوان بريدك الإلكتروني قبل المتابعة.
-      not_approved:
+      not_approved: لم تتم الموافقة على حسابك من قِبل المشرفينا حتى الآن.
     mailer:
       confirmation_instructions:
         subject: تعليمات التأكيد
@@ -659,40 +659,45 @@ ar:
         title:
         meta_description:
   public:
-    continued:
-    read_more:
+    continued: "... (يتبع)"
+    read_more: واصل القراءة
     subscribers:
       create:
-        success:
+        success: لقد اشتركت بنجاح في نشرتنا الإخبارية.
     footer:
-      back_to_top:
+      back_to_top: العودة إلى الأعلى
       contact:
-        header:
+        header: اتصل بنا
       newsletter:
-        header:
-        body_html:
-        cta_text:
-      website_build_by_html:
+        header: نشرتنا الإخبارية
+        body_html: "<p> اشترك في نشرتنا الإخبارية وسنرسل لك رسائل بريد إلكتروني من
+          وقت لآخر مع التحديثات الأخيرة، مثل المؤتمرات القادمة وأوقات صلاة الأعياد
+          والأخبار المهمة ... </p>"
+        cta_text: إشترك
+      website_build_by_html: الموقع مدعوم من طرف <a href='https://masajid.world'>Masajid
+        World</a>
+    sidebar:
+      prayer_times: أوقات الصلاة
   shared:
     actions:
       accept:
-      back_to_list:
+      back_to_list: الرجوع للقائمة
       decline:
       delete:
       edit:
       new:
     locales:
-      en:
-      fr:
-      es:
-      de:
-      ar:
-      ca:
-      it:
-      tr:
+      en: الإنجليزية
+      fr: الفرنسية
+      es: الإسبانية
+      de: الألمانية
+      ar: العربية
+      ca: الكاتالونية
+      it: الإيطالية
+      tr: التركية
     volunteers:
       new:
-        header:
+        header: تطوع معنا
     say_no:
     say_yes:
   simple_form:
@@ -704,7 +709,7 @@ ar:
     hints:
       content/configuration:
         default_locale:
-        supported_locales:
+        supported_locales: قائمة اللغات المتاحة التي يمكن للمستخدم اختيارها في الموقع.
         meta_title_html:
         meta_description:
       content/article:

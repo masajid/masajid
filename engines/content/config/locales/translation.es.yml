@@ -755,6 +755,8 @@ es:
         cta_text: Suscribir
       website_build_by_html: Sitio web construido por <a href='https://masajid.world'>Masajid
         World</a>
+    sidebar:
+      prayer_times:
   shared:
     actions:
       accept: Aceptar

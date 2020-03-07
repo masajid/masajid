@@ -1,7 +1,8 @@
 .new_volunteer {
   margin-top: 20px;
 
-  .volunteer_languages, .volunteer_experience_area {
+  .volunteer_languages,
+  .volunteer_experience_area {
     .form-check {
       @extend .pr-2;
       display: inline-block;

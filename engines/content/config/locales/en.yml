@@ -312,6 +312,8 @@ en:
           such as coming conferences, eid prayers times, and important news ...</p>
         cta_text: Subscribe
       website_build_by_html: Website built by <a href='https://masajid.world'>Masajid World</a>
+    sidebar:
+      prayer_times: Prayer Times
   shared:
     actions:
       accept: Accept

@@ -721,6 +721,8 @@ de:
         body_html:
         cta_text:
       website_build_by_html:
+    sidebar:
+      prayer_times:
   shared:
     actions:
       accept: Accept
