@@ -24,6 +24,5 @@ Admin::Engine.routes.draw do
   namespace :api do
     resources :regions, only: :index
     resources :cities, only: :index
-    resources :photos, only: :create
   end
 end

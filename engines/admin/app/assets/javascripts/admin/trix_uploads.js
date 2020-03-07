@@ -2,38 +2,26 @@
 Trix.config.attachments.preview.caption = {
   name: false,
   size: false
-};
+}
 
 function uploadAttachment(attachment) {
-  // Create our form data to submit
   var file = attachment.file;
-  var form = new FormData;
-  form.append('Content-Type', file.type);
-  form.append('photo[image]', file);
 
-  // Create our XHR request
-  var xhr = new XMLHttpRequest;
-  xhr.open('POST', '/admin/api/photos.json', true);
-  xhr.setRequestHeader('X-CSRF-Token', Rails.csrfToken());
+  if (file) {
+    var upload = new window.ActiveStorage.DirectUpload(file, '/rails/active_storage/direct_uploads', window);
 
-  // Report file uploads back to Trix
-  xhr.upload.onprogress = function(event) {
-    var progress = event.loaded / event.total * 100;
-    attachment.setUploadProgress(progress);
-  }
+    upload.create((error, attributes) => {
+      if (error) {
+        throw new Error(`Direct upload failed: ${error}`)
+      }
 
-  // Tell Trix what url and href to use on successful upload
-  xhr.onload = function() {
-    if (xhr.status === 201) {
-      var data = JSON.parse(xhr.responseText);
+      // Tell Trix what url and href to use on successful upload
       return attachment.setAttributes({
-        url: data.image_url,
-        href: data.image_url
-      })
-    }
+        url: `/rails/active_storage/blobs/${attributes.signed_id}/${attributes.filename}`,
+        href: `/rails/active_storage/blobs/${attributes.signed_id}/${attributes.filename}`,
+      });
+    });
   }
-
-  return xhr.send(form);
 }
 
 // Listen for the Trix attachment event to trigger upload
@@ -42,4 +30,13 @@ document.addEventListener('trix-attachment-add', function(event) {
   if (attachment.file) {
     return uploadAttachment(attachment);
   }
-});
+})
+
+// Listen for the Trix attachment event to trigger removal
+document.addEventListener('trix-attachment-remove', function(event) {
+  var attachment = event.attachment;
+  if (attachment.file) {
+    console.log('trix-attachment-remove TRIGGERED');
+    console.log(attachment.file);
+  }
+})
