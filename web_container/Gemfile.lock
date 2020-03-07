@@ -40,7 +40,6 @@ PATH
       flag-icons-rails (~> 3.1.0)
     public (0.1.0)
       bootstrap (~> 4.3.1)
-      bootswatch
       content
       detectify
       font-awesome-rails (~> 4.7.0.5)
@@ -137,8 +136,6 @@ GEM
       nokogiri (~> 1.6)
       premailer-rails (~> 1.9)
       rails (>= 3)
-    bootswatch (4.3.1)
-      autoprefixer-rails (>= 6.0.3)
     builder (3.2.4)
     byebug (11.1.1)
     chartkick (3.3.0)
