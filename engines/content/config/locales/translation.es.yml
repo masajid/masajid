@@ -736,14 +736,15 @@ es:
         title: Ser voluntario en Masajid World
         meta_description: Ser voluntario en Masajid World y tener un impacto en nuestra
           comunidad musulmana
+    footer:
+      copyright_html: © 2019-%{year} Masajid World · <a href="%{privacy_url}">Privacidad</a>
+        · <a href="%{terms_url}">Términos</a>
   public:
     continued: "... (continuación)"
     read_more: Sigue leyendo
     subscribers:
       create:
         success: Tu suscripción ha sido creada correctamente.
-    footer:
-      back_to_top: Volver arriba
       contact:
         header: Contacto
       newsletter:
@@ -753,6 +754,7 @@ es:
           próximas conferencias, tiempos de oración del Eid y noticias importantes
           ...</p>"
         cta_text: Suscribir
+    footer:
       website_build_by_html: Sitio web construido por <a href='https://masajid.world'>Masajid
         World</a>
     sidebar:
@@ -779,3 +781,5 @@ es:
         header: Voluntariado
     say_no: 'No'
     say_yes: Sí
+    footer:
+      back_to_top: Volver arriba

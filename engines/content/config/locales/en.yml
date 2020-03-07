@@ -240,6 +240,8 @@ en:
   landing:
     admin_panel: Admin panel
     create_account: Create account
+    footer:
+      copyright_html: '&copy; 2019-%{year} Masajid World &middot; <a href="%{privacy_url}">Privacy</a> &middot; <a href="%{terms_url}">Terms</a>'
     site_name: Masajid World
     slider:
       first:
@@ -297,12 +299,14 @@ en:
         meta_description: Volunteer at Masajid World and make an impact in our muslim community
   public:
     continued: '... (continued)'
+    footer:
+      website_build_by_html: Website built by <a href='https://masajid.world'>Masajid World</a>
     read_more: Continue reading
+    sidebar:
+      prayer_times: Prayer Times
     subscribers:
       create:
         success: You subscribed successfully to our newsletter.
-    footer:
-      back_to_top: Back to top
       contact:
         header: Contact
       newsletter:
@@ -311,9 +315,6 @@ en:
           <p>Subscribe to our newsletter and we will send you emails from time to time with recent updates,
           such as coming conferences, eid prayers times, and important news ...</p>
         cta_text: Subscribe
-      website_build_by_html: Website built by <a href='https://masajid.world'>Masajid World</a>
-    sidebar:
-      prayer_times: Prayer Times
   shared:
     actions:
       accept: Accept
@@ -322,6 +323,8 @@ en:
       delete: Delete
       edit: Edit
       new: New
+    footer:
+      back_to_top: Back to top
     locales:
       ar: Arabic
       ca: Catalan

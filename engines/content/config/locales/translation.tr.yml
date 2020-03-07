@@ -657,20 +657,21 @@ tr:
       new:
         title:
         meta_description:
+    footer:
+      copyright_html:
   public:
     continued:
     read_more:
     subscribers:
       create:
         success:
-    footer:
-      back_to_top:
       contact:
         header:
       newsletter:
         header:
         body_html:
         cta_text:
+    footer:
       website_build_by_html:
     sidebar:
       prayer_times: İbadet zamanları
@@ -696,6 +697,8 @@ tr:
         header:
     say_no:
     say_yes:
+    footer:
+      back_to_top:
   simple_form:
     required:
       text:

@@ -737,14 +737,15 @@ fr:
         title: Bénévole à Masajid World
         meta_description: Bénévole à Masajid World et faites un impact dans notre
           communauté musulmane
+    footer:
+      copyright_html: © 2019-%{year} Masajid World · <a href="%{privacy_url}">Confidentialité</a>
+        · <a href="%{terms_url}">Termes</a>
   public:
     continued: "... (continued)"
     read_more: Continuer la lecture
     subscribers:
       create:
         success: Vous vous êtes abonné avec succès à notre newsletter.
-    footer:
-      back_to_top: Retour au sommet
       contact:
         header: Contact
       newsletter:
@@ -753,6 +754,7 @@ fr:
           de temps en temps avec des mises à jour récentes, telles que les conférences
           à venir, les heures de prières de l'Aïd et des nouvelles importantes ...</p>"
         cta_text: S'abonner
+    footer:
       website_build_by_html: Site Web construit par <a href='https://masajid.world'>Masajid
         World</a>
     sidebar:
@@ -779,3 +781,5 @@ fr:
         header: Faire du bénévolat
     say_no: Non
     say_yes: Oui
+    footer:
+      back_to_top: Retour au sommet

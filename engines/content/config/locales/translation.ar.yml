@@ -658,14 +658,15 @@ ar:
       new:
         title:
         meta_description:
+    footer:
+      copyright_html: © %{year}-2019 Masajid World · <a href="%{privacy_url}">الخصوصية</a>
+        · <a href="%{terms_url}">الشروط</a>
   public:
     continued: "... (يتبع)"
     read_more: واصل القراءة
     subscribers:
       create:
         success: لقد اشتركت بنجاح في نشرتنا الإخبارية.
-    footer:
-      back_to_top: العودة إلى الأعلى
       contact:
         header: اتصل بنا
       newsletter:
@@ -674,6 +675,7 @@ ar:
           وقت لآخر مع التحديثات الأخيرة، مثل المؤتمرات القادمة وأوقات صلاة الأعياد
           والأخبار المهمة ... </p>"
         cta_text: إشترك
+    footer:
       website_build_by_html: الموقع مدعوم من طرف <a href='https://masajid.world'>Masajid
         World</a>
     sidebar:
@@ -700,6 +702,8 @@ ar:
         header: تطوع معنا
     say_no:
     say_yes:
+    footer:
+      back_to_top: العودة إلى الأعلى
   simple_form:
     required:
       text:

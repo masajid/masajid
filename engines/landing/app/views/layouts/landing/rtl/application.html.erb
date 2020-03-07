@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='ar' dir="rtl">
+  <head>
+    <title><%= title %></title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <%== meta_description_tag %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'landing/rtl/application', media: 'all' %>
+    <%= javascript_include_tag 'landing/application' %>
+
+    <%= render 'content/shared/google_tag_manager_script_tag' if render_google_tag_manager? %>
+  </head>
+  <body>
+    <%= render 'content/shared/google_tag_manager_noscript_tag' if render_google_tag_manager? %>
+    <%= render 'landing/shared/header' %>
+
+    <main role='main'>
+      <div className='container'>
+        <%= render 'content/shared/flash_messages' %>
+
+        <div class='content'>
+          <%= yield %>
+        </div>
+      </div>
+    </main>
+
+    <%= render 'landing/shared/footer' %>
+  </body>
+</html>

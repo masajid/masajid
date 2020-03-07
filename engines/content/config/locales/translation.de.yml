@@ -706,20 +706,21 @@ de:
       new:
         title:
         meta_description:
+    footer:
+      copyright_html:
   public:
     continued: "... (continued)"
     read_more: Continue reading
     subscribers:
       create:
         success:
-    footer:
-      back_to_top:
       contact:
         header:
       newsletter:
         header:
         body_html:
         cta_text:
+    footer:
       website_build_by_html:
     sidebar:
       prayer_times: Gebetszeiten
@@ -745,3 +746,5 @@ de:
         header: Volunteering
     say_no: Nein
     say_yes: Ja
+    footer:
+      back_to_top:
