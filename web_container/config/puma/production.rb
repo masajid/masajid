@@ -6,7 +6,7 @@ work_dir = '/app/web_container'
 
 environment 'production'
 
-bind "tcp://0.0.0.0:3000"
+bind 'tcp://0.0.0.0:3000'
 
 stdout_redirect "#{work_dir}/log/puma.stdout.log", "#{work_dir}/log/puma.stderr.log", true
 
