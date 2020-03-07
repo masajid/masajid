@@ -722,14 +722,14 @@ de:
     subscribers:
       create:
         success:
-      contact:
-        header:
     footer:
       website_build_by_html:
       newsletter:
         header:
         body_html:
         cta_text:
+      contact:
+        header:
     sidebar:
       prayer_times: Gebetszeiten
   shared:

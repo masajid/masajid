@@ -4,6 +4,8 @@ module Landing
   class HomeController < ApplicationController
     include Content::AccountsHelper
 
+    layout 'landing/landing'
+
     def index
       @accounts = Content::Account.accepted.includes(address: :country)
 
@@ -19,12 +21,6 @@ module Landing
           @accounts.map { |account| account.address.latitude }.max
         ]
       ]
-    end
-
-    private
-
-    def set_layout
-      I18n.locale == :ar ? 'landing/rtl/landing' : 'landing/landing'
     end
   end
 end

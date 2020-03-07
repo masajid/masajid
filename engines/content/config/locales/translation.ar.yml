@@ -675,8 +675,6 @@ ar:
     subscribers:
       create:
         success: لقد اشتركت بنجاح في نشرتنا الإخبارية.
-      contact:
-        header: اتصل بنا
     footer:
       website_build_by_html: الموقع مدعوم من طرف <a href='https://masajid.world'>Masajid
         World</a>
@@ -686,6 +684,8 @@ ar:
           وقت لآخر مع التحديثات الأخيرة، مثل المؤتمرات القادمة وأوقات صلاة الأعياد
           والأخبار المهمة ... </p>"
         cta_text: إشترك
+      contact:
+        header: اتصل بنا
     sidebar:
       prayer_times: أوقات الصلاة
   shared:

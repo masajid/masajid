@@ -753,8 +753,6 @@ es:
     subscribers:
       create:
         success: Tu suscripción ha sido creada correctamente.
-      contact:
-        header: Contacto
     footer:
       website_build_by_html: Sitio web construido por <a href='https://masajid.world'>Masajid
         World</a>
@@ -765,6 +763,8 @@ es:
           próximas conferencias, tiempos de oración del Eid y noticias importantes
           ...</p>"
         cta_text: Suscribir
+      contact:
+        header: Contacto
     sidebar:
       prayer_times: Horarios de Salat
   shared:

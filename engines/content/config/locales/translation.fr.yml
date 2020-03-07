@@ -754,8 +754,6 @@ fr:
     subscribers:
       create:
         success: Vous vous êtes abonné avec succès à notre newsletter.
-      contact:
-        header: Contact
     footer:
       website_build_by_html: Site Web construit par <a href='https://masajid.world'>Masajid
         World</a>
@@ -765,6 +763,8 @@ fr:
           de temps en temps avec des mises à jour récentes, telles que les conférences
           à venir, les heures de prières de l'Aïd et des nouvelles importantes ...</p>"
         cta_text: S'abonner
+      contact:
+        header: Contact
     sidebar:
       prayer_times: Horaires de prière
   shared:

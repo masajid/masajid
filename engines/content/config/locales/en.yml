@@ -313,9 +313,9 @@ en:
     subscribers:
       create:
         success: You subscribed successfully to our newsletter.
+    footer:
       contact:
         header: Contact
-    footer:
       newsletter:
         header: Our newsletter
         body_html: |
