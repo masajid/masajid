@@ -6,9 +6,9 @@
 
     <div class='col-md-4'>
       <ul class='links'>
-        <li><%= link_to Content::Configuration.human_attribute_name(:about_us), about_us_path %></li>
+        <li><%= link_to Content::Configuration.human_attribute_name(:about_us), about_path %></li>
         <li><%= link_to t('shared.volunteers.new.header'), new_volunteer_path %></li>
-        <li><%= link_to t('public.footer.contact.header'), contact_us_path %></li>
+        <li><%= link_to t('public.footer.contact.header'), contact_path %></li>
       </ul>
 
       <% if current_account.supported_locales.reject(&:blank?).many? %>
