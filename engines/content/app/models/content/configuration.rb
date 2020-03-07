@@ -2,8 +2,6 @@ module Content
   class Configuration < ApplicationRecord
     has_one_attached :logo
 
-    THEME_OPTIONS = %w[default cerulean cosmo flatly journal litera lumen lux minty pulse sandstone simplex spacelab united yeti].freeze
-
     belongs_to :account
 
     validates :mawaqit_link, format: { with: /\Ahttps:\/\/mawaqit.net\//i }, allow_blank: true
