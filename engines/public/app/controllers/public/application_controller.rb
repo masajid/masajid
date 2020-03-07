@@ -15,8 +15,9 @@ module Public
     helper_method :current_account
 
     private
-      def set_layout
-        I18n.locale == :ar ? 'public/rtl/application' : 'public/application'
-      end
+
+    def set_layout
+      I18n.locale == :ar ? 'public/rtl/application' : 'public/application'
+    end
   end
 end
