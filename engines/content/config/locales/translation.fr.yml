@@ -756,7 +756,7 @@ fr:
       website_build_by_html: Site Web construit par <a href='https://masajid.world'>Masajid
         World</a>
     sidebar:
-      prayer_times:
+      prayer_times: Horaires de prière
   shared:
     actions:
       accept: Accepter

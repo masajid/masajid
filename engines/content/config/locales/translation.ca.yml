@@ -676,7 +676,7 @@ ca:
         cta_text:
       website_build_by_html:
     sidebar:
-      prayer_times:
+      prayer_times: Temps de pregària
   shared:
     actions:
       accept:
