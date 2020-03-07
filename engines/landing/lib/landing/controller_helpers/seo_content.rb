@@ -13,12 +13,12 @@ module Landing
       def title
         if accurate_title_present?
           if put_site_name_in_title?
-            [t('landing.site_name'), accurate_title].join(' - ')
+            [t('shared.site_name'), accurate_title].join(' - ')
           else
             accurate_title
           end
         else
-          t('landing.site_name')
+          t('shared.site_name')
         end
       end
 

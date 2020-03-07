@@ -159,25 +159,31 @@ ca:
       content/article:
         one:
         other:
+        few:
       content/account:
         one:
         other:
-      content/address:
+        few:
       content/country:
         one:
         other:
+        few:
       content/city:
         one:
         other:
+        few:
       content/newsletter:
         one:
         other:
+        few:
       content/page:
         one:
         other:
+        few:
       content/region:
         one:
         other:
+        few:
       content/slider:
         one:
       content/social_network:
@@ -185,9 +191,11 @@ ca:
       content/subscriber:
         one:
         other:
+        few:
       content/volunteer:
         one:
         other:
+        few:
     attributes:
       content/article:
         title:
@@ -603,6 +611,7 @@ ca:
     tabs:
       dashboard:
       general:
+      settings:
     users:
       edit:
         header:
@@ -610,7 +619,6 @@ ca:
   landing:
     admin_panel:
     create_account:
-    site_name:
     slider:
       first:
         headline:
@@ -660,6 +668,8 @@ ca:
       new:
         title:
         meta_description:
+    footer:
+      copyright_html:
   public:
     continued:
     read_more:
@@ -667,14 +677,15 @@ ca:
       create:
         success:
     footer:
-      back_to_top:
-      contact:
-        header:
+      website_build_by_html:
       newsletter:
         header:
         body_html:
         cta_text:
-      website_build_by_html:
+      contact:
+        header:
+    sidebar:
+      prayer_times: Temps de pregària
   shared:
     actions:
       accept:
@@ -697,6 +708,9 @@ ca:
         header:
     say_no:
     say_yes:
+    footer:
+      back_to_top:
+    site_name:
   simple_form:
     required:
       text:

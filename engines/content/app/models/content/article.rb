@@ -21,5 +21,7 @@ module Content
     accepts_nested_attributes_for :seo_content
 
     delegate :meta_title, :meta_description, to: :seo_content, allow_nil: true
+
+    default_scope { order(published_at: :desc) }
   end
 end

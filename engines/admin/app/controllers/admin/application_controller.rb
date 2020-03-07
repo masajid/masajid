@@ -3,6 +3,7 @@ module Admin
     include Pundit
     include Content::GoogleTagManagerHelper
     include Content::AccountsHelper
+    include Content::LayoutHelper
     protect_from_forgery with: :exception
 
     before_action :authenticate_user!
