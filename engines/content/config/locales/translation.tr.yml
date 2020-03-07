@@ -616,7 +616,6 @@ tr:
   landing:
     admin_panel:
     create_account:
-    site_name:
     slider:
       first:
         headline:
@@ -708,6 +707,7 @@ tr:
     say_yes:
     footer:
       back_to_top:
+    site_name:
   simple_form:
     required:
       text:

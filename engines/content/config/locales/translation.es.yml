@@ -682,7 +682,6 @@ es:
   landing:
     admin_panel: Panel de administrador
     create_account: Crear una cuenta
-    site_name: Masajid World
     slider:
       first:
         headline: Tu Masjid online.
@@ -792,3 +791,4 @@ es:
     say_yes: Sí
     footer:
       back_to_top: Volver arriba
+    site_name: Masajid World

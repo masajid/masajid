@@ -1,5 +1,14 @@
 module Admin
   module ApplicationHelper
+    def title
+      return t('shared.site_name') if current_account.blank?
+
+      [
+        current_account.mosque,
+        t('shared.site_name')
+      ].join(' - ')
+    end
+
     def plural_resource_name(resource_class)
       resource_class.model_name.human(count: 3)
     end

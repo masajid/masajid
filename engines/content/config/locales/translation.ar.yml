@@ -617,7 +617,6 @@ ar:
   landing:
     admin_panel:
     create_account:
-    site_name:
     slider:
       first:
         headline:
@@ -713,6 +712,7 @@ ar:
     say_yes:
     footer:
       back_to_top: العودة إلى الأعلى
+    site_name: Masajid World
   simple_form:
     required:
       text:

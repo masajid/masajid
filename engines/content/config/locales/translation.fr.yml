@@ -682,7 +682,6 @@ fr:
   landing:
     admin_panel: panneau d'administration
     create_account: Créer un compte
-    site_name: Masajid World
     slider:
       first:
         headline: Votre mosquée en ligne.
@@ -792,3 +791,4 @@ fr:
     say_yes: Oui
     footer:
       back_to_top: Retour au sommet
+    site_name: Masajid World

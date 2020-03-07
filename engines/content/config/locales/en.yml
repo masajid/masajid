@@ -251,7 +251,6 @@ en:
     create_account: Create account
     footer:
       copyright_html: '&copy; 2019-%{year} Masajid World &middot; <a href="%{privacy_url}">Privacy</a> &middot; <a href="%{terms_url}">Terms</a>'
-    site_name: Masajid World
     slider:
       first:
         headline: Your masjid online.
@@ -348,6 +347,7 @@ en:
         header: Volunteering
     say_no: 'No'
     say_yes: 'Yes'
+    site_name: Masajid World
   devise:
     actions:
       login: Sign in
