@@ -206,25 +206,31 @@ fr:
       content/article:
         one: Article
         other: Articles
+        few: Articles
       content/account:
         one: Compte
         other: Comptes
-      content/address: Adresse
+        few: Comptes
       content/country:
         one: Pays
         other: Pays
+        few: Pays
       content/city:
         one: Ville
         other: Villes
+        few: Villes
       content/newsletter:
         one: Newsletters
         other: Newsletters
+        few: Newsletters
       content/page:
         one: Élément du menu
         other: Menu
+        few: Menu
       content/region:
         one: Région
         other: Régions
+        few: Régions
       content/slider:
         one: Slider
       content/social_network:
@@ -232,9 +238,11 @@ fr:
       content/subscriber:
         one: Abonné
         other: Abonnés
+        few: Abonnés
       content/volunteer:
         one: Bénévole
         other: Bénévoles
+        few: Bénévoles
     attributes:
       content/article:
         title: Titre
@@ -666,6 +674,7 @@ fr:
     tabs:
       dashboard: Tableaux de bord
       general: Général
+      settings: Paramètres
     users:
       edit:
         header: Modifier le compte
@@ -748,15 +757,15 @@ fr:
         success: Vous vous êtes abonné avec succès à notre newsletter.
       contact:
         header: Contact
+    footer:
+      website_build_by_html: Site Web construit par <a href='https://masajid.world'>Masajid
+        World</a>
       newsletter:
         header: Notre newsletter
         body_html: "<p>Abonnez-vous à notre newsletter et on vous enverra des e-mails
           de temps en temps avec des mises à jour récentes, telles que les conférences
           à venir, les heures de prières de l'Aïd et des nouvelles importantes ...</p>"
         cta_text: S'abonner
-    footer:
-      website_build_by_html: Site Web construit par <a href='https://masajid.world'>Masajid
-        World</a>
     sidebar:
       prayer_times: Horaires de prière
   shared:

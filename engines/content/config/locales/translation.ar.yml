@@ -159,25 +159,31 @@ ar:
       content/article:
         one: مقال
         other: مقالات
+        few: مقالات
       content/account:
         one: حساب
         other: حسابات
-      content/address: عنوان
+        few: حسابات
       content/country:
         one: بلد
         other: بلدان
+        few: بلدان
       content/city:
         one: مدينة
         other: مدن
+        few: مدن
       content/newsletter:
         one: النشرة الإخبارية
         other: النشرات الإخبارية
+        few: النشرات الإخبارية
       content/page:
         one: عنصر القائمة
         other: القائمة
+        few: القائمة
       content/region:
         one: منطقة
         other: مناطق
+        few: مناطق
       content/slider:
         one: Slider
       content/social_network:
@@ -185,9 +191,11 @@ ar:
       content/subscriber:
         one: مشترك
         other: مشتركين
+        few: مشتركين
       content/volunteer:
         one: المتطوع
         other: المتطوعون
+        few: المتطوعون
     attributes:
       content/article:
         title: العنوان
@@ -601,6 +609,7 @@ ar:
     tabs:
       dashboard: لوحات القيادة
       general: عام
+      settings: إعدادات
     users:
       edit:
         header: تعديل الحساب
@@ -669,15 +678,15 @@ ar:
         success: لقد اشتركت بنجاح في نشرتنا الإخبارية.
       contact:
         header: اتصل بنا
+    footer:
+      website_build_by_html: الموقع مدعوم من طرف <a href='https://masajid.world'>Masajid
+        World</a>
       newsletter:
         header: نشرتنا الإخبارية
         body_html: "<p> اشترك في نشرتنا الإخبارية وسنرسل لك رسائل بريد إلكتروني من
           وقت لآخر مع التحديثات الأخيرة، مثل المؤتمرات القادمة وأوقات صلاة الأعياد
           والأخبار المهمة ... </p>"
         cta_text: إشترك
-    footer:
-      website_build_by_html: الموقع مدعوم من طرف <a href='https://masajid.world'>Masajid
-        World</a>
     sidebar:
       prayer_times: أوقات الصلاة
   shared:

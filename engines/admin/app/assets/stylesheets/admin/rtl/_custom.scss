@@ -1,0 +1,24 @@
+.navbar {
+  .dropdown-menu {
+    left: 0;
+  }
+}
+
+.sidebar {
+  right: 0;
+
+  .nav-link {
+    svg.feather {
+      margin: 0 0 0 4px;
+    }
+  }
+}
+
+.edit_account {
+  .account_configuration_supported_locales {
+    .form-check {
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+}

@@ -195,25 +195,31 @@ de:
       content/article:
         one: Article
         other: Articles
+        few: Articles
       content/account:
         one: Account
         other: Accounts
-      content/address: Address
+        few: Accounts
       content/country:
         one: Country
         other: Countries
+        few: Countries
       content/city:
         one: City
         other: Cities
+        few: Cities
       content/newsletter:
         one: Newsletter
         other: Newsletters
+        few: Newsletters
       content/page:
         one: Menu Item
         other: Menu
+        few: Menu
       content/region:
         one: Region
         other: Regions
+        few: Regions
       content/slider:
         one: Slider
       content/social_network:
@@ -221,9 +227,11 @@ de:
       content/subscriber:
         one: Subscriber
         other: Subscribers
+        few: Subscribers
       content/volunteer:
         one: Volunteer
         other: Volunteers
+        few: Volunteers
     attributes:
       content/article:
         title: Titel
@@ -641,6 +649,7 @@ de:
     tabs:
       dashboard: Dashboards
       general: General
+      settings:
     users:
       edit:
         header:
@@ -716,12 +725,12 @@ de:
         success:
       contact:
         header:
+    footer:
+      website_build_by_html:
       newsletter:
         header:
         body_html:
         cta_text:
-    footer:
-      website_build_by_html:
     sidebar:
       prayer_times: Gebetszeiten
   shared:

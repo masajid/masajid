@@ -2,25 +2,31 @@ en:
   activerecord:
     models:
       content/article:
+        few: Articles
         one: Article
         other: Articles
       content/account:
+        few: Accounts
         one: Account
         other: Accounts
-      content/address: Address
       content/country:
+        few: Countries
         one: Country
         other: Countries
       content/city:
+        few: Cities
         one: City
         other: Cities
       content/newsletter:
+        few: Newsletters
         one: Newsletter
         other: Newsletters
       content/page:
+        few: Menu
         one: Menu Item
         other: Menu
       content/region:
+        few: Regions
         one: Region
         other: Regions
       content/slider:
@@ -28,9 +34,11 @@ en:
       content/social_network:
         one: Social media
       content/subscriber:
+        few: Subscribers
         one: Subscriber
         other: Subscribers
       content/volunteer:
+        few: Volunteers
         one: Volunteer
         other: Volunteers
     attributes:
@@ -236,6 +244,7 @@ en:
       total: 'Total: %{count}'
     tabs:
       dashboard: Dashboards
+      settings: Settings
       general: General
   landing:
     admin_panel: Admin panel
@@ -299,8 +308,6 @@ en:
         meta_description: Volunteer at Masajid World and make an impact in our muslim community
   public:
     continued: '... (continued)'
-    footer:
-      website_build_by_html: Website built by <a href='https://masajid.world'>Masajid World</a>
     read_more: Continue reading
     sidebar:
       prayer_times: Prayer Times
@@ -309,12 +316,14 @@ en:
         success: You subscribed successfully to our newsletter.
       contact:
         header: Contact
+    footer:
       newsletter:
         header: Our newsletter
         body_html: |
           <p>Subscribe to our newsletter and we will send you emails from time to time with recent updates,
           such as coming conferences, eid prayers times, and important news ...</p>
         cta_text: Subscribe
+      website_build_by_html: Website built by <a href='https://masajid.world'>Masajid World</a>
   shared:
     actions:
       accept: Accept

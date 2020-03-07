@@ -159,25 +159,31 @@ ca:
       content/article:
         one:
         other:
+        few:
       content/account:
         one:
         other:
-      content/address:
+        few:
       content/country:
         one:
         other:
+        few:
       content/city:
         one:
         other:
+        few:
       content/newsletter:
         one:
         other:
+        few:
       content/page:
         one:
         other:
+        few:
       content/region:
         one:
         other:
+        few:
       content/slider:
         one:
       content/social_network:
@@ -185,9 +191,11 @@ ca:
       content/subscriber:
         one:
         other:
+        few:
       content/volunteer:
         one:
         other:
+        few:
     attributes:
       content/article:
         title:
@@ -603,6 +611,7 @@ ca:
     tabs:
       dashboard:
       general:
+      settings:
     users:
       edit:
         header:
@@ -670,12 +679,12 @@ ca:
         success:
       contact:
         header:
+    footer:
+      website_build_by_html:
       newsletter:
         header:
         body_html:
         cta_text:
-    footer:
-      website_build_by_html:
     sidebar:
       prayer_times: Temps de pregària
   shared:
