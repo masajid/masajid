@@ -195,25 +195,31 @@ de:
       content/article:
         one: Article
         other: Articles
+        few: Articles
       content/account:
         one: Account
         other: Accounts
-      content/address: Address
+        few: Accounts
       content/country:
         one: Country
         other: Countries
+        few: Countries
       content/city:
         one: City
         other: Cities
+        few: Cities
       content/newsletter:
         one: Newsletter
         other: Newsletters
+        few: Newsletters
       content/page:
         one: Menu Item
         other: Menu
+        few: Menu
       content/region:
         one: Region
         other: Regions
+        few: Regions
       content/slider:
         one: Slider
       content/social_network:
@@ -221,9 +227,11 @@ de:
       content/subscriber:
         one: Subscriber
         other: Subscribers
+        few: Subscribers
       content/volunteer:
         one: Volunteer
         other: Volunteers
+        few: Volunteers
     attributes:
       content/article:
         title: Titel
@@ -641,6 +649,7 @@ de:
     tabs:
       dashboard: Dashboards
       general: General
+      settings:
     users:
       edit:
         header:
@@ -648,7 +657,6 @@ de:
   landing:
     admin_panel: Admin panel
     create_account: Create account
-    site_name: Masajid World
     slider:
       first:
         headline: Your masjid online.
@@ -706,6 +714,8 @@ de:
       new:
         title:
         meta_description:
+    footer:
+      copyright_html:
   public:
     continued: "... (continued)"
     read_more: Continue reading
@@ -713,14 +723,15 @@ de:
       create:
         success:
     footer:
-      back_to_top:
-      contact:
-        header:
+      website_build_by_html:
       newsletter:
         header:
         body_html:
         cta_text:
-      website_build_by_html:
+      contact:
+        header:
+    sidebar:
+      prayer_times: Gebetszeiten
   shared:
     actions:
       accept: Accept
@@ -743,3 +754,6 @@ de:
         header: Volunteering
     say_no: Nein
     say_yes: Ja
+    footer:
+      back_to_top:
+    site_name: Masajid World

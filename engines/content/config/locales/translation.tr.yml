@@ -159,25 +159,31 @@ tr:
       content/article:
         one:
         other:
+        few:
       content/account:
         one:
         other:
-      content/address:
+        few:
       content/country:
         one:
         other:
+        few:
       content/city:
         one:
         other:
+        few:
       content/newsletter:
         one:
         other:
+        few:
       content/page:
         one:
         other:
+        few:
       content/region:
         one:
         other:
+        few:
       content/slider:
         one:
       content/social_network:
@@ -185,9 +191,11 @@ tr:
       content/subscriber:
         one:
         other:
+        few:
       content/volunteer:
         one:
         other:
+        few:
     attributes:
       content/article:
         title:
@@ -600,6 +608,7 @@ tr:
     tabs:
       dashboard:
       general:
+      settings:
     users:
       edit:
         header:
@@ -607,7 +616,6 @@ tr:
   landing:
     admin_panel:
     create_account:
-    site_name:
     slider:
       first:
         headline:
@@ -657,6 +665,8 @@ tr:
       new:
         title:
         meta_description:
+    footer:
+      copyright_html:
   public:
     continued:
     read_more:
@@ -664,14 +674,15 @@ tr:
       create:
         success:
     footer:
-      back_to_top:
-      contact:
-        header:
+      website_build_by_html:
       newsletter:
         header:
         body_html:
         cta_text:
-      website_build_by_html:
+      contact:
+        header:
+    sidebar:
+      prayer_times: İbadet zamanları
   shared:
     actions:
       accept:
@@ -694,6 +705,9 @@ tr:
         header:
     say_no:
     say_yes:
+    footer:
+      back_to_top:
+    site_name:
   simple_form:
     required:
       text:

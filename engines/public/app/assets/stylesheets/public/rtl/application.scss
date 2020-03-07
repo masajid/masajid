@@ -1,0 +1,33 @@
+@import "rtl/bootstrap.min";
+@import "font-awesome";
+
+@import "noty/noty";
+@import "noty/themes/bootstrap-v4";
+
+@import "public/rtl/custom";
+
+@import "public/header";
+@import "public/footer";
+@import "public/sidebar";
+
+@import "public/home";
+@import "public/articles";
+@import "public/volunteers";
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+main {
+  margin: 30px 0;
+}
+
+@media (max-width: 768px) {
+  .offcanvas-collapse {
+    transform: translateX(-110%);
+  }
+
+  .offcanvas-collapse.open {
+    transform: translateX(2rem);
+  }
+}
