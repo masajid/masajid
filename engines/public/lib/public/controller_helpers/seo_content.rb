@@ -31,7 +31,7 @@ module Public
       private
 
       def accurate_title
-        @accurate_title ||= current_account.meta_title
+        @accurate_title ||= current_account.meta_title.presence
       end
 
       def put_site_name_in_title?

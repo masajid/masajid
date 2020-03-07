@@ -4,10 +4,11 @@
   padding: 15px;
   margin: auto;
 
-  .volunteer_languages, .volunteer_experience_area {
+  .volunteer_languages,
+  .volunteer_experience_area {
     .form-check {
       display: inline-block;
-      padding-right: 10px;
+      margin-right: 10px;
     }
   }
 }

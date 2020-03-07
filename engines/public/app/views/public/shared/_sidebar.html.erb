@@ -7,7 +7,7 @@
 
   <% if current_account.mawaqit_link.present? %>
     <div class='p-4 prayer-times'>
-      <h4 class='font-italic'>Prayer Times</h4>
+      <h4 class='font-italic'><%= t('public.sidebar.prayer_times') %></h4>
 
       <iframe src='<%= current_account.mawaqit_link %>' frameborder='0' scrolling='no'></iframe>
     </div>

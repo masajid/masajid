@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_04_103833) do
+ActiveRecord::Schema.define(version: 2020_03_07_085205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -215,12 +215,6 @@ ActiveRecord::Schema.define(version: 2020_03_04_103833) do
     t.index ["ancestry"], name: "index_content_pages_on_ancestry"
     t.index ["deleted_at"], name: "index_content_pages_on_deleted_at"
     t.index ["position"], name: "index_content_pages_on_position"
-  end
-
-  create_table "content_photos", force: :cascade do |t|
-    t.text "image_data"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "content_regions", force: :cascade do |t|

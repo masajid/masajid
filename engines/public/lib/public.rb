@@ -3,7 +3,6 @@ require 'detectify'
 require 'bootstrap'
 require 'will_paginate'
 require 'will_paginate-bootstrap4'
-require 'bootswatch'
 require 'font-awesome-rails'
 
 module Public

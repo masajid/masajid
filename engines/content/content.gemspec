@@ -33,7 +33,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '~> 6.0.0'
   s.add_dependency 'rails-i18n', '~> 6.0.0'
   s.add_dependency 'sentry-raven', '~> 2.13.0'
-  s.add_dependency 'shrine'
   s.add_dependency 'sidekiq'
   s.add_dependency 'simple_form'
   s.add_dependency 'skylight', '~> 4.2.1'

@@ -127,67 +127,75 @@ ar:
   activerecord:
     errors:
       messages:
-        record_invalid: 'فشل التحقّق من: %{errors}'
+        record_invalid: 'التحقق من: %{errors} لم ينجح '
         restrict_dependent_destroy:
-          has_one: لا يمكن حذف السجل لوجود سجل يعتمد عليه %{record}
-          has_many: لا يمكن حذف السجل لوجود سجلات تعتمد عليه %{record}
-        invalid_date:
-        invalid_time:
-        invalid_datetime:
-        is_at:
-        before:
-        on_or_before:
-        after:
-        on_or_after:
+          has_one: لا يمكن حذف السجل لوجود سجل مرتبط %{record}
+          has_many: لا يمكن حذف السجل لوجود سجلات مرتبطة %{record}
+        invalid_date: هذا التاريخ غير صالح
+        invalid_time: هذا الوقت غير صالح
+        invalid_datetime: هذا التاريخ والساعة غير صالحين
+        is_at: يجب أن يكون في %{restriction}
+        before: يجب أن يكون قبل %{restriction}
+        on_or_before: يجب أن تكون قبل %{restriction}
+        after: يجب أن يكون بعد %{restriction}
+        on_or_after: يجب أن تكون بعد %{restriction}
       models:
         content/address:
           attributes:
             address1:
-              geocoding_failed:
+              geocoding_failed: فشل الترميز الجغرافي
         content/newsletter:
           attributes:
             body:
-              blank:
+              blank: مطلوب إذا لم تختر المقالات
             date:
-              inclusion:
+              inclusion: يجب أن يكون في المستقبل
         content/subscriber:
           attributes:
             email:
-              invalid:
-              taken:
+              invalid: رجاء قم بإدخال بريد الكتروني صالح!
+              taken: لقد تلقينا بالفعل اشتراكك من قبل.
     models:
       content/article:
-        one:
-        other:
+        one: مقال
+        other: مقالات
+        few: مقالات
       content/account:
-        one:
-        other:
-      content/address:
+        one: حساب
+        other: حسابات
+        few: حسابات
       content/country:
-        one:
-        other:
+        one: بلد
+        other: بلدان
+        few: بلدان
       content/city:
-        one:
-        other:
+        one: مدينة
+        other: مدن
+        few: مدن
       content/newsletter:
-        one:
-        other:
+        one: النشرة الإخبارية
+        other: النشرات الإخبارية
+        few: النشرات الإخبارية
       content/page:
-        one:
-        other:
+        one: عنصر القائمة
+        other: القائمة
+        few: القائمة
       content/region:
-        one:
-        other:
+        one: منطقة
+        other: مناطق
+        few: مناطق
       content/slider:
-        one:
+        one: Slider
       content/social_network:
-        one:
+        one: وسائل التواصل الاجتماعي
       content/subscriber:
-        one:
-        other:
+        one: مشترك
+        other: مشتركين
+        few: مشتركين
       content/volunteer:
-        one:
-        other:
+        one: المتطوع
+        other: المتطوعون
+        few: المتطوعون
     attributes:
       content/article:
         title: العنوان
@@ -198,11 +206,11 @@ ar:
         published_at: تاريخ النشر
         photo: الصورة
       content/account:
-        subdomain: مجال فرعي
+        subdomain: Subdomain
         responsable: اسم المسؤول
         mosque: اسم المسجد
       content/address:
-        address1: عنوان
+        address1: العنوان
         zip_code: الرمز بريدي
         phone: رقم الهاتف
         city_name: المدينة
@@ -213,82 +221,82 @@ ar:
         about_us: معلومات عنا
         mawaqit_link: رابط مواقيت الصلاة
         theme:
-        supported_locales: اللغات المقبولة
+        supported_locales: اللغات المدعومة
         default_locale: اللغة الاعتيادية
         admin_locale: لغة الادارة
       content/country:
-        name:
+        name: اسم الدولة
       content/newsletter:
-        article_ids:
-        body:
-        link:
-        link_text:
-        date:
-        sent_at:
-        subject:
+        article_ids: مقالات
+        body: نص البريد الإلكتروني
+        link: الرابط
+        link_text: نص الرابط
+        date: تاريخ الإرسال
+        sent_at: ارسل
+        subject: الموضوع
       content/page:
-        ancestry:
-        description:
-        meta_title:
-        meta_keywords:
-        meta_description:
-        name:
-        permalink:
-        permalink_part:
+        ancestry: الأسلاف
+        description: الوصف
+        meta_title: Meta Title
+        meta_keywords: Meta Keywords
+        meta_description: Meta Description
+        name: اسم
+        permalink: Permalink
+        permalink_part: Permalink
       content/region:
-        name:
+        name: اسم المنطقة
       content/city:
         name: اسم المدينة
         latitude: خط العرض
         longitude: خط الطول
       content/social_network:
-        youtube:
-        facebook:
-        google:
-        twitter:
-        vimeo:
-        instagram:
+        youtube: Youtube
+        facebook: Facebook
+        google: Google +
+        twitter: Twitter
+        vimeo: Vimeo
+        instagram: Instagram
       content/slider:
-        title:
-        body:
-        photo:
-        link:
-        link_text:
+        title: العنوان
+        body: المحتوى
+        photo: صور
+        link: الرابط
+        link_text: رابط النص
       content/subscriber:
-        email:
-        created_at:
+        email: بريد الكتروني
+        created_at: إنشاء تاريخ
       content/user:
-        email:
-        password:
-        confirmed_at:
-        current_password:
-        password_confirmation:
+        email: البريد الإلكتروني
+        password: كلمو المرور
+        confirmed_at: تاريخ التأكيد
+        current_password: كلمة السر الحالية
+        password_confirmation: تأكيد كلمة المرور
       content/volunteer:
-        name:
-        identification:
-        birthday:
-        address:
-        phone:
-        email:
-        education:
-        availability:
-        languages:
-        other_languages:
-        experience:
-        experience_place:
-        experience_area:
+        name: اسم
+        identification: التعريف
+        birthday: ناريخ الازدياد
+        address: العنوان
+        phone: رقم الهاتف
+        email: البريد الإلكتروني
+        education: التعليم
+        availability: الإتاحة
+        languages: اللغات
+        other_languages: لغات أخرى
+        experience: الخبرة
+        experience_place: مكان الخبرة
+        experience_area: مجال الخبرة
       content/volunteer/experience_area:
-        cultural:
-        social:
-        educational:
-        religious:
+        cultural: ثقافي
+        social: اجتماعي
+        educational: تربوي
+        religious: ديني
       content/volunteer/languages:
-        arabic:
-        spanish:
-        catalan:
-        english:
-        french:
-        german:
+        arabic: العربية
+        spanish: الاسبانية
+        catalan: الكاتالونية
+        english: الإنجليزية
+        french: الفرنسية
+        german: أاللمانية
   datetime:
     distance_in_words:
       half_a_minute: نصف دقيقة
@@ -326,12 +334,12 @@ ar:
         one: تقريبا سنة واحدة
         other: ما يقرب من %{count} سنة
       x_years:
-        one:
-        other:
+        one: سنة واحدة
+        other: "%{count} سنوات"
     prompts:
-      year: السنة
-      month: الشهر
-      day: اليوم
+      year: سنة
+      month: شهر
+      day: يوم
       hour: ساعة
       minute: دقيقة
       second: ثانية
@@ -430,26 +438,26 @@ ar:
       seven_eighths:
   devise:
     confirmations:
-      confirmed: تم تأكيد عنوان بريدك الإلكتروني بنجاح.
-      send_instructions: ستتلقى رسالة بريد إلكتروني بها تعليمات عن كيفية تأكيد عنوان
+      confirmed: تم تأكيد بريدك الإلكتروني بنجاح.
+      send_instructions: ستتلقى رسالة بريد الكترونية بها تعليمات عن كيفية تأكيد عنوان
         بريدك الإلكتروني في غضون بضع دقائق.
       send_paranoid_instructions: إذا كان بريدك الإلكتروني موجود في قاعدة البيانات
         لدينا، ستتلقى رسالة بريد إلكتروني بها تعليمات عن كيفية تأكيد عنوان بريدك الإلكتروني
         في بضع دقائق.
       new:
-        did_not_receive_confirmation_instructions:
+        did_not_receive_confirmation_instructions: لم تتلق تعليمات التأكيد؟
         resend_confirmation_instructions: إعادة إرسال تعليمات التأكيد
     failure:
-      already_authenticated: لقد قمت بتسجيل الدخول بالفعل.
+      already_authenticated: لقد قمت بالفعل بتسجيل الدخول.
       inactive: لم يتم تفعيل حسابك بعد.
-      invalid:
-      locked: تم غلق حسابك.
-      last_attempt: لديك محاولة أو أكثر قبل غلق حسابك.
-      not_found_in_database:
-      timeout: انتهى الوقت المخصص للجلسة. الرجاء تسجيل الدخول مرة أخرى للمتابعة.
+      invalid: "%{authentication_keys} أو كلمة المرورغير صالحة."
+      locked: تم اغلاق حسابك.
+      last_attempt: لديك محاولة أو أكثر قبل أن يغلق حسابك.
+      not_found_in_database: "%{authentication_keys} أو كلمة المرورغير صالحة."
+      timeout:
       unauthenticated: تحتاج إلى تسجيل الدخول أو التسجيل قبل المتابعة.
       unconfirmed: تحتاج إلى تأكيد عنوان بريدك الإلكتروني قبل المتابعة.
-      not_approved:
+      not_approved: لم تتم الموافقة على حسابك من قِبل المشرفينا حتى الآن.
     mailer:
       confirmation_instructions:
         subject: تعليمات التأكيد
@@ -528,83 +536,87 @@ ar:
         بها تعليمات عن كيفية إلغاء القفلل غي غضون دقائق.
       unlocked: تم إلغاء قفل حسابك بنجاح. الرجاء تسجيل الدخول للمتابعة.
     actions:
-      login:
-      logout:
+      login: تسجيل الدخول
+      logout: تسجيل الخروج
   content:
     account_mailer:
       accept_entry:
-        subject:
-        header:
-        body_html:
-        cta_text:
+        subject: عالم المساجد - تم قبول حسابك
+        header: مرحبا %{mosque}!
+        body_html: "<p>تهانينا!!! تم قبول حسابك من قبل أعضاء فريقنا.</p><p> يجب إدخال
+          كلمة مرور من خلال الرابط أدناه، ثم يمكنك البدء في نشر مقالاتك وتخصيص موقعك.
+          </p><p>إذا كان لديك أي سؤال أو تعليق ، يرجى عدم التردد في الاتصال بنا!</p>"
+        cta_text: أدخل كلمة المرور
       decline_entry:
-        subject:
-        header:
-        body_html:
+        subject: عالم المساجد - تم رفض حسابك
+        header: مرحبًا %{mosque}!
+        body_html: "<p> نأسف لإبلاغك بأنه قد تم رفض حسابك من قِبل مسؤولينا لأنه يبدو
+          غير حقيقي. </p><p> إذا كنت لا توافق أو لديك أي مخاوف، فيرجى الاتصال بنا!
+          </p><p> شكرا لتفهمك! </p>"
       notify_creation_new_entry:
-        subject:
-        header:
-        cta_text:
-        body_html:
+        subject: عالم المساجد - تم إنشاء حساب جديد (%{mosque})
+        header: مرحبا بالمسؤول
+        cta_text: انظر التفاصيل
+        body_html: تم إنشاء حساب جديد.
   admin:
     articles:
       new:
-        header:
+        header: مقال جديد
     accounts:
       edit:
-        header:
+        header: تعديل الحساب
     configurations:
       edit:
-        header:
+        header: إعدادات عامة
     countries:
       edit:
-        header:
+        header: تعديل البلد
       new:
-        header:
+        header: بلد جديد
     dashboards:
       index:
-        visits:
-        empty_visits:
+        visits: عدد الزيارات
+        empty_visits: لم يزر أي شخص موقعك الالكتروني الويب حتى الآن
     pages:
       edit:
-        header:
+        header: تعجيل عنصر القائمة
       new:
-        header:
+        header: عنصر قائمة جديد
     regions:
       edit:
-        header:
+        header: تعديل المنطقة
       new:
-        header:
+        header: منطقة جديدة
     social_networks:
       edit:
-        header:
+        header: تعديل وسائل التواصل الاجتماعية
     sliders:
       edit:
-        header:
+        header: تعديلSlider
     cities:
       edit:
-        header:
+        header: تعديل المدينة
       new:
-        header:
+        header: مدينة جديدة
     pundit:
-      unauthorized:
+      unauthorized: غير مصرح لك بتنفيذ هذا الإجراء
     shared:
-      administration:
-      view_site:
-      are_you_sure:
-      total:
-      account:
+      administration: الادارة
+      view_site: عرض الموقع
+      are_you_sure: هل أنت متأكد؟
+      total: 'المجموع: %{count}'
+      account: حساب
     tabs:
-      dashboard:
-      general:
+      dashboard: لوحات القيادة
+      general: عام
+      settings: إعدادات
     users:
       edit:
-        header:
-        cta:
+        header: تعديل الحساب
+        cta: تحديث الحساب
   landing:
     admin_panel:
     create_account:
-    site_name:
     slider:
       first:
         headline:
@@ -654,43 +666,53 @@ ar:
       new:
         title:
         meta_description:
+    footer:
+      copyright_html: © %{year}-2019 Masajid World · <a href="%{privacy_url}">الخصوصية</a>
+        · <a href="%{terms_url}">الشروط</a>
   public:
-    continued:
-    read_more:
+    continued: "... (يتبع)"
+    read_more: واصل القراءة
     subscribers:
       create:
-        success:
+        success: لقد اشتركت بنجاح في نشرتنا الإخبارية.
     footer:
-      back_to_top:
-      contact:
-        header:
+      website_build_by_html: الموقع مدعوم من طرف <a href='https://masajid.world'>Masajid
+        World</a>
       newsletter:
-        header:
-        body_html:
-        cta_text:
-      website_build_by_html:
+        header: نشرتنا الإخبارية
+        body_html: "<p> اشترك في نشرتنا الإخبارية وسنرسل لك رسائل بريد إلكتروني من
+          وقت لآخر مع التحديثات الأخيرة، مثل المؤتمرات القادمة وأوقات صلاة الأعياد
+          والأخبار المهمة ... </p>"
+        cta_text: إشترك
+      contact:
+        header: اتصل بنا
+    sidebar:
+      prayer_times: أوقات الصلاة
   shared:
     actions:
       accept:
-      back_to_list:
+      back_to_list: الرجوع للقائمة
       decline:
       delete:
       edit:
       new:
     locales:
-      en:
-      fr:
-      es:
-      de:
-      ar:
-      ca:
-      it:
-      tr:
+      en: الإنجليزية
+      fr: الفرنسية
+      es: الإسبانية
+      de: الألمانية
+      ar: العربية
+      ca: الكاتالونية
+      it: الإيطالية
+      tr: التركية
     volunteers:
       new:
-        header:
+        header: تطوع معنا
     say_no:
     say_yes:
+    footer:
+      back_to_top: العودة إلى الأعلى
+    site_name: Masajid World
   simple_form:
     required:
       text:
@@ -700,7 +722,7 @@ ar:
     hints:
       content/configuration:
         default_locale:
-        supported_locales:
+        supported_locales: قائمة اللغات المتاحة التي يمكن للمستخدم اختيارها في الموقع.
         meta_title_html:
         meta_description:
       content/article:

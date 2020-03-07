@@ -1,0 +1,29 @@
+body {
+  font-size: .875rem;
+}
+
+.navbar {
+  .dropdown-menu {
+    left: -120px;
+  }
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+/*
+ * Content
+ */
+
+[role="main"] {
+  padding-top: 55px;
+}
+
+@media (min-width: 768px) {
+  [role="main"] {
+    padding-top: 50px;
+  }
+}

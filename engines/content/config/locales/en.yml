@@ -2,28 +2,35 @@ en:
   activerecord:
     models:
       content/article:
+        few: Articles
         one: Article
         other: Articles
       content/account:
+        few: Accounts
         one: Account
         other: Accounts
-      content/address: Address
       content/country:
+        few: Countries
         one: Country
         other: Countries
       content/city:
+        few: Cities
         one: City
         other: Cities
       content/message:
+        few: Messages
         one: Message
         other: Messages
       content/newsletter:
+        few: Newsletters
         one: Newsletter
         other: Newsletters
       content/page:
+        few: Menu
         one: Menu Item
         other: Menu
       content/region:
+        few: Regions
         one: Region
         other: Regions
       content/slider:
@@ -31,9 +38,11 @@ en:
       content/social_network:
         one: Social media
       content/subscriber:
+        few: Subscribers
         one: Subscriber
         other: Subscribers
       content/volunteer:
+        few: Volunteers
         one: Volunteer
         other: Volunteers
     attributes:
@@ -246,11 +255,13 @@ en:
       total: 'Total: %{count}'
     tabs:
       dashboard: Dashboards
+      settings: Settings
       general: General
   landing:
     admin_panel: Admin panel
     create_account: Create account
-    site_name: Masajid World
+    footer:
+      copyright_html: '&copy; 2019-%{year} Masajid World &middot; <a href="%{privacy_url}">Privacy</a> &middot; <a href="%{terms_url}">Terms</a>'
     slider:
       first:
         headline: Your masjid online.
@@ -313,15 +324,16 @@ en:
         success: Your message was sent successfully.
       new:
         cta_text: Send Message
+    sidebar:
+      prayer_times: Prayer Times
     subscribers:
       create:
         success: You subscribed successfully to our newsletter.
       new:
         cta_text: Subscribe
     footer:
-      back_to_top: Back to top
       contact:
-        header: Contact Us
+        header: Contact
       newsletter:
         header: Our Newsletter
         body_html: |
@@ -336,6 +348,8 @@ en:
       delete: Delete
       edit: Edit
       new: New
+    footer:
+      back_to_top: Back to top
     locales:
       ar: Arabic
       ca: Catalan
@@ -350,6 +364,7 @@ en:
         header: Volunteering
     say_no: 'No'
     say_yes: 'Yes'
+    site_name: Masajid World
   devise:
     actions:
       login: Sign in

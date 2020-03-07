@@ -5,7 +5,7 @@ Public::Engine.routes.draw do
     get '/:locale', to: 'home#index'
     post '/locale/set', to: 'locale#set', as: :select_locale
 
-    get '/about-us', to: 'home#about_us', as: :about_us
+    get '/about', to: 'home#about', as: :about
     get '/contact-us', to: 'home#contact_us', as: :contact_us
     resources :volunteers, only: %i[new create]
     resources :messages, only: :create

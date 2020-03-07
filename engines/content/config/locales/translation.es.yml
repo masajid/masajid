@@ -203,25 +203,31 @@ es:
       content/article:
         one: Artículo
         other: Artículos
+        few: Artículos
       content/account:
         one: Cuenta
         other: Cuentas
-      content/address: Dirección
+        few: Cuentas
       content/country:
         one: País
         other: Países
+        few: Países
       content/city:
         one: Ciudad
         other: Ciudades
+        few: Ciudades
       content/newsletter:
         one: Newsletter
         other: Newsletters
+        few: Newsletters
       content/page:
         one: Elemento de menú
         other: Menú
+        few: Menú
       content/region:
         one: Provincia
         other: Provincias
+        few: Provincias
       content/slider:
         one: Slider
       content/social_network:
@@ -229,9 +235,11 @@ es:
       content/subscriber:
         one: Suscriptor
         other: Suscriptores
+        few: Suscriptores
       content/volunteer:
         one: Voluntario
         other: Voluntarios
+        few: Voluntarios
     attributes:
       content/article:
         title: Título
@@ -418,7 +426,7 @@ es:
       divide: dividido por
       degrees: grados
       dot: "\\ 1 punto \\ 2"
-      ellipsis:
+      ellipsis: punto punto punto
       equals: es igual a
       number: Número
       percent: Por ciento
@@ -666,6 +674,7 @@ es:
     tabs:
       dashboard: Dashboards
       general: General
+      settings: Ajustes
     users:
       edit:
         header: Editar cuenta
@@ -673,7 +682,6 @@ es:
   landing:
     admin_panel: Panel de administrador
     create_account: Crear una cuenta
-    site_name: Masajid World
     slider:
       first:
         headline: Tu Masjid online.
@@ -708,7 +716,8 @@ es:
         title: Crea una cuenta
         meta_description: Crea un página web para tu mezquita
       create:
-        error_message:
+        error_message: Error en la creación de la cuenta, intente nuevamente o contáctanos
+          para que podamos ayudarte a crear tu cuenta
       success_page:
         header: Tu cuenta ha sido creada correctamente
         body_html: Le enviaremos un correo electrónico en unos instantes, confirme
@@ -735,6 +744,9 @@ es:
         title: Ser voluntario en Masajid World
         meta_description: Ser voluntario en Masajid World y tener un impacto en nuestra
           comunidad musulmana
+    footer:
+      copyright_html: © 2019-%{year} Masajid World · <a href="%{privacy_url}">Privacidad</a>
+        · <a href="%{terms_url}">Términos</a>
   public:
     continued: "... (continuación)"
     read_more: Sigue leyendo
@@ -742,9 +754,8 @@ es:
       create:
         success: Tu suscripción ha sido creada correctamente.
     footer:
-      back_to_top: Volver arriba
-      contact:
-        header: Contacto
+      website_build_by_html: Sitio web construido por <a href='https://masajid.world'>Masajid
+        World</a>
       newsletter:
         header: Nuestro boletín
         body_html: "<p>Suscríbase a nuestro boletín de noticias y le enviaremos correos
@@ -752,8 +763,10 @@ es:
           próximas conferencias, tiempos de oración del Eid y noticias importantes
           ...</p>"
         cta_text: Suscribir
-      website_build_by_html: Sitio web construido por <a href='https://masajid.world'>Masajid
-        World</a>
+      contact:
+        header: Contacto
+    sidebar:
+      prayer_times: Horarios de Salat
   shared:
     actions:
       accept: Aceptar
@@ -769,10 +782,13 @@ es:
       de: Alemán
       ar: Árabe
       ca: Catalán
-      it:
-      tr:
+      it: Italiano
+      tr: Turco
     volunteers:
       new:
         header: Voluntariado
     say_no: 'No'
     say_yes: Sí
+    footer:
+      back_to_top: Volver arriba
+    site_name: Masajid World

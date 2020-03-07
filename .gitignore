@@ -16,8 +16,6 @@ tmp
 
 # Ignore uploaded files in development.
 web_container/storage/*
-web_container/public/uploads
-web_container/public/assets
 
 # Ignore master key for decrypting credentials and more.
 web_container/config/master.key
