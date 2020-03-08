@@ -120,7 +120,7 @@ en:
         link_text: Link Text
       content/subscriber:
         email: Email Address
-        created_at: Create Date
+        created_at: Subscription Date
       content/user:
         current_password: Current Password
         email: Email address
@@ -201,6 +201,13 @@ en:
         header: Hi Admin
         body_html: A new account was created.
         cta_text: See details
+    message_mailer:
+      user_email:
+        subject: Masajid World - %{subject}
+        header: Hi %{mosque}!
+        body: 'You received a message from:'
+        body_2: Please hit replay and answer directly to the message.
+        cta_text: See message
   admin:
     articles:
       new:

@@ -32,6 +32,9 @@ body {
 }
 
 .content {
+  font-family: 'Source Sans Pro', Arial, Tahoma, Geneva, sans-serif;
+  color: #585858;
+
   &__image {
     @extend %content-center;
     margin-bottom: 40px;
@@ -41,8 +44,6 @@ body {
     margin: 20px 0 60px;
 
     p, div {
-      font-family: 'Source Sans Pro', Arial, Tahoma, Geneva, sans-serif;
-      color: #585858;
       font-size: 24px;
       line-height: 32px;
       margin: 20px 0 20px;
@@ -78,6 +79,17 @@ body {
       img {
         @extend %content-center;
       }
+    }
+  }
+
+  dl {
+    dt {
+      font-weight: bolder;
+      font-size: 18px;
+    }
+
+    dd {
+      margin-inline-start: 0;
     }
   }
 }

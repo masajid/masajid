@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   mount Landing::Engine, at: '/'
   mount Admin::Engine, at: '/admin'
 
-  authenticate :user, ->(u) { u.super_admin? } do
+  authenticate :user, ->(u) { !Rails.env.production? || u.super_admin? } do
     mount Flipper::UI.app(Content.flipper) => '/flipper'
     mount Sidekiq::Web => '/sidekiq'
   end
