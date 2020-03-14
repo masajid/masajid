@@ -161,16 +161,16 @@ tr:
         other:
         few:
       content/account:
-        one:
+        one: hesap
         other:
-        few:
+        few: Hesaplar
       content/country:
         one:
         other:
         few:
       content/city:
-        one:
-        other:
+        one: Şehir
+        other: Şehirler
         few:
       content/newsletter:
         one:
@@ -198,34 +198,34 @@ tr:
         few:
     attributes:
       content/article:
-        title:
+        title: Başlık
         slug:
-        summary:
-        body:
+        summary: Özet
+        body: İçerik
         video_link:
-        published_at:
-        photo:
+        published_at: Yayın Tarihi
+        photo: Fotoğraf
       content/account:
         subdomain:
-        responsable:
-        mosque:
+        responsable: Sorumlu Adı
+        mosque: Cami Adı
       content/address:
-        address1:
-        zip_code:
-        phone:
-        city_name:
-        region_name:
-        country_id:
+        address1: Adres
+        zip_code: Posta Kodu
+        phone: Telefon Numarası
+        city_name: Şehir
+        region_name: Bölge
+        country_id: Ülke
       content/configuration:
-        logo:
-        about_us:
+        logo: Logo
+        about_us: Hakkımızda
         mawaqit_link:
-        theme:
-        supported_locales:
-        default_locale:
+        theme: Tema
+        supported_locales: Desteklenen Diller
+        default_locale: Varsayılan Dil
         admin_locale:
       content/country:
-        name:
+        name: Ülke Adı
       content/newsletter:
         article_ids:
         body:
@@ -236,7 +236,7 @@ tr:
         subject:
       content/page:
         ancestry:
-        description:
+        description: Açıklama
         meta_title:
         meta_keywords:
         meta_description:
@@ -246,9 +246,9 @@ tr:
       content/region:
         name:
       content/city:
-        name:
-        latitude:
-        longitude:
+        name: Şehir Adı
+        latitude: Enlem
+        longitude: Boylam
       content/social_network:
         youtube:
         facebook:
@@ -257,9 +257,9 @@ tr:
         vimeo:
         instagram:
       content/slider:
-        title:
+        title: Başlık
         body:
-        photo:
+        photo: Fotoğraf
         link:
         link_text:
       content/subscriber:
@@ -267,7 +267,7 @@ tr:
         created_at:
       content/user:
         email:
-        password:
+        password: Parola
         confirmed_at:
         current_password:
         password_confirmation:
@@ -275,7 +275,7 @@ tr:
         name:
         identification:
         birthday:
-        address:
+        address: Adres
         phone:
         email:
         education:
@@ -291,12 +291,12 @@ tr:
         educational:
         religious:
       content/volunteer/languages:
-        arabic:
-        spanish:
+        arabic: Arapça
+        spanish: İspanyolca
         catalan:
-        english:
-        french:
-        german:
+        english: İngilizce
+        french: Fransızca
+        german: Almanca
   datetime:
     distance_in_words:
       half_a_minute: yarım dakika
@@ -700,6 +700,7 @@ tr:
       ca:
       it:
       tr:
+      nl:
     volunteers:
       new:
         header:

@@ -705,6 +705,7 @@ ar:
       ca: الكاتالونية
       it: الإيطالية
       tr: التركية
+      nl:
     volunteers:
       new:
         header: تطوع معنا
@@ -718,7 +719,7 @@ ar:
       text:
       mark:
     error_notification:
-      default_message:
+      default_message: 'يرجى مراجعة المشاكل أدناه:'
     hints:
       content/configuration:
         default_locale:

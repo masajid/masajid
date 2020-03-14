@@ -237,13 +237,13 @@ de:
         title: Titel
         slug: Slug
         summary: Summary
-        body: Content
+        body: Inhalt
         video_link: Video embed URL
         published_at: Publication Date
         photo: Photo
       content/account:
         subdomain: Subdomain
-        responsable: Verantwortlicher Name
+        responsable: Name des Verantwortlichen
         mosque: Name der Moschee
       content/address:
         address1: Anschrift
@@ -749,6 +749,7 @@ de:
       ca: Catalan
       it:
       tr:
+      nl:
     volunteers:
       new:
         header: Volunteering

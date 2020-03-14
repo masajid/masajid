@@ -308,7 +308,7 @@ es:
         link_text: Texto del enlace
       content/subscriber:
         email: Correo electrónico
-        created_at: Create Date
+        created_at: Fecha de suscripción
       content/user:
         email: Correo electrónico
         password: Contraseña
@@ -614,10 +614,9 @@ es:
       decline_entry:
         subject: Masajid World - Tu cuenta ha sido rechazada
         header: Hola %{mosque}!
-        body_html: "<p> Lamentamos informarte que nuestros administradores rechazaron
-          su cuenta porque parece que no es real. </p><p> Si no está de acuerdo o
-          tiene alguna inquietud, ¡contáctenos! </p><p> ¡Gracias por su comprensión!
-          </p>"
+        body_html: "<p>Lamentamos informarte que nuestros administradores rechazaron
+          su cuenta porque parece que no es real.</p><p>Si no está de acuerdo o tiene
+          alguna inquietud, ¡contáctenos!</p><p> ¡Gracias por su comprensión!</p>"
       notify_creation_new_entry:
         subject: Masajid World - Se creó la nueva cuenta (%{mosque})
         header: Hola Administrador
@@ -784,6 +783,7 @@ es:
       ca: Catalán
       it: Italiano
       tr: Turco
+      nl:
     volunteers:
       new:
         header: Voluntariado
