@@ -49,6 +49,13 @@
         icon: 'mail',
         active: request.path.starts_with?('/admin/newsletters'),
       ) if policy(Content::Newsletter).index? %>
+
+      <%= nav_item(
+        text: plural_resource_name(Content::Message),
+        path: messages_path,
+        icon: 'inbox',
+        active: request.path.starts_with?('/admin/messages'),
+      ) if policy(Content::Message).index? %>
     </ul>
 
     <h6 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted'>

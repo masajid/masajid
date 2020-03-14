@@ -196,6 +196,10 @@ ar:
         one: المتطوع
         other: المتطوعون
         few: المتطوعون
+      content/message:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title: العنوان
@@ -297,6 +301,15 @@ ar:
         english: الإنجليزية
         french: الفرنسية
         german: أاللمانية
+      content/message:
+        name: اسم
+        phone: رقم الهاتف
+        email: البريد الإلكتروني
+        subject: الموضوع
+        body:
+        newsletter:
+        seeing_at:
+        created_at:
   datetime:
     distance_in_words:
       half_a_minute: نصف دقيقة
@@ -558,6 +571,13 @@ ar:
         header: مرحبا بالمسؤول
         cta_text: انظر التفاصيل
         body_html: تم إنشاء حساب جديد.
+    message_mailer:
+      user_email:
+        subject:
+        header: مرحبا %{mosque}!
+        body:
+        body_2:
+        cta_text:
   admin:
     articles:
       new:
@@ -614,6 +634,9 @@ ar:
       edit:
         header: تعديل الحساب
         cta: تحديث الحساب
+    messages:
+      show:
+        cta_text:
   landing:
     admin_panel:
     create_account:
@@ -675,6 +698,8 @@ ar:
     subscribers:
       create:
         success: لقد اشتركت بنجاح في نشرتنا الإخبارية.
+      new:
+        cta_text: إشترك
     footer:
       website_build_by_html: الموقع مدعوم من طرف <a href='https://masajid.world'>Masajid
         World</a>
@@ -683,11 +708,15 @@ ar:
         body_html: "<p> اشترك في نشرتنا الإخبارية وسنرسل لك رسائل بريد إلكتروني من
           وقت لآخر مع التحديثات الأخيرة، مثل المؤتمرات القادمة وأوقات صلاة الأعياد
           والأخبار المهمة ... </p>"
-        cta_text: إشترك
       contact:
         header: اتصل بنا
     sidebar:
       prayer_times: أوقات الصلاة
+    messages:
+      create:
+        success:
+      new:
+        cta_text:
   shared:
     actions:
       accept:
@@ -696,6 +725,7 @@ ar:
       delete:
       edit:
       new:
+      show:
     locales:
       en: الإنجليزية
       fr: الفرنسية

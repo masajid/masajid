@@ -9,6 +9,10 @@ module Admin
       ].join(' - ')
     end
 
+    def unread_messages
+      Content::Message.where(account: current_account, seeing_at: nil).count
+    end
+
     def plural_resource_name(resource_class)
       resource_class.model_name.human(count: 3)
     end

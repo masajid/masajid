@@ -13,6 +13,7 @@ Admin::Engine.routes.draw do
     post :sort, on: :collection
   end
   resources :articles, except: :show
+  resources :messages, only: %i[index show]
   resources :volunteers, only: :index
   resources :subscribers, only: :index
   resources :newsletters, except: :show

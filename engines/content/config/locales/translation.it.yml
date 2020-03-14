@@ -198,6 +198,10 @@ it:
         one:
         other:
         few:
+      content/message:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title:
@@ -299,6 +303,15 @@ it:
         english:
         french:
         german:
+      content/message:
+        name:
+        phone:
+        email:
+        subject:
+        body:
+        newsletter:
+        seeing_at:
+        created_at:
   datetime:
     distance_in_words:
       half_a_minute: mezzo minuto
@@ -560,6 +573,13 @@ it:
         header:
         cta_text:
         body_html:
+    message_mailer:
+      user_email:
+        subject:
+        header:
+        body:
+        body_2:
+        cta_text:
   admin:
     articles:
       new:
@@ -616,6 +636,9 @@ it:
       edit:
         header:
         cta:
+    messages:
+      show:
+        cta_text:
   landing:
     admin_panel:
     create_account:
@@ -676,16 +699,22 @@ it:
     subscribers:
       create:
         success:
+      new:
+        cta_text:
     footer:
       website_build_by_html:
       newsletter:
         header:
         body_html:
-        cta_text:
       contact:
         header:
     sidebar:
       prayer_times: Tempi di preghiera
+    messages:
+      create:
+        success:
+      new:
+        cta_text:
   shared:
     actions:
       accept:
@@ -694,6 +723,7 @@ it:
       delete:
       edit:
       new:
+      show:
     locales:
       en:
       fr:

@@ -240,6 +240,10 @@ es:
         one: Voluntario
         other: Voluntarios
         few: Voluntarios
+      content/message:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title: Título
@@ -341,6 +345,15 @@ es:
         english: Inglés
         french: Francés
         german: Alemán
+      content/message:
+        name: Nombre
+        phone: Teléfono
+        email: Correo electrónico
+        subject: Destinatario
+        body:
+        newsletter:
+        seeing_at:
+        created_at:
   datetime:
     distance_in_words:
       half_a_minute: medio minuto
@@ -623,6 +636,13 @@ es:
         header: Hola Administrador
         cta_text: Ver detalles
         body_html: Se creó una nueva cuenta.
+    message_mailer:
+      user_email:
+        subject:
+        header: Hola %{mosque}!
+        body:
+        body_2:
+        cta_text:
   admin:
     articles:
       new:
@@ -679,6 +699,9 @@ es:
       edit:
         header: Editar cuenta
         cta: Actualizar cuenta
+    messages:
+      show:
+        cta_text:
   landing:
     admin_panel: Panel de administrador
     create_account: Crear una cuenta
@@ -753,6 +776,8 @@ es:
     subscribers:
       create:
         success: Tu suscripción ha sido creada correctamente.
+      new:
+        cta_text: Suscribir
     footer:
       website_build_by_html: Sitio web construido por <a href='https://masajid.world'>Masajid
         World</a>
@@ -762,11 +787,15 @@ es:
           electrónicos de vez en cuando con actualizaciones recientes, tales como
           próximas conferencias, tiempos de oración del Eid y noticias importantes
           ...</p>"
-        cta_text: Suscribir
       contact:
         header: Contacto
     sidebar:
       prayer_times: Horarios de Salat
+    messages:
+      create:
+        success:
+      new:
+        cta_text:
   shared:
     actions:
       accept: Aceptar
@@ -775,6 +804,7 @@ es:
       delete: Borrar
       edit: Editar
       new: Nuevo
+      show:
     locales:
       en: Inglés
       fr: Francés

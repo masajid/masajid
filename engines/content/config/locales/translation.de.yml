@@ -232,18 +232,22 @@ de:
         one: Volunteer
         other: Volunteers
         few: Volunteers
+      content/message:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title: Titel
         slug: Slug
         summary: Summary
-        body: Content
+        body: Inhalt
         video_link: Video embed URL
         published_at: Publication Date
         photo: Photo
       content/account:
         subdomain: Subdomain
-        responsable: Verantwortlicher Name
+        responsable: Name des Verantwortlichen
         mosque: Name der Moschee
       content/address:
         address1: Anschrift
@@ -333,6 +337,15 @@ de:
         english: Englisch
         french: French
         german: Deutsch
+      content/message:
+        name: Name
+        phone: Telefonnummer
+        email: E-Mail
+        subject: Subject
+        body:
+        newsletter:
+        seeing_at:
+        created_at:
   datetime:
     distance_in_words:
       half_a_minute: eine halbe Minute
@@ -598,6 +611,13 @@ de:
         header: Hi Admin,
         cta_text: See details
         body_html: A new account was created.
+    message_mailer:
+      user_email:
+        subject:
+        header: Hi %{mosque}!
+        body:
+        body_2:
+        cta_text:
   admin:
     articles:
       new:
@@ -654,6 +674,9 @@ de:
       edit:
         header:
         cta:
+    messages:
+      show:
+        cta_text:
   landing:
     admin_panel: Admin panel
     create_account: Create account
@@ -722,16 +745,22 @@ de:
     subscribers:
       create:
         success:
+      new:
+        cta_text:
     footer:
       website_build_by_html:
       newsletter:
         header:
         body_html:
-        cta_text:
       contact:
         header:
     sidebar:
       prayer_times: Gebetszeiten
+    messages:
+      create:
+        success:
+      new:
+        cta_text:
   shared:
     actions:
       accept: Accept
@@ -740,6 +769,7 @@ de:
       delete: Delete
       edit: Edit
       new: New
+      show:
     locales:
       en: English
       fr: French

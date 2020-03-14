@@ -243,6 +243,10 @@ fr:
         one: Bénévole
         other: Bénévoles
         few: Bénévoles
+      content/message:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title: Titre
@@ -344,6 +348,15 @@ fr:
         english: Anglais
         french: Français
         german: Allemand
+      content/message:
+        name: Nom
+        phone: Numéro de téléphone
+        email: Adresse e-mail
+        subject: Sujet
+        body:
+        newsletter:
+        seeing_at:
+        created_at:
   datetime:
     distance_in_words:
       half_a_minute: une demi-minute
@@ -623,6 +636,13 @@ fr:
         header: Salut Admin
         cta_text: Voir les détails
         body_html: Un nouveau compte a été créé.
+    message_mailer:
+      user_email:
+        subject:
+        header: Salut %{mosque}!
+        body:
+        body_2:
+        cta_text:
   admin:
     articles:
       new:
@@ -679,6 +699,9 @@ fr:
       edit:
         header: Modifier le compte
         cta: Mettre le compte à jour
+    messages:
+      show:
+        cta_text:
   landing:
     admin_panel: panneau d'administration
     create_account: Créer un compte
@@ -754,6 +777,8 @@ fr:
     subscribers:
       create:
         success: Vous vous êtes abonné avec succès à notre newsletter.
+      new:
+        cta_text: S'abonner
     footer:
       website_build_by_html: Site Web construit par <a href='https://masajid.world'>Masajid
         World</a>
@@ -762,11 +787,15 @@ fr:
         body_html: "<p>Abonnez-vous à notre newsletter et on vous enverra des e-mails
           de temps en temps avec des mises à jour récentes, telles que les conférences
           à venir, les heures de prières de l'Aïd et des nouvelles importantes ...</p>"
-        cta_text: S'abonner
       contact:
         header: Contact
     sidebar:
       prayer_times: Horaires de prière
+    messages:
+      create:
+        success:
+      new:
+        cta_text:
   shared:
     actions:
       accept: Accepter
@@ -775,6 +804,7 @@ fr:
       delete: Supprimer
       edit: Modifier
       new: Nouveau
+      show:
     locales:
       en: Anglais
       fr: Français

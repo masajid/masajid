@@ -82,6 +82,8 @@ en:
         subject: Subject
         body: Message
         newsletter: I would like to subscibe to the newsletter
+        seeing_at: Seeing time
+        created_at: Receiving time
       content/newsletter:
         article_ids: Articles
         body: Email Body
@@ -227,6 +229,9 @@ en:
       index:
         visits: Number of visits
         empty_visits: No body visited your website yet
+    messages:
+      show:
+        cta_text: Reply quickly here
     pages:
       edit:
         header: Edit Menu Item
@@ -353,6 +358,7 @@ en:
       back_to_list: Back to list
       decline: Decline
       delete: Delete
+      show: Details
       edit: Edit
       new: New
     footer:

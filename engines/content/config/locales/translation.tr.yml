@@ -161,7 +161,7 @@ tr:
         other:
         few:
       content/account:
-        one:
+        one: hesap
         other:
         few:
       content/country:
@@ -196,6 +196,10 @@ tr:
         one:
         other:
         few:
+      content/message:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title:
@@ -207,17 +211,17 @@ tr:
         photo:
       content/account:
         subdomain:
-        responsable:
-        mosque:
+        responsable: Sorumlu Adı
+        mosque: Cami Adı
       content/address:
-        address1:
+        address1: Adres
         zip_code:
         phone:
         city_name:
         region_name:
         country_id:
       content/configuration:
-        logo:
+        logo: Logo
         about_us:
         mawaqit_link:
         theme:
@@ -236,7 +240,7 @@ tr:
         subject:
       content/page:
         ancestry:
-        description:
+        description: Açıklama
         meta_title:
         meta_keywords:
         meta_description:
@@ -257,9 +261,9 @@ tr:
         vimeo:
         instagram:
       content/slider:
-        title:
+        title: Başlık
         body:
-        photo:
+        photo: Fotoğraf
         link:
         link_text:
       content/subscriber:
@@ -275,7 +279,7 @@ tr:
         name:
         identification:
         birthday:
-        address:
+        address: Adres
         phone:
         email:
         education:
@@ -297,6 +301,15 @@ tr:
         english:
         french:
         german:
+      content/message:
+        name:
+        phone:
+        email:
+        subject:
+        body:
+        newsletter:
+        seeing_at:
+        created_at:
   datetime:
     distance_in_words:
       half_a_minute: yarım dakika
@@ -557,6 +570,13 @@ tr:
         header:
         cta_text:
         body_html:
+    message_mailer:
+      user_email:
+        subject:
+        header:
+        body:
+        body_2:
+        cta_text:
   admin:
     articles:
       new:
@@ -613,6 +633,9 @@ tr:
       edit:
         header:
         cta:
+    messages:
+      show:
+        cta_text:
   landing:
     admin_panel:
     create_account:
@@ -673,16 +696,22 @@ tr:
     subscribers:
       create:
         success:
+      new:
+        cta_text:
     footer:
       website_build_by_html:
       newsletter:
         header:
         body_html:
-        cta_text:
       contact:
         header:
     sidebar:
       prayer_times: İbadet zamanları
+    messages:
+      create:
+        success:
+      new:
+        cta_text:
   shared:
     actions:
       accept:
@@ -691,6 +720,7 @@ tr:
       delete:
       edit:
       new:
+      show:
     locales:
       en:
       fr:

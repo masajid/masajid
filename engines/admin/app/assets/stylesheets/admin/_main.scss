@@ -3,6 +3,13 @@ body {
 }
 
 .navbar {
+  .nav-link {
+    .badge {
+      float:right;
+      margin-bottom:-10px;
+    }
+  }
+
   .dropdown-menu {
     left: -120px;
   }

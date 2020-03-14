@@ -1,0 +1,12 @@
+<% content_for :page_title do %>
+  <%= @message.subject %>
+<% end %>
+
+<% @message.attributes.symbolize_keys.slice(:name, :email, :phone, :created_at, :subject, :body).each do |key, value| %>
+  <dl>
+    <dt><%= Content::Message.human_attribute_name(key) %></dt>
+    <dd><%= value %></dd>
+  </dl>
+<% end %>
+
+<%= mail_to @message.email, t('admin.messages.show.cta_text'), class: 'btn btn-primary' %>
