@@ -653,6 +653,8 @@ it:
       index:
         title:
         meta_description:
+        map:
+          headline:
     user_confirmations:
       new:
         title:
