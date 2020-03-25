@@ -636,13 +636,13 @@ tr:
         headline:
         content:
       step_2:
-        headline: Onay için bekle
+        headline: 2. Onay için bekle
         content:
       step_3:
-        headline: Yönetici
+        headline: 3. Yönetin
         content:
       step_4:
-        headline: Hazır
+        headline: 4. Hazır
         content: Mescidiniz için siteniz hazır.
     accounts:
       new:
@@ -657,6 +657,8 @@ tr:
       index:
         title: Camilerin web sitelerini oluşturma ve yönetme platformu
         meta_description:
+        map:
+          headline:
     user_confirmations:
       new:
         title: Hesabını onayla

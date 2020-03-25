@@ -298,6 +298,8 @@ en:
             <p>This project is created by volunteers for the sake of Allah, so we need to cover the hosting expenses and more ...</p>
             <p>If you like our work and want to support us, we are on Patreon.</p>
           cta_text: Become a Patron
+        map:
+          headline: Registered mosques
     user_confirmations:
       new:
         title: Confirm your account

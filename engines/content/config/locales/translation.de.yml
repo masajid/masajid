@@ -673,20 +673,18 @@ de:
     how_to_use:
       headline: Wie zu benutzen?
       step_1:
-        headline: Kreierte Konto
-        content: First step, you shall create an account in the platform with your
-          information.
+        headline: 1. Kreierte Konto
+        content: You need to create an account in the platform with your information.
       step_2:
-        headline: Genehmigung abwarten
-        content: Once we receive your information, we will contact you within 24h
-          to make sure your mosque exists.
+        headline: 2. Genehmigung abwarten
+        content: Our team should make sure your mosque really exists then will contact
+          you within 24 hours.
       step_3:
-        headline: Admin
-        content: Once we approve your account, you will receive a password via email,
-          so you can login to the administration panel and costumise your site as
-          you wish.
+        headline: 3. Administrate
+        content: You will receive an email to setup your password, so you can login
+          to the administration panel and customize your website.
       step_4:
-        headline: Es ist bereit
+        headline: 4. Es ist bereit
         content: Your site for your masjid is ready to go.
     accounts:
       new:
@@ -701,6 +699,8 @@ de:
       index:
         title:
         meta_description:
+        map:
+          headline:
     user_confirmations:
       new:
         title: Bestätigen Sie Ihr Konto
