@@ -697,20 +697,19 @@ fr:
     how_to_use:
       headline: comment utiliser?
       step_1:
-        headline: Créer un compte
-        content: Première étape, vous devez créer un compte dans la plateforme avec
-          vos informations.
+        headline: 1. Créer un compte
+        content: Vous devez créer un compte dans la plateforme avec vos informations.
       step_2:
-        headline: Attendre l'approbation
-        content: Une fois qu'on reçois vos informations, on vous contactera dans les
-          24 heures pour s'assurer que votre mosquée existe.
+        headline: 2. Attendez l'approbation
+        content: Notre équipe doit s'assurer que votre mosquée existe vraiment, puis
+          vous contactera dans les 24 heures.
       step_3:
-        headline: Admin
-        content: Une fois qu'on approuvera votre compte, vous recevrez un mot de passe
-          par e-mail, afin que vous puissiez vous connecter au panneau d'administration
-          et personnaliser votre site comme vous le souhaitez.
+        headline: 3. Administrer
+        content: Vous recevrez un e-mail pour configurer votre mot de passe, afin
+          que vous puissiez vous connecter au panneau d'administration et personnaliser
+          votre site comme vous le souhaitez.
       step_4:
-        headline: C'est prêt
+        headline: 4. C'est prêt
         content: Votre site pour votre mosquée est prêt à fonctionner.
     accounts:
       new:
@@ -729,6 +728,8 @@ fr:
         title: Plateforme pour les mosquées pour créer et gérer leurs sites Web
         meta_description: Masajid World fournit une solution pour les mosquées afin
           de créer et gérer leurs sites Web
+        map:
+          headline: Mosquées enregistrées
     user_confirmations:
       new:
         title: Confirmez votre compte

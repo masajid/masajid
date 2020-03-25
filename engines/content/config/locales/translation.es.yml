@@ -696,19 +696,19 @@ es:
     how_to_use:
       headline: "¿cómo se utiliza?"
       step_1:
-        headline: Crear una cuenta
-        content: Primer paso, deberás crear una cuenta en la plataforma con tu información.
+        headline: 1. Crear una cuenta
+        content: Deberás crear una cuenta en la plataforma con tu información.
       step_2:
-        headline: Esperando la aprobación
-        content: Una vez que recibamos tu información, nos comunicaremos contigo dentro
-          de las 24 horas para asegurarnos de que su mezquita exista.
+        headline: 2. Esperando la aprobación
+        content: Nuestro equipo debe asegurarse de que su mezquita realmente exista
+          y luego se comunicará contigo dentro de las 24 horas.
       step_3:
-        headline: Administrador
-        content: 'Una vez que aprobemos su cuenta, recibirá una contraseña por correo
-          electrónico, para que pueda iniciar sesión en el panel de administración
-          y personalizar su sitio como lo desees. '
+        headline: 3. Administrar
+        content: Recibirá un correo electrónico para entrar una contraseña, para que
+          pueda iniciar sesión en el panel de administración y personalizar su sitio
+          como lo desees.
       step_4:
-        headline: Esta listo
+        headline: 4. Está listo
         content: La web para tu mezquita está lista para funcionar.
     accounts:
       new:
@@ -727,6 +727,8 @@ es:
         title: Plataforma para mezquitas para crear y administrar sus sitios web
         meta_description: Masajid World ofrece una solución para que las mezquitas
           creen y administren sus páginas web
+        map:
+          headline: Mezquitas registradas
     user_confirmations:
       new:
         title: Confirme tu cuenta
