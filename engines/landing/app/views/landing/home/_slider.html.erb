@@ -1,21 +1,23 @@
-<div id='mySlider' class='carousel slide' data-ride='carousel'>
+<div id='mySlider' class='carousel' data-ride='carousel'>
   <ol class='carousel-indicators'>
     <li data-target='#mySlider' data-slide-to='0' class='active'></li>
     <li data-target='#mySlider' data-slide-to='1'></li>
   </ol>
+
   <div class='carousel-inner'>
     <div class='carousel-item active'>
-      <%= image_tag 'landing/al-nour.jpg', class: 'd-block w-100' %>
+      <%= image_tag 'landing/al-nour.jpg', class: 'img-fluid' %>
       <div class='container'>
         <div class='carousel-caption text-left'>
           <h1><%= t('landing.slider.first.headline') %></h1>
           <p><%= t('landing.slider.first.content') %></p>
-          <p><%= link_to t('landing.create_account'), new_account_path, class: 'btn btn-sm btn-info' %></p>
+          <p><%= link_to t('landing.create_account'), new_account_path, class: 'btn btn-md btn-info' %></p>
         </div>
       </div>
     </div>
+
     <div class='carousel-item'>
-      <%= image_tag 'landing/al-aqsa.jpg', class: 'd-block w-100' %>
+      <%= image_tag 'landing/al-aqsa.jpg', class: 'img-fluid' %>
       <div class='container'>
         <div class='carousel-caption'>
           <h1><%= t('landing.slider.second.headline') %></h1>
@@ -24,10 +26,12 @@
       </div>
     </div>
   </div>
+
   <a class='carousel-control-prev' href='#mySlider' role='button' data-slide='prev'>
     <span class='carousel-control-prev-icon' aria-hidden='true'></span>
     <span class='sr-only'>Previous</span>
   </a>
+
   <a class='carousel-control-next' href='#mySlider' role='button' data-slide='next'>
     <span class='carousel-control-next-icon' aria-hidden='true'></span>
     <span class='sr-only'>Next</span>
