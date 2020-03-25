@@ -659,6 +659,10 @@ tr:
         meta_description:
         map:
           headline:
+        pateron:
+          headline:
+          body_html:
+          cta_text:
     user_confirmations:
       new:
         title: Hesabını onayla

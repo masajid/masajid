@@ -729,6 +729,12 @@ es:
           creen y administren sus páginas web
         map:
           headline: Mezquitas registradas
+        pateron:
+          headline: Conviértete en un patrón
+          body_html: |-
+            <p>Este proyecto ha sido creado por voluntarios por el bien de Allah, por lo que debemos cubrir los gastos del hosting y más ...</p>
+            <p>Si le gusta nuestro trabajo y quiere apoyarnos, estamos en Patreon.</p>
+          cta_text: Conviértete en un patrón
     user_confirmations:
       new:
         title: Confirme tu cuenta

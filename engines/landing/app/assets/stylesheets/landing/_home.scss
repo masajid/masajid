@@ -46,6 +46,22 @@
   }
 }
 
+.patreon {
+  text-align: center;
+
+  p {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .btn-patreon {
+    margin-top: 20px;
+    color: #FFFFFF !important;
+    background-color: #F96854;
+    border: 2px solid #F96854;
+  }
+}
+
 #map {
   height: 500px;
 }

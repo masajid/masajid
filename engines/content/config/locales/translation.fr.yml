@@ -730,6 +730,12 @@ fr:
           de créer et gérer leurs sites Web
         map:
           headline: Mosquées enregistrées
+        pateron:
+          headline: Devenez mécène
+          body_html: |-
+            <p>Ce projet est créé par des bénévoles pour Allah, nous devons donc couvrir les frais d'hébergement et plus encore ...</p>
+            <p>Si vous aimez notre travail et que vous souhaitez nous soutenir, nous sommes sur Patreon.</p>
+          cta_text: Devenez mécène
     user_confirmations:
       new:
         title: Confirmez votre compte
