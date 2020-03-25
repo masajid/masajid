@@ -231,10 +231,10 @@ nl:
         photo:
       content/account:
         subdomain:
-        responsable:
-        mosque:
+        responsable: Verantwoordelijke naam
+        mosque: Moskee naam
       content/address:
-        address1:
+        address1: Adres
         zip_code:
         phone:
         city_name:

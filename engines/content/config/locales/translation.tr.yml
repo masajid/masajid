@@ -131,82 +131,82 @@ tr:
         restrict_dependent_destroy:
           has_one: Bağlı bir kayıt %{record} bulunduğu için kayıt silinemedi
           has_many: Bağlı kayıtlar %{record} bulunduğu için kayıt silinemedi
-        invalid_date:
-        invalid_time:
-        invalid_datetime:
+        invalid_date: geçerli bir tarih değil
+        invalid_time: geçerli bir tarih değil
+        invalid_datetime: geçerli bir tarih değil
         is_at:
         before:
         on_or_before:
-        after:
+        after: "%{restriction} öğesinden sonra olmalı"
         on_or_after:
       models:
         content/address:
           attributes:
             address1:
-              geocoding_failed:
+              geocoding_failed: coğrafi kodlama başarısız
         content/newsletter:
           attributes:
             body:
-              blank:
+              blank: makale seçmezseniz gereklidir
             date:
-              inclusion:
+              inclusion: gelecekte olmalı
         content/subscriber:
           attributes:
             email:
-              invalid:
-              taken:
+              invalid: Lütfen geçerli bir e-posta adresi giriniz!
+              taken: Aboneliğinizi daha önce almıştık.
     models:
       content/article:
-        one:
-        other:
-        few:
+        one: Makale
+        other: Makaleler
+        few: Makaleler
       content/account:
         one: hesap
-        other:
+        other: Hesaplar
         few: Hesaplar
       content/country:
-        one:
-        other:
-        few:
+        one: Ülke
+        other: Ülkeler
+        few: Ülkeler
       content/city:
         one: Şehir
         other: Şehirler
-        few:
+        few: Şehirler
       content/newsletter:
-        one:
-        other:
-        few:
+        one: Haber Bülteni
+        other: Haber Bültenleri
+        few: Haber Bültenleri
       content/page:
-        one:
-        other:
-        few:
+        one: Menü
+        other: Menü
+        few: Menü
       content/region:
-        one:
-        other:
-        few:
+        one: Bölge
+        other: Bölgeler
+        few: Bölgeler
       content/slider:
         one:
       content/social_network:
-        one:
+        one: Sosyal medya
       content/subscriber:
-        one:
-        other:
-        few:
+        one: Abone
+        other: Aboneler
+        few: Aboneler
       content/volunteer:
-        one:
-        other:
-        few:
+        one: Gönüllü
+        other: Gönüllüler
+        few: Gönüllüler
     attributes:
       content/article:
         title: Başlık
-        slug:
+        slug: Slug
         summary: Özet
         body: İçerik
         video_link:
         published_at: Yayın Tarihi
         photo: Fotoğraf
       content/account:
-        subdomain:
+        subdomain: Alt alan
         responsable: Sorumlu Adı
         mosque: Cami Adı
       content/address:
@@ -223,73 +223,73 @@ tr:
         theme: Tema
         supported_locales: Desteklenen Diller
         default_locale: Varsayılan Dil
-        admin_locale:
+        admin_locale: Yönetim Dili
       content/country:
         name: Ülke Adı
       content/newsletter:
-        article_ids:
+        article_ids: Makaleler
         body:
-        link:
+        link: Bağlantı
         link_text:
-        date:
+        date: Gönderme Tarihi
         sent_at:
-        subject:
+        subject: Konu
       content/page:
         ancestry:
         description: Açıklama
         meta_title:
         meta_keywords:
         meta_description:
-        name:
+        name: Ad
         permalink:
         permalink_part:
       content/region:
-        name:
+        name: Bölge Adı
       content/city:
         name: Şehir Adı
         latitude: Enlem
         longitude: Boylam
       content/social_network:
-        youtube:
-        facebook:
-        google:
-        twitter:
-        vimeo:
-        instagram:
+        youtube: Youtube
+        facebook: Facebook
+        google: Google +
+        twitter: Twitter
+        vimeo: Vimeo
+        instagram: Instagram
       content/slider:
         title: Başlık
         body:
         photo: Fotoğraf
-        link:
-        link_text:
+        link: Bağlantı
+        link_text: Bağlantı Metni
       content/subscriber:
-        email:
-        created_at:
+        email: E-posta
+        created_at: Oluşturma Tarihi
       content/user:
-        email:
+        email: E-posta
         password: Parola
-        confirmed_at:
-        current_password:
-        password_confirmation:
+        confirmed_at: Onay Tarihi
+        current_password: Şimdiki Şifre
+        password_confirmation: Şifre Onayı
       content/volunteer:
-        name:
-        identification:
-        birthday:
+        name: Ad
+        identification: Kimlik
+        birthday: Doğum günü
         address: Adres
-        phone:
-        email:
-        education:
+        phone: Telefon
+        email: E-posta
+        education: Eğitim
         availability:
-        languages:
-        other_languages:
-        experience:
-        experience_place:
-        experience_area:
+        languages: Diller
+        other_languages: Diğer Diller
+        experience: Deneyim
+        experience_place: Deneyim Yeri
+        experience_area: Deneyim Alanı
       content/volunteer/experience_area:
-        cultural:
-        social:
-        educational:
-        religious:
+        cultural: Kültürel
+        social: Sosyal
+        educational: Eğitim
+        religious: Dini
       content/volunteer/languages:
         arabic: Arapça
         spanish: İspanyolca
@@ -353,9 +353,9 @@ tr:
   flash:
     actions:
       create:
-        notice:
+        notice: "%{resource_name} başarıyla oluşturuldu."
       update:
-        notice:
+        notice: "%{resource_name} başarıyla güncellendi."
       destroy:
         notice:
         alert:
@@ -454,38 +454,41 @@ tr:
       invalid: Geçersiz e-posta ya da şifre.
       locked: Hesabınız kilitlendi.
       last_attempt: Hesabınız askıya alınmadan önce son bir deneme hakkınız kaldı.
-      not_found_in_database:
+      not_found_in_database: Geçersiz %{authentication_keys} veya şifre.
       timeout: Oturumunuz sonlandı. Devam etmek için, lütfen yeniden giriş yapınız.
       unauthenticated: Devam etmeden önce giriş yapmanız veya kayıt olmanız gereklidir.
       unconfirmed: Devam etmeden önce hesabınızı onaylamalısınız.
-      not_approved:
+      not_approved: Hesabınız yöneticilerimiz tarafından henüz onaylanmadı.
     mailer:
       confirmation_instructions:
         subject: Onaylama talimatları.
-        header:
+        header: Merhaba %{mosque}
         cta_text:
-        body_html:
+        body_html: "<p>Hesap e-postanızı aşağıdaki bağlantıdan onaylayabilirsiniz:</p>"
       reset_password_instructions:
         subject: Şifre sıfırlama talimatları.
-        header:
+        header: Merhaba %{email}
         body:
-          primary_html:
-          secondary_html:
+          primary_html: "<p>Birisi şifrenizi değiştirmek için bir bağlantı istedi.
+            Bunu aşağıdaki bağlantıdan yapabilirsiniz:</p>"
+          secondary_html: |-
+            <p>Bunu istemediyseniz, lütfen bu e-postayı dikkate almayın.</p>
+            <p>Yukarıdaki bağlantıya erişip yeni bir tane oluşturana kadar şifreniz değişmez.</p>
         cta_text: Parolamı değiştir
       unlock_instructions:
         subject: Kilit açma talimatları.
-        header:
+        header: Merhaba %{email}
         body_html:
         cta_text:
       email_changed:
-        subject:
-        header:
+        subject: Masajid World - E-posta Değişti
+        header: Merhaba %{email}
         body:
           unconfirmed_email_html:
           confirmed_email_html:
       password_change:
         subject: Şifreniz Değişti
-        header:
+        header: Merhaba %{email}
         body_html:
     omniauth_callbacks:
       failure: Sizi %{kind} aracılığıyla tanıyamadık çünkü "%{reason}".
@@ -530,7 +533,7 @@ tr:
       signed_out: Başarıyla çıkış yapıldı.
       already_signed_out: Başarıyla çıkış yapıldı.
       new:
-        remember_me:
+        remember_me: Beni hatırla
     unlocks:
       send_instructions: Birkaç dakika içerisinde hesap kilidi açma talimatlarını
         içeren bir e-posta alacaksınız.
@@ -539,120 +542,124 @@ tr:
       unlocked: Hesabınızın kilidi başarıyla açıldı. Devam etmek için lütfen giriş
         yapın.
     actions:
-      login:
-      logout:
+      login: Oturum aç
+      logout: Oturumu kapat
   content:
     account_mailer:
       accept_entry:
         subject:
-        header:
-        body_html:
-        cta_text:
+        header: Merhaba %{mosque}!
+        body_html: |-
+          <p>Tebrikler !!! Hesabınız ekip üyelerimiz tarafından kabul edildi.</p>
+          <p>Aşağıdaki bağlantıdan bir şifre girmeniz gerekiyor, ardından makalelerinizi yayınlamaya ve sitenizi özelleştirmeye başlayabilirsiniz.</p>
+          <p>Herhangi bir sorunuz veya geri bildiriminiz varsa lütfen bizimle iletişime geçmekten çekinmeyin!</p>
+        cta_text: Parolanı gir
       decline_entry:
-        subject:
+        subject: Masajid World - Hesabınız reddedildi
         header:
         body_html:
       notify_creation_new_entry:
-        subject:
-        header:
-        cta_text:
-        body_html:
+        subject: Masajid World - Yeni hesap oluşturuldu (%{mosque})
+        header: Merhaba Yönetici
+        cta_text: Ayrıntılara bakınız
+        body_html: Yeni bir hesap oluşturuldu.
   admin:
     articles:
       new:
-        header:
+        header: Yeni Makale
     accounts:
       edit:
-        header:
+        header: Hesabı Düzenle
     configurations:
       edit:
-        header:
+        header: Genel Yapılandırma
     countries:
       edit:
-        header:
+        header: Ülkeyi Düzenle
       new:
-        header:
+        header: Yeni Ülke
     dashboards:
       index:
-        visits:
-        empty_visits:
+        visits: Ziyaret sayısı
+        empty_visits: Web sitenizi henüz kimse ziyaret etmedi
     pages:
       edit:
-        header:
+        header: Menü Öğesini Düzenle
       new:
-        header:
+        header: Yeni Menü Öğesi
     regions:
       edit:
-        header:
+        header: Bölgeyi Düzenle
       new:
-        header:
+        header: Yeni Bölge
     social_networks:
       edit:
-        header:
+        header: Sosyal Medyayı Düzenle
     sliders:
       edit:
-        header:
+        header: Kaydırıcıyı Düzenle
     cities:
       edit:
-        header:
+        header: Şehri Düzenle
       new:
-        header:
+        header: Yeni Şehir
     pundit:
-      unauthorized:
+      unauthorized: Bu işlemi gerçekleştirme yetkiniz yok
     shared:
-      administration:
-      view_site:
-      are_you_sure:
-      total:
-      account:
+      administration: Yönetim
+      view_site: Siteyi Görüntüle
+      are_you_sure: Emin misiniz?
+      total: 'Toplam: %{count}'
+      account: Hesap
     tabs:
-      dashboard:
-      general:
-      settings:
+      dashboard: Gösterge Tabloları
+      general: Genel
+      settings: Ayarlar
     users:
       edit:
-        header:
-        cta:
+        header: Hesabı düzenle
+        cta: Hesabı güncelle
   landing:
-    admin_panel:
+    admin_panel: Yönetici Paneli
     create_account:
     slider:
       first:
-        headline:
-        content:
+        headline: Mescidiniz çevrimiçi.
+        content: Mescidiniz var ve web siteniz yok mu? Masajid World size yardımcı
+          olacak.
       second:
-        headline:
+        headline: Allah Tevbe Suresi'nde diyor
         content_html:
     how_to_use:
-      headline:
+      headline: nasıl kullanılır?
       step_1:
         headline:
         content:
       step_2:
-        headline:
+        headline: Onay için bekle
         content:
       step_3:
-        headline:
+        headline: Yönetici
         content:
       step_4:
-        headline:
-        content:
+        headline: Hazır
+        content: Mescidiniz için siteniz hazır.
     accounts:
       new:
         title:
-        meta_description:
+        meta_description: Caminiz için bir web sitesi oluşturun
       create:
         error_message:
       success_page:
-        header:
+        header: Hesabın başarıyla oluşturuldu
         body_html:
     home:
       index:
-        title:
+        title: Camilerin web sitelerini oluşturma ve yönetme platformu
         meta_description:
     user_confirmations:
       new:
-        title:
+        title: Hesabını onayla
     user_passwords:
       new:
         title:
@@ -680,7 +687,7 @@ tr:
         body_html:
         cta_text:
       contact:
-        header:
+        header: İletişim
     sidebar:
       prayer_times: İbadet zamanları
   shared:
@@ -732,4 +739,4 @@ tr:
       content/user:
         unconfirmed_email:
         current_password:
-        password:
+        password: Değiştirmek istemiyorsanız boş bırakın
