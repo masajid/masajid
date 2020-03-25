@@ -286,8 +286,6 @@ en:
         body_html: |
           We will send you an email in few instants, please confirm your email address.<br />
           Then our team members will authorize your account in the next 24 hours.
-    map:
-      headline: Registerd mosques
     home:
       index:
         title: Platform for mosques to create and manage their websites
