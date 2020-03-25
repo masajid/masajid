@@ -324,9 +324,9 @@ GEM
     parallel (1.19.1)
     parser (2.7.0.5)
       ast (~> 2.4.0)
-    pg (1.2.2)
-    pg (1.2.2-x64-mingw32)
-    pg (1.2.2-x86-mingw32)
+    pg (1.2.3)
+    pg (1.2.3-x64-mingw32)
+    pg (1.2.3-x86-mingw32)
     popper_js (1.14.5)
     postgres-copy (1.4.1)
       activerecord (>= 5.1)
@@ -574,7 +574,7 @@ DEPENDENCIES
   whenever
 
 RUBY VERSION
-   ruby 2.6.3p62
+   ruby 2.7.0p0
 
 BUNDLED WITH
-   1.17.3
+   2.1.2
