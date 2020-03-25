@@ -1,19 +1,19 @@
 @import "bootstrap";
 @import "flag-icon";
 
+@import "header";
 @import "devise";
 @import "home";
 @import "accounts";
 @import "volunteers";
 
 body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 70px 0 48px;
   color: #5a5a5a;
 }
 
 .divider-line {
-  margin: 5rem 0;
+  margin: 64px 0;
 }
 
 .content {
