@@ -292,6 +292,12 @@ en:
       index:
         title: Platform for mosques to create and manage their websites
         meta_description: Masajid World delivers a solution for mosques to create and manage their websites
+        pateron:
+          headline: Become a Patron
+          body_html: |
+            <p>This project is created by volunteers for the sake of Allah, so we need to cover the hosting expenses and more ...</p>
+            <p>If you like our work and want to support us, we are on Patreon.</p>
+          cta_text: Become a Patron
     user_confirmations:
       new:
         title: Confirm your account
