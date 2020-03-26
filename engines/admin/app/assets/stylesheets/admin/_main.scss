@@ -1,17 +1,17 @@
 body {
-  font-size: .875rem;
+  font-size: 14px;
 }
 
 .navbar {
   .dropdown-menu {
     left: -120px;
   }
-}
 
-.feather {
-  width: 16px;
-  height: 16px;
-  vertical-align: text-bottom;
+  .feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+  }
 }
 
 /*
@@ -19,11 +19,12 @@ body {
  */
 
 [role="main"] {
-  padding-top: 55px;
+  padding-top: 56px;
 }
 
-@media (min-width: 768px) {
+// Mobile
+@media (max-width: 767.98px) {
   [role="main"] {
-    padding-top: 50px;
+    padding-top: 96px;
   }
 }
