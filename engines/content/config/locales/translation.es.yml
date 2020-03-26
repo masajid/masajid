@@ -752,8 +752,12 @@ es:
         meta_description: Ser voluntario en Masajid World y tener un impacto en nuestra
           comunidad musulmana
     footer:
-      copyright_html: © 2019-%{year} Masajid World · <a href="%{privacy_url}">Privacidad</a>
-        · <a href="%{terms_url}">Términos</a>
+      copyright_html: "&copy; Copyrights Masajid World. Todos los derechos reservados."
+      home: Portada
+      terms: Términos de servicio
+      privacy: Política de privacidad
+      follow_us: Síguenos
+      useful_links: Enlaces útiles
   public:
     continued: "... (continuación)"
     read_more: Sigue leyendo

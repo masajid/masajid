@@ -641,6 +641,11 @@ nl:
     create_account:
     footer:
       copyright_html:
+      home:
+      terms:
+      privacy:
+      follow_us:
+      useful_links:
     slider:
       first:
         headline:

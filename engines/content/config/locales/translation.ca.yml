@@ -676,6 +676,11 @@ ca:
         meta_description:
     footer:
       copyright_html:
+      home:
+      terms:
+      privacy:
+      follow_us:
+      useful_links:
   public:
     continued:
     read_more:

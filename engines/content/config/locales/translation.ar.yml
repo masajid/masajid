@@ -693,9 +693,12 @@ ar:
         title: تطوع مع عالم المساجد
         meta_description: ساهم مع عالم المساجد واترك أثرا في العالم الإسلامي
     footer:
-      copyright_html: |-
-        © %{year}-2019 عالم المساجد · <a href="%{privacy_url}">الخصوصية</a>
-                · <a href="%{terms_url}">الشروط</a>
+      copyright_html: 'جميع الحقوق محفوظة لموقع عالم المساجد %{year} &copy; '
+      home: الصفحة الرئيسية
+      terms: شروط الخدمة
+      privacy: سياسة الخصوصية
+      follow_us: تابعنا
+      useful_links: روابط مهمة
   public:
     continued: "... (يتبع)"
     read_more: واصل القراءة

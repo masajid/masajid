@@ -753,8 +753,12 @@ fr:
         meta_description: Bénévole à Masajid World et faites un impact dans notre
           communauté musulmane
     footer:
-      copyright_html: © 2019-%{year} Masajid World · <a href="%{privacy_url}">Confidentialité</a>
-        · <a href="%{terms_url}">Termes</a>
+      copyright_html: "&copy; Copyrights Masajid World. Tous les droits sont réservés."
+      home: Home
+      terms: Conditions d'utilisation
+      privacy: Politique de confidentialité
+      follow_us: Suivez-nous
+      useful_links: Liens utiles
   public:
     continued: "... (continued)"
     read_more: Continuer la lecture
