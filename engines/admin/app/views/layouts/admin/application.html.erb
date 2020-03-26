@@ -14,27 +14,33 @@
   </head>
   <body>
     <%= render 'content/shared/google_tag_manager_noscript_tag' if render_google_tag_manager? %>
-    <%= render 'admin/shared/header' %>
 
-    <div class='container-fluid'>
-      <div class='row'>
-        <%= render 'admin/shared/navigation' %>
+    <div class='wrapper'>
+      <%= render 'admin/shared/navigation' %>
 
-        <main role='main' class='col-md-9 ml-sm-auto col-lg-10 px-4'>
-          <%= render 'content/shared/flash_messages' %>
-
-          <div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom'>
-            <h1 class='h2'>
-              <%= yield :page_title %>
-            </h1>
-
-            <div class='pull-right'>
-              <%= yield :page_actions %>
-            </div>
+      <div id='content'>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+              <i class="fa fa-align-left"></i>
+              <span>Toggle Sidebar</span>
+            </button>
           </div>
 
-          <%= yield %>
-        </main>
+
+        </nav>
+
+        <h1 class='h2'>
+          <%= yield :page_title %>
+        </h1>
+
+        <div class='pull-right'>
+          <%= yield :page_actions %>
+        </div>
+
+        <%= render 'content/shared/flash_messages' %>
+
+        <%= yield %>
       </div>
     </div>
   </body>

@@ -1,30 +1,119 @@
 body {
   font-size: 14px;
+  background: #fafafa;
 }
 
-.navbar {
-  .dropdown-menu {
-    left: -120px;
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+
+  #sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+
+    .sidebar-header {
+      padding: 20px;
+      background: #6d7fcc;
+    }
+
+    ul {
+      &.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #47748b;
+
+        svg {
+          margin-right: 8px;
+          width: 16px;
+          height: 16px;
+          vertical-align: text-bottom;
+        }
+      }
+
+      li {
+        a {
+          padding: 10px;
+          font-size: 1.1em;
+          display: block;
+        }
+
+        a:hover {
+          color: #7386D5;
+          background: #fff;
+        }
+      }
+
+      li.active > a, a[aria-expanded="true"] {
+        color: #fff;
+        background: #6d7fcc;
+      }
+
+      // Submenu
+      ul a {
+        font-size: 0.9em !important;
+        padding-left: 30px !important;
+      }
+    }
+
+    a[data-toggle="collapse"] {
+      position: relative;
+    }
+
+    a,
+    a:hover,
+    a:focus {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .dropdown-toggle::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+
+    &.active {
+      margin-left: -250px;
+    }
   }
 
-  .feather {
-    width: 16px;
-    height: 16px;
-    vertical-align: text-bottom;
+  #content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
   }
 }
 
-/*
- * Content
- */
-
-[role="main"] {
-  padding-top: 56px;
-}
-
-// Mobile
 @media (max-width: 767.98px) {
-  [role="main"] {
-    padding-top: 96px;
+  .wrapper {
+    #sidebar {
+      margin-left: -250px;
+
+      &.active {
+        margin-left: 0;
+      }
+    }
   }
 }
+
+// p {
+//   font-family: 'Poppins', sans-serif;
+//   font-size: 1.1em;
+//   font-weight: 300;
+//   line-height: 1.7em;
+//   color: #999;
+// }
+
+// #sidebar ul p {
+//   color: #fff;
+//   padding: 10px;
+// }
+//
