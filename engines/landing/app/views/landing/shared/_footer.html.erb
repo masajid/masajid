@@ -1,10 +1,57 @@
-<hr class='divider-line'>
+<div class='container'>
+  <hr class='divider-line'>
+</div>
 
-<footer class='container'>
-  <p class='float-right'>
-    <a href='#'><%= t('shared.footer.back_to_top') %></a>
-  </p>
-  <p>
-    <%= t('landing.footer.copyright_html', year: Date.current.year, privacy_url: '#', terms_url: '#') %>
-  </p>
+<footer>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-4'>
+        <h5><%= t('shared.site_name') %></h5>
+        <address class='text-muted'>
+          Islamisches Zentrum Al-Nour<br />
+          Sievekingsallee 191<br />
+          22111, Hamburg<br />
+          Germany
+        </address>
+
+        <address>
+          <i class='fa fa-phone'></i>
+          <a href='tel:+49 40 28053914' dir='ltr'>+49 40 28053914</a>
+        </address>
+
+        <address>
+          <i class='fa fa-envelope'></i>
+          <a href='mailto:masajid.world@gmail.com'>masajid.world@gmail.com</a>
+        </address>
+      </div>
+
+      <div class='col-md-4'>
+        <h5><%= t('landing.footer.useful_links') %></h5>
+        <ul class='list-unstyled text-small'>
+          <li><%= link_to t('landing.footer.home'), root_path, class: 'text-muted' %></li>
+          <li><%= link_to t('shared.volunteers.new.header'), new_volunteer_path, class: 'text-muted' %></li>
+          <li><%= link_to t('landing.footer.terms'), '/legal/terms-of-service', class: 'text-muted' %></li>
+          <li><%= link_to t('landing.footer.privacy'), '/legal/privacy-policy', class: 'text-muted' %></li>
+        </ul>
+      </div>
+      <div class='col-md-4'>
+        <h5><%= t('landing.footer.follow_us') %></h5>
+        <ul class='list-unstyled text-small'>
+          <li><a class='text-muted' href='#'>Facebook</a></li>
+          <li><a class='text-muted' href='#'>Twitter</a></li>
+          <li><a class='text-muted' href='#'>Youtube</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class='copyright-footer'>
+    <p>
+      <%= t('landing.footer.copyright_html') %>
+    </p>
+
+    <p>
+      <a href='#'><%= t('shared.footer.back_to_top') %></a>
+    </p>
+  </footer>
 </footer>

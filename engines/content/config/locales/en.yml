@@ -250,7 +250,12 @@ en:
     admin_panel: Admin panel
     create_account: Create account
     footer:
-      copyright_html: '&copy; 2019-%{year} Masajid World &middot; <a href="%{privacy_url}">Privacy</a> &middot; <a href="%{terms_url}">Terms</a>'
+      copyright_html: '&copy; Copyrights Masajid World. All rights reserved.'
+      home: Home
+      terms: Terms of service
+      privacy: Privacy policy
+      follow_us: Follow us
+      useful_links: Useful links
     slider:
       first:
         headline: Your masjid online.
