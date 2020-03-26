@@ -4,6 +4,7 @@ RUN apt-get update -yqq \
   && apt-get install -yqq --no-install-recommends \
     postgresql-client \
     nodejs \
+    cron \
   && apt-get -q clean \
   && rm -rf /var/lib/apt/lists
 
@@ -18,8 +19,10 @@ ARG RAILS_MASTER_KEY
 ENV RAILS_MASTER_KEY ${RAILS_MASTER_KEY}
 ENV RAILS_ENV production
 
-RUN mkdir -p tmp/pids
-
 RUN rails assets:precompile
 
-CMD puma -C config/puma.rb
+RUN mkdir -p tmp/pids tmp/sockets
+
+RUN bundle exec whenever --update-crontab
+
+CMD puma -C config/puma/production.rb
