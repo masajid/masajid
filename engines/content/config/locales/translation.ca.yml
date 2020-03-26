@@ -653,6 +653,12 @@ ca:
       index:
         title:
         meta_description:
+        map:
+          headline:
+        pateron:
+          headline:
+          body_html:
+          cta_text:
     user_confirmations:
       new:
         title:
@@ -670,6 +676,11 @@ ca:
         meta_description:
     footer:
       copyright_html:
+      home:
+      terms:
+      privacy:
+      follow_us:
+      useful_links:
   public:
     continued:
     read_more:
@@ -703,6 +714,7 @@ ca:
       ca:
       it:
       tr:
+      nl:
     volunteers:
       new:
         header:

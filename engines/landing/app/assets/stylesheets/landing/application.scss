@@ -1,31 +1,11 @@
 @import "bootstrap";
+@import "font-awesome";
 @import "flag-icon";
 
+@import "main";
+@import "header";
+@import "footer";
 @import "devise";
 @import "home";
 @import "accounts";
 @import "volunteers";
-
-body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  color: #5a5a5a;
-}
-
-.divider-line {
-  margin: 5rem 0;
-}
-
-.content {
-  margin-top: 40px;
-
-  .form-header {
-    text-align: center;
-  }
-}
-
-.alert {
-  margin-top: 8px;
-  margin-bottom: 0;
-  text-align: center;
-}
