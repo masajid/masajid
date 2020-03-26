@@ -209,6 +209,11 @@ en:
       index:
         visits: Number of visits
         empty_visits: No body visited your website yet
+    newsletters:
+      edit:
+        header: Edit Newsletter
+      new:
+        header: New Newsletter
     pages:
       edit:
         header: Edit Menu Item
