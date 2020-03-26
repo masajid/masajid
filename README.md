@@ -67,14 +67,6 @@ $ docker-machine create \
    --digitalocean-size=1gb \
    masajid
 
-# Or if the droplet already exists
-$ docker-machine create \
-  --driver=digitalocean \
-  --generic-ip-address=<DROPLET_IP_ADDR> \
-  --generic-ssh-user root \
-  --generic-ssh-key ~/.ssh/id_rsa \
-  masajid
-
 $ docker-machine ssh masajid
 
 $ docker-machine env masajid
@@ -82,8 +74,10 @@ $ eval $(docker-machine env masajid)
 
 $ docker ps
 
+$ export RAILS_MASTER_KEY=$(cat web_container/config/master.key)
+
 $ docker-compose --file=docker-compose.prod.yml up -d db
-$ docker-compose --file=docker-compose.prod.yml build app
+$ docker-compose --file=docker-compose.prod.yml build --build-arg="RAILS_MASTER_KEY=${RAILS_MASTER_KEY}" app
 $ docker-compose --file=docker-compose.prod.yml run --rm app rake db:create db:migrate db:seed
 $ docker-compose --file=docker-compose.prod.yml run --rm app rake content_places:import only=countries
 $ docker-compose --file=docker-compose.prod.yml up -d app sidekiq cron_job nginx

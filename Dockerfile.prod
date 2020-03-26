@@ -15,6 +15,8 @@ COPY engines ../engines
 RUN bundle install
 COPY web_container .
 
+ARG RAILS_MASTER_KEY
+ENV RAILS_MASTER_KEY ${RAILS_MASTER_KEY}
 ENV RAILS_ENV production
 
 RUN rails assets:precompile
