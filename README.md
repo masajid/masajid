@@ -86,7 +86,7 @@ $ docker-compose --file=docker-compose.prod.yml up -d app sidekiq cron_job nginx
 Deploy new changes:
 
 ```
-$ docker-compose --file=docker-compose.prod.yml build app
+$ docker-compose --file=docker-compose.prod.yml build --build-arg="RAILS_MASTER_KEY=${RAILS_MASTER_KEY}" app
 $ docker-compose --file=docker-compose.prod.yml up --no-deps -d app sidekiq cron_job
 $ docker-compose --file=docker-compose.prod.yml run --rm app rake db:migrate
 ```
