@@ -65,8 +65,8 @@ ar:
           mb: MB
           gb: GB
           tb: TB
-          pb:
-          eb:
+          pb: PB
+          eb: EB
       decimal_units:
         units:
           thousand: ألفّ
@@ -75,55 +75,59 @@ ar:
           trillion: تريليون
           quadrillion: كدريليون
   errors:
-    format: "%{message}"
+    format: "%{attribute} %{message}"
     messages:
-      model_invalid:
-      inclusion: "%{attribute} غير وارد في القائمة"
-      exclusion: حقل %{attribute} محجوز
-      invalid: محتوى %{attribute} غير صالح
-      confirmation: محتوى %{attribute} لا يتوافق مع %{attribute}
-      accepted: يجب أن تقبل %{attribute}
-      empty: لا يمكن أن يكون محتوى %{attribute} فارغاً
-      blank: لا يمكن أن يكون محتوى %{attribute} فارغاً
-      present: يجب ترك حقل %{attribute} فارغاً
+      model_invalid: 'فشل التحقق: %{errors}'
+      inclusion: غير مدرج في القائمة
+      exclusion: محجوز
+      invalid: غير صالح
+      confirmation: لا يتطابق مع %{attribute}
+      accepted: يجب أن تكون مقبولة
+      empty: لا يمكن أن يكون فارغا
+      blank: لا يمكن أن يكون فارغا
+      present: يجب أن يكون فارغا
       too_long:
-        one: محتوى %{attribute} أطول من اللّازم (الحد الأقصى هو حرف واحد)
-        other: محتوى %{attribute} أطول من اللّازم (الحد الأقصى هو %{count} حرف)
+        one: طويل جدا (الحد الأقصى هو حرف واحد)
+        other: طويل جدًا (الحد الأقصى هو %{count} حرفًا)
       too_short:
-        one: محتوى %{attribute} أقصر من اللّازم (الحد الأدنى هو حرف واحد)
-        other: محتوى %{attribute} أقصر من اللّازم (الحد الأدنى هو %{count} حرف)
+        one: قصير جدا (الحد الأدنى هو حرف واحد)
+        other: قصيرة جدًا (الحد الأدنى هو %{count} حرفًا)
       wrong_length:
-        one: طول %{attribute} غير مطابق للحد المطلوب (يجب أن يكون حرف واحد)
-        other: طول %{attribute} غير مطابق للحد المطلوب (يجب أن يكون %{count} حرف)
-      not_a_number: يجب أن يكون محتوى %{attribute} رقماً
-      not_an_integer: يجب أن يكون عدد %{attribute} عدد صحيحاً
-      greater_than: ميجب أن يكون عدد %{attribute} أكبر من %{count}
-      greater_than_or_equal_to: يجب أن يكون عدد %{attribute} أكبر أو يساوي %{count}
-      equal_to: يجب أن يساوي طول %{attribute} %{count}
-      less_than: يجب أن يكون عدد %{attribute} أصغر من %{count}
-      less_than_or_equal_to: يجب أن يكون عدد %{attribute} أصغر أو  يساوي %{count}
-      other_than:
-      odd: يجب أن يكون عدد %{attribute} عدداً فردياً
-      even: يجب أن يكون عدد %{attribute} زوجياً
-      required:
-      taken: حقل %{attribute} محجوز مسبقاً
+        one: الطول الخاطئ (يجب أن يكون حرفًا واحدًا)
+        other: الطول الخطأ (يجب أن يكون %{count} حرفًا)
+      not_a_number: ليس رقما
+      not_an_integer: يجب أن يكون عددا صحيحا
+      greater_than: يجب أن يكون أكبر من %{count}
+      greater_than_or_equal_to: يجب أن يكون أكبر من أو يساوي %{count}
+      equal_to: يجب أن يكون مساويا لـ %{count}
+      less_than: يجب أن يكون أقل من %{count}
+      less_than_or_equal_to: يجب أن يكون أقل من أو يساوي %{count}
+      other_than: يجب أن يكون مغاير ل%{count}
+      odd: يجب أن يكون عدداً فردياً
+      even: يجب أن يكون عدداً زوجياً
+      required: يجب أن يكون موجودا
+      taken: محجوز مسبقاً
       already_confirmed: تم تأكيده بالفعل، الرجاء محاولة تسجيل الدخول
       confirmation_period_expired: يحتاج إلى التأكيد في غضون %{period}،الرجاء طلب
         رابط تأكيد جديد
-      expired: قد انتهت المدة، الرجاء طلب رابط تأكيد جديد
+      expired: انتهت ، يرجى طلب واحد جديد
       not_found: غير موجود
-      not_locked: لم يتم إلغاء قفله
+      not_locked: لم يكن مقفلا
       not_saved:
-        one: '1 خطأ منع %{resource} هذا من أن يتم حفظه:'
-        other: "%{count} أخطاء منع %{resource} هذا من أن يتم حفظه:"
+        one: 'خطأ واحد منع %{resource} من أن يتم حفظه:'
+        other: "%{count} أخطاء منع %{resource} من أن يتم حفظه:"
     template:
-      body: يُرجى التحقّق من الحقول التّالية:%{attribute}
+      body: 'كانت هناك مشاكل مع الحقول التالية:'
       header:
-        one: ليس بالامكان حفظ %{model} لسبب وجود خطأ واحد.
-        other: ليس بالامكان حفظ %{model} لسبب وجود %{count} خطأ.
-    unavailable_session:
-    unacceptable_request:
-    connection_refused:
+        one: هناك خطأ يمنع حفظ هذا %{model}
+        other: ليس بالامكان حفظ %{model} لوجود %{count} خطأ.
+    unavailable_session: |
+      تسجيل الدخول %{id} لم يعد متوفرا في الذاكرة.
+
+      إذا كنت تعمل على خادم متعدد العمليات (مثل Unicorn أو Puma) العملية التي يتمحور حولها هذا الطلب لا تخزن %{id} في الذاكرة. فكر في تحويل عدد العمليات / العمال إلى واحد (1) أو استخدام خادم آخر في البرمجة.
+    unacceptable_request: نسخة معتمدة متوقعة في الAccept header.
+    connection_refused: عفوا! فشل الاتصال بالويب. من فضلك تأكد من تشغيل خادم ruby
+      on rails.
   activerecord:
     errors:
       messages:
@@ -197,6 +201,10 @@ ar:
         other: المتطوعون
         few: المتطوعون
       content/message:
+        few: الرسائل
+        one: رسالة
+        other: الرسائل
+      content/sidebar_content:
         few:
         one:
         other:
@@ -208,14 +216,14 @@ ar:
         body: المحتوى
         video_link: رابط الفيديو
         published_at: تاريخ النشر
-        photo: الصورة
+        photo: صورة
       content/account:
         subdomain: Subdomain
         responsable: اسم المسؤول
         mosque: اسم المسجد
       content/address:
         address1: العنوان
-        zip_code: الرمز بريدي
+        zip_code: الرمز البريدي
         phone: رقم الهاتف
         city_name: المدينة
         region_name: المنطقة
@@ -224,10 +232,10 @@ ar:
         logo: الشعار
         about_us: معلومات عنا
         mawaqit_link: رابط مواقيت الصلاة
-        theme:
+        theme: القالب
         supported_locales: اللغات المدعومة
         default_locale: اللغة الاعتيادية
-        admin_locale: لغة الادارة
+        admin_locale: لغة الإدارة
       content/country:
         name: اسم الدولة
       content/newsletter:
@@ -263,15 +271,15 @@ ar:
       content/slider:
         title: العنوان
         body: المحتوى
-        photo: صور
+        photo: الصورة
         link: الرابط
-        link_text: رابط النص
+        link_text: 'نص الرابط '
       content/subscriber:
         email: بريد الكتروني
         created_at: إنشاء تاريخ
       content/user:
         email: البريد الإلكتروني
-        password: كلمو المرور
+        password: كلمة المرور
         confirmed_at: تاريخ التأكيد
         current_password: كلمة السر الحالية
         password_confirmation: تأكيد كلمة المرور
@@ -296,20 +304,25 @@ ar:
         religious: ديني
       content/volunteer/languages:
         arabic: العربية
-        spanish: الاسبانية
+        spanish: الإسبانية
         catalan: الكاتالونية
         english: الإنجليزية
         french: الفرنسية
-        german: أاللمانية
+        german: الألمانية
       content/message:
         name: اسم
         phone: رقم الهاتف
         email: البريد الإلكتروني
         subject: الموضوع
-        body:
-        newsletter:
-        seeing_at:
-        created_at:
+        body: رسالة
+        newsletter: أرغب في الاشتراك في newsletter
+        seeing_at: وقت الاطلاع على الرسالة
+        created_at: وقت التوصل بالرسالة
+      content/sidebar_content:
+        title: العنوان
+        body: المحتوى
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: نصف دقيقة
@@ -360,95 +373,96 @@ ar:
     select:
       prompt: يُرجى الاختيار
     submit:
-      create: "%{model} إنشاء"
-      update: "%{model} تحديث"
-      submit: "%{model} حِفظ"
+      create: إنشاء %{model}
+      update: تحديث %{model}
+      submit: حفظ %{model}
   flash:
     actions:
       create:
-        notice:
+        notice: تم إنشاء %{resource_name} بنجاح.
       update:
-        notice:
+        notice: تم تحديث %{resource_name} بنجاح.
       destroy:
-        notice:
-        alert:
+        notice: تم حذف %{resource_name} بنجاح.
+        alert: "%{resource_name} لا يمكن حذفها."
   will_paginate:
-    previous_label:
-    next_label:
-    page_gap:
+    previous_label: "&#8592; السابق"
+    next_label: التالي &#8594;
+    page_gap: "&hellip;"
     page_entries_info:
       single_page:
-        zero:
-        one:
-        other:
+        zero: لم يتم العثور على %{model}
+        one: عرض 1 %{model}
+        other: عرض كل %{count} %{model}
       single_page_html:
-        zero:
-        one:
-        other:
-      multi_page:
-      multi_page_html:
+        zero: لم يتم العثور على %{model}
+        one: عرض <b>1</b> %{model}
+        other: عرض <b>all&nbsp;%{count}</b> %{model}
+      multi_page: عرض %{model} %{from} - %{to} من %{count} في الإجمالي
+      multi_page_html: عرض %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> من <b>%{count}</b>
+        في الإجمالي
   stringex:
     characters:
-      and:
-      at:
-      divide:
-      degrees:
-      dot:
-      ellipsis:
-      equals:
-      number:
-      percent:
-      plus:
-      slash:
-      star:
+      and: و
+      at: في
+      divide: مقسومًا على
+      degrees: درجات
+      dot: "\\1 نقطة \\2"
+      ellipsis: نقطة نقطة نقطة
+      equals: يساوي
+      number: رقم
+      percent: نسبه مئويه
+      plus: زائد
+      slash: خط مائل
+      star: نجمة
     currencies:
-      generic:
-      dollars:
-      dollars_cents:
-      pounds:
-      pounds_pence:
-      euros:
-      euros_cents:
-      yen:
-      reais:
-      reais_cents:
+      generic: "\\1 باوند"
+      dollars: "\\1 دولار"
+      dollars_cents: "\\1 دولار \\2 سنت"
+      pounds: "\\1 باوند"
+      pounds_pence: "\\ 1 باوند \\ 2 بنس"
+      euros: "\\ 1 يورو"
+      euros_cents: "\\ 1 يورو \\ 2 سنت"
+      yen: "\\ 1 ين"
+      reais: "\\ 1 ريال"
+      reais_cents: "\\ 1 ريال \\ 2 سنت"
     html_entities:
-      amp:
-      cent:
-      copy:
-      deg:
-      divide:
-      double_quote:
-      ellipsis:
-      en_dash:
-      em_dash:
-      frac14:
-      frac12:
-      frac34:
-      gt:
-      lt:
-      pound:
-      reg:
-      single_quote:
-      times:
-      trade:
-      yen:
+      amp: و
+      cent: " سنتات"
+      copy: "(c)"
+      deg: " درجات"
+      divide: " مقسومًا على"
+      double_quote: "\""
+      ellipsis: "..."
+      en_dash: "-"
+      em_dash: "--"
+      frac14: ربع
+      frac12: نصف
+      frac34: ثلاثة أرباع
+      gt: ">"
+      lt: "<"
+      pound: باوند
+      reg: "(r)"
+      single_quote: "'"
+      times: x
+      trade: "(tm)"
+      yen: " ين"
     vulgar_fractions:
-      half:
-      one_third:
-      two_thirds:
-      one_fourth:
-      three_fourths:
-      one_fifth:
-      two_fifths:
-      three_fifths:
-      four_fifths:
-      one_sixth:
-      five_sixths:
-      one_eighth:
-      three_eighths:
-      five_eighths:
-      seven_eighths:
+      half: نصف
+      one_third: الثلث
+      two_thirds: ثلثي
+      one_fourth: ربع
+      three_fourths: ثلاثة أرباع
+      one_fifth: خمس
+      two_fifths: خمسي
+      three_fifths: ثلاثة أخماس
+      four_fifths: أربعة أخماس
+      one_sixth: سدس
+      five_sixths: خمسة أسداس
+      one_eighth: ثمن
+      three_eighths: ثلاثة أثمان
+      five_eighths: خمسة أثمان
+      seven_eighths: سبعة أثمان
   devise:
     confirmations:
       confirmed: تم تأكيد بريدك الإلكتروني بنجاح.
@@ -465,68 +479,74 @@ ar:
       inactive: لم يتم تفعيل حسابك بعد.
       invalid: "%{authentication_keys} أو كلمة المرورغير صالحة."
       locked: تم اغلاق حسابك.
-      last_attempt: لديك محاولة أو أكثر قبل أن يغلق حسابك.
-      not_found_in_database: "%{authentication_keys} أو كلمة المرورغير صالحة."
-      timeout:
+      last_attempt: لديك محاولة أخيرة قبل أن يغلق حسابك.
+      not_found_in_database: "%{authentication_keys} أو كلمة المرور غير صالحة."
+      timeout: يرجى تسجيل الدخول مرة أخرى للمتابعة.
       unauthenticated: تحتاج إلى تسجيل الدخول أو التسجيل قبل المتابعة.
       unconfirmed: تحتاج إلى تأكيد عنوان بريدك الإلكتروني قبل المتابعة.
-      not_approved: لم تتم الموافقة على حسابك من قِبل المشرفينا حتى الآن.
+      not_approved: لم تتم الموافقة على حسابك من قِبل مشرفينا حتى الآن.
     mailer:
       confirmation_instructions:
-        subject: تعليمات التأكيد
-        header:
-        cta_text:
-        body_html:
+        subject: عالم المساجد - تعليمات التأكيد
+        header: مرحبًا %{mosque}
+        cta_text: تأكيد حسابي
+        body_html: "<p>يمكنك تأكيد بريدك الإلكتروني من خلال الرابط أدناه:</p>"
       reset_password_instructions:
-        subject: تعليمات إعادة تعيين كلمة المرور
-        header:
+        subject: عالم المساجد - تعليمات إعادة تعيين كلمة المرور
+        header: مرحبًا %{email}
         body:
-          primary_html:
-          secondary_html:
-        cta_text: تغيير كلمة مروري
+          primary_html: "<p>شخص ما طلب رابطًا لتغيير كلمة مرورك. يمكنك القيام بذلك
+            من خلال الرابط أدناه:</p>"
+          secondary_html: "<p>إذا لم تطلب ذلك ، فيرجى تجاهل هذا البريد الإلكتروني.</p><p>لن
+            تتغير كلمة المرور حتى تدخل الرابط أعلاه وتنشئ واحدة جديدة.</p>"
+        cta_text: تغيير كلمة المرور
       unlock_instructions:
-        subject: تعليمات إلغاء القفل
-        header:
-        body_html:
-        cta_text:
+        subject: عالم المساجد - تعليمات الفتح
+        header: مرحبًا %{email}
+        body_html: |-
+          <p>تم إغلاق حسابك بسبب العدد المفرط من محاولات تسجيل الدخول غير الناجحة.</p>
+          <p> انقر على الرابط أدناه لفتح حسابك:</p>
+        cta_text: فتح حسابي
       email_changed:
-        subject: تم تغيير عنوان البريد الإلكتروني
-        header:
+        subject: عالم المساجد - تم تغيير البريد الإلكتروني
+        header: مرحبًا %{email}
         body:
-          unconfirmed_email_html:
-          confirmed_email_html:
+          unconfirmed_email_html: "<p>نتصل بك لإعلامك بتغيير بريدك الإلكتروني إلى
+            %{email}.</p>"
+          confirmed_email_html: "<p>نتصل بك لإعلامك بأنه قد تم تغيير بريدك الإلكتروني
+            إلى  %{email}.</p>"
       password_change:
-        subject: تم تغيير كلمة المرور
-        header:
-        body_html:
+        subject: عالم المساجد - تم تغيير كلمة المرور
+        header: مرحبًا %{email}
+        body_html: "<p>نتصل بك لإعلامك بتغيير كلمة المرور الخاصة بك.<p></p>"
     omniauth_callbacks:
       failure: تعذر التحقق منك من %{kind} بسبب "%{reason}".
-      success: تمت المصادقة بنجاح من حساب %{kind}.
+      success: تمت التحقق بنجاح من حساب %{kind}.
     passwords:
-      no_token: لا يُمكنك الوصول إلى هذه الصفحة دون تأكيد رسالة البريد الإلكتروني
-        المحتوية على إعادة تعيين كلمة المرور. إذا كنت قد انتقلت من رسالة تعيين كلمة
-        المرور، الرجاء التأكد من أنك استخدمت رابط URL الكامل الموجود في الرسالة.
-      send_instructions: ستتلقى رسالة بريد إلكرتوني بها تعليمات ععن كيفية إعادة تعيين
+      no_token: لا يمكنك الدخول إلى هذه الصفحة بدون الحصول على رسالة إلكترونية لإعادة
+        تعيين كلمة المرور. إذا كنت قادم من رسالة إلكترونية لإعادة تعيين كلمة المرور،
+        يرجى التأكد من استخدام عنوان URL الكامل المقدم.
+      send_instructions: ستتلقى رسالة بريد إلكرتوني بها تعليمات عن كيفية إعادة تعيين
         كلمة مرورك في غضون بضع دقائق.
       send_paranoid_instructions: إذا كان بريدك الإلكتروني موجود في قاعدة البيانات
         لدينا، ستتلقى رابط استعادة كلمة المرور على عنوان بريدك الإلكتروني في غضون
         بضع دقائق.
-      updated: تم تغيير كلمة مرورك بنجاح. أنت الآن مُسجِّل الدخول.
+      updated: تم تغيير كلمة مرورك بنجاح. أنت الآن قد سجلت الدخول.
       updated_not_active: تم تغيير كلمة مرورك بنجاح.
       edit:
-        change_my_password: تغيير كلمة مروري
-        change_your_password: تغيير كلمة مرورك
+        change_my_password: تغيير كلمة المرور
+        change_your_password: تغيير كلمة المرور
         confirm_new_password: تأكيد كلمة المرور الجديدة
-        new_password_minimum_characters:
+        new_password_minimum_characters: "(%{length} من الأحرف على الأقل)"
         new_password: كلمة المرور الجديدة
       new:
-        forgot_your_password: نسيت كلمة مرورك؟
+        forgot_your_password: هل نسيت كلمة المرور؟
         send_me_reset_password_instructions: أرسل لي تعليمات إعادة تعيين كلمة المرور
     registrations:
       destroyed: وداعاً! تم إلغاء حسابك بنجاح. نأمل أن نراك مرة أخرى في القريب العاجل.
       signed_up: مرحباً! لقد قمت بالتسجيل بنجاح.
-      signed_up_but_inactive: لقد قمت بالتسجيل بنجاح. ومع ذلك، لن نتمكن من تسجيل دخولك
-        لحسابك لأن حسابك لم يتم تفعيله بعد.
+      signed_up_but_inactive: لقد قمت بالتسجيل بنجاح. ومع ذلك، لن نستطيع تسجيل دخولك
+        الآن لأن حسابك لم يتم تفعيله بعد.
       signed_up_but_locked: لقد قمت بالتسجيل بنجاح. ومع ذلك، لن نتمكن من تسجيل دخولك
         لحسابك لأن حسابك مغلق.
       signed_up_but_unconfirmed: تم إرسال رسالة بها رابط التأكيد إلى عنوان بريدك الإلكتروني.
@@ -535,18 +555,19 @@ ar:
         عنوان بريدك الإلكتروني الجديد. الرجاء التحقق من بريدك الإلكتروني واتباع رابط
         التأكيد لتأكيد عنوان بريدك الإلكتروني الجديد.
       updated: تم تحديث حسابك بنجاح.
-      updated_but_not_signed_in:
+      updated_but_not_signed_in: تم تحديث حسابك بنجاح ، ولكن لأن كلمة مرورك قد تغيرت،
+        يلزمك تسجيل الدخول مرة أخرى
     sessions:
       signed_in: تم تسجيل الدخول بنجاح.
       signed_out: تم تسجيل الخروج بنجاح.
       already_signed_out: تم تسجيل الخروج بنجاح.
       new:
-        remember_me:
+        remember_me: تذكرني
     unlocks:
-      send_instructions: ستتلقى رسالة بريد إلكتروني بها تعليمات عن كيفية إلغاء قفل
+      send_instructions: ستتلقى رسالة إلكترونية تحتوي تعليمات حول كيفية إلغاء قفل
         حسابك في غضون بضع دقائق.
       send_paranoid_instructions: إذا كان حسابك موجود، ستتلقى رسالة بريد إلكتروني
-        بها تعليمات عن كيفية إلغاء القفلل غي غضون دقائق.
+        بها تعليمات عن كيفية إلغاء القفلل في غضون دقائق.
       unlocked: تم إلغاء قفل حسابك بنجاح. الرجاء تسجيل الدخول للمتابعة.
     actions:
       login: تسجيل الدخول
@@ -568,16 +589,16 @@ ar:
           </p><p> شكرا لتفهمك! </p>"
       notify_creation_new_entry:
         subject: عالم المساجد - تم إنشاء حساب جديد (%{mosque})
-        header: مرحبا بالمسؤول
+        header: مرحبا بالمشرف
         cta_text: انظر التفاصيل
         body_html: تم إنشاء حساب جديد.
     message_mailer:
       user_email:
-        subject:
+        subject: عالم المساجد - %{subject}
         header: مرحبا %{mosque}!
-        body:
-        body_2:
-        cta_text:
+        body: 'لقد تلقيت رسالة من:'
+        body_2: يرجى الضغط على إعادة والرد على الرسالة مباشرة.
+        cta_text: افتح الرسالة
   admin:
     articles:
       new:
@@ -612,7 +633,7 @@ ar:
         header: تعديل وسائل التواصل الاجتماعية
     sliders:
       edit:
-        header: تعديلSlider
+        header: تعديل Slider
     cities:
       edit:
         header: تعديل المدينة
@@ -636,96 +657,124 @@ ar:
         cta: تحديث الحساب
     messages:
       show:
-        cta_text:
+        cta_text: الرد بسرعة هنا
+    newsletters:
+      edit:
+        header:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
-    admin_panel:
-    create_account:
+    admin_panel: لوحة الادارة
+    create_account: إنشاء حساب
     slider:
       first:
-        headline:
-        content:
+        headline: مسجدك على الإنترنت.
+        content: أنت تملك مسجدًا وليس لديك موقع ويب, عالم المساجد سيساعدك.
       second:
-        headline:
-        content_html:
+        headline: قال تعالى في سورة التوبة
+        content_html: "<p>إِنَّمَا يَعْمُرُ مَسَاجِدَ اللَّهِ مَنْ آمَنَ بِاللَّهِ
+          وَالْيَوْمِ الْآخِرِ وَأَقَامَ الصَّلَاةَ وَآتَى الزَّكَاةَ وَلَمْ يَخْشَ
+          إِلَّا اللَّهَ ۖ فَعَسَىٰ أُولَٰئِكَ أَن يَكُونُوا مِنَ الْمُهْتَدِينَ</p>"
     how_to_use:
-      headline:
+      headline: كيف تستعمل؟
       step_1:
-        headline:
-        content:
+        headline: 1. إنشاء حساب
+        content: يجب عليك إنشاء حساب في المنصة بمعلوماتك.
       step_2:
-        headline:
-        content:
+        headline: 2. انتظر الموافقة
+        content: فريقنا سوف يتأكد من وجود مسجدك بالفعل، ثم سيتصل بك في غضون 24 ساعة.
       step_3:
-        headline:
-        content:
+        headline: 3. الإشراف
+        content: سوف تتلقى رسالة بريد إلكتروني لإدخال كلمة المرور الخاصة بك ،حتى تتمكن
+          من تسجيل الدخول إلى لوحة الإدارة وتعديل موقعك كما يحلو لك.
       step_4:
-        headline:
-        content:
+        headline: 4. إنه جاهز
+        content: موقع مسجدك الالكتروني جاهز للانطلاقة.
     accounts:
       new:
-        title:
-        meta_description:
+        title: انشاء حساب
+        meta_description: أنشئ موقعًا إلكترونيًا لمسجدك
       create:
-        error_message:
+        error_message: لم تنجح في إنشاء الحساب، يرجى المحاولة مرة أخرى أو الاتصال
+          بنا حتى نتمكن من مساعدتك في إنشاء حسابك.
       success_page:
-        header:
-        body_html:
+        header: لقد ثم انشاء حسابك بنجاح
+        body_html: سنرسل لك بريدًا إلكترونيًا بعدد قليل، يرجى تأكيد عنوان بريدك الإلكتروني.<br
+          /> بعدها سيقوم فريقنا بترخيص حسابك خلال الـ 24 ساعة القادمة.
     home:
       index:
-        title:
-        meta_description:
+        title: منصة للمساجد لإنشاء وإدارة مواقعها الإلكترونية
+        meta_description: يقدم عالم المساجد حلاً للمساجد لإنشاء مواقعها الإلكترونية
+          وإدارتها
+        map:
+          headline: المساجد المسجلة
+        pateron:
+          headline: كن راعيًا لنا
+          body_html: |-
+            <p>تم إنشاء هذا المشروع من قبل متطوعين في سبيل الله، نحن بحاجة لتغطية نفقات التثبيت على الانترنت ونفقات أخرى.</p>
+            <p>إذا أحببت عملنا وتريد دعمنا، فنحن على Patreon.</p>
+          cta_text: كن راعيًا لنا
     user_confirmations:
       new:
-        title:
+        title: اكد حسابك
     user_passwords:
       new:
-        title:
+        title: استعد كلمة المرور
       edit:
-        title:
+        title: عدل كلمة المرور
     user_sessions:
       new:
-        title:
+        title: تسجيل الدخول
     volunteers:
       new:
-        title:
-        meta_description:
+        title: تطوع مع عالم المساجد
+        meta_description: ساهم مع عالم المساجد واترك أثرا في العالم الإسلامي
     footer:
-      copyright_html: © %{year}-2019 Masajid World · <a href="%{privacy_url}">الخصوصية</a>
-        · <a href="%{terms_url}">الشروط</a>
+      copyright_html: 'جميع الحقوق محفوظة لموقع عالم المساجد %{year} &copy; '
+      home: الصفحة الرئيسية
+      terms: شروط الخدمة
+      privacy: سياسة الخصوصية
+      follow_us: تابعنا
+      useful_links: روابط مهمة
   public:
     continued: "... (يتبع)"
     read_more: واصل القراءة
     subscribers:
       create:
-        success: لقد اشتركت بنجاح في نشرتنا الإخبارية.
+        success: لقد اشتركت بنجاح في newsletter.
       new:
         cta_text: إشترك
     footer:
-      website_build_by_html: الموقع مدعوم من طرف <a href='https://masajid.world'>Masajid
-        World</a>
+      website_build_by_html: الموقع أنشئ من طرف<a href='https://masajid.world'>عالم
+        المساجد</a>
       newsletter:
-        header: نشرتنا الإخبارية
-        body_html: "<p> اشترك في نشرتنا الإخبارية وسنرسل لك رسائل بريد إلكتروني من
-          وقت لآخر مع التحديثات الأخيرة، مثل المؤتمرات القادمة وأوقات صلاة الأعياد
-          والأخبار المهمة ... </p>"
+        header: newsletter
+        body_html: "<p>اشترك في newsletter وسنرسل لك رسائل بريد إلكتروني تحتوي آخر
+          التحديثات، مثل المؤتمرات القادمة وأوقات صلاة الأعياد والأخبار المهمة...
+          إلخ</p>"
       contact:
         header: اتصل بنا
     sidebar:
       prayer_times: أوقات الصلاة
     messages:
       create:
-        success:
+        success: لقد تم ارسال رسالتك بنجاح.
       new:
-        cta_text:
+        cta_text: إرسال رسالة
   shared:
     actions:
-      accept:
+      accept: قبول
       back_to_list: الرجوع للقائمة
-      decline:
-      delete:
-      edit:
-      new:
-      show:
+      decline: رفض
+      delete: حذف
+      edit: تعديل
+      new: جديد
+      show: تفاصيل
     locales:
       en: الإنجليزية
       fr: الفرنسية
@@ -735,35 +784,45 @@ ar:
       ca: الكاتالونية
       it: الإيطالية
       tr: التركية
+      nl: الهولندية
     volunteers:
       new:
-        header: تطوع معنا
-    say_no:
-    say_yes:
+        header: ساهم معنا
+    say_no: لا
+    say_yes: نعم
     footer:
       back_to_top: العودة إلى الأعلى
-    site_name: Masajid World
+    site_name: عالم المساجد
   simple_form:
     required:
-      text:
-      mark:
+      text: مطلوب
+      mark: "*"
     error_notification:
-      default_message:
+      default_message: 'يرجى مراجعة المشاكل أدناه:'
     hints:
       content/configuration:
-        default_locale:
+        default_locale: اللغة الاعتيادية لموقعك.
         supported_locales: قائمة اللغات المتاحة التي يمكن للمستخدم اختيارها في الموقع.
-        meta_title_html:
-        meta_description:
+        meta_title_html: محتوى HTML الخاص بالصفحة الرئيسية <mark> &lt;title&gt;</mark>
+          التي تستخدمها محركات البحث.
+        meta_description: النص الموجز المصاحب لرابط صفحتك الرئيسية في صفحات نتائج
+          محرك البحث (SERPs).
       content/article:
-        video_link_html:
-        slug_html:
-        meta_title_html:
-        meta_description:
+        video_link_html: مثلا <mark>https://www.youtube.com/embed/M1M9n-wUhy0</mark>,
+          <mark>https://player.vimeo.com/video/103525883</mark>
+        slug_html: Slug هو جزء من عنوان URL يحدد الصفحة باستخدام كلمات يمكن للإنسان
+          قراءتها، ويتم استخدامه لأغراض تحسين محركات البحث. مثلا، في عنوان الويب <mark>
+          https://example.com/article/the-islam-way </mark> ، سيكون slug هو الجزء
+          <mark>the-islam-way</mark>.
+        meta_title_html: محتوى HTML لصفحة المقالة <mark>&lt;title&gt;</mark> التي
+          تستخدمها محركات البحث.
+        meta_description: النص الموجز الذي يصاحب صفحة المقالة الخاصة بك في صفحات نتائج
+          محرك البحث (SERPs).
       content/page:
-        meta_title_html:
-        meta_description:
+        meta_title_html: محتوى HTML للصفحة <mark>&lt;title&gt;</mark> التي تستخدمها
+          محركات البحث.
+        meta_description: النص الموجز الذي يصاحب صفحتك في صفحات نتائج محرك البحث (SERPs).
       content/user:
-        unconfirmed_email:
-        current_password:
-        password:
+        unconfirmed_email: ينتظر حاليًا تأكيد %{email}
+        current_password: نحتاج كلمة مرورك الحالية لتأكيد التغييرات
+        password: اتركه فارغا إذا كنت لا ترغب في تغييره

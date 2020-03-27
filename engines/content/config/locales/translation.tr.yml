@@ -131,185 +131,194 @@ tr:
         restrict_dependent_destroy:
           has_one: Bağlı bir kayıt %{record} bulunduğu için kayıt silinemedi
           has_many: Bağlı kayıtlar %{record} bulunduğu için kayıt silinemedi
-        invalid_date:
-        invalid_time:
-        invalid_datetime:
-        is_at:
+        invalid_date: geçerli bir tarih değil
+        invalid_time: geçerli bir tarih değil
+        invalid_datetime: geçerli bir tarih değil
+        is_at: "%{restriction} konumunda olmalıdır"
         before:
         on_or_before:
-        after:
+        after: "%{restriction} öğesinden sonra olmalı"
         on_or_after:
       models:
         content/address:
           attributes:
             address1:
-              geocoding_failed:
+              geocoding_failed: coğrafi kodlama başarısız
         content/newsletter:
           attributes:
             body:
-              blank:
+              blank: makale seçmezseniz gereklidir
             date:
-              inclusion:
+              inclusion: gelecekte olmalı
         content/subscriber:
           attributes:
             email:
-              invalid:
-              taken:
+              invalid: Lütfen geçerli bir e-posta adresi giriniz!
+              taken: Aboneliğinizi daha önce almıştık.
     models:
       content/article:
-        one:
-        other:
-        few:
+        one: Makale
+        other: Makaleler
+        few: Makaleler
       content/account:
         one: hesap
-        other:
-        few:
+        other: Hesaplar
+        few: Hesaplar
       content/country:
-        one:
-        other:
-        few:
+        one: Ülke
+        other: Ülkeler
+        few: Ülkeler
       content/city:
-        one:
-        other:
-        few:
+        one: Şehir
+        other: Şehirler
+        few: Şehirler
       content/newsletter:
-        one:
-        other:
-        few:
+        one: Haber Bülteni
+        other: Haber Bültenleri
+        few: Haber Bültenleri
       content/page:
-        one:
-        other:
-        few:
+        one: Menü
+        other: Menü
+        few: Menü
       content/region:
-        one:
-        other:
-        few:
+        one: Bölge
+        other: Bölgeler
+        few: Bölgeler
       content/slider:
         one:
       content/social_network:
-        one:
+        one: Sosyal medya
       content/subscriber:
-        one:
-        other:
-        few:
+        one: Abone
+        other: Aboneler
+        few: Aboneler
       content/volunteer:
-        one:
-        other:
-        few:
+        one: Gönüllü
+        other: Gönüllüler
+        few: Gönüllüler
       content/message:
+        few: Mesajlar
+        one: Mesaj
+        other: Mesajlar
+      content/sidebar_content:
         few:
         one:
         other:
     attributes:
       content/article:
-        title:
-        slug:
-        summary:
-        body:
+        title: Başlık
+        slug: Slug
+        summary: Özet
+        body: İçerik
         video_link:
-        published_at:
-        photo:
+        published_at: Yayın Tarihi
+        photo: Fotoğraf
       content/account:
-        subdomain:
+        subdomain: Alt alan
         responsable: Sorumlu Adı
         mosque: Cami Adı
       content/address:
         address1: Adres
-        zip_code:
-        phone:
-        city_name:
-        region_name:
-        country_id:
+        zip_code: Posta Kodu
+        phone: Telefon Numarası
+        city_name: Şehir
+        region_name: Bölge
+        country_id: Ülke
       content/configuration:
         logo: Logo
-        about_us:
+        about_us: Hakkımızda
         mawaqit_link:
-        theme:
-        supported_locales:
-        default_locale:
-        admin_locale:
+        theme: Tema
+        supported_locales: Desteklenen Diller
+        default_locale: Varsayılan Dil
+        admin_locale: Yönetim Dili
       content/country:
-        name:
+        name: Ülke Adı
       content/newsletter:
-        article_ids:
+        article_ids: Makaleler
         body:
-        link:
-        link_text:
-        date:
-        sent_at:
-        subject:
+        link: Bağlantı
+        link_text: Bağlantı Metni
+        date: Gönderme Tarihi
+        sent_at: Gönderilen
+        subject: Konu
       content/page:
         ancestry:
         description: Açıklama
         meta_title:
         meta_keywords:
         meta_description:
-        name:
+        name: Ad
         permalink:
         permalink_part:
       content/region:
-        name:
+        name: Bölge Adı
       content/city:
-        name:
-        latitude:
-        longitude:
+        name: Şehir Adı
+        latitude: Enlem
+        longitude: Boylam
       content/social_network:
-        youtube:
-        facebook:
-        google:
-        twitter:
-        vimeo:
-        instagram:
+        youtube: Youtube
+        facebook: Facebook
+        google: Google +
+        twitter: Twitter
+        vimeo: Vimeo
+        instagram: Instagram
       content/slider:
         title: Başlık
         body:
         photo: Fotoğraf
-        link:
-        link_text:
+        link: Bağlantı
+        link_text: Bağlantı Metni
       content/subscriber:
-        email:
-        created_at:
+        email: E-posta
+        created_at: Oluşturma Tarihi
       content/user:
-        email:
-        password:
-        confirmed_at:
-        current_password:
-        password_confirmation:
+        email: E-posta
+        password: Parola
+        confirmed_at: Onay Tarihi
+        current_password: Şimdiki Şifre
+        password_confirmation: Şifre Onayı
       content/volunteer:
-        name:
-        identification:
-        birthday:
+        name: Ad
+        identification: Kimlik
+        birthday: Doğum günü
         address: Adres
-        phone:
-        email:
-        education:
+        phone: Telefon
+        email: E-posta
+        education: Eğitim
         availability:
-        languages:
-        other_languages:
-        experience:
-        experience_place:
-        experience_area:
+        languages: Diller
+        other_languages: Diğer Diller
+        experience: Deneyim
+        experience_place: Deneyim Yeri
+        experience_area: Deneyim Alanı
       content/volunteer/experience_area:
-        cultural:
-        social:
-        educational:
-        religious:
+        cultural: Kültürel
+        social: Sosyal
+        educational: Eğitim
+        religious: Dini
       content/volunteer/languages:
-        arabic:
-        spanish:
+        arabic: Arapça
+        spanish: İspanyolca
         catalan:
-        english:
-        french:
-        german:
+        english: İngilizce
+        french: Fransızca
+        german: Almanca
       content/message:
-        name:
-        phone:
-        email:
-        subject:
-        body:
-        newsletter:
-        seeing_at:
+        name: Ad
+        phone: Telefon
+        email: E-posta
+        subject: Konu
+        body: Mesaj
+        newsletter: Bültene abone olmak istiyorum
+        seeing_at: Görme zamanı
         created_at:
+      content/sidebar_content:
+        title: Başlık
+        body:
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: yarım dakika
@@ -366,12 +375,12 @@ tr:
   flash:
     actions:
       create:
-        notice:
+        notice: "%{resource_name} başarıyla oluşturuldu."
       update:
-        notice:
+        notice: "%{resource_name} başarıyla güncellendi."
       destroy:
-        notice:
-        alert:
+        notice: "%{resource_name} başarıyla yok edildi."
+        alert: "%{resource_name} yok edilemedi."
   will_paginate:
     previous_label: "&#8592; Önceki"
     next_label: Sonraki &#8594;
@@ -459,7 +468,7 @@ tr:
         birkaç dakika içinde hesabınızı nasıl onaylayacağınızı anlatan bir e-posta
         alacaksınız.
       new:
-        did_not_receive_confirmation_instructions:
+        did_not_receive_confirmation_instructions: Onay talimatları almadınız mı?
         resend_confirmation_instructions: Onaylama talimatlarını tekrar gönder
     failure:
       already_authenticated: Zaten giriş yaptınız.
@@ -467,38 +476,41 @@ tr:
       invalid: Geçersiz e-posta ya da şifre.
       locked: Hesabınız kilitlendi.
       last_attempt: Hesabınız askıya alınmadan önce son bir deneme hakkınız kaldı.
-      not_found_in_database:
+      not_found_in_database: Geçersiz %{authentication_keys} veya şifre.
       timeout: Oturumunuz sonlandı. Devam etmek için, lütfen yeniden giriş yapınız.
       unauthenticated: Devam etmeden önce giriş yapmanız veya kayıt olmanız gereklidir.
       unconfirmed: Devam etmeden önce hesabınızı onaylamalısınız.
-      not_approved:
+      not_approved: Hesabınız yöneticilerimiz tarafından henüz onaylanmadı.
     mailer:
       confirmation_instructions:
         subject: Onaylama talimatları.
-        header:
+        header: Merhaba %{mosque}
         cta_text:
-        body_html:
+        body_html: "<p>Hesap e-postanızı aşağıdaki bağlantıdan onaylayabilirsiniz:</p>"
       reset_password_instructions:
         subject: Şifre sıfırlama talimatları.
-        header:
+        header: Merhaba %{email}
         body:
-          primary_html:
-          secondary_html:
+          primary_html: "<p>Birisi şifrenizi değiştirmek için bir bağlantı istedi.
+            Bunu aşağıdaki bağlantıdan yapabilirsiniz:</p>"
+          secondary_html: |-
+            <p>Bunu istemediyseniz, lütfen bu e-postayı dikkate almayın.</p>
+            <p>Yukarıdaki bağlantıya erişip yeni bir tane oluşturana kadar şifreniz değişmez.</p>
         cta_text: Parolamı değiştir
       unlock_instructions:
         subject: Kilit açma talimatları.
-        header:
+        header: Merhaba %{email}
         body_html:
         cta_text:
       email_changed:
-        subject:
-        header:
+        subject: Masajid World - E-posta Değişti
+        header: Merhaba %{email}
         body:
           unconfirmed_email_html:
           confirmed_email_html:
       password_change:
         subject: Şifreniz Değişti
-        header:
+        header: Merhaba %{email}
         body_html:
     omniauth_callbacks:
       failure: Sizi %{kind} aracılığıyla tanıyamadık çünkü "%{reason}".
@@ -518,7 +530,7 @@ tr:
         change_my_password: Parolamı değiştir
         change_your_password: Şifreni değiştir
         confirm_new_password: Yeni parolanı doğrula
-        new_password_minimum_characters:
+        new_password_minimum_characters: "(Minimum %{length} karakter)"
         new_password: Yeni Parola
       new:
         forgot_your_password: Parolanızı mı unuttunuz?
@@ -537,13 +549,14 @@ tr:
         adresinizin onaylanması gerek. Yeni e-posta hesabınızın onaylanması için lütfen
         size gönderdiğimiz e-postada bulunan onay linkini açın.
       updated: Hesabınız başarıyla güncellendi.
-      updated_but_not_signed_in:
+      updated_but_not_signed_in: Hesabınız başarıyla güncellendi, ancak şifreniz değiştiğinden,
+        tekrar giriş yapmanız gerekiyor.
     sessions:
       signed_in: Başarıyla giriş yapıldı.
       signed_out: Başarıyla çıkış yapıldı.
       already_signed_out: Başarıyla çıkış yapıldı.
       new:
-        remember_me:
+        remember_me: Beni hatırla
     unlocks:
       send_instructions: Birkaç dakika içerisinde hesap kilidi açma talimatlarını
         içeren bir e-posta alacaksınız.
@@ -552,130 +565,153 @@ tr:
       unlocked: Hesabınızın kilidi başarıyla açıldı. Devam etmek için lütfen giriş
         yapın.
     actions:
-      login:
-      logout:
+      login: Oturum aç
+      logout: Oturumu kapat
   content:
     account_mailer:
       accept_entry:
-        subject:
-        header:
-        body_html:
-        cta_text:
+        subject: Masajid World - Hesabınız kabul edildi
+        header: Merhaba %{mosque}!
+        body_html: |-
+          <p>Tebrikler !!! Hesabınız ekip üyelerimiz tarafından kabul edildi.</p>
+          <p>Aşağıdaki bağlantıdan bir şifre girmeniz gerekiyor, ardından makalelerinizi yayınlamaya ve sitenizi özelleştirmeye başlayabilirsiniz.</p>
+          <p>Herhangi bir sorunuz veya geri bildiriminiz varsa lütfen bizimle iletişime geçmekten çekinmeyin!</p>
+        cta_text: Parolanı gir
       decline_entry:
-        subject:
-        header:
-        body_html:
+        subject: Masajid World - Hesabınız reddedildi
+        header: Merhaba %{mosque}!
+        body_html: "<p>Hesabınızın yöneticilerimiz tarafından reddedildiğini bildirdiğimiz
+          için üzgünüz, çünkü gerçek gibi görünmüyor.</p><p>Kabul etmiyorsanız veya
+          herhangi bir endişeniz varsa iletişime geçmekten çekinmeyin!</p><p>Anlayışınız
+          için teşekkürler!</p>"
       notify_creation_new_entry:
-        subject:
-        header:
-        cta_text:
-        body_html:
+        subject: Masajid World - Yeni hesap oluşturuldu (%{mosque})
+        header: Merhaba Yönetici
+        cta_text: Ayrıntılara bakınız
+        body_html: Yeni bir hesap oluşturuldu.
     message_mailer:
       user_email:
-        subject:
-        header:
-        body:
-        body_2:
-        cta_text:
+        subject: Masajid World - %{subject}
+        header: Merhaba %{mosque}!
+        body: 'Şu kişiden bir mesaj aldınız:'
+        body_2: Lütfen tekrarla düğmesine basın ve doğrudan mesaja cevap verin.
+        cta_text: Mesajı görün
   admin:
     articles:
       new:
-        header:
+        header: Yeni Makale
     accounts:
       edit:
-        header:
+        header: Hesabı Düzenle
     configurations:
       edit:
-        header:
+        header: Genel Yapılandırma
     countries:
       edit:
-        header:
+        header: Ülkeyi Düzenle
       new:
-        header:
+        header: Yeni Ülke
     dashboards:
       index:
-        visits:
-        empty_visits:
+        visits: Ziyaret sayısı
+        empty_visits: Web sitenizi henüz kimse ziyaret etmedi
     pages:
       edit:
-        header:
+        header: Menü Öğesini Düzenle
       new:
-        header:
+        header: Yeni Menü Öğesi
     regions:
       edit:
-        header:
+        header: Bölgeyi Düzenle
       new:
-        header:
+        header: Yeni Bölge
     social_networks:
       edit:
-        header:
+        header: Sosyal Medyayı Düzenle
     sliders:
       edit:
-        header:
+        header: Kaydırıcıyı Düzenle
     cities:
+      edit:
+        header: Şehri Düzenle
+      new:
+        header: Yeni Şehir
+    pundit:
+      unauthorized: Bu işlemi gerçekleştirme yetkiniz yok
+    shared:
+      administration: Yönetim
+      view_site: Siteyi Görüntüle
+      are_you_sure: Emin misiniz?
+      total: 'Toplam: %{count}'
+      account: Hesap
+    tabs:
+      dashboard: Gösterge Tabloları
+      general: Genel
+      settings: Ayarlar
+    users:
+      edit:
+        header: Hesabı düzenle
+        cta: Hesabı güncelle
+    messages:
+      show:
+        cta_text: Burada hızlı bir şekilde yanıtlayın
+    newsletters:
       edit:
         header:
       new:
         header:
-    pundit:
-      unauthorized:
-    shared:
-      administration:
-      view_site:
-      are_you_sure:
-      total:
-      account:
-    tabs:
-      dashboard:
-      general:
-      settings:
-    users:
+    sidebar_contents:
       edit:
         header:
-        cta:
-    messages:
-      show:
-        cta_text:
+      new:
+        header:
   landing:
-    admin_panel:
-    create_account:
+    admin_panel: Yönetici Paneli
+    create_account: Hesap oluştur
     slider:
       first:
-        headline:
-        content:
+        headline: Mescidiniz çevrimiçi.
+        content: Mescidiniz var ve web siteniz yok mu? Masajid World size yardımcı
+          olacak.
       second:
-        headline:
+        headline: Allah Tevbe Suresi'nde diyor
         content_html:
     how_to_use:
-      headline:
+      headline: nasıl kullanılır?
       step_1:
         headline:
         content:
       step_2:
-        headline:
+        headline: 2. Onay için bekle
         content:
       step_3:
-        headline:
+        headline: 3. Yönetin
         content:
       step_4:
-        headline:
-        content:
+        headline: 4. Hazır
+        content: Mescidiniz için siteniz hazır.
     accounts:
       new:
-        title:
-        meta_description:
+        title: Hesap oluştur
+        meta_description: Caminiz için bir web sitesi oluşturun
       create:
         error_message:
       success_page:
-        header:
+        header: Hesabın başarıyla oluşturuldu
         body_html:
     home:
       index:
-        title:
+        title: Camilerin web sitelerini oluşturma ve yönetme platformu
         meta_description:
+        map:
+          headline: Kayıtlı camiler
+        pateron:
+          headline:
+          body_html:
+          cta_text:
     user_confirmations:
       new:
-        title:
+        title: Hesabını onayla
     user_passwords:
       new:
         title:
@@ -683,19 +719,24 @@ tr:
         title:
     user_sessions:
       new:
-        title:
+        title: Oturum aç
     volunteers:
       new:
         title:
         meta_description:
     footer:
       copyright_html:
+      home: Anasayfa
+      terms:
+      privacy: Gizlilik politikası
+      follow_us: Bizi takip et
+      useful_links:
   public:
     continued:
-    read_more:
+    read_more: Okumaya devam et
     subscribers:
       create:
-        success:
+        success: Bültenimize başarıyla abone oldunuz.
       new:
         cta_text:
     footer:
@@ -704,14 +745,14 @@ tr:
         header:
         body_html:
       contact:
-        header:
+        header: İletişim
     sidebar:
       prayer_times: İbadet zamanları
     messages:
       create:
         success:
       new:
-        cta_text:
+        cta_text: Mesaj Gönder
   shared:
     actions:
       accept:
@@ -720,21 +761,22 @@ tr:
       delete:
       edit:
       new:
-      show:
+      show: Ayrıntılar
     locales:
-      en:
-      fr:
-      es:
-      de:
-      ar:
+      en: İngilizce
+      fr: Fransızca
+      es: İspanyolca
+      de: Almanca
+      ar: Arapça
       ca:
-      it:
-      tr:
+      it: İtalyanca
+      tr: Türkçe
+      nl:
     volunteers:
       new:
         header:
-    say_no:
-    say_yes:
+    say_no: Hayır
+    say_yes: Evet
     footer:
       back_to_top:
     site_name:
@@ -743,7 +785,7 @@ tr:
       text:
       mark:
     error_notification:
-      default_message:
+      default_message: 'Lütfen aşağıdaki sorunları gözden geçirin:'
     hints:
       content/configuration:
         default_locale:
@@ -761,4 +803,4 @@ tr:
       content/user:
         unconfirmed_email:
         current_password:
-        password:
+        password: Değiştirmek istemiyorsanız boş bırakın

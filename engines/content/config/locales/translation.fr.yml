@@ -244,6 +244,10 @@ fr:
         other: Bénévoles
         few: Bénévoles
       content/message:
+        few: Messages
+        one: Message
+        other: Messages
+      content/sidebar_content:
         few:
         one:
         other:
@@ -353,10 +357,15 @@ fr:
         phone: Numéro de téléphone
         email: Adresse e-mail
         subject: Sujet
-        body:
-        newsletter:
-        seeing_at:
-        created_at:
+        body: Message
+        newsletter: Je souhaite m'abonner à la newsletter
+        seeing_at: Vu le
+        created_at: Reçu le
+      content/sidebar_content:
+        title: Titre
+        body: Corps
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: une demi-minute
@@ -638,11 +647,11 @@ fr:
         body_html: Un nouveau compte a été créé.
     message_mailer:
       user_email:
-        subject:
+        subject: Masajid World - %{subject}
         header: Salut %{mosque}!
-        body:
-        body_2:
-        cta_text:
+        body: 'Vous avez reçu un message de:'
+        body_2: Veuillez cliquer sur repondre et répondre directement au message.
+        cta_text: Voir le message
   admin:
     articles:
       new:
@@ -701,7 +710,17 @@ fr:
         cta: Mettre le compte à jour
     messages:
       show:
-        cta_text:
+        cta_text: Répondre rapidement ici
+    newsletters:
+      edit:
+        header:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
     admin_panel: panneau d'administration
     create_account: Créer un compte
@@ -720,20 +739,19 @@ fr:
     how_to_use:
       headline: comment utiliser?
       step_1:
-        headline: Créer un compte
-        content: Première étape, vous devez créer un compte dans la plateforme avec
-          vos informations.
+        headline: 1. Créer un compte
+        content: Vous devez créer un compte dans la plateforme avec vos informations.
       step_2:
-        headline: Attendre l'approbation
-        content: Une fois qu'on reçois vos informations, on vous contactera dans les
-          24 heures pour s'assurer que votre mosquée existe.
+        headline: 2. Attendez l'approbation
+        content: Notre équipe doit s'assurer que votre mosquée existe vraiment, puis
+          vous contactera dans les 24 heures.
       step_3:
-        headline: Admin
-        content: Une fois qu'on approuvera votre compte, vous recevrez un mot de passe
-          par e-mail, afin que vous puissiez vous connecter au panneau d'administration
-          et personnaliser votre site comme vous le souhaitez.
+        headline: 3. Administrer
+        content: Vous recevrez un e-mail pour configurer votre mot de passe, afin
+          que vous puissiez vous connecter au panneau d'administration et personnaliser
+          votre site comme vous le souhaitez.
       step_4:
-        headline: C'est prêt
+        headline: 4. C'est prêt
         content: Votre site pour votre mosquée est prêt à fonctionner.
     accounts:
       new:
@@ -752,6 +770,14 @@ fr:
         title: Plateforme pour les mosquées pour créer et gérer leurs sites Web
         meta_description: Masajid World fournit une solution pour les mosquées afin
           de créer et gérer leurs sites Web
+        map:
+          headline: Mosquées enregistrées
+        pateron:
+          headline: Devenez mécène
+          body_html: |-
+            <p>Ce projet est créé par des bénévoles pour Allah, nous devons donc couvrir les frais d'hébergement et plus encore ...</p>
+            <p>Si vous aimez notre travail et que vous souhaitez nous soutenir, nous sommes sur Patreon.</p>
+          cta_text: Devenez mécène
     user_confirmations:
       new:
         title: Confirmez votre compte
@@ -769,8 +795,12 @@ fr:
         meta_description: Bénévole à Masajid World et faites un impact dans notre
           communauté musulmane
     footer:
-      copyright_html: © 2019-%{year} Masajid World · <a href="%{privacy_url}">Confidentialité</a>
-        · <a href="%{terms_url}">Termes</a>
+      copyright_html: "&copy; Copyrights Masajid World. Tous les droits sont réservés."
+      home: Home
+      terms: Conditions d'utilisation
+      privacy: Politique de confidentialité
+      follow_us: Suivez-nous
+      useful_links: Liens utiles
   public:
     continued: "... (continued)"
     read_more: Continuer la lecture
@@ -793,9 +823,9 @@ fr:
       prayer_times: Horaires de prière
     messages:
       create:
-        success:
+        success: Votre message a bien été envoyé.
       new:
-        cta_text:
+        cta_text: Envoyer le message
   shared:
     actions:
       accept: Accepter
@@ -804,7 +834,7 @@ fr:
       delete: Supprimer
       edit: Modifier
       new: Nouveau
-      show:
+      show: Détails
     locales:
       en: Anglais
       fr: Français
@@ -814,6 +844,7 @@ fr:
       ca: Catalan
       it: Italien
       tr: Turc
+      nl: Néerlandais
     volunteers:
       new:
         header: Faire du bénévolat

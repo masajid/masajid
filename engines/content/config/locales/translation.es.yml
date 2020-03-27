@@ -241,6 +241,10 @@ es:
         other: Voluntarios
         few: Voluntarios
       content/message:
+        few: Mensajes
+        one: Mensaje
+        other: Mensajes
+      content/sidebar_content:
         few:
         one:
         other:
@@ -312,7 +316,7 @@ es:
         link_text: Texto del enlace
       content/subscriber:
         email: Correo electrónico
-        created_at: Create Date
+        created_at: Fecha de suscripción
       content/user:
         email: Correo electrónico
         password: Contraseña
@@ -350,10 +354,15 @@ es:
         phone: Teléfono
         email: Correo electrónico
         subject: Destinatario
-        body:
-        newsletter:
-        seeing_at:
-        created_at:
+        body: Mensaje
+        newsletter: Me gustaría suscribirme al boletín
+        seeing_at: Fecha cuando viste el mensaje
+        created_at: Fecha de recepción
+      content/sidebar_content:
+        title: Título
+        body: Cuerpo
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: medio minuto
@@ -627,10 +636,9 @@ es:
       decline_entry:
         subject: Masajid World - Tu cuenta ha sido rechazada
         header: Hola %{mosque}!
-        body_html: "<p> Lamentamos informarte que nuestros administradores rechazaron
-          su cuenta porque parece que no es real. </p><p> Si no está de acuerdo o
-          tiene alguna inquietud, ¡contáctenos! </p><p> ¡Gracias por su comprensión!
-          </p>"
+        body_html: "<p>Lamentamos informarte que nuestros administradores rechazaron
+          su cuenta porque parece que no es real.</p><p>Si no está de acuerdo o tiene
+          alguna inquietud, ¡contáctenos!</p><p> ¡Gracias por su comprensión!</p>"
       notify_creation_new_entry:
         subject: Masajid World - Se creó la nueva cuenta (%{mosque})
         header: Hola Administrador
@@ -638,11 +646,11 @@ es:
         body_html: Se creó una nueva cuenta.
     message_mailer:
       user_email:
-        subject:
+        subject: Masajid World - %{subject}
         header: Hola %{mosque}!
-        body:
-        body_2:
-        cta_text:
+        body: 'Has recibido un mensaje de:'
+        body_2: Por favor haz click en responder y responde directamente al mensaje.
+        cta_text: Ver mensaje
   admin:
     articles:
       new:
@@ -701,7 +709,17 @@ es:
         cta: Actualizar cuenta
     messages:
       show:
-        cta_text:
+        cta_text: Responde rápidamente desde aquí
+    newsletters:
+      edit:
+        header:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
     admin_panel: Panel de administrador
     create_account: Crear una cuenta
@@ -720,19 +738,19 @@ es:
     how_to_use:
       headline: "¿cómo se utiliza?"
       step_1:
-        headline: Crear una cuenta
-        content: Primer paso, deberás crear una cuenta en la plataforma con tu información.
+        headline: 1. Crear una cuenta
+        content: Deberás crear una cuenta en la plataforma con tu información.
       step_2:
-        headline: Esperando la aprobación
-        content: Una vez que recibamos tu información, nos comunicaremos contigo dentro
-          de las 24 horas para asegurarnos de que su mezquita exista.
+        headline: 2. Esperando la aprobación
+        content: Nuestro equipo debe asegurarse de que su mezquita realmente exista
+          y luego se comunicará contigo dentro de las 24 horas.
       step_3:
-        headline: Administrador
-        content: 'Una vez que aprobemos su cuenta, recibirá una contraseña por correo
-          electrónico, para que pueda iniciar sesión en el panel de administración
-          y personalizar su sitio como lo desees. '
+        headline: 3. Administrar
+        content: Recibirá un correo electrónico para entrar una contraseña, para que
+          pueda iniciar sesión en el panel de administración y personalizar su sitio
+          como lo desees.
       step_4:
-        headline: Esta listo
+        headline: 4. Está listo
         content: La web para tu mezquita está lista para funcionar.
     accounts:
       new:
@@ -751,6 +769,14 @@ es:
         title: Plataforma para mezquitas para crear y administrar sus sitios web
         meta_description: Masajid World ofrece una solución para que las mezquitas
           creen y administren sus páginas web
+        map:
+          headline: Mezquitas registradas
+        pateron:
+          headline: Conviértete en un patrón
+          body_html: |-
+            <p>Este proyecto ha sido creado por voluntarios por el bien de Allah, por lo que debemos cubrir los gastos del hosting y más ...</p>
+            <p>Si le gusta nuestro trabajo y quiere apoyarnos, estamos en Patreon.</p>
+          cta_text: Conviértete en un patrón
     user_confirmations:
       new:
         title: Confirme tu cuenta
@@ -768,8 +794,12 @@ es:
         meta_description: Ser voluntario en Masajid World y tener un impacto en nuestra
           comunidad musulmana
     footer:
-      copyright_html: © 2019-%{year} Masajid World · <a href="%{privacy_url}">Privacidad</a>
-        · <a href="%{terms_url}">Términos</a>
+      copyright_html: "&copy; Copyrights Masajid World. Todos los derechos reservados."
+      home: Portada
+      terms: Términos de servicio
+      privacy: Política de privacidad
+      follow_us: Síguenos
+      useful_links: Enlaces útiles
   public:
     continued: "... (continuación)"
     read_more: Sigue leyendo
@@ -793,9 +823,9 @@ es:
       prayer_times: Horarios de Salat
     messages:
       create:
-        success:
+        success: Tu mensaje fue enviado correctamente.
       new:
-        cta_text:
+        cta_text: Enviar mensaje
   shared:
     actions:
       accept: Aceptar
@@ -804,7 +834,7 @@ es:
       delete: Borrar
       edit: Editar
       new: Nuevo
-      show:
+      show: Ver detalles
     locales:
       en: Inglés
       fr: Francés
@@ -814,6 +844,7 @@ es:
       ca: Catalán
       it: Italiano
       tr: Turco
+      nl: Holandés
     volunteers:
       new:
         header: Voluntariado
