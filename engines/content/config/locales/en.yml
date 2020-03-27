@@ -29,6 +29,10 @@ en:
         few: Regions
         one: Region
         other: Regions
+      content/sidebar_content:
+        few: Sidebar Contents
+        one: Sidebar
+        other: Sidebar Contents
       content/slider:
         one: Slider
       content/social_network:
@@ -101,6 +105,11 @@ en:
         twitter: Twitter
         vimeo: Vimeo
         instagram: Instagram
+      content/sidebar_content:
+        title: Title
+        body: Body
+        light_background: Light Background
+        active: Active
       content/slider:
         title: Title
         body: Body
@@ -224,6 +233,11 @@ en:
         header: Edit Region
       new:
         header: New Region
+    sidebar_contents:
+      edit:
+        header: Edit Sidebar Content
+      new:
+        header: New Sidebar Content
     social_networks:
       edit:
         header: Edit Social Media

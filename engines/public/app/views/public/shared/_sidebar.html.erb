@@ -1,17 +1,14 @@
 <aside class='col-md-4 sidebar'>
-  <!--<div class='p-4 mb-3 bg-light rounded'>
-    <h4 class='font-italic'>About</h4>
-    <p class='mb-0'>Etiam porta <em>sem malesuada magna</em> mollis euismod.
-      Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-  </div>-->
+  <% sidebar_contents.each do |sidebar_content| %>
+    <div class='sidebar-content <%= sidebar_content.light_background && 'bg-light' %>'>
+      <% if sidebar_content.title? %>
+        <h4><%= sidebar_content.title %></h4>
+      <% end %>
 
-  <% if current_account.mawaqit_link.present? %>
-    <div class='p-4 prayer-times'>
-      <h4 class='font-italic'><%= t('public.sidebar.prayer_times') %></h4>
-
-      <iframe src='<%= current_account.mawaqit_link %>' frameborder='0' scrolling='no'></iframe>
+      <p><%== sidebar_content.body %></p>
     </div>
   <% end %>
+
   <!--<div class='p-4'>
     <h4 class='font-italic'>Archives</h4>
     <ol class='list-unstyled mb-0'>

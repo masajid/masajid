@@ -33,6 +33,7 @@ module Admin
         '/admin/configuration/edit',
         '/admin/social_network/edit',
         '/admin/slider/edit',
+        '/admin/sidebar',
         '/admin/countries'
       ].one? { |path| request.path.start_with?(path) }
     end

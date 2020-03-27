@@ -4,6 +4,10 @@ module Public
       @menu_items ||= Content::Page.scoped_to(current_account).roots
     end
 
+    def sidebar_contents
+      current_account.sidebar_contents.where(active: true)
+    end
+
     def social_network
       @social_network ||= current_account.social_network
     end

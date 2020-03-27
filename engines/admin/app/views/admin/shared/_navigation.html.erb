@@ -75,6 +75,13 @@
         ) if policy(current_account&.slider).update? %>
 
         <%= nav_item(
+          text: Content::SidebarContent.model_name.human,
+          path: sidebar_contents_path,
+          icon: 'sidebar',
+          active: request.path.starts_with?('/admin/sidebar'),
+        ) if policy(Content::SidebarContent).index? %>
+
+        <%= nav_item(
           text: Content::SocialNetwork.model_name.human,
           path: edit_social_network_path,
           icon: 'facebook',
