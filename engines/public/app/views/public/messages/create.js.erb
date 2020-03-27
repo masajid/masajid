@@ -1,4 +1,12 @@
-<% if @message.valid? %>
+<% if @errors %>
+  new Noty({
+    theme: 'bootstrap-v4',
+    timeout: 8000,
+    type: 'error',
+    layout: 'topRight',
+    text: '<%= @errors %>'
+  }).show();
+<% else %>
   new Noty({
     theme: 'bootstrap-v4',
     timeout: 8000,
@@ -11,12 +19,4 @@
   $('#message_email').val('')
   $('#message_subject').val('')
   $('#message_body').val('')
-<% else %>
-  new Noty({
-    theme: 'bootstrap-v4',
-    timeout: 8000,
-    type: 'error',
-    layout: 'topRight',
-    text: '<%= @message.errors.full_messages.join(', ') %>'
-  }).show();
 <% end %>

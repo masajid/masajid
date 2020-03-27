@@ -5,15 +5,12 @@ module Public
     respond_to :js
 
     def create
-      @message = Content::Message.new(message_params)
+      @message = Public::MessagesService.new(current_account, message_params).create
 
-      if @message.save
-        Content::MessageMailer.user_email(@message).deliver_later
-
-        if @message.newsletter? && !Content::Subscriber.scoped_to(current_account).exists?(email: @message.email)
-          Content::Subscriber.create!(email: @message.email, account: current_account)
-        end
-      end
+      !@message.persisted? &&
+        @errors = @message.errors.full_messages.join(', ')
+    rescue StandardError
+      @errors = t('public.messages.create.error')
     end
 
     private
