@@ -1,12 +1,17 @@
 footer {
-  padding: 2.5rem 0;
+  padding: 40px 0;
   color: #999;
   text-align: center;
   background-color: #f9f9f9;
-  border-top: .05rem solid #e5e5e5;
+  border-top: 0.8px solid #e5e5e5;
 
-  .col-md-4, h3 {
+  .col-md-4 {
     margin-bottom: 20px;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    font-size: 28px;
   }
 
   p:last-child {

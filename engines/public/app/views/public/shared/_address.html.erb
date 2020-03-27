@@ -1,15 +1,17 @@
-<div class='address'>
-  <h3><%= t('public.footer.contact.header') %></h3>
+<h3>
+  <%= t('public.footer.contact.header') %>
+</h3>
 
+<address>
   <%= simple_format current_account.decorate.display_address %>
+</address>
 
-  <dl>
-    <dt><%= Content::User.human_attribute_name(:email) %></dt>
-    <dd><%= current_account.email %></dd>
-  </dl>
+<address>
+  <i class='fa fa-phone'></i>
+  <a href='tel:<%= current_account.phone %>' dir='ltr'><%= current_account.phone %></a>
+</address>
 
-  <dl>
-    <dt><%= Content::Address.human_attribute_name(:phone) %></dt>
-    <dd><%= current_account.phone %></dd>
-  </dl>
-</div>
+<address>
+  <i class='fa fa-envelope'></i>
+  <a href='mailto:<%= current_account.email %>'><%= current_account.email %></a>
+</address>
