@@ -19,9 +19,9 @@
       </tr>
     </thead>
 
-    <tbody>
+    <tbody class='sortable'>
       <% @sidebar_contents.each do |sidebar_content| %>
-        <tr>
+        <tr id='<%= sidebar_content.sortable_id %>'>
           <td><%= sidebar_content.title.presence || sidebar_content.body %></td>
           <td><%= sidebar_content.light_background? ? t('shared.say_yes') : t('shared.say_no') %></td>
           <td><%= sidebar_content.active? ? t('shared.say_yes') : t('shared.say_no') %></td>
