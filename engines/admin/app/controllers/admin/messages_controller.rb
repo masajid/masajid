@@ -2,7 +2,7 @@ require_dependency 'admin/application_controller'
 
 module Admin
   class MessagesController < ApplicationController
-    before_action :touch_seeing_at, only: :show
+    before_action :touch_seen_at, only: :show
 
     def index
       authorize Content::Message
@@ -16,8 +16,8 @@ module Admin
       @message ||= authorize policy_scope(Content::Message).find(params[:id])
     end
 
-    def touch_seeing_at
-      message.touch(:seeing_at) unless message.seeing_at?
+    def touch_seen_at
+      message.touch(:seen_at) unless message.seen_at?
     end
   end
 end

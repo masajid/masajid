@@ -312,8 +312,8 @@ ca:
         subject:
         body:
         newsletter:
-        seeing_at:
         created_at:
+        seen_at:
       content/sidebar_content:
         title:
         body:

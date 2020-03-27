@@ -182,7 +182,7 @@ ActiveRecord::Schema.define(version: 2020_03_27_081350) do
     t.string "subject", null: false
     t.text "body", null: false
     t.boolean "newsletter", default: false
-    t.datetime "seeing_at"
+    t.datetime "seen_at"
     t.bigint "account_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -316,8 +316,8 @@ ar:
         subject: الموضوع
         body: رسالة
         newsletter: أرغب في الاشتراك في newsletter
-        seeing_at: وقت الاطلاع على الرسالة
         created_at: وقت التوصل بالرسالة
+        seen_at: وقت الاطلاع على الرسالة
       content/sidebar_content:
         title: العنوان
         body: المحتوى

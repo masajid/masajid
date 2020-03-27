@@ -21,8 +21,8 @@
 
         <li class='nav-item'>
           <%= link_to messages_path, class: 'nav-link' do %>
-            <span class='badge badge-pill badge-primary'><%= unread_messages %></span>
-            <i class='fa fa-inbox'></i>
+            <span class='badge badge-pill badge-info'><%= unread_messages %></span>
+            <%= plural_resource_name(Content::Message) %>
           <% end %>
         </li>
 

@@ -10,7 +10,7 @@ module Admin
     end
 
     def unread_messages
-      Content::Message.where(account: current_account, seeing_at: nil).count
+      policy_scope(Content::Message).not_seeing.count
     end
 
     def plural_resource_name(resource_class)

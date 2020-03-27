@@ -24,6 +24,20 @@
       margin-right: -250px;
     }
   }
+
+  #content {
+    .navbar {
+      .container-fluid {
+        .nav-item {
+          .nav-link {
+            .badge {
+              float: left;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Mobile

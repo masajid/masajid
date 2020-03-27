@@ -80,10 +80,14 @@
       box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 
       .container-fluid {
-        padding-left: 0;
-
         .nav-item {
           font-size: 16px;
+
+          .nav-link {
+            .badge {
+              float: right;
+            }
+          }
         }
       }
     }

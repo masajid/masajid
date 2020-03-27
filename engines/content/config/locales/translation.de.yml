@@ -348,8 +348,8 @@ de:
         subject: Fachgebiet
         body: Nachricht
         newsletter: Ich möchte den Newsletter abonnieren
-        seeing_at: Besichtigungszeit
         created_at: Eingangszeitpunkt
+        seen_at: Besichtigungszeit
       content/sidebar_content:
         title: Überschrift
         body: Inhalt
@@ -776,7 +776,7 @@ de:
       create:
         success: 'Sie haben unseren Newsletter erfolgreich abonniert. '
       new:
-        cta_text: 'Abonnieren '
+        cta_text: Abonnieren
     footer:
       website_build_by_html:
       newsletter:

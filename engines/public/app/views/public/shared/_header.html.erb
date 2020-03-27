@@ -1,4 +1,4 @@
-<nav class="d-md-none mb-3 navbar navbar-expand-md navbar-light bg-light rounded fixed-top">
+<nav class='d-md-none mb-3 navbar navbar-expand-md navbar-light bg-light rounded fixed-top'>
   <%= link_to current_account.mosque, root_path, class: 'navbar-brand' %>
   <button class='navbar-toggler p-0 border-0' type='button' data-toggle='offcanvas'>
     <span class='navbar-toggler-icon'></span>
@@ -32,11 +32,11 @@
       </li>
 
       <li class='nav-item'>
-        <%= link_to t('public.footer.contact.header'), contact_path, class: 'nav-link' %>
+        <%= link_to t('shared.volunteers.new.header'), new_volunteer_path, class: 'nav-link' %>
       </li>
 
       <li class='nav-item'>
-        <%= link_to t('shared.volunteers.new.header'), new_volunteer_path, class: 'nav-link' %>
+        <%= link_to t('public.footer.contact.header'), contact_path, class: 'nav-link' %>
       </li>
     </ul>
 
@@ -74,7 +74,7 @@
   </div>
 </header>
 
-<nav class="d-none d-md-block mb-3 navbar navbar-expand-lg navbar-light bg-light rounded">
+<nav class='d-none d-md-block mb-3 navbar navbar-expand-lg navbar-light bg-light rounded'>
   <button class='navbar-toggler collapsed' type='button' data-toggle='collapse' data-target='#menu' aria-controls='menu' aria-expanded='false' aria-label='Toggle navigation'>
     <span class='navbar-toggler-icon'></span>
   </button>

@@ -312,8 +312,8 @@ tr:
         subject: Konu
         body: Mesaj
         newsletter: Bültene abone olmak istiyorum
-        seeing_at: Görme zamanı
         created_at:
+        seen_at: Görme zamanı
       content/sidebar_content:
         title: Başlık
         body:

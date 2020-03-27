@@ -1,5 +1,5 @@
 <% content_for :page_title do %>
-    <%= plural_resource_name(Content::Message) %>
+  <%= plural_resource_name(Content::Message) %>
 <% end %>
 
 <p><%= t('admin.shared.total', count: @messages.count) %></p>
@@ -18,7 +18,7 @@
 
     <tbody>
       <% @messages.each do |message| %>
-        <tr class="table-<%= message.seeing_at? ? 'success' : 'active'  %>">
+        <tr class="table-<%= message.seen_at? ? 'success' : 'active'  %>">
           <td><%= message.name %></td>
           <td><%= message.email %></td>
           <td><%= message.subject %></td>

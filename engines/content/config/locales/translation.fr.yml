@@ -359,8 +359,8 @@ fr:
         subject: Sujet
         body: Message
         newsletter: Je souhaite m'abonner à la newsletter
-        seeing_at: Vu le
         created_at: Reçu le
+        seen_at: Vu le
       content/sidebar_content:
         title: Titre
         body: Corps

@@ -341,8 +341,8 @@ nl:
         subject:
         body:
         newsletter:
-        seeing_at:
         created_at:
+        seen_at:
   datetime:
     distance_in_words:
       half_a_minute: een halve minuut

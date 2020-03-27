@@ -11,6 +11,8 @@ module Content
     validates :body, presence: true
     validates :account, presence: true
 
+    scope :not_seeing, -> { where(seen_at:  nil) }
+
     def readonly?
       persisted?
     end

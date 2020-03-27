@@ -356,8 +356,8 @@ es:
         subject: Destinatario
         body: Mensaje
         newsletter: Me gustaría suscribirme al boletín
-        seeing_at: Fecha cuando viste el mensaje
         created_at: Fecha de recepción
+        seen_at:
       content/sidebar_content:
         title: Título
         body: Cuerpo

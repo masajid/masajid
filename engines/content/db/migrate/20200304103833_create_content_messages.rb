@@ -7,7 +7,7 @@ class CreateContentMessages < ActiveRecord::Migration[6.0]
       t.string :subject, null: false
       t.text :body, null: false
       t.boolean :newsletter, default: false
-      t.datetime :seeing_at
+      t.datetime :seen_at
       t.references :account, null: false, index: true
 
       t.timestamps

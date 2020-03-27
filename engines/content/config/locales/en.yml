@@ -87,8 +87,8 @@ en:
         subject: Subject
         body: Message
         newsletter: I would like to subscibe to the newsletter
-        seeing_at: Seeing time
-        created_at: Receiving time
+        seen_at: Seen at
+        created_at: Sent at
       content/newsletter:
         article_ids: Articles
         body: Email Body
@@ -390,8 +390,7 @@ en:
         body_html: |
           <p>Subscribe to our newsletter and we will send you emails from time to time with recent updates,
           such as coming conferences, eid prayers times, and important news ...</p>
-      website_build_by_html: Website built by <a href='https://masajid.world'>Masajid
-        World</a>
+      website_build_by_html: Website built by <a href='https://masajid.world'>Masajid World</a>
   shared:
     actions:
       accept: Accept
