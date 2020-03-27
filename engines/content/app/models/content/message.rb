@@ -6,7 +6,7 @@ module Content
 
     validates :name, presence: true
     validates :phone, presence: true
-    validates :email, email: true
+    validates :email, presence: true, email: true
     validates :subject, presence: true
     validates :body, presence: true
     validates :account, presence: true
