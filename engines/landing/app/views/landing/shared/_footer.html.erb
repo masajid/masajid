@@ -3,11 +3,11 @@
 </div>
 
 <footer>
-  <div class='container'>
+  <div class='container main-footer'>
     <div class='row'>
       <div class='col-md-4'>
         <h5><%= t('shared.site_name') %></h5>
-        <address class='text-muted'>
+        <address>
           Islamisches Zentrum Al-Nour<br />
           Sievekingsallee 191<br />
           22111, Hamburg<br />
@@ -27,19 +27,19 @@
 
       <div class='col-md-4'>
         <h5><%= t('landing.footer.useful_links') %></h5>
-        <ul class='list-unstyled text-small'>
-          <li><%= link_to t('landing.footer.home'), root_path, class: 'text-muted' %></li>
-          <li><%= link_to t('shared.volunteers.new.header'), new_volunteer_path, class: 'text-muted' %></li>
-          <li><%= link_to t('landing.footer.terms'), '/legal/terms-of-service', class: 'text-muted' %></li>
-          <li><%= link_to t('landing.footer.privacy'), '/legal/privacy-policy', class: 'text-muted' %></li>
+        <ul class='list-unstyled'>
+          <li><%= link_to t('landing.footer.home'), root_path %></li>
+          <li><%= link_to t('shared.volunteers.new.header'), new_volunteer_path %></li>
+          <li><%= link_to t('landing.footer.terms'), '/legal/terms-of-service' %></li>
+          <li><%= link_to t('landing.footer.privacy'), '/legal/privacy-policy' %></li>
         </ul>
       </div>
       <div class='col-md-4'>
         <h5><%= t('landing.footer.follow_us') %></h5>
-        <ul class='list-unstyled text-small'>
-          <li><a class='text-muted' href='#'>Facebook</a></li>
-          <li><a class='text-muted' href='#'>Twitter</a></li>
-          <li><a class='text-muted' href='#'>Youtube</a></li>
+        <ul class='list-unstyled'>
+          <li><a href='#'>Facebook</a></li>
+          <li><a href='#'>Twitter</a></li>
+          <li><a href='#'>Youtube</a></li>
         </ul>
       </div>
     </div>

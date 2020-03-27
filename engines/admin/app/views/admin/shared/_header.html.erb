@@ -1,29 +1,32 @@
-<nav class='navbar navbar-expand-md navbar-dark fixed-top bg-dark'>
-  <%= link_to current_account&.mosque || t('shared.administration'), root_path, class: 'navbar-brand' %>
+<nav class='navbar navbar-expand-lg navbar-light bg-light'>
+  <div class='container-fluid'>
+    <button type='button' id='sidebarCollapse' class='btn btn-info'>
+      <i class='fa fa-align-left'></i>
+    </button>
 
-  <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#adminNavbar' aria-controls='adminNavbar' aria-expanded='false' aria-label='Toggle navigation'>
-    <span class='navbar-toggler-icon'></span>
-  </button>
+    <button class='btn btn-dark d-inline-block d-lg-none ml-auto' type='button' data-toggle='collapse' data-target='#navbarId' aria-controls='navbarId' aria-expanded='false' aria-label='Toggle navigation'>
+      <i class='fa fa-align-justify'></i>
+    </button>
 
-  <div class='collapse navbar-collapse' id='adminNavbar'>
-    <ul class='navbar-nav ml-auto'>
-      <% if current_account_domain.present? %>
+    <div class='collapse navbar-collapse' id='navbarId'>
+      <ul class='nav navbar-nav ml-auto'>
+        <% if current_account_domain.present? %>
+          <li class='nav-item'>
+            <%= link_to current_account_domain, class: 'nav-link', target: '_blank' do %>
+              <%= t('admin.shared.view_site') %>
+              <i class='fa fa-external-link'></i>
+            <% end %>
+          </li>
+        <% end %>
+
         <li class='nav-item'>
-          <%= link_to t('admin.shared.view_site'), current_account_domain, class: 'nav-link', target: '_blank' %>
+          <%= link_to t('admin.shared.account'), edit_user_path, class: 'nav-link' %>
         </li>
-      <% end %>
 
-      <li class='nav-item dropdown'>
-        <a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-          <i class='fa fa-user-o'></i>
-        </a>
-
-        <div class='dropdown-menu' aria-labelledby='navbarDropdown'>
-          <%= link_to t('admin.shared.account'), edit_user_path, class: 'dropdown-item' %>
-          <div class='dropdown-divider'></div>
-          <%= link_to t('devise.actions.logout'), '/logout', method: :delete, class: 'dropdown-item' %>
-        </div>
-      </li>
-    </ul>
+        <li class='nav-item'>
+          <%= link_to t('devise.actions.logout'), '/logout', method: :delete, class: 'nav-link' %>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

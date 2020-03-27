@@ -25,5 +25,9 @@
 //= require_tree .
 
 $(document).ready(function () {
-  feather.replace()
+  feather.replace();
+
+  $('#sidebarCollapse').on('click', function () {
+    $('#sidebar').toggleClass('active');
+  });
 })
