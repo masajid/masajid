@@ -1,12 +1,7 @@
 .wrapper {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-
   #sidebar {
     min-width: 250px;
     max-width: 250px;
-    min-height: 100vh;
     background: #45B5C6;
     color: #fff;
     transition: all 0.3s;
@@ -29,7 +24,7 @@
       li {
         a {
           padding: 10px;
-          font-size: 1.1em;
+          font-size: 16px;
           display: block;
         }
 
@@ -46,13 +41,9 @@
 
       // Submenu
       ul a {
-        font-size: 0.9em !important;
+        font-size: 12px !important;
         padding-left: 30px !important;
       }
-    }
-
-    a[data-toggle="collapse"] {
-      position: relative;
     }
 
     a,
@@ -63,6 +54,10 @@
       transition: all 0.3s;
     }
 
+    // Align triangle in the dropdown to the right
+    a[data-toggle="collapse"] {
+      position: relative;
+    }
     .dropdown-toggle::after {
       display: block;
       position: absolute;
@@ -95,6 +90,7 @@
   }
 }
 
+// Mobile
 @media (max-width: 767.98px) {
   .wrapper {
     #sidebar {
