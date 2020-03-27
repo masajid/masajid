@@ -243,6 +243,10 @@ fr:
         one: Bénévole
         other: Bénévoles
         few: Bénévoles
+      content/sidebar_content:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title: Titre
@@ -344,6 +348,11 @@ fr:
         english: Anglais
         french: Français
         german: Allemand
+      content/sidebar_content:
+        title: Titre
+        body: Corps
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: une demi-minute
@@ -679,6 +688,16 @@ fr:
       edit:
         header: Modifier le compte
         cta: Mettre le compte à jour
+    newsletters:
+      edit:
+        header:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
     admin_panel: panneau d'administration
     create_account: Créer un compte

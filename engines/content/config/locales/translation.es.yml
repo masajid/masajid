@@ -240,6 +240,10 @@ es:
         one: Voluntario
         other: Voluntarios
         few: Voluntarios
+      content/sidebar_content:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title: Título
@@ -341,6 +345,11 @@ es:
         english: Inglés
         french: Francés
         german: Alemán
+      content/sidebar_content:
+        title: Título
+        body: Cuerpo
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: medio minuto
@@ -678,6 +687,16 @@ es:
       edit:
         header: Editar cuenta
         cta: Actualizar cuenta
+    newsletters:
+      edit:
+        header:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
     admin_panel: Panel de administrador
     create_account: Crear una cuenta

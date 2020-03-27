@@ -198,6 +198,10 @@ it:
         one: Volontario
         other: Volontari
         few: Volontari
+      content/sidebar_content:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title: Titolo
@@ -299,6 +303,11 @@ it:
         english: Inglese
         french: francese
         german:
+      content/sidebar_content:
+        title: Titolo
+        body: Corpo
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: mezzo minuto
@@ -616,6 +625,16 @@ it:
       edit:
         header:
         cta:
+    newsletters:
+      edit:
+        header:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
     admin_panel:
     create_account:

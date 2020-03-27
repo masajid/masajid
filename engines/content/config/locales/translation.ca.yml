@@ -196,6 +196,10 @@ ca:
         one:
         other:
         few:
+      content/sidebar_content:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title:
@@ -297,6 +301,11 @@ ca:
         english:
         french:
         german:
+      content/sidebar_content:
+        title:
+        body:
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: mig minut
@@ -616,6 +625,16 @@ ca:
       edit:
         header:
         cta:
+    newsletters:
+      edit:
+        header:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
     admin_panel:
     create_account:

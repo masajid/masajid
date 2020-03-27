@@ -220,6 +220,10 @@ nl:
         few:
         one:
         other:
+      content/sidebar_content:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title:
@@ -321,6 +325,11 @@ nl:
         english:
         french:
         german:
+      content/sidebar_content:
+        title:
+        body:
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: een halve minuut
@@ -636,6 +645,16 @@ nl:
       dashboard:
       settings:
       general:
+    newsletters:
+      edit:
+        header:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
     admin_panel:
     create_account:

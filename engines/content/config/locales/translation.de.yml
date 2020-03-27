@@ -232,6 +232,10 @@ de:
         one: Freiwillige/r
         other: Freiwillige
         few: Freiwillige
+      content/sidebar_content:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title: Überschrift
@@ -333,6 +337,11 @@ de:
         english: Englisch
         french: Französisch
         german: Deutsch
+      content/sidebar_content:
+        title: Überschrift
+        body: Inhalt
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: eine halbe Minute
@@ -656,6 +665,16 @@ de:
       edit:
         header: Konto bearbeiten
         cta: Konto aktualisieren
+    newsletters:
+      edit:
+        header:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
     admin_panel: Admin panel
     create_account: Kreierte Konto

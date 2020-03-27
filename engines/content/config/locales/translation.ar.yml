@@ -200,6 +200,10 @@ ar:
         one: المتطوع
         other: المتطوعون
         few: المتطوعون
+      content/sidebar_content:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title: العنوان
@@ -301,6 +305,11 @@ ar:
         english: الإنجليزية
         french: الفرنسية
         german: الألمانية
+      content/sidebar_content:
+        title: العنوان
+        body: المحتوى
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: نصف دقيقة
@@ -626,6 +635,16 @@ ar:
       edit:
         header: تعديل الحساب
         cta: تحديث الحساب
+    newsletters:
+      edit:
+        header:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
     admin_panel: لوحة الادارة
     create_account: إنشاء حساب

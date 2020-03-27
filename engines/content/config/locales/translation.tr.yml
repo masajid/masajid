@@ -134,7 +134,7 @@ tr:
         invalid_date: geçerli bir tarih değil
         invalid_time: geçerli bir tarih değil
         invalid_datetime: geçerli bir tarih değil
-        is_at:
+        is_at: "%{restriction} konumunda olmalıdır"
         before:
         on_or_before:
         after: "%{restriction} öğesinden sonra olmalı"
@@ -196,6 +196,10 @@ tr:
         one: Gönüllü
         other: Gönüllüler
         few: Gönüllüler
+      content/sidebar_content:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title: Başlık
@@ -230,9 +234,9 @@ tr:
         article_ids: Makaleler
         body:
         link: Bağlantı
-        link_text:
+        link_text: Bağlantı Metni
         date: Gönderme Tarihi
-        sent_at:
+        sent_at: Gönderilen
         subject: Konu
       content/page:
         ancestry:
@@ -297,6 +301,11 @@ tr:
         english: İngilizce
         french: Fransızca
         german: Almanca
+      content/sidebar_content:
+        title: Başlık
+        body:
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: yarım dakika
@@ -357,8 +366,8 @@ tr:
       update:
         notice: "%{resource_name} başarıyla güncellendi."
       destroy:
-        notice:
-        alert:
+        notice: "%{resource_name} başarıyla yok edildi."
+        alert: "%{resource_name} yok edilemedi."
   will_paginate:
     previous_label: "&#8592; Önceki"
     next_label: Sonraki &#8594;
@@ -446,7 +455,7 @@ tr:
         birkaç dakika içinde hesabınızı nasıl onaylayacağınızı anlatan bir e-posta
         alacaksınız.
       new:
-        did_not_receive_confirmation_instructions:
+        did_not_receive_confirmation_instructions: Onay talimatları almadınız mı?
         resend_confirmation_instructions: Onaylama talimatlarını tekrar gönder
     failure:
       already_authenticated: Zaten giriş yaptınız.
@@ -508,7 +517,7 @@ tr:
         change_my_password: Parolamı değiştir
         change_your_password: Şifreni değiştir
         confirm_new_password: Yeni parolanı doğrula
-        new_password_minimum_characters:
+        new_password_minimum_characters: "(Minimum %{length} karakter)"
         new_password: Yeni Parola
       new:
         forgot_your_password: Parolanızı mı unuttunuz?
@@ -527,7 +536,8 @@ tr:
         adresinizin onaylanması gerek. Yeni e-posta hesabınızın onaylanması için lütfen
         size gönderdiğimiz e-postada bulunan onay linkini açın.
       updated: Hesabınız başarıyla güncellendi.
-      updated_but_not_signed_in:
+      updated_but_not_signed_in: Hesabınız başarıyla güncellendi, ancak şifreniz değiştiğinden,
+        tekrar giriş yapmanız gerekiyor.
     sessions:
       signed_in: Başarıyla giriş yapıldı.
       signed_out: Başarıyla çıkış yapıldı.
@@ -547,7 +557,7 @@ tr:
   content:
     account_mailer:
       accept_entry:
-        subject:
+        subject: Masajid World - Hesabınız kabul edildi
         header: Merhaba %{mosque}!
         body_html: |-
           <p>Tebrikler !!! Hesabınız ekip üyelerimiz tarafından kabul edildi.</p>
@@ -556,8 +566,11 @@ tr:
         cta_text: Parolanı gir
       decline_entry:
         subject: Masajid World - Hesabınız reddedildi
-        header:
-        body_html:
+        header: Merhaba %{mosque}!
+        body_html: "<p>Hesabınızın yöneticilerimiz tarafından reddedildiğini bildirdiğimiz
+          için üzgünüz, çünkü gerçek gibi görünmüyor.</p><p>Kabul etmiyorsanız veya
+          herhangi bir endişeniz varsa iletişime geçmekten çekinmeyin!</p><p>Anlayışınız
+          için teşekkürler!</p>"
       notify_creation_new_entry:
         subject: Masajid World - Yeni hesap oluşturuldu (%{mosque})
         header: Merhaba Yönetici
@@ -619,9 +632,19 @@ tr:
       edit:
         header: Hesabı düzenle
         cta: Hesabı güncelle
+    newsletters:
+      edit:
+        header:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
     admin_panel: Yönetici Paneli
-    create_account:
+    create_account: Hesap oluştur
     slider:
       first:
         headline: Mescidiniz çevrimiçi.
@@ -646,7 +669,7 @@ tr:
         content: Mescidiniz için siteniz hazır.
     accounts:
       new:
-        title:
+        title: Hesap oluştur
         meta_description: Caminiz için bir web sitesi oluşturun
       create:
         error_message:
@@ -658,7 +681,7 @@ tr:
         title: Camilerin web sitelerini oluşturma ve yönetme platformu
         meta_description:
         map:
-          headline:
+          headline: Kayıtlı camiler
         pateron:
           headline:
           body_html:
@@ -673,24 +696,24 @@ tr:
         title:
     user_sessions:
       new:
-        title:
+        title: Oturum aç
     volunteers:
       new:
         title:
         meta_description:
     footer:
       copyright_html:
-      home:
+      home: Anasayfa
       terms:
-      privacy:
-      follow_us:
+      privacy: Gizlilik politikası
+      follow_us: Bizi takip et
       useful_links:
   public:
     continued:
-    read_more:
+    read_more: Okumaya devam et
     subscribers:
       create:
-        success:
+        success: Bültenimize başarıyla abone oldunuz.
     footer:
       website_build_by_html:
       newsletter:
@@ -710,20 +733,20 @@ tr:
       edit:
       new:
     locales:
-      en:
-      fr:
-      es:
-      de:
-      ar:
+      en: İngilizce
+      fr: Fransızca
+      es: İspanyolca
+      de: Almanca
+      ar: Arapça
       ca:
-      it:
-      tr:
+      it: İtalyanca
+      tr: Türkçe
       nl:
     volunteers:
       new:
         header:
-    say_no:
-    say_yes:
+    say_no: Hayır
+    say_yes: Evet
     footer:
       back_to_top:
     site_name:
@@ -732,7 +755,7 @@ tr:
       text:
       mark:
     error_notification:
-      default_message:
+      default_message: 'Lütfen aşağıdaki sorunları gözden geçirin:'
     hints:
       content/configuration:
         default_locale:
