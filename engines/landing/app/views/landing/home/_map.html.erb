@@ -12,28 +12,24 @@
   var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center: [10.015301, 53.554045],
+    center: [10, 51],
     zoom: 3,
   });
 
   map.addControl(new mapboxgl.NavigationControl());
   map.scrollZoom.disable();
 
-  <% if @accounts.any? %>
-    map.fitBounds(<%= @bounds %>);
+  <% @accounts.each do |account| %>
+    var popup = new mapboxgl.Popup({ offset: 25 })
+      .setHTML(
+        '<%= link_to account.mosque, prefix_link_with_account_domain(account), target: '_blank' %>' +
+        '<br>' +
+        '<%= account.decorate.display_address_short %>'
+      );
 
-    <% @accounts.each do |account| %>
-      var popup = new mapboxgl.Popup({ offset: 25 })
-        .setHTML(
-          '<%= link_to account.mosque, prefix_link_with_account_domain(account), target: '_blank' %>' +
-          '<br>' +
-          '<%= account.decorate.display_address_short %>'
-        );
-
-      new mapboxgl.Marker()
-        .setLngLat(<%= account.decorate.coordinates %>)
-        .setPopup(popup)
-        .addTo(map);
-    <% end %>
+    new mapboxgl.Marker()
+      .setLngLat(<%= account.decorate.coordinates %>)
+      .setPopup(popup)
+      .addTo(map);
   <% end %>
 </script>
