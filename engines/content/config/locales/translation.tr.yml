@@ -751,6 +751,7 @@ tr:
     messages:
       create:
         success:
+        error:
       new:
         cta_text: Mesaj Gönder
   shared:

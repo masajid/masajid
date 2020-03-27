@@ -743,6 +743,7 @@ ca:
     messages:
       create:
         success:
+        error:
       new:
         cta_text:
   shared:

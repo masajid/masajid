@@ -789,6 +789,7 @@ de:
     messages:
       create:
         success: 'Ihre Nachricht wurde erfolgreich versendet. '
+        error:
       new:
         cta_text: Schicke Nachricht an
   shared:

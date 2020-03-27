@@ -750,7 +750,7 @@ ar:
       new:
         cta_text: إشترك
     footer:
-      website_build_by_html: الموقع أنشئ من طرف<a href='https://masajid.world'>عالم
+      website_build_by_html: الموقع أنشئ من طرف <a href='https://masajid.world'>عالم
         المساجد</a>
       newsletter:
         header: newsletter
@@ -764,6 +764,7 @@ ar:
     messages:
       create:
         success: لقد تم ارسال رسالتك بنجاح.
+        error:
       new:
         cta_text: إرسال رسالة
   shared:

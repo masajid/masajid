@@ -1,18 +1,7 @@
 <% if @subscriber.save %>
-  new Noty({
-    theme: 'bootstrap-v4',
-    timeout: 8000,
-    type: 'success',
-    layout: 'topRight',
-    text: '<%= t('public.subscribers.create.success') %>'
-  }).show();
+  noty('success', '<%= dir %>', '<%= t("public.subscribers.create.success") %>');
+
   $('#subscriber_email').val('')
 <% else %>
-  new Noty({
-    theme: 'bootstrap-v4',
-    timeout: 8000,
-    type: 'error',
-    layout: 'topRight',
-    text: '<%= @subscriber.errors.messages.values.flatten.join(', ') %>'
-  }).show();
+  noty('error', '<%= dir %>', '<%= @subscriber.errors.messages.values.flatten.join(', ') %>');
 <% end %>

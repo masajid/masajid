@@ -1,19 +1,8 @@
 <% if @errors %>
-  new Noty({
-    theme: 'bootstrap-v4',
-    timeout: 8000,
-    type: 'error',
-    layout: 'topRight',
-    text: '<%= @errors %>'
-  }).show();
+  noty('error', '<%= dir %>', '<%= @errors %>');
 <% else %>
-  new Noty({
-    theme: 'bootstrap-v4',
-    timeout: 8000,
-    type: 'success',
-    layout: 'topRight',
-    text: '<%= t('public.messages.create.success') %>'
-  }).show();
+  noty('success', '<%= dir %>', '<%= t("public.messages.create.success") %>');
+
   $('#message_name').val('')
   $('#message_phone').val('')
   $('#message_email').val('')

@@ -29,3 +29,19 @@ $(function() {
     this.form.submit();
   });
 });
+
+function noty(type, dir, text) {
+  let layout = 'topRight'
+
+  if (dir === 'rtl') {
+    layout = 'topLeft'
+  }
+
+  new Noty({
+    theme: 'bootstrap-v4',
+    timeout: 8000,
+    type: type,
+    layout: layout,
+    text: text
+  }).show();
+};

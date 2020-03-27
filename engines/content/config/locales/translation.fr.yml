@@ -824,6 +824,7 @@ fr:
     messages:
       create:
         success: Votre message a bien été envoyé.
+        error:
       new:
         cta_text: Envoyer le message
   shared:
