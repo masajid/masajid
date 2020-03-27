@@ -1,0 +1,19 @@
+<%= simple_form_for sidebar_content do |f| %>
+  <%= f.error_notification %>
+
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= f.input :title %>
+      <%= f.input :body, input_html: { rows: 5 } %>
+      <%= f.input :light_background %>
+      <%= f.input :active %>
+      <%= f.button :submit, class: 'btn btn-info' %>
+    </div>
+
+    <% if sidebar_content.persisted? %>
+      <div class='col-md-6 sidebar-content-body'>
+        <%== sidebar_content.body %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

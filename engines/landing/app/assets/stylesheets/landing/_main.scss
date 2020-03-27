@@ -1,0 +1,42 @@
+body {
+  padding-top: 70px;
+  color: #5a5a5a;
+}
+
+a {
+  color: #17a2b8;
+
+  &:hover {
+    color: #128293;
+  }
+}
+
+.btn {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+
+  &:hover {
+    color: #fff;
+    background-color: #128293;
+    border-color: #128293;
+  }
+}
+
+.divider-line {
+  margin: 64px 0;
+}
+
+.content {
+  margin-top: 40px;
+
+  .form-header {
+    text-align: center;
+  }
+}
+
+.alert {
+  margin-bottom: 0;
+  text-align: center;
+  border-radius: 0;
+}

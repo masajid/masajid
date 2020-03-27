@@ -1,6 +1,7 @@
 require 'content'
 require 'bootstrap'
 require 'flag-icons-rails'
+require 'font-awesome-rails'
 
 module Public
   require 'landing/engine'

@@ -1,35 +1,31 @@
 <div class='container how-to-use'>
-  <h1><%= t('landing.how_to_use.headline') %></h1>
+  <h1 class='header'>
+    <%= t('landing.how_to_use.headline') %>
+  </h1>
 
   <div class='row'>
-    <div class='col-md-3 step'>
-      <%= image_tag 'landing/how-to-use-step-1.png', width: 140, height: 140 %>
+    <div class='col-md-6'>
+      <%= image_tag 'landing/how-to-use-step-1.png', class: 'img-fluid' %>
       <h2><%= t('landing.how_to_use.step_1.headline') %></h2>
       <p><%= t('landing.how_to_use.step_1.content') %></p>
     </div>
 
-    <div class='col-md-3 step'>
-      <svg class='bd-placeholder-img rounded-circle' width='140' height='140' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid slice' focusable='false' role='img' aria-label='Placeholder: 140x140'><title>Placeholder</title><rect width='100%' height='100%' fill='#777'></rect><text x='50%' y='50%' fill='#777' dy='.3em'>140x140</text></svg>
+    <div class='col-md-6'>
+      <%= image_tag 'landing/how-to-use-step-2.png', class: 'img-fluid' %>
       <h2><%= t('landing.how_to_use.step_2.headline') %></h2>
       <p><%= t('landing.how_to_use.step_2.content') %></p>
     </div>
 
-    <div class='col-md-3 step'>
-      <svg class='bd-placeholder-img rounded-circle' width='140' height='140' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid slice' focusable='false' role='img' aria-label='Placeholder: 140x140'><title>Placeholder</title><rect width='100%' height='100%' fill='#777'></rect><text x='50%' y='50%' fill='#777' dy='.3em'>140x140</text></svg>
+    <div class='col-md-6'>
+      <%= image_tag 'landing/how-to-use-step-3.png', class: 'img-fluid' %>
       <h2><%= t('landing.how_to_use.step_3.headline') %></h2>
       <p><%= t('landing.how_to_use.step_3.content') %></p>
     </div>
 
-    <div class='col-md-3 step'>
-      <%= image_tag 'landing/how-to-use-step-4.png', width: 140, height: 140 %>
+    <div class='col-md-6'>
+      <%= image_tag 'landing/how-to-use-step-4.png', class: 'img-fluid' %>
       <h2><%= t('landing.how_to_use.step_4.headline') %></h2>
       <p><%= t('landing.how_to_use.step_4.content') %></p>
-    </div>
-  </div>
-
-  <div class='row'>
-    <div class='col-md-6 offset-md-3'>
-      <%= link_to t('landing.create_account'), new_account_path, class: 'btn btn-block btn-info' %>
     </div>
   </div>
 

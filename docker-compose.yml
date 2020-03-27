@@ -6,12 +6,15 @@ services:
     env_file: web_container/.env
     volumes:
       - db-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
 
   redis:
     image: redis:5.0
-    command: redis-server
     volumes:
       - redis:/data
+    ports:
+      - 6379:6379
 
   sidekiq:
     build: .

@@ -33,6 +33,10 @@ en:
         few: Regions
         one: Region
         other: Regions
+      content/sidebar_content:
+        few: Sidebar Contents
+        one: Sidebar
+        other: Sidebar Contents
       content/slider:
         one: Slider
       content/social_network:
@@ -114,6 +118,11 @@ en:
         twitter: Twitter
         vimeo: Vimeo
         instagram: Instagram
+      content/sidebar_content:
+        title: Title
+        body: Body
+        light_background: Light Background
+        active: Active
       content/slider:
         title: Title
         body: Body
@@ -232,6 +241,11 @@ en:
     messages:
       show:
         cta_text: Reply quickly here
+    newsletters:
+      edit:
+        header: Edit Newsletter
+      new:
+        header: New Newsletter
     pages:
       edit:
         header: Edit Menu Item
@@ -242,6 +256,11 @@ en:
         header: Edit Region
       new:
         header: New Region
+    sidebar_contents:
+      edit:
+        header: Edit Sidebar Content
+      new:
+        header: New Sidebar Content
     social_networks:
       edit:
         header: Edit Social Media
@@ -273,7 +292,12 @@ en:
     admin_panel: Admin panel
     create_account: Create account
     footer:
-      copyright_html: '&copy; 2019-%{year} Masajid World &middot; <a href="%{privacy_url}">Privacy</a> &middot; <a href="%{terms_url}">Terms</a>'
+      copyright_html: '&copy; Copyrights Masajid World. All rights reserved.'
+      home: Home
+      terms: Terms of service
+      privacy: Privacy policy
+      follow_us: Follow us
+      useful_links: Useful links
     slider:
       first:
         headline: Your masjid online.
@@ -287,17 +311,17 @@ en:
     how_to_use:
       headline: how to use?
       step_1:
-        headline: Create account
-        content: First step, you shall create an account in the platform with your information.
+        headline: 1. Create account
+        content: You need to create an account in the platform with your information.
       step_2:
-        headline: Wait for approval
-        content: Once we receive your information, we will contact you within 24h to make sure your mosque exists.
+        headline: 2. Wait for approval
+        content: Our team should make sure your mosque really exists then will contact you within 24 hours.
       step_3:
-        headline: Admin
-        content: Once we approve your account, you will receive a password via email, so you can login to the administration panel and costumise your site as you wish.
+        headline: 3. Administrate
+        content: You will receive an email to setup your password, so you can login to the administration panel and customize your website.
       step_4:
-        headline: It's ready
-        content: Your site for your masjid is ready to go.
+        headline: 4. It's ready
+        content: Your masjid website is ready to go.
     accounts:
       create:
         error_message: Account creation failed, please try again or contact us that we can help you creating your account
@@ -313,6 +337,14 @@ en:
       index:
         title: Platform for mosques to create and manage their websites
         meta_description: Masajid World delivers a solution for mosques to create and manage their websites
+        pateron:
+          headline: Become a Patron
+          body_html: |
+            <p>This project is created by volunteers for the sake of Allah, so we need to cover the hosting expenses and more ...</p>
+            <p>If you like our work and want to support us, we are on Patreon.</p>
+          cta_text: Become a Patron
+        map:
+          headline: Registered mosques
     user_confirmations:
       new:
         title: Confirm your account
@@ -367,6 +399,7 @@ en:
       ar: Arabic
       ca: Catalan
       de: German
+      nl: Dutch
       en: English
       es: Spanish
       fr: French

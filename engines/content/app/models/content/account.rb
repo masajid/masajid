@@ -6,6 +6,7 @@ module Content
     has_one :configuration
     has_one :slider
     has_one :social_network
+    has_many :sidebar_contents
 
     enum status: %i[pending accepted declined]
 

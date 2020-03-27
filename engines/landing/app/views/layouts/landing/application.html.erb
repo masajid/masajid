@@ -18,15 +18,15 @@
     <%= render 'landing/shared/header' %>
 
     <main role='main'>
-      <div className='container'>
+      <div class='container'>
         <%= render 'content/shared/flash_messages' %>
 
         <div class='content'>
           <%= yield %>
         </div>
       </div>
-    </main>
 
-    <%= render 'landing/shared/footer' %>
+      <%= render 'landing/shared/footer' %>
+    </main>
   </body>
 </html>

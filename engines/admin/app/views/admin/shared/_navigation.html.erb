@@ -1,99 +1,107 @@
-<nav class='col-md-2 d-none d-md-block bg-light sidebar'>
-  <div class='sidebar-sticky'>
-    <ul class='nav flex-column'>
-      <%= nav_item(
-        text: t('admin.tabs.dashboard'),
-        path: root_path,
-        icon: 'activity',
-        active: request.path == '/admin/',
-      ) if policy([:content, :dashboard]).index? %>
+<nav id='sidebar'>
+  <div class='sidebar-header'>
+    <h3><%= link_to current_account&.mosque || t('shared.administration'), root_path %></h3>
+  </div>
 
-      <%= nav_item(
-        text: plural_resource_name(Content::Account),
-        path: accounts_path,
-        icon: 'grid',
-        active: request.path.starts_with?('/admin/accounts'),
-      ) if policy(Content::Account).index? %>
+  <ul class='list-unstyled'>
+    <%= nav_item(
+      text: t('admin.tabs.dashboard'),
+      path: root_path,
+      icon: 'activity',
+      active: request.path == '/admin/',
+    ) if policy([:content, :dashboard]).index? %>
 
-      <%= nav_item(
-        text: plural_resource_name(Content::Page),
-        path: pages_path,
-        icon: 'list',
-        active: request.path.starts_with?('/admin/pages'),
-      ) if policy(Content::Page).index? %>
+    <%= nav_item(
+      text: plural_resource_name(Content::Account),
+      path: accounts_path,
+      icon: 'grid',
+      active: request.path.starts_with?('/admin/accounts'),
+    ) if policy(Content::Account).index? %>
 
-      <%= nav_item(
-        text: plural_resource_name(Content::Article),
-        path: articles_path,
-        icon: 'book-open',
-        active: request.path.starts_with?('/admin/articles'),
-      ) if policy(Content::Article).index? %>
+    <%= nav_item(
+      text: plural_resource_name(Content::Page),
+      path: pages_path,
+      icon: 'menu',
+      active: request.path.starts_with?('/admin/pages'),
+    ) if policy(Content::Page).index? %>
 
-      <%= nav_item(
-        text: plural_resource_name(Content::Volunteer),
-        path: volunteers_path,
-        icon: 'user-check',
-        active: request.path.starts_with?('/admin/volunteers'),
-      ) if policy(Content::Volunteer).index? %>
+    <%= nav_item(
+      text: plural_resource_name(Content::Article),
+      path: articles_path,
+      icon: 'book-open',
+      active: request.path.starts_with?('/admin/articles'),
+    ) if policy(Content::Article).index? %>
 
-      <%= nav_item(
-        text: plural_resource_name(Content::Subscriber),
-        path: subscribers_path,
-        icon: 'users',
-        active: request.path.starts_with?('/admin/subscribers'),
-      ) if policy(Content::Subscriber).index? %>
+    <%= nav_item(
+      text: plural_resource_name(Content::Volunteer),
+      path: volunteers_path,
+      icon: 'user-check',
+      active: request.path.starts_with?('/admin/volunteers'),
+    ) if policy(Content::Volunteer).index? %>
 
-      <%= nav_item(
-        text: plural_resource_name(Content::Newsletter),
-        path: newsletters_path,
-        icon: 'mail',
-        active: request.path.starts_with?('/admin/newsletters'),
-      ) if policy(Content::Newsletter).index? %>
+    <%= nav_item(
+      text: plural_resource_name(Content::Subscriber),
+      path: subscribers_path,
+      icon: 'users',
+      active: request.path.starts_with?('/admin/subscribers'),
+    ) if policy(Content::Subscriber).index? %>
 
-      <%= nav_item(
-        text: plural_resource_name(Content::Message),
-        path: messages_path,
-        icon: 'inbox',
-        active: request.path.starts_with?('/admin/messages'),
-      ) if policy(Content::Message).index? %>
-    </ul>
+    <%= nav_item(
+      text: plural_resource_name(Content::Newsletter),
+      path: newsletters_path,
+      icon: 'mail',
+      active: request.path.starts_with?('/admin/newsletters'),
+    ) if policy(Content::Newsletter).index? %>
 
-    <h6 class='sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted'>
-      <span><%= t('admin.tabs.settings') %></span>
-      <a class='d-flex align-items-center text-muted' href='#'>
-        <span data-feather='plus-circle'></span>
+    <%= nav_item(
+      text: plural_resource_name(Content::Message),
+      path: messages_path,
+      icon: 'inbox',
+      active: request.path.starts_with?('/admin/messages'),
+    ) if policy(Content::Message).index? %>
+
+    <li class='<%= settings_submenu_active? && 'active' %>'>
+      <a href='#settingsSubmenu' data-toggle='collapse' aria-expanded='<%= settings_submenu_active? ? 'true' : 'false' %>' class='dropdown-toggle'>
+        <span data-feather='settings'></span>
+        <%= t('admin.tabs.settings') %>
       </a>
-    </h6>
-    <ul class='nav flex-column mb-2'>
-      <%= nav_item(
-        text: plural_resource_name(Content::Country),
-        path: countries_path,
-        icon: 'map-pin',
-        active: request.path.starts_with?('/admin/countries'),
-      ) if policy(Content::Country).index? %>
 
-      <% if current_user.admin? %>
+      <ul class='collapse <%= settings_submenu_active? && 'show' %> list-unstyled' id='settingsSubmenu'>
         <%= nav_item(
           text: t('admin.tabs.general'),
           path: edit_configuration_path,
-          icon: 'settings',
+          icon: 'zap',
           active: request.path.starts_with?('/admin/configuration/edit'),
-        ) %>
+        ) if policy(current_account&.configuration).update? %>
 
         <%= nav_item(
           text: Content::Slider.model_name.human,
           path: edit_slider_path,
           icon: 'airplay',
           active: request.path.starts_with?('/admin/slider/edit'),
-        ) %>
+        ) if policy(current_account&.slider).update? %>
+
+        <%= nav_item(
+          text: Content::SidebarContent.model_name.human,
+          path: sidebar_contents_path,
+          icon: 'sidebar',
+          active: request.path.starts_with?('/admin/sidebar'),
+        ) if policy(Content::SidebarContent).index? %>
 
         <%= nav_item(
           text: Content::SocialNetwork.model_name.human,
           path: edit_social_network_path,
           icon: 'facebook',
           active: request.path.starts_with?('/admin/social_network/edit'),
-        ) %>
-      <% end %>
-    </ul>
-  </div>
+        ) if policy(current_account&.social_network).update? %>
+
+        <%= nav_item(
+          text: plural_resource_name(Content::Country),
+          path: countries_path,
+          icon: 'map-pin',
+          active: request.path.starts_with?('/admin/countries'),
+        ) if policy(Content::Country).index? %>
+      </ul>
+    </li>
+  </ul>
 </nav>

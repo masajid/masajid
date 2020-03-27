@@ -17,6 +17,9 @@ tmp
 # Ignore uploaded files in development.
 web_container/storage/*
 
+# Ignore database dumps
+dump_masajid_*
+
 # Ignore master key for decrypting credentials and more.
 web_container/config/master.key
 

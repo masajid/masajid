@@ -22,14 +22,24 @@ module Admin
     end
 
     def nav_item(text:, path:, active:, icon: 'file-text')
-      content_tag(:li, class: 'nav-item') do
-        link_to(path, class: ['nav-link', active && 'active']) do
+      content_tag(:li, class: active && 'active') do
+        link_to(path) do
           [
             content_tag(:span, nil, data: { feather: icon }),
             text
           ].join.html_safe
         end
       end
+    end
+
+    def settings_submenu_active?
+      [
+        '/admin/configuration/edit',
+        '/admin/social_network/edit',
+        '/admin/slider/edit',
+        '/admin/sidebar',
+        '/admin/countries'
+      ].one? { |path| request.path.start_with?(path) }
     end
   end
 end
