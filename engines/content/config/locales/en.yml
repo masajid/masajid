@@ -219,7 +219,6 @@ en:
         header: Hi %{mosque}!
         body: 'You received a message from:'
         body_2: Please hit replay and answer directly to the message.
-        cta_text: See message
   admin:
     articles:
       new:

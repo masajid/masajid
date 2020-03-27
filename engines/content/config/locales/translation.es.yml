@@ -650,7 +650,6 @@ es:
         header: Hola %{mosque}!
         body: 'Has recibido un mensaje de:'
         body_2: Por favor haz click en responder y responde directamente al mensaje.
-        cta_text: Ver mensaje
   admin:
     articles:
       new:

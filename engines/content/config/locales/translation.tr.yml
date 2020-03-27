@@ -595,7 +595,6 @@ tr:
         header: Merhaba %{mosque}!
         body: 'Şu kişiden bir mesaj aldınız:'
         body_2: Lütfen tekrarla düğmesine basın ve doğrudan mesaja cevap verin.
-        cta_text: Mesajı görün
   admin:
     articles:
       new:

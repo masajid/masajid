@@ -628,7 +628,6 @@ de:
         header: Hi %{mosque}!
         body: 'Sie haben eine Nachricht erhalten von:'
         body_2: 'Bitte auf "Antworten" drücken und die Nachricht direkt beantworten. '
-        cta_text: Nachricht anzeigen
   admin:
     articles:
       new:
