@@ -279,6 +279,7 @@ tr:
         confirmed_at: Onay Tarihi
         current_password: Şimdiki Şifre
         password_confirmation: Şifre Onayı
+        unconfirmed_email:
       content/volunteer:
         name: Ad
         identification: Kimlik

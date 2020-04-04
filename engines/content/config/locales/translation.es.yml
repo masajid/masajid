@@ -323,6 +323,7 @@ es:
         confirmed_at: Fecha de confirmación
         current_password: Contraseña actual
         password_confirmation: Confirmación de contraseña
+        unconfirmed_email:
       content/volunteer:
         name: Nombre
         identification: Identificación

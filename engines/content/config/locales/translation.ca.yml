@@ -279,6 +279,7 @@ ca:
         confirmed_at:
         current_password:
         password_confirmation:
+        unconfirmed_email:
       content/volunteer:
         name:
         identification:

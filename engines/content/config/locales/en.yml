@@ -136,6 +136,7 @@ en:
       content/user:
         current_password: Current Password
         email: Email address
+        unconfirmed_email: 'Not confirmed: %{email}'
         password: Password
         password_confirmation: Password Confirmation
         confirmed_at: Confirmation Date

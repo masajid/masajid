@@ -315,6 +315,7 @@ de:
         confirmed_at: Bestätigungsdatum
         current_password: Aktuelles Passwort
         password_confirmation: Passwortbestätigung
+        unconfirmed_email:
       content/volunteer:
         name: Name
         identification: Identifizierung
@@ -348,7 +349,7 @@ de:
         subject: Fachgebiet
         body: Nachricht
         newsletter: Ich möchte den Newsletter abonnieren
-        created_at: Eingangszeitpunkt
+        created_at: Gesendet am
         seen_at: Besichtigungszeit
       content/sidebar_content:
         title: Überschrift
@@ -521,30 +522,30 @@ de:
       not_approved: Ihr Konto wurde von unseren Administratoren noch nicht freigegeben.
     mailer:
       confirmation_instructions:
-        subject: Die Welt von Masajid - Bestätigungsanleitung
-        header: Hi %{mosque}!
+        subject: Masajid World - Bestätigungsanleitung
+        header: Hallo %{mosque}!
         cta_text: Bestätige mein Konto
         body_html:
       reset_password_instructions:
-        subject: Die Welt von Masajid - setze die Passwortvorgaben zurück
+        subject: Masajid World -  Passwort wiederherstellen
         header:
         body:
           primary_html:
           secondary_html:
         cta_text: 'Ändere mein Passwort '
       unlock_instructions:
-        subject: Die Welt von Masajid - Freigabeanleitung
+        subject: Masajid World - Freigabeanleitung
         header:
         body_html:
         cta_text: Schalte mein Konto frei
       email_changed:
-        subject: Die Welt von Masajid - E-Mail wurde geändert
+        subject: Masajid World - Die E-Mail-Adresse wurde geändert
         header:
         body:
           unconfirmed_email_html:
           confirmed_email_html:
       password_change:
-        subject: Die Welt von Masajid - Passwort wurde geändert
+        subject: Masajid World - Passwort wurde geändert
         header:
         body_html:
     omniauth_callbacks:
@@ -603,22 +604,22 @@ de:
   content:
     account_mailer:
       accept_entry:
-        subject: Die Welt von Masajid - Ihr Konto wurde akzeptiert
+        subject: Masajid World - Ihr Konto wurde akzeptiert
         header: Hallo %{mosque}!
         body_html: |
-          <p>Congratulations!!! Your account was accepted by our admins.</p>
-          <p>You need to enter a password through the link below, then you can start publishing your articles and customizing your site.</p>
-          <p>If you have any question or feedback please don't hesitate to get in touch with us!</p>
+          <p>Herzlichen Glückwunsch !!! Ihr Konto wurde von unseren Administratoren akzeptiert.</ P>
+          <p>Sie müssen über den folgenden Link ein Passwort eingeben, um Ihre Artikel zu veröffentlichen und Ihre Website anzupassen.</ p>
+          <p>Wenn Sie Fragen oder Feedback haben, zögern Sie bitte nicht, sich mit uns in Verbindung zu setzen!</ p>
         cta_text: Passwort eingeben
       decline_entry:
-        subject: Die Welt von Masajid - Ihr Konto wurde nicht zugelassen
+        subject: Masajid World - Ihr Konto wurde nicht zugelassen
         header: Hallo %{mosque}!
         body_html: |-
           <p>We are sorry to inform you that your account was declined by our admins because it seems to be not real.</p>
           <p>If you disagree or you have any concern please get in touch with us!</p>
           <p>Thanks for your undestanding!</p>
       notify_creation_new_entry:
-        subject: Masajid - New account %{mosque} was created
+        subject: Masajid World - Das neue Konto %{mosque} wurde erstellt
         header: 'Hallo, Admin! '
         cta_text: Details anzeigen
         body_html: Das neues Konto wurde erstellt.
@@ -714,7 +715,7 @@ de:
     how_to_use:
       headline: Wie zu benutzen?
       step_1:
-        headline: 1. Kreierte Konto
+        headline: 1. Konto erstellen
         content: You need to create an account in the platform with your information.
       step_2:
         headline: 2. Genehmigung abwarten

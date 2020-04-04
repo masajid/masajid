@@ -177,9 +177,9 @@ ar:
         other: مدن
         few: مدن
       content/newsletter:
-        one: النشرة الإخبارية
-        other: النشرات الإخبارية
-        few: النشرات الإخبارية
+        one: الرسالة الإخبارية
+        other: الرسائل الإخبارية
+        few: الرسائل الإخبارية
       content/page:
         one: عنصر القائمة
         other: القائمة
@@ -283,6 +283,7 @@ ar:
         confirmed_at: تاريخ التأكيد
         current_password: كلمة السر الحالية
         password_confirmation: تأكيد كلمة المرور
+        unconfirmed_email:
       content/volunteer:
         name: اسم
         identification: التعريف
@@ -315,7 +316,7 @@ ar:
         email: البريد الإلكتروني
         subject: الموضوع
         body: رسالة
-        newsletter: أرغب في الاشتراك في newsletter
+        newsletter: أرغب في الاشتراك في الرسائل الإخبارية
         created_at: وقت التوصل بالرسالة
         seen_at: وقت الاطلاع على الرسالة
       content/sidebar_content:
@@ -659,9 +660,9 @@ ar:
         cta_text: الرد بسرعة هنا
     newsletters:
       edit:
-        header:
+        header: تعديل الرسالة الإخبارية
       new:
-        header:
+        header: رسالة إخبارية جديدة
     sidebar_contents:
       edit:
         header:
@@ -752,9 +753,9 @@ ar:
       website_build_by_html: الموقع أنشئ من طرف <a href='https://masajid.world'>عالم
         المساجد</a>
       newsletter:
-        header: newsletter
-        body_html: "<p>اشترك في newsletter وسنرسل لك رسائل بريد إلكتروني تحتوي آخر
-          التحديثات، مثل المؤتمرات القادمة وأوقات صلاة الأعياد والأخبار المهمة...
+        header: الرسائل الإخبارية
+        body_html: "<p>اشترك في الرسائل الإخبارية وسنرسل لك رسائل بريد إلكتروني تحتوي
+          آخر التحديثات، مثل المؤتمرات القادمة وأوقات صلاة الأعياد والأخبار المهمة...
           إلخ</p>"
       contact:
         header: اتصل بنا

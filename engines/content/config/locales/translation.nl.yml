@@ -303,6 +303,7 @@ nl:
         password:
         password_confirmation:
         confirmed_at:
+        unconfirmed_email:
       content/volunteer:
         name:
         identification:
