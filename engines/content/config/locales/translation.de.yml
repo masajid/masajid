@@ -263,7 +263,6 @@ de:
       content/configuration:
         logo: Logo
         about_us: Über uns
-        mawaqit_link: Mawakit-Link
         theme: Motiv
         supported_locales: Unterstützte Sprachen
         default_locale: Standardsprache

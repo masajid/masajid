@@ -227,7 +227,6 @@ tr:
       content/configuration:
         logo: Logo
         about_us: Hakkımızda
-        mawaqit_link:
         theme: Tema
         supported_locales: Desteklenen Diller
         default_locale: Varsayılan Dil

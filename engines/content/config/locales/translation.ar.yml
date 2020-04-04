@@ -231,7 +231,6 @@ ar:
       content/configuration:
         logo: الشعار
         about_us: معلومات عنا
-        mawaqit_link: رابط مواقيت الصلاة
         theme: القالب
         supported_locales: اللغات المدعومة
         default_locale: اللغة الاعتيادية

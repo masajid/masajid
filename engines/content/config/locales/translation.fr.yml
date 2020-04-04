@@ -274,7 +274,6 @@ fr:
       content/configuration:
         logo: Logo
         about_us: À propos de nous
-        mawaqit_link: Lien Mawakit
         theme: Thème
         supported_locales: Langues supportées
         default_locale: Langage par défaut

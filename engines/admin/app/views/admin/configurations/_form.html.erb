@@ -15,8 +15,6 @@
 
         <hr />
 
-        <%= configuration_form.input :mawaqit_link %>
-
         <div class='mb-3'>
           <%= configuration_form.input :logo %>
           <%= image_tag main_app.url_for(current_account.logo.variant(resize_to_limit: [150, 150])) if current_account.logo.attached? %>
