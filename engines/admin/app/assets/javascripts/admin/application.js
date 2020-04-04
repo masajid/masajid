@@ -14,11 +14,24 @@
 //= require activestorage
 //= require jquery3
 //= require jquery-ui
+//= require jquery-ui/widgets/sortable
 //= require popper
 //= require bootstrap
 //= require jquery.mjs.nestedSortable.js
 //= require sortable_tree.js
+//= require rails_sortable
 //= require trix
 //= require chartkick
 //= require Chart.bundle
+//= require feather.min
 //= require_tree .
+
+$(document).ready(function () {
+  feather.replace();
+
+  $('.sortable').railsSortable();
+
+  $('#sidebarCollapse').on('click', function () {
+    $('#sidebar').toggleClass('active');
+  });
+})

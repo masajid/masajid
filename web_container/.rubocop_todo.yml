@@ -25,3 +25,7 @@ Style/FrozenStringLiteralComment:
 # URISchemes: http, https
 Metrics/LineLength:
   Max: 125
+
+# TODO: fix in config/puma/comfiguration.rb L19
+Style/RescueModifier:
+  Enabled: false

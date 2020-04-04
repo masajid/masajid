@@ -1,13 +1,11 @@
 module Public
   module ApplicationHelper
-    def current_theme
-      return 'application' if current_account.theme == 'default'
-
-      "#{current_account.theme}/application"
-    end
-
     def menu_items
       @menu_items ||= Content::Page.scoped_to(current_account).roots
+    end
+
+    def sidebar_contents
+      current_account.sidebar_contents.where(active: true)
     end
 
     def social_network

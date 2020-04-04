@@ -15,6 +15,9 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require rails.validations
+//= require rails.validations.simple_form.bootstrap4
+//= require noty/noty
 //= require_tree .
 
 $(function() {
@@ -24,7 +27,23 @@ $(function() {
     $('.offcanvas-collapse').toggleClass('open')
   })
 
-  $('.locale_selector select').change(function() {
+  $('.locale-selector select').change(function() {
     this.form.submit();
   });
 });
+
+function noty(type, dir, text) {
+  let layout = 'topRight'
+
+  if (dir === 'rtl') {
+    layout = 'topLeft'
+  }
+
+  new Noty({
+    theme: 'bootstrap-v4',
+    timeout: 8000,
+    type: type,
+    layout: layout,
+    text: text
+  }).show();
+};

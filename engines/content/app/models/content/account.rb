@@ -6,6 +6,7 @@ module Content
     has_one :configuration
     has_one :slider
     has_one :social_network
+    has_many :sidebar_contents
 
     enum status: %i[pending accepted declined]
 
@@ -18,7 +19,8 @@ module Content
     accepts_nested_attributes_for :owner, :address, :seo_content, :configuration
 
     delegate :email, to: :owner
-    delegate :theme, :logo, :about_us, :mawaqit_link, :supported_locales, :default_locale, :admin_locale, to: :configuration
+    delegate :address1, :zip_code, :city_name, :country, :phone, :latitude, :longitude, to: :address
     delegate :meta_title, :meta_description, to: :seo_content, allow_nil: true
+    delegate :logo, :about_us, :mawaqit_link, :supported_locales, :default_locale, :admin_locale, to: :configuration
   end
 end

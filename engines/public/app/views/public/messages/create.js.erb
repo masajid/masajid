@@ -1,0 +1,11 @@
+<% if @errors %>
+  noty('error', '<%= dir %>', '<%= @errors %>');
+<% else %>
+  noty('success', '<%= dir %>', '<%= t("public.messages.create.success") %>');
+
+  $('#message_name').val('')
+  $('#message_phone').val('')
+  $('#message_email').val('')
+  $('#message_subject').val('')
+  $('#message_body').val('')
+<% end %>

@@ -152,29 +152,40 @@ it:
               blank:
             date:
               inclusion:
+        content/subscriber:
+          attributes:
+            email:
+              invalid:
+              taken:
     models:
       content/article:
-        one:
-        other:
+        one: Articolo
+        other: Articoli
+        few:
       content/account:
         one:
         other:
-      content/address:
+        few:
       content/country:
-        one:
-        other:
+        one: Paese
+        other: Paesi
+        few: Paesi
       content/city:
-        one:
+        one: Città
         other:
+        few:
       content/newsletter:
         one:
         other:
+        few:
       content/page:
         one:
-        other:
+        other: Menu
+        few: Menu
       content/region:
-        one:
-        other:
+        one: Regione
+        other: Regioni
+        few: Regioni
       content/slider:
         one:
       content/social_network:
@@ -182,75 +193,85 @@ it:
       content/subscriber:
         one:
         other:
+        few:
       content/volunteer:
+        one: Volontario
+        other: Volontari
+        few: Volontari
+      content/message:
+        few: Messaggi
+        one: Messaggio
+        other: Messaggi
+      content/sidebar_content:
+        few:
         one:
         other:
     attributes:
       content/article:
-        title:
+        title: Titolo
         slug:
         summary:
-        body:
+        body: Contenuto
         video_link:
-        published_at:
-        photo:
+        published_at: Data di pubblicazione
+        photo: Foto
       content/account:
-        subdomain:
-        responsable:
-        mosque:
+        subdomain: Sottodominio
+        responsable: Nome del responsabile
+        mosque: Nome della moschea
         default_domain:
         domain:
       content/address:
-        address1:
-        zip_code:
-        phone:
-        city_name:
-        region_name:
-        country_id:
+        address1: Indirizzo
+        zip_code: Cap
+        phone: Numero di telefono
+        city_name: Città
+        region_name: Regione
+        country_id: Paese
       content/configuration:
         logo:
         about_us:
         mawaqit_link:
-        theme:
+        theme: Tema
         supported_locales:
         default_locale:
         admin_locale:
       content/country:
-        name:
+        name: Nome del paese
       content/newsletter:
-        article_ids:
+        article_ids: articoli
         body:
         link:
         link_text:
-        date:
-        sent_at:
-        subject:
+        date: Data di invio
+        sent_at: Inviato
+        subject: Soggetto
       content/page:
         ancestry:
-        description:
+        description: Descrizione
         meta_title:
         meta_keywords:
         meta_description:
-        name:
+        name: Nome
         permalink:
         permalink_part:
       content/region:
         name:
       content/city:
-        name:
-        latitude:
-        longitude:
+        name: Nome della città
+        latitude: Latitudine
+        longitude: Longitudine
       content/social_network:
-        youtube:
-        facebook:
-        google:
-        twitter:
-        vimeo:
-        instagram:
+        youtube: Youtube
+        facebook: Facebook
+        google: Google +
+        twitter: Twitter
+        vimeo: Vimeo
+        instagram: Instagram
       content/slider:
-        title:
-        body:
-        photo:
+        title: Titolo
+        body: Corpo
+        photo: Foto
         link:
         link_text:
       content/subscriber:
@@ -258,36 +279,50 @@ it:
         created_at:
       content/user:
         email:
-        password:
+        password: Password
         confirmed_at:
-        current_password:
+        current_password: Password attuale
         password_confirmation:
       content/volunteer:
-        name:
-        identification:
+        name: Nome
+        identification: Identificazione
         birthday:
-        address:
-        phone:
-        email:
+        address: Indirizzo
+        phone: Telefono
+        email: Email
         education:
-        availability:
-        languages:
-        other_languages:
-        experience:
+        availability: Disponibilità
+        languages: Lingue
+        other_languages: Altre lingue
+        experience: Esperienza
         experience_place:
         experience_area:
       content/volunteer/experience_area:
-        cultural:
-        social:
-        educational:
-        religious:
+        cultural: Culturale
+        social: Sociale
+        educational: educativo
+        religious: Religioso
       content/volunteer/languages:
-        arabic:
+        arabic: Arabo
         spanish:
-        catalan:
-        english:
-        french:
+        catalan: catalano
+        english: Inglese
+        french: francese
         german:
+      content/message:
+        name: Nome
+        phone: Telefono
+        email: Email
+        subject: Soggetto
+        body: Messaggio
+        newsletter:
+        created_at:
+        seen_at:
+      content/sidebar_content:
+        title: Titolo
+        body: Corpo
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: mezzo minuto
@@ -549,6 +584,12 @@ it:
         header:
         cta_text:
         body_html:
+    message_mailer:
+      user_email:
+        subject:
+        header:
+        body:
+        body_2:
   admin:
     articles:
       new:
@@ -600,14 +641,27 @@ it:
     tabs:
       dashboard:
       general:
+      settings:
     users:
       edit:
         header:
         cta:
+    messages:
+      show:
+        cta_text:
+    newsletters:
+      edit:
+        header:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
     admin_panel:
     create_account:
-    site_name:
     slider:
       first:
         headline:
@@ -642,6 +696,12 @@ it:
       index:
         title:
         meta_description:
+        map:
+          headline:
+        pateron:
+          headline:
+          body_html:
+          cta_text:
     user_confirmations:
       new:
         title:
@@ -657,9 +717,36 @@ it:
       new:
         title:
         meta_description:
+    footer:
+      copyright_html:
+      home:
+      terms:
+      privacy:
+      follow_us:
+      useful_links:
   public:
     continued:
     read_more:
+    subscribers:
+      create:
+        success:
+      new:
+        cta_text:
+    footer:
+      website_build_by_html:
+      newsletter:
+        header:
+        body_html:
+      contact:
+        header:
+    sidebar:
+      prayer_times: Tempi di preghiera
+    messages:
+      create:
+        success:
+        error:
+      new:
+        cta_text:
   shared:
     actions:
       accept:
@@ -668,6 +755,7 @@ it:
       delete:
       edit:
       new:
+      show:
     locales:
       en:
       fr:
@@ -677,11 +765,15 @@ it:
       ca:
       it:
       tr:
+      nl:
     volunteers:
       new:
         header:
     say_no:
     say_yes:
+    footer:
+      back_to_top:
+    site_name:
   simple_form:
     required:
       text:

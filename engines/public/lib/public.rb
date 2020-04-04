@@ -3,7 +3,8 @@ require 'detectify'
 require 'bootstrap'
 require 'will_paginate'
 require 'will_paginate-bootstrap4'
-require 'bootswatch'
+require 'client_side_validations'
+require 'client_side_validations/simple_form'
 require 'font-awesome-rails'
 
 module Public

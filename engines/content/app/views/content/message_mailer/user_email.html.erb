@@ -1,0 +1,24 @@
+<div class='header'>
+  <h1>
+    <%= t('content.message_mailer.user_email.header', mosque: @account.mosque) %>
+  </h1>
+</div>
+
+<div class='content'>
+  <div class='content__body'>
+    <p>
+      <%= t('content.message_mailer.user_email.body') %>
+
+      <% @message.attributes.symbolize_keys.slice(:name, :email, :phone, :subject, :body).each do |key, value| %>
+        <dl>
+          <dt><%= Content::Message.human_attribute_name(key) %></dt>
+          <dd><%= value %></dd>
+        </dl>
+      <% end %>
+    </p>
+
+    <p>
+      <%= t('content.message_mailer.user_email.body_2') %>
+    </p>
+  </div>
+</div>

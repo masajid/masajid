@@ -1,0 +1,33 @@
+// For pages, articles, and home
+.article {
+  .article-title {
+    a {
+      text-decoration: none;
+      font-size: 20px;
+    }
+  }
+
+  .article-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
+  }
+
+  .article-body {
+    blockquote {
+      margin-left: 40px;
+      margin-right: 40px;
+      font-family: Georgia;
+      font-size: 25px;
+      color: grey;
+    }
+
+    img {
+      display: block;
+      margin: 25px auto;
+    }
+
+    .article-video {
+      margin-bottom: 20px;
+    }
+  }
+}

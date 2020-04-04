@@ -26,12 +26,13 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   s.add_dependency 'bootstrap', '~> 4.3.1'
-  s.add_dependency 'bootswatch'
+  s.add_dependency 'client_side_validations'
+  s.add_dependency 'client_side_validations-simple_form'
   s.add_dependency 'content'
   s.add_dependency 'detectify'
   s.add_dependency 'font-awesome-rails', '~> 4.7.0.5'
   s.add_dependency 'will_paginate', '~> 3.1.7'
   s.add_dependency 'will_paginate-bootstrap4' # , '~> 1.0.2'
 
-  s.add_development_dependency 'rubocop-rails', '~> 2.4.2'
+  s.add_development_dependency 'rubocop-rails', '~> 2.5.0'
 end

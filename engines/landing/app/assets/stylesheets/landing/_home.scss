@@ -1,5 +1,5 @@
 .carousel {
-  margin-bottom: 4rem;
+  margin-bottom: 64px;
 
   .carousel-caption {
     bottom: 3rem;
@@ -19,29 +19,46 @@
   }
 }
 
+.header {
+  margin-bottom: 64px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .how-to-use {
-  h1 {
-    margin-bottom: 2em;
+  .col-md-6 {
     text-align: center;
-    text-transform: uppercase;
-  }
+    margin-bottom: 20px;
 
-  .step {
-    text-align: center;
-
-    img,
-    svg {
-      margin-bottom: 1.5rem;
+    img {
+      margin-bottom: 24px;
+      width: 140px;
+      height: 140px;
     }
 
     h2 {
-      font-weight: 400;
+      font-weight: 300;
     }
 
     p {
-      margin-right: .75rem;
-      margin-left: .75rem;
+      margin: 0 12px 16px;
     }
+  }
+}
+
+.patreon {
+  text-align: center;
+
+  p {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .btn-patreon {
+    margin-top: 20px;
+    color: #FFFFFF !important;
+    background-color: #F96854;
+    border: 2px solid #F96854;
   }
 }
 

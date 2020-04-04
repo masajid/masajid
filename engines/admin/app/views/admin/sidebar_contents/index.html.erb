@@ -1,0 +1,34 @@
+<% content_for :page_title do %>
+  <%= plural_resource_name(Content::SidebarContent) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= link_to t('shared.actions.new'), new_sidebar_content_path, class: 'btn btn-info' %>
+<% end %>
+
+<p><%= t('admin.shared.total', count: @sidebar_contents.count) %></p>
+
+<div class='table-responsive'>
+  <table class='table table-striped table-sm'>
+    <thead>
+      <tr>
+        <th><%= Content::SidebarContent.human_attribute_name(:body) %></th>
+        <th><%= Content::SidebarContent.human_attribute_name(:light_background) %></th>
+        <th><%= Content::SidebarContent.human_attribute_name(:active) %></th>
+        <th colspan='2'></th>
+      </tr>
+    </thead>
+
+    <tbody class='sortable'>
+      <% @sidebar_contents.each do |sidebar_content| %>
+        <tr id='<%= sidebar_content.sortable_id %>'>
+          <td><%= sidebar_content.title.presence || sidebar_content.body %></td>
+          <td><%= sidebar_content.light_background? ? t('shared.say_yes') : t('shared.say_no') %></td>
+          <td><%= sidebar_content.active? ? t('shared.say_yes') : t('shared.say_no') %></td>
+          <td><%= link_to t('shared.actions.edit'), edit_sidebar_content_path(sidebar_content), class: 'btn btn-success btn-sm' %></td>
+          <td><%= link_to t('shared.actions.delete'), sidebar_content, method: :delete, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger btn-sm' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

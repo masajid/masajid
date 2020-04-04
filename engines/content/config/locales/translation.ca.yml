@@ -150,29 +150,40 @@ ca:
               blank:
             date:
               inclusion:
+        content/subscriber:
+          attributes:
+            email:
+              invalid:
+              taken:
     models:
       content/article:
         one:
         other:
+        few:
       content/account:
         one:
         other:
-      content/address:
+        few:
       content/country:
         one:
         other:
+        few:
       content/city:
         one:
         other:
+        few:
       content/newsletter:
         one:
         other:
+        few:
       content/page:
         one:
         other:
+        few:
       content/region:
         one:
         other:
+        few:
       content/slider:
         one:
       content/social_network:
@@ -180,7 +191,17 @@ ca:
       content/subscriber:
         one:
         other:
+        few:
       content/volunteer:
+        one:
+        other:
+        few:
+      content/message:
+        few:
+        one:
+        other:
+      content/sidebar_content:
+        few:
         one:
         other:
     attributes:
@@ -286,6 +307,20 @@ ca:
         english:
         french:
         german:
+      content/message:
+        name:
+        phone:
+        email:
+        subject:
+        body:
+        newsletter:
+        created_at:
+        seen_at:
+      content/sidebar_content:
+        title:
+        body:
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: mig minut
@@ -549,6 +584,12 @@ ca:
         header:
         cta_text:
         body_html:
+    message_mailer:
+      user_email:
+        subject:
+        header:
+        body:
+        body_2:
   admin:
     articles:
       new:
@@ -600,14 +641,27 @@ ca:
     tabs:
       dashboard:
       general:
+      settings:
     users:
       edit:
         header:
         cta:
+    messages:
+      show:
+        cta_text:
+    newsletters:
+      edit:
+        header:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
     admin_panel:
     create_account:
-    site_name:
     slider:
       first:
         headline:
@@ -642,6 +696,12 @@ ca:
       index:
         title:
         meta_description:
+        map:
+          headline:
+        pateron:
+          headline:
+          body_html:
+          cta_text:
     user_confirmations:
       new:
         title:
@@ -657,9 +717,36 @@ ca:
       new:
         title:
         meta_description:
+    footer:
+      copyright_html:
+      home:
+      terms:
+      privacy:
+      follow_us:
+      useful_links:
   public:
     continued:
     read_more:
+    subscribers:
+      create:
+        success:
+      new:
+        cta_text:
+    footer:
+      website_build_by_html:
+      newsletter:
+        header:
+        body_html:
+      contact:
+        header:
+    sidebar:
+      prayer_times: Temps de pregària
+    messages:
+      create:
+        success:
+        error:
+      new:
+        cta_text:
   shared:
     actions:
       accept:
@@ -668,6 +755,7 @@ ca:
       delete:
       edit:
       new:
+      show:
     locales:
       en:
       fr:
@@ -677,11 +765,15 @@ ca:
       ca:
       it:
       tr:
+      nl:
     volunteers:
       new:
         header:
     say_no:
     say_yes:
+    footer:
+      back_to_top:
+    site_name:
   simple_form:
     required:
       text:

@@ -39,7 +39,7 @@ de:
       content/account:
         domain_html:
     required:
-      text: required
+      text: Benötigt
       mark: "*"
     error_notification:
       default_message: 'Please review the problems below:'
@@ -53,13 +53,13 @@ de:
     - Freitag
     - Samstag
     abbr_day_names:
-    - So
-    - Mo
-    - Di
-    - Mi
-    - Do
-    - Fr
-    - Sa
+    - So.
+    - Mo.
+    - Di.
+    - Mi.
+    - Do.
+    - Fr.
+    - Sa.
     month_names:
     -
     - Januar
@@ -76,18 +76,18 @@ de:
     - Dezember
     abbr_month_names:
     -
-    - Jan
-    - Feb
-    - Mär
-    - Apr
-    - Mai
-    - Jun
-    - Jul
-    - Aug
-    - Sep
-    - Okt
-    - Nov
-    - Dez
+    - Jan.
+    - Feb.
+    - Mär.
+    - Apr.
+    - Mai.
+    - Jun.
+    - Jul.
+    - Aug.
+    - Sep.
+    - Okt.
+    - Nov.
+    - Dez.
   time:
     am: vormittags
     pm: nachmittags
@@ -107,8 +107,8 @@ de:
       decimal_units:
         units:
           thousand: Tausend
-          million:
-          billion:
+          million: Million
+          billion: Milliarde
           trillion:
           quadrillion:
   errors:
@@ -147,9 +147,9 @@ de:
       already_confirmed: was already confirmed, please try signing in
       confirmation_period_expired: needs to be confirmed within %{period}, please
         request a new one
-      expired: has expired, please request a new one
-      not_found: not found
-      not_locked: was not locked
+      expired: Ist abgelaufen, bitte neu anfordern.
+      not_found: Nicht gefunden
+      not_locked: War nicht verschlossen
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
         other: "%{count} errors prohibited this %{resource} from being saved:"
@@ -169,9 +169,9 @@ de:
           has_one: Datensatz kann nicht gelöscht werden, da ein abhängiger %{record}-Datensatz
             existiert.
           has_many: Datensatz kann nicht gelöscht werden, da abhängige %{record} existieren.
-        invalid_date:
-        invalid_time:
-        invalid_datetime:
+        invalid_date: Ungültiges Datum
+        invalid_time: Ungültige Zeit
+        invalid_datetime: Ungültiges Datum
         is_at:
         before:
         on_or_before:
@@ -185,97 +185,118 @@ de:
         content/newsletter:
           attributes:
             body:
-              blank: is required if you don't select articles
+              blank: Ist erforderlich, sofern keine Artikel ausgewählt werden.
             date:
-              inclusion: must be in future
+              inclusion: Muss in Zukunft sein
+        content/subscriber:
+          attributes:
+            email:
+              invalid: Bitte geben Sie eine gültige E-Mail-Adresse ein!
+              taken: Wir erhielten Ihre Vorbestellung bereits zuvor!
     models:
       content/article:
         one: Article
-        other: Articles
+        other: Artikel
+        few: Artikel
       content/account:
-        one: Account
-        other: Accounts
-      content/address: Address
+        one: Konto
+        other: Konten
+        few: Konten
       content/country:
-        one: Country
-        other: Countries
+        one: Land
+        other: Länder
+        few: Länder
       content/city:
-        one: City
-        other: Cities
+        one: Stadt
+        other: Städte
+        few: Städte
       content/newsletter:
         one: Newsletter
         other: Newsletters
+        few: Newsletters
       content/page:
-        one: Menu Item
-        other: Menu
+        one: Menü-Element
+        other: Menü
+        few: Menü
       content/region:
         one: Region
-        other: Regions
+        other: Regionen
+        few: Regionen
       content/slider:
         one: Slider
       content/social_network:
-        one: Social media
+        one: Soziale Medien
       content/subscriber:
-        one: Subscriber
-        other: Subscribers
+        one: Abonnent
+        other: Abonnenten
+        few: Abonnenten
       content/volunteer:
-        one: Volunteer
-        other: Volunteers
+        one: Freiwillige/r
+        other: Freiwillige
+        few: Freiwillige
+      content/message:
+        few: Nachrichten
+        one: Nachricht
+        other: Nachrichten
+      content/sidebar_content:
+        few:
+        one:
+        other:
     attributes:
       content/article:
-        title: Title
+        title: Überschrift
         slug: Slug
-        summary: Summary
-        body: Content
-        video_link: Video embed URL
-        published_at: Publication Date
-        photo: Photo
+        summary: Zusammenfassung
+        body: Inhalt
+        video_link: Video-Link
+        published_at: Veröffentlichungsdatum
+        photo: Foto
       content/account:
         subdomain: Subdomain
-        responsable: Responsable Name
+        responsable: Name des Verantwortlichen
         mosque: Name der Moschee
         default_domain:
         domain:
       content/address:
-        address1: Address
-        zip_code: Zip Code
-        phone: Phone Number
-        city_name: City
+        address1: Anschrift
+        zip_code: Postleitzahl
+        phone: Telefonnummer
+        city_name: Stadt
         region_name: Region
-        country_id: Country
+        country_id: Land
       content/configuration:
         logo: Logo
-        about_us: About us
-        mawaqit_link: Mawakit Link
-        theme: Theme
-        supported_locales: Supported Languages
-        default_locale: Default Language
-        admin_locale: Administration Language
+        about_us: Über uns
+        mawaqit_link: Mawakit-Link
+        theme: Motiv
+        supported_locales: Unterstützte Sprachen
+        default_locale: Standardsprache
+        admin_locale: Verwaltungssprache
       content/country:
-        name: Country Name
+        name: Name des Landes
       content/newsletter:
-        article_ids: Articles
-        body: Email Body
+        article_ids: Artikel
+        body: E-Mail-Inhalt
         link: Link
-        link_text: Link Text
-        date: Sending Date
-        sent_at: Sent
-        subject: Subject
+        link_text: Link-Text
+        date: Versanddatum
+        sent_at: Verschickt
+        subject: Fachgebiet
       content/page:
-        ancestry: Ancestry
-        description: Description
-        meta_title: Meta Title
-        meta_keywords: Meta Keywords
-        meta_description: Meta Description
+        ancestry: Abstammung
+        description: Beschreibung
+        meta_title: Meta-Titel
+        meta_keywords: Meta-Stichwörter
+        meta_description: Meta-Beschreibung
         name: Name
         permalink: Permalink
         permalink_part: Permalink
       content/region:
-        name: Region Name
+        name: Name der Region
       content/city:
-        name: City Name
-        latitude: Latitude
-        longitude: Longitude
+        name: Name der Stadt
+        latitude: Breitengrad
+        longitude: Längengrad
       content/social_network:
         youtube: Youtube
         facebook: Facebook
@@ -284,46 +305,60 @@ de:
         vimeo: Vimeo
         instagram: Instagram
       content/slider:
-        title: Title
-        body: Body
-        photo: Photo
+        title: Überschrift
+        body: Inhalt
+        photo: Foto
         link: Link
         link_text: Link Text
       content/subscriber:
-        email: Email Address
-        created_at: Create Date
+        email: E-Mail-Adresse
+        created_at: Erstellungsdatum
       content/user:
-        email: Email address
-        password: Password
-        confirmed_at: Confirmation Date
-        current_password:
-        password_confirmation:
+        email: E-Mail-Adresse
+        password: Passwort
+        confirmed_at: Bestätigungsdatum
+        current_password: Aktuelles Passwort
+        password_confirmation: Passwortbestätigung
       content/volunteer:
         name: Name
-        identification: Identification
-        birthday: Birthday
-        address: Address
-        phone: Phone
-        email: Email
-        education: Education
-        availability: Availability
-        languages: Languages
-        other_languages: Other Languages
-        experience: Experience
-        experience_place: Experience Place
-        experience_area: Experience Area
+        identification: Identifizierung
+        birthday: Geburtstag
+        address: Anschrift
+        phone: Telefonnummer
+        email: E-Mail
+        education: Bildung
+        availability: Erreichbarkeit
+        languages: Sprachen
+        other_languages: Andere Sprachen
+        experience: Erfahrungen
+        experience_place: Erfahrungsort
+        experience_area: Erfahrungsbereich
       content/volunteer/experience_area:
-        cultural: Cultural
-        social: Social
-        educational: Educational
-        religious: Religious
+        cultural: Kulturell
+        social: Sozial
+        educational: Bildungstechnisch
+        religious: Religiös
       content/volunteer/languages:
-        arabic: Arabic
-        spanish: Spanish
-        catalan: Catalan
-        english: English
-        french: French
-        german: German
+        arabic: Arabisch
+        spanish: Spanisch
+        catalan: Katalanisch
+        english: Englisch
+        french: Französisch
+        german: Deutsch
+      content/message:
+        name: Name
+        phone: Telefonnummer
+        email: E-Mail
+        subject: Fachgebiet
+        body: Nachricht
+        newsletter: Ich möchte den Newsletter abonnieren
+        created_at: Eingangszeitpunkt
+        seen_at: Besichtigungszeit
+      content/sidebar_content:
+        title: Überschrift
+        body: Inhalt
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: eine halbe Minute
@@ -438,7 +473,7 @@ de:
       en_dash: "-"
       em_dash: "--"
       frac14: ein Viertel
-      frac12: halbe(r)
+      frac12: Hälfte
       frac34: drei Viertel
       gt: ">"
       lt: "<"
@@ -466,52 +501,54 @@ de:
       seven_eighths: sieben Achtel
   devise:
     confirmations:
-      confirmed: Your email address has been successfully confirmed.
-      send_instructions: You will receive an email with instructions for how to confirm
-        your email address in a few minutes.
+      confirmed: Ihre E-mail-Adresse wurde erfolgreich bestätigt.
+      send_instructions: Sie werden eine Nachricht mit der Anleitung zur Bestätigung
+        Ihrer E-Mail-Adresse in wenigen Minuten erhalten.
       send_paranoid_instructions: If your email address exists in our database, you
         will receive an email with instructions for how to confirm your email address
         in a few minutes.
       new:
-        did_not_receive_confirmation_instructions: Didn't receive confirmation instructions?
-        resend_confirmation_instructions: Resend confirmation instructions
+        did_not_receive_confirmation_instructions: Sie haben keine Bestätigungsanleitung
+          erhalten?
+        resend_confirmation_instructions: Senden Sie die Bestätigungsanleitung erneut.
     failure:
-      already_authenticated: You are already signed in.
-      inactive: Your account is not activated yet.
+      already_authenticated: Sie sind bereits angemeldet.
+      inactive: Ihr Konto ist noch nicht aktiviert.
       invalid: Invalid %{authentication_keys} or password.
-      locked: Your account is locked.
-      last_attempt: You have one more attempt before your account is locked.
+      locked: Ihr Konto wurde gesperrt.
+      last_attempt: Sie haben noch einen Versuch bevor Ihr Konto gesperrt wird.
       not_found_in_database: Invalid %{authentication_keys} or password.
-      timeout: Your session expired. Please sign in again to continue.
-      unauthenticated: You need to sign in or sign up before continuing.
-      unconfirmed: You have to confirm your email address before continuing.
-      not_approved: Your account has not been approved by our administrators yet.
+      timeout: Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.
+      unauthenticated: Sie müssen sich anmelden beziehungsweise registrieren bevor
+        Sie fortführen können.
+      unconfirmed: Für die Fortführung ist die Bestätigung Ihrer E-Mail-Adresse notwendig.
+      not_approved: Ihr Konto wurde von unseren Administratoren noch nicht freigegeben.
     mailer:
       confirmation_instructions:
-        subject: Welcome to Masajid
+        subject: Die Welt von Masajid - Bestätigungsanleitung
         header: Hi %{mosque}!
-        cta_text: Confirm my account
+        cta_text: Bestätige mein Konto
         body_html:
       reset_password_instructions:
-        subject: Reset password instructions
+        subject: Die Welt von Masajid - setze die Passwortvorgaben zurück
         header:
         body:
           primary_html:
           secondary_html:
-        cta_text: Change my password
+        cta_text: 'Ändere mein Passwort '
       unlock_instructions:
-        subject: Unlock instructions
+        subject: Die Welt von Masajid - Freigabeanleitung
         header:
         body_html:
-        cta_text:
+        cta_text: Schalte mein Konto frei
       email_changed:
-        subject: Email Changed
+        subject: Die Welt von Masajid - E-Mail wurde geändert
         header:
         body:
           unconfirmed_email_html:
           confirmed_email_html:
       password_change:
-        subject: Password Changed
+        subject: Die Welt von Masajid - Passwort wurde geändert
         header:
         body_html:
     omniauth_callbacks:
@@ -526,22 +563,22 @@ de:
       send_paranoid_instructions: If your email address exists in our database, you
         will receive a password recovery link at your email address in a few minutes.
       updated: Your password has been changed successfully. You are now signed in.
-      updated_not_active: Your password has been changed successfully.
+      updated_not_active: Ihr Passwort wurde erfolgreich geändert.
       edit:
         change_my_password: Change my password
-        change_your_password: Change your password
-        confirm_new_password: Confirm new password
+        change_your_password: Ändern Sie Ihr Passwort
+        confirm_new_password: Bestätigen Sie Ihr Passwort
         new_password_minimum_characters: "(%{length} characters minimum)"
         new_password: New password
       new:
-        forgot_your_password: Forgot your password?
-        send_me_reset_password_instructions: Send me reset password instructions
+        forgot_your_password: 'Passwort vergessen? '
+        send_me_reset_password_instructions: Schicken Sie mir die Anleitung zur Passwortzurücksetzung
     registrations:
-      destroyed: Bye! Your account has been successfully cancelled. We hope to see
-        you again soon.
-      signed_up: Welcome! You have signed up successfully.
-      signed_up_but_inactive: You have signed up successfully. However, we could not
-        sign you in because your account is not yet activated.
+      destroyed: Tschüss! Ihr Konto wurde erfolgreich storniert. Wir hoffen, Sie bald
+        wiederzusehen.
+      signed_up: Willkommen! Sie haben sich erfolgreich registriert.
+      signed_up_but_inactive: Sie haben sich erfolgreich registriert. Dennoch können
+        wir Sie nicht anmelden, da Ihr Konto noch nicht aktiviert ist.
       signed_up_but_locked: You have signed up successfully. However, we could not
         sign you in because your account is locked.
       signed_up_but_unconfirmed: A message with a confirmation link has been sent
@@ -549,184 +586,239 @@ de:
       update_needs_confirmation: You updated your account successfully, but we need
         to verify your new email address. Please check your email and follow the confirm
         link to confirm your new email address.
-      updated: Your account has been updated successfully.
+      updated: Ihr Konto wurde erfolgreich aktualisiert.
       updated_but_not_signed_in: Ihre Daten wurden aktualisiert, aber da sich Ihr
         Passwort geändert hat, müssen Sie sich erneut anmelden
     sessions:
-      signed_in: Signed in successfully.
-      signed_out: Signed out successfully.
-      already_signed_out: Signed out successfully.
+      signed_in: Erfolgreich angemeldet.
+      signed_out: Erfolgreich abgemeldet.
+      already_signed_out: Erfolgreich abgemeldet.
       new:
-        remember_me: Remember me
+        remember_me: Erinnere dich an mich
     unlocks:
       send_instructions: You will receive an email with instructions for how to unlock
         your account in a few minutes.
       send_paranoid_instructions: If your account exists, you will receive an email
         with instructions for how to unlock it in a few minutes.
-      unlocked: Your account has been unlocked successfully. Please sign in to continue.
+      unlocked: Ihr Konto wurde erfolgreich freigeschaltet. Zum Fortführen anmelden.
     actions:
-      login: Sign in
-      logout: Sign out
+      login: Anmelden
+      logout: Abmelden
   content:
     account_mailer:
       accept_entry:
-        subject: Masajid - Your account was accepted
-        header: Hi %{mosque}!
+        subject: Die Welt von Masajid - Ihr Konto wurde akzeptiert
+        header: Hallo %{mosque}!
         body_html: |
           <p>Congratulations!!! Your account was accepted by our admins.</p>
           <p>You need to enter a password through the link below, then you can start publishing your articles and customizing your site.</p>
           <p>If you have any question or feedback please don't hesitate to get in touch with us!</p>
-        cta_text: Enter password
+        cta_text: Passwort eingeben
       decline_entry:
-        subject: Masajid - Your account was declined
-        header: Hello %{mosque}!
+        subject: Die Welt von Masajid - Ihr Konto wurde nicht zugelassen
+        header: Hallo %{mosque}!
         body_html: |-
           <p>We are sorry to inform you that your account was declined by our admins because it seems to be not real.</p>
           <p>If you disagree or you have any concern please get in touch with us!</p>
           <p>Thanks for your undestanding!</p>
       notify_creation_new_entry:
         subject: Masajid - New account %{mosque} was created
-        header: Hi Admin,
-        cta_text: See details
-        body_html: A new account was created.
+        header: 'Hallo, Admin! '
+        cta_text: Details anzeigen
+        body_html: Das neues Konto wurde erstellt.
+    message_mailer:
+      user_email:
+        subject: Masajid World - %{subject}
+        header: Hi %{mosque}!
+        body: 'Sie haben eine Nachricht erhalten von:'
+        body_2: 'Bitte auf "Antworten" drücken und die Nachricht direkt beantworten. '
   admin:
     articles:
       new:
-        header: New Article
+        header: Neuer Artikel
     accounts:
       edit:
-        header: Edit Account
+        header: Konto bearbeiten
     configurations:
       edit:
-        header: General Configuration
+        header: Allgemeine Einstellungen
     countries:
       edit:
-        header: Edit Country
+        header: Land ändern
       new:
-        header: New Country
+        header: Neues Land
     dashboards:
       index:
-        visits: Number of visits
-        empty_visits: No body visited your website yet
+        visits: Anzahl der Besuche
+        empty_visits: Niemand besuchte bisher Ihre Webseite.
     pages:
       edit:
-        header: Edit Menu Item
+        header: Menü-Elemente bearbeiten
       new:
-        header: New Menu Item
+        header: Neues Menü-Element
     regions:
       edit:
-        header: Edit Region
+        header: Region ändern
       new:
-        header: New Region
+        header: Neue Region
     social_networks:
       edit:
-        header: Edit Social Media
+        header: Soziale Medien ergänzen
     sliders:
       edit:
         header: Edit Slider
     cities:
       edit:
-        header: Edit City
+        header: Stadt ändern
       new:
-        header: New City
+        header: Neue Stadt
     pundit:
-      unauthorized: You are not authorized to perform this action
+      unauthorized: Sie sind nicht authorisiert diese Aktion auszuführen
     shared:
-      administration: Administration
-      view_site: View Site
-      are_you_sure: Are you sure?
+      administration: Verwaltung
+      view_site: Seite anzeigen
+      are_you_sure: Sind Sie sicher?
       total: 'Total: %{count}'
-      account: Account
+      account: Konto
     tabs:
       dashboard: Dashboards
-      general: General
+      general: Allgemein
+      settings: Einstellungen
     users:
       edit:
+        header: Konto bearbeiten
+        cta: Konto aktualisieren
+    messages:
+      show:
+        cta_text: Schnellantwort hier
+    newsletters:
+      edit:
         header:
-        cta:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
     admin_panel: Admin panel
-    create_account: Create account
-    site_name: Masajid World
+    create_account: Kreierte Konto
     slider:
       first:
         headline: Your masjid online.
         content: You own a masjid and you don't have a website, Masajid World will
           help you.
       second:
-        headline: Allah says in surat Tawba
+        headline: Allah spricht in der Surah Tauba
         content_html: |
           <p>The mosques of Allah are only to be maintained by those who believe in Allah and the Last Day and establish prayer
           and give zakah and do not fear except Allah, for it is expected that those will be of the [rightly] guided.</p>
           <p>إِنَّمَا يَعْمُرُ مَسَاجِدَ اللَّهِ مَنْ آمَنَ بِاللَّهِ وَالْيَوْمِ الْآخِرِ وَأَقَامَ الصَّلَاةَ وَآتَى الزَّكَاةَ وَلَمْ يَخْشَ إِلَّا اللَّهَ ۖ فَعَسَىٰ أُولَٰئِكَ أَن يَكُونُوا مِنَ الْمُهْتَدِينَ</p>
     how_to_use:
-      headline: how to use?
+      headline: Wie zu benutzen?
       step_1:
-        headline: Create account
-        content: First step, you shall create an account in the platform with your
-          information.
+        headline: 1. Kreierte Konto
+        content: You need to create an account in the platform with your information.
       step_2:
-        headline: Wait for approval
-        content: Once we receive your information, we will contact you within 24h
-          to make sure your mosque exists.
+        headline: 2. Genehmigung abwarten
+        content: Our team should make sure your mosque really exists then will contact
+          you within 24 hours.
       step_3:
-        headline: Admin
-        content: Once we approve your account, you will receive a password via email,
-          so you can login to the administration panel and costumise your site as
-          you wish.
+        headline: 3. Administrate
+        content: You will receive an email to setup your password, so you can login
+          to the administration panel and customize your website.
       step_4:
-        headline: It's ready
+        headline: 4. Es ist bereit
         content: Your site for your masjid is ready to go.
     accounts:
       new:
-        title:
-        meta_description:
+        title: Kreieren Sie ein Konto
+        meta_description: Kreieren Sie eine Webseite für Ihre Moschee
       create:
         error_message:
       success_page:
-        header:
+        header: 'Ihr Konto wurde erfolgreich kreiert. '
         body_html:
     home:
       index:
         title:
         meta_description:
+        map:
+          headline:
+        pateron:
+          headline:
+          body_html:
+          cta_text:
     user_confirmations:
       new:
-        title:
+        title: Bestätigen Sie Ihr Konto
     user_passwords:
       new:
-        title:
+        title: Passwort wiederherstellen
       edit:
-        title:
+        title: Passwort zurücksetzen
     user_sessions:
       new:
-        title:
+        title: Anmeldung
     volunteers:
       new:
         title:
         meta_description:
+    footer:
+      copyright_html:
+      home:
+      terms:
+      privacy:
+      follow_us:
+      useful_links:
   public:
     continued: "... (continued)"
-    read_more: Continue reading
+    read_more: Lies weiter
+    subscribers:
+      create:
+        success: 'Sie haben unseren Newsletter erfolgreich abonniert. '
+      new:
+        cta_text: Abonnieren
+    footer:
+      website_build_by_html:
+      newsletter:
+        header: Unser Newsletter
+        body_html:
+      contact:
+        header: Kontakt
+    sidebar:
+      prayer_times: Gebetszeiten
+    messages:
+      create:
+        success: 'Ihre Nachricht wurde erfolgreich versendet. '
+        error:
+      new:
+        cta_text: Schicke Nachricht an
   shared:
     actions:
-      accept: Accept
-      back_to_list: Back to list
-      decline: Decline
-      delete: Delete
-      edit: Edit
-      new: New
+      accept: Akzeptieren
+      back_to_list: Zur Auflistung zurück
+      decline: Stornieren
+      delete: Löschen
+      edit: Ergänzen
+      new: Neu
+      show: Details
     locales:
-      en: English
-      fr: French
-      es: Spanish
-      de: German
-      ar: Arabic
-      ca: Catalan
-      it:
-      tr:
+      en: Englisch
+      fr: Französisch
+      es: Spanisch
+      de: Deutsch
+      ar: Arabisch
+      ca: Katalanisch
+      it: Italienisch
+      tr: Türkisch
+      nl: Niederländisch
     volunteers:
       new:
-        header: Volunteering
+        header: Ehrenamt
     say_no: Nein
     say_yes: Ja
+    footer:
+      back_to_top: Zurück nach oben
+    site_name: Masajid World

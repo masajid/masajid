@@ -195,29 +195,41 @@ es:
               blank: Obligatorio si no seleccionas artículos
             date:
               inclusion: debe ser en futuro
+        content/subscriber:
+          attributes:
+            email:
+              invalid: "¡Por favor, introduce una dirección de correo electrónico
+                válida!"
+              taken: Ya recibimos tu suscripción antes.
     models:
       content/article:
         one: Artículo
         other: Artículos
+        few: Artículos
       content/account:
         one: Cuenta
         other: Cuentas
-      content/address: Dirección
+        few: Cuentas
       content/country:
         one: País
         other: Países
+        few: Países
       content/city:
         one: Ciudad
         other: Ciudades
+        few: Ciudades
       content/newsletter:
         one: Newsletter
         other: Newsletters
+        few: Newsletters
       content/page:
         one: Elemento de menú
         other: Menú
+        few: Menú
       content/region:
         one: Provincia
         other: Provincias
+        few: Provincias
       content/slider:
         one: Slider
       content/social_network:
@@ -225,9 +237,19 @@ es:
       content/subscriber:
         one: Suscriptor
         other: Suscriptores
+        few: Suscriptores
       content/volunteer:
         one: Voluntario
         other: Voluntarios
+        few: Voluntarios
+      content/message:
+        few: Mensajes
+        one: Mensaje
+        other: Mensajes
+      content/sidebar_content:
+        few:
+        one:
+        other:
     attributes:
       content/article:
         title: Título
@@ -298,7 +320,7 @@ es:
         link_text: Texto del enlace
       content/subscriber:
         email: Correo electrónico
-        created_at: Create Date
+        created_at: Fecha de suscripción
       content/user:
         email: Correo electrónico
         password: Contraseña
@@ -331,6 +353,20 @@ es:
         english: Inglés
         french: Francés
         german: Alemán
+      content/message:
+        name: Nombre
+        phone: Teléfono
+        email: Correo electrónico
+        subject: Destinatario
+        body: Mensaje
+        newsletter: Me gustaría suscribirme al boletín
+        created_at: Fecha de recepción
+        seen_at:
+      content/sidebar_content:
+        title: Título
+        body: Cuerpo
+        light_background:
+        active:
   datetime:
     distance_in_words:
       half_a_minute: medio minuto
@@ -416,7 +452,7 @@ es:
       divide: dividido por
       degrees: grados
       dot: "\\ 1 punto \\ 2"
-      ellipsis:
+      ellipsis: punto punto punto
       equals: es igual a
       number: Número
       percent: Por ciento
@@ -604,15 +640,20 @@ es:
       decline_entry:
         subject: Masajid World - Tu cuenta ha sido rechazada
         header: Hola %{mosque}!
-        body_html: "<p> Lamentamos informarte que nuestros administradores rechazaron
-          su cuenta porque parece que no es real. </p><p> Si no está de acuerdo o
-          tiene alguna inquietud, ¡contáctenos! </p><p> ¡Gracias por su comprensión!
-          </p>"
+        body_html: "<p>Lamentamos informarte que nuestros administradores rechazaron
+          su cuenta porque parece que no es real.</p><p>Si no está de acuerdo o tiene
+          alguna inquietud, ¡contáctenos!</p><p> ¡Gracias por su comprensión!</p>"
       notify_creation_new_entry:
         subject: Masajid World - Se creó la nueva cuenta (%{mosque})
         header: Hola Administrador
         cta_text: Ver detalles
         body_html: Se creó una nueva cuenta.
+    message_mailer:
+      user_email:
+        subject: Masajid World - %{subject}
+        header: Hola %{mosque}!
+        body: 'Has recibido un mensaje de:'
+        body_2: Por favor haz click en responder y responde directamente al mensaje.
   admin:
     articles:
       new:
@@ -664,14 +705,27 @@ es:
     tabs:
       dashboard: Dashboards
       general: General
+      settings: Ajustes
     users:
       edit:
         header: Editar cuenta
         cta: Actualizar cuenta
+    messages:
+      show:
+        cta_text: Responde rápidamente desde aquí
+    newsletters:
+      edit:
+        header:
+      new:
+        header:
+    sidebar_contents:
+      edit:
+        header:
+      new:
+        header:
   landing:
     admin_panel: Panel de administrador
     create_account: Crear una cuenta
-    site_name: Masajid World
     slider:
       first:
         headline: Tu Masjid online.
@@ -687,26 +741,27 @@ es:
     how_to_use:
       headline: "¿cómo se utiliza?"
       step_1:
-        headline: Crear una cuenta
-        content: Primer paso, deberás crear una cuenta en la plataforma con tu información.
+        headline: 1. Crear una cuenta
+        content: Deberás crear una cuenta en la plataforma con tu información.
       step_2:
-        headline: Esperando la aprobación
-        content: Una vez que recibamos tu información, nos comunicaremos contigo dentro
-          de las 24 horas para asegurarnos de que su mezquita exista.
+        headline: 2. Esperando la aprobación
+        content: Nuestro equipo debe asegurarse de que su mezquita realmente exista
+          y luego se comunicará contigo dentro de las 24 horas.
       step_3:
-        headline: Administrador
-        content: 'Una vez que aprobemos su cuenta, recibirá una contraseña por correo
-          electrónico, para que pueda iniciar sesión en el panel de administración
-          y personalizar su sitio como lo desees. '
+        headline: 3. Administrar
+        content: Recibirá un correo electrónico para entrar una contraseña, para que
+          pueda iniciar sesión en el panel de administración y personalizar su sitio
+          como lo desees.
       step_4:
-        headline: Esta listo
+        headline: 4. Está listo
         content: La web para tu mezquita está lista para funcionar.
     accounts:
       new:
         title: Crea una cuenta
         meta_description: Crea un página web para tu mezquita
       create:
-        error_message:
+        error_message: Error en la creación de la cuenta, intente nuevamente o contáctanos
+          para que podamos ayudarte a crear tu cuenta
       success_page:
         header: Tu cuenta ha sido creada correctamente
         body_html: Le enviaremos un correo electrónico en unos instantes, confirme
@@ -717,6 +772,14 @@ es:
         title: Plataforma para mezquitas para crear y administrar sus sitios web
         meta_description: Masajid World ofrece una solución para que las mezquitas
           creen y administren sus páginas web
+        map:
+          headline: Mezquitas registradas
+        pateron:
+          headline: Conviértete en un patrón
+          body_html: |-
+            <p>Este proyecto ha sido creado por voluntarios por el bien de Allah, por lo que debemos cubrir los gastos del hosting y más ...</p>
+            <p>Si le gusta nuestro trabajo y quiere apoyarnos, estamos en Patreon.</p>
+          cta_text: Conviértete en un patrón
     user_confirmations:
       new:
         title: Confirme tu cuenta
@@ -733,9 +796,40 @@ es:
         title: Ser voluntario en Masajid World
         meta_description: Ser voluntario en Masajid World y tener un impacto en nuestra
           comunidad musulmana
+    footer:
+      copyright_html: "&copy; Copyrights Masajid World. Todos los derechos reservados."
+      home: Portada
+      terms: Términos de servicio
+      privacy: Política de privacidad
+      follow_us: Síguenos
+      useful_links: Enlaces útiles
   public:
     continued: "... (continuación)"
     read_more: Sigue leyendo
+    subscribers:
+      create:
+        success: Tu suscripción ha sido creada correctamente.
+      new:
+        cta_text: Suscribir
+    footer:
+      website_build_by_html: Sitio web construido por <a href='https://masajid.world'>Masajid
+        World</a>
+      newsletter:
+        header: Nuestro boletín
+        body_html: "<p>Suscríbase a nuestro boletín de noticias y le enviaremos correos
+          electrónicos de vez en cuando con actualizaciones recientes, tales como
+          próximas conferencias, tiempos de oración del Eid y noticias importantes
+          ...</p>"
+      contact:
+        header: Contacto
+    sidebar:
+      prayer_times: Horarios de Salat
+    messages:
+      create:
+        success: Tu mensaje fue enviado correctamente.
+        error:
+      new:
+        cta_text: Enviar mensaje
   shared:
     actions:
       accept: Aceptar
@@ -744,6 +838,7 @@ es:
       delete: Borrar
       edit: Editar
       new: Nuevo
+      show: Ver detalles
     locales:
       en: Inglés
       fr: Francés
@@ -751,10 +846,14 @@ es:
       de: Alemán
       ar: Árabe
       ca: Catalán
-      it:
-      tr:
+      it: Italiano
+      tr: Turco
+      nl: Holandés
     volunteers:
       new:
         header: Voluntariado
     say_no: 'No'
     say_yes: Sí
+    footer:
+      back_to_top: Volver arriba
+    site_name: Masajid World

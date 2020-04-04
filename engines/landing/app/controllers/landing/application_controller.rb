@@ -5,6 +5,7 @@ module Landing
     include Pundit
     include Content::AccountsHelper
     include Content::GoogleTagManagerHelper
+    include Content::LayoutHelper
     include Landing::ControllerHelpers::Locale
     include Landing::ControllerHelpers::SeoContent
 

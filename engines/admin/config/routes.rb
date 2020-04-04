@@ -13,9 +13,11 @@ Admin::Engine.routes.draw do
     post :sort, on: :collection
   end
   resources :articles, except: :show
+  resources :messages, only: %i[index show]
   resources :volunteers, only: :index
   resources :subscribers, only: :index
   resources :newsletters, except: :show
+  resources :sidebar_contents, except: :show, path: :sidebar
   resource :slider, only: %i[edit update]
   resource :social_network, only: %i[edit update]
   resource :configuration, only: %i[edit update]
@@ -24,6 +26,5 @@ Admin::Engine.routes.draw do
   namespace :api do
     resources :regions, only: :index
     resources :cities, only: :index
-    resources :photos, only: :create
   end
 end

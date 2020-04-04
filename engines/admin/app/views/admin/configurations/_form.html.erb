@@ -58,7 +58,6 @@
 
         <hr />
 
-        <%= configuration_form.input :theme, collection: Content::Configuration::THEME_OPTIONS, include_blank: false %>
         <%= configuration_form.input :mawaqit_link %>
 
         <div class='mb-3'>
@@ -79,5 +78,5 @@
     </div>
   </div>
 
-  <%= f.button :submit, class: 'btn-primary' %>
+  <%= f.button :submit, class: 'btn btn-info' %>
 <% end %>

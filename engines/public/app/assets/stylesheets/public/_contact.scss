@@ -1,0 +1,35 @@
+.home {
+  &.contact {
+    #map {
+      height: 400px;
+      margin-bottom: 20px;
+
+      .mapboxgl-canvas {
+        height: 100% !important;
+        width: 100% !important;
+      }
+    }
+
+    .contact-form {
+      address {
+        h3 {
+          font-size: 40px;
+          margin-bottom: 16px;
+        }
+
+        a, a:hover {
+          color: #212529;
+        }
+      }
+
+      form {
+        .message_name > input,
+        .message_phone > input,
+        .message_email > input,
+        .message_subject > input {
+          height: 50px;
+        }
+      }
+    }
+  }
+}

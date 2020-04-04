@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'devise'
   s.add_dependency 'devise-async'
   s.add_dependency 'draper'
+  s.add_dependency 'email_validator'
   s.add_dependency 'flipper-active_record', '~> 0.17.1'
   s.add_dependency 'friendly_id'
   s.add_dependency 'geocoder'
@@ -32,7 +33,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '~> 6.0.0'
   s.add_dependency 'rails-i18n', '~> 6.0.0'
   s.add_dependency 'sentry-raven', '~> 2.13.0'
-  s.add_dependency 'shrine'
   s.add_dependency 'sidekiq'
   s.add_dependency 'simple_form'
   s.add_dependency 'skylight', '~> 4.2.1'
@@ -40,5 +40,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'translation'
   s.add_dependency 'validates_timeliness'
 
-  s.add_development_dependency 'rubocop-rails', '~> 2.4.2'
+  s.add_development_dependency 'rubocop-rails', '~> 2.5.0'
 end

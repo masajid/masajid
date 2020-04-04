@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='<%= lang %>' dir='<%= dir %>'>
   <head>
     <title><%= title %></title>
     <meta charset='utf-8'>
@@ -8,7 +8,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'landing/application', media: 'all' %>
+    <%= stylesheet_link_tag "landing/#{stylesheet}", media: 'all' %>
     <%= javascript_include_tag 'landing/application' %>
 
     <%= render 'content/shared/google_tag_manager_script_tag' if render_google_tag_manager? %>
@@ -18,15 +18,15 @@
     <%= render 'landing/shared/header' %>
 
     <main role='main'>
-      <div className='container'>
+      <div class='container'>
         <%= render 'content/shared/flash_messages' %>
 
         <div class='content'>
           <%= yield %>
         </div>
       </div>
-    </main>
 
-    <%= render 'landing/shared/footer' %>
+      <%= render 'landing/shared/footer' %>
+    </main>
   </body>
 </html>

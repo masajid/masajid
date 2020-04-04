@@ -1,0 +1,17 @@
+<h3>
+  <%= t('public.footer.contact.header') %>
+</h3>
+
+<address>
+  <%= simple_format current_account.decorate.display_address %>
+</address>
+
+<address>
+  <i class='fa fa-phone'></i>
+  <a href='tel:<%= current_account.phone %>' dir='ltr'><%= current_account.phone %></a>
+</address>
+
+<address>
+  <i class='fa fa-envelope'></i>
+  <a href='mailto:<%= current_account.email %>'><%= current_account.email %></a>
+</address>

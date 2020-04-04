@@ -1,0 +1,64 @@
+.wrapper {
+  #sidebar {
+    ul {
+      svg {
+        margin-right: 0;
+        margin-left: 8px;
+      }
+
+      // Submenu
+      ul a {
+        padding-left: 0;
+        padding-right: 30px !important;
+      }
+    }
+
+    // Align triangle in the dropdown to the left
+    .dropdown-toggle::after {
+      right: auto;
+      left: 20px;
+    }
+
+    &.active {
+      margin-left: 0;
+      margin-right: -250px;
+    }
+  }
+
+  #content {
+    .navbar {
+      .container-fluid {
+        .nav-item {
+          .nav-link {
+            .badge {
+              float: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 767.98px) {
+  .wrapper {
+    #sidebar {
+      margin-left: 0;
+      margin-right: -250px;
+
+      &.active {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.edit_account {
+  .account_configuration_supported_locales {
+    .form-check {
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+}

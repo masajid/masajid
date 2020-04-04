@@ -1,6 +1,7 @@
 <% if @subscriber.save %>
-  $('#subscriber_alert').html('<div class="alert alert-success">Subscription to newsletter was successfully created.</div>')
+  noty('success', '<%= dir %>', '<%= t("public.subscribers.create.success") %>');
+
   $('#subscriber_email').val('')
 <% else %>
-  $('#subscriber_alert').html('<div class="alert alert-danger"><%= @subscriber.errors.full_messages.join(', ') %></div>')
+  noty('error', '<%= dir %>', '<%= @subscriber.errors.messages.values.flatten.join(', ') %>');
 <% end %>
