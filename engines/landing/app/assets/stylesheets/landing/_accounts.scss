@@ -3,4 +3,11 @@
   max-width: 520px;
   padding: 15px;
   margin: auto;
+
+  // Tablet and mobile
+  @media (max-width: 991.98px) {
+    .input-group-prepend {
+      display: none;
+    }
+  }
 }
