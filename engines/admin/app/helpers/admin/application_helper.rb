@@ -35,11 +35,16 @@ module Admin
     def settings_submenu_active?
       [
         '/admin/configuration/edit',
+        '/admin/language/edit',
         '/admin/social_network/edit',
         '/admin/slider/edit',
         '/admin/sidebar',
         '/admin/countries'
       ].one? { |path| request.path.start_with?(path) }
+    end
+
+    def wrapper_center?
+      false
     end
   end
 end

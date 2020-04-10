@@ -67,12 +67,21 @@
       </a>
 
       <ul class='collapse <%= settings_submenu_active? && 'show' %> list-unstyled' id='settingsSubmenu'>
-        <%= nav_item(
-          text: t('admin.tabs.general'),
-          path: edit_configuration_path,
-          icon: 'zap',
-          active: request.path.starts_with?('/admin/configuration/edit'),
-        ) if current_account && policy(current_account.configuration).update? %>
+        <% if current_account && policy(current_account.configuration).update? %>
+          <%= nav_item(
+            text: t('admin.tabs.general'),
+            path: edit_configuration_path,
+            icon: 'zap',
+            active: request.path.starts_with?('/admin/configuration/edit'),
+          ) %>
+
+          <%= nav_item(
+            text: t('admin.tabs.languages'),
+            path: edit_language_path,
+            icon: 'type',
+            active: request.path.starts_with?('/admin/language/edit'),
+          ) %>
+        <% end %>
 
         <%= nav_item(
           text: Content::Slider.model_name.human,

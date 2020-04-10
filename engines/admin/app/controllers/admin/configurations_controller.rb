@@ -6,7 +6,7 @@ module Admin
       if current_account.update(configuration_params)
         uploaded_logo = params.dig(:account, :configuration_attributes, :logo)
         current_account.configuration.logo.attach(uploaded_logo) if uploaded_logo.present?
-        redirect_to edit_configuration_url, notice: 'General configuration were successfully updated.'
+        redirect_to edit_configuration_url, notice: t('admin.configurations.update.success')
       else
         render :edit
       end
@@ -16,8 +16,16 @@ module Admin
 
     def configuration_params
       params.require(:account).permit(
-        configuration_attributes: [:id, :logo, :about_us, :admin_locale, :default_locale, supported_locales: []],
-        seo_content_attributes: %i[id meta_title meta_description]
+        configuration_attributes: [
+          :id,
+          :logo,
+          :about_us,
+        ],
+        seo_content_attributes: %i[
+          id
+          meta_title
+          meta_description
+        ]
       )
     end
   end
