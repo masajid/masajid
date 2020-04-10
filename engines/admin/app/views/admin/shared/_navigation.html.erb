@@ -67,14 +67,21 @@
       </a>
 
       <ul class='collapse <%= settings_submenu_active? && 'show' %> list-unstyled' id='settingsSubmenu'>
-        <% if current_account && policy(current_account.configuration).update? %>
-          <%= nav_item(
-            text: t('admin.tabs.general'),
-            path: edit_configuration_path,
-            icon: 'zap',
-            active: request.path.starts_with?('/admin/configuration/edit'),
-          ) %>
+        <%= nav_item(
+          text: t('admin.tabs.general'),
+          path: edit_configuration_path,
+          icon: 'zap',
+          active: request.path.starts_with?('/admin/configuration/edit'),
+        ) if current_account && policy(current_account.configuration).update? %>
 
+        <%= nav_item(
+          text: t('admin.shared.profile'),
+          path: edit_user_path,
+          icon: 'user',
+          active: request.path.starts_with?('/admin/user'),
+        ) %>
+
+        <% if current_account && policy(current_account.configuration).update? %>
           <%= nav_item(
             text: t('admin.tabs.languages'),
             path: edit_language_path,

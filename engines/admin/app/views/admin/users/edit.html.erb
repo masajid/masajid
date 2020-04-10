@@ -2,26 +2,4 @@
   <%= t('admin.users.edit.header') %>
 <% end %>
 
-<%= simple_form_for current_user, url: user_path, method: :put do |f| %>
-  <div class='row'>
-    <div class='col-md-6'>
-      <%= f.error_notification %>
-
-      <%= f.input :email %>
-
-      <% if current_user.pending_reconfirmation? %>
-        <div class='alert alert-warning' role='alert'>
-          <%= t('simple_form.hints.content/user.unconfirmed_email', email: current_user.unconfirmed_email) %>
-        </div>
-      <% end %>
-
-      <%= f.input :password, hint: t('simple_form.hints.content/user.password') %>
-
-      <%= f.input :password_confirmation %>
-
-      <%= f.input :current_password, hint: t('simple_form.hints.content/user.current_password') %>
-
-      <%= f.button :submit, t('admin.users.edit.cta'), class: 'btn btn-info' %>
-    </div>
-  </div>
-<% end %>
+<%= render 'form' %>

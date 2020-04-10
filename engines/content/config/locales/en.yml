@@ -282,12 +282,13 @@ en:
         header: New City
     users:
       edit:
-        header: Edit account
-        cta: Update account
+        header: Edit profile
+      update:
+        success: Your profile was updated successfully
     pundit:
       unauthorized: You are not authorized to perform this action
     shared:
-      account: Account
+      profile: Profile
       administration: Administration
       view_site: View Site
       are_you_sure: Are you sure?
