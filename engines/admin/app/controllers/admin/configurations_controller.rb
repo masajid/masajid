@@ -16,6 +16,8 @@ module Admin
 
     def configuration_params
       params.require(:account).permit(
+        :responsable,
+        :mosque,
         configuration_attributes: [
           :id,
           :logo,
@@ -27,5 +29,10 @@ module Admin
         ]
       )
     end
+
+    def wrapper_center?
+      true
+    end
+    helper_method :wrapper_center?
   end
 end

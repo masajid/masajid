@@ -1,43 +1,5 @@
 <% content_for :page_title do %>
-  <%= t('.header') %>
+  <%= t('admin.configurations.edit.header') %>
 <% end %>
-
-<div class='row'>
-  <div class='col-md-6'>
-    <dl>
-      <dt><%= Content::Account.human_attribute_name(:subdomain) %></dt>
-      <dd><%= current_account.subdomain %></dd>
-    </dl>
-
-    <dl>
-      <dt><%= Content::Account.human_attribute_name(:responsable) %></dt>
-      <dd><%= current_account.responsable %></dd>
-    </dl>
-
-    <dl>
-      <dt><%= Content::User.human_attribute_name(:email) %></dt>
-      <dd><%= current_account.email %> (<%= link_to "edit", edit_user_path %>)</dd>
-    </dl>
-  </div>
-
-  <div class='col-md-6'>
-    <dl>
-      <dt><%= Content::Account.human_attribute_name(:mosque) %></dt>
-      <dd><%= current_account.mosque %></dd>
-    </dl>
-
-    <dl>
-      <dt><%= Content::Address.model_name.human %></dt>
-      <dd><%= simple_format current_account.decorate.display_address %></dd>
-    </dl>
-
-    <dl>
-      <dt><%= Content::Address.human_attribute_name(:phone) %></dt>
-      <dd><%= current_account.address.phone %></dd>
-    </dl>
-  </div>
-</div>
-
-<hr />
 
 <%= render 'form' %>
