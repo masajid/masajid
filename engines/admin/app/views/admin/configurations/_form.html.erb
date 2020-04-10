@@ -3,49 +3,6 @@
 
   <div class='row'>
     <div class='col-md-6'>
-      <dl>
-        <dt><%= Content::Account.human_attribute_name(:mosque) %></dt>
-        <dd><%= current_account.mosque %></dd>
-      </dl>
-
-      <dl>
-        <dt><%= Content::Account.human_attribute_name(:responsable) %></dt>
-        <dd><%= current_account.responsable %></dd>
-      </dl>
-
-      <dl>
-        <dt><%= Content::User.human_attribute_name(:email) %></dt>
-        <dd><%= current_account.email %> (<%= link_to "edit", edit_user_path %>)</dd>
-      </dl>
-
-      <dl>
-        <dt><%= Content::Address.human_attribute_name(:phone) %></dt>
-        <dd><%= current_account.address.phone %></dd>
-      </dl>
-
-      <dl>
-        <dt><%= Content::Address.model_name.human %></dt>
-        <dd><%= simple_format current_account.decorate.display_address %></dd>
-      </dl>
-    </div>
-    <div class='col-md-6'>
-      <dl>
-        <dt><%= Content::Account.human_attribute_name(:default_domain) %></dt>
-        <dd><%= link_to(
-          "#{current_account.subdomain}.#{ENV['PROJECT_HOSTNAME']}",
-          default_account_domain(current_account),
-          target: '_blank')
-        %></dd>
-      </dl>
-
-      <%= f.input :domain, hint: t('simple_form.hints.content/account.domain_html') %>
-    </div>
-  </div>
-
-  <hr />
-
-  <div class='row'>
-    <div class='col-md-6'>
       <%= f.simple_fields_for :configuration, (current_account.configuration || current_account.build_configuration) do |configuration_form| %>
         <%= configuration_form.input :admin_locale, collection: options_for_locale %>
         <%= configuration_form.input :default_locale,

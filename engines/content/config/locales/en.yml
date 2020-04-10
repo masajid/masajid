@@ -60,9 +60,8 @@ en:
         published_at: Publication Date
         photo: Photo
       content/account:
-        default_domain: Default Domain
-        domain: Custom Domain
-        subdomain: Subdomain
+        domain: Domain
+        subdomain: Primary Domain
         responsable: Responsable Name
         mosque: Mosque Name
       content/address:
@@ -231,6 +230,9 @@ en:
     configurations:
       edit:
         header: General Configuration
+      update:
+        success: General configuration was updated successfully
+        domain_success_message: Domain was updated successfully
     countries:
       edit:
         header: Edit Country
@@ -240,6 +242,10 @@ en:
       index:
         visits: Number of visits
         empty_visits: No body visited your website yet
+    domains:
+      edit:
+        cta_text: Update Domain
+        connected: Connected
     messages:
       show:
         cta_text: Reply quickly here

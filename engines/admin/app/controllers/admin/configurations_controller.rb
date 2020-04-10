@@ -6,7 +6,7 @@ module Admin
       if current_account.update(configuration_params)
         uploaded_logo = params.dig(:account, :configuration_attributes, :logo)
         current_account.configuration.logo.attach(uploaded_logo) if uploaded_logo.present?
-        redirect_to edit_configuration_url, notice: 'General configuration were successfully updated.'
+        redirect_to location_after_save, notice: notice_after_save
       else
         render :edit
       end
@@ -33,6 +33,22 @@ module Admin
           meta_description
         ]
       )
+    end
+
+    def location_after_save
+      if configuration_params[:domain]
+        edit_domain_url
+      else
+        edit_configuration_url
+      end
+    end
+
+    def notice_after_save
+      if configuration_params[:domain]
+        t('admin.configurations.update.domain_success_message')
+      else
+        t('admin.configurations.update.success')
+      end
     end
   end
 end
