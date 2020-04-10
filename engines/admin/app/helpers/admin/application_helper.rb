@@ -34,13 +34,20 @@ module Admin
 
     def settings_submenu_active?
       [
-        '/admin/configuration/edit',
+        '/admin/configuration',
         '/admin/domain/edit',
+        '/admin/user',
+        '/admin/language/edit',
+        '/admin/about/edit',
         '/admin/social_network/edit',
         '/admin/slider/edit',
         '/admin/sidebar',
         '/admin/countries'
       ].one? { |path| request.path.start_with?(path) }
+    end
+
+    def wrapper_center?
+      false
     end
   end
 end

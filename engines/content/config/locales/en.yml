@@ -221,6 +221,9 @@ en:
         body: 'You received a message from:'
         body_2: Please hit replay and answer directly to the message.
   admin:
+    about:
+      update:
+        success: About us content was updated successfully
     articles:
       new:
         header: New Article
@@ -232,7 +235,6 @@ en:
         header: General Configuration
       update:
         success: General configuration was updated successfully
-        domain_success_message: Domain was updated successfully
     countries:
       edit:
         header: Edit Country
@@ -246,6 +248,11 @@ en:
       edit:
         cta_text: Update Domain
         connected: Connected
+      update:
+        success: Domain was updated successfully
+    languages:
+      update:
+        success: Languages were updated successfully
     messages:
       show:
         cta_text: Reply quickly here
@@ -282,12 +289,13 @@ en:
         header: New City
     users:
       edit:
-        header: Edit account
-        cta: Update account
+        header: Edit profile
+      update:
+        success: Your profile was updated successfully
     pundit:
       unauthorized: You are not authorized to perform this action
     shared:
-      account: Account
+      profile: Profile
       administration: Administration
       view_site: View Site
       are_you_sure: Are you sure?
@@ -296,6 +304,7 @@ en:
       dashboard: Dashboards
       settings: Settings
       general: General
+      languages: Languages
   landing:
     admin_panel: Admin panel
     create_account: Create account
@@ -408,6 +417,7 @@ en:
       show: Details
       edit: Edit
       new: New
+      update: Update
     footer:
       back_to_top: Back to top
     locales:
@@ -556,9 +566,11 @@ en:
       content/account:
         domain_html: e.g. <mark>mymosque.com</mark>
       content/configuration:
-        default_locale: Default language of your site.
-        supported_locales: A list of available languages that user can choose in the
-          site.
+        admin_locale: |
+          When you are logged in to Masajid World, this is the language you will see.
+          It does not affect the language your visitors see on your website.
+        default_locale: Default language of your website.
+        supported_locales: A list of available languages that user can switch on your website.
         meta_title_html: The content for the homepage's HTML <mark>&lt;title&gt;</mark>
           tag, which is used by search engines.
         meta_description: The summary text that accompanies your homepage link in

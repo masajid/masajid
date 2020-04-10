@@ -11,14 +11,6 @@ a {
   }
 }
 
-.page-header {
-  margin: 30px 0 20px;
-  align-items: center;
-  justify-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .wrapper {
   display: flex;
   width: 100%;
@@ -29,6 +21,27 @@ a {
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
+
+    hr {
+      margin: 30px 0;
+    }
+
+    .page-header {
+      margin: 30px 0 20px;
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    // Tablet and Desktop
+    @media (min-width: 767.98px) {
+      .wrapper-center {
+        margin-left: 16.6666666667%;
+        flex: 0 0 66.6666666667%;
+        max-width: 66.6666666667%;
+      }
+    }
   }
 }
 

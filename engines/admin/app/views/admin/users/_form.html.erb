@@ -1,0 +1,21 @@
+<%= simple_form_for current_user, url: user_path, method: :put, wrapper: :horizontal_form do |f| %>
+  <%= f.error_notification %>
+
+  <% if current_user.pending_reconfirmation? %>
+    <div class='alert alert-warning' role='alert'>
+      <%= t('simple_form.hints.content/user.unconfirmed_email', email: current_user.unconfirmed_email) %>
+    </div>
+  <% end %>
+
+  <%= f.input :email %>
+
+  <%= f.input :password, hint: t('simple_form.hints.content/user.password') %>
+
+  <%= f.input :password_confirmation %>
+
+  <%= f.input :current_password, hint: t('simple_form.hints.content/user.current_password') %>
+
+  <div class='col-sm-8 offset-sm-4 pr-0'>
+    <%= f.button :submit, t('shared.actions.update'), class: 'btn-block btn-info' %>
+  </div>
+<% end %>

@@ -75,6 +75,29 @@
         ) if current_account && policy(current_account.configuration).update? %>
 
         <%= nav_item(
+          text: t('admin.shared.profile'),
+          path: edit_user_path,
+          icon: 'user',
+          active: request.path.starts_with?('/admin/user'),
+        ) %>
+
+        <% if current_account && policy(current_account.configuration).update? %>
+          <%= nav_item(
+            text: t('admin.tabs.languages'),
+            path: edit_language_path,
+            icon: 'type',
+            active: request.path.starts_with?('/admin/language/edit'),
+          ) %>
+
+          <%= nav_item(
+            text: Content::Configuration.human_attribute_name(:about_us),
+            path: edit_about_path,
+            icon: 'info',
+            active: request.path.starts_with?('/admin/about/edit'),
+          ) %>
+        <% end %>
+
+        <%= nav_item(
           text: Content::Slider.model_name.human,
           path: edit_slider_path,
           icon: 'airplay',

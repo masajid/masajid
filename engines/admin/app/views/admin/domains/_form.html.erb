@@ -1,8 +1,9 @@
-<%= simple_form_for current_account, url: configuration_path, method: :put, wrapper: :horizontal_form do |f| %>
+<%= simple_form_for current_account, url: domain_path, method: :put, wrapper: :horizontal_form do |f| %>
   <div class='form-group row'>
     <label class='col-sm-4 col-form-label'>
       <%= Content::Account.human_attribute_name(:subdomain) %>
     </label>
+
     <div class='col-sm-8'>
       <%= "#{current_account.subdomain}.#{ENV['PROJECT_HOSTNAME']}" %>
       <span class='badge badge-success'>
@@ -13,5 +14,7 @@
 
   <%= f.input :domain, hint: t('simple_form.hints.content/account.domain_html') %>
 
-  <%= f.button :submit, t('admin.domains.edit.cta_text'), class: 'btn btn-info' %>
+  <div class='col-sm-8 offset-sm-4'>
+    <%= f.button :submit, t('admin.domains.edit.cta_text'), class: 'btn-block btn-info' %>
+  </div>
 <% end %>
