@@ -7,3 +7,6 @@ AllCops:
 Metrics/BlockLength:
   Exclude:
     - config/routes.rb
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: false

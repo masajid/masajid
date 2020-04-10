@@ -18,15 +18,8 @@ module Admin
       params.require(:account).permit(
         :responsable,
         :mosque,
-        configuration_attributes: [
-          :id,
-          :logo,
-        ],
-        seo_content_attributes: %i[
-          id
-          meta_title
-          meta_description
-        ]
+        configuration_attributes: %i[id logo],
+        seo_content_attributes: %i[id meta_title meta_description]
       )
     end
 
