@@ -25,7 +25,7 @@
 
       <dl>
         <dt><%= Content::Address.model_name.human %></dt>
-        <dd><%= current_account.address.to_s %></dd>
+        <dd><%= simple_format current_account.decorate.display_address %></dd>
       </dl>
     </div>
     <div class='col-md-6'>
