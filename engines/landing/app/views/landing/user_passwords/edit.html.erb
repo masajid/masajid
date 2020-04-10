@@ -1,26 +1,13 @@
-<h1 class='form-header'>
-  <%= t('devise.passwords.edit.change_your_password') %>
-</h1>
-
-<%= form_for(resource, as: resource_name, url: update_password_path, html: { method: :put, class: 'form-devise' }) do |f| %>
-  <%= render 'landing/shared/devise_error_messages', resource: resource %>
-
-  <%= f.hidden_field :reset_password_token %>
-
-  <div class='form-label-group'>
-    <%= f.password_field :password, autofocus: true, autocomplete: 'new-password', placeholder: t('devise.passwords.edit.new_password'), class: 'form-control' %>
-    <%= f.label :password, t('devise.passwords.edit.new_password') %>
-    <% if @minimum_password_length %>
-      <em><%= t('devise.passwords.edit.new_password_minimum_characters', length: @minimum_password_length) %></em><br />
-    <% end %>
+<div class='row devise'>
+  <div class='col-md-6 image'>
+    <%= image_tag 'landing/devise.jpg', class: 'img-fluid' %>
   </div>
 
-  <div class='form-label-group'>
-    <%= f.password_field :password_confirmation, autocomplete: 'off', placeholder: t('devise.passwords.edit.confirm_new_password'), class: 'form-control' %>
-    <%= f.label :password, t('devise.passwords.edit.confirm_new_password') %>
+  <div class='col-md-6'>
+    <h1 class='form-header'>
+      <%= t('devise.passwords.edit.change_your_password') %>
+    </h1>
+
+    <%= render 'edit_form' %>
   </div>
-
-  <%= f.submit t('devise.passwords.edit.change_my_password'), class: 'btn btn-sm btn-block' %>
-
-  <%= render 'landing/shared/devise_links' %>
-<% end %>
+</div>

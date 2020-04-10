@@ -1,27 +1,13 @@
-<h1 class='form-header'>
-  <%= t('devise.actions.login') %>
-</h1>
-
-<%= form_for(resource, as: resource_name, url: create_new_session_path, html: { class: 'form-devise' }) do |f| %>
-  <div class='form-label-group'>
-    <%= f.email_field :email, autofocus: true, required: true, autocomplete: 'email', placeholder: Content::User.human_attribute_name(:email), class: 'form-control' %>
-    <%= f.label :email, Content::User.human_attribute_name(:email) %>
+<div class='row devise'>
+  <div class='col-md-6 image'>
+    <%= image_tag 'landing/devise.jpg', class: 'img-fluid' %>
   </div>
 
-  <div class='form-label-group'>
-    <%= f.password_field :password, autocomplete: 'current-password', placeholder: Content::User.human_attribute_name(:password), class: 'form-control' %>
-    <%= f.label :password, Content::User.human_attribute_name(:password) %>
+  <div class='col-md-6'>
+    <h1 class='form-header'>
+      <%= t('devise.actions.login') %>
+    </h1>
+
+    <%= render 'form' %>
   </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class='checkbox'>
-      <%= f.label :remember_me do %>
-        <%= f.check_box :remember_me %> <%= t('devise.sessions.new.remember_me') %>
-      <% end %>
-    </div>
-  <% end %>
-
-  <%= f.submit t('devise.actions.login'), class: 'btn btn-sm btn-block' %>
-
-  <%= render 'landing/shared/devise_links' %>
-<% end %>
+</div>
