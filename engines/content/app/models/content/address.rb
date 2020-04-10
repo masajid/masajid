@@ -17,12 +17,12 @@ module Content
     validates :region_name, presence: true
     validates :country_id, presence: true
 
-    before_validation :geolocate, if: -> { changed? && to_s.present? }
+    before_validation :geolocate
 
     private
 
     def geolocate
-      result = ::Geocoder.coordinates(to_s)
+      result = addressable && ::Geocoder.coordinates(addressable.decorate.display_address_short)
 
       if result.present?
         self.latitude = result.first
