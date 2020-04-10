@@ -21,5 +21,10 @@ module Admin
     def social_network_params
       params.require(:social_network).permit(:youtube, :facebook, :google, :twitter, :vimeo, :instagram).merge(account: current_account)
     end
+
+    def wrapper_center?
+      true
+    end
+    helper_method :wrapper_center?
   end
 end
