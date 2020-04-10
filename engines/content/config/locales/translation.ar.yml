@@ -825,14 +825,8 @@ ar:
           محركات البحث.
         meta_description: النص الموجز الذي يصاحب صفحتك في صفحات نتائج محرك البحث (SERPs).
       content/user:
-<<<<<<< HEAD
-        unconfirmed_email:
-        current_password:
-        password:
-      content/account:
-        domain_html:
-=======
         unconfirmed_email: ينتظر حاليًا تأكيد %{email}
         current_password: نحتاج كلمة مرورك الحالية لتأكيد التغييرات
         password: اتركه فارغا إذا كنت لا ترغب في تغييره
->>>>>>> master
+      content/account:
+        domain_html:

@@ -214,17 +214,11 @@ tr:
         published_at: Yayın Tarihi
         photo: Fotoğraf
       content/account:
-<<<<<<< HEAD
-        subdomain:
-        responsable:
-        mosque:
-        default_domain:
-        domain:
-=======
         subdomain: Alt alan
         responsable: Sorumlu Adı
         mosque: Cami Adı
->>>>>>> master
+        default_domain:
+        domain:
       content/address:
         address1: Adres
         zip_code: Posta Kodu
@@ -811,10 +805,6 @@ tr:
       content/user:
         unconfirmed_email:
         current_password:
-<<<<<<< HEAD
-        password:
+        password: Değiştirmek istemiyorsanız boş bırakın
       content/account:
         domain_html:
-=======
-        password: Değiştirmek istemiyorsanız boş bırakın
->>>>>>> master
