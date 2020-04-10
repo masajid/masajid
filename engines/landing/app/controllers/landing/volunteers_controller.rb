@@ -4,6 +4,8 @@ module Landing
   class VolunteersController < ApplicationController
     helper Content::ControllerHelpers::Volunteer
 
+    layout 'landing/landing'
+
     def new
       @volunteer = Content::Volunteer.new
     end
