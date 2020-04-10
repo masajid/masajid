@@ -1,8 +1,22 @@
-.form-devise {
-  width: 100%;
-  max-width: 420px;
-  padding: 15px;
-  margin: auto;
+.devise {
+  .form-header {
+    margin: 50px 30px;
+  }
+
+  .col-md-6 {
+    padding: 30px;
+  }
+
+  .img-fluid {
+    width: 100%;
+  }
+
+  // Mobile
+  @media (max-width: 767.98px) {
+    .image {
+      display: none;
+    }
+  }
 }
 
 .form-label-group {
