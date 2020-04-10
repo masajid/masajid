@@ -34,5 +34,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'will_paginate', '~> 3.1.7'
   s.add_dependency 'will_paginate-bootstrap4' # , '~> 1.0.2'
 
-  s.add_development_dependency 'rubocop-rails', '~> 2.5.0'
+  s.add_development_dependency 'rubocop-rails', '~> 2.5.2'
 end

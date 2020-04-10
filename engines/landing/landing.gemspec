@@ -30,5 +30,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'flag-icons-rails', '~> 3.1.0'
   s.add_dependency 'font-awesome-rails'
 
-  s.add_development_dependency 'rubocop-rails', '~> 2.5.0'
+  s.add_development_dependency 'rubocop-rails', '~> 2.5.2'
 end
