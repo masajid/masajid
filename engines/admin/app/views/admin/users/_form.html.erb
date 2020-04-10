@@ -15,7 +15,5 @@
 
   <%= f.input :current_password, hint: t('simple_form.hints.content/user.current_password') %>
 
-  <div class='col-sm-8 offset-sm-4 pr-0'>
-    <%= f.button :submit, t('shared.actions.update'), class: 'btn-block btn-info' %>
-  </div>
+  <%= f.button :submit, t('shared.actions.update'), class: 'btn-info pull-right' %>
 <% end %>
