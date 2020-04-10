@@ -17,6 +17,7 @@ nl:
         supported_locales:
         meta_title_html:
         meta_description:
+        admin_locale:
       content/article:
         video_link_html:
         slug_html:
@@ -618,6 +619,8 @@ nl:
     configurations:
       edit:
         header:
+      update:
+        success:
     countries:
       edit:
         header:
@@ -651,19 +654,21 @@ nl:
     users:
       edit:
         header:
-        cta:
+      update:
+        success:
     pundit:
       unauthorized:
     shared:
-      account:
       administration:
       view_site:
       are_you_sure:
       total:
+      profile:
     tabs:
       dashboard:
       settings:
       general:
+      languages:
     newsletters:
       edit:
         header:
@@ -677,6 +682,12 @@ nl:
     messages:
       show:
         cta_text:
+    about:
+      update:
+        success:
+    languages:
+      update:
+        success:
   landing:
     admin_panel:
     create_account:
@@ -774,6 +785,7 @@ nl:
       edit:
       new:
       show:
+      update:
     footer:
       back_to_top:
     locales:

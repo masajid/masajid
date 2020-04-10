@@ -598,6 +598,8 @@ ca:
     configurations:
       edit:
         header:
+      update:
+        success:
     countries:
       edit:
         header:
@@ -635,15 +637,17 @@ ca:
       view_site:
       are_you_sure:
       total:
-      account:
+      profile:
     tabs:
       dashboard:
       general:
       settings:
+      languages:
     users:
       edit:
         header:
-        cta:
+      update:
+        success:
     messages:
       show:
         cta_text:
@@ -657,6 +661,12 @@ ca:
         header:
       new:
         header:
+    about:
+      update:
+        success:
+    languages:
+      update:
+        success:
   landing:
     admin_panel:
     create_account:
@@ -754,6 +764,7 @@ ca:
       edit:
       new:
       show:
+      update:
     locales:
       en:
       fr:
@@ -784,6 +795,7 @@ ca:
         supported_locales:
         meta_title_html:
         meta_description:
+        admin_locale:
       content/article:
         video_link_html:
         slug_html:

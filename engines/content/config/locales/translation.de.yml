@@ -21,6 +21,7 @@ de:
           tag, welche für Suchmaschinen genutzt wird.
         meta_description: The summary text that accompanies your homepage link in
           search engine results pages (SERPs).
+        admin_locale:
       content/article:
         video_link_html: |
           e.g. <mark>https://www.youtube.com/embed/M1M9n-wUhy0</mark>,
@@ -639,6 +640,8 @@ de:
     configurations:
       edit:
         header: Allgemeine Einstellungen
+      update:
+        success:
     countries:
       edit:
         header: Land ändern
@@ -676,15 +679,17 @@ de:
       view_site: Seite anzeigen
       are_you_sure: Sind Sie sicher?
       total: 'Total: %{count}'
-      account: Konto
+      profile: Konto
     tabs:
       dashboard: Dashboards
       general: Allgemein
       settings: Einstellungen
+      languages: Sprachen
     users:
       edit:
         header: Konto bearbeiten
-        cta: Konto aktualisieren
+      update:
+        success:
     messages:
       show:
         cta_text: Schnellantwort hier
@@ -698,6 +703,12 @@ de:
         header:
       new:
         header:
+    about:
+      update:
+        success:
+    languages:
+      update:
+        success:
   landing:
     admin_panel: Admin panel
     create_account: Kreierte Konto
@@ -801,6 +812,7 @@ de:
       edit: Ergänzen
       new: Neu
       show: Details
+      update:
     locales:
       en: Englisch
       fr: Französisch

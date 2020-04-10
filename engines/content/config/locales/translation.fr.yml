@@ -21,6 +21,7 @@ fr:
           tag, qui est utilisé par les moteurs de recherche.
         meta_description: Le texte récapitulatif qui accompagne le lien de votre page
           d'accueil dans les pages de résultats des moteurs de recherche (SERPs).
+        admin_locale:
       content/article:
         video_link_html: |
           e.g. <mark>https://www.youtube.com/embed/M1M9n-wUhy0</mark>,
@@ -661,6 +662,8 @@ fr:
     configurations:
       edit:
         header: Configuration générale
+      update:
+        success:
     countries:
       edit:
         header: Editer le pays
@@ -698,15 +701,17 @@ fr:
       view_site: Voir le site
       are_you_sure: Êtes-vous sûr?
       total: 'Total: %{count}'
-      account: Compte
+      profile: Compte
     tabs:
       dashboard: Tableaux de bord
       general: Général
       settings: Paramètres
+      languages: Langues
     users:
       edit:
         header: Modifier le compte
-        cta: Mettre le compte à jour
+      update:
+        success:
     messages:
       show:
         cta_text: Répondre rapidement ici
@@ -720,6 +725,12 @@ fr:
         header:
       new:
         header:
+    about:
+      update:
+        success:
+    languages:
+      update:
+        success:
   landing:
     admin_panel: panneau d'administration
     create_account: Créer un compte
@@ -835,6 +846,7 @@ fr:
       edit: Modifier
       new: Nouveau
       show: Détails
+      update:
     locales:
       en: Anglais
       fr: Français
