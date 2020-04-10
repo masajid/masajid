@@ -220,6 +220,9 @@ en:
         body: 'You received a message from:'
         body_2: Please hit replay and answer directly to the message.
   admin:
+    about:
+      update:
+        success: About us content was updated successfully
     articles:
       new:
         header: New Article

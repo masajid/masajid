@@ -1,0 +1,6 @@
+<%= simple_form_for @configuration, url: about_path, method: :put do |f| %>
+  <%= f.input :about_us, as: :hidden %>
+  <trix-editor input='configuration_about_us'></trix-editor>
+
+  <%= f.button :submit, t('shared.actions.update'), class: 'btn-block btn-info' %>
+<% end %>

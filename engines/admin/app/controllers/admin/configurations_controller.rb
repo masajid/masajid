@@ -19,7 +19,6 @@ module Admin
         configuration_attributes: [
           :id,
           :logo,
-          :about_us,
         ],
         seo_content_attributes: %i[
           id

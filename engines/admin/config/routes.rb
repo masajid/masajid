@@ -22,6 +22,7 @@ Admin::Engine.routes.draw do
   resource :social_network, only: %i[edit update]
   resource :configuration, only: %i[edit update]
   resource :language, only: %i[edit update]
+  resource :about, only: %i[edit update], controller: :about
   resource :user, only: %i[edit update]
 
   namespace :api do

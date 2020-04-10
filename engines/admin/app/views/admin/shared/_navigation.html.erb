@@ -81,6 +81,13 @@
             icon: 'type',
             active: request.path.starts_with?('/admin/language/edit'),
           ) %>
+
+          <%= nav_item(
+            text: Content::Configuration.human_attribute_name(:about_us),
+            path: edit_about_path,
+            icon: 'info',
+            active: request.path.starts_with?('/admin/about/edit'),
+          ) %>
         <% end %>
 
         <%= nav_item(

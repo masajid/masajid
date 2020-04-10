@@ -36,6 +36,7 @@ module Admin
       [
         '/admin/configuration/edit',
         '/admin/language/edit',
+        '/admin/about/edit',
         '/admin/social_network/edit',
         '/admin/slider/edit',
         '/admin/sidebar',

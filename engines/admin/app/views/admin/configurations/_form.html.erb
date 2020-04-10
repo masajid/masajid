@@ -8,12 +8,6 @@
           <%= configuration_form.input :logo %>
           <%= image_tag main_app.url_for(current_account.logo.variant(resize_to_limit: [150, 150])) if current_account.logo.attached? %>
         </div>
-
-        <div class='account_configuration_about_us'>
-          <%= configuration_form.label :about_us %>
-          <%= configuration_form.input :about_us, as: :hidden %>
-          <trix-editor input='account_configuration_attributes_about_us'></trix-editor>
-        </div>
       <% end %>
     </div>
 
