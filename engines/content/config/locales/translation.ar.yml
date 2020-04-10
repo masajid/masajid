@@ -610,6 +610,8 @@ ar:
     configurations:
       edit:
         header: إعدادات عامة
+      update:
+        success:
     countries:
       edit:
         header: تعديل البلد
@@ -647,15 +649,17 @@ ar:
       view_site: عرض الموقع
       are_you_sure: هل أنت متأكد؟
       total: 'المجموع: %{count}'
-      account: حساب
+      profile: حساب
     tabs:
       dashboard: لوحات القيادة
       general: عام
       settings: إعدادات
+      languages: اللغات
     users:
       edit:
         header: تعديل الحساب
-        cta: تحديث الحساب
+      update:
+        success: تم تحديث حسابك بنجاح.
     messages:
       show:
         cta_text: الرد بسرعة هنا
@@ -669,6 +673,12 @@ ar:
         header:
       new:
         header:
+    about:
+      update:
+        success:
+    languages:
+      update:
+        success:
   landing:
     admin_panel: لوحة الادارة
     create_account: إنشاء حساب
@@ -777,6 +787,7 @@ ar:
       edit: تعديل
       new: جديد
       show: تفاصيل
+      update:
     locales:
       en: الإنجليزية
       fr: الفرنسية
@@ -809,6 +820,7 @@ ar:
           التي تستخدمها محركات البحث.
         meta_description: النص الموجز المصاحب لرابط صفحتك الرئيسية في صفحات نتائج
           محرك البحث (SERPs).
+        admin_locale:
       content/article:
         video_link_html: مثلا <mark>https://www.youtube.com/embed/M1M9n-wUhy0</mark>,
           <mark>https://player.vimeo.com/video/103525883</mark>

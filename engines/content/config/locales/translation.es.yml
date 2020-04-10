@@ -21,6 +21,7 @@ es:
           </mark> etiqueta, que es utilizada por los motores de búsqueda.
         meta_description: El texto de resumen que acompaña al enlace de su página
           de inicio en las páginas de resultados del motor de búsqueda (SERP).
+        admin_locale:
       content/article:
         video_link_html: |
           e.g. <mark>https://www.youtube.com/embed/M1M9n-wUhy0</mark>,
@@ -664,6 +665,8 @@ es:
     configurations:
       edit:
         header: Configuración general
+      update:
+        success:
     countries:
       edit:
         header: Editar país
@@ -701,15 +704,17 @@ es:
       view_site: Ver sitio
       are_you_sure: "¿Estás seguro?"
       total: 'Total: %{count}'
-      account: Tu cuenta
+      profile: Tu cuenta
     tabs:
       dashboard: Dashboards
       general: General
       settings: Ajustes
+      languages: Idiomas
     users:
       edit:
         header: Editar cuenta
-        cta: Actualizar cuenta
+      update:
+        success:
     messages:
       show:
         cta_text: Responde rápidamente desde aquí
@@ -723,6 +728,12 @@ es:
         header:
       new:
         header:
+    about:
+      update:
+        success:
+    languages:
+      update:
+        success:
   landing:
     admin_panel: Panel de administrador
     create_account: Crear una cuenta
@@ -839,6 +850,7 @@ es:
       edit: Editar
       new: Nuevo
       show: Ver detalles
+      update:
     locales:
       en: Inglés
       fr: Francés

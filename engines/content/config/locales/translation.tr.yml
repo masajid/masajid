@@ -607,6 +607,8 @@ tr:
     configurations:
       edit:
         header: Genel Yapılandırma
+      update:
+        success:
     countries:
       edit:
         header: Ülkeyi Düzenle
@@ -644,15 +646,17 @@ tr:
       view_site: Siteyi Görüntüle
       are_you_sure: Emin misiniz?
       total: 'Toplam: %{count}'
-      account: Hesap
+      profile: Hesap
     tabs:
       dashboard: Gösterge Tabloları
       general: Genel
       settings: Ayarlar
+      languages: Diller
     users:
       edit:
         header: Hesabı düzenle
-        cta: Hesabı güncelle
+      update:
+        success:
     messages:
       show:
         cta_text: Burada hızlı bir şekilde yanıtlayın
@@ -666,6 +670,12 @@ tr:
         header:
       new:
         header:
+    about:
+      update:
+        success:
+    languages:
+      update:
+        success:
   landing:
     admin_panel: Yönetici Paneli
     create_account: Hesap oluştur
@@ -764,6 +774,7 @@ tr:
       edit:
       new:
       show: Ayrıntılar
+      update:
     locales:
       en: İngilizce
       fr: Fransızca
@@ -794,6 +805,7 @@ tr:
         supported_locales:
         meta_title_html:
         meta_description:
+        admin_locale:
       content/article:
         video_link_html:
         slug_html:
