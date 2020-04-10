@@ -3,6 +3,14 @@ body {
   background: #fafafa;
 }
 
+a {
+  color: #17a2b8;
+
+  &:hover {
+    color: #45B5C6;
+  }
+}
+
 .wrapper {
   display: flex;
   width: 100%;
@@ -16,14 +24,6 @@ body {
 
     hr {
       margin: 30px 0;
-    }
-
-    a {
-      color: #17a2b8;
-
-      &:hover {
-        color: #45B5C6;
-      }
     }
 
     .page-header {
