@@ -9,16 +9,16 @@ de:
   simple_form:
     hints:
       content/page:
-        meta_description: The summary text that accompanies your page in search engine
-          results pages (SERPs).
-        meta_title_html: The content for the page's HTML <mark>&lt;title&gt;</mark>
-          tag, which is used by search engines.
+        meta_description: Der zusammengefasste Text, welcher Ihre Seite in den Suchmaschinen-Ergenisseiten
+          begleiten.
+        meta_title_html: Der Inhalt für die Seiten-HTML <mark>&lt;title&gt;</mark>
+          tag, welche für Suchmaschinen genutzt wird.
       content/configuration:
         default_locale: Default language of your site.
-        supported_locales: A list of available languages that user can choose in the
-          site.
-        meta_title_html: The content for the homepage's HTML <mark>&lt;title&gt;</mark>
-          tag, which is used by search engines.
+        supported_locales: Eine Liste der Sprachen, welche der Nutzer auf der Seite
+          auswählen kann.
+        meta_title_html: Der Inhalt für die Homepage-HTML <mark>&lt;title&gt;</mark>
+          tag, welche für Suchmaschinen genutzt wird.
         meta_description: The summary text that accompanies your homepage link in
           search engine results pages (SERPs).
       content/article:
@@ -28,18 +28,19 @@ de:
         slug_html: |
           A slug is a part of a URL that identifies a page using human-readable words, and it is used for SEO purposes.
           For example, in the web address <mark>https://example.com/article/the-islam-way</mark>, the slug would be the <mark>the-islam-way part</mark>.
-        meta_title_html: The content to the article page's HTML <mark>&lt;title&gt;</mark>
-          tag, which is used by search engines.
+        meta_title_html: Der Inhalt für die Atrtikelseiten-HTML <mark>&lt;title&gt;</mark>
+          tag, welche für Suchmaschinen genutzt wird.
         meta_description: The summary text that accompanies your article page in search
           engine results pages (SERPs).
       content/user:
         unconfirmed_email:
-        current_password:
-        password:
+        current_password: Wir benötigen Ihr aktuelles Passwort um Ihre Änderungen
+          bestätigen zu können
+        password: Leer lassen, falls keine Änderungen vorgenommen werden sollen.
       content/account:
         domain_html:
     required:
-      text: Benötigt
+      text: Pflicht
       mark: "*"
     error_notification:
       default_message: 'Please review the problems below:'
@@ -267,7 +268,6 @@ de:
       content/configuration:
         logo: Logo
         about_us: Über uns
-        mawaqit_link: Mawakit-Link
         theme: Motiv
         supported_locales: Unterstützte Sprachen
         default_locale: Standardsprache
@@ -319,6 +319,7 @@ de:
         confirmed_at: Bestätigungsdatum
         current_password: Aktuelles Passwort
         password_confirmation: Passwortbestätigung
+        unconfirmed_email:
       content/volunteer:
         name: Name
         identification: Identifizierung
@@ -352,8 +353,8 @@ de:
         subject: Fachgebiet
         body: Nachricht
         newsletter: Ich möchte den Newsletter abonnieren
-        created_at: Eingangszeitpunkt
-        seen_at: Besichtigungszeit
+        created_at: Gesendet am
+        seen_at: Geshen am
       content/sidebar_content:
         title: Überschrift
         body: Inhalt
@@ -452,7 +453,7 @@ de:
       slash: Strich
       star: Stern
     currencies:
-      generic: "\\1 Euro"
+      generic: "\\1 Pfund"
       dollars: "\\1 Dollar"
       dollars_cents: "\\1 Dollar \\2 Cent"
       pounds: "\\1 Pfund"
@@ -473,7 +474,7 @@ de:
       en_dash: "-"
       em_dash: "--"
       frac14: ein Viertel
-      frac12: Hälfte
+      frac12: halbe(r)
       frac34: drei Viertel
       gt: ">"
       lt: "<"
@@ -525,30 +526,30 @@ de:
       not_approved: Ihr Konto wurde von unseren Administratoren noch nicht freigegeben.
     mailer:
       confirmation_instructions:
-        subject: Die Welt von Masajid - Bestätigungsanleitung
-        header: Hi %{mosque}!
+        subject: Masajid World - Bestätigungsanleitung
+        header: Hallo %{mosque}!
         cta_text: Bestätige mein Konto
         body_html:
       reset_password_instructions:
-        subject: Die Welt von Masajid - setze die Passwortvorgaben zurück
+        subject: Masajid World -  Passwort wiederherstellen
         header:
         body:
           primary_html:
           secondary_html:
         cta_text: 'Ändere mein Passwort '
       unlock_instructions:
-        subject: Die Welt von Masajid - Freigabeanleitung
+        subject: Masajid World - Freigabeanleitung
         header:
         body_html:
         cta_text: Schalte mein Konto frei
       email_changed:
-        subject: Die Welt von Masajid - E-Mail wurde geändert
+        subject: Masajid World - Die E-Mail-Adresse wurde geändert
         header:
         body:
           unconfirmed_email_html:
           confirmed_email_html:
       password_change:
-        subject: Die Welt von Masajid - Passwort wurde geändert
+        subject: Masajid World - Passwort wurde geändert
         header:
         body_html:
     omniauth_callbacks:
@@ -607,22 +608,22 @@ de:
   content:
     account_mailer:
       accept_entry:
-        subject: Die Welt von Masajid - Ihr Konto wurde akzeptiert
+        subject: Masajid World - Ihr Konto wurde akzeptiert
         header: Hallo %{mosque}!
         body_html: |
-          <p>Congratulations!!! Your account was accepted by our admins.</p>
-          <p>You need to enter a password through the link below, then you can start publishing your articles and customizing your site.</p>
-          <p>If you have any question or feedback please don't hesitate to get in touch with us!</p>
+          <p>Herzlichen Glückwunsch !!! Ihr Konto wurde von unseren Administratoren akzeptiert.</ P>
+          <p>Sie müssen über den folgenden Link ein Passwort eingeben, um Ihre Artikel zu veröffentlichen und Ihre Website anzupassen.</ p>
+          <p>Wenn Sie Fragen oder Feedback haben, zögern Sie bitte nicht, sich mit uns in Verbindung zu setzen!</ p>
         cta_text: Passwort eingeben
       decline_entry:
-        subject: Die Welt von Masajid - Ihr Konto wurde nicht zugelassen
+        subject: Masajid World - Ihr Konto wurde nicht zugelassen
         header: Hallo %{mosque}!
         body_html: |-
           <p>We are sorry to inform you that your account was declined by our admins because it seems to be not real.</p>
           <p>If you disagree or you have any concern please get in touch with us!</p>
           <p>Thanks for your undestanding!</p>
       notify_creation_new_entry:
-        subject: Masajid - New account %{mosque} was created
+        subject: Masajid World - Das neue Konto %{mosque} wurde erstellt
         header: 'Hallo, Admin! '
         cta_text: Details anzeigen
         body_html: Das neues Konto wurde erstellt.
@@ -718,14 +719,14 @@ de:
     how_to_use:
       headline: Wie zu benutzen?
       step_1:
-        headline: 1. Kreierte Konto
+        headline: 1. Konto erstellen
         content: You need to create an account in the platform with your information.
       step_2:
         headline: 2. Genehmigung abwarten
         content: Our team should make sure your mosque really exists then will contact
           you within 24 hours.
       step_3:
-        headline: 3. Administrate
+        headline: 3. Verwalten
         content: You will receive an email to setup your password, so you can login
           to the administration panel and customize your website.
       step_4:

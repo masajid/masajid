@@ -72,14 +72,14 @@
           path: edit_configuration_path,
           icon: 'zap',
           active: request.path.starts_with?('/admin/configuration/edit'),
-        ) if policy(current_account&.configuration).update? %>
+        ) if current_account && policy(current_account.configuration).update? %>
 
         <%= nav_item(
           text: Content::Slider.model_name.human,
           path: edit_slider_path,
           icon: 'airplay',
           active: request.path.starts_with?('/admin/slider/edit'),
-        ) if policy(current_account&.slider).update? %>
+        ) if current_account && policy(current_account.slider).update? %>
 
         <%= nav_item(
           text: Content::SidebarContent.model_name.human,
@@ -93,7 +93,7 @@
           path: edit_social_network_path,
           icon: 'facebook',
           active: request.path.starts_with?('/admin/social_network/edit'),
-        ) if policy(current_account&.social_network).update? %>
+        ) if current_account && policy(current_account.social_network).update? %>
 
         <%= nav_item(
           text: plural_resource_name(Content::Country),

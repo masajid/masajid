@@ -251,7 +251,6 @@ nl:
       content/configuration:
         logo:
         about_us:
-        mawaqit_link:
         theme:
         supported_locales:
         default_locale:
@@ -303,6 +302,7 @@ nl:
         password:
         password_confirmation:
         confirmed_at:
+        unconfirmed_email:
       content/volunteer:
         name:
         identification:

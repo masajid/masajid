@@ -21,6 +21,6 @@ module Content
     delegate :email, to: :owner
     delegate :address1, :zip_code, :city_name, :country, :phone, :latitude, :longitude, to: :address
     delegate :meta_title, :meta_description, to: :seo_content, allow_nil: true
-    delegate :logo, :about_us, :mawaqit_link, :supported_locales, :default_locale, :admin_locale, to: :configuration
+    delegate :logo, :about_us, :supported_locales, :default_locale, :admin_locale, to: :configuration
   end
 end

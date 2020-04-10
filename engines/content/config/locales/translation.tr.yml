@@ -185,7 +185,7 @@ tr:
         other: Bölgeler
         few: Bölgeler
       content/slider:
-        one:
+        one: Kaydırıcı
       content/social_network:
         one: Sosyal medya
       content/subscriber:
@@ -202,8 +202,8 @@ tr:
         other: Mesajlar
       content/sidebar_content:
         few:
-        one:
-        other:
+        one: Kenar Çubuğu
+        other: Kenar Çubuğu İçeriği
     attributes:
       content/article:
         title: Başlık
@@ -235,7 +235,6 @@ tr:
       content/configuration:
         logo: Logo
         about_us: Hakkımızda
-        mawaqit_link:
         theme: Tema
         supported_locales: Desteklenen Diller
         default_locale: Varsayılan Dil
@@ -287,6 +286,7 @@ tr:
         confirmed_at: Onay Tarihi
         current_password: Şimdiki Şifre
         password_confirmation: Şifre Onayı
+        unconfirmed_email: 'Onaylanmadı: %{email}'
       content/volunteer:
         name: Ad
         identification: Kimlik
@@ -325,8 +325,8 @@ tr:
       content/sidebar_content:
         title: Başlık
         body:
-        light_background:
-        active:
+        light_background: Açık Renkli Fon
+        active: Aktif
   datetime:
     distance_in_words:
       half_a_minute: yarım dakika

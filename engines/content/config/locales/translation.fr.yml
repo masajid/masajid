@@ -278,7 +278,6 @@ fr:
       content/configuration:
         logo: Logo
         about_us: À propos de nous
-        mawaqit_link: Lien Mawakit
         theme: Thème
         supported_locales: Langues supportées
         default_locale: Langage par défaut
@@ -330,6 +329,7 @@ fr:
         confirmed_at: Date de confirmation
         current_password: Mot de passe actuel
         password_confirmation: Confirmation du mot de passe
+        unconfirmed_email:
       content/volunteer:
         name: Nom
         identification: Identification
