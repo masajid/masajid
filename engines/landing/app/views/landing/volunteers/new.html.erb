@@ -1,7 +1,7 @@
-<%= image_tag 'landing/volunteers.png', class: 'img-fluid' %>
+<%= image_tag 'landing/volunteers.png', alt: t('landing.volunteers.new.header'), class: 'img-fluid' %>
 
 <h1 class='form-header'>
-  <%= t('shared.volunteers.new.header') %>
+  <%= t('landing.volunteers.new.header') %>
 </h1>
 
 <%= render 'content/shared/volunteers/form', volunteer: @volunteer %>
