@@ -2,7 +2,7 @@
   margin-bottom: 64px;
 
   .carousel-caption {
-    bottom: 3rem;
+    bottom: 48px;
     z-index: 10;
   }
 
@@ -38,8 +38,8 @@
 
     img {
       margin-bottom: 24px;
-      width: 140px;
-      height: 140px;
+      width: 100px;
+      height: 100px;
     }
 
     h2 {
@@ -72,10 +72,13 @@
   height: 500px;
 }
 
-@media (min-width: 40em) {
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
+// Tablet and Desktop
+@media (min-width: 576px) {
+  .carousel-caption {
+    p {
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
   }
 }
