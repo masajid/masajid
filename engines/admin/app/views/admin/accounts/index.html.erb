@@ -29,11 +29,13 @@
             <%= account.owner.email %>
             <% if account.owner.unconfirmed_email? %>
               <br />
-              <%= Content::User.human_attribute_name(:unconfirmed_email, email: account.owner.unconfirmed_email)  %>
+              <span class='badge badge-warning'>
+                <%= account.owner.unconfirmed_email %>
+              </span>
             <% end %>
           </td>
           <td><%= account.responsable %></td>
-          <td><%= account.owner.confirmed_at.to_formatted_s(:long) %></td>
+          <td><%= account.owner.confirmed_at&.to_formatted_s(:long) %></td>
           <td><%= account.address.to_s %></td>
           <td><%= link_to t('shared.actions.edit'), edit_account_path(account), class: 'btn btn-primary btn-sm' %></td>
           <td><%= link_to t('shared.actions.accept'), accept_account_path(account), method: :put, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-success btn-sm' if account.pending? %></td>

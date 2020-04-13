@@ -282,7 +282,6 @@ ar:
         confirmed_at: تاريخ التأكيد
         current_password: كلمة السر الحالية
         password_confirmation: تأكيد كلمة المرور
-        unconfirmed_email:
       content/volunteer:
         name: اسم
         identification: التعريف
@@ -708,6 +707,7 @@ ar:
       new:
         title: انشاء حساب
         meta_description: أنشئ موقعًا إلكترونيًا لمسجدك
+        header:
       create:
         error_message: لم تنجح في إنشاء الحساب، يرجى المحاولة مرة أخرى أو الاتصال
           بنا حتى نتمكن من مساعدتك في إنشاء حسابك.
@@ -743,6 +743,7 @@ ar:
       new:
         title: تطوع مع عالم المساجد
         meta_description: ساهم مع عالم المساجد واترك أثرا في العالم الإسلامي
+        header:
     footer:
       copyright_html: 'جميع الحقوق محفوظة لموقع عالم المساجد %{year} &copy; '
       home: الصفحة الرئيسية

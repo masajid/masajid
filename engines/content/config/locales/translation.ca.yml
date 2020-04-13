@@ -278,7 +278,6 @@ ca:
         confirmed_at:
         current_password:
         password_confirmation:
-        unconfirmed_email:
       content/volunteer:
         name:
         identification:
@@ -695,6 +694,7 @@ ca:
       new:
         title:
         meta_description:
+        header:
       create:
         error_message:
       success_page:
@@ -725,6 +725,7 @@ ca:
       new:
         title:
         meta_description:
+        header:
     footer:
       copyright_html:
       home:

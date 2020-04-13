@@ -280,7 +280,6 @@ it:
         confirmed_at:
         current_password: Password attuale
         password_confirmation:
-        unconfirmed_email:
       content/volunteer:
         name: Nome
         identification: Identificazione
@@ -695,6 +694,7 @@ it:
       new:
         title:
         meta_description:
+        header:
       create:
         error_message:
       success_page:
@@ -725,6 +725,7 @@ it:
       new:
         title:
         meta_description:
+        header:
     footer:
       copyright_html:
       home:

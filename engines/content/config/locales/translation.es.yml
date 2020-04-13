@@ -323,7 +323,6 @@ es:
         confirmed_at: Fecha de confirmación
         current_password: Contraseña actual
         password_confirmation: Confirmación de contraseña
-        unconfirmed_email:
       content/volunteer:
         name: Nombre
         identification: Identificación
@@ -766,6 +765,7 @@ es:
       new:
         title: Crea una cuenta
         meta_description: Crea un página web para tu mezquita
+        header:
       create:
         error_message: Error en la creación de la cuenta, intente nuevamente o contáctanos
           para que podamos ayudarte a crear tu cuenta
@@ -803,6 +803,7 @@ es:
         title: Ser voluntario en Masajid World
         meta_description: Ser voluntario en Masajid World y tener un impacto en nuestra
           comunidad musulmana
+        header:
     footer:
       copyright_html: "&copy; Copyrights Masajid World. Todos los derechos reservados."
       home: Portada

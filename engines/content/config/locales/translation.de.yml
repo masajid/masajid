@@ -316,7 +316,6 @@ de:
         confirmed_at: Bestätigungsdatum
         current_password: Aktuelles Passwort
         password_confirmation: Passwortbestätigung
-        unconfirmed_email:
       content/volunteer:
         name: Name
         identification: Identifizierung
@@ -743,6 +742,7 @@ de:
       new:
         title: Kreieren Sie ein Konto
         meta_description: Kreieren Sie eine Webseite für Ihre Moschee
+        header:
       create:
         error_message:
       success_page:
@@ -773,6 +773,7 @@ de:
       new:
         title:
         meta_description:
+        header:
     footer:
       copyright_html:
       home:
