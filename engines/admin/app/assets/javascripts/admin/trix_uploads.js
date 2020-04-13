@@ -10,15 +10,15 @@ function uploadAttachment(attachment) {
   if (file) {
     var upload = new window.ActiveStorage.DirectUpload(file, '/rails/active_storage/direct_uploads', window)
 
-    upload.create((error, attributes) => {
+    upload.create((error, blob) => {
       if (error) {
         throw new Error(`Direct upload failed: ${error}`)
       }
 
       // Tell Trix what url and href to use on successful upload
       return attachment.setAttributes({
-        url: `/rails/active_storage/blobs/${attributes.signed_id}/${attributes.filename}`,
-        href: `/rails/active_storage/blobs/${attributes.signed_id}/${attributes.filename}`,
+        url: `/rails/active_storage/blobs/${blob.signed_id}/${blob.filename}`,
+        href: `/rails/active_storage/blobs/${blob.signed_id}/${blob.filename}`,
       })
     })
   }
