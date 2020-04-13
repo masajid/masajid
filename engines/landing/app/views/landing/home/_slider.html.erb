@@ -1,28 +1,22 @@
-<div id='mySlider' class='carousel' data-ride='carousel'>
+<div id='mySlider' class='carousel slide' data-ride='carousel'>
   <ol class='carousel-indicators'>
     <li data-target='#mySlider' data-slide-to='0' class='active'></li>
     <li data-target='#mySlider' data-slide-to='1'></li>
   </ol>
 
   <div class='carousel-inner'>
-    <div class='carousel-item active'>
-      <%= image_tag 'landing/al-nour.jpg', alt: t('landing.slider.first.content'), class: 'img-fluid' %>
-      <div class='container'>
-        <div class='carousel-caption text-left'>
-          <h1><%= t('landing.slider.first.headline') %></h1>
-          <p><%= t('landing.slider.first.content') %></p>
-          <p><%= link_to t('landing.create_account'), new_account_path, class: 'btn' %></p>
-        </div>
+    <div class='carousel-item active slide-1'>
+      <div class='carousel-caption text-left'>
+        <h1><%= t('landing.slider.first.headline') %></h1>
+        <p><%= t('landing.slider.first.content') %></p>
+        <%= link_to t('landing.create_account'), new_account_path, class: 'btn' %>
       </div>
     </div>
 
-    <div class='carousel-item'>
-      <%= image_tag 'landing/al-aqsa.jpg', alt: t('landing.slider.second.content_html'), class: 'img-fluid' %>
-      <div class='container'>
-        <div class='carousel-caption'>
-          <h1><%= t('landing.slider.second.headline') %></h1>
-          <p><%= t('landing.slider.second.content_html') %>َ</p>
-        </div>
+    <div class='carousel-item slide-2'>
+      <div class='carousel-caption'>
+        <h2><%= t('landing.slider.second.headline') %></h2>
+        <p><%= t('landing.slider.second.content_html') %>َ</p>
       </div>
     </div>
   </div>
