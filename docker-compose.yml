@@ -14,19 +14,9 @@ services:
     volumes:
       - redis:/data
     ports:
-      - 6379:6379
+      - 6380:6379
 
-  sidekiq:
-    build: .
-    env_file: web_container/.env
-    volumes:
-      - .:/app
-    command: sidekiq -C config/sidekiq.yml
-    depends_on:
-      - db
-      - redis
-
-  app:
+  app: &app_base
     build: .
     env_file: web_container/.env
     volumes:
@@ -36,6 +26,13 @@ services:
     depends_on:
       - db
       - redis
+
+  sidekiq:
+    <<: *app_base
+    command: bundle exec sidekiq -C config/sidekiq.yml
+    ports: []
+    depends_on:
+      - app
 
 volumes:
   redis:
