@@ -330,7 +330,6 @@ fr:
         confirmed_at: Date de confirmation
         current_password: Mot de passe actuel
         password_confirmation: Confirmation du mot de passe
-        unconfirmed_email:
       content/volunteer:
         name: Nom
         identification: Identification
@@ -771,6 +770,7 @@ fr:
       new:
         title: Créer un compte
         meta_description: Créez un site web pour votre mosquée
+        header:
       create:
         error_message: La création du compte a échoué, veuillez réessayer ou nous
           contactez pour qu'on puisse vous aider à créer votre compte
@@ -781,7 +781,7 @@ fr:
           votre compte dans les prochaines 24 heures.
     home:
       index:
-        title: Plateforme pour les mosquées pour créer et gérer leurs sites Web
+        title: Créez un site web pour votre mosquée
         meta_description: Masajid World fournit une solution pour les mosquées afin
           de créer et gérer leurs sites Web
         map:
@@ -808,6 +808,7 @@ fr:
         title: Bénévole à Masajid World
         meta_description: Bénévole à Masajid World et faites un impact dans notre
           communauté musulmane
+        header:
     footer:
       copyright_html: "&copy; Copyrights Masajid World. Tous les droits sont réservés."
       home: Home

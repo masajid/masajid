@@ -303,7 +303,6 @@ nl:
         password:
         password_confirmation:
         confirmed_at:
-        unconfirmed_email:
       content/volunteer:
         name:
         identification:
@@ -725,6 +724,7 @@ nl:
       new:
         title:
         meta_description:
+        header:
       success_page:
         header:
         body_html:
@@ -753,6 +753,7 @@ nl:
       new:
         title:
         meta_description:
+        header:
   public:
     continued:
     read_more:

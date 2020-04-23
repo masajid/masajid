@@ -280,7 +280,6 @@ tr:
         confirmed_at: Onay Tarihi
         current_password: Şimdiki Şifre
         password_confirmation: Şifre Onayı
-        unconfirmed_email: 'Onaylanmadı: %{email}'
       content/volunteer:
         name: Ad
         identification: Kimlik
@@ -551,7 +550,7 @@ tr:
         adresinizin onaylanması gerek. Yeni e-posta hesabınızın onaylanması için lütfen
         size gönderdiğimiz e-postada bulunan onay linkini açın.
       updated: Hesabınız başarıyla güncellendi.
-      updated_but_not_signed_in: Hesabınız başarıyla güncellendi, ancak şifreniz değiştiğinden,
+      updated_but_not_signed_in: Hesabınız başarıyla güncellendi, ancak şifreniz değiştiğinden
         tekrar giriş yapmanız gerekiyor.
     sessions:
       signed_in: Başarıyla giriş yapıldı.
@@ -705,6 +704,7 @@ tr:
       new:
         title: Hesap oluştur
         meta_description: Caminiz için bir web sitesi oluşturun
+        header:
       create:
         error_message:
       success_page:
@@ -735,6 +735,7 @@ tr:
       new:
         title:
         meta_description:
+        header:
     footer:
       copyright_html:
       home: Anasayfa

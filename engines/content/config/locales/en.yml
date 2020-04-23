@@ -136,7 +136,6 @@ en:
       content/user:
         current_password: Current Password
         email: Email address
-        unconfirmed_email: 'Not confirmed: %{email}'
         password: Password
         password_confirmation: Password Confirmation
         confirmed_at: Confirmation Date
@@ -349,6 +348,7 @@ en:
       new:
         title: Create an account
         meta_description: Create a website for your mosque
+        header: Create an account for your mosque
       success_page:
         header: Your account was created successfully
         body_html: |
@@ -356,7 +356,7 @@ en:
           Then our team members will authorize your account in the next 24 hours.
     home:
       index:
-        title: Platform for mosques to create and manage their websites
+        title: Create a website for your mosque
         meta_description: Masajid World delivers a solution for mosques to create
           and manage their websites
         pateron:
@@ -377,12 +377,13 @@ en:
         title: Reset your password
     user_sessions:
       new:
-        title: Login
+        title: Login to your administration panel
     volunteers:
       new:
         title: Volunteering at Masajid World
         meta_description: Volunteer at Masajid World and make an impact in our muslim
           community
+        header: Volunteer with us and make an impact
   public:
     continued: "... (continued)"
     read_more: Continue reading
@@ -438,7 +439,7 @@ en:
     site_name: Masajid World
   devise:
     actions:
-      login: Sign in
+      login: Login
       logout: Sign out
     confirmations:
       new:
@@ -457,8 +458,8 @@ en:
       locked: Your account is locked.
       last_attempt: You have one more attempt before your account is locked.
       not_found_in_database: Invalid %{authentication_keys} or password.
-      timeout: Your session expired. Please sign in again to continue.
-      unauthenticated: You need to sign in or sign up before continuing.
+      timeout: Your session expired. Please login again to continue.
+      unauthenticated: You need to login or sign up before continuing.
       unconfirmed: You have to confirm your email address before continuing.
       not_approved: Your account has not been approved by our administrators yet.
     mailer:
@@ -494,7 +495,7 @@ en:
         subject: Masajid World - Unlock instructions
         header: Hi %{email}
         body_html: |
-          <p>Your account has been locked due to an excessive number of unsuccessful sign in attempts.</p>
+          <p>Your account has been locked due to an excessive number of unsuccessful login attempts.</p>
           <p>Click the link below to unlock your account:</p>
         cta_text: Unlock my account
     omniauth_callbacks:
@@ -544,7 +545,7 @@ en:
         your account in a few minutes.
       send_paranoid_instructions: If your account exists, you will receive an email
         with instructions for how to unlock it in a few minutes.
-      unlocked: Your account has been unlocked successfully. Please sign in to continue.
+      unlocked: Your account has been unlocked successfully. Please login to continue.
   errors:
     messages:
       already_confirmed: was already confirmed, please try signing in
