@@ -6,7 +6,7 @@ Detectify.configure do |config|
   # Set the column that will be used to find entity by domain.
   # If you don't need such lookup, you can simply set
   # domain_column value as nil. Default value is 'domain'
-  config.domain_column = nil
+  config.domain_column = 'domain'
 
   # Set the column that will be used to find entity by subdomain.
   # If you don't need such lookup, you can simply set

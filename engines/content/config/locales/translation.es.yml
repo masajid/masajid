@@ -38,6 +38,8 @@ es:
         unconfirmed_email: Actualmente esperando confirmación para %{email}
         current_password: Necesitamos tu contraseña actual para confirmar los cambios
         password: Deja en blanco si no deseas cambiar la contraseña
+      content/account:
+        domain_html: p.ej <mark>mi-mezquita.es</mark>
     required:
       text: Necesario
       mark: "*"
@@ -259,9 +261,10 @@ es:
         published_at: Fecha de publicación
         photo: Foto
       content/account:
-        subdomain: Subdominio
+        subdomain: Dominio predeterminado
         responsable: Nombre del responsable
         mosque: Nombre de la mezquita
+        domain: Dominio personalizado
       content/address:
         address1: Dirección
         zip_code: Código postal
@@ -729,6 +732,12 @@ es:
     languages:
       update:
         success:
+    domains:
+      edit:
+        cta_text: Actualizar dominio
+        connected: Conectado
+      update:
+        success: Tu dominio ha sido actualizado correctamente
   landing:
     admin_panel: Panel de administrador
     create_account: Crear una cuenta

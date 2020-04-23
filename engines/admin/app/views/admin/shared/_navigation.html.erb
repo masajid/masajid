@@ -119,6 +119,13 @@
         ) if current_account && policy(current_account.configuration).update? %>
 
         <%= nav_item(
+          text: Content::Account.human_attribute_name(:domain),
+          path: edit_domain_path,
+          icon: 'link',
+          active: request.path.starts_with?('/admin/domain/edit'),
+        ) if current_account && policy(current_account.configuration).update? %>
+
+        <%= nav_item(
           text: plural_resource_name(Content::Country),
           path: countries_path,
           icon: 'map-pin',

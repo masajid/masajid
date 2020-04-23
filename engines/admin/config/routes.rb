@@ -24,6 +24,7 @@ Admin::Engine.routes.draw do
   resource :language, only: %i[edit update]
   resource :about, only: %i[edit update], controller: :about
   resource :user, only: %i[edit update]
+  resource :domain, only: %i[edit update]
 
   namespace :api do
     resources :regions, only: :index

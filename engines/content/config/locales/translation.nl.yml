@@ -26,6 +26,8 @@ nl:
       content/page:
         meta_title_html:
         meta_description:
+      content/account:
+        domain_html:
     required:
       text:
       mark:
@@ -242,6 +244,7 @@ nl:
         subdomain:
         responsable: Verantwoordelijke naam
         mosque: Moskee naam
+        domain:
       content/address:
         address1: Adres
         zip_code:
@@ -685,6 +688,12 @@ nl:
       update:
         success:
     languages:
+      update:
+        success:
+    domains:
+      edit:
+        cta_text:
+        connected:
       update:
         success:
   landing:

@@ -217,6 +217,7 @@ tr:
         subdomain: Alt alan
         responsable: Sorumlu Adı
         mosque: Cami Adı
+        domain:
       content/address:
         address1: Adres
         zip_code: Posta Kodu
@@ -673,6 +674,12 @@ tr:
     languages:
       update:
         success:
+    domains:
+      edit:
+        cta_text:
+        connected:
+      update:
+        success:
   landing:
     admin_panel: Yönetici Paneli
     create_account: Hesap oluştur
@@ -817,3 +824,5 @@ tr:
         unconfirmed_email:
         current_password:
         password: Değiştirmek istemiyorsanız boş bırakın
+      content/account:
+        domain_html:

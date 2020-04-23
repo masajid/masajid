@@ -60,7 +60,8 @@ en:
         published_at: Publication Date
         photo: Photo
       content/account:
-        subdomain: Subdomain
+        domain: Domain
+        subdomain: Primary Domain
         responsable: Responsable Name
         mosque: Mosque Name
       content/address:
@@ -242,6 +243,12 @@ en:
       index:
         visits: Number of visits
         empty_visits: No body visited your website yet
+    domains:
+      edit:
+        cta_text: Update Domain
+        connected: Connected
+      update:
+        success: Domain was updated successfully
     languages:
       update:
         success: Languages were updated successfully
@@ -557,6 +564,8 @@ en:
     error_notification:
       default_message: 'Please review the problems below:'
     hints:
+      content/account:
+        domain_html: e.g. <mark>mymosque.com</mark>
       content/configuration:
         admin_locale: |
           When you are logged in to Masajid World, this is the language you will see.

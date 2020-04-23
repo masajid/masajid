@@ -39,6 +39,8 @@ fr:
         current_password: On a besoin de votre mot de passe actuel pour confirmer
           vos modifications
         password: Laissez le vide si vous ne voulez pas changer
+      content/account:
+        domain_html:
     required:
       text: Requis
       mark: "*"
@@ -265,6 +267,7 @@ fr:
         subdomain: Sous-domaine
         responsable: Nom du responsable
         mosque: Nom de la mosquée
+        domain:
       content/address:
         address1: Adresse
         zip_code: Code postal
@@ -728,6 +731,12 @@ fr:
       update:
         success:
     languages:
+      update:
+        success:
+    domains:
+      edit:
+        cta_text:
+        connected:
       update:
         success:
   landing:

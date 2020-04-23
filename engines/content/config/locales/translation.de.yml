@@ -38,6 +38,8 @@ de:
         current_password: Wir benötigen Ihr aktuelles Passwort um Ihre Änderungen
           bestätigen zu können
         password: Leer lassen, falls keine Änderungen vorgenommen werden sollen.
+      content/account:
+        domain_html:
     required:
       text: Pflicht
       mark: "*"
@@ -255,6 +257,7 @@ de:
         subdomain: Subdomain
         responsable: Name des Verantwortlichen
         mosque: Name der Moschee
+        domain:
       content/address:
         address1: Anschrift
         zip_code: Postleitzahl
@@ -706,6 +709,12 @@ de:
       update:
         success:
     languages:
+      update:
+        success:
+    domains:
+      edit:
+        cta_text:
+        connected:
       update:
         success:
   landing:

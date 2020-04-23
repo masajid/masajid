@@ -218,9 +218,10 @@ ar:
         published_at: تاريخ النشر
         photo: صورة
       content/account:
-        subdomain: Subdomain
+        subdomain:
         responsable: اسم المسؤول
         mosque: اسم المسجد
+        domain:
       content/address:
         address1: العنوان
         zip_code: الرمز البريدي
@@ -676,6 +677,12 @@ ar:
     languages:
       update:
         success:
+    domains:
+      edit:
+        cta_text:
+        connected:
+      update:
+        success:
   landing:
     admin_panel: لوحة الادارة
     create_account: إنشاء حساب
@@ -839,3 +846,5 @@ ar:
         unconfirmed_email: ينتظر حاليًا تأكيد %{email}
         current_password: نحتاج كلمة مرورك الحالية لتأكيد التغييرات
         password: اتركه فارغا إذا كنت لا ترغب في تغييره
+      content/account:
+        domain_html:

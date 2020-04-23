@@ -34,7 +34,8 @@ module Admin
 
     def settings_submenu_active?
       [
-        '/admin/configuration/edit',
+        '/admin/configuration',
+        '/admin/domain/edit',
         '/admin/user',
         '/admin/language/edit',
         '/admin/about/edit',

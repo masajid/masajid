@@ -1,8 +1,8 @@
-require 'constraints/subdomain_required'
+require 'constraints/domain_required'
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
-  constraints(Constraints::SubdomainRequired) do
+  constraints(Constraints::DomainRequired) do
     mount Public::Engine, at: '/'
   end
 

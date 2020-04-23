@@ -1,0 +1,8 @@
+.new_account {
+  // Tablet and mobile
+  @media (max-width: 991.98px) {
+    .input-group-prepend {
+      display: none;
+    }
+  }
+}

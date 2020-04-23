@@ -217,6 +217,7 @@ ca:
         subdomain:
         responsable:
         mosque:
+        domain:
       content/address:
         address1:
         zip_code:
@@ -666,6 +667,12 @@ ca:
     languages:
       update:
         success:
+    domains:
+      edit:
+        cta_text:
+        connected:
+      update:
+        success:
   landing:
     admin_panel:
     create_account:
@@ -809,3 +816,5 @@ ca:
         unconfirmed_email:
         current_password:
         password:
+      content/account:
+        domain_html:

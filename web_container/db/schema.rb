@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 2020_04_04_201020) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "status", default: 0
+    t.string "domain"
     t.index ["owner_id"], name: "index_content_accounts_on_owner_id"
   end
 

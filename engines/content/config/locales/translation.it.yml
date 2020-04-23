@@ -219,6 +219,7 @@ it:
         subdomain: Sottodominio
         responsable: Nome del responsabile
         mosque: Nome della moschea
+        domain:
       content/address:
         address1: Indirizzo
         zip_code: Cap
@@ -666,6 +667,12 @@ it:
     languages:
       update:
         success:
+    domains:
+      edit:
+        cta_text:
+        connected:
+      update:
+        success:
   landing:
     admin_panel:
     create_account:
@@ -809,3 +816,5 @@ it:
         unconfirmed_email:
         current_password:
         password:
+      content/account:
+        domain_html:

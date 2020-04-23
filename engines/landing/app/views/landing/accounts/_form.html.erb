@@ -1,7 +1,7 @@
 <%= simple_form_for @account do |f| %>
   <%= f.error_notification %>
 
-  <%= f.input :subdomain %>
+  <%= f.input :subdomain, wrapper: :input_group, prepend: protocol, append: ".#{ENV['PROJECT_HOSTNAME']}" %>
 
   <%= f.simple_fields_for :owner do |owner| %>
     <%= owner.input :email, input_html: { autocomplete: 'email' } %>
