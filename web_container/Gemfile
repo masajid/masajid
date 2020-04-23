@@ -21,7 +21,7 @@ gem 'jquery-rails'
 gem 'whenever', require: false
 
 group :production do
-  gem 'google-cloud-storage', '~> 1.25', require: false
+  # gem 'google-cloud-storage', '~> 1.25', require: false
   gem 'mailjet'
   gem 'uglifier', '~> 4.2.0'
 end
