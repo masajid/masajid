@@ -261,10 +261,9 @@ es:
         published_at: Fecha de publicación
         photo: Foto
       content/account:
-        subdomain: Subdominio
+        subdomain: Dominio predeterminado
         responsable: Nombre del responsable
         mosque: Nombre de la mezquita
-        default_domain: Dominio predeterminado
         domain: Dominio personalizado
       content/address:
         address1: Dirección
@@ -733,6 +732,12 @@ es:
     languages:
       update:
         success:
+    domains:
+      edit:
+        cta_text: Actualizar dominio
+        connected: Conectado
+      update:
+        success: Tu dominio ha sido actualizado correctamente
   landing:
     admin_panel: Panel de administrador
     create_account: Crear una cuenta

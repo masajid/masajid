@@ -218,10 +218,9 @@ ar:
         published_at: تاريخ النشر
         photo: صورة
       content/account:
-        subdomain: Subdomain
+        subdomain:
         responsable: اسم المسؤول
         mosque: اسم المسجد
-        default_domain:
         domain:
       content/address:
         address1: العنوان
@@ -676,6 +675,12 @@ ar:
       update:
         success:
     languages:
+      update:
+        success:
+    domains:
+      edit:
+        cta_text:
+        connected:
       update:
         success:
   landing:

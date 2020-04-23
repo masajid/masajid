@@ -217,7 +217,6 @@ ca:
         subdomain:
         responsable:
         mosque:
-        default_domain:
         domain:
       content/address:
         address1:
@@ -666,6 +665,12 @@ ca:
       update:
         success:
     languages:
+      update:
+        success:
+    domains:
+      edit:
+        cta_text:
+        connected:
       update:
         success:
   landing:

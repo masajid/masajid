@@ -219,7 +219,6 @@ it:
         subdomain: Sottodominio
         responsable: Nome del responsabile
         mosque: Nome della moschea
-        default_domain:
         domain:
       content/address:
         address1: Indirizzo
@@ -666,6 +665,12 @@ it:
       update:
         success:
     languages:
+      update:
+        success:
+    domains:
+      edit:
+        cta_text:
+        connected:
       update:
         success:
   landing:

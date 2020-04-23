@@ -257,7 +257,6 @@ de:
         subdomain: Subdomain
         responsable: Name des Verantwortlichen
         mosque: Name der Moschee
-        default_domain:
         domain:
       content/address:
         address1: Anschrift
@@ -710,6 +709,12 @@ de:
       update:
         success:
     languages:
+      update:
+        success:
+    domains:
+      edit:
+        cta_text:
+        connected:
       update:
         success:
   landing:
