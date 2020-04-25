@@ -234,6 +234,8 @@ it:
         supported_locales:
         default_locale:
         admin_locale:
+        hide_phone:
+        hide_email:
       content/country:
         name: Nome del paese
       content/newsletter:

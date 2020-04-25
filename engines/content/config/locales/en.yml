@@ -78,6 +78,8 @@ en:
         supported_locales: Supported Languages
         default_locale: Default Language
         admin_locale: Administration Language
+        hide_phone: Hide phone number
+        hide_email: Hide email address
       content/country:
         name: Country Name
       content/message:

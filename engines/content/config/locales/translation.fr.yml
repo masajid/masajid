@@ -282,6 +282,8 @@ fr:
         supported_locales: Langues supportées
         default_locale: Langage par défaut
         admin_locale: Langage d'administration
+        hide_phone:
+        hide_email:
       content/country:
         name: Pays
       content/newsletter:

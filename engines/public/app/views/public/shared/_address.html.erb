@@ -6,12 +6,16 @@
   <%= simple_format current_account.decorate.display_address %>
 </address>
 
-<address>
-  <i class='fa fa-phone'></i>
-  <a href='tel:<%= current_account.phone %>' dir='ltr'><%= current_account.phone %></a>
-</address>
+<% unless current_account.hide_phone %>
+  <address>
+    <i class='fa fa-phone'></i>
+    <i dir='ltr'><%= current_account.phone %></i>
+  </address>
+<% end %>
 
-<address>
-  <i class='fa fa-envelope'></i>
-  <a href='mailto:<%= current_account.email %>'><%= current_account.email %></a>
-</address>
+<% unless current_account.hide_email %>
+  <address>
+    <i class='fa fa-envelope'></i>
+    <i><%= current_account.email.gsub('@', '(@)') %></i>
+  </address>
+<% end %>
