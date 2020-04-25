@@ -236,6 +236,8 @@ ar:
         supported_locales: اللغات المدعومة
         default_locale: اللغة الاعتيادية
         admin_locale: لغة الإدارة
+        hide_phone:
+        hide_email:
       content/country:
         name: اسم الدولة
       content/newsletter:

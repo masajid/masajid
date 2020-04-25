@@ -259,6 +259,8 @@ nl:
         supported_locales:
         default_locale:
         admin_locale:
+        hide_phone:
+        hide_email:
       content/country:
         name:
       content/newsletter:

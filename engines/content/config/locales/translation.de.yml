@@ -272,6 +272,8 @@ de:
         supported_locales: Unterstützte Sprachen
         default_locale: Standardsprache
         admin_locale: Verwaltungssprache
+        hide_phone:
+        hide_email:
       content/country:
         name: Name des Landes
       content/newsletter:
