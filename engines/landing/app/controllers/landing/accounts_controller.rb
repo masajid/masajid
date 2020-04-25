@@ -23,14 +23,7 @@ module Landing
     private
 
     def account_params
-      params
-        .require(:account)
-        .permit(
-          policy(%i[content account]).permitted_attributes
-        ).tap do |result|
-          result[:owner_attributes][:password] = Devise.friendly_token.first(8)
-          result[:owner_attributes][:role] = 'admin'
-        end
+      params.require(:account).permit(policy(%i[content account]).permitted_attributes)
     end
 
     def accounts_service

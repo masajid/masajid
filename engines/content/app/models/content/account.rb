@@ -15,6 +15,7 @@ module Content
     validates :responsable, presence: true
     validates :owner, presence: true
     validates :address, presence: true
+    validates :configuration, presence: true
 
     accepts_nested_attributes_for :owner, :address, :seo_content, :configuration
 
