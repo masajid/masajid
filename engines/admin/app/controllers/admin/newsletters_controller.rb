@@ -44,7 +44,16 @@ module Admin
     end
 
     def newsletter_params
-      params.require(:newsletter).permit(:subject, :body, :link, :link_text, :date, :photo, :remove_photo, article_ids: []).merge(account: current_account)
+      params.require(:newsletter).permit(
+        :subject,
+        :body,
+        :link,
+        :link_text,
+        :date,
+        :photo,
+        :remove_photo,
+        article_ids: []
+      ).merge(account: current_account)
     end
   end
 end
