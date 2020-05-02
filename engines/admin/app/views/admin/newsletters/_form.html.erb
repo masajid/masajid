@@ -15,7 +15,11 @@
     <div class='col-md-6'>
       <div class='mb-3'>
         <%= f.input :photo %>
-        <%= image_tag main_app.url_for(f.object.photo.variant(resize: '200x')) if f.object.photo.attached? %>
+
+        <% if newsletter.photo.attached? %>
+          <%= f.input :remove_photo, as: :boolean %>
+          <%= image_tag main_app.url_for(newsletter.photo.variant(resize: '200x')) %>
+        <% end %>
       </div>
 
       <%= f.input :link %>
