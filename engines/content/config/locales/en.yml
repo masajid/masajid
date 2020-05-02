@@ -102,6 +102,8 @@ en:
         date: Sending Date
         sent_at: Sent
         subject: Subject
+        photo: Photo
+        remove_photo: Remove Photo
       content/page:
         ancestry: Ancestry
         description: Description
