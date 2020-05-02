@@ -5,6 +5,7 @@ module Content
     friendly_id :title, use: [:history, :slugged]
 
     VIEWS_TRACKING_EVENT_NAME = 'Viewed article'.freeze
+    VIDEO_SOURCE_OPTIONS = %w[youtube vimeo]
 
     has_one_attached :photo
 
@@ -16,7 +17,8 @@ module Content
     validates :slug, presence: true
     validates :summary, presence: true
     validates :account_id, presence: true
-    validates :photo, presence: true
+    validates :video_source, inclusion: { in: VIDEO_SOURCE_OPTIONS }, allow_blank: true
+    validates :video_id, presence: true, if: :video_source?
 
     accepts_nested_attributes_for :seo_content
 

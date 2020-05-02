@@ -56,7 +56,8 @@ en:
         slug: Slug
         summary: Summary
         body: Content
-        video_link: Video embed URL
+        video_id: Video ID
+        video_source: Video Source
         published_at: Publication Date
         photo: Photo
       content/account:
@@ -579,9 +580,8 @@ en:
         meta_description: The summary text that accompanies your homepage link in
           search engine results pages (SERPs).
       content/article:
-        video_link_html: |
-          e.g. <mark>https://www.youtube.com/embed/M1M9n-wUhy0</mark>,
-          <mark>https://player.vimeo.com/video/103525883</mark>
+        video_id_html: |
+          e.g. <mark>M1M9n-wUhy0</mark> for Youtube, <mark>103525883</mark> for Vimeo
         slug_html: |
           A slug is a part of a URL that identifies a page using human-readable words, and it is used for SEO purposes.
           For example, in the web address <mark>https://example.com/article/the-islam-way</mark>, the slug would be the <mark>the-islam-way</mark> part.
