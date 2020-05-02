@@ -4,17 +4,11 @@ module Content
     extend FriendlyId
     friendly_id :title, use: [:history, :slugged]
 
+    include Content::HasImage
+
     VIEWS_TRACKING_EVENT_NAME = 'Viewed article'.freeze
     VIDEO_SOURCE_OPTIONS = %w[youtube vimeo].freeze
 
-    attr_accessor :remove_photo
-
-    after_save :purge_photo, if: :remove_photo
-    private def purge_photo
-      photo.purge_later
-    end
-
-    has_one_attached :photo
     belongs_to :account
     has_one :seo_content, as: :searchable
     has_and_belongs_to_many :pages
