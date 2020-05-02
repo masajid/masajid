@@ -16,7 +16,9 @@ module Content
     end
 
     def account_domain(account)
-      account.domain.presence || default_account_domain(account)
+      return default_account_domain(account) if account.domain.blank?
+
+      "#{protocol}#{account.domain}"
     end
 
     def default_account_domain(account)
