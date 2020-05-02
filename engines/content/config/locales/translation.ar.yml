@@ -214,9 +214,10 @@ ar:
         slug: Slug
         summary: ملخص
         body: المحتوى
-        video_link: رابط الفيديو
         published_at: تاريخ النشر
         photo: صورة
+        video_id:
+        video_source:
       content/account:
         subdomain:
         responsable: اسم المسؤول
@@ -830,8 +831,6 @@ ar:
           محرك البحث (SERPs).
         admin_locale:
       content/article:
-        video_link_html: مثلا <mark>https://www.youtube.com/embed/M1M9n-wUhy0</mark>,
-          <mark>https://player.vimeo.com/video/103525883</mark>
         slug_html: Slug هو جزء من عنوان URL يحدد الصفحة باستخدام كلمات يمكن للإنسان
           قراءتها، ويتم استخدامه لأغراض تحسين محركات البحث. مثلا، في عنوان الويب <mark>
           https://example.com/article/the-islam-way </mark> ، سيكون slug هو الجزء
@@ -840,6 +839,7 @@ ar:
           تستخدمها محركات البحث.
         meta_description: النص الموجز الذي يصاحب صفحة المقالة الخاصة بك في صفحات نتائج
           محرك البحث (SERPs).
+        video_id_html:
       content/page:
         meta_title_html: محتوى HTML للصفحة <mark>&lt;title&gt;</mark> التي تستخدمها
           محركات البحث.

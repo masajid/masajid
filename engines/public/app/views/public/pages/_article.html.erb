@@ -19,11 +19,9 @@
     <%= link_to t('public.read_more'), article_path(article.slug) %>
   </div>
 
-  <% if article.photo.attached? %>
-    <div class='col-auto d-none d-lg-block'>
-      <%= link_to article_path(article.slug) do %>
-        <%= image_tag main_app.url_for(article.photo.variant(resize: '300x200')) %>
-      <% end %>
-    </div>
-  <% end %>
+  <div class='col-auto d-none d-lg-block article-thumbnail'>
+    <%= link_to article_path(article.slug) do %>
+      <%= image_tag article.displayed_photo(main_app, resize: '300x') %>
+    <% end %>
+  </div>
 </div>

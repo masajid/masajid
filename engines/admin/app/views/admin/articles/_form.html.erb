@@ -1,26 +1,43 @@
-<%= simple_form_for article do |f| %>
+<%= simple_form_for article, wrapper: :horizontal_form do |f| %>
   <%= f.error_notification %>
 
-  <div class='row'>
-    <div class='col-md-6'>
-      <%= f.input :title %>
-      <%= f.input :slug, hint: t('simple_form.hints.content/article.slug_html') if article.persisted? %>
-      <%= f.input :summary %>
-      <%= f.input :video_link, hint: t('simple_form.hints.content/article.video_link_html') %>
-      <%= f.input :published_at, start_year: Date.current.year - 10 %>
-      <%= f.input :page_ids, as: :check_boxes, collection: options_for_pages %>
+  <%= f.input :title %>
+  <%= f.input :slug, hint: t('simple_form.hints.content/article.slug_html') if article.persisted? %>
+  <%= f.input :summary %>
+  <%= f.input :video_source, collection: Content::Article::VIDEO_SOURCE_OPTIONS.map { |option| [option.capitalize, option] } %>
+  <%= f.input :video_id, hint: t('simple_form.hints.content/article.video_id_html') %>
 
-      <%= f.input :photo %>
-      <%= image_tag main_app.url_for(article.photo.variant(resize: '200x')) if article.photo.attached? %>
-    </div>
-
-    <div class='col-md-6'>
-      <%= render 'admin/seo_contents/form', f: f, model_name: :article %>
+  <div class='form-group row'>
+    <%= f.label :published_at, class: 'col-sm-4 col-form-label' %>
+    <div class='col-sm-8'>
+      <%= f.input :published_at, start_year: Date.current.year - 10, label: false %>
     </div>
   </div>
 
+  <div class='form-group row'>
+    <%= f.label :page_ids, plural_resource_name(Content::Page), class: 'col-sm-4 col-form-label' %>
+    <div class='col-sm-8'>
+      <%= f.input :page_ids, as: :check_boxes, collection: options_for_pages %>
+    </div>
+  </div>
+
+  <div class='form-group row'>
+    <%= f.label :photo, class: 'col-sm-4 col-form-label' %>
+    <div class='col-sm-8'>
+      <%= f.input :photo, label: false, hint: t('simple_form.hints.content/article.photo') %>
+      <%= image_tag main_app.url_for(article.photo.variant(resize: '200x')) if article.photo.attached? %>
+    </div>
+  </div>
+
+  <hr>
+
+  <%= f.label :body %>
   <%= f.input :body, as: :hidden %>
   <trix-editor input='article_body'></trix-editor>
 
-  <%= f.button :submit, class: 'btn btn-info' %>
+  <hr>
+
+  <%= render 'admin/seo_contents/form', f: f, model_name: :article %>
+
+  <%= f.button :submit, class: 'btn btn-info pull-right' %>
 <% end %>

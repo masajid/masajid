@@ -49,12 +49,18 @@ module Admin
         :slug,
         :summary,
         :body,
-        :video_link,
+        :video_source,
+        :video_id,
         :published_at,
         :photo,
         seo_content_attributes: %i[id meta_title meta_description],
         page_ids: []
       ).merge(account: current_account)
     end
+
+    def wrapper_center?
+      action_name != 'index'
+    end
+    helper_method :wrapper_center?
   end
 end

@@ -23,9 +23,6 @@ fr:
           d'accueil dans les pages de résultats des moteurs de recherche (SERPs).
         admin_locale:
       content/article:
-        video_link_html: |
-          e.g. <mark>https://www.youtube.com/embed/M1M9n-wUhy0</mark>,
-          <mark>https://player.vimeo.com/video/103525883</mark>
         slug_html: Un Slug fait partie d'une URL qui identifie une page à l'aide de
           mots lisibles, et il est utilisé à des fins de référencement. Par exemple,
           dans l'adresse Web <mark>https://example.com/article/chemin-de-lislam</mark>,
@@ -34,6 +31,7 @@ fr:
           tag, qui est utilisé par les moteurs de recherche.
         meta_description: Le texte récapitulatif qui accompagne la page de votre article
           dans les pages de résultats des moteurs de recherche (SERPs).
+        video_id_html:
       content/user:
         unconfirmed_email: En attente de confirmation pour %{email}
         current_password: On a besoin de votre mot de passe actuel pour confirmer
@@ -260,9 +258,10 @@ fr:
         slug: Slug
         summary: Résumé
         body: Contenue
-        video_link: URL d'intégration de la vidéo
         published_at: Date de publication
         photo: Photo
+        video_id:
+        video_source:
       content/account:
         subdomain: Sous-domaine
         responsable: Nom du responsable

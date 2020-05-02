@@ -212,9 +212,10 @@ it:
         slug:
         summary:
         body: Contenuto
-        video_link:
         published_at: Data di pubblicazione
         photo: Foto
+        video_id:
+        video_source:
       content/account:
         subdomain: Sottodominio
         responsable: Nome del responsabile
@@ -807,10 +808,10 @@ it:
         meta_description:
         admin_locale:
       content/article:
-        video_link_html:
         slug_html:
         meta_title_html:
         meta_description:
+        video_id_html:
       content/page:
         meta_title_html:
         meta_description:
