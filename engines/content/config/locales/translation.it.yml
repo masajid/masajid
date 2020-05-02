@@ -216,6 +216,7 @@ it:
         photo: Foto
         video_id:
         video_source:
+        remove_photo:
       content/account:
         subdomain: Sottodominio
         responsable: Nome del responsabile
@@ -237,6 +238,7 @@ it:
         admin_locale:
         hide_phone:
         hide_email:
+        remove_logo:
       content/country:
         name: Nome del paese
       content/newsletter:
@@ -247,6 +249,8 @@ it:
         date: Data di invio
         sent_at: Inviato
         subject: Soggetto
+        photo: Foto
+        remove_photo:
       content/page:
         ancestry:
         description: Descrizione
@@ -275,6 +279,7 @@ it:
         photo: Foto
         link:
         link_text:
+        remove_photo:
       content/subscriber:
         email:
         created_at:
@@ -812,6 +817,7 @@ it:
         meta_title_html:
         meta_description:
         video_id_html:
+        photo:
       content/page:
         meta_title_html:
         meta_description:

@@ -32,6 +32,7 @@ es:
         meta_description: El texto de resumen que acompaña a la página de su artículo
           en las páginas de resultados del motor de búsqueda (SERP).
         video_id_html:
+        photo:
       content/user:
         unconfirmed_email: Actualmente esperando confirmación para %{email}
         current_password: Necesitamos tu contraseña actual para confirmar los cambios
@@ -259,6 +260,7 @@ es:
         photo: Foto
         video_id:
         video_source:
+        remove_photo:
       content/account:
         subdomain: Dominio predeterminado
         responsable: Nombre del responsable
@@ -280,6 +282,7 @@ es:
         admin_locale: Idioma del administrador
         hide_phone:
         hide_email:
+        remove_logo:
       content/country:
         name: País
       content/newsletter:
@@ -290,6 +293,8 @@ es:
         date: Fecha de envío
         sent_at: Enviado
         subject: Destinatario
+        photo: Foto
+        remove_photo:
       content/page:
         ancestry: Ascendencia
         description: Descripción
@@ -318,6 +323,7 @@ es:
         photo: Foto
         link: Enlace
         link_text: Texto del enlace
+        remove_photo:
       content/subscriber:
         email: Correo electrónico
         created_at: Fecha de suscripción

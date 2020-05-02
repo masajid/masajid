@@ -39,7 +39,11 @@
       <%= ff.label :logo, class: 'col-sm-4 col-form-label' %>
       <div class='col-sm-8'>
         <%= ff.input :logo, label: false %>
-        <%= image_tag main_app.url_for(current_account.logo.variant(resize_to_limit: [150, 150])) if current_account.logo.attached? %>
+
+        <% if current_account.logo.attached? %>
+          <%= ff.input :remove_logo, as: :boolean %>
+          <%= image_tag main_app.url_for(current_account.logo.variant(resize_to_limit: [150, 150])) %>
+        <% end %>
       </div>
     </div>
   <% end %>

@@ -60,6 +60,7 @@ en:
         video_source: Video Source
         published_at: Publication Date
         photo: Photo
+        remove_photo: Remove Photo
       content/account:
         domain: Domain
         subdomain: Primary Domain
@@ -74,6 +75,7 @@ en:
         country_id: Country
       content/configuration:
         logo: Logo
+        remove_logo: Remove Logo
         about_us: About us
         theme: Theme
         supported_locales: Supported Languages
@@ -100,6 +102,8 @@ en:
         date: Sending Date
         sent_at: Sent
         subject: Subject
+        photo: Photo
+        remove_photo: Remove Photo
       content/page:
         ancestry: Ancestry
         description: Description
@@ -131,6 +135,7 @@ en:
         title: Title
         body: Body
         photo: Photo
+        remove_photo: Remove Photo
         link: Link
         link_text: Link Text
       content/subscriber:

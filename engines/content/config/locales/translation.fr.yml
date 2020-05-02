@@ -32,6 +32,7 @@ fr:
         meta_description: Le texte récapitulatif qui accompagne la page de votre article
           dans les pages de résultats des moteurs de recherche (SERPs).
         video_id_html:
+        photo:
       content/user:
         unconfirmed_email: En attente de confirmation pour %{email}
         current_password: On a besoin de votre mot de passe actuel pour confirmer
@@ -262,6 +263,7 @@ fr:
         photo: Photo
         video_id:
         video_source:
+        remove_photo:
       content/account:
         subdomain: Sous-domaine
         responsable: Nom du responsable
@@ -283,6 +285,7 @@ fr:
         admin_locale: Langage d'administration
         hide_phone:
         hide_email:
+        remove_logo:
       content/country:
         name: Pays
       content/newsletter:
@@ -293,6 +296,8 @@ fr:
         date: Date d'envoi
         sent_at: Envoyé
         subject: Sujet
+        photo: Photo
+        remove_photo:
       content/page:
         ancestry: Ascendance
         description: Description
@@ -321,6 +326,7 @@ fr:
         photo: Photo
         link: Lien
         link_text: Texte du lien
+        remove_photo:
       content/subscriber:
         email: Adresse e-mail
         created_at: Date de création

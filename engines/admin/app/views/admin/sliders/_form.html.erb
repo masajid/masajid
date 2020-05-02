@@ -7,6 +7,7 @@
       <%= f.input :photo, label: false %>
 
       <% if @slider.photo.attached? %>
+        <%= f.input :remove_photo, as: :boolean %>
         <%= image_tag(main_app.url_for(@slider.photo.variant(resize_to_limit: [400, 700])), class: 'img-fluid') %>
       <% end %>
     </div>

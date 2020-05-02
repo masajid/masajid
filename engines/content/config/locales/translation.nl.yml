@@ -23,6 +23,7 @@ nl:
         meta_title_html:
         meta_description:
         video_id_html:
+        photo:
       content/page:
         meta_title_html:
         meta_description:
@@ -241,6 +242,7 @@ nl:
         photo:
         video_id:
         video_source:
+        remove_photo:
       content/account:
         subdomain:
         responsable: Verantwoordelijke naam
@@ -262,6 +264,7 @@ nl:
         admin_locale:
         hide_phone:
         hide_email:
+        remove_logo:
       content/country:
         name:
       content/newsletter:
@@ -272,6 +275,8 @@ nl:
         date:
         sent_at:
         subject:
+        photo:
+        remove_photo:
       content/page:
         ancestry:
         description:
@@ -300,6 +305,7 @@ nl:
         photo:
         link:
         link_text:
+        remove_photo:
       content/subscriber:
         email:
         created_at:

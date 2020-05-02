@@ -4,10 +4,10 @@ module Content
     extend FriendlyId
     friendly_id :title, use: [:history, :slugged]
 
+    include Content::HasPhoto
+
     VIEWS_TRACKING_EVENT_NAME = 'Viewed article'.freeze
     VIDEO_SOURCE_OPTIONS = %w[youtube vimeo].freeze
-
-    has_one_attached :photo
 
     belongs_to :account
     has_one :seo_content, as: :searchable

@@ -19,7 +19,7 @@ module Admin
     end
 
     def slider_params
-      params.require(:slider).permit(:title, :body, :photo, :link, :link_text).merge(account: current_account)
+      params.require(:slider).permit(:title, :body, :photo, :remove_photo, :link, :link_text).merge(account: current_account)
     end
 
     def wrapper_center?
