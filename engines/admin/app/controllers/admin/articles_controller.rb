@@ -56,5 +56,10 @@ module Admin
         page_ids: []
       ).merge(account: current_account)
     end
+
+    def wrapper_center?
+      action_name != 'index'
+    end
+    helper_method :wrapper_center?
   end
 end
