@@ -580,6 +580,7 @@ en:
         meta_description: The summary text that accompanies your homepage link in
           search engine results pages (SERPs).
       content/article:
+        photo: A default photo will be used if you don't upload any
         video_id_html: |
           e.g. <mark>M1M9n-wUhy0</mark> for Youtube, <mark>103525883</mark> for Vimeo
         slug_html: |

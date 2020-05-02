@@ -12,12 +12,20 @@ module Content
       end
     end
 
-    def published_at
-      object.published_at.to_formatted_s(:long)
+    def displayed_photo(main_app, resize:)
+      if object.photo.attached?
+        main_app.url_for(object.photo.variant(resize: resize))
+      elsif object.video_source == 'youtube'
+        "https://img.youtube.com/vi/#{object.video_id}/sddefault.jpg"
+      elsif object.video_source == 'vimeo'
+        "https://i.vimeocdn.com/video/#{object.video_id}_300.jpg"
+      else
+        'content/articles/default.png'
+      end
     end
 
     def published_on
-      object.published_at.to_date.to_formatted_s(:long)
+      I18n.l(object.published_at.to_date, format: :long)
     end
 
     def views_count
