@@ -53,6 +53,7 @@ module Admin
         :video_id,
         :published_at,
         :photo,
+        :remove_photo,
         seo_content_attributes: %i[id meta_title meta_description],
         page_ids: []
       ).merge(account: current_account)
