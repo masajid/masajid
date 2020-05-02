@@ -1,5 +1,5 @@
 module Content
-  module HasImage
+  module HasPhoto
     extend ActiveSupport::Concern
 
     included do

@@ -1,6 +1,6 @@
 module Content
   class Slider < ApplicationRecord
-    include Content::HasImage
+    include Content::HasPhoto
 
     belongs_to :account
   end
