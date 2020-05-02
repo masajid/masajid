@@ -75,6 +75,7 @@ en:
         country_id: Country
       content/configuration:
         logo: Logo
+        remove_logo: Remove Logo
         about_us: About us
         theme: Theme
         supported_locales: Supported Languages

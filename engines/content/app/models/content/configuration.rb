@@ -1,7 +1,8 @@
 module Content
   class Configuration < ApplicationRecord
-    has_one_attached :logo
+    attr_accessor :remove_logo
 
+    has_one_attached :logo
     belongs_to :account
   end
 end
