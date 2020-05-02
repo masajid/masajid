@@ -23,9 +23,6 @@ es:
           de inicio en las páginas de resultados del motor de búsqueda (SERP).
         admin_locale:
       content/article:
-        video_link_html: |
-          e.g. <mark>https://www.youtube.com/embed/M1M9n-wUhy0</mark>,
-          <mark>https://player.vimeo.com/video/103525883</mark>
         slug_html: Un slug es una parte de una URL que identifica una página usando
           palabras legibles por humanos, y se usa con fines de SEO. Por ejemplo, en
           la dirección web <mark> https://example.com/article/the-islam-way </mark>
@@ -34,6 +31,7 @@ es:
           &lt;título&gt; </mark>, que es utilizado por los motores de búsqueda.
         meta_description: El texto de resumen que acompaña a la página de su artículo
           en las páginas de resultados del motor de búsqueda (SERP).
+        video_id_html:
       content/user:
         unconfirmed_email: Actualmente esperando confirmación para %{email}
         current_password: Necesitamos tu contraseña actual para confirmar los cambios
@@ -257,9 +255,10 @@ es:
         slug: Slug
         summary: Resumen
         body: Contenido
-        video_link: URL de inserción de video
         published_at: Fecha de publicación
         photo: Foto
+        video_id:
+        video_source:
       content/account:
         subdomain: Dominio predeterminado
         responsable: Nombre del responsable
