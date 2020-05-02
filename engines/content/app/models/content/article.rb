@@ -15,7 +15,6 @@ module Content
 
     validates :title, presence: true
     validates :slug, presence: true
-    validates :summary, presence: true
     validates :account_id, presence: true
     validates :video_source, inclusion: { in: VIDEO_SOURCE_OPTIONS }, allow_blank: true
     validates :video_id, presence: true, if: :video_source?

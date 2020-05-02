@@ -16,7 +16,7 @@ module Content
       if object.photo.attached?
         main_app.url_for(object.photo.variant(resize: resize))
       elsif object.video_source == 'youtube'
-        "https://img.youtube.com/vi/#{object.video_id}/sddefault.jpg"
+        "https://img.youtube.com/vi/#{object.video_id}/mqdefault.jpg"
       elsif object.video_source == 'vimeo'
         "https://i.vimeocdn.com/video/#{object.video_id}_300.jpg"
       else
