@@ -133,6 +133,7 @@ en:
         title: Title
         body: Body
         photo: Photo
+        remove_photo: Remove Photo
         link: Link
         link_text: Link Text
       content/subscriber:
