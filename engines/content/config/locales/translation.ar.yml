@@ -218,6 +218,7 @@ ar:
         photo: صورة
         video_id:
         video_source:
+        remove_photo:
       content/account:
         subdomain:
         responsable: اسم المسؤول
@@ -239,6 +240,7 @@ ar:
         admin_locale: لغة الإدارة
         hide_phone:
         hide_email:
+        remove_logo:
       content/country:
         name: اسم الدولة
       content/newsletter:
@@ -249,6 +251,8 @@ ar:
         date: تاريخ الإرسال
         sent_at: ارسل
         subject: الموضوع
+        photo: الصورة
+        remove_photo:
       content/page:
         ancestry: الأسلاف
         description: الوصف
@@ -277,6 +281,7 @@ ar:
         photo: الصورة
         link: الرابط
         link_text: 'نص الرابط '
+        remove_photo:
       content/subscriber:
         email: بريد الكتروني
         created_at: إنشاء تاريخ
@@ -840,6 +845,7 @@ ar:
         meta_description: النص الموجز الذي يصاحب صفحة المقالة الخاصة بك في صفحات نتائج
           محرك البحث (SERPs).
         video_id_html:
+        photo:
       content/page:
         meta_title_html: محتوى HTML للصفحة <mark>&lt;title&gt;</mark> التي تستخدمها
           محركات البحث.

@@ -31,6 +31,7 @@ de:
         meta_description: The summary text that accompanies your article page in search
           engine results pages (SERPs).
         video_id_html:
+        photo:
       content/user:
         unconfirmed_email:
         current_password: Wir benötigen Ihr aktuelles Passwort um Ihre Änderungen
@@ -252,6 +253,7 @@ de:
         photo: Foto
         video_id:
         video_source:
+        remove_photo:
       content/account:
         subdomain: Subdomain
         responsable: Name des Verantwortlichen
@@ -273,6 +275,7 @@ de:
         admin_locale: Verwaltungssprache
         hide_phone:
         hide_email:
+        remove_logo:
       content/country:
         name: Name des Landes
       content/newsletter:
@@ -283,6 +286,8 @@ de:
         date: Versanddatum
         sent_at: Verschickt
         subject: Fachgebiet
+        photo: Foto
+        remove_photo:
       content/page:
         ancestry: Abstammung
         description: Beschreibung
@@ -311,6 +316,7 @@ de:
         photo: Foto
         link: Link
         link_text: Link Text
+        remove_photo:
       content/subscriber:
         email: E-Mail-Adresse
         created_at: Erstellungsdatum

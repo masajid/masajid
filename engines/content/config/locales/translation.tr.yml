@@ -214,6 +214,7 @@ tr:
         photo: Fotoğraf
         video_id:
         video_source:
+        remove_photo:
       content/account:
         subdomain: Alt alan
         responsable: Sorumlu Adı
@@ -235,6 +236,7 @@ tr:
         admin_locale: Yönetim Dili
         hide_phone:
         hide_email:
+        remove_logo:
       content/country:
         name: Ülke Adı
       content/newsletter:
@@ -245,6 +247,8 @@ tr:
         date: Gönderme Tarihi
         sent_at: Gönderilen
         subject: Konu
+        photo: Fotoğraf
+        remove_photo:
       content/page:
         ancestry:
         description: Açıklama
@@ -273,6 +277,7 @@ tr:
         photo: Fotoğraf
         link: Bağlantı
         link_text: Bağlantı Metni
+        remove_photo:
       content/subscriber:
         email: E-posta
         created_at: Oluşturma Tarihi
@@ -820,6 +825,7 @@ tr:
         meta_title_html:
         meta_description:
         video_id_html:
+        photo:
       content/page:
         meta_title_html:
         meta_description:
