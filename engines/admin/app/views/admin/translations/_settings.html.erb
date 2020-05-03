@@ -1,0 +1,16 @@
+<ul class='nav nav-tabs' id='localeTab' role='tablist'>
+  <% locales_for_translations.each do |locale| %>
+    <li class='nav-item'>
+      <a
+        class='nav-link <%= 'active' if current_account.default_locale == locale %>'
+        id='<%= locale %>-tab'
+        data-toggle='tab'
+        href='#<%= locale %>'
+        role='tab'
+        aria-controls='<%= locale %>' aria-selected='true'
+      >
+        <%= t("shared.locales.#{locale}") %>
+      </a>
+    </li>
+  <% end %>
+</ul>
