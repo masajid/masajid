@@ -269,10 +269,16 @@ en:
       new:
         header: New Newsletter
     pages:
+      create:
+        success: Menu item was successfully created
+      destroy:
+        success: Menu item was successfully destroyed
       edit:
         header: Edit Menu Item
       new:
         header: New Menu Item
+      update:
+        success: Menu item was successfully updated
     regions:
       edit:
         header: Edit Region
@@ -289,6 +295,9 @@ en:
     sliders:
       edit:
         header: Edit Slider
+    translations:
+      page:
+        header: Translate Menu Item
     cities:
       edit:
         header: Edit City
@@ -427,6 +436,7 @@ en:
       edit: Edit
       new: New
       update: Update
+      translate: Translate
     footer:
       back_to_top: Back to top
     locales:

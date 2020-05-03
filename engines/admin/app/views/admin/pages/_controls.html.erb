@@ -1,2 +1,11 @@
-<%= link_to t('shared.actions.edit'), edit_page_path(item), class: 'btn btn-success btn-sm' %>
-<%= link_to t('shared.actions.delete'), item, method: :delete, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger btn-sm' %>
+<%= link_to edit_page_path(item), title: t('shared.actions.edit'), class: 'btn btn-success' do %>
+  <i class='fa fa-edit'></i>
+<% end %>
+
+<%= link_to translations_path(resource: :pages, resource_id: item.id), title: t('shared.actions.translate'), class: 'btn btn-primary' do %>
+  <i class='fa fa-globe'></i>
+<% end %>
+
+<%= link_to item, title: t('shared.actions.delete'), method: :delete, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger' do %>
+  <i class='fa fa-trash'></i>
+<% end %>

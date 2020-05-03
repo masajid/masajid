@@ -26,6 +26,8 @@ Admin::Engine.routes.draw do
   resource :user, only: %i[edit update]
   resource :domain, only: %i[edit update]
 
+  get '/:resource/:resource_id/translations' => 'translations#index', as: :translations
+
   namespace :api do
     resources :regions, only: :index
     resources :cities, only: :index
