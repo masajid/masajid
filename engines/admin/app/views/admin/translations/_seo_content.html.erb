@@ -1,0 +1,15 @@
+<%= seo_content_form.globalize_fields_for locale do |g| %>
+  <%= form_group_for_translations(
+    g,
+    :meta_title,
+    label: Content::SeoContent.human_attribute_name(:meta_title),
+    hint: t('simple_form.hints.content/page.meta_title_html')
+  ) %>
+
+  <%= form_group_for_translations(
+    g,
+    :meta_description,
+    label: Content::SeoContent.human_attribute_name(:meta_description),
+    hint: t('simple_form.hints.content/page.meta_description')
+  ) %>
+<% end %>
