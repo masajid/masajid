@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_02_085444) do
+ActiveRecord::Schema.define(version: 2020_05_03_084959) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -205,9 +205,18 @@ ActiveRecord::Schema.define(version: 2020_05_02_085444) do
     t.index ["account_id"], name: "index_content_newsletters_on_account_id"
   end
 
-  create_table "content_pages", force: :cascade do |t|
-    t.string "name", null: false
+  create_table "content_page_translations", force: :cascade do |t|
+    t.bigint "content_page_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
     t.text "description"
+    t.index ["content_page_id"], name: "index_content_page_translations_on_content_page_id"
+    t.index ["locale"], name: "index_content_page_translations_on_locale"
+  end
+
+  create_table "content_pages", force: :cascade do |t|
     t.string "permalink", null: false
     t.datetime "deleted_at"
     t.bigint "account_id", null: false
@@ -227,10 +236,19 @@ ActiveRecord::Schema.define(version: 2020_05_02_085444) do
     t.index ["country_id"], name: "index_content_regions_on_country_id"
   end
 
-  create_table "content_seo_contents", force: :cascade do |t|
+  create_table "content_seo_content_translations", force: :cascade do |t|
+    t.bigint "content_seo_content_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "meta_title"
     t.string "meta_keywords"
     t.text "meta_description"
+    t.index ["content_seo_content_id"], name: "index_d5da82f2bb4ec4c246825b120124a86b93430f41"
+    t.index ["locale"], name: "index_content_seo_content_translations_on_locale"
+  end
+
+  create_table "content_seo_contents", force: :cascade do |t|
     t.string "searchable_type"
     t.bigint "searchable_id"
     t.datetime "created_at", precision: 6, null: false
