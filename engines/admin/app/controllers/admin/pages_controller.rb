@@ -50,11 +50,10 @@ module Admin
 
     def page_params
       params.require(:page).permit(
-        :name,
-        :description,
         :ancestry,
         :permalink_part,
-        seo_content_attributes: %i[id meta_title meta_description]
+        seo_content_attributes: [:id, translations_attributes: %i[id locale meta_title meta_description]],
+        translations_attributes: %i[id locale name description]
       ).merge(account: current_account)
     end
   end
