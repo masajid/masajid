@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
+  s.add_dependency 'batch_translations' # adds globalize_fields_for form builder
   s.add_dependency 'bootstrap', '~> 4.3.1'
   s.add_dependency 'chartkick', '~> 3.3.0'
   s.add_dependency 'content'
