@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_09_153143) do
+ActiveRecord::Schema.define(version: 2020_05_09_154855) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -281,10 +281,19 @@ ActiveRecord::Schema.define(version: 2020_05_09_153143) do
     t.index ["searchable_type", "searchable_id"], name: "index_content_seo_contents_on_searchable_type_and_searchable_id"
   end
 
+  create_table "content_sidebar_content_translations", force: :cascade do |t|
+    t.bigint "content_sidebar_content_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "title"
+    t.text "body"
+    t.index ["content_sidebar_content_id"], name: "index_4ee1cac69ad44936a61b420a0fc1d8e7b7271243"
+    t.index ["locale"], name: "index_content_sidebar_content_translations_on_locale"
+  end
+
   create_table "content_sidebar_contents", force: :cascade do |t|
     t.integer "position"
-    t.string "title"
-    t.text "body", null: false
     t.boolean "light_background", default: false
     t.boolean "active", default: true
     t.bigint "account_id", null: false

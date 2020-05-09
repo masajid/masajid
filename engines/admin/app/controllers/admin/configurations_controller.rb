@@ -7,7 +7,7 @@ module Admin
         uploaded_logo = params.dig(:account, :configuration_attributes, :logo)
         current_account.configuration.logo.attach(uploaded_logo) if uploaded_logo.present?
 
-        params.dig(:account, :configuration_attributes, :remove_logo) == '1' &&
+        current_account.configuration.remove_logo &&
           current_account.configuration.logo.purge_later
 
         redirect_to location_after_save, notice: t('admin.configurations.update.success')

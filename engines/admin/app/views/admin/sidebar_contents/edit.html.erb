@@ -3,8 +3,12 @@
 <% end %>
 
 <% content_for :page_actions do %>
+  <%= link_to translations_path(resource: :sidebar, resource_id: @sidebar_content.id), class: 'btn btn-primary' do %>
+    <i class='fa fa-globe'></i>
+    <%= t('shared.actions.translate') %>
+  <% end %>
   <%= link_to t('shared.actions.new'), new_sidebar_content_path, class: 'btn btn-info' %>
-  <%= link_to t('shared.actions.back_to_list'), sidebar_contents_path, class: 'btn btn-primary' %>
+  <%= link_to t('shared.actions.back_to_list'), sidebar_contents_path, class: 'btn btn-secondary' %>
 <% end %>
 
 <%= render 'form', sidebar_content: @sidebar_content %>

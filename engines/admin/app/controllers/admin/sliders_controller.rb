@@ -6,7 +6,7 @@ module Admin
 
     def update
       if @slider.update(slider_params)
-        redirect_to location_after_save, notice: 'Slider was successfully updated.'
+        redirect_to location_after_save, notice: t('admin.sliders.update.success')
       else
         render :edit
       end

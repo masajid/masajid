@@ -291,16 +291,24 @@ en:
       new:
         header: New Region
     sidebar_contents:
+      create:
+        success: Sidebar Content was successfully created
+      destroy:
+        success: Sidebar Content was successfully deleted
       edit:
         header: Edit Sidebar Content
       new:
         header: New Sidebar Content
+      update:
+        success: Sidebar Content was successfully updated
     social_networks:
       edit:
         header: Edit Social Media
     sliders:
       edit:
         header: Edit Slider
+      update:
+        success: Slider was successfully updated
     translations:
       article:
         header: Translate Article
@@ -308,6 +316,8 @@ en:
         header: Translate General Configuration
       page:
         header: Translate Menu Item
+      sidebar_content:
+        header: Translate Sidebar Content
       slider:
         header: Translate Slider
     cities:
