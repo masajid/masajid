@@ -5,7 +5,7 @@ module Content
     included do
       has_one_attached :photo
 
-      attr_accessor :remove_photo
+      attribute :remove_photo, :boolean
 
       after_save :purge_photo, if: :remove_photo
     end
