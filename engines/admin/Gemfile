@@ -5,5 +5,5 @@ gemspec
 
 gem 'content', path: '../content'
 
-# TODO: cleanup after rails 6.3 is supported
+# TODO: cleanup after rails 6.0.3 is supported
 gem 'trix-gem', github: 'masajid/trix-gem', branch: 'chore/support_rails_6_3'
