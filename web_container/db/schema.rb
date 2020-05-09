@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_03_084959) do
+ActiveRecord::Schema.define(version: 2020_05_09_113424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -116,11 +116,20 @@ ActiveRecord::Schema.define(version: 2020_05_03_084959) do
     t.index ["region_id"], name: "index_content_addresses_on_region_id"
   end
 
+  create_table "content_article_translations", force: :cascade do |t|
+    t.bigint "content_article_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "title"
+    t.string "slug"
+    t.text "summary"
+    t.text "body"
+    t.index ["content_article_id"], name: "index_content_article_translations_on_content_article_id"
+    t.index ["locale"], name: "index_content_article_translations_on_locale"
+  end
+
   create_table "content_articles", force: :cascade do |t|
-    t.string "title", null: false
-    t.string "slug", null: false
-    t.text "summary", null: false
-    t.text "body", null: false
     t.datetime "published_at"
     t.datetime "deleted_at"
     t.bigint "account_id", null: false
@@ -131,8 +140,6 @@ ActiveRecord::Schema.define(version: 2020_05_03_084959) do
     t.index ["account_id"], name: "index_content_articles_on_account_id"
     t.index ["deleted_at"], name: "index_content_articles_on_deleted_at"
     t.index ["published_at"], name: "index_content_articles_on_published_at"
-    t.index ["slug"], name: "index_content_articles_on_slug", unique: true
-    t.index ["title"], name: "index_content_articles_on_title"
   end
 
   create_table "content_articles_newsletters", id: false, force: :cascade do |t|
@@ -366,8 +373,10 @@ ActiveRecord::Schema.define(version: 2020_05_03_084959) do
     t.string "sluggable_type", limit: 50
     t.string "scope"
     t.datetime "created_at"
-    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
-    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.string "locale"
+    t.index ["locale"], name: "index_friendly_id_slugs_on_locale"
+    t.index ["slug", "sluggable_type", "locale"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_locale"
+    t.index ["slug", "sluggable_type", "scope", "locale"], name: "index_friendly_id_slugs_uniqueness", unique: true
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 

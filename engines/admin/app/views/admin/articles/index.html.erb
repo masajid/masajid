@@ -16,7 +16,7 @@
         <th><%= Content::Page.model_name.human %></th>
         <th><%= Content::Article.human_attribute_name(:published_at) %></th>
         <th><i class='fa fa-eye'></i></th>
-        <th colspan='3'></th>
+        <th colspan='4'></th>
       </tr>
     </thead>
 
@@ -28,18 +28,23 @@
           <td><%= article.published_on %></td>
           <td><%= article.views_count %></td>
           <td>
-            <%= link_to edit_article_path(article), class: 'btn btn-success btn-sm' do %>
+            <%= link_to edit_article_path(article), class: 'btn btn-success' do %>
               <i class='fa fa-pencil'></i>
             <% end %>
           </td>
           <td>
-            <%= link_to article, method: :delete, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger btn-sm' do %>
+            <%= link_to article, method: :delete, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger' do %>
               <i class='fa fa-trash'></i>
             <% end %>
           </td>
           <td>
-            <%= link_to prefix_link_with_account_domain(current_account, "/article/#{article.slug}"), class: 'btn btn-primary btn-sm', target: '_blank' do %>
-              <i class='fa fa-eye'></i>
+            <%= link_to translations_path(resource: :articles, resource_id: article.id), title: t('shared.actions.translate'), class: 'btn btn-primary' do %>
+              <i class='fa fa-globe'></i>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to prefix_link_with_account_domain(current_account, "/article/#{article.slug}"), class: 'btn btn-secondary', target: '_blank' do %>
+              <i class='fa fa-external-link'></i>
             <% end %>
           </td>
         </tr>

@@ -24,6 +24,7 @@ PATH
       email_validator
       flipper-active_record (~> 0.17.1)
       friendly_id
+      friendly_id-globalize
       geocoder
       globalize (~> 5.3.0)
       image_processing (~> 1.9.3)
@@ -208,6 +209,8 @@ GEM
       railties (>= 3.2, < 6.1)
     friendly_id (5.3.0)
       activerecord (>= 4.0.0)
+    friendly_id-globalize (1.0.0.alpha3)
+      friendly_id (>= 5.2.0, < 6.0)
     geocoder (1.6.3)
     gettext (3.3.5)
       locale (>= 2.0.5)

@@ -3,7 +3,7 @@
 
   <%= f.input :title %>
   <%= f.input :slug, hint: t('simple_form.hints.content/article.slug_html') if article.persisted? %>
-  <%= f.input :summary %>
+  <%= f.input :summary, as: :text, input_html: { rows: 5 } %>
   <%= f.input :video_source, collection: Content::Article::VIDEO_SOURCE_OPTIONS.map { |option| [option.capitalize, option] } %>
   <%= f.input :video_id, hint: t('simple_form.hints.content/article.video_id_html') %>
 

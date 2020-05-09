@@ -232,8 +232,14 @@ en:
       update:
         success: About us content was updated successfully
     articles:
+      create:
+        success: Article was successfully created
+      destroy:
+        success: Article was successfully destroyed
       new:
         header: New Article
+      update:
+        success: Article was successfully updated
     accounts:
       edit:
         header: Edit Account

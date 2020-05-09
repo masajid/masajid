@@ -18,7 +18,7 @@ module Admin
       @article = authorize Content::Article.new(article_params)
 
       if @article.save
-        redirect_to edit_article_url(@article), notice: 'Article was successfully created.'
+        redirect_to location_after_save, notice: t('admin.articles.create.success')
       else
         render :new
       end
@@ -26,7 +26,7 @@ module Admin
 
     def update
       if @article.update(article_params)
-        redirect_to edit_article_url(@article), notice: 'Article was successfully updated.'
+        redirect_to location_after_save, notice: t('admin.articles.update.success')
       else
         render :edit
       end
@@ -34,7 +34,7 @@ module Admin
 
     def destroy
       @article.destroy
-      redirect_to articles_url, notice: 'Article was successfully destroyed.'
+      redirect_to articles_url, notice: t('admin.articles.destroy.success')
     end
 
     private
@@ -54,9 +54,23 @@ module Admin
         :published_at,
         :photo,
         :remove_photo,
-        seo_content_attributes: %i[id meta_title meta_description],
-        page_ids: []
+        page_ids: [],
+        seo_content_attributes: [
+          :id,
+          :meta_title,
+          :meta_description,
+          translations_attributes: %i[id locale meta_title meta_description]
+        ],
+        translations_attributes: %i[id locale title slug summary body]
       ).merge(account: current_account)
+    end
+
+    def location_after_save
+      if article_params[:translations_attributes].present?
+        translations_path(resource: :articles, resource_id: @article.id)
+      else
+        edit_article_url(@article)
+      end
     end
 
     def wrapper_center?

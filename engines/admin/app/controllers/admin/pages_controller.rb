@@ -58,7 +58,8 @@ module Admin
           :id,
           :meta_title,
           :meta_description,
-          translations_attributes: %i[id locale meta_title meta_description]],
+          translations_attributes: %i[id locale meta_title meta_description]
+        ],
         translations_attributes: %i[id locale name description]
       ).merge(account: current_account)
     end

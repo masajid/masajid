@@ -17,18 +17,9 @@ module Admin
     end
 
     def resource
-      @resource ||=
-        if slugged_models.include?(klass.class_name)
-          klass.friendly.find(params[:resource_id])
-        else
-          klass.find(params[:resource_id])
-        end
+      @resource ||= klass.find(params[:resource_id])
     end
     helper_method :resource
-
-    def slugged_models
-      %w[Content::Article]
-    end
 
     def wrapper_center?
       true

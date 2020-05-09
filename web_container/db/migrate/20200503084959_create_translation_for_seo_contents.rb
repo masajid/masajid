@@ -16,6 +16,6 @@ class CreateTranslationForSeoContents < ActiveRecord::Migration[6.0]
   end
 
   def down
-    Content::Page.drop_translation_table! migrate_data: true
+    Content::SeoContent.drop_translation_table! migrate_data: true
   end
 end
