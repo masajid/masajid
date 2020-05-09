@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_09_113424) do
+ActiveRecord::Schema.define(version: 2020_05_09_123249) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,9 +78,18 @@ ActiveRecord::Schema.define(version: 2020_05_09_113424) do
     t.index ["visit_token"], name: "index_ahoy_visits_on_visit_token", unique: true
   end
 
+  create_table "content_account_translations", force: :cascade do |t|
+    t.bigint "content_account_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "mosque"
+    t.index ["content_account_id"], name: "index_content_account_translations_on_content_account_id"
+    t.index ["locale"], name: "index_content_account_translations_on_locale"
+  end
+
   create_table "content_accounts", force: :cascade do |t|
     t.string "subdomain"
-    t.string "mosque"
     t.string "responsable"
     t.bigint "owner_id", null: false
     t.datetime "created_at", null: false
@@ -166,6 +175,16 @@ ActiveRecord::Schema.define(version: 2020_05_09_113424) do
     t.index ["region_id"], name: "index_content_cities_on_region_id"
   end
 
+  create_table "content_configuration_translations", force: :cascade do |t|
+    t.bigint "content_configuration_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "about_us"
+    t.index ["content_configuration_id"], name: "index_2f65a1ab6787dbff3b30f2f4b72c7994c5a3e733"
+    t.index ["locale"], name: "index_content_configuration_translations_on_locale"
+  end
+
   create_table "content_configurations", force: :cascade do |t|
     t.string "theme", default: "default", null: false
     t.string "supported_locales", default: [], array: true
@@ -174,7 +193,6 @@ ActiveRecord::Schema.define(version: 2020_05_09_113424) do
     t.bigint "account_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "about_us"
     t.boolean "hide_email", default: true, null: false
     t.boolean "hide_phone", default: true, null: false
     t.index ["account_id"], name: "index_content_configurations_on_account_id"

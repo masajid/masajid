@@ -302,6 +302,10 @@ en:
       edit:
         header: Edit Slider
     translations:
+      article:
+        header: Translate Article
+      configuration:
+        header: Translate General Configuration
       page:
         header: Translate Menu Item
     cities:
