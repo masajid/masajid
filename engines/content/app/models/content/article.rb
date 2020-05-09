@@ -4,7 +4,7 @@ module Content
 
     extend Content::ScopedTo
     extend FriendlyId
-    friendly_id :title, use: [:history, :slugged, :globalize]
+    friendly_id :title, use: %i[history slugged globalize]
 
     include Content::HasPhoto
 

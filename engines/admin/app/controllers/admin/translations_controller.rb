@@ -4,7 +4,7 @@ module Admin
   class TranslationsController < ApplicationController
     RESOURCE_NAME_MAPPING = {
       'sidebar' => 'sidebar_content'
-    }
+    }.freeze
 
     def index
       render(resource_name)

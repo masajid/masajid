@@ -5,10 +5,12 @@ module Admin
     def update
       if current_account.update(configuration_params)
         uploaded_logo = params.dig(:account, :configuration_attributes, :logo)
-        current_account.configuration.logo.attach(uploaded_logo) if uploaded_logo.present?
 
-        current_account.configuration.remove_logo &&
+        if uploaded_logo.present?
+          current_account.configuration.logo.attach(uploaded_logo)
+        elsif current_account.configuration.remove_logo
           current_account.configuration.logo.purge_later
+        end
 
         redirect_to location_after_save, notice: t('admin.configurations.update.success')
       else
