@@ -1,6 +1,6 @@
 module Content
   class Configuration < ApplicationRecord
-    attr_accessor :remove_logo
+    attribute :remove_logo, :boolean # used by the form
 
     has_one_attached :logo
     belongs_to :account
