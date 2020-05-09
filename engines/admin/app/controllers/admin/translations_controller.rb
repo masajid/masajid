@@ -2,7 +2,7 @@ require_dependency 'admin/application_controller'
 
 module Admin
   class TranslationsController < ApplicationController
-    RESOURCE_NAME_MAPPINS = {
+    RESOURCE_NAME_MAPPING = {
       'sidebar' => 'sidebar_content'
     }
 
@@ -13,7 +13,7 @@ module Admin
     private
 
     def resource_name
-      @resource_name ||= RESOURCE_NAME_MAPPINS[params[:resource]] || params[:resource].singularize
+      @resource_name ||= RESOURCE_NAME_MAPPING[params[:resource]] || params[:resource].singularize
     end
 
     def klass
