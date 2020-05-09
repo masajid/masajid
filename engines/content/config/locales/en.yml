@@ -308,6 +308,8 @@ en:
         header: Translate General Configuration
       page:
         header: Translate Menu Item
+      slider:
+        header: Translate Slider
     cities:
       edit:
         header: Edit City
