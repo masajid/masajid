@@ -1,10 +1,10 @@
 GIT
-  remote: https://github.com/masajid/trix-gem.git
-  revision: bfcbedcf119d24fb5f53ff5e555138f5858db8df
-  branch: chore/support_rails_6_3
+  remote: https://github.com/masajid/trix.git
+  revision: 13d6be8f05d54d4bc0f6d8d36f73148981da4c17
+  branch: master
   specs:
-    trix-gem (0.11.2)
-      rails (> 4.1, <= 6.0.3)
+    trix-rails (2.2.0)
+      rails (> 4.1, < 6.1)
 
 PATH
   remote: ../engines
@@ -20,7 +20,7 @@ PATH
       jquery-ui-rails (~> 6.0.1)
       rails_sortable
       sortable_tree_rails
-      trix-gem
+      trix-rails
     content (0.1.0)
       ahoy_matey
       ancestry
@@ -506,7 +506,7 @@ DEPENDENCIES
   sass-rails (~> 6)
   spring
   spring-watcher-listen (~> 2.0.0)
-  trix-gem!
+  trix-rails!
   turbolinks (~> 5)
   tzinfo-data
   uglifier (~> 4.2.0)

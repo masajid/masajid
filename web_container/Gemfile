@@ -20,8 +20,8 @@ gem 'flipper-ui', '~> 0.17.2'
 gem 'jquery-rails'
 gem 'whenever', require: false
 
-# TODO: cleanup after rails 6.0.3 is supported
-gem 'trix-gem', github: 'masajid/trix-gem', branch: 'chore/support_rails_6_3'
+# TODO: cleanup after nested attributes are supported
+gem 'trix-rails', github: 'masajid/trix', branch: 'master'
 
 group :production do
   # gem 'google-cloud-storage', '~> 1.25', require: false
