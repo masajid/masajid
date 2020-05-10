@@ -3,16 +3,10 @@ require_dependency 'admin/application_controller'
 module Admin
   class ConfigurationsController < ApplicationController
     def update
-      if current_account.update(configuration_params)
-        uploaded_logo = params.dig(:account, :configuration_attributes, :logo)
+      service = Admin::AccountsService.new(current_account, configuration_params)
 
-        if uploaded_logo.present?
-          current_account.configuration.logo.attach(uploaded_logo)
-        elsif current_account.configuration.remove_logo
-          current_account.configuration.logo.purge_later
-        end
-
-        redirect_to location_after_save, notice: t('admin.configurations.update.success')
+      if service.update
+        redirect_to edit_configuration_url, notice: t('admin.configurations.update.success')
       else
         render :edit
       end
