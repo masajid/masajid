@@ -201,7 +201,7 @@ tr:
         one: Mesaj
         other: Mesajlar
       content/sidebar_content:
-        few:
+        few: Kenar Çubuğu İçeriği
         one: Kenar Çubuğu
         other: Kenar Çubuğu İçeriği
     attributes:
@@ -213,8 +213,8 @@ tr:
         published_at: Yayın Tarihi
         photo: Fotoğraf
         video_id:
-        video_source:
-        remove_photo:
+        video_source: Video Kaynağı
+        remove_photo: Fotoğrafı Kaldır
       content/account:
         subdomain: Alt alan
         responsable: Sorumlu Adı
@@ -234,21 +234,21 @@ tr:
         supported_locales: Desteklenen Diller
         default_locale: Varsayılan Dil
         admin_locale: Yönetim Dili
-        hide_phone:
-        hide_email:
-        remove_logo:
+        hide_phone: Telefon numarasını gizle
+        hide_email: E-posta adresini gizle
+        remove_logo: Logoyu Kaldır
       content/country:
         name: Ülke Adı
       content/newsletter:
         article_ids: Makaleler
-        body:
+        body: E-posta Gövdesi
         link: Bağlantı
         link_text: Bağlantı Metni
         date: Gönderme Tarihi
         sent_at: Gönderilen
         subject: Konu
         photo: Fotoğraf
-        remove_photo:
+        remove_photo: Fotoğrafı Kaldır
       content/page:
         ancestry:
         description: Açıklama
@@ -277,7 +277,7 @@ tr:
         photo: Fotoğraf
         link: Bağlantı
         link_text: Bağlantı Metni
-        remove_photo:
+        remove_photo: Fotoğrafı Kaldır
       content/subscriber:
         email: E-posta
         created_at: Oluşturma Tarihi
@@ -295,7 +295,7 @@ tr:
         phone: Telefon
         email: E-posta
         education: Eğitim
-        availability:
+        availability: Kullanılabilirlik
         languages: Diller
         other_languages: Diğer Diller
         experience: Deneyim
@@ -607,6 +607,12 @@ tr:
     articles:
       new:
         header: Yeni Makale
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     accounts:
       edit:
         header: Hesabı Düzenle
@@ -629,6 +635,12 @@ tr:
         header: Menü Öğesini Düzenle
       new:
         header: Yeni Menü Öğesi
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     regions:
       edit:
         header: Bölgeyi Düzenle
@@ -640,6 +652,8 @@ tr:
     sliders:
       edit:
         header: Kaydırıcıyı Düzenle
+      update:
+        success:
     cities:
       edit:
         header: Şehri Düzenle
@@ -676,6 +690,12 @@ tr:
         header:
       new:
         header:
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     about:
       update:
         success:
@@ -688,6 +708,17 @@ tr:
         connected:
       update:
         success:
+    translations:
+      article:
+        header:
+      configuration:
+        header:
+      page:
+        header:
+      sidebar_content:
+        header:
+      slider:
+        header:
   landing:
     admin_panel: Yönetici Paneli
     create_account: Hesap oluştur
@@ -789,6 +820,7 @@ tr:
       new:
       show: Ayrıntılar
       update:
+      translate:
     locales:
       en: İngilizce
       fr: Fransızca

@@ -664,6 +664,12 @@ es:
     articles:
       new:
         header: Articulo nuevo
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     accounts:
       edit:
         header: Editar cuenta
@@ -686,6 +692,12 @@ es:
         header: Editar elemento de menú
       new:
         header: Nuevo elemento de menú
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     regions:
       edit:
         header: Editar provincia
@@ -697,6 +709,8 @@ es:
     sliders:
       edit:
         header: Editar Slider
+      update:
+        success:
     cities:
       edit:
         header: Editar Ciudad
@@ -733,6 +747,12 @@ es:
         header:
       new:
         header:
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     about:
       update:
         success:
@@ -745,6 +765,17 @@ es:
         connected: Conectado
       update:
         success: Tu dominio ha sido actualizado correctamente
+    translations:
+      article:
+        header:
+      configuration:
+        header:
+      page:
+        header:
+      sidebar_content:
+        header:
+      slider:
+        header:
   landing:
     admin_panel: Panel de administrador
     create_account: Crear una cuenta
@@ -864,6 +895,7 @@ es:
       new: Nuevo
       show: Ver detalles
       update:
+      translate:
     locales:
       en: Inglés
       fr: Francés

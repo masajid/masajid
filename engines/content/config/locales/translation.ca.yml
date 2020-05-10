@@ -600,6 +600,12 @@ ca:
     articles:
       new:
         header:
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     accounts:
       edit:
         header:
@@ -622,6 +628,12 @@ ca:
         header:
       new:
         header:
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     regions:
       edit:
         header:
@@ -633,6 +645,8 @@ ca:
     sliders:
       edit:
         header:
+      update:
+        success:
     cities:
       edit:
         header:
@@ -669,6 +683,12 @@ ca:
         header:
       new:
         header:
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     about:
       update:
         success:
@@ -681,6 +701,17 @@ ca:
         connected:
       update:
         success:
+    translations:
+      article:
+        header:
+      configuration:
+        header:
+      page:
+        header:
+      sidebar_content:
+        header:
+      slider:
+        header:
   landing:
     admin_panel:
     create_account:
@@ -781,6 +812,7 @@ ca:
       new:
       show:
       update:
+      translate:
     locales:
       en:
       fr:
