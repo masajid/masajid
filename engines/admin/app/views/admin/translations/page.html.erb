@@ -26,11 +26,11 @@
           <% I18n.with_locale(locale) do %>
             <%= f.globalize_fields_for locale do |g| %>
               <%= form_group_for g, :name, label: Content::Page.human_attribute_name(:name) do %>
-                <%= g.input :name, label: false, input_html: { dir: dir } %>
+                <%= g.input :name, label: false %>
               <% end %>
 
               <%= form_group_for g, :description, label: Content::Page.human_attribute_name(:description) do %>
-                <%= g.input :description, label: false, input_html: { dir: dir } %>
+                <%= g.input :description, as: :text, label: false %>
               <% end %>
 
               <hr>

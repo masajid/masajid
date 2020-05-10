@@ -26,20 +26,19 @@
           <% I18n.with_locale(locale) do %>
             <%= f.globalize_fields_for locale do |g| %>
               <%= form_group_for g, :title, label: Content::Article.human_attribute_name(:title) do %>
-                <%= g.input :title, label: false, input_html: { dir: dir } %>
+                <%= g.input :title, label: false %>
               <% end %>
 
               <%= form_group_for g, :slug, label: Content::Article.human_attribute_name(:slug) do %>
-                <%= g.input :slug, label: false, input_html: { dir: dir } %>
+                <%= g.input :slug, label: false %>
               <% end %>
 
               <%= form_group_for g, :summary, label: Content::Article.human_attribute_name(:summary) do %>
-                <%= g.input :summary, label: false, input_html: { dir: dir, rows: 5 } %>
+                <%= g.input :summary, as: :text, label: false, input_html: { rows: 5 } %>
               <% end %>
 
               <%= form_group_for g, :body, label: Content::Article.human_attribute_name(:body) do %>
-                <%= g.input :body, as: :hidden %>
-                <trix-editor input='<%= "article_translations_attributes_#{index + 1}_body" %>' dir='<%= dir %>'></trix-editor>
+                <%= g.input :body, as: :trix_editor, input_html: { dir: dir }, label: false %>
               <% end %>
 
               <hr>

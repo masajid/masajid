@@ -2,9 +2,7 @@
   <i class='fa fa-edit'></i>
 <% end %>
 
-<%= link_to translations_path(resource: :pages, resource_id: item.id), title: t('shared.actions.translate'), class: 'btn btn-primary' do %>
-  <i class='fa fa-globe'></i>
-<% end %>
+<%= link_to_translate translations_path(resource: :pages, resource_id: item.id), only_icon: true %>
 
 <%= link_to item, title: t('shared.actions.delete'), method: :delete, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger' do %>
   <i class='fa fa-trash'></i>

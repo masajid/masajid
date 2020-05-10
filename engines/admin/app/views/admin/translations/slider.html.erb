@@ -27,7 +27,7 @@
             <% end %>
 
             <%= form_group_for g, :body, label: Content::Slider.human_attribute_name(:body) do %>
-              <%= g.input :body, label: false %>
+              <%= g.input :body, as: :text, label: false %>
             <% end %>
 
             <%= form_group_for g, :link_text, label: Content::Slider.human_attribute_name(:link_text) do %>

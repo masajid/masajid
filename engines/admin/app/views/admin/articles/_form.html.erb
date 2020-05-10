@@ -4,40 +4,27 @@
   <%= f.input :title %>
   <%= f.input :slug, hint: t('simple_form.hints.content/article.slug_html') if article.persisted? %>
   <%= f.input :summary, as: :text, input_html: { rows: 5 } %>
+  <%= f.input :body, as: :trix_editor, input_html: { dir: dir } %>
+
+  <%= form_group_for f, :published_at do %>
+    <%= f.input :published_at, start_year: Date.current.year - 10, label: false %>
+  <% end %>
+
   <%= f.input :video_source, collection: Content::Article::VIDEO_SOURCE_OPTIONS.map { |option| [option.capitalize, option] } %>
   <%= f.input :video_id, hint: t('simple_form.hints.content/article.video_id_html') %>
 
-  <div class='form-group row'>
-    <%= f.label :published_at, class: 'col-sm-4 col-form-label' %>
-    <div class='col-sm-8'>
-      <%= f.input :published_at, start_year: Date.current.year - 10, label: false %>
-    </div>
-  </div>
+  <%= form_group_for f, :page_ids, label: plural_resource_name(Content::Page) do %>
+    <%= f.input :page_ids, as: :check_boxes, collection: options_for_pages %>
+  <% end %>
 
-  <div class='form-group row'>
-    <%= f.label :page_ids, plural_resource_name(Content::Page), class: 'col-sm-4 col-form-label' %>
-    <div class='col-sm-8'>
-      <%= f.input :page_ids, as: :check_boxes, collection: options_for_pages %>
-    </div>
-  </div>
+  <%= form_group_for f, :photo do %>
+    <%= f.input :photo, label: false, hint: t('simple_form.hints.content/article.photo') %>
 
-  <div class='form-group row'>
-    <%= f.label :photo, class: 'col-sm-4 col-form-label' %>
-    <div class='col-sm-8'>
-      <%= f.input :photo, label: false, hint: t('simple_form.hints.content/article.photo') %>
-
-      <% if article.photo.attached? %>
-        <%= f.input :remove_photo, as: :boolean %>
-        <%= image_tag main_app.url_for(article.photo.variant(resize: '200x')) %>
-      <% end %>
-    </div>
-  </div>
-
-  <hr>
-
-  <%= f.label :body %>
-  <%= f.input :body, as: :hidden %>
-  <trix-editor input='article_body'></trix-editor>
+    <% if article.photo.attached? %>
+      <%= f.input :remove_photo, as: :boolean %>
+      <%= image_tag main_app.url_for(article.photo.variant(resize: '200x')) %>
+    <% end %>
+  <% end %>
 
   <hr>
 

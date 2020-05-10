@@ -24,7 +24,7 @@
           <% I18n.with_locale(locale) do %>
             <%= f.globalize_fields_for locale do |g| %>
               <%= form_group_for g, :mosque, label: Content::Account.human_attribute_name(:mosque) do %>
-                <%= g.input :mosque, label: false, input_html: { dir: dir } %>
+                <%= g.input :mosque, label: false %>
               <% end %>
 
               <hr>

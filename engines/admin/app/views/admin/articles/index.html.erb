@@ -32,19 +32,15 @@
               <i class='fa fa-pencil'></i>
             <% end %>
           </td>
-          <td>
-            <%= link_to article, method: :delete, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger' do %>
-              <i class='fa fa-trash'></i>
-            <% end %>
-          </td>
-          <td>
-            <%= link_to translations_path(resource: :articles, resource_id: article.id), title: t('shared.actions.translate'), class: 'btn btn-primary' do %>
-              <i class='fa fa-globe'></i>
-            <% end %>
-          </td>
+          <td><%= link_to_translate translations_path(resource: :articles, resource_id: article.id), only_icon: true %></td>
           <td>
             <%= link_to prefix_link_with_account_domain(current_account, "/article/#{article.slug}"), class: 'btn btn-secondary', target: '_blank' do %>
               <i class='fa fa-external-link'></i>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to article, method: :delete, data: { confirm: t('admin.shared.are_you_sure') }, class: 'btn btn-danger' do %>
+              <i class='fa fa-trash'></i>
             <% end %>
           </td>
         </tr>

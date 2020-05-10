@@ -29,7 +29,7 @@
             <% end %>
 
             <%= form_group_for g, :body, label: Content::SidebarContent.human_attribute_name(:body) do %>
-              <%= g.input :body, label: false, input_html: { rows: 5 } %>
+              <%= g.input :body, as: :text, label: false, input_html: { rows: 5 } %>
             <% end %>
           <% end %>
         <% end %>

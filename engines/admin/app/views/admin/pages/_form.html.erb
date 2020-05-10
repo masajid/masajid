@@ -2,7 +2,7 @@
   <%= f.error_notification %>
 
   <%= f.input :name %>
-  <%= f.input :description %>
+  <%= f.input :description, as: :text %>
   <%= f.input :ancestry, collection: policy_scope(Content::Page).roots, label_method: :pretty_name, value_method: :id %>
   <%= f.input :permalink_part, hint: page.permalink if page.persisted? %>
 

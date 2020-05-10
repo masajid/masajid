@@ -11,8 +11,7 @@
       >
         <% I18n.with_locale(locale) do %>
           <%= f.globalize_fields_for locale do |g| %>
-            <%= g.input :about_us, as: :hidden %>
-            <trix-editor input='<%= "configuration_translations_attributes_#{index + 1}_about_us" %>' dir='<%= dir %>'></trix-editor>
+            <%= g.input :about_us, as: :trix_editor, input_html: { dir: dir }, label: false %>
           <% end %>
         <% end %>
       </div>
