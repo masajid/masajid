@@ -4,7 +4,7 @@ module Content
       @account = account
 
       make_bootstrap_mail(
-        to: ENV['ADMIN_NOTIFICATION_EMAILS']&.split,
+        to: Rails.application.credentials[Rails.env.to_sym][:admin_notification_emails]&.split,
         subject: t('content.account_mailer.notify_creation_new_entry.subject', mosque: @account.mosque)
       )
     end
