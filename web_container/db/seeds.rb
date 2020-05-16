@@ -1,7 +1,7 @@
 # Create super admin user
 Content::User.create(
-  email: ENV['SUPER_ADMIN_EMAIL'],
-  password: ENV['SUPER_ADMIN_PASSWORD'],
+  email: Rails.application.credentials[Rails.env.to_sym][:super_admin_email],
+  password: Rails.application.credentials[Rails.env.to_sym][:super_admin_password],
   role: 'super_admin',
   confirmed_at: Time.current
 )

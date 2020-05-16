@@ -1,3 +1,3 @@
 Raven.configure do |config|
-  config.dsn = ENV['SENTRY_DSN']
+  config.dsn = Rails.application.credentials[Rails.env.to_sym][:sentry_dsn]
 end

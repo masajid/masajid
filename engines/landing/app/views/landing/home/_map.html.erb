@@ -7,7 +7,7 @@
 </div>
 
 <script type='text/javascript'>
-  mapboxgl.accessToken = '<%= ENV['MAPBOX_ACCESS_TOKEN'] %>';
+  mapboxgl.accessToken = '<%= Rails.application.credentials[Rails.env.to_sym][:mapbox_access_token] %>';
 
   var map = new mapboxgl.Map({
     container: 'map',

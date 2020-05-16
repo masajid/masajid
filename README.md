@@ -15,24 +15,37 @@ Website: https://masajid.world
 ```
 $ git clone git@github.com:mgharbik/masajid.git
 $ cd masajid/web_container
+$ touch config/master.key # then copy/past the master key
 $ bundle install
 $ rails db:create db:migrate db:seed
 $ rails content_places:import only=countries
 $ rails s
 ```
 
+#### Setup with Docker Compose
+
+First rename `.env.example` to `.env` and change the database environment variables.
+
+```
+$ brew install libpq
+$ gem install pg -- --with-opt-dir=/usr/local/opt/libpq
+
+$ docker-compose up -d db redis
+```
+
 other steps:
 
-- rename `.env.example` to `.env` and change the environment variables.
 - add to `/etc/hosts` file
+
 ```
 127.0.0.1       masajid.local
 127.0.0.1       al-nour.masajid.local
 ```
 
-- visit [http://masajid.local:3000/admin](http://masajid.local:3000/admin), credentials: `admin@masajid.com`/`masajid`
+- visit [http://masajid.local:3000/admin](http://masajid.local:3000/admin), credentials: `admin@masajid.world`/`masajid`
 - also visit [http://al-nour.masajid.local:3000](http://al-nour.masajid.local:3000)
 - You can list the sent emails here [http://localhost:3000/letter_opener/](http://localhost:3000/letter_opener)
+
 ## Translations
 
 - Add or update translations, then sync:

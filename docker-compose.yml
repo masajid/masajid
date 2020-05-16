@@ -10,7 +10,7 @@ services:
       - 5432:5432
 
   redis:
-    image: redis:5.0
+    image: redis
     volumes:
       - redis:/data
     ports:
@@ -18,7 +18,6 @@ services:
 
   app: &app_base
     build: .
-    env_file: web_container/.env
     volumes:
       - .:/app
     ports:
