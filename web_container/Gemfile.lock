@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/masajid/trix.git
-  revision: 13d6be8f05d54d4bc0f6d8d36f73148981da4c17
-  branch: master
+  revision: c1e445bc48e31ba1ef6e5462f0bf362a39b99a9b
+  branch: feat/support_nested_attributes
   specs:
     trix-rails (2.2.0)
       rails (> 4.1, < 6.1)

@@ -21,7 +21,7 @@ gem 'jquery-rails'
 gem 'whenever', require: false
 
 # TODO: cleanup after nested attributes are supported
-gem 'trix-rails', github: 'masajid/trix', branch: 'master'
+gem 'trix-rails', github: 'masajid/trix', branch: 'feat/support_nested_attributes'
 
 group :production do
   # gem 'google-cloud-storage', '~> 1.25', require: false
