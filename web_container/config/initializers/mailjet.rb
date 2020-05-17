@@ -1,8 +1,8 @@
 if Rails.env.production?
   Mailjet.configure do |config|
-    config.api_key = ENV['MAILJET_API_KEY']
-    config.secret_key = ENV['MAILJET_SECRET_KEY']
-    config.default_from = ENV['ADMIN_SENDER_EMAIL']
+    config.api_key = Rails.application.credentials[Rails.env.to_sym][:mailjet_api_key]
+    config.secret_key = Rails.application.credentials[Rails.env.to_sym][:mailjet_secret_key]
+    config.default_from = Rails.application.credentials[Rails.env.to_sym][:admin_sender_email]
 
     config.api_version = 'v3.1'
   end

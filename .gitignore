@@ -27,7 +27,7 @@ web_container/config/master.key
 .idea/
 
 # Ignore environment variables
-web_container/.env
+.env
 
 # Ignore engines Gemfile.lock files
 engines/**/Gemfile.lock

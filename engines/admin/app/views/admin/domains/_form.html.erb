@@ -5,7 +5,7 @@
     </label>
 
     <div class='col-sm-8'>
-      <%= "#{current_account.subdomain}.#{ENV['PROJECT_HOSTNAME']}" %>
+      <%= "#{current_account.subdomain}.#{Rails.application.credentials[Rails.env.to_sym][:project_name]}" %>
       <span class='badge badge-success'>
         <%= t('admin.domains.edit.connected') %>
       </span>
