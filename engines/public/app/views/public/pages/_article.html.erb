@@ -12,11 +12,9 @@
       <i class='fa fa-eye'></i> <%= article.views_count %>
     </div>
 
-    <% if article.summary? %>
-      <p class='card-text mb-auto'>
-        <%= article.summary.truncate(100, omission: t('public.continued')) %>
-      </p>
-    <% end %>
+    <p class='card-text mb-auto'>
+      <%= article.summary&.truncate(100, omission: t('public.continued')) %>
+    </p>
 
     <%= link_to t('public.read_more'), article %>
   </div>
