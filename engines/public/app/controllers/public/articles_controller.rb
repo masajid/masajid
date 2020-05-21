@@ -9,6 +9,11 @@ module Public
 
     def set_article
       @article = Content::Article.scoped_to(current_account).friendly.find(params[:id]).decorate
+
+      # TODO: fix slug history and activate the redirect
+      # if request.path != article_path(@article)
+      #   return redirect_to @article, status: :moved_permanently
+      # end
     end
 
     def track_show
