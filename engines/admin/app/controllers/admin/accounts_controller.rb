@@ -27,13 +27,13 @@ module Admin
     end
 
     def accept
-      @account.accepted!
+      @account.update_column(:status, :accepted)
       Content::AccountMailer.accept_entry(@account, generate_raw_for_edit_password_url).deliver_later
       redirect_to accounts_url, notice: 'Account was successfully accepted.'
     end
 
     def decline
-      @account.declined!
+      @account.update_column(:status, :declined)
       Content::AccountMailer.decline_entry(@account).deliver_later
       redirect_to accounts_url, notice: 'Account was successfully declined.'
     end
