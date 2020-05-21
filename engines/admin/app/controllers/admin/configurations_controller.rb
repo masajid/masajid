@@ -6,7 +6,7 @@ module Admin
       service = Admin::AccountsService.new(current_account, configuration_params)
 
       if service.update
-        redirect_to edit_configuration_url, notice: t('admin.configurations.update.success')
+        redirect_to location_after_save, notice: t('admin.configurations.update.success')
       else
         render :edit
       end
