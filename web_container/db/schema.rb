@@ -140,10 +140,10 @@ ActiveRecord::Schema.define(version: 2020_05_21_100545) do
   end
 
   create_table "content_articles", force: :cascade do |t|
-    t.string "title", null: false
-    t.string "slug", null: false
-    t.text "summary", null: false
-    t.text "body", null: false
+    t.string "title"
+    t.string "slug"
+    t.text "summary"
+    t.text "body"
     t.datetime "published_at"
     t.datetime "deleted_at"
     t.bigint "account_id", null: false
@@ -309,7 +309,7 @@ ActiveRecord::Schema.define(version: 2020_05_21_100545) do
   create_table "content_sidebar_contents", force: :cascade do |t|
     t.integer "position"
     t.string "title"
-    t.text "body", null: false
+    t.text "body"
     t.boolean "light_background", default: false
     t.boolean "active", default: true
     t.bigint "account_id", null: false
