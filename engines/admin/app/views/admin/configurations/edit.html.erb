@@ -2,4 +2,8 @@
   <%= t('admin.configurations.edit.header') %>
 <% end %>
 
+<% content_for :page_actions do %>
+  <%= link_to_translate translations_path(resource: :configuration, resource_id: :edit) %>
+<% end %>
+
 <%= render 'form' %>

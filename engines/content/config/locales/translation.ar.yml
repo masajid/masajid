@@ -261,7 +261,6 @@ ar:
         meta_description: Meta Description
         name: اسم
         permalink: Permalink
-        permalink_part: Permalink
       content/region:
         name: اسم المنطقة
       content/city:
@@ -610,6 +609,12 @@ ar:
     articles:
       new:
         header: مقال جديد
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     accounts:
       edit:
         header: تعديل الحساب
@@ -632,6 +637,12 @@ ar:
         header: تعجيل عنصر القائمة
       new:
         header: عنصر قائمة جديد
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     regions:
       edit:
         header: تعديل المنطقة
@@ -643,6 +654,8 @@ ar:
     sliders:
       edit:
         header: تعديل Slider
+      update:
+        success:
     cities:
       edit:
         header: تعديل المدينة
@@ -679,6 +692,12 @@ ar:
         header:
       new:
         header:
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     about:
       update:
         success:
@@ -691,6 +710,17 @@ ar:
         connected:
       update:
         success:
+    translations:
+      article:
+        header:
+      configuration:
+        header:
+      page:
+        header:
+      sidebar_content:
+        header:
+      slider:
+        header:
   landing:
     admin_panel: لوحة الادارة
     create_account: إنشاء حساب
@@ -802,6 +832,7 @@ ar:
       new: جديد
       show: تفاصيل
       update:
+      translate:
     locales:
       en: الإنجليزية
       fr: الفرنسية

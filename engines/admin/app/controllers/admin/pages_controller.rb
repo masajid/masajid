@@ -23,7 +23,7 @@ module Admin
       @page = authorize Content::Page.new(page_params)
 
       if @page.save
-        redirect_to edit_page_url(@page), notice: 'Page was successfully created.'
+        redirect_to location_after_save, notice: t('admin.pages.create.success')
       else
         render :new
       end
@@ -31,7 +31,7 @@ module Admin
 
     def update
       if @page.update(page_params)
-        redirect_to edit_page_url(@page), notice: 'Page was successfully updated.'
+        redirect_to location_after_save, notice: t('admin.pages.update.success')
       else
         render :edit
       end
@@ -39,7 +39,7 @@ module Admin
 
     def destroy
       @page.destroy
-      redirect_to pages_url, notice: 'Page was successfully destroyed.'
+      redirect_to pages_url, notice: t('admin.pages.destroy.success')
     end
 
     private
@@ -54,8 +54,27 @@ module Admin
         :description,
         :ancestry,
         :permalink_part,
-        seo_content_attributes: %i[id meta_title meta_description]
+        seo_content_attributes: [
+          :id,
+          :meta_title,
+          :meta_description,
+          translations_attributes: %i[id locale meta_title meta_description]
+        ],
+        translations_attributes: %i[id locale name description permalink]
       ).merge(account: current_account)
     end
+
+    def location_after_save
+      if page_params[:translations_attributes].present?
+        translations_path(resource: :pages, resource_id: @page.id)
+      else
+        edit_page_url(@page)
+      end
+    end
+
+    def wrapper_center?
+      action_name != 'index'
+    end
+    helper_method :wrapper_center?
   end
 end

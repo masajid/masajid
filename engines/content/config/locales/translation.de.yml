@@ -296,7 +296,6 @@ de:
         meta_description: Meta-Beschreibung
         name: Name
         permalink: Permalink
-        permalink_part: Permalink
       content/region:
         name: Name der Region
       content/city:
@@ -643,6 +642,12 @@ de:
     articles:
       new:
         header: Neuer Artikel
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     accounts:
       edit:
         header: Konto bearbeiten
@@ -665,6 +670,12 @@ de:
         header: Menü-Elemente bearbeiten
       new:
         header: Neues Menü-Element
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     regions:
       edit:
         header: Region ändern
@@ -676,6 +687,8 @@ de:
     sliders:
       edit:
         header: Edit Slider
+      update:
+        success:
     cities:
       edit:
         header: Stadt ändern
@@ -712,6 +725,12 @@ de:
         header:
       new:
         header:
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     about:
       update:
         success:
@@ -724,6 +743,17 @@ de:
         connected:
       update:
         success:
+    translations:
+      article:
+        header:
+      configuration:
+        header:
+      page:
+        header:
+      sidebar_content:
+        header:
+      slider:
+        header:
   landing:
     admin_panel: Admin panel
     create_account: Kreierte Konto
@@ -830,6 +860,7 @@ de:
       new: Neu
       show: Details
       update:
+      translate:
     locales:
       en: Englisch
       fr: Französisch

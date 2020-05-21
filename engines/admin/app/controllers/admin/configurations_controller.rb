@@ -19,8 +19,22 @@ module Admin
         :responsable,
         :mosque,
         configuration_attributes: %i[id hide_email hide_phone logo remove_logo],
-        seo_content_attributes: %i[id meta_title meta_description]
+        seo_content_attributes: [
+          :id,
+          :meta_title,
+          :meta_description,
+          translations_attributes: %i[id locale meta_title meta_description]
+        ],
+        translations_attributes: %i[id locale mosque]
       )
+    end
+
+    def location_after_save
+      if configuration_params[:translations_attributes].present?
+        translations_path(resource: :configuration, resource_id: :edit)
+      else
+        edit_configuration_url
+      end
     end
 
     def wrapper_center?

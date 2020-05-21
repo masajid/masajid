@@ -112,7 +112,6 @@ en:
         meta_description: Meta Description
         name: Name
         permalink: Permalink
-        permalink_part: Permalink
       content/region:
         name: Region Name
       content/city:
@@ -232,8 +231,14 @@ en:
       update:
         success: About us content was updated successfully
     articles:
+      create:
+        success: Article was successfully created
+      destroy:
+        success: Article was successfully destroyed
       new:
         header: New Article
+      update:
+        success: Article was successfully updated
     accounts:
       edit:
         header: Edit Account
@@ -269,26 +274,51 @@ en:
       new:
         header: New Newsletter
     pages:
+      create:
+        success: Menu item was successfully created
+      destroy:
+        success: Menu item was successfully destroyed
       edit:
         header: Edit Menu Item
       new:
         header: New Menu Item
+      update:
+        success: Menu item was successfully updated
     regions:
       edit:
         header: Edit Region
       new:
         header: New Region
     sidebar_contents:
+      create:
+        success: Sidebar Content was successfully created
+      destroy:
+        success: Sidebar Content was successfully deleted
       edit:
         header: Edit Sidebar Content
       new:
         header: New Sidebar Content
+      update:
+        success: Sidebar Content was successfully updated
     social_networks:
       edit:
         header: Edit Social Media
     sliders:
       edit:
         header: Edit Slider
+      update:
+        success: Slider was successfully updated
+    translations:
+      article:
+        header: Translate Article
+      configuration:
+        header: Translate General Configuration
+      page:
+        header: Translate Menu Item
+      sidebar_content:
+        header: Translate Sidebar Content
+      slider:
+        header: Translate Slider
     cities:
       edit:
         header: Edit City
@@ -427,6 +457,7 @@ en:
       edit: Edit
       new: New
       update: Update
+      translate: Translate
     footer:
       back_to_top: Back to top
     locales:

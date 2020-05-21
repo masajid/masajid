@@ -1,0 +1,41 @@
+<% content_for :page_title do %>
+  <%= t('admin.translations.sidebar_content.header') %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= link_to edit_sidebar_content_path(resource), class: 'btn btn-success' do %>
+    <i class='fa fa-edit'></i>
+    <%= t('shared.actions.edit') %>
+  <% end %>
+  <%= link_to t('shared.actions.new'), new_sidebar_content_path, class: 'btn btn-info' %>
+  <%= link_to t('shared.actions.back_to_list'), sidebar_contents_path, class: 'btn btn-secondary' %>
+<% end %>
+
+<%= render 'settings' %>
+
+<%= simple_form_for resource do |f| %>
+  <div class='tab-content' id='localeTabContent'>
+    <% locales_for_translations.each_with_index do |locale, index| %>
+      <div
+        class='tab-pane fade <%= 'show active' if current_account.default_locale == locale %>'
+        id='<%= locale %>'
+        role='tabpanel'
+        aria-labelledby='<%= locale %>-tab'
+      >
+        <% I18n.with_locale(locale) do %>
+          <%= f.globalize_fields_for locale do |g| %>
+            <%= form_group_for g, :title, label: Content::SidebarContent.human_attribute_name(:title) do %>
+              <%= g.input :title, label: false %>
+            <% end %>
+
+            <%= form_group_for g, :body, label: Content::SidebarContent.human_attribute_name(:body) do %>
+              <%= g.input :body, as: :text, label: false, input_html: { rows: 5 } %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= f.button :submit, class: 'btn btn-info pull-right' %>
+<% end %>

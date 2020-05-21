@@ -1,6 +1,22 @@
-<%= simple_form_for @configuration, url: about_path, method: :put do |f| %>
-  <%= f.input :about_us, as: :hidden %>
-  <trix-editor input='configuration_about_us'></trix-editor>
+<%= render 'admin/translations/settings' %>
 
-  <%= f.button :submit, t('shared.actions.update'), class: 'btn-info pull-right' %>
+<%= simple_form_for @configuration, url: about_path do |f| %>
+  <div class='tab-content' id='localeTabContent'>
+    <% locales_for_translations.each_with_index do |locale, index| %>
+      <div
+        class='tab-pane fade <%= 'show active' if current_account.default_locale == locale %>'
+        id='<%= locale %>'
+        role='tabpanel'
+        aria-labelledby='<%= locale %>-tab'
+      >
+        <% I18n.with_locale(locale) do %>
+          <%= f.globalize_fields_for locale do |g| %>
+            <%= g.input :about_us, as: :trix_editor, input_html: { dir: dir }, label: false %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= f.button :submit, class: 'btn btn-info pull-right' %>
 <% end %>

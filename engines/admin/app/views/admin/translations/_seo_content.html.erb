@@ -1,0 +1,9 @@
+<%= seo_content_form.globalize_fields_for locale do |g| %>
+  <%= form_group_for g, :meta_title, label: Content::SeoContent.human_attribute_name(:meta_title) do %>
+    <%= g.input :meta_title, label: false, hint: t('simple_form.hints.content/page.meta_title_html') %>
+  <% end %>
+
+  <%= form_group_for g, :meta_description, label: Content::SeoContent.human_attribute_name(:meta_description) do %>
+    <%= g.input :meta_description, as: :text, label: false, hint: t('simple_form.hints.content/page.meta_description') %>
+  <% end %>
+<% end %>

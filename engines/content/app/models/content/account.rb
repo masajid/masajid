@@ -1,5 +1,7 @@
 module Content
   class Account < ApplicationRecord
+    translates :mosque, fallbacks_for_empty_translations: true
+
     belongs_to :owner, class_name: 'Content::User'
     has_one :address, as: :addressable
     has_one :seo_content, as: :searchable
@@ -17,7 +19,7 @@ module Content
     validates :address, presence: true
     validates :configuration, presence: true
 
-    accepts_nested_attributes_for :owner, :address, :seo_content, :configuration
+    accepts_nested_attributes_for :owner, :address, :seo_content, :configuration, :translations
 
     delegate :email, to: :owner
     delegate :address1, :zip_code, :city_name, :country, :phone, :latitude, :longitude, to: :address

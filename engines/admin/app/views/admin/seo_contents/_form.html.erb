@@ -1,4 +1,4 @@
 <%= f.simple_fields_for :seo_content, (f.object.seo_content || f.object.build_seo_content) do |seo_content_form| %>
   <%= seo_content_form.input :meta_title, hint: t("simple_form.hints.content/#{model_name}.meta_title_html") %>
-  <%= seo_content_form.input :meta_description, hint: t("simple_form.hints.content/#{model_name}.meta_description") %>
+  <%= seo_content_form.input :meta_description, as: :text, hint: t("simple_form.hints.content/#{model_name}.meta_description") %>
 <% end %>

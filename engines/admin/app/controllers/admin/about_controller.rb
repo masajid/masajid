@@ -15,7 +15,10 @@ module Admin
     private
 
     def configuration_params
-      params.require(:configuration).permit(:about_us)
+      params.require(:configuration).permit(
+        :about_us,
+        translations_attributes: %i[id locale about_us]
+      )
     end
 
     def set_configuration

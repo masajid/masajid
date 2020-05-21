@@ -1,8 +1,10 @@
 module Content
   class Article < ApplicationRecord
+    translates :title, :slug, :summary, :body, fallbacks_for_empty_translations: true
+
     extend Content::ScopedTo
     extend FriendlyId
-    friendly_id :title, use: [:history, :slugged]
+    friendly_id :title, use: %i[history globalize]
 
     include Content::HasPhoto
 
@@ -19,7 +21,7 @@ module Content
     validates :video_source, inclusion: { in: VIDEO_SOURCE_OPTIONS }, allow_blank: true
     validates :video_id, presence: true, if: :video_source?
 
-    accepts_nested_attributes_for :seo_content
+    accepts_nested_attributes_for :seo_content, :translations
 
     delegate :meta_title, :meta_description, to: :seo_content, allow_nil: true
 

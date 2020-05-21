@@ -1,9 +1,11 @@
 module Content
   class Page < ApplicationRecord
     extend Content::ScopedTo
-    has_ancestry
 
+    has_ancestry
     normalize_attribute :ancestry, with: :blank
+
+    translates :name, :description, :permalink, fallbacks_for_empty_translations: true
 
     belongs_to :account
     has_one :seo_content, as: :searchable
@@ -16,7 +18,7 @@ module Content
     before_validation :set_permalink
     after_update :update_children_permalinks, if: :saved_change_to_permalink?
 
-    accepts_nested_attributes_for :seo_content
+    accepts_nested_attributes_for :seo_content, :translations
 
     delegate :meta_title, :meta_description, to: :seo_content, allow_nil: true
 

@@ -6,7 +6,7 @@ module Admin
 
     def update
       if @slider.update(slider_params)
-        redirect_to edit_slider_url, notice: 'Slider was successfully updated.'
+        redirect_to location_after_save, notice: t('admin.sliders.update.success')
       else
         render :edit
       end
@@ -19,7 +19,23 @@ module Admin
     end
 
     def slider_params
-      params.require(:slider).permit(:title, :body, :photo, :remove_photo, :link, :link_text).merge(account: current_account)
+      params.require(:slider).permit(
+        :title,
+        :body,
+        :photo,
+        :remove_photo,
+        :link,
+        :link_text,
+        translations_attributes: %i[id locale title body link link_text]
+      ).merge(account: current_account)
+    end
+
+    def location_after_save
+      if slider_params[:translations_attributes].present?
+        translations_path(resource: :slider, resource_id: :edit)
+      else
+        edit_slider_url
+      end
     end
 
     def wrapper_center?

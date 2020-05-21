@@ -1,8 +1,9 @@
 <% content_for :page_title do %>
-  <%= t('.header') %>
+  <%= t('admin.pages.edit.header') %>
 <% end %>
 
 <% content_for :page_actions do %>
+  <%= link_to_translate translations_path(resource: :pages, resource_id: @page.id) %>
   <%= link_to t('shared.actions.new'), new_page_path, class: 'btn btn-info' %>
   <%= link_to t('shared.actions.back_to_list'), pages_path, class: 'btn btn-secondary' %>
 <% end %>

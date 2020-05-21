@@ -1,19 +1,20 @@
-<%= simple_form_for sidebar_content do |f| %>
+<%= simple_form_for sidebar_content, wrapper: :horizontal_form do |f| %>
   <%= f.error_notification %>
 
-  <div class='row'>
-    <div class='col-md-6'>
-      <%= f.input :title %>
-      <%= f.input :body, input_html: { rows: 5 } %>
-      <%= f.input :light_background %>
-      <%= f.input :active %>
-      <%= f.button :submit, class: 'btn btn-info' %>
-    </div>
+  <%= f.input :title %>
 
-    <% if sidebar_content.persisted? %>
-      <div class='col-md-6 sidebar-content-body'>
-        <%== sidebar_content.body %>
-      </div>
-    <% end %>
-  </div>
+  <%= form_group_for f, :body do %>
+    <%= f.input :body, as: :text, label: false, input_html: { rows: 5 }, wrapper: :vertical_form %>
+    <%== sidebar_content.body if sidebar_content.persisted? %>
+  <% end %>
+
+  <%= form_group_for f, :light_background do %>
+    <%= f.input :light_background, label: false %>
+  <% end %>
+
+  <%= form_group_for f, :active do %>
+    <%= f.input :active, label: false %>
+  <% end %>
+
+  <%= f.button :submit, class: 'btn btn-info pull-right' %>
 <% end %>

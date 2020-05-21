@@ -5,6 +5,7 @@ module Public
 
       included do
         before_action :set_locale
+        before_action :set_fallbacks
       end
 
       private
@@ -20,6 +21,15 @@ module Public
           else
             current_account.default_locale.presence || I18n.default_locale
           end
+      end
+
+      def set_fallbacks
+        Globalize.fallbacks = {
+          I18n.locale => [
+            I18n.locale,
+            *current_account.supported_locales.reject { |locale| locale.blank? || locale == I18n.locale.to_s }
+          ]
+        }
       end
     end
   end

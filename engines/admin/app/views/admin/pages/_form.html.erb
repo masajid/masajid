@@ -1,18 +1,14 @@
-<%= simple_form_for page do |f| %>
+<%= simple_form_for page, wrapper: :horizontal_form do |f| %>
   <%= f.error_notification %>
 
-  <div class='row'>
-    <div class='col-md-6'>
-      <%= f.input :name %>
-      <%= f.input :description %>
-      <%= f.input :ancestry, collection: policy_scope(Content::Page).roots, label_method: :pretty_name, value_method: :id %>
-      <%= f.input :permalink_part, hint: page.permalink if page.persisted? %>
-    </div>
+  <%= f.input :name %>
+  <%= f.input :description, as: :text %>
+  <%= f.input :ancestry, collection: policy_scope(Content::Page).roots, label_method: :pretty_name, value_method: :id %>
+  <%= f.input :permalink_part, label: Content::Page.human_attribute_name(:permalink), hint: page.permalink if page.persisted? %>
 
-    <div class='col-md-6'>
-      <%= render 'admin/seo_contents/form', f: f, model_name: :page %>
-    </div>
-  </div>
+  <hr>
 
-  <%= f.button :submit, class: 'btn btn-info' %>
+  <%= render 'admin/seo_contents/form', f: f, model_name: :page %>
+
+  <%= f.button :submit, class: 'btn btn-info pull-right' %>
 <% end %>

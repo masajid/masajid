@@ -285,7 +285,6 @@ nl:
         meta_description:
         name:
         permalink:
-        permalink_part:
       content/region:
         name:
       content/city:
@@ -624,6 +623,12 @@ nl:
     articles:
       new:
         header:
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     accounts:
       edit:
         header:
@@ -646,6 +651,12 @@ nl:
         header:
       new:
         header:
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     regions:
       edit:
         header:
@@ -657,6 +668,8 @@ nl:
     sliders:
       edit:
         header:
+      update:
+        success:
     cities:
       edit:
         header:
@@ -690,6 +703,12 @@ nl:
         header:
       new:
         header:
+      create:
+        success:
+      destroy:
+        success:
+      update:
+        success:
     messages:
       show:
         cta_text:
@@ -705,6 +724,17 @@ nl:
         connected:
       update:
         success:
+    translations:
+      article:
+        header:
+      configuration:
+        header:
+      page:
+        header:
+      sidebar_content:
+        header:
+      slider:
+        header:
   landing:
     admin_panel:
     create_account:
@@ -805,6 +835,7 @@ nl:
       new:
       show:
       update:
+      translate:
     footer:
       back_to_top:
     locales:

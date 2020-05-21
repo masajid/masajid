@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_02_085444) do
+ActiveRecord::Schema.define(version: 2020_05_21_100545) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,6 +78,16 @@ ActiveRecord::Schema.define(version: 2020_05_02_085444) do
     t.index ["visit_token"], name: "index_ahoy_visits_on_visit_token", unique: true
   end
 
+  create_table "content_account_translations", force: :cascade do |t|
+    t.bigint "content_account_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "mosque"
+    t.index ["content_account_id"], name: "index_content_account_translations_on_content_account_id"
+    t.index ["locale"], name: "index_content_account_translations_on_locale"
+  end
+
   create_table "content_accounts", force: :cascade do |t|
     t.string "subdomain"
     t.string "mosque"
@@ -116,11 +126,24 @@ ActiveRecord::Schema.define(version: 2020_05_02_085444) do
     t.index ["region_id"], name: "index_content_addresses_on_region_id"
   end
 
+  create_table "content_article_translations", force: :cascade do |t|
+    t.bigint "content_article_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "title"
+    t.string "slug"
+    t.text "summary"
+    t.text "body"
+    t.index ["content_article_id"], name: "index_content_article_translations_on_content_article_id"
+    t.index ["locale"], name: "index_content_article_translations_on_locale"
+  end
+
   create_table "content_articles", force: :cascade do |t|
-    t.string "title", null: false
-    t.string "slug", null: false
-    t.text "summary", null: false
-    t.text "body", null: false
+    t.string "title"
+    t.string "slug"
+    t.text "summary"
+    t.text "body"
     t.datetime "published_at"
     t.datetime "deleted_at"
     t.bigint "account_id", null: false
@@ -157,6 +180,16 @@ ActiveRecord::Schema.define(version: 2020_05_02_085444) do
     t.bigint "region_id", null: false
     t.index ["country_id"], name: "index_content_cities_on_country_id"
     t.index ["region_id"], name: "index_content_cities_on_region_id"
+  end
+
+  create_table "content_configuration_translations", force: :cascade do |t|
+    t.bigint "content_configuration_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "about_us"
+    t.index ["content_configuration_id"], name: "index_2f65a1ab6787dbff3b30f2f4b72c7994c5a3e733"
+    t.index ["locale"], name: "index_content_configuration_translations_on_locale"
   end
 
   create_table "content_configurations", force: :cascade do |t|
@@ -205,10 +238,22 @@ ActiveRecord::Schema.define(version: 2020_05_02_085444) do
     t.index ["account_id"], name: "index_content_newsletters_on_account_id"
   end
 
-  create_table "content_pages", force: :cascade do |t|
-    t.string "name", null: false
+  create_table "content_page_translations", force: :cascade do |t|
+    t.bigint "content_page_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
     t.text "description"
-    t.string "permalink", null: false
+    t.string "permalink"
+    t.index ["content_page_id"], name: "index_content_page_translations_on_content_page_id"
+    t.index ["locale"], name: "index_content_page_translations_on_locale"
+  end
+
+  create_table "content_pages", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "permalink"
     t.datetime "deleted_at"
     t.bigint "account_id", null: false
     t.datetime "created_at", null: false
@@ -227,6 +272,18 @@ ActiveRecord::Schema.define(version: 2020_05_02_085444) do
     t.index ["country_id"], name: "index_content_regions_on_country_id"
   end
 
+  create_table "content_seo_content_translations", force: :cascade do |t|
+    t.bigint "content_seo_content_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "meta_title"
+    t.string "meta_keywords"
+    t.text "meta_description"
+    t.index ["content_seo_content_id"], name: "index_d5da82f2bb4ec4c246825b120124a86b93430f41"
+    t.index ["locale"], name: "index_content_seo_content_translations_on_locale"
+  end
+
   create_table "content_seo_contents", force: :cascade do |t|
     t.string "meta_title"
     t.string "meta_keywords"
@@ -238,10 +295,21 @@ ActiveRecord::Schema.define(version: 2020_05_02_085444) do
     t.index ["searchable_type", "searchable_id"], name: "index_content_seo_contents_on_searchable_type_and_searchable_id"
   end
 
+  create_table "content_sidebar_content_translations", force: :cascade do |t|
+    t.bigint "content_sidebar_content_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "title"
+    t.text "body"
+    t.index ["content_sidebar_content_id"], name: "index_4ee1cac69ad44936a61b420a0fc1d8e7b7271243"
+    t.index ["locale"], name: "index_content_sidebar_content_translations_on_locale"
+  end
+
   create_table "content_sidebar_contents", force: :cascade do |t|
     t.integer "position"
     t.string "title"
-    t.text "body", null: false
+    t.text "body"
     t.boolean "light_background", default: false
     t.boolean "active", default: true
     t.bigint "account_id", null: false
@@ -249,6 +317,19 @@ ActiveRecord::Schema.define(version: 2020_05_02_085444) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["account_id"], name: "index_content_sidebar_contents_on_account_id"
     t.index ["position"], name: "index_content_sidebar_contents_on_position"
+  end
+
+  create_table "content_slider_translations", force: :cascade do |t|
+    t.bigint "content_slider_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "title"
+    t.text "body"
+    t.string "link"
+    t.string "link_text"
+    t.index ["content_slider_id"], name: "index_content_slider_translations_on_content_slider_id"
+    t.index ["locale"], name: "index_content_slider_translations_on_locale"
   end
 
   create_table "content_sliders", force: :cascade do |t|
@@ -348,8 +429,10 @@ ActiveRecord::Schema.define(version: 2020_05_02_085444) do
     t.string "sluggable_type", limit: 50
     t.string "scope"
     t.datetime "created_at"
-    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
-    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.string "locale"
+    t.index ["locale"], name: "index_friendly_id_slugs_on_locale"
+    t.index ["slug", "sluggable_type", "locale"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_locale"
+    t.index ["slug", "sluggable_type", "scope", "locale"], name: "index_friendly_id_slugs_uniqueness", unique: true
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
