@@ -296,7 +296,6 @@ de:
         meta_description: Meta-Beschreibung
         name: Name
         permalink: Permalink
-        permalink_part: Permalink
       content/region:
         name: Name der Region
       content/city:

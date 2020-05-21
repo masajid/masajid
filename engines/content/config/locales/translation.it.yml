@@ -259,7 +259,6 @@ it:
         meta_description:
         name: Nome
         permalink:
-        permalink_part:
       content/region:
         name:
       content/city:

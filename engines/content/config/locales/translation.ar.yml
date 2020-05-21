@@ -261,7 +261,6 @@ ar:
         meta_description: Meta Description
         name: اسم
         permalink: Permalink
-        permalink_part: Permalink
       content/region:
         name: اسم المنطقة
       content/city:

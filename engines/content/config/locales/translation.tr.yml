@@ -257,7 +257,6 @@ tr:
         meta_description:
         name: Ad
         permalink:
-        permalink_part:
       content/region:
         name: Bölge Adı
       content/city:

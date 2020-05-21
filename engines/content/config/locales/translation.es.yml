@@ -303,7 +303,6 @@ es:
         meta_description: Meta Descripción
         name: Nombre
         permalink: Enlace permanente
-        permalink_part: Enlace permanente
       content/region:
         name: Provincia
       content/city:
