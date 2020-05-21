@@ -5,7 +5,7 @@ module Content
     has_ancestry
     normalize_attribute :ancestry, with: :blank
 
-    translates :name, :description, fallbacks_for_empty_translations: true
+    translates :name, :description, :permalink, fallbacks_for_empty_translations: true
 
     belongs_to :account
     has_one :seo_content, as: :searchable

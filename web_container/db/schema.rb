@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_09_154855) do
+ActiveRecord::Schema.define(version: 2020_05_21_100545) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(version: 2020_05_09_154855) do
 
   create_table "content_accounts", force: :cascade do |t|
     t.string "subdomain"
+    t.string "mosque"
     t.string "responsable"
     t.bigint "owner_id", null: false
     t.datetime "created_at", null: false
@@ -139,6 +140,10 @@ ActiveRecord::Schema.define(version: 2020_05_09_154855) do
   end
 
   create_table "content_articles", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "slug", null: false
+    t.text "summary", null: false
+    t.text "body", null: false
     t.datetime "published_at"
     t.datetime "deleted_at"
     t.bigint "account_id", null: false
@@ -149,6 +154,8 @@ ActiveRecord::Schema.define(version: 2020_05_09_154855) do
     t.index ["account_id"], name: "index_content_articles_on_account_id"
     t.index ["deleted_at"], name: "index_content_articles_on_deleted_at"
     t.index ["published_at"], name: "index_content_articles_on_published_at"
+    t.index ["slug"], name: "index_content_articles_on_slug", unique: true
+    t.index ["title"], name: "index_content_articles_on_title"
   end
 
   create_table "content_articles_newsletters", id: false, force: :cascade do |t|
@@ -193,6 +200,7 @@ ActiveRecord::Schema.define(version: 2020_05_09_154855) do
     t.bigint "account_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "about_us"
     t.boolean "hide_email", default: true, null: false
     t.boolean "hide_phone", default: true, null: false
     t.index ["account_id"], name: "index_content_configurations_on_account_id"
@@ -237,12 +245,15 @@ ActiveRecord::Schema.define(version: 2020_05_09_154855) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.text "description"
+    t.string "permalink"
     t.index ["content_page_id"], name: "index_content_page_translations_on_content_page_id"
     t.index ["locale"], name: "index_content_page_translations_on_locale"
   end
 
   create_table "content_pages", force: :cascade do |t|
-    t.string "permalink", null: false
+    t.string "name"
+    t.text "description"
+    t.string "permalink"
     t.datetime "deleted_at"
     t.bigint "account_id", null: false
     t.datetime "created_at", null: false
@@ -274,6 +285,9 @@ ActiveRecord::Schema.define(version: 2020_05_09_154855) do
   end
 
   create_table "content_seo_contents", force: :cascade do |t|
+    t.string "meta_title"
+    t.string "meta_keywords"
+    t.text "meta_description"
     t.string "searchable_type"
     t.bigint "searchable_id"
     t.datetime "created_at", precision: 6, null: false
@@ -294,6 +308,8 @@ ActiveRecord::Schema.define(version: 2020_05_09_154855) do
 
   create_table "content_sidebar_contents", force: :cascade do |t|
     t.integer "position"
+    t.string "title"
+    t.text "body", null: false
     t.boolean "light_background", default: false
     t.boolean "active", default: true
     t.bigint "account_id", null: false
@@ -317,6 +333,10 @@ ActiveRecord::Schema.define(version: 2020_05_09_154855) do
   end
 
   create_table "content_sliders", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.string "link"
+    t.string "link_text"
     t.bigint "account_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

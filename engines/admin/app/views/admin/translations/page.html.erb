@@ -33,6 +33,10 @@
                 <%= g.input :description, as: :text, label: false %>
               <% end %>
 
+              <%= form_group_for g, :permalink, label: Content::Page.human_attribute_name(:permalink) do %>
+                <%= g.input :permalink, label: false %>
+              <% end %>
+
               <hr>
 
               <%= render 'seo_content', seo_content_form: seo_content_form, locale: locale %>

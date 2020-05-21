@@ -4,7 +4,7 @@
   <%= f.input :name %>
   <%= f.input :description, as: :text %>
   <%= f.input :ancestry, collection: policy_scope(Content::Page).roots, label_method: :pretty_name, value_method: :id %>
-  <%= f.input :permalink_part, hint: page.permalink if page.persisted? %>
+  <%= f.input :permalink_part, label: Content::Page.human_attribute_name(:permalink), hint: page.permalink if page.persisted? %>
 
   <hr>
 

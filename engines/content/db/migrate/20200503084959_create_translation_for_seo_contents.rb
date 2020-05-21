@@ -9,7 +9,6 @@ class CreateTranslationForSeoContents < ActiveRecord::Migration[6.0]
         },
         {
           migrate_data: true,
-          remove_source_columns: true
         }
       )
     end

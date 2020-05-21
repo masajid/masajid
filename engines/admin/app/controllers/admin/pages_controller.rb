@@ -60,7 +60,7 @@ module Admin
           :meta_description,
           translations_attributes: %i[id locale meta_title meta_description]
         ],
-        translations_attributes: %i[id locale name description]
+        translations_attributes: %i[id locale name description permalink]
       ).merge(account: current_account)
     end
 

@@ -4,11 +4,11 @@ class CreateTranslationForPages < ActiveRecord::Migration[6.0]
       Content::Page.create_translation_table!(
         {
           name: :string,
-          description: :text
+          description: :text,
+          permalink: :string
         },
         {
           migrate_data: true,
-          remove_source_columns: true
         }
       )
     end

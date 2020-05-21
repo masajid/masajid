@@ -112,7 +112,6 @@ en:
         meta_description: Meta Description
         name: Name
         permalink: Permalink
-        permalink_part: Permalink
       content/region:
         name: Region Name
       content/city:
