@@ -2,7 +2,7 @@
   <% locales_for_translations.each do |locale| %>
     <li class='nav-item'>
       <a
-        class='nav-link <%= 'active' if current_account.default_locale == locale %>'
+        class='nav-link <%= 'active' if current_account.admin_locale == locale %>'
         id='<%= locale %>-tab'
         data-toggle='tab'
         href='#<%= locale %>'

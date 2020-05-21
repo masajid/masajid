@@ -15,7 +15,7 @@
   <div class='tab-content' id='localeTabContent'>
     <% locales_for_translations.each_with_index do |locale, index| %>
       <div
-        class='tab-pane fade <%= 'show active' if current_account.default_locale == locale %>'
+        class='tab-pane fade <%= 'show active' if current_account.admin_locale == locale %>'
         id='<%= locale %>'
         role='tabpanel'
         aria-labelledby='<%= locale %>-tab'

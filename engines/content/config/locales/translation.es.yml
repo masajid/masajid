@@ -201,6 +201,12 @@ es:
               invalid: "¡Por favor, introduce una dirección de correo electrónico
                 válida!"
               taken: Ya recibimos tu suscripción antes.
+        content/configuration:
+          attributes:
+            admin_locale:
+              inclusion:
+            default_locale:
+              inclusion:
     models:
       content/article:
         one: Artículo

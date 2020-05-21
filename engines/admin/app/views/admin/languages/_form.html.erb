@@ -9,7 +9,7 @@
 
   <%= f.input(
     :default_locale,
-    collection: options_for_locale(locales: current_account.configuration.supported_locales),
+    collection: options_for_locale,
     hint: t('simple_form.hints.content/configuration.default_locale')
   ) %>
 

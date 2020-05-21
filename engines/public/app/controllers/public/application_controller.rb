@@ -3,10 +3,11 @@ module Public
     protect_from_forgery with: :exception
 
     include Pundit
+    include Public::SeoContent
+    include Public::Locale
+    include Content::FallbacksHelper
     include Content::GoogleTagManagerHelper
     include Content::LayoutHelper
-    include Public::ControllerHelpers::Locale
-    include Public::ControllerHelpers::SeoContent
 
     def current_account
       @current_account ||= request.env['Detectify-Entity']

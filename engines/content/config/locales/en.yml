@@ -187,6 +187,12 @@ en:
           attributes:
             address1:
               geocoding_failed: geocoding failed
+        content/configuration:
+          attributes:
+            admin_locale:
+              inclusion: is not included in the supported languages list
+            default_locale:
+              inclusion: is not included in the supported languages list
         content/newsletter:
           attributes:
             body:

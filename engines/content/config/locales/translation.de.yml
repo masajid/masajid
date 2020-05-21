@@ -194,6 +194,12 @@ de:
             email:
               invalid: Bitte geben Sie eine gültige E-Mail-Adresse ein!
               taken: Wir erhielten Ihre Vorbestellung bereits zuvor!
+        content/configuration:
+          attributes:
+            admin_locale:
+              inclusion:
+            default_locale:
+              inclusion:
     models:
       content/article:
         one: Article

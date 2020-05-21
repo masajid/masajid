@@ -33,7 +33,7 @@ module Content
     end
 
     def permalink_part
-      permalink.split('/').last
+      permalink&.split('/')&.last
     end
 
     def permalink_part=(value)

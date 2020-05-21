@@ -159,6 +159,12 @@ ar:
             email:
               invalid: رجاء قم بإدخال بريد الكتروني صالح!
               taken: لقد تلقينا بالفعل اشتراكك من قبل.
+        content/configuration:
+          attributes:
+            admin_locale:
+              inclusion:
+            default_locale:
+              inclusion:
     models:
       content/article:
         one: مقال

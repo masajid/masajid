@@ -183,6 +183,12 @@ nl:
             email:
               invalid:
               taken:
+        content/configuration:
+          attributes:
+            admin_locale:
+              inclusion:
+            default_locale:
+              inclusion:
     models:
       content/article:
         few:

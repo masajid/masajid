@@ -204,6 +204,12 @@ fr:
             email:
               invalid: Veillez entrer une adresse e-mail valide!
               taken: On a déjà reçu votre abonnement auparavant.
+        content/configuration:
+          attributes:
+            admin_locale:
+              inclusion:
+            default_locale:
+              inclusion:
     models:
       content/article:
         one: Article

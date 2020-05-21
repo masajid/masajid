@@ -155,6 +155,12 @@ tr:
             email:
               invalid: Lütfen geçerli bir e-posta adresi giriniz!
               taken: Aboneliğinizi daha önce almıştık.
+        content/configuration:
+          attributes:
+            admin_locale:
+              inclusion:
+            default_locale:
+              inclusion:
     models:
       content/article:
         one: Makale
