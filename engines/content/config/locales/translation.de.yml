@@ -644,6 +644,16 @@ de:
         header: Hi %{mosque}!
         body: 'Sie haben eine Nachricht erhalten von:'
         body_2: 'Bitte auf "Antworten" drücken und die Nachricht direkt beantworten. '
+    errors:
+      internal_error:
+        header:
+        body_html:
+      not_found:
+        header:
+        body_html:
+      unacceptable:
+        header:
+        body_html:
   admin:
     articles:
       new:

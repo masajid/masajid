@@ -666,6 +666,16 @@ fr:
         header: Salut %{mosque}!
         body: 'Vous avez reçu un message de:'
         body_2: Veuillez cliquer sur repondre et répondre directement au message.
+    errors:
+      internal_error:
+        header:
+        body_html:
+      not_found:
+        header:
+        body_html:
+      unacceptable:
+        header:
+        body_html:
   admin:
     articles:
       new:

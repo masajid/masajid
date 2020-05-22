@@ -608,6 +608,16 @@ tr:
         header: Merhaba %{mosque}!
         body: 'Şu kişiden bir mesaj aldınız:'
         body_2: Lütfen tekrarla düğmesine basın ve doğrudan mesaja cevap verin.
+    errors:
+      internal_error:
+        header:
+        body_html:
+      not_found:
+        header:
+        body_html:
+      unacceptable:
+        header:
+        body_html:
   admin:
     articles:
       new:

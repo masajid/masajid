@@ -601,6 +601,16 @@ ca:
         header:
         body:
         body_2:
+    errors:
+      internal_error:
+        header:
+        body_html:
+      not_found:
+        header:
+        body_html:
+      unacceptable:
+        header:
+        body_html:
   admin:
     articles:
       new:

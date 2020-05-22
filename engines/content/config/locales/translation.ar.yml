@@ -611,6 +611,16 @@ ar:
         header: مرحبا %{mosque}!
         body: 'لقد تلقيت رسالة من:'
         body_2: يرجى الضغط على إعادة والرد على الرسالة مباشرة.
+    errors:
+      internal_error:
+        header:
+        body_html:
+      not_found:
+        header:
+        body_html:
+      unacceptable:
+        header:
+        body_html:
   admin:
     articles:
       new:
