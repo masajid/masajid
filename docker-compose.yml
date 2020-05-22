@@ -3,7 +3,7 @@ version: '3'
 services:
   db:
     image: postgres:11
-    env_file: web_container/.env
+    env_file: .env
     volumes:
       - db-data:/var/lib/postgresql/data
     ports:

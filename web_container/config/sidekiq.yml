@@ -5,9 +5,9 @@ staging:
 production:
   :concurrency: 5
 :queues:
-- default
-- mailers
-- newsletters
-- active_storage_analysis
-- active_storage_purge
-- ahoy
+  - default
+  - mailers
+  - newsletters
+  - active_storage_analysis
+  - active_storage_purge
+  - ahoy
