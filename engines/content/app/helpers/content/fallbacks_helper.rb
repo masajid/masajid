@@ -9,6 +9,8 @@ module Content
     private
 
     def set_fallbacks
+      return if current_account.blank?
+
       Globalize.fallbacks = {
         I18n.locale => [
           I18n.locale,
