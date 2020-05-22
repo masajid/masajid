@@ -30,5 +30,7 @@ module Masajid
     config.action_controller.default_protect_from_forgery = false
 
     config.active_job.queue_adapter = :sidekiq
+
+    config.railties_order = [ActiveStorage::Engine, :all]
   end
 end
