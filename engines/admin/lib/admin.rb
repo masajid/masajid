@@ -8,7 +8,6 @@ require 'trix'
 require 'chartkick'
 require 'groupdate'
 require 'bootstrap'
-require 'font-awesome-rails'
 
 module Admin
   require 'admin/engine'

@@ -14,7 +14,7 @@
 
     <%= render 'content/shared/google_tag_manager_script_tag' if render_google_tag_manager? %>
   </head>
-  <body>
+  <body class='<%= controller_name %> <%= action_name %>'>
     <%= render 'content/shared/google_tag_manager_noscript_tag' if render_google_tag_manager? %>
     <%= render 'landing/shared/header' %>
 

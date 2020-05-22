@@ -13,5 +13,7 @@ Public::Engine.routes.draw do
 
     get '/article/*id', to: 'articles#show', as: :article
     get '/p/*id', to: 'pages#show', as: :page
+
+    match '*path' => 'errors#not_found', via: :all
   end
 end

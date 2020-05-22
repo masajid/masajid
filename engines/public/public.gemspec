@@ -30,7 +30,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'client_side_validations-simple_form'
   s.add_dependency 'content'
   s.add_dependency 'detectify'
-  s.add_dependency 'font-awesome-rails', '~> 4.7.0.5'
   s.add_dependency 'will_paginate', '~> 3.1.7'
   s.add_dependency 'will_paginate-bootstrap4' # , '~> 1.0.2'
 

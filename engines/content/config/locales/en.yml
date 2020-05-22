@@ -232,6 +232,20 @@ en:
         header: Hi %{mosque}!
         body: 'You received a message from:'
         body_2: Please hit replay and answer directly to the message.
+    errors:
+      internal_error:
+        header: We're sorry, but something went wrong
+        body_html: |
+          <p>Please contact us so we can solve the issue as soon as possible.</p>
+      not_found:
+        header: Page not found
+        body_html: |
+          <p>Whoops we couldn’t find the page you were looking for.</p>
+          <p>You may have mistyped the address or the page may have moved.</p>
+      unacceptable:
+        header: The change you wanted was rejected
+        body_html: |
+          <p>Maybe you tried to change something you didn't have access to.</p>
   admin:
     about:
       update:

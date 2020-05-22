@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'devise-async'
   s.add_dependency 'draper'
   s.add_dependency 'email_validator'
+  s.add_dependency 'font-awesome-rails', '~> 4.7.0.5'
   s.add_dependency 'flipper-active_record', '~> 0.17.1'
   s.add_dependency 'friendly_id'
   s.add_dependency 'friendly_id-globalize'

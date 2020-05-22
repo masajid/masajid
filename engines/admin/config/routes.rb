@@ -1,5 +1,6 @@
 Admin::Engine.routes.draw do
   root 'dashboards#index'
+
   resources :accounts, except: %i[show new create] do
     member do
       put :accept
@@ -32,4 +33,6 @@ Admin::Engine.routes.draw do
     resources :regions, only: :index
     resources :cities, only: :index
   end
+
+  match '*path' => 'errors#not_found', via: :all
 end

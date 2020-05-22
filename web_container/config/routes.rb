@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     mount Public::Engine, at: '/'
   end
 
-  mount Landing::Engine, at: '/'
   mount Admin::Engine, at: '/admin'
+  mount Landing::Engine, at: '/'
 
   authenticate :user, ->(u) { !Rails.env.production? || u.super_admin? } do
     mount Flipper::UI.app(Content.flipper) => '/flipper'

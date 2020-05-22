@@ -27,5 +27,9 @@ Landing::Engine.routes.draw do
       get '/confirm', to: 'user_confirmations#new', as: :confirmation
       post '/confirm', to: 'user_confirmations#create', as: :resend_confirmation
     end
+
+    get '/422', to: 'errors#unacceptable'
+    get '/500', to: 'errors#internal_error'
+    match '*path' => 'errors#not_found', via: :all
   end
 end

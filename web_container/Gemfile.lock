@@ -14,7 +14,6 @@ PATH
       bootstrap (~> 4.3.1)
       chartkick (~> 3.3.0)
       content
-      font-awesome-rails
       groupdate
       haml-rails (~> 2.0.1)
       jquery-ui-rails (~> 6.0.1)
@@ -31,6 +30,7 @@ PATH
       draper
       email_validator
       flipper-active_record (~> 0.17.1)
+      font-awesome-rails (~> 4.7.0.5)
       friendly_id
       friendly_id-globalize
       geocoder
@@ -51,14 +51,12 @@ PATH
       bootstrap (~> 4.3.1)
       content
       flag-icons-rails (~> 3.1.0)
-      font-awesome-rails
     public (0.1.0)
       bootstrap (~> 4.3.1)
       client_side_validations
       client_side_validations-simple_form
       content
       detectify
-      font-awesome-rails (~> 4.7.0.5)
       will_paginate (~> 3.1.7)
       will_paginate-bootstrap4
 

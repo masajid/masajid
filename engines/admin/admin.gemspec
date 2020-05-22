@@ -20,7 +20,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'bootstrap', '~> 4.3.1'
   s.add_dependency 'chartkick', '~> 3.3.0'
   s.add_dependency 'content'
-  s.add_dependency 'font-awesome-rails'
   s.add_dependency 'groupdate'
   s.add_dependency 'haml-rails', '~> 2.0.1' # used by sortable_tree_rails
   s.add_dependency 'jquery-ui-rails', '~> 6.0.1' # used by sortable_tree_rails

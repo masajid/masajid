@@ -109,4 +109,6 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   config.action_mailer.default_url_options = { host: "https://#{Rails.application.credentials[:production][:project_name]}" }
   config.action_mailer.delivery_method = :mailjet
+
+  config.exceptions_app = self.routes
 end
