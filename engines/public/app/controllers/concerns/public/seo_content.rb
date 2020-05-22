@@ -45,9 +45,7 @@ module Public
         meta[:description] = object.meta_description
       end
 
-      if meta[:description].blank?
-        meta[:description] = current_account.meta_description
-      end
+      meta[:description] = current_account.meta_description if meta[:description].blank?
 
       meta
     end

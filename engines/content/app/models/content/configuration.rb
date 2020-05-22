@@ -10,7 +10,7 @@ module Content
     accepts_nested_attributes_for :translations
 
     validates :admin_locale, inclusion: { in: :valid_locales }
-    validates :default_locale, inclusion: { in: :valid_locales  }
+    validates :default_locale, inclusion: { in: :valid_locales }
     validate :check_supported_locales
 
     private

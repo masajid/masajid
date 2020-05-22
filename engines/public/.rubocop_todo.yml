@@ -13,12 +13,6 @@
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/IfUnlessModifier:
-  Exclude:
-    - 'lib/public/controller_helpers/seo_content.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: .
