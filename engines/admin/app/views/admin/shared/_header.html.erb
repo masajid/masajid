@@ -10,12 +10,20 @@
 
     <div class='collapse navbar-collapse' id='navbarId'>
       <ul class='nav navbar-nav ml-auto'>
-        <% if current_account_domain.present? %>
+        <% if current_user.admin? %>
           <li class='nav-item'>
-            <%= link_to current_account_domain, class: 'nav-link', target: '_blank' do %>
+            <%= link_to account_domain(current_account), class: 'nav-link', target: '_blank' do %>
               <%= t('admin.shared.view_site') %>
               <i class='fa fa-external-link'></i>
             <% end %>
+          </li>
+        <% elsif current_user.super_admin? %>
+          <li class='nav-item'>
+            <%= link_to 'Sidekiq', '/sidekiq', class: 'nav-link btn-danger', target: '_blank' %>
+          </li>
+
+          <li class='nav-item'>
+            <%= link_to 'Feature Flippers', '/flipper', class: 'nav-link btn-primary', target: '_blank' %>
           </li>
         <% end %>
 

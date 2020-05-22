@@ -4,7 +4,7 @@ module Content
 
     included do
       helper_method(
-        :prefix_link_with_account_domain, :default_account_domain, :protocol
+        :prefix_link_with_account_domain, :account_domain, :default_account_domain, :protocol
       )
     end
 
