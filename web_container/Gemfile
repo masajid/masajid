@@ -17,7 +17,6 @@ gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'flipper-ui', '~> 0.17.2'
-gem 'jquery-rails', '~> 4.4.0'
 gem 'whenever', require: false
 
 # TODO: cleanup after nested attributes are supported

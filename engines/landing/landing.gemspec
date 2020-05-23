@@ -28,9 +28,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'bootstrap', '~> 4.3.1'
   s.add_dependency 'content'
   s.add_dependency 'flag-icons-rails', '~> 3.1.0'
+  s.add_dependency 'jquery-rails', '~> 4.4.0'
 
   s.add_development_dependency 'capybara', '~> 3.32.2'
-  s.add_development_dependency 'database_cleaner-active_record', '~> 1.8.0'
   s.add_development_dependency 'factory_bot_rails', '~> 5.2.0'
   s.add_development_dependency 'rspec-rails', '~> 4.0.1'
   s.add_development_dependency 'rubocop-rails', '~> 2.5.2'

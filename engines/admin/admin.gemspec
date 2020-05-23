@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'groupdate'
   s.add_dependency 'haml-rails', '~> 2.0.1' # used by sortable_tree_rails
   s.add_dependency 'jquery-ui-rails', '~> 6.0.1' # used by sortable_tree_rails
-  s.add_dependency 'rails_sortable'
   s.add_dependency 'sortable_tree_rails'
   s.add_dependency 'trix-rails'
 

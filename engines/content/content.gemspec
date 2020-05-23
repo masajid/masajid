@@ -35,6 +35,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'pundit'
   s.add_dependency 'rails', '~> 6.0.3'
   s.add_dependency 'rails-i18n', '~> 6.0.0'
+  s.add_dependency 'rails_sortable'
   s.add_dependency 'sentry-raven', '~> 2.13.0'
   s.add_dependency 'sidekiq'
   s.add_dependency 'simple_form'
