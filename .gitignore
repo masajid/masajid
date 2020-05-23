@@ -13,9 +13,12 @@ web_container/.byebug_history
 # Ignore all logfiles and tempfiles.
 *.log
 tmp
+engines/**/log
+engines/**/tmp
 
 # Ignore uploaded files in development.
 web_container/storage/*
+engines/**/storage/*
 
 # Ignore database dumps
 dump_masajid_*
@@ -31,3 +34,7 @@ web_container/config/master.key
 
 # Ignore engines Gemfile.lock files
 engines/**/Gemfile.lock
+
+# Ignore engines dummy proper folders
+engines/**/storage
+engines/**/db

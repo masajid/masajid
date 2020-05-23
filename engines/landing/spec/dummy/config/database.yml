@@ -1,0 +1,8 @@
+test:
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= Rails.application.credentials[:test][:postgres_host] %>
+  username: <%= Rails.application.credentials[:test][:postgres_user] %>
+  password: <%= Rails.application.credentials[:test][:postgres_password] %>
+  database: masajid_test
