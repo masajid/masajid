@@ -29,7 +29,7 @@ before_script:
 
 before_install:
   - cd $(dirname $BUNDLE_GEMFILE)
-  - [ -d 'spec/dummy' ] && cp spec/dummy/config/database.yml.travis spec/dummy/config/database.yml
+  - if [ -d 'spec/dummy' ]; then cp spec/dummy/config/database.yml.travis spec/dummy/config/database.yml; fi
   - bundle exec rails db:create db:migrate
 
 script:
