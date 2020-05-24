@@ -67,10 +67,10 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
-  config.filter_run_excluding browser: true
+  config.filter_run_excluding system: true
 
   config.define_derived_metadata(file_path: %r{spec\/system}) do |metadata|
-    metadata[:browser] = true
+    metadata[:system] = true
   end
 
   if ENV['HEADLESS'].present?

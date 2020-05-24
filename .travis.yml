@@ -35,7 +35,7 @@ before_install:
 script:
   - bundle exec rubocop
   - bundle exec rspec
-  - HEADLESS=true bundle exec rspec -t browser
+  - HEADLESS=true bundle exec rspec -t system
 
 stages:
   - test
