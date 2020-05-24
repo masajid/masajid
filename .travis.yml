@@ -33,7 +33,7 @@ before_install:
 install:
   - if [ -d 'spec/dummy' ]; then cp spec/dummy/config/database.yml.travis spec/dummy/config/database.yml; fi
   - bundle install --jobs=3 --retry=3
-  - bundle exec rails db:create db:migrate
+  - if [ -d 'spec/dummy' ]; then bundle exec rails db:create db:migrate; fi
 
 script:
   - bundle exec rubocop
