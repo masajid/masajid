@@ -5,6 +5,12 @@ cache: bundler
 
 services:
   - docker
+  - postgresql
+
+addons:
+  apt:
+    - google-chrome-stable
+    - chromium-chromedriver
 
 env:
   global:
@@ -18,11 +24,18 @@ gemfile:
   - engines/landing/Gemfile
   - engines/public/Gemfile
 
+before_script:
+  - ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
+
 before_install:
   - cd $(dirname $BUNDLE_GEMFILE)
+  - [ -d 'spec/dummy' ] && cp spec/dummy/config/database.yml.travis spec/dummy/config/database.yml
+  - bundle exec rails db:create db:migrate
 
 script:
   - bundle exec rubocop
+  - bundle exec rspec
+  - HEADLESS=true bundle exec rspec -t browser
 
 stages:
   - test

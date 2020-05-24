@@ -67,5 +67,17 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  config.filter_run_excluding browser: true
+
+  config.define_derived_metadata(file_path: %r{spec\/system}) do |metadata|
+    metadata[:browser] = true
+  end
+
+  if ENV['HEADLESS'].present?
+    config.before(:each, type: :system) do
+      driven_by :selenium, using: :chrome, options: { args: %w[headless disable-gpu no-sandbox disable-dev-shm-usag] }
+    end
+  end
+
   Capybara.server = :webrick
 end
