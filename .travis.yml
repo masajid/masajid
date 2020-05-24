@@ -37,8 +37,8 @@ install:
 
 script:
   - bundle exec rubocop
-  - bundle exec rspec
-  - HEADLESS=true bundle exec rspec -t system
+  - if [ -d 'spec/dummy' ]; then bundle exec rspec ; fi
+  - if [ -d 'spec/dummy' ]; then HEADLESS=true bundle exec rspec -t system ; fi
 
 stages:
   - test
