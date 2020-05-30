@@ -8,8 +8,8 @@ services:
   - postgresql
 
 addons:
+  chrome: stable
   apt:
-    - google-chrome-stable
     - chromium-chromedriver
 
 env:
