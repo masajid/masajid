@@ -73,10 +73,9 @@ RSpec.configure do |config|
     metadata[:system] = true
   end
 
-  if ENV['HEADLESS'].present?
-    config.before(:each, type: :system) do
-      driven_by :selenium, using: :chrome, options: { args: %w[headless disable-gpu no-sandbox disable-dev-shm-usag] }
-    end
+  config.before(:each, type: :system) do
+    # other options: chrome, firefox, headless_firefox
+    driven_by :selenium, using: ENV['DRIVER']&.to_sym || :headless_chrome
   end
 
   Capybara.server = :webrick
