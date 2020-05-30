@@ -25,9 +25,6 @@ gemfile:
   - engines/landing/Gemfile
   - engines/public/Gemfile
 
-before_script:
-  - ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
-
 before_install:
   - cd $(dirname $BUNDLE_GEMFILE)
 
@@ -35,6 +32,9 @@ install:
   - if [ -d 'spec/dummy' ]; then cp spec/dummy/config/database.yml.travis spec/dummy/config/database.yml; fi
   - bundle install --jobs=3 --retry=3
   - if [ -d 'spec/dummy' ]; then bundle exec rails db:test:prepare; fi
+
+before_script:
+  - ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
 
 script:
   - bundle exec rubocop
