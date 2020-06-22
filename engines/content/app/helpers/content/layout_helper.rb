@@ -11,11 +11,17 @@ module Content
     end
 
     def dir
-      I18n.locale == :ar ? 'rtl' : 'ltr'
+      rtl_layout? ? 'rtl' : 'ltr'
     end
 
     def stylesheet
-      I18n.locale == :ar ? 'rtl/application' : 'application'
+      rtl_layout? ? 'rtl/application' : 'application'
+    end
+
+    private
+
+    def rtl_layout?
+      %i[ar fa ur].include?(I18n.locale)
     end
   end
 end
