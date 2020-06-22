@@ -3,7 +3,9 @@ module Landing
     LOCALE_ICON_MAPPING = {
       'ar' => 'sa',
       'ca' => 'es-ct',
-      'en' => 'us'
+      'en' => 'us',
+      'fa' => 'ir',
+      'ur' => 'pk'
     }.freeze
 
     def locale_with_icon(locale)
