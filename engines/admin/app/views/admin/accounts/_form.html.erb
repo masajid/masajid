@@ -14,13 +14,10 @@
   <hr>
 
   <%= f.input :subdomain %>
-
+  <%= f.input :responsable %>
   <%= f.simple_fields_for :owner do |owner| %>
     <%= owner.input :email, input_html: { autocomplete: 'email' } %>
   <% end %>
-
-  <%= f.input :responsable %>
-  <%= f.input :mosque %>
 
   <hr>
 
