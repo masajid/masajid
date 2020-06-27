@@ -1,65 +1,39 @@
-<%= simple_form_for account do |f| %>
+<%= simple_form_for account, wrapper: :horizontal_form do |f| %>
   <%= f.error_notification %>
 
-  <div class='row'>
-    <div class='col-sm-6'>
-      <%= f.input :subdomain %>
-    </div>
+  <%= f.simple_fields_for :owner do |owner| %>
+    <%= form_group_for owner, :authentication_token do %>
+      <%= owner.input :generate_authentication_token, label: false %>
 
-    <div class='col-sm-6'>
-      <%= f.simple_fields_for :owner do |owner| %>
-        <%= owner.input :email, input_html: { autocomplete: 'email' } %>
-      <% end %>
-    </div>
-  </div>
+      <div class='authentication_token_path'>
+        <%= root_url(authentication_token: owner.object.authentication_token) if owner.object.authentication_token.present? %>
+      </div>
+    <% end %>
+  <% end %>
 
-  <div class='row'>
-    <div class='col-sm-6'>
-      <%= f.input :responsable %>
-    </div>
+  <hr>
 
-    <div class='col-sm-6'>
-      <%= f.input :mosque %>
-    </div>
-  </div>
+  <%= f.input :subdomain %>
+
+  <%= f.simple_fields_for :owner do |owner| %>
+    <%= owner.input :email, input_html: { autocomplete: 'email' } %>
+  <% end %>
+
+  <%= f.input :responsable %>
+  <%= f.input :mosque %>
+
+  <hr>
 
   <%= f.simple_fields_for :address do |address| %>
     <%= address.input :phone %>
-
-    <div class='row'>
-      <div class='col-sm-9'>
-        <%= address.input :address1 %>
-      </div>
-
-      <div class='col-sm-3'>
-        <%= address.input :zip_code %>
-      </div>
-    </div>
-
-    <div class='row'>
-      <div class='col-sm-4'>
-        <%= address.input :city_name %>
-      </div>
-
-      <div class='col-sm-4'>
-        <%= address.input :region_name %>
-      </div>
-
-      <div class='col-sm-4'>
-        <%= address.input :country_id, collection: Content::Country.all %>
-      </div>
-    </div>
-
-    <div class='row'>
-      <div class='col-sm-4'>
-        <%= address.input :latitude %>
-      </div>
-
-      <div class='col-sm-4'>
-        <%= address.input :longitude %>
-      </div>
-    </div>
+    <%= address.input :address1 %>
+    <%= address.input :zip_code %>
+    <%= address.input :city_name %>
+    <%= address.input :region_name %>
+    <%= address.input :country_id, collection: Content::Country.all %>
+    <%= address.input :longitude %>
+    <%= address.input :latitude %>
   <% end %>
 
-  <%= f.button :submit, class: 'btn btn-info' %>
+  <%= f.button :submit, class: 'btn btn-info pull-right' %>
 <% end %>

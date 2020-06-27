@@ -146,6 +146,7 @@ en:
         password: Password
         password_confirmation: Password Confirmation
         confirmed_at: Confirmation Date
+        authentication_token: (Re)Generate Authentication Token
       content/volunteer:
         name: Name
         identification: Identification
