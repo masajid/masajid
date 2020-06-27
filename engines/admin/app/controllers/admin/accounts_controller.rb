@@ -15,7 +15,7 @@ module Admin
 
     def update
       if @account.update(account_params)
-        redirect_to accounts_url, notice: 'Account was successfully updated.'
+        redirect_to edit_account_url(@account), notice: 'Account was successfully updated.'
       else
         render :edit
       end
@@ -59,5 +59,10 @@ module Admin
 
       raw
     end
+
+    def wrapper_center?
+      action_name != 'index'
+    end
+    helper_method :wrapper_center?
   end
 end
