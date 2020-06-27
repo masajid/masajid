@@ -921,6 +921,8 @@ es:
       it: Italiano
       tr: Turco
       nl: Holandés
+      fa:
+      ur: Urdu
     volunteers:
       new:
         header: Voluntariado

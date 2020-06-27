@@ -1,4 +1,9 @@
 namespace :content do
+  desc 'Purge authentication tokens'
+  task purge_authentication_tokens: :environment do
+    Content::User.where.not(authentication_token: nil).update_all(authentication_token: nil)
+  end
+
   desc 'Send Newsletters'
   task newsletters: :environment do
     newsletters =

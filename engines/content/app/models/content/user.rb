@@ -8,6 +8,10 @@ module Content
 
     validates :role, inclusion: { in: ROLE_NAMES }
 
+    before_validation :set_authentication_token, if: :generate_authentication_token
+
+    attribute :generate_authentication_token, :boolean
+
     ROLE_NAMES.each do |role_name|
       define_method "#{role_name}?" do
         role == role_name
@@ -23,6 +27,10 @@ module Content
     end
 
     private
+
+    def set_authentication_token
+      self.authentication_token = Devise.friendly_token
+    end
 
     def approval_needed?
       admin? && !account.accepted?
