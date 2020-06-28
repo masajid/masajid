@@ -3,7 +3,7 @@ module Ahoy
     class Scope < Scope
       # TODO: fix Metrics/AbcSize
       def resolve
-        project_name = Rails.application.credentials[Rails.env.to_sym][:project_name]
+        project_name = Rails.application.credentials.project_name
 
         if user.super_admin?
           scope.where('landing_page ~* ?', "http(s?)://#{project_name}\s*")

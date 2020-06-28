@@ -4,6 +4,6 @@ module Content
 
     layout 'content/mailer'
 
-    default from: Rails.application.credentials[Rails.env.to_sym][:admin_sender_email]
+    default from: Rails.application.credentials.admin_sender_email
   end
 end

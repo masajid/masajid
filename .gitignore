@@ -23,8 +23,8 @@ engines/**/storage/*
 # Ignore database dumps
 dump_masajid_*
 
-# Ignore master key for decrypting credentials and more.
-web_container/config/master.key
+# Ignore master keys for decrypting credentials.
+web_container/config/credentials/*.key
 
 # Ignore IDE files
 .idea/

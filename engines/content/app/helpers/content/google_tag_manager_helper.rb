@@ -7,7 +7,7 @@ module Content
     end
 
     def google_tag_manager_id
-      @google_tag_manager_id ||= Rails.application.credentials[Rails.env.to_sym][:google_tag_manager_id]
+      @google_tag_manager_id ||= Rails.application.credentials.google_tag_manager_id
     end
 
     def render_google_tag_manager?
