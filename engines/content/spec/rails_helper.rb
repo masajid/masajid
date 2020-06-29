@@ -7,7 +7,6 @@ require_relative 'dummy/config/environment'
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 
 require 'rspec/rails'
-require 'capybara/rspec'
 require 'factory_bot_rails'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -64,17 +63,4 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
-
-  config.filter_run_excluding system: true
-
-  config.define_derived_metadata(file_path: %r{spec\/system}) do |metadata|
-    metadata[:system] = true
-  end
-
-  config.before(:each, type: :system) do
-    # other options: chrome, firefox, headless_firefox
-    driven_by :selenium, using: ENV['DRIVER']&.to_sym || :headless_chrome
-  end
-
-  Capybara.server = :webrick
 end

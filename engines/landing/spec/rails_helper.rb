@@ -35,8 +35,6 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 
 RSpec.configure do |config|
-  FactoryBot.definition_file_paths << Content::Engine.root.join('spec/factories').to_s
-  FactoryBot.find_definitions
   config.include FactoryBot::Syntax::Methods
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
