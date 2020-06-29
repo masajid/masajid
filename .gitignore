@@ -25,6 +25,7 @@ dump_masajid_*
 
 # Ignore master keys for decrypting credentials.
 web_container/config/credentials/*.key
+engines/**/spec/dummy/config/credentials/*.key
 
 # Ignore IDE files
 .idea/
@@ -34,7 +35,3 @@ web_container/config/credentials/*.key
 
 # Ignore engines Gemfile.lock files
 engines/**/Gemfile.lock
-
-# Ignore engines dummy proper folders
-engines/**/storage
-engines/**/db
