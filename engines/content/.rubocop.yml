@@ -4,3 +4,4 @@ AllCops:
   Exclude:
     - db/migrate/*
     - vendor/**/*
+    - spec/dummy/**/*
