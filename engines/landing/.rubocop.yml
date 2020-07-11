@@ -12,3 +12,7 @@ Metrics/BlockLength:
   Exclude:
     - config/routes.rb
     - spec/**/**
+
+Style/BlockComments:
+  Exclude:
+    - spec/spec_helper.rb

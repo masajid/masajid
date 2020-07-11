@@ -31,7 +31,7 @@ describe Public::MessagesService do
 
     it { is_expected.to eq(Content::Message.last) }
 
-    it { expect { subject }.to change { Content::Subscriber.count }.by(1) }
+    it { expect { subject }.to change(Content::Subscriber, :count).by(1) }
 
     it 'sends email to mosque' do
       subject
@@ -42,13 +42,13 @@ describe Public::MessagesService do
     context 'when newsletter is equal to 0' do
       let(:newsletter) { '0' }
 
-      it { expect { subject }.not_to change { Content::Subscriber.count } }
+      it { expect { subject }.not_to change(Content::Subscriber, :count) }
     end
 
     context 'when email is already subscribed' do
       let!(:subscriber) { create(:subscriber, email: email, account: account) }
 
-      it { expect { subject }.not_to change { Content::Subscriber.count } }
+      it { expect { subject }.not_to change(Content::Subscriber, :count) }
     end
   end
 end
