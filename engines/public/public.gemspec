@@ -32,11 +32,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'detectify'
   s.add_dependency 'will_paginate', '~> 3.1.7'
   s.add_dependency 'will_paginate-bootstrap4' # , '~> 1.0.2'
-
-  s.add_development_dependency 'capybara', '~> 3.32.2'
-  s.add_development_dependency 'factory_bot_rails', '~> 5.2.0'
-  s.add_development_dependency 'faker'
-  s.add_development_dependency 'rspec-rails', '~> 4.0.1'
-  s.add_development_dependency 'rubocop-rails', '~> 2.5.2'
-  s.add_development_dependency 'webdrivers', '~> 4.3.0'
 end
