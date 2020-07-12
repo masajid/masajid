@@ -1,4 +1,5 @@
 require 'rails-i18n'
+require 'rails_sortable'
 require 'devise'
 require 'devise-async'
 require 'pundit'

@@ -13,15 +13,19 @@ web_container/.byebug_history
 # Ignore all logfiles and tempfiles.
 *.log
 tmp
+engines/**/log
+engines/**/tmp
 
 # Ignore uploaded files in development.
 web_container/storage/*
+engines/**/storage/*
 
 # Ignore database dumps
 dump_masajid_*
 
 # Ignore master keys for decrypting credentials.
 web_container/config/credentials/*.key
+engines/**/spec/dummy/config/credentials/*.key
 
 # Ignore IDE files
 .idea/

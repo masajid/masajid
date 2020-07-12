@@ -50,3 +50,7 @@ Style/SymbolArray:
 # URISchemes: http, https
 Layout/LineLength:
   Max: 120
+
+Style/BlockComments:
+  Exclude:
+    - spec/spec_helper.rb

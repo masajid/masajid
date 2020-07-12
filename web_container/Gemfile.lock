@@ -17,7 +17,6 @@ PATH
       groupdate
       haml-rails (~> 2.0.1)
       jquery-ui-rails (~> 6.0.1)
-      rails_sortable
       sortable_tree_rails
       trix-rails
     content (0.1.0)
@@ -40,6 +39,7 @@ PATH
       pundit
       rails (~> 6.0.3)
       rails-i18n (~> 6.0.0)
+      rails_sortable
       sentry-raven (~> 2.13.0)
       sidekiq
       simple_form
@@ -51,6 +51,7 @@ PATH
       bootstrap (~> 4.3.1)
       content
       flag-icons-rails (~> 3.1.0)
+      jquery-rails (~> 4.4.0)
     public (0.1.0)
       bootstrap (~> 4.3.1)
       client_side_validations
@@ -181,10 +182,6 @@ GEM
       devise (>= 4.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    dotenv (2.7.5)
-    dotenv-rails (2.7.5)
-      dotenv (= 2.7.5)
-      railties (>= 3.2, < 6.1)
     draper (4.0.1)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -488,10 +485,8 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   content!
-  dotenv-rails (~> 2.7.5)
   flipper-ui (~> 0.17.2)
   jbuilder (~> 2.10)
-  jquery-rails (~> 4.4.0)
   landing!
   letter_opener_web
   listen (~> 3.2)
