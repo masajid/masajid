@@ -1,20 +1,18 @@
 $:.push File.expand_path('lib', __dir__)
 
-# Maintain your gem's version:
-require 'admin/version'
+require '../content/lib/content/version'
+require '../content/lib/content/specifications'
 
-# Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = 'admin'
-  s.version     = Admin::VERSION
-  s.authors     = ['Gharbi Mohammed']
-  s.email       = ['mgharbik@gmail.com']
-  s.homepage    = 'https://masajid.world'
+  s.version     = Content::VERSION
+  s.authors     = Content::Specifications::AUTHORS
+  s.email       = Content::Specifications::EMAIL
+  s.homepage    = Content::Specifications::HOMEPAGE
   s.summary     = 'Admin application'
   s.description = s.summary
-  s.license     = 'MIT'
-
-  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  s.license     = Content::Specifications::LICENCE
+  s.files       = Content::Specifications::FILES
 
   s.add_dependency 'batch_translations' # adds globalize_fields_for form builder
   s.add_dependency 'bootstrap', '~> 4.3.1'

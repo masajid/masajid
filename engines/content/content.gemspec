@@ -1,20 +1,18 @@
 $:.push File.expand_path('lib', __dir__)
 
-# Maintain your gem's version:
 require 'content/version'
+require 'content/specifications'
 
-# Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = 'content'
   s.version     = Content::VERSION
-  s.authors     = ['Gharbi Mohammed']
-  s.email       = ['mgharbik@gmail.com']
-  s.homepage    = 'https://masajid.world'
+  s.authors     = Content::Specifications::AUTHORS
+  s.email       = Content::Specifications::EMAIL
+  s.homepage    = Content::Specifications::HOMEPAGE
   s.summary     = 'Models, Mailers ... etc'
   s.description = s.summary
-  s.license     = 'MIT'
-
-  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  s.license     = Content::Specifications::LICENCE
+  s.files       = Content::Specifications::FILES
 
   s.add_dependency 'ahoy_matey'
   s.add_dependency 'ancestry'
