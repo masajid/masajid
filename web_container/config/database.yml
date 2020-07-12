@@ -1,10 +1,10 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: <%= Rails.application.credentials[Rails.env.to_sym][:postgres_host] %>
+  host: <%= Rails.application.credentials.postgres[:host] %>
   port: 5432
-  username: <%= Rails.application.credentials[Rails.env.to_sym][:postgres_user] %>
-  password: <%= Rails.application.credentials[Rails.env.to_sym][:postgres_password] %>
+  username: <%= Rails.application.credentials.postgres[:user] %>
+  password: <%= Rails.application.credentials.postgres[:password] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
@@ -17,4 +17,4 @@ test:
 
 production:
   <<: *default
-  database: <%= Rails.application.credentials[Rails.env.to_sym][:postgres_db] %>
+  database: <%= Rails.application.credentials.postgres[:db] %>

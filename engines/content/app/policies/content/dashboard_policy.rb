@@ -1,5 +1,5 @@
 module Content
-  class DashboardPolicy < ::Struct.new(:user, :dashboard)
+  DashboardPolicy = Struct.new(:user, :dashboard) do
     def index?
       user.super_admin? || user.admin?
     end

@@ -1,5 +1,5 @@
 redis_conn = proc {
-  Redis.new(url: Rails.application.credentials[Rails.env.to_sym][:redis_url])
+  Redis.new(url: Rails.application.credentials.redis_url)
 }
 
 Sidekiq.configure_client do |config|

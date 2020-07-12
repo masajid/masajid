@@ -5,6 +5,7 @@ module Admin
 
     include Pundit
     include Admin::Locale
+    include Admin::AuthenticateUserFromToken
     include Content::FallbacksHelper
     include Content::GoogleTagManagerHelper
     include Content::LayoutHelper

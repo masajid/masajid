@@ -7,3 +7,5 @@ gem 'content', path: '../content'
 
 # TODO: cleanup after nested attributes are supported
 gem 'trix-rails', github: 'masajid/trix', branch: 'master'
+
+instance_eval File.read('../content/lib/content/dependencies/test.rb')

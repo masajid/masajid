@@ -1,6 +1,6 @@
 module Public
   class MessagesService
-    attr_reader :current_account, :params, :message
+    attr_reader :current_account, :params
 
     def initialize(current_account, params = {})
       @current_account = current_account

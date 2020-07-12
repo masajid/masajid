@@ -5,7 +5,7 @@ module Content
         :subdomain,
         :mosque,
         :responsable,
-        owner_attributes: %i[id email],
+        owner_attributes: %i[id email generate_authentication_token],
         address_attributes: %i[id address1 zip_code phone city_name region_name country_id]
       ]
     end

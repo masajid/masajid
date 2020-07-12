@@ -1,20 +1,18 @@
 $:.push File.expand_path('lib', __dir__)
 
-# Maintain your gem's version:
 require 'content/version'
+require 'content/specifications'
 
-# Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = 'content'
   s.version     = Content::VERSION
-  s.authors     = ['Gharbi Mohammed']
-  s.email       = ['mgharbik@gmail.com']
-  s.homepage    = 'https://masajid.world'
+  s.authors     = Content::Specifications::AUTHORS
+  s.email       = Content::Specifications::EMAIL
+  s.homepage    = Content::Specifications::HOMEPAGE
   s.summary     = 'Models, Mailers ... etc'
   s.description = s.summary
-  s.license     = 'MIT'
-
-  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  s.license     = Content::Specifications::LICENCE
+  s.files       = Content::Specifications::FILES
 
   s.add_dependency 'ahoy_matey'
   s.add_dependency 'ancestry'
@@ -24,8 +22,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'devise-async'
   s.add_dependency 'draper'
   s.add_dependency 'email_validator'
-  s.add_dependency 'font-awesome-rails', '~> 4.7.0.5'
   s.add_dependency 'flipper-active_record', '~> 0.17.1'
+  s.add_dependency 'font-awesome-rails', '~> 4.7.0.5'
   s.add_dependency 'friendly_id'
   s.add_dependency 'friendly_id-globalize'
   s.add_dependency 'geocoder'
@@ -35,6 +33,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'pundit'
   s.add_dependency 'rails', '~> 6.0.3'
   s.add_dependency 'rails-i18n', '~> 6.0.0'
+  s.add_dependency 'rails_sortable'
   s.add_dependency 'sentry-raven', '~> 2.13.0'
   s.add_dependency 'sidekiq'
   s.add_dependency 'simple_form'
@@ -42,6 +41,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'stringex'
   s.add_dependency 'translation'
   s.add_dependency 'validates_timeliness'
-
-  s.add_development_dependency 'rubocop-rails', '~> 2.5.2'
 end

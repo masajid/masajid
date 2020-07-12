@@ -22,7 +22,7 @@ module Content
     end
 
     def default_account_domain(account)
-      "#{protocol}#{account.subdomain}.#{Rails.application.credentials[Rails.env.to_sym][:project_name]}"
+      "#{protocol}#{account.subdomain}.#{Rails.application.credentials.project_name}"
     end
 
     def protocol
