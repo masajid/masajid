@@ -3,6 +3,16 @@ inherit_from: .rubocop_todo.yml
 AllCops:
   Exclude:
     - vendor/**/*
+    - spec/dummy/**/*
 
 Style/Documentation:
   Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - public.gemspec
+    - spec/**/**
+
+Style/BlockComments:
+  Exclude:
+    - spec/spec_helper.rb

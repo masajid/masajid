@@ -1,5 +1,5 @@
 TranslationIO.configure do |config|
-  config.api_key        = Rails.application.credentials[Rails.env.to_sym][:translation_io_api_key]
+  config.api_key        = Rails.application.credentials.translation_io_api_key
   config.source_locale  = 'en'
   config.target_locales = %w[ar de nl fr es ca it tr fa ur]
 

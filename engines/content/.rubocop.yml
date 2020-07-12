@@ -4,3 +4,8 @@ AllCops:
   Exclude:
     - db/migrate/*
     - vendor/**/*
+    - spec/dummy/**/*
+
+Style/BlockComments:
+  Exclude:
+    - spec/spec_helper.rb
