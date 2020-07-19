@@ -6,6 +6,7 @@
   <div class='article-meta'>
     <i class='fa fa-clock-o'></i> <%= article.published_on %>
     <i class='fa fa-eye'></i> <%= article.views_count %>
+    <%= social_share_button_tag(article.title) %>
   </div>
 
   <div class='article-body'>

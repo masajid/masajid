@@ -10,6 +10,16 @@
   .article-meta {
     margin-bottom: 1.25rem;
     color: #999;
+
+    .social-share-button {
+      float: right;
+
+      .ssb-icon {
+        background-size: 24px 24px;
+        height: 24px;
+        width: 24px;
+      }
+    }
   }
 
   .article-body {

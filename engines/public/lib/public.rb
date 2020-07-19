@@ -1,6 +1,7 @@
 require 'content'
 require 'detectify'
 require 'bootstrap'
+require 'social-share-button'
 require 'will_paginate'
 require 'will_paginate-bootstrap4'
 require 'client_side_validations'
