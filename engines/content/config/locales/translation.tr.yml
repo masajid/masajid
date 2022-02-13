@@ -292,6 +292,7 @@ tr:
         confirmed_at: Onay Tarihi
         current_password: Şimdiki Şifre
         password_confirmation: Şifre Onayı
+        authentication_token:
       content/volunteer:
         name: Ad
         identification: Kimlik
@@ -884,3 +885,27 @@ tr:
         password: Değiştirmek istemiyorsanız boş bırakın
       content/account:
         domain_html:
+  social_share_button:
+    whatsapp_web:
+    share_to:
+    weibo:
+    twitter: Twitter
+    facebook: Facebook
+    douban:
+    qq:
+    delicious:
+    google_plus:
+    google_bookmark:
+    tumblr:
+    pinterest:
+    email: E-posta
+    linkedin:
+    wechat:
+    wechat_footer:
+    vkontakte:
+    odnoklassniki:
+    xing:
+    reddit:
+    hacker_news:
+    telegram:
+    whatsapp_app:

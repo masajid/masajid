@@ -236,8 +236,7 @@ en:
     errors:
       internal_error:
         header: We're sorry, but something went wrong
-        body_html: |
-          <p>Please contact us so we can solve the issue as soon as possible.</p>
+        body_html: "<p>Please contact us so we can solve the issue as soon as possible.</p>\n"
       not_found:
         header: Page not found
         body_html: |
@@ -245,8 +244,8 @@ en:
           <p>You may have mistyped the address or the page may have moved.</p>
       unacceptable:
         header: The change you wanted was rejected
-        body_html: |
-          <p>Maybe you tried to change something you didn't have access to.</p>
+        body_html: "<p>Maybe you tried to change something you didn't have access
+          to.</p>\n"
   admin:
     about:
       update:
@@ -376,8 +375,8 @@ en:
     slider:
       first:
         headline: Your masjid online.
-        content: You own a masjid and you don't have a website, Masajid World will
-          help you.
+        content: You are responsible for a masjid and you don't have a website, Masajid
+          World will help you.
       second:
         headline: Allah says in surat Tawba
         content_html: |
@@ -467,7 +466,8 @@ en:
         body_html: |
           <p>Subscribe to our newsletter and we will send you emails from time to time with recent updates,
           such as coming conferences, eid prayers times, and important news ...</p>
-      website_build_by_html: Website built by <a href='https://masajid.world'>Masajid World</a>
+      website_build_by_html: Website built by <a href='https://masajid.world'>Masajid
+        World</a>
   shared:
     actions:
       accept: Accept
@@ -633,15 +633,16 @@ en:
           When you are logged in to Masajid World, this is the language you will see.
           It does not affect the language your visitors see on your website.
         default_locale: Default language of your website.
-        supported_locales: A list of available languages that user can switch on your website.
+        supported_locales: A list of available languages that user can switch on your
+          website.
         meta_title_html: The content for the homepage's HTML <mark>&lt;title&gt;</mark>
           tag, which is used by search engines.
         meta_description: The summary text that accompanies your homepage link in
           search engine results pages (SERPs).
       content/article:
         photo: A default photo will be used if you don't upload any
-        video_id_html: |
-          e.g. <mark>M1M9n-wUhy0</mark> for Youtube, <mark>103525883</mark> for Vimeo
+        video_id_html: e.g. <mark>M1M9n-wUhy0</mark> for Youtube, <mark>103525883</mark>
+          for Vimeo
         slug_html: |
           A slug is a part of a URL that identifies a page using human-readable words, and it is used for SEO purposes.
           For example, in the web address <mark>https://example.com/article/the-islam-way</mark>, the slug would be the <mark>the-islam-way</mark> part.

@@ -335,6 +335,7 @@ fa:
         password:
         password_confirmation:
         confirmed_at:
+        authentication_token:
       content/volunteer:
         name:
         identification:
@@ -869,3 +870,27 @@ fa:
     say_no:
     say_yes:
     site_name:
+  social_share_button:
+    whatsapp_web:
+    share_to:
+    weibo:
+    twitter:
+    facebook:
+    douban:
+    qq:
+    delicious:
+    google_plus:
+    google_bookmark:
+    tumblr:
+    pinterest:
+    email:
+    linkedin:
+    wechat:
+    wechat_footer:
+    vkontakte:
+    odnoklassniki:
+    xing:
+    reddit:
+    hacker_news:
+    telegram:
+    whatsapp_app:

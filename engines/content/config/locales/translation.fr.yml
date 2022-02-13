@@ -341,6 +341,7 @@ fr:
         confirmed_at: Date de confirmation
         current_password: Mot de passe actuel
         password_confirmation: Confirmation du mot de passe
+        authentication_token:
       content/volunteer:
         name: Nom
         identification: Identification
@@ -931,3 +932,27 @@ fr:
     footer:
       back_to_top: Retour au sommet
     site_name: Masajid World
+  social_share_button:
+    whatsapp_web:
+    share_to:
+    weibo:
+    twitter: Twitter
+    facebook: Facebook
+    douban:
+    qq:
+    delicious:
+    google_plus:
+    google_bookmark:
+    tumblr:
+    pinterest:
+    email: Adresse e-mail
+    linkedin:
+    wechat:
+    wechat_footer:
+    vkontakte:
+    odnoklassniki:
+    xing:
+    reddit:
+    hacker_news:
+    telegram:
+    whatsapp_app:

@@ -296,6 +296,7 @@ ar:
         confirmed_at: تاريخ التأكيد
         current_password: كلمة السر الحالية
         password_confirmation: تأكيد كلمة المرور
+        authentication_token:
       content/volunteer:
         name: اسم
         identification: التعريف
@@ -743,7 +744,7 @@ ar:
     slider:
       first:
         headline: مسجدك على الإنترنت.
-        content: أنت تملك مسجدًا وليس لديك موقع ويب, عالم المساجد سيساعدك.
+        content: أنت مسؤول عن مسجد وليس لديك موقع على الإنترنت، موقع مساجد سوف يساعدك.
       second:
         headline: قال تعالى في سورة التوبة
         content_html: "<p>إِنَّمَا يَعْمُرُ مَسَاجِدَ اللَّهِ مَنْ آمَنَ بِاللَّهِ
@@ -905,3 +906,27 @@ ar:
         password: اتركه فارغا إذا كنت لا ترغب في تغييره
       content/account:
         domain_html:
+  social_share_button:
+    whatsapp_web:
+    share_to:
+    weibo:
+    twitter: Twitter
+    facebook: Facebook
+    douban:
+    qq:
+    delicious:
+    google_plus:
+    google_bookmark:
+    tumblr:
+    pinterest:
+    email: البريد الإلكتروني
+    linkedin:
+    wechat:
+    wechat_footer:
+    vkontakte:
+    odnoklassniki:
+    xing:
+    reddit:
+    hacker_news:
+    telegram:
+    whatsapp_app:
