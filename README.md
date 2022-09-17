@@ -6,16 +6,16 @@ Website: https://masajid.world
 
 ## Requirements
 
-- Postgres
+- Postgres 11
 - Redis and Sidekiq
-- Ruby 2.5.0 or newer (RVM is recommended)
+- Ruby 2.7.0 (RVM is recommended)
 
 ## Setup
 
 ```
 $ git clone git@github.com:mgharbik/masajid.git
 $ cd masajid/web_container
-$ touch config/master.key # then copy/past the master key
+$ touch config/credentials/production.key # then copy/past the master key
 $ bundle install
 $ rails db:create db:migrate db:seed
 $ rails content_places:import only=countries
