@@ -14,7 +14,7 @@ services:
     volumes:
       - redis:/data
     ports:
-      - 6380:6379
+      - 6379:6379
 
   app: &app_base
     build: .
