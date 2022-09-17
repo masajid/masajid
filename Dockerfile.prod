@@ -12,7 +12,7 @@ WORKDIR /app/web_container
 
 COPY web_container/Gemfile* ./
 COPY engines ../engines
-RUN bundle install
+RUN bundle install --without development test
 COPY web_container .
 
 ARG RAILS_MASTER_KEY
