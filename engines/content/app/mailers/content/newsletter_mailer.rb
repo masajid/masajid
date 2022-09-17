@@ -6,7 +6,7 @@ module Content
       @newsletter = newsletter
       @account = newsletter.account
 
-      make_bootstrap_mail(
+      bootstrap_mail(
         reply_to: @account.email,
         to: subscriber.email,
         subject: newsletter.subject

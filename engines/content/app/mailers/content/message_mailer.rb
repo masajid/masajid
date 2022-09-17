@@ -4,7 +4,7 @@ module Content
       @message = message
       @account = message.account
 
-      make_bootstrap_mail(
+      bootstrap_mail(
         reply_to: @message.email,
         to: @account.email,
         subject: t('content.message_mailer.user_email.subject', subject: @message.subject)
