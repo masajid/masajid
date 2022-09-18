@@ -8,7 +8,7 @@ Website: https://masajid.world
 
 - Postgres 11
 - Redis and Sidekiq
-- Ruby 2.7.0 (RVM is recommended)
+- Ruby 2.7.6 (RVM is recommended)
 
 ## Setup
 

@@ -1,4 +1,4 @@
-FROM ruby:2.7.0
+FROM ruby:2.7.6
 
 RUN apt-get update -yqq \
   && apt-get install -yqq --no-install-recommends \
