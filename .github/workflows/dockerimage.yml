@@ -30,6 +30,6 @@ jobs:
           push: true
           tags:  |
             ${{ secrets.DOCKER_HUB_USERNAME }}/masajid:latest
-            ${{ secrets.DOCKER_HUB_USERNAME }}/masajid:${{ GITHUB_SHA::7 }}
+            ${{ secrets.DOCKER_HUB_USERNAME }}/masajid:${{ github.sha }}
           secrets: |
             RAILS_MASTER_KEY=${{ secrets.RAILS_MASTER_KEY }}
