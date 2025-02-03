@@ -19,5 +19,9 @@
     <% end %>
 
     <%= sanitize article.body.presence || article.summary %>
+
+    <hr>
+
+    <%= render partial: 'public/comments/index' %>
   </div>
 </div>
